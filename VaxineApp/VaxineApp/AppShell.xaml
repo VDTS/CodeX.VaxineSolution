@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:home="clr-namespace:VaxineApp.Views.Home"
+       xmlns:homeArea="clr-namespace:VaxineApp.Views.Home.Area"
+       Title="VaxineApp"
+       x:Class="VaxineApp.AppShell">
+
+  <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+  <Shell.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BaseStyle"
+             TargetType="Element">
+        <Setter Property="Shell.BackgroundColor"
+                Value="{StaticResource Primary}" />
+        <Setter Property="Shell.ForegroundColor"
+                Value="White" />
+        <Setter Property="Shell.TitleColor"
+                Value="White" />
+        <Setter Property="Shell.DisabledColor"
+                Value="#B4FFFFFF" />
+        <Setter Property="Shell.UnselectedColor"
+                Value="#95FFFFFF" />
+        <Setter Property="Shell.TabBarBackgroundColor"
+                Value="{StaticResource Primary}" />
+        <Setter Property="Shell.TabBarForegroundColor"
+                Value="White" />
+        <Setter Property="Shell.TabBarUnselectedColor"
+                Value="#95FFFFFF" />
+        <Setter Property="Shell.TabBarTitleColor"
+                Value="White" />
+      </Style>
+      <Style TargetType="TabBar"
+             BasedOn="{StaticResource BaseStyle}" />
+      <Style TargetType="FlyoutItem"
+             BasedOn="{StaticResource BaseStyle}" />
+
+      <!--
+            Default Styles for all Flyout Items
+            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
+            -->
+      <Style Class="FlyoutItemLabelStyle"
+             TargetType="Label">
+        <Setter Property="TextColor"
+                Value="White"></Setter>
+      </Style>
+      <Style Class="FlyoutItemLayoutStyle"
+             TargetType="Layout"
+             ApplyToDerivedTypes="True">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+          <VisualStateGroupList>
+            <VisualStateGroup x:Name="CommonStates">
+              <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                  <Setter Property="BackgroundColor"
+                          Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
+                  <Setter TargetName="FlyoutItemLabel"
+                          Property="Label.TextColor"
+                          Value="{StaticResource Primary}" />
+                </VisualState.Setters>
+              </VisualState>
+              <VisualState x:Name="Selected">
+                <VisualState.Setters>
+                  <Setter Property="BackgroundColor"
+                          Value="{StaticResource Primary}" />
+                </VisualState.Setters>
+              </VisualState>
+            </VisualStateGroup>
+          </VisualStateGroupList>
+        </Setter>
+      </Style>
+
+      <!--
+            Custom Style you can apply to any Flyout Item
+            -->
+      <Style Class="MenuItemLayoutStyle"
+             TargetType="Layout"
+             ApplyToDerivedTypes="True">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+          <VisualStateGroupList>
+            <VisualStateGroup x:Name="CommonStates">
+              <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                  <Setter TargetName="FlyoutItemLabel"
+                          Property="Label.TextColor"
+                          Value="{StaticResource Primary}" />
+                </VisualState.Setters>
+              </VisualState>
+            </VisualStateGroup>
+          </VisualStateGroupList>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </Shell.Resources>
+
+  <!-- 
+        When the Flyout is visible this defines the content to display in the flyout.
+        FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
+        https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
+    -->
+  <Shell.FlyoutHeaderTemplate>
+    <DataTemplate>
+      <Grid HeightRequest="200">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="120"></RowDefinition>
+          <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="150"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="FlyoutHeader_Account.png"
+               Margin="10, 30, 0, 0"
+               HorizontalOptions="Start"
+               Grid.Row="0" />
+        <Label Text="User Name"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="20"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="end"
+               Padding="20, 0, 0, 50"
+               Grid.Row="1" />
+        <Label Text="Role"
+               FontAttributes="Bold"
+               TextColor="Black"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="end"
+               Padding="20, 0, 0, 20"
+               Grid.Row="1" />
+      </Grid>
+    </DataTemplate>
+  </Shell.FlyoutHeaderTemplate>
+  <FlyoutItem Title="Home">
+    <Tab Icon="Home_Status.png"
+         Title="Status">
+      <ShellContent Route="Status"
+                    ContentTemplate="{DataTemplate home:StatusPage}" />
+    </Tab>
+    <Tab Icon="Home_Registration.png"
+         Title="Registration">
+      <ShellContent Route="Registration"
+                    ContentTemplate="{DataTemplate home:RegistrationPage}" />
+    </Tab>
+    <Tab Icon="Home_Report.png"
+         Title="Report">
+      <ShellContent Route="Report"
+                    ContentTemplate="{DataTemplate home:ReportPage}" />
+    </Tab>
+    <Tab Icon="Home_Area.png"
+         Title="Area">
+      <ShellContent Title="Area"
+                    Route="Area"
+                    ContentTemplate="{DataTemplate homeArea:AreaPage}" />
+      <ShellContent Title="Masjeed"
+                    Route="Masjeed"
+                    ContentTemplate="{DataTemplate homeArea:MasjeedPage}" />
+      <ShellContent Title="School"
+                    Route="School"
+                    ContentTemplate="{DataTemplate homeArea:SchoolPage}" />
+      <ShellContent Title="Influencer"
+                    Route="Influencer"
+                    ContentTemplate="{DataTemplate homeArea:InfluencerPage}" />
+      <ShellContent Title="Clinic"
+                    Route="Clinic"
+                    ContentTemplate="{DataTemplate homeArea:ClinicPage}" />
+      <ShellContent Title="Doctor"
+                    Route="Doctor"
+                    ContentTemplate="{DataTemplate homeArea:DoctorPage}" />
+    </Tab>
+    <Tab Icon="Home_Profile.png"
+         Title="Profile">
+      <ShellContent Route="Profile"
+                    ContentTemplate="{DataTemplate home:ProfilePage}" />
+    </Tab>
+
+  </FlyoutItem>
+  <FlyoutItem Title="Profile"
+              Icon="">
+    <ShellContent ContentTemplate="{DataTemplate home:ProfilePage}" />
+  </FlyoutItem>
+
+  <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
+  <MenuItem Text="Settings"
+            StyleClass="MenuItemLayoutStyle">
+  </MenuItem>
+  <MenuItem Text="AboutUs"
+            StyleClass="MenuItemLayoutStyle">
+  </MenuItem>
+  <MenuItem Text="Help"
+            StyleClass="MenuItemLayoutStyle">
+  </MenuItem>
+  <MenuItem Text="Logout"
+            StyleClass="MenuItemLayoutStyle">
+  </MenuItem>
+
+  <!--
+        TabBar lets you define content that won't show up in a flyout menu. When this content is active
+        the flyout menu won't be available. This is useful for creating areas of the application where 
+        you don't want users to be able to navigate away from. If you would like to navigate to this 
+        content you can do so by calling 
+        await Shell.Current.GoToAsync("//LoginPage");
+    -->
+  <!--<TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+    </TabBar>-->
+
+  <!-- Optional Templates 
+    // These may be provided inline as below or as separate classes.
+
+    // This header appears at the top of the Flyout.
+    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid>ContentHere</Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    // ItemTemplate is for ShellItems as displayed in a Flyout
+    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-flyoutitem-appearance
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <ContentView>
+                Bindable Properties: Title, Icon
+            </ContentView>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    // MenuItemTemplate is for MenuItems as displayed in a Flyout
+    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-menuitem-appearance
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <ContentView>
+                Bindable Properties: Text, Icon
+            </ContentView>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    -->
+
+</Shell>
