@@ -8,12 +8,14 @@ using Android.Views;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using VaxineApp.Droid.Renderer;
 using VaxineApp.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using static Android.Resource;
 
 [assembly: ExportRenderer(typeof(CustomEntryRenderer), typeof(AndroidEntryRenderer))]
 namespace VaxineApp.Droid.Renderer
@@ -31,11 +33,12 @@ namespace VaxineApp.Droid.Renderer
             if (Control != null)
             {
                 //Control.SetBackgroundColor(global::Android.Graphics.Color.LightGreen);
-                var nativeEditText = (global::Android.Widget.EditText)Control;
-                var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RectShape());
-                shape.Paint.Color = Xamarin.Forms.Color.Black.ToAndroid();
-                shape.Paint.SetStyle(Paint.Style.Stroke);
-                nativeEditText.Background = shape;
+                GradientDrawable gd = new GradientDrawable();
+                gd.SetColor(Android.Graphics.Color.White);
+                gd.SetCornerRadius(10);
+                gd.SetStroke(2, Android.Graphics.Color.LightGray);
+                
+                this.Control.SetBackgroundDrawable(gd);
             }
         }
     }
