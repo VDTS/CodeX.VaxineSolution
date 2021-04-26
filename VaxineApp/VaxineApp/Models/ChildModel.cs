@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VaxineApp.Models
 {
-    public class Child
+    public class ChildModel
     {
         public Guid Id { get; set; }
         public string HouseNo { get; set; }
@@ -15,7 +15,7 @@ namespace VaxineApp.Models
         public string OPV0 { get; set; }
         public string RINo { get; set; }
         public UserMetaData UserMetaData { get; set; }
-        public Child()
+        public ChildModel()
         {
             Id = Guid.NewGuid();
             UserMetaData = new UserMetaData();
