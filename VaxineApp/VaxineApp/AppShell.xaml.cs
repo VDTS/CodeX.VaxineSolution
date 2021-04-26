@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using VaxineApp.Views;
+using VaxineApp.Views.Home;
 using Xamarin.Forms;
 
 namespace VaxineApp
@@ -10,6 +11,8 @@ namespace VaxineApp
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute(nameof(RegistrationPage), typeof(RegistrationPage));
+            Routing.RegisterRoute(nameof(StatusPage), typeof(StatusPage));
         }
     }
 }

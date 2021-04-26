@@ -141,16 +141,16 @@
       <ShellContent Route="Status"
                     ContentTemplate="{DataTemplate home:StatusPage}" />
     </Tab>
-    <Tab Icon="Home_Registration.png"
-         Title="Registration">
-      <ShellContent Route="Registration"
-                    ContentTemplate="{DataTemplate home:RegistrationPage}" />
-    </Tab>
     <Tab Icon="Home_Report.png"
          Title="Report">
       <ShellContent Route="Report"
                     ContentTemplate="{DataTemplate home:ReportPage}" />
     </Tab>
+    <!--<Tab Icon="Home_Registration.png"
+         Title="Registration">
+      <ShellContent Route="RegistrationPage"
+                    ContentTemplate="{DataTemplate home:RegistrationPage}" />
+    </Tab>-->
     <Tab Icon="Home_Area.png"
          Title="Area">
       <ShellContent Title="Area"

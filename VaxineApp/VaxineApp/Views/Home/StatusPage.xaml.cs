@@ -15,6 +15,11 @@ namespace VaxineApp.Views.Home
         public StatusPage()
         {
             InitializeComponent();
+
         }
+        //private async void Registration_Clicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new RegistrationPage());
+        //}
     }
 }

@@ -2,12 +2,46 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.StatusPage"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
+             xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels"
              Title="Status">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.BindingContext>
+    <viewmodels:StatusViewModel></viewmodels:StatusViewModel>
+  </ContentPage.BindingContext>
+  <!--<AbsoluteLayout>
+    <ImageButton Source="Home_Registration.png"
+                 BackgroundColor="Transparent"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 AbsoluteLayout.LayoutBounds=".95,.95,75,50"
+                 Clicked="Registration_Clicked"
+                 />
+    --><!--https://stackoverflow.com/questions/54517874/how-to-make-a-floating-action-button-in-xamarin-forms#:~:text=It%27s%20pretty%20easy%20to%20add%20a%20floating%20button,Grid.Row%3D%220%22.%20Inside%20your%20ScrollView%2C%20put%20your%20design%20form.--><!--
+  </AbsoluteLayout>-->
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem
+                 IconImageSource="Home_Registration.png"
+                 Command="{Binding RegistrationPageCommand}" />
+  </ContentPage.ToolbarItems>
+  
+  <ContentPage.Content>
+    <CollectionView>
+      <CollectionView.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <local:CustomEntryRenderer TextColor="Black"
+                                       x:Name="HouseNo"
+                                       Text="{Binding HouseNo}"
+                                       Placeholder="House No"></local:CustomEntryRenderer>
+            <local:CustomEntryRenderer TextColor="Black"
+                                       x:Name="FullName"
+                                       Text="{Binding FullName}"
+                                       Placeholder="Full Name"></local:CustomEntryRenderer>
+            <SelectableItemsView x:Name="Vaccined"
+                                 ItemsSource="{Binding ListItems}" ></SelectableItemsView>
+          </Grid>
+        </DataTemplate>
+      </CollectionView.ItemTemplate>
+    </CollectionView>
+  </ContentPage.Content>
 </ContentPage>

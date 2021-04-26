@@ -2,13 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.RegistrationPage"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
+             xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels"
              Title="Registration">
-    <ContentPage.Content>
-        <StackLayout>
-      <Label BackgroundColor="Black"
-             Text="Welcome to Xamarin.Forms!"
-             VerticalOptions="CenterAndExpand"
-             HorizontalOptions="CenterAndExpand" />
+  <ContentPage.BindingContext>
+    <viewmodels:ChildViewModel></viewmodels:ChildViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout Padding="20">
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding HouseNo, Mode=TwoWay}"
+                                 Placeholder="House No"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding FullName, Mode=TwoWay}"
+                                 Placeholder="Full Name"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding Gender, Mode=TwoWay}"
+                                 Placeholder="Gender"></local:CustomEntryRenderer>
+      <DatePicker TextColor="Black"
+                  Date="{Binding DOB, Mode=TwoWay}"></DatePicker>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding OPV0, Mode=TwoWay}"
+                                 Placeholder="OPV0"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding RINo, Mode=TwoWay}"
+                                 Placeholder="RI No"></local:CustomEntryRenderer>
+
+      <Button Text="Save"
+              Command="{Binding SaveDataCommand}"></Button>
     </StackLayout>
-    </ContentPage.Content>
+
+  </ContentPage.Content>
 </ContentPage>
