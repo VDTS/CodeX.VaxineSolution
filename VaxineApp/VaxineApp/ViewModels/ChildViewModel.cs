@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
@@ -13,8 +14,8 @@ namespace VaxineApp.ViewModels
     {
         DbContext firebaseHelper = new DbContext();
 
-        private string _houseNo;
-        public string HouseNo
+        private int _houseNo;
+        public int HouseNo
         {
             get { return _houseNo; }
             set
@@ -28,7 +29,11 @@ namespace VaxineApp.ViewModels
         public string FullName
         {
             get { return _fullName; }
-            set { _fullName = value; }
+            set
+            {
+                _fullName = value;
+                RaisedPropertyChanged(nameof(FullName));
+            }
         }
 
         private string _gender;
@@ -36,31 +41,58 @@ namespace VaxineApp.ViewModels
         public string Gender
         {
             get { return _gender; }
-            set { _gender = value; }
+            set
+            {
+                _gender = value;
+                RaisedPropertyChanged(nameof(Gender));
+            }
         }
+        [DataType(DataType.Date)]
 
         private DateTime _dOB;
 
         public DateTime DOB
         {
-            get { return _dOB; }
-            set { _dOB = value; }
+            get
+            {
+                if (_dOB == null)
+                {
+                    return DateTime.Now;
+                }
+                else
+                {
+                    return _dOB;
+                }
+            }
+            set
+            {
+                _dOB = value;
+                RaisedPropertyChanged(nameof(DOB));
+            }
         }
 
-        private string _oPV0;
+        private bool _oPV0;
 
-        public string OPV0
+        public bool OPV0
         {
             get { return _oPV0; }
-            set { _oPV0 = value; }
+            set
+            {
+                _oPV0 = value;
+                RaisedPropertyChanged(nameof(OPV0));
+            }
         }
 
-        private string _rINO;
+        private int _rINO;
 
-        public string RINo
+        public int RINo
         {
             get { return _rINO; }
-            set { _rINO = value; }
+            set
+            {
+                _rINO = value;
+                RaisedPropertyChanged(nameof(RINo));
+            }
         }
 
 

@@ -4,44 +4,54 @@
              x:Class="VaxineApp.Views.Home.StatusPage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels"
+             xmlns:converters="clr-namespace:VaxineApp.Converters"
              Title="Status">
   <ContentPage.BindingContext>
     <viewmodels:StatusViewModel></viewmodels:StatusViewModel>
   </ContentPage.BindingContext>
-  <!--<AbsoluteLayout>
-    <ImageButton Source="Home_Registration.png"
-                 BackgroundColor="Transparent"
-                 AbsoluteLayout.LayoutFlags="PositionProportional"
-                 AbsoluteLayout.LayoutBounds=".95,.95,75,50"
-                 Clicked="Registration_Clicked"
-                 />
-    --><!--https://stackoverflow.com/questions/54517874/how-to-make-a-floating-action-button-in-xamarin-forms#:~:text=It%27s%20pretty%20easy%20to%20add%20a%20floating%20button,Grid.Row%3D%220%22.%20Inside%20your%20ScrollView%2C%20put%20your%20design%20form.--><!--
-  </AbsoluteLayout>-->
-
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:BornDateToAgeInMonthsConverter x:Key="BornDateToAgeInMonthsConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
   <ContentPage.ToolbarItems>
-    <ToolbarItem
-                 IconImageSource="Home_Registration.png"
+    <ToolbarItem IconImageSource="Home_Registration.png"
                  Command="{Binding RegistrationPageCommand}" />
   </ContentPage.ToolbarItems>
-  
+
   <ContentPage.Content>
-    <CollectionView>
+    <CollectionView ItemsSource="{Binding Childs}">
       <CollectionView.ItemTemplate>
         <DataTemplate>
-          <Grid>
-            <local:CustomEntryRenderer TextColor="Black"
-                                       x:Name="HouseNo"
-                                       Text="{Binding HouseNo}"
-                                       Placeholder="House No"></local:CustomEntryRenderer>
-            <local:CustomEntryRenderer TextColor="Black"
-                                       x:Name="FullName"
-                                       Text="{Binding FullName}"
-                                       Placeholder="Full Name"></local:CustomEntryRenderer>
-            <SelectableItemsView x:Name="Vaccined"
-                                 ItemsSource="{Binding ListItems}" ></SelectableItemsView>
+          <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.2*"></ColumnDefinition>
+              <ColumnDefinition Width="0.01*"></ColumnDefinition>
+              <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"></RowDefinition>
+              <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label WidthRequest="40"
+                   HeightRequest="40"
+                   Grid.Column="0"
+                   TextColor="Black"
+                   Text="{Binding HouseNo}"></Label>
+            <Label
+                   Grid.Column="2"
+                   Grid.Row="0"
+                   FontSize="20"
+                   TextColor="black"
+                   Text="{Binding FullName}"></Label>
+            <Label Grid.Column="2"
+                   Grid.Row="1"
+                   Padding="0, -5, 0, 0"
+                   TextColor="Black"
+                   Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
           </Grid>
         </DataTemplate>
       </CollectionView.ItemTemplate>
-    </CollectionView>
+      </CollectionView>
   </ContentPage.Content>
 </ContentPage>

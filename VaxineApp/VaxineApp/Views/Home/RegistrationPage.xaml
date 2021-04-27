@@ -9,27 +9,47 @@
     <viewmodels:ChildViewModel></viewmodels:ChildViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout Padding="20">
+    <StackLayout Padding="20, 40, 20, 20">
       <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding HouseNo, Mode=TwoWay}"
-                                 Placeholder="House No"></local:CustomEntryRenderer>
+                                 Text="{Binding HouseNo}"
+                                 Placeholder="House No"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
       <local:CustomEntryRenderer TextColor="Black"
                                  Text="{Binding FullName, Mode=TwoWay}"
-                                 Placeholder="Full Name"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding Gender, Mode=TwoWay}"
-                                 Placeholder="Gender"></local:CustomEntryRenderer>
-      <DatePicker TextColor="Black"
-                  Date="{Binding DOB, Mode=TwoWay}"></DatePicker>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding OPV0, Mode=TwoWay}"
-                                 Placeholder="OPV0"></local:CustomEntryRenderer>
+                                 Placeholder="Full Name"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <Picker Title="Gender"
+              TextColor="Black"
+              TitleColor="Black"
+              SelectedItem="{Binding Gender, Mode=TwoWay}">
+        <Picker.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>Male</x:String>
+            <x:String>Female</x:String>
+          </x:Array>
+        </Picker.ItemsSource>
+      </Picker>
       <local:CustomEntryRenderer TextColor="Black"
                                  Text="{Binding RINo, Mode=TwoWay}"
-                                 Placeholder="RI No"></local:CustomEntryRenderer>
+                                 Placeholder="RI Number"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <DatePicker TextColor="Black"
+                  Date="{Binding DOB, Mode=TwoWay}"></DatePicker>
 
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.3*"></ColumnDefinition>
+          <ColumnDefinition Width="0.7*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Text="OPV0"
+               TextColor="Black"
+               Grid.Column="0"></Label>
+        <CheckBox Grid.Column="1"
+                  IsChecked="{Binding OPV0, Mode=TwoWay}" />
+      </Grid>
       <Button Text="Save"
-              Command="{Binding SaveDataCommand}"></Button>
+              Command="{Binding SaveDataCommand}"
+              Margin="20"></Button>
     </StackLayout>
 
   </ContentPage.Content>

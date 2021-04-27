@@ -1,7 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Target Name="AddUserSecrets"
-            BeforeTargets="PrepareForBuild"
-            Condition=" '$(Configuration)' == 'Debug' And '$(UserSecretsId)' != '' ">
+  <Target Name="AddUserSecrets" BeforeTargets="PrepareForBuild" Condition=" '$(Configuration)' == 'Debug' And '$(UserSecretsId)' != '' ">
     <PropertyGroup>
       <UserSecretsFilePath Condition=" '$(OS)' == 'Windows_NT' ">
         $([System.Environment]::GetFolderPath(SpecialFolder.UserProfile))\AppData\Roaming\Microsoft\UserSecrets\$(UserSecretsId)\secrets.json
@@ -11,7 +9,7 @@
       </UserSecretsFilePath>
     </PropertyGroup>
     <ItemGroup>
-      <EmbeddedResource Include="$(UserSecretsFilePath)" Condition="Exists($(UserSecretsFilePath))"/>
+      <EmbeddedResource Include="$(UserSecretsFilePath)" Condition="Exists($(UserSecretsFilePath))" />
     </ItemGroup>
   </Target>
   <PropertyGroup>
