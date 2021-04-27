@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using VaxineApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,6 +16,20 @@ namespace VaxineApp.Views.Home.Status
         {
             InitializeComponent();
 
+        }
+
+        async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var child = e.CurrentSelection.FirstOrDefault() as ChildrenModel;
+            if (child == null)
+            {
+                return;
+            }
+            else
+            {
+                await Navigation.PushAsync(new ChildDetails(child));
+                ((CollectionView)sender).SelectedItem = null;
+            }
         }
         //private async void Registration_Clicked(object sender, EventArgs e)
         //{

@@ -21,7 +21,10 @@
 
   <ContentPage.Content>
 
-    <CollectionView ItemsSource="{Binding Childs}">
+    <CollectionView 
+      SelectionMode="Single"
+      SelectionChanged="CollectionView_SelectionChanged"
+      ItemsSource="{Binding Childs}">
       <CollectionView.Header>
         <Grid Padding="10">
           <Grid.ColumnDefinitions>
@@ -67,8 +70,7 @@
                    Grid.Column="0"
                    TextColor="Black"
                    Text="{Binding HouseNo}"></Label>
-            <Label
-                   Grid.Column="2"
+            <Label Grid.Column="2"
                    Grid.Row="0"
                    FontSize="20"
                    TextColor="black"
@@ -81,6 +83,6 @@
           </Grid>
         </DataTemplate>
       </CollectionView.ItemTemplate>
-      </CollectionView>
+    </CollectionView>
   </ContentPage.Content>
 </ContentPage>

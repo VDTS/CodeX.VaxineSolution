@@ -27,7 +27,11 @@ namespace VaxineApp.Services
               {
                   FullName = item.Object.FullName,
                   HouseNo = item.Object.HouseNo,
-                  DOB = item.Object.DOB
+                  DOB = item.Object.DOB,
+                  Gender = item.Object.Gender,
+                  OPV0 = item.Object.OPV0,
+                  RINo = item.Object.RINo
+                  
               }).ToList();
         }
     }
