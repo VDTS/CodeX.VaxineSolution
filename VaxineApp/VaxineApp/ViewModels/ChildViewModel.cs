@@ -6,6 +6,7 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.Services;
 using VaxineApp.Views.Home;
+using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels

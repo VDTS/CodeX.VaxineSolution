@@ -3,6 +3,7 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:home="clr-namespace:VaxineApp.Views.Home"
        xmlns:homeArea="clr-namespace:VaxineApp.Views.Home.Area"
+       xmlns:status="clr-namespace:VaxineApp.Views.Home.Status"
        Title="VaxineApp"
        x:Class="VaxineApp.AppShell">
 
@@ -139,7 +140,7 @@
     <Tab Icon="Home_Status.png"
          Title="Status">
       <ShellContent Route="Status"
-                    ContentTemplate="{DataTemplate home:StatusPage}" />
+                    ContentTemplate="{DataTemplate status:StatusPage}" />
     </Tab>
     <Tab Icon="Home_Report.png"
          Title="Report">

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using VaxineApp.Views;
 using VaxineApp.Views.Home;
+using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 
 namespace VaxineApp
