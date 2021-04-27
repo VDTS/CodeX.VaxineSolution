@@ -12,7 +12,7 @@ namespace VaxineApp.Converters
         {
             var age = DateTime.Now - (DateTime)value;
             var a = (age.Days) / 30;
-            return $"Age: {a} mos";
+            return a;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
