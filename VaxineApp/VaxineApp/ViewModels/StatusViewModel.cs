@@ -14,8 +14,8 @@ namespace VaxineApp.ViewModels
     public class StatusViewModel : BaseViewModel
     {
         DbContext firebaseHelper = new DbContext();
-        private List<ChildrenModel> _childs;
-        public List<ChildrenModel> Childs {
+        private List<ChildModel> _childs;
+        public List<ChildModel> Childs {
             get { return _childs; }
             set
             {

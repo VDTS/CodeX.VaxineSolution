@@ -12,8 +12,8 @@ namespace VaxineApp.Views.Home.Status
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChildDetails : ContentPage
     {
-        ChildrenModel Child { get; set; }
-        public ChildDetails(ChildrenModel child)
+        ChildModel Child { get; set; }
+        public ChildDetails(ChildModel child)
         {
             InitializeComponent();
             Child = child;

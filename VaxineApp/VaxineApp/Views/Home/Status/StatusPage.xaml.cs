@@ -20,7 +20,7 @@ namespace VaxineApp.Views.Home.Status
 
         async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var child = e.CurrentSelection.FirstOrDefault() as ChildrenModel;
+            var child = e.CurrentSelection.FirstOrDefault() as ChildModel;
             if (child == null)
             {
                 return;

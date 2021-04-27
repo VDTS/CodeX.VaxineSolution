@@ -104,7 +104,7 @@ namespace VaxineApp.ViewModels
             try
             {
                 await firebaseHelper.Add(
-                    new ChildModel
+                    new DataModel
                     {
                         FullName = FullName,
                         Gender = Gender,

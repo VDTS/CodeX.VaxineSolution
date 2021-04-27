@@ -12,18 +12,18 @@ namespace VaxineApp.Services
     public class DbContext
     {
         FirebaseClient firebase = new FirebaseClient(UserSecretsManager.Settings["firebase"]);
-        public async Task Add(ChildModel child)
+        public async Task Add(DataModel child)
         {
             await firebase
               .Child("Child")
               .PostAsync(child);
         }
 
-        public async Task<List<ChildrenModel>> GetChilds()
+        public async Task<List<ChildModel>> GetChilds()
         {
             return (await firebase
               .Child("Child")
-              .OnceAsync<ChildModel>()).Select(item => new ChildrenModel
+              .OnceAsync<DataModel>()).Select(item => new ChildModel
               {
                   FullName = item.Object.FullName,
                   HouseNo = item.Object.HouseNo,
