@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.Services;
 using VaxineApp.Views.Home;
+using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels
@@ -15,7 +17,8 @@ namespace VaxineApp.ViewModels
     {
         DbContext firebaseHelper = new DbContext();
         private List<ChildModel> _childs;
-        public List<ChildModel> Childs {
+        public List<ChildModel> Childs
+        {
             get { return _childs; }
             set
             {
@@ -25,6 +28,7 @@ namespace VaxineApp.ViewModels
 
         }
         public ICommand RegistrationPageCommand { private set; get; }
+        //public ICommand CollectionView_SelectionChangedCommand { private set; get; }
         public async void Add()
         {
             var route = $"{nameof(RegistrationPage)}";
@@ -39,6 +43,7 @@ namespace VaxineApp.ViewModels
         {
             GetChild();
             RegistrationPageCommand = new Command(Add);
+            //CollectionView_SelectionChangedCommand = new Command<>(CollectionView_SelectionChanged);
         }
     }
 }

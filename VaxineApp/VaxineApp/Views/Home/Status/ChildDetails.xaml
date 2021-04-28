@@ -1,34 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Home.Status.ChildDetails">
+             x:Class="VaxineApp.Views.Home.Status.ChildDetails"
+             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
+             Title="Child Details">
+  <ContentPage.BindingContext>
+    <viewmodel:ChildDetailsViewModel></viewmodel:ChildDetailsViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem IconImageSource="Home_Registration.png"
+                 Command="{Binding AddVaccineCommand}"/>
+  </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <StackLayout Padding="20, 40, 20, 20">
-      <Label TextColor="Black"
-             Text="{Binding HouseNo}"></Label>
-      <Label TextColor="Black"
-             Text="{Binding FullName, Mode=TwoWay}"></Label>
-      <Label TextColor="Black"
-             Text="{Binding Gender}">
-      </Label>
-      <Label TextColor="Black"
-             Text="{Binding RINo, Mode=TwoWay}"></Label>
-      <Label TextColor="Black"
-             Text="{Binding DOB}"></Label>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.7*"></RowDefinition>
+        <RowDefinition Height="0.1*"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0"
+                   Padding="20, 40, 20, 20">
+        <Label TextColor="Black"
+               Text="{Binding HouseNo}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding FullName, Mode=TwoWay}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding Gender}">
+        </Label>
+        <Label TextColor="Black"
+               Text="{Binding RINo, Mode=TwoWay}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding DOB}"></Label>
 
-      <Grid>
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="0.3*"></ColumnDefinition>
-          <ColumnDefinition Width="0.7*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Label Text="OPV0"
-               TextColor="Black"
-               Grid.Column="0"></Label>
-        <CheckBox Grid.Column="1"
-                  IsChecked="{Binding OPV0}"
-                  IsEnabled="False"
-                  />
-      </Grid>
-    </StackLayout>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Text="OPV0"
+                 TextColor="Black"
+                 Grid.Column="0"></Label>
+          <CheckBox Grid.Column="1"
+                    IsChecked="{Binding OPV0}"
+                    IsEnabled="False" />
+        </Grid>
+      </StackLayout>
+      <CollectionView Grid.Row="1">
+        
+      </CollectionView>
+    </Grid>
   </ContentPage.Content>
 </ContentPage>
