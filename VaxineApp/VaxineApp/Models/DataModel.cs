@@ -24,5 +24,6 @@ namespace VaxineApp.Models
             Id = Guid.NewGuid();
             UserMetaData = new UserMetaData();
         }
+        public List<VaccineModel> Vaccine { get; set; }
     }
 }
