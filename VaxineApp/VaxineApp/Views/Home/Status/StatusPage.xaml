@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Status.StatusPage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels"
+             xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels.Home.Status"
              xmlns:converters="clr-namespace:VaxineApp.Converters"
              Title="Status">
   <ContentPage.BindingContext>

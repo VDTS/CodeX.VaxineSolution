@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.RegistrationPage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels"
+             xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels.Home.Status"
              Title="Registration">
   <ContentPage.BindingContext>
     <viewmodels:ChildViewModel></viewmodels:ChildViewModel>

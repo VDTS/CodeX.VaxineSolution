@@ -11,7 +11,7 @@ using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 
-namespace VaxineApp.ViewModels
+namespace VaxineApp.ViewModels.Home.Status
 {
     public class StatusViewModel : BaseViewModel
     {

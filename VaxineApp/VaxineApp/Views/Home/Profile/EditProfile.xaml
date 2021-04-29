@@ -6,7 +6,7 @@
              xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
              Title="Edit">
   <ContentPage.BindingContext>
-    <viewmodel:AppViewModel></viewmodel:AppViewModel>
+    <viewmodel:AppShellViewModel></viewmodel:AppShellViewModel>
   </ContentPage.BindingContext>
     <ContentPage.Content>
     <StackLayout Padding="20, 40, 20, 20">

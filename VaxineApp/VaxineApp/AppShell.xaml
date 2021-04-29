@@ -9,7 +9,7 @@
        Title="VaxineApp"
        x:Class="VaxineApp.AppShell">
   <Shell.BindingContext>
-    <viewmodel:AppViewModel></viewmodel:AppViewModel>
+    <viewmodel:AppShellViewModel></viewmodel:AppShellViewModel>
   </Shell.BindingContext>
   <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -149,7 +149,7 @@
       </Grid>
     </DataTemplate>
   </Shell.FlyoutHeaderTemplate>
-  <FlyoutItem Title="Home">
+  <FlyoutItem Title="Home" Icon="FlyoutItem_Home.png">
     <Tab Icon="Home_Status.png"
          Title="Status">
       <ShellContent Route="Status"
@@ -193,23 +193,24 @@
     </Tab>
 
   </FlyoutItem>
-  <FlyoutItem Title="Profile"
-              Icon="">
-    <ShellContent ContentTemplate="{DataTemplate profile:ProfilePage}" />
-  </FlyoutItem>
+
 
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
   <MenuItem Text="Settings"
-            StyleClass="MenuItemLayoutStyle">
+            StyleClass="MenuItemLayoutStyle"
+            IconImageSource="FlyoutItem_settings.png">
   </MenuItem>
   <MenuItem Text="AboutUs"
-            StyleClass="MenuItemLayoutStyle">
+            StyleClass="MenuItemLayoutStyle"
+            IconImageSource="FlyoutItem_AboutUs.png">
   </MenuItem>
   <MenuItem Text="Help"
-            StyleClass="MenuItemLayoutStyle">
+            StyleClass="MenuItemLayoutStyle"
+            IconImageSource="FlyoutItem_Help.png">
   </MenuItem>
   <MenuItem Text="Logout"
-            StyleClass="MenuItemLayoutStyle">
+            StyleClass="MenuItemLayoutStyle"
+            IconImageSource="FlyoutMenuItem_Logout.png">
   </MenuItem>
 
   <!--

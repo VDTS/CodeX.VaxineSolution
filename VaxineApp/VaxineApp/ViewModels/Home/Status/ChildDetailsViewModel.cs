@@ -6,7 +6,7 @@ using VaxineApp.Models;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 
-namespace VaxineApp.ViewModels
+namespace VaxineApp.ViewModels.Home.Status
 {
     public class ChildDetailsViewModel : BaseViewModel
     {

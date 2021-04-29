@@ -5,7 +5,7 @@ using System.Windows.Input;
 using VaxineApp.Views.Home.Profile;
 using Xamarin.Forms;
 
-namespace VaxineApp.ViewModels
+namespace VaxineApp.ViewModels.Home.Profile
 {
     public class ProfileViewModel
     {

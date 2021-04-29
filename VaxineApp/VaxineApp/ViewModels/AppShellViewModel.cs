@@ -8,11 +8,11 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels
 {
-    public class AppViewModel : BaseViewModel
+    public class AppShellViewModel : BaseViewModel
     {
         public ICommand GoToProfileCommand { private set; get; }
 
-        public AppViewModel()
+        public AppShellViewModel()
         {
             GoToProfileCommand = new Command(GoToProfile);
         }
