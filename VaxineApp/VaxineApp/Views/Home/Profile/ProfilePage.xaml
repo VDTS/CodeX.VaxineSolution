@@ -12,7 +12,28 @@
     <ToolbarItem IconImageSource="Universal_Edit.png"
                  Command="{Binding EditProfileCommand}" />
   </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-    <Label TextColor="Black" Text="Hello"></Label>
-    </ContentPage.Content>
+  <ContentPage.Content>
+    <StackLayout Padding="20, 40, 20, 20">
+      <Image Source="Profile_PhotoPlaceholder.png"></Image>
+      <BoxView   VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 HeightRequest="1"
+                 WidthRequest="200"
+                 Color="#5b5d68"></BoxView>
+      <Label TextColor="Black"
+             Text="{Binding Profile.FullName}"></Label>
+      <Label TextColor="Black"
+             Text="{Binding Profile.Gender}">
+      </Label>
+      <Label TextColor="Black"
+             Text="{Binding Profile.FatherOrHusbandName}"></Label>
+      <Label TextColor="Black"
+             Text="{Binding Profile.Age}"></Label>
+      <Label TextColor="Black"
+             Text="{Binding Profile.Role}"></Label>
+      <Label TextColor="Black"
+             Text="{Binding Profile.Email}"></Label>
+
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

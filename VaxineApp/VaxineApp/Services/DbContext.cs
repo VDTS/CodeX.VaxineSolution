@@ -18,6 +18,24 @@ namespace VaxineApp.Services
               .Child("Child")
               .PostAsync(child);
         }
+        public async Task Add(ProfileModel profile)
+        {
+            await firebase
+              .Child("Profile")
+              .PostAsync(profile);
+        }
+
+        public async Task UpdatePerson(string Email, ProfileModel profile)
+        {
+            var toUpdatePerson = (await firebase
+              .Child("Profile")
+              .OnceAsync<ProfileModel>()).Where(a => a.Object.Email == Email).FirstOrDefault();
+
+            await firebase
+              .Child("Profile")
+              .Child(toUpdatePerson.Key)
+              .PutAsync(profile);
+        }
 
         public async Task<List<ChildModel>> GetChilds()
         {
@@ -33,6 +51,30 @@ namespace VaxineApp.Services
                   RINo = item.Object.RINo
                   
               }).ToList();
+        }
+       
+        public async Task<List<ProfileModel>> GetProfiles()
+        {
+            return (await firebase
+              .Child("Profile")
+              .OnceAsync<ProfileModel>()).Select(item => new ProfileModel
+              {
+                  FullName = item.Object.FullName,
+                  FatherOrHusbandName = item.Object.FatherOrHusbandName,
+                  Gender = item.Object.Gender,
+                  Age = item.Object.Age,
+                  Email = item.Object.Email,
+                  Role = item.Object.Role
+              }).ToList();
+        }
+
+        public async Task<ProfileModel> GetProfile(string Email)
+        {
+            var allPersons = await GetProfiles();
+            await firebase
+              .Child("Profile")
+              .OnceAsync<ProfileModel>();
+            return allPersons.Where(a => a.Email == Email).FirstOrDefault();
         }
     }
 }

@@ -6,6 +6,7 @@
        xmlns:status="clr-namespace:VaxineApp.Views.Home.Status"
        xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
        xmlns:profile="clr-namespace:VaxineApp.Views.Home.Profile"
+       xmlns:profileViewModel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
        Title="VaxineApp"
        x:Class="VaxineApp.AppShell">
   <Shell.BindingContext>

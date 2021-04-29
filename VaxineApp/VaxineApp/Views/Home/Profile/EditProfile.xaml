@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Profile.EditProfile"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
+             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
              Title="Edit">
   <ContentPage.BindingContext>
-    <viewmodel:AppShellViewModel></viewmodel:AppShellViewModel>
+    <viewmodel:ProfileViewModel></viewmodel:ProfileViewModel>
   </ContentPage.BindingContext>
-    <ContentPage.Content>
+  <ScrollView>
     <StackLayout Padding="20, 40, 20, 20">
       <Image Source="Profile_PhotoPlaceholder.png"></Image>
       <BoxView   VerticalOptions="Center"
@@ -17,13 +17,13 @@
                  WidthRequest="200"
                  Color="#5b5d68"></BoxView>
       <local:CustomEntryRenderer TextColor="Black"
-                                 Text=""
+                                 Text="{Binding FullName}"
                                  Placeholder="Name"
                                  PlaceholderColor="Gray"></local:CustomEntryRenderer>
       <Picker Title="Gender"
               TextColor="Black"
               TitleColor="Black"
-              SelectedItem="">
+              SelectedItem="{Binding Gender}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
             <x:String>Male</x:String>
@@ -32,22 +32,36 @@
         </Picker.ItemsSource>
       </Picker>
       <local:CustomEntryRenderer TextColor="Black"
-                                 Text=""
+                                 Text="{Binding FatherOrHusbandName}"
                                  Placeholder="Father or Husband Name"
                                  PlaceholderColor="Gray"></local:CustomEntryRenderer>
       <local:CustomEntryRenderer TextColor="Black"
-                                 Text=""
+                                 Text="{Binding Age}"
                                  Placeholder="Age"
                                  PlaceholderColor="Gray"></local:CustomEntryRenderer>
-      <DatePicker TextColor="Black"></DatePicker>
+      <!--<DatePicker TextColor="Black" Date="{Binding D}"></DatePicker>-->
 
       <local:CustomEntryRenderer TextColor="Black"
-                                 Text=""
+                                 Text="{Binding Email}"
                                  Placeholder="Email"
                                  PlaceholderColor="Gray"></local:CustomEntryRenderer>
-      <Button Text="Save"
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding ConfirmEmail}"
+                                 Placeholder="Confirm Email"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding Password}"
+                                 Placeholder="Password"
+                                 IsPassword="True"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding ConfirmPassword}"
+                                 Placeholder=" Confirm Password"
+                                 IsPassword="True"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <Button Text="Update Profile"
               Command="{Binding SaveDataCommand}"
               Margin="20"></Button>
     </StackLayout>
-  </ContentPage.Content>
+  </ScrollView>
 </ContentPage>
