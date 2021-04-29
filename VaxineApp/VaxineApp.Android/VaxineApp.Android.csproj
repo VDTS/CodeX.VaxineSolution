@@ -99,9 +99,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Home_Area.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\FlyoutHeader_Account.png" />
   </ItemGroup>
   <ItemGroup>
@@ -126,9 +123,6 @@
     <AndroidResource Include="Resources\drawable\Home_Registration.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Home_Report.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Home_Status.png" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +145,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\AppIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ex_splash_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Home_Insights.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Home_Area.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_logo.png" />
