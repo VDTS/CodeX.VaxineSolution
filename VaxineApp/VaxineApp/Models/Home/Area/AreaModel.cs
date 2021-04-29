@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VaxineApp.Models
+namespace VaxineApp.Models.Home.Area
 {
     public class AreaModel
     {

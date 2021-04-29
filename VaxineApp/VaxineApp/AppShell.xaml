@@ -3,7 +3,11 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:home="clr-namespace:VaxineApp.Views.Home"
        xmlns:homeArea="clr-namespace:VaxineApp.Views.Home.Area.Area"
-       xmlns:homeMasjeed="clr-namespace:VaxineApp.Views.Home.Area"
+       xmlns:homeMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
+       xmlns:homeClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
+       xmlns:homeDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
+       xmlns:homeInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
+       xmlns:homeSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
        xmlns:status="clr-namespace:VaxineApp.Views.Home.Status"
        xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
        xmlns:profile="clr-namespace:VaxineApp.Views.Home.Profile"
@@ -177,16 +181,16 @@
                     ContentTemplate="{DataTemplate homeMasjeed:MasjeedPage}" />
       <ShellContent Title="School"
                     Route="School"
-                    ContentTemplate="{DataTemplate homeMasjeed:SchoolPage}" />
+                    ContentTemplate="{DataTemplate homeSchool:SchoolPage}" />
       <ShellContent Title="Influencer"
                     Route="Influencer"
-                    ContentTemplate="{DataTemplate homeMasjeed:InfluencerPage}" />
+                    ContentTemplate="{DataTemplate homeInfluencer:InfluencerPage}" />
       <ShellContent Title="Clinic"
                     Route="Clinic"
-                    ContentTemplate="{DataTemplate homeMasjeed:ClinicPage}" />
+                    ContentTemplate="{DataTemplate homeClinic:ClinicPage}" />
       <ShellContent Title="Doctor"
                     Route="Doctor"
-                    ContentTemplate="{DataTemplate homeMasjeed:DoctorPage}" />
+                    ContentTemplate="{DataTemplate homeDoctor:DoctorPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="Profile">

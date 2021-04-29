@@ -8,6 +8,11 @@ using Xamarin.Forms;
 using System.Windows.Input;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Home.Area.Area;
+using VaxineApp.Views.Home.Area.Clinic;
+using VaxineApp.Views.Home.Area.Doctor;
+using VaxineApp.Views.Home.Area.Influencer;
+using VaxineApp.Views.Home.Area.Masjeed;
+using VaxineApp.Views.Home.Area.School;
 
 namespace VaxineApp
 {
@@ -23,6 +28,11 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(EditProfile), typeof(EditProfile));
             Routing.RegisterRoute(nameof(AreaPage), typeof(AreaPage));
             Routing.RegisterRoute(nameof(EditAreaPage), typeof(EditAreaPage));
+            Routing.RegisterRoute(nameof(ClinicPage), typeof(ClinicPage));
+            Routing.RegisterRoute(nameof(DoctorPage), typeof(DoctorPage));
+            Routing.RegisterRoute(nameof(InfluencerPage), typeof(InfluencerPage));
+            Routing.RegisterRoute(nameof(MasjeedPage), typeof(MasjeedPage)); 
+            Routing.RegisterRoute(nameof(SchoolPage), typeof(SchoolPage));
         }
     }
 }

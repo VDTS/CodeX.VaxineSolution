@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home.Area
+namespace VaxineApp.Views.Home.Area.Masjeed
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DoctorPage : ContentPage
+    public partial class MasjeedPage : ContentPage
     {
-        public DoctorPage()
+        public MasjeedPage()
         {
             InitializeComponent();
         }

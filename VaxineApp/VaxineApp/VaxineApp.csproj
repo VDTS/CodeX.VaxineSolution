@@ -48,19 +48,19 @@
     <EmbeddedResource Update="Views\Home\Area\Area\EditAreaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\ClinicPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\Clinic\ClinicPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\DoctorPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\Doctor\DoctorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\InfluencerPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\Influencer\InfluencerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\MasjeedPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\Masjeed\MasjeedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\SchoolPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\School\SchoolPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Profile\EditProfile.xaml">

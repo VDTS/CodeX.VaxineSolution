@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
 using VaxineApp.Models;
+using VaxineApp.Models.Home.Area;
 
 namespace VaxineApp.Services
 {

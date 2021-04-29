@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home.Area
+namespace VaxineApp.Views.Home.Area.Clinic
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ClinicPage : ContentPage
