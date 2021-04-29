@@ -7,6 +7,7 @@ using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 using System.Windows.Input;
 using VaxineApp.Views.Home.Profile;
+using VaxineApp.Views.Home.Area.Area;
 
 namespace VaxineApp
 {
@@ -20,6 +21,8 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(VaccinePage), typeof(VaccinePage));
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(EditProfile), typeof(EditProfile));
+            Routing.RegisterRoute(nameof(AreaPage), typeof(AreaPage));
+            Routing.RegisterRoute(nameof(EditAreaPage), typeof(EditAreaPage));
         }
     }
 }

@@ -2,7 +2,8 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:home="clr-namespace:VaxineApp.Views.Home"
-       xmlns:homeArea="clr-namespace:VaxineApp.Views.Home.Area"
+       xmlns:homeArea="clr-namespace:VaxineApp.Views.Home.Area.Area"
+       xmlns:homeMasjeed="clr-namespace:VaxineApp.Views.Home.Area"
        xmlns:status="clr-namespace:VaxineApp.Views.Home.Status"
        xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
        xmlns:profile="clr-namespace:VaxineApp.Views.Home.Profile"
@@ -173,19 +174,19 @@
                     ContentTemplate="{DataTemplate homeArea:AreaPage}" />
       <ShellContent Title="Masjeed"
                     Route="Masjeed"
-                    ContentTemplate="{DataTemplate homeArea:MasjeedPage}" />
+                    ContentTemplate="{DataTemplate homeMasjeed:MasjeedPage}" />
       <ShellContent Title="School"
                     Route="School"
-                    ContentTemplate="{DataTemplate homeArea:SchoolPage}" />
+                    ContentTemplate="{DataTemplate homeMasjeed:SchoolPage}" />
       <ShellContent Title="Influencer"
                     Route="Influencer"
-                    ContentTemplate="{DataTemplate homeArea:InfluencerPage}" />
+                    ContentTemplate="{DataTemplate homeMasjeed:InfluencerPage}" />
       <ShellContent Title="Clinic"
                     Route="Clinic"
-                    ContentTemplate="{DataTemplate homeArea:ClinicPage}" />
+                    ContentTemplate="{DataTemplate homeMasjeed:ClinicPage}" />
       <ShellContent Title="Doctor"
                     Route="Doctor"
-                    ContentTemplate="{DataTemplate homeArea:DoctorPage}" />
+                    ContentTemplate="{DataTemplate homeMasjeed:DoctorPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="Profile">

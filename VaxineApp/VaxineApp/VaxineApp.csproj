@@ -33,13 +33,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Home\Area\Area\EditAreaPage.xaml.cs">
+      <DependentUpon>EditAreaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Home\RegistrationPage.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\Home\Area\AreaPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\Area\AreaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Area\Area\EditAreaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\ClinicPage.xaml">

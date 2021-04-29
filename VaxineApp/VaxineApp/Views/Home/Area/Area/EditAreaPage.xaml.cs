@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home.Area
+namespace VaxineApp.Views.Home.Area.Area
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AreaPage : ContentPage
+    public partial class EditAreaPage : ContentPage
     {
-        public AreaPage()
+        public EditAreaPage()
         {
             InitializeComponent();
         }

@@ -18,6 +18,13 @@ namespace VaxineApp.Services
               .Child("Child")
               .PostAsync(child);
         }
+
+        public async Task AddArea(AreaModel area)
+        {
+            await firebase
+              .Child("Area")
+              .PostAsync(area);
+        }
         public async Task Add(ProfileModel profile)
         {
             await firebase

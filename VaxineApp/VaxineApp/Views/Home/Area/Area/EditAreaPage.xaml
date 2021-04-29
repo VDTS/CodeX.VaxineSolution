@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Home.Area.Area.EditAreaPage"
+             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Home.Area.Area"
+             xmlns:local="clr-namespace:VaxineApp.Renderers">
+  <ContentPage.BindingContext>
+    <viewmodel:AreaViewModel></viewmodel:AreaViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <local:CustomEntryRenderer TextColor="Black"
+                                   Placeholder="Cluster Name"
+                                   PlaceholderColor="Gray"
+                                   Text="{Binding ClusterName}"></local:CustomEntryRenderer>
+        <local:CustomEntryRenderer TextColor="Black"
+                                   Placeholder="Team No."
+                                   PlaceholderColor="Gray"
+                                   Text="{Binding TeamNo}"></local:CustomEntryRenderer>
+        <local:CustomEntryRenderer TextColor="Black"
+                                   Placeholder="Social Mobilizer Id"
+                                   PlaceholderColor="Gray"
+                                   Text="{Binding SocialMobilizerId}"></local:CustomEntryRenderer>
+        <local:CustomEntryRenderer TextColor="Black"
+                                   Placeholder="CHW Name"
+                                   PlaceholderColor="Gray"
+                                   Text="{Binding CHWName}">
+        </local:CustomEntryRenderer>
+        <Label TextColor="Black"
+               Text="{Binding TotalHouseholds}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding TotalMasjeeds}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding TotalChildren}"></Label>
+
+        <Button Text="Update Area"
+                Command="{Binding SaveAreaCommand}"
+                Margin="20"></Button>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>
