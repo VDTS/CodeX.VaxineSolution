@@ -4,9 +4,13 @@
        xmlns:home="clr-namespace:VaxineApp.Views.Home"
        xmlns:homeArea="clr-namespace:VaxineApp.Views.Home.Area"
        xmlns:status="clr-namespace:VaxineApp.Views.Home.Status"
+       xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
+       xmlns:profile="clr-namespace:VaxineApp.Views.Home.Profile"
        Title="VaxineApp"
        x:Class="VaxineApp.AppShell">
-
+  <Shell.BindingContext>
+    <viewmodel:AppViewModel></viewmodel:AppViewModel>
+  </Shell.BindingContext>
   <!--
         The overall app visual hierarchy is defined here, along with navigation.
     
@@ -125,14 +129,23 @@
                HorizontalTextAlignment="Start"
                VerticalTextAlignment="end"
                Padding="20, 0, 0, 50"
-               Grid.Row="1" />
+               Grid.Row="1">
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding GoToProfileCommand}" />
+          </Label.GestureRecognizers>
+        </Label>
+
         <Label Text="Role"
                FontAttributes="Bold"
                TextColor="Black"
                HorizontalTextAlignment="Start"
                VerticalTextAlignment="end"
                Padding="20, 0, 0, 20"
-               Grid.Row="1" />
+               Grid.Row="1">
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding GoToProfileCommand}" />
+          </Label.GestureRecognizers>
+        </Label>
       </Grid>
     </DataTemplate>
   </Shell.FlyoutHeaderTemplate>
@@ -176,13 +189,13 @@
     <Tab Icon="Home_Profile.png"
          Title="Profile">
       <ShellContent Route="Profile"
-                    ContentTemplate="{DataTemplate home:ProfilePage}" />
+                    ContentTemplate="{DataTemplate profile:ProfilePage}" />
     </Tab>
 
   </FlyoutItem>
   <FlyoutItem Title="Profile"
               Icon="">
-    <ShellContent ContentTemplate="{DataTemplate home:ProfilePage}" />
+    <ShellContent ContentTemplate="{DataTemplate profile:ProfilePage}" />
   </FlyoutItem>
 
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

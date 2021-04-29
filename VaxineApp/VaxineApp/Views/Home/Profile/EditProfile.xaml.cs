@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home
+namespace VaxineApp.Views.Home.Profile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProfilePage : ContentPage
+    public partial class EditProfile : ContentPage
     {
-        public ProfilePage()
+        public EditProfile()
         {
             InitializeComponent();
         }

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Home.Profile.EditProfile"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
+             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
+             Title="Edit">
+  <ContentPage.BindingContext>
+    <viewmodel:AppViewModel></viewmodel:AppViewModel>
+  </ContentPage.BindingContext>
+    <ContentPage.Content>
+    <StackLayout Padding="20, 40, 20, 20">
+      <Image Source="Profile_PhotoPlaceholder.png"></Image>
+      <BoxView   VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 HeightRequest="1"
+                 WidthRequest="200"
+                 Color="#5b5d68"></BoxView>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text=""
+                                 Placeholder="Name"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <Picker Title="Gender"
+              TextColor="Black"
+              TitleColor="Black"
+              SelectedItem="">
+        <Picker.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>Male</x:String>
+            <x:String>Female</x:String>
+          </x:Array>
+        </Picker.ItemsSource>
+      </Picker>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text=""
+                                 Placeholder="Father or Husband Name"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text=""
+                                 Placeholder="Age"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <DatePicker TextColor="Black"></DatePicker>
+
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text=""
+                                 Placeholder="Email"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <Button Text="Save"
+              Command="{Binding SaveDataCommand}"
+              Margin="20"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
