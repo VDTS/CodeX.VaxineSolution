@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
-using VaxineApp.Services;
+using DataAccess;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
@@ -13,8 +13,6 @@ namespace VaxineApp.ViewModels.Home.Status
 {
     public class ChildViewModel : BaseViewModel
     {
-        DbContext firebaseHelper = new DbContext();
-
         private int _houseNo;
         public int HouseNo
         {
@@ -103,7 +101,7 @@ namespace VaxineApp.ViewModels.Home.Status
         {
             try
             {
-                await firebaseHelper.Add(
+                await Data.AddDataNode(
                     new DataModel
                     {
                         FullName = FullName,
@@ -112,7 +110,7 @@ namespace VaxineApp.ViewModels.Home.Status
                         HouseNo = HouseNo,
                         OPV0 = OPV0,
                         RINo = RINo
-                    }
+                    }, "Child"
                     );
                 var route = $"{nameof(StatusPage)}";
                 await Shell.Current.GoToAsync(route);

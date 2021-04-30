@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
-using VaxineApp.Services;
+using DataAccess;
 using VaxineApp.Views.Home.Profile;
 using Xamarin.Forms;
 
@@ -11,7 +11,6 @@ namespace VaxineApp.ViewModels.Home.Profile
 {
     public class ProfileViewModel : BaseViewModel
     {
-        DbContext firebaseHelper = new DbContext();
         public ICommand SaveDataCommand { private set; get; }
         public ICommand EditProfileCommand { private set; get; }
         private string _fullName;
@@ -109,7 +108,8 @@ namespace VaxineApp.ViewModels.Home.Profile
         }
 
         private ProfileModel _profile;
-        public ProfileModel Profile {
+        public ProfileModel Profile
+        {
             get { return _profile; }
             set
             {
@@ -126,7 +126,19 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public async void GetProfile()
         {
-            Profile = await firebaseHelper.GetProfile("Yassin@gmail.com");
+            var profile = await Data.GetProfile("Yassin@gmail.com");
+            Profile = new ProfileModel
+            {
+                FullName = profile.FullName,
+                Age = profile.Age,
+                ConfirmEmail = profile.ConfirmEmail,
+                ConfirmPassword = profile.ConfirmPassword,
+                Email = profile.Email,
+                FatherOrHusbandName = profile.FatherOrHusbandName,
+                Gender = profile.Gender,
+                Password = profile.Password,
+                Role = profile.Role
+            };
             FullName = Profile.FullName;
             Gender = Profile.Gender;
             FatherOrHusbandName = Profile.FatherOrHusbandName;
@@ -138,7 +150,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             try
             {
-                await firebaseHelper.UpdatePerson(Profile.Email,
+                await Data.UpdatePerson(Profile.Email,
                     new ProfileModel
                     {
                         FullName = FullName,

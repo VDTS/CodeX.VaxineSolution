@@ -1,25 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Target Name="AddUserSecrets" BeforeTargets="PrepareForBuild" Condition=" '$(Configuration)' == 'Debug' And '$(UserSecretsId)' != '' ">
-    <PropertyGroup>
-      <UserSecretsFilePath Condition=" '$(OS)' == 'Windows_NT' ">
-        $([System.Environment]::GetFolderPath(SpecialFolder.UserProfile))\AppData\Roaming\Microsoft\UserSecrets\$(UserSecretsId)\secrets.json
-      </UserSecretsFilePath>
-      <UserSecretsFilePath Condition=" '$(OS)' == 'Unix' ">
-        $([System.Environment]::GetFolderPath(SpecialFolder.UserProfile))/.microsoft/usersecrets/$(UserSecretsId)/secrets.json
-      </UserSecretsFilePath>
-    </PropertyGroup>
-    <ItemGroup>
-      <EmbeddedResource Include="$(UserSecretsFilePath)" Condition="Exists($(UserSecretsFilePath))" />
-    </ItemGroup>
-  </Target>
+  
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <UserSecretsId>3e029ffa-6048-4d09-bad8-29ab67ccf971</UserSecretsId>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FirebaseDatabase.net" Version="4.0.6" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
@@ -30,6 +23,10 @@
     <Folder Include="Views\AboutUs\" />
     <Folder Include="Views\Help\" />
     <Folder Include="Views\Settings\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataAccess\DataAccess.csproj" />
   </ItemGroup>
 
   <ItemGroup>

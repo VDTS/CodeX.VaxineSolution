@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using Newtonsoft.Json.Linq;
+using System.Text;
 
-namespace VaxineApp
+namespace DataAccess
 {
     class UserSecretsManager
     {
@@ -14,7 +14,7 @@ namespace VaxineApp
         private JObject _secrets;
 
         // Default namespace of the project
-        private const string Namespace = "VaxineApp";
+        private const string Namespace = "DataAccess";
 
         // Filename of the embedded resource file
         private const string UserSecretsFileName = "secrets.json";

@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.Models.Home.Area;
-using VaxineApp.Services;
+using DataAccess;
 using VaxineApp.Views.Home.Area.Area;
 using Xamarin.Forms;
 
@@ -12,7 +12,6 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 {
     public class AreaViewModel : BaseViewModel
     {
-        DbContext firebaseHelper = new DbContext();
         private string _clusterName;
         private AreaModel _area;
         public AreaModel Area {
@@ -104,7 +103,14 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
         public async void GetArea()
         {
-            Area = await firebaseHelper.GetArea();
+            var area = await Data.GetArea();
+            Area = new AreaModel
+            {
+                ClusterName = area.ClusterName,
+                CHWName = area.CHWName,
+                SocialMobilizerId = area.SocialMobilizerId,
+                TeamNo = area.TeamNo
+            };
         }
         public async void EditArea()
         {
@@ -116,14 +122,14 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         {
             try
             {
-                await firebaseHelper.AddArea(
+                await Data.AddDataNode(
                     new AreaModel
                     {
                         ClusterName = ClusterName,
                         TeamNo = TeamNo,
                         CHWName = CHWName,
                         SocialMobilizerId = SocialMobilizerId
-                    }
+                    }, "Area"
                     );
                 var route = $"{nameof(AreaPage)}";
                 await Shell.Current.GoToAsync(route);
