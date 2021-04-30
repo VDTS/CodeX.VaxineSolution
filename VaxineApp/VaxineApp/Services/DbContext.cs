@@ -60,7 +60,19 @@ namespace VaxineApp.Services
                   
               }).ToList();
         }
-       
+
+        public async Task<AreaModel> GetArea()
+        {
+            return (await firebase
+              .Child("Area")
+              .OnceAsync<AreaModel>()).Select(item => new AreaModel
+              {
+                  ClusterName = item.Object.ClusterName,
+                  CHWName = item.Object.CHWName,
+                  SocialMobilizerId = item.Object.SocialMobilizerId,
+                  TeamNo = item.Object.TeamNo
+              }).FirstOrDefault();
+        }
         public async Task<List<ProfileModel>> GetProfiles()
         {
             return (await firebase

@@ -10,14 +10,15 @@
   <ContentPage.ToolbarItems>
     <ToolbarItem IconImageSource="Home_Registration.png"
                  Command="{Binding EditAreaCommand}" />
+    
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <ScrollView>
       <StackLayout>
-        <Label TextColor="Black" Text="{Binding ClusterName}"></Label>
-        <Label TextColor="Black" Text="{Binding TeamNo}"></Label>
-        <Label TextColor="Black" Text="{Binding SocialMobilizerId}"></Label>
-        <Label TextColor="Black" Text="{Binding CHWName}"></Label>
+        <Label TextColor="Black" Text="{Binding Area.ClusterName}"></Label>
+        <Label TextColor="Black" Text="{Binding Area.TeamNo}"></Label>
+        <Label TextColor="Black" Text="{Binding Area.SocialMobilizerId}"></Label>
+        <Label TextColor="Black" Text="{Binding Area.CHWName}"></Label>
         <Label TextColor="Black" Text="{Binding TotalHouseholds}"></Label>
         <Label TextColor="Black" Text="{Binding TotalMasjeeds}"></Label>
         <Label TextColor="Black" Text="{Binding TotalChildren}"></Label>

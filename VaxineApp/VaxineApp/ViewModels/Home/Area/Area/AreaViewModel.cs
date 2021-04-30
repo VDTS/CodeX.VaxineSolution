@@ -14,6 +14,15 @@ namespace VaxineApp.ViewModels.Home.Area.Area
     {
         DbContext firebaseHelper = new DbContext();
         private string _clusterName;
+        private AreaModel _area;
+        public AreaModel Area {
+            get { return _area; }
+            set
+            {
+                _area = value;
+                RaisedPropertyChanged(nameof(Area));
+            }
+        }
         public string ClusterName
         {
             get { return _clusterName; }
@@ -88,10 +97,15 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         public ICommand SaveAreaCommand { private set; get; }
         public AreaViewModel()
         {
+            GetArea();
             EditAreaCommand = new Command(EditArea);
             SaveAreaCommand = new Command(SaveArea);
         }
 
+        public async void GetArea()
+        {
+            Area = await firebaseHelper.GetArea();
+        }
         public async void EditArea()
         {
             var route = $"{nameof(EditAreaPage)}";
