@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home.Status
+namespace VaxineApp.Views.Home.Family
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FamilyPage : ContentPage
+    public partial class FamilyDetailsPage : ContentPage
     {
-        public FamilyPage()
+        public FamilyDetailsPage()
         {
             InitializeComponent();
         }

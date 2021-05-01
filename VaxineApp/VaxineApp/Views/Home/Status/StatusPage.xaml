@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Status.StatusPage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels.Home.Status"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status"
              xmlns:converters="clr-namespace:VaxineApp.Converters"
              Title="Status">
   <ContentPage.ToolbarItems>
@@ -12,7 +12,7 @@
                  Icon="Search.png"
                  Text="Search"
                  Priority="1" />
-    <ToolbarItem Order="Secondary"
+    <!--<ToolbarItem Order="Secondary"
                  Text="Edit"
                  Priority="1"/>
     <ToolbarItem Order="Secondary"
@@ -25,14 +25,14 @@
     <ToolbarItem Order="Secondary"
                  Text="Add Child"
                  Command="{Binding RegistrationPageCommand}"
-                 Priority="3" />
+                 Priority="3" />-->
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.BindingContext>
-    <viewmodels:StatusViewModel></viewmodels:StatusViewModel>
+    <ViewModel:StatusViewModel></ViewModel:StatusViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Resources>
     <ResourceDictionary>

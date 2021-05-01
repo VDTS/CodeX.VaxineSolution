@@ -27,7 +27,7 @@ namespace VaxineApp.Views.Home.Status
             }
             else
             {
-                await Navigation.PushAsync(new ChildDetails(child));
+                await Navigation.PushAsync(new ChildVaccinePage(child));
                 ((CollectionView)sender).SelectedItem = null;
             }
         }

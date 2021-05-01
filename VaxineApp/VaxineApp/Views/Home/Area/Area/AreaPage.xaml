@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Area.Area.AreaPage"
-             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Home.Area.Area"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Area"
              Title="Area">
   <ContentPage.BindingContext>
-    <viewmodel:AreaViewModel></viewmodel:AreaViewModel>
+    <ViewModel:AreaViewModel></ViewModel:AreaViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Primary"
@@ -19,9 +19,6 @@
     <ToolbarItem Order="Secondary"
                  Text="Delete"
                  Priority="2" />
-    <ToolbarItem Order="Secondary"
-                 Text="Add"
-                 Priority="3" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"

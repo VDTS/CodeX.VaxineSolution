@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VaxineApp.ViewModels.Home.Status
+namespace VaxineApp.ViewModels.Home.Family
 {
-    public class FamilyViewModel
+    class FamilyDetailsViewModel
     {
     }
 }

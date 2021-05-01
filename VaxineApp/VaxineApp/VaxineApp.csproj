@@ -22,7 +22,6 @@
   <ItemGroup>
     <Folder Include="Views\AboutUs\" />
     <Folder Include="Views\Help\" />
-    <Folder Include="Views\Settings\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,8 +32,20 @@
     <Compile Update="Views\Home\Area\Area\EditAreaPage.xaml.cs">
       <DependentUpon>EditAreaPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Home\Registration\RegistrationPage.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
+    <Compile Update="Views\Home\Family\AddFamilyPage.xaml.cs">
+      <DependentUpon>AddFamilyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Status\ChildVaccinePage.xaml.cs">
+      <DependentUpon>ChildVaccinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Family\FamilyDetailsPage.xaml.cs">
+      <DependentUpon>FamilyDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Family\FamilyListPage.xaml.cs">
+      <DependentUpon>FamilyListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Insights\InsightsPage.xaml.cs">
+      <DependentUpon>InsightsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -45,16 +56,31 @@
     <EmbeddedResource Update="Views\Home\Area\Area\EditAreaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Area\Clinic\AddClinicPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Clinic\ClinicPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Area\Doctor\AditDoctorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Doctor\DoctorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Area\Influencer\AditInfluencerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Influencer\InfluencerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Area\Masjeed\AditMasjeedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Masjeed\MasjeedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Area\School\AditSchoolPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\School\SchoolPage.xaml">
@@ -66,19 +92,31 @@
     <EmbeddedResource Update="Views\Home\Profile\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\ReportPage.xaml">
+    <EmbeddedResource Update="Views\Home\Family\AddChildPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Status\ChildDetails.xaml">
+    <EmbeddedResource Update="Views\Home\Family\AddFamilyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Status\FamilyPage.xaml">
+    <EmbeddedResource Update="Views\Home\Family\FamilyDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Family\FamilyListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Insights\InsightsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Status\AddVaccinePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Status\ChildVaccinePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Status\StatusPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Status\VaccinePage.xaml">
+    <EmbeddedResource Update="Views\Settings\Settings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

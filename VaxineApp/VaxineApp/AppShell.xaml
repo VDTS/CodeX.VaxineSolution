@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:home="clr-namespace:VaxineApp.Views.Home"
-       xmlns:homeArea="clr-namespace:VaxineApp.Views.Home.Area.Area"
-       xmlns:homeMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
-       xmlns:homeClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
-       xmlns:homeDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
-       xmlns:registration="clr-namespace:VaxineApp.Views.Home.Registration"
-       xmlns:homeInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
-       xmlns:homeSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
-       xmlns:status="clr-namespace:VaxineApp.Views.Home.Status"
-       xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels"
-       xmlns:profile="clr-namespace:VaxineApp.Views.Home.Profile"
+       xmlns:HomeStatus="clr-namespace:VaxineApp.Views.Home.Status"
+       xmlns:HomeInsights="clr-namespace:VaxineApp.Views.Home.Insights"
+       xmlns:HomeFamily="clr-namespace:VaxineApp.Views.Home.Family"
+       xmlns:HomeArea="clr-namespace:VaxineApp.Views.Home.Area.Area"
+         xmlns:HomeAreaClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
+         xmlns:HomeAreaDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
+         xmlns:HomeAreaInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
+         xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
+         xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
+       xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
+       xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
        xmlns:profileViewModel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
        Title="VaxineApp"
        x:Class="VaxineApp.AppShell">
   <Shell.BindingContext>
-    <viewmodel:AppShellViewModel></viewmodel:AppShellViewModel>
+    <ViewModel:AppShellViewModel></ViewModel:AppShellViewModel>
   </Shell.BindingContext>
   <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -160,43 +160,43 @@
     <Tab Icon="Home_Status.png"
          Title="Status">
       <ShellContent Route="Status"
-                    ContentTemplate="{DataTemplate status:StatusPage}" />
+                    ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
     </Tab>
     <Tab Icon="Home_Insights.png"
          Title="Insights">
       <ShellContent Route="Insights"
-                    ContentTemplate="{DataTemplate home:ReportPage}" />
+                    ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
     </Tab>
-    <Tab Icon="Home_Registration.png"
-         Title="Registration">
-      <ShellContent Route="RegistrationPage"
-                    ContentTemplate="{DataTemplate registration:RegistrationPage}" />
+    <Tab Icon="Home_Family.png"
+         Title="Family">
+      <ShellContent Route="FamilyPage"
+                    ContentTemplate="{DataTemplate HomeFamily:FamilyListPage}" />
     </Tab>
     <Tab Icon="Home_Area.png"
          Title="Area">
       <ShellContent Title="Area"
                     Route="Area"
-                    ContentTemplate="{DataTemplate homeArea:AreaPage}" />
+                    ContentTemplate="{DataTemplate HomeArea:AreaPage}" />
       <ShellContent Title="Masjeed"
                     Route="Masjeed"
-                    ContentTemplate="{DataTemplate homeMasjeed:MasjeedPage}" />
+                    ContentTemplate="{DataTemplate HomeAreaMasjeed:MasjeedPage}" />
       <ShellContent Title="School"
                     Route="School"
-                    ContentTemplate="{DataTemplate homeSchool:SchoolPage}" />
+                    ContentTemplate="{DataTemplate HomeAreaSchool:SchoolPage}" />
       <ShellContent Title="Influencer"
                     Route="Influencer"
-                    ContentTemplate="{DataTemplate homeInfluencer:InfluencerPage}" />
+                    ContentTemplate="{DataTemplate HomeAreaInfluencer:InfluencerPage}" />
       <ShellContent Title="Clinic"
                     Route="Clinic"
-                    ContentTemplate="{DataTemplate homeClinic:ClinicPage}" />
+                    ContentTemplate="{DataTemplate HomeAreaClinic:ClinicPage}" />
       <ShellContent Title="Doctor"
                     Route="Doctor"
-                    ContentTemplate="{DataTemplate homeDoctor:DoctorPage}" />
+                    ContentTemplate="{DataTemplate HomeAreaDoctor:DoctorPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="Profile">
       <ShellContent Route="Profile"
-                    ContentTemplate="{DataTemplate profile:ProfilePage}" />
+                    ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
     </Tab>
 
   </FlyoutItem>

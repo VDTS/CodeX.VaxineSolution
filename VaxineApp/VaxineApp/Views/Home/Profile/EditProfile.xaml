@@ -4,7 +4,7 @@
              x:Class="VaxineApp.Views.Home.Profile.EditProfile"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
-             Title="Edit">
+             Title="Edit Profile">
   <ContentPage.BindingContext>
     <viewmodel:ProfileViewModel></viewmodel:ProfileViewModel>
   </ContentPage.BindingContext>

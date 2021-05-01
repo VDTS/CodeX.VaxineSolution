@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
-    public class ChildDetailsViewModel : BaseViewModel
+    public class ChildVaccineViewModel : BaseViewModel
     {
         private VaccineModel _vaccine;
         public VaccineModel Vaccine
@@ -23,14 +23,14 @@ namespace VaxineApp.ViewModels.Home.Status
         }
 
         public ICommand AddVaccineCommand { private set; get; }
-        public ChildDetailsViewModel()
+        public ChildVaccineViewModel()
         {
             AddVaccineCommand = new Command(Add);
         }
 
         public async void Add()
         {
-            var route = $"{nameof(VaccinePage)}";
+            var route = $"{nameof(AddVaccinePage)}";
             await Shell.Current.GoToAsync(route);
         }
     }

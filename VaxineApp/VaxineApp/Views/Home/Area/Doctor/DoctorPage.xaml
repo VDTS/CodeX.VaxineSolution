@@ -2,22 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Area.Doctor.DoctorPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Doctor"
              Title="Doctor">
+  <ContentPage.BindingContext>
+    <ViewModel:DoctorViewModel></ViewModel:DoctorViewModel>
+  </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Primary"
                  Icon="Search.png"
                  Text="Search"
                  Priority="1" />
     <ToolbarItem Order="Secondary"
-                 Text="Edit"
-                 Priority="1"
-                 Command="{Binding EditAreaCommand}" />
-    <ToolbarItem Order="Secondary"
                  Text="Delete"
                  Priority="2" />
     <ToolbarItem Order="Secondary"
                  Text="Add"
-                 Priority="3" />
+                 Priority="3" Command="{Binding AddDoctorCommand}"/>
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"

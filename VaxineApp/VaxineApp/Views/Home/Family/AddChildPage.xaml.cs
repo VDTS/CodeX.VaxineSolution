@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VaxineApp.Models;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home.Status
+namespace VaxineApp.Views.Home.Family
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ChildDetails : ContentPage
+    public partial class AddChildPage : ContentPage
     {
-        ChildModel Child { get; set; }
-        public ChildDetails(ChildModel child)
+        public AddChildPage()
         {
             InitializeComponent();
-            Child = child;
-            this.BindingContext = Child;
         }
     }
 }

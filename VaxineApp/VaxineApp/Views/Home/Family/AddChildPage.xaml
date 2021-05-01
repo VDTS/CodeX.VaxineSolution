@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Home.Registration.RegistrationPage"
+             x:Class="VaxineApp.Views.Home.Family.AddChildPage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels.Home.Status"
-             Title="Registration">
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
+             Title="Add Child">
   <ContentPage.BindingContext>
-    <viewmodels:ChildViewModel></viewmodels:ChildViewModel>
+    <ViewModel:AddChildViewModel></ViewModel:AddChildViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout Padding="20, 40, 20, 20">

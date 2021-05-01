@@ -13,7 +13,7 @@ using VaxineApp.Views.Home.Area.Doctor;
 using VaxineApp.Views.Home.Area.Influencer;
 using VaxineApp.Views.Home.Area.Masjeed;
 using VaxineApp.Views.Home.Area.School;
-using VaxineApp.Views.Home.Registration;
+using VaxineApp.Views.Home.Family;
 
 namespace VaxineApp
 {
@@ -22,19 +22,34 @@ namespace VaxineApp
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(RegistrationPage), typeof(RegistrationPage));
+            
             Routing.RegisterRoute(nameof(StatusPage), typeof(StatusPage));
-            Routing.RegisterRoute(nameof(VaccinePage), typeof(VaccinePage));
+            Routing.RegisterRoute(nameof(ChildVaccinePage), typeof(ChildVaccinePage));
+           
+            Routing.RegisterRoute(nameof(FamilyListPage), typeof(FamilyListPage));
+            Routing.RegisterRoute(nameof(AddFamilyPage), typeof(AddFamilyPage));
+            
+                Routing.RegisterRoute(nameof(AreaPage), typeof(AreaPage));
+                Routing.RegisterRoute(nameof(EditAreaPage), typeof(EditAreaPage));
+
+                Routing.RegisterRoute(nameof(MasjeedPage), typeof(MasjeedPage));
+                Routing.RegisterRoute(nameof(AditMasjeedPage), typeof(AditMasjeedPage));
+
+                Routing.RegisterRoute(nameof(SchoolPage), typeof(SchoolPage));
+                Routing.RegisterRoute(nameof(AditSchoolPage), typeof(AditSchoolPage));
+
+                Routing.RegisterRoute(nameof(InfluencerPage), typeof(InfluencerPage));
+                Routing.RegisterRoute(nameof(AditInfluencerPage), typeof(AditInfluencerPage));
+
+                Routing.RegisterRoute(nameof(ClinicPage), typeof(ClinicPage));
+                Routing.RegisterRoute(nameof(AddClinicPage), typeof(AddClinicPage));
+
+                Routing.RegisterRoute(nameof(DoctorPage), typeof(DoctorPage));
+                Routing.RegisterRoute(nameof(AditDoctorPage), typeof(AditDoctorPage));
+
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(EditProfile), typeof(EditProfile));
-            Routing.RegisterRoute(nameof(AreaPage), typeof(AreaPage));
-            Routing.RegisterRoute(nameof(EditAreaPage), typeof(EditAreaPage));
-            Routing.RegisterRoute(nameof(ClinicPage), typeof(ClinicPage));
-            Routing.RegisterRoute(nameof(DoctorPage), typeof(DoctorPage));
-            Routing.RegisterRoute(nameof(InfluencerPage), typeof(InfluencerPage));
-            Routing.RegisterRoute(nameof(MasjeedPage), typeof(MasjeedPage)); 
-            Routing.RegisterRoute(nameof(SchoolPage), typeof(SchoolPage));
-            Routing.RegisterRoute(nameof(FamilyPage), typeof(FamilyPage));
+            
 
         }
     }

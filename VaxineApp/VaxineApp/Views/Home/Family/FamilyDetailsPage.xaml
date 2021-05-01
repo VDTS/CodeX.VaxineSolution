@@ -1,29 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Home.Area.Influencer.InfluencerPage"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Influencer"
-             Title="Influencer">
-  <ContentPage.BindingContext>
-    <ViewModel:InfluencerViewModel></ViewModel:InfluencerViewModel>
-  </ContentPage.BindingContext>
+             x:Class="VaxineApp.Views.Home.Family.FamilyDetailsPage"
+             Title="Family Details">
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Primary"
                  Icon="Search.png"
                  Text="Search"
                  Priority="1" />
     <ToolbarItem Order="Secondary"
-                 Text="Delete"
-                 Priority="2" />
-    <ToolbarItem Order="Secondary"
-                 Text="Add"
-                 Priority="3" Command="{Binding AddInfluencerCommand}"/>
+                 Text="Add Child"
+                 Priority="3"
+                 Command="{Binding AddChildCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"
                  Priority="0" />
   </ContentPage.ToolbarItems>
-    <ContentPage.Content>
+  <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 

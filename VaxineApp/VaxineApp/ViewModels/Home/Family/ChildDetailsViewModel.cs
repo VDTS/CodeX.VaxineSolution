@@ -9,9 +9,9 @@ using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 
-namespace VaxineApp.ViewModels.Home.Status
+namespace VaxineApp.ViewModels.Home.Family
 {
-    public class ChildViewModel : BaseViewModel
+    public class ChildDetailsViewModel : BaseViewModel
     {
         private int _houseNo;
         public int HouseNo
@@ -121,7 +121,7 @@ namespace VaxineApp.ViewModels.Home.Status
             }
         }
 
-        public ChildViewModel()
+        public ChildDetailsViewModel()
         {
             SaveDataCommand = new Command(SaveData);
         }

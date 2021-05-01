@@ -10,5 +10,7 @@ namespace DataAccess.Models
         public int HouseNo { get; set; }
         public string ParentName { get; set; }
         public string PhoneNumber { get; set; }
+
+        List<ChildModel> Children { get; set; }
     }
 }

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Home.Status.ChildDetails"
-             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Home.Status"
+             x:Class="VaxineApp.Views.Home.Status.ChildVaccinePage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status"
              Title="Child Details">
   <ContentPage.BindingContext>
-    <viewmodel:ChildDetailsViewModel></viewmodel:ChildDetailsViewModel>
+    <ViewModel:ChildVaccineViewModel></ViewModel:ChildVaccineViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem IconImageSource="Home_Registration.png"
