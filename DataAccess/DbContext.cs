@@ -11,7 +11,7 @@ namespace DataAccess
 {
     public class DbContext
     {
-        FirebaseClient firebase = new FirebaseClient(UserSecretsManager.Settings["firebase"]);
+        readonly FirebaseClient firebase = new FirebaseClient(UserSecretsManager.Settings["firebase"]);
         public async Task AddDataNode(Object data, string Type)
         {
             await firebase
@@ -19,6 +19,17 @@ namespace DataAccess
               .PostAsync(data);
         }
 
+        public async Task UpdateArea(string ClusterName, Object Area, string Type)
+        {
+            var toUpdatePerson = (await firebase
+              .Child(Type)
+              .OnceAsync<AreaModel>()).Where(a => a.Object.ClusterName == ClusterName).FirstOrDefault();
+
+            await firebase
+              .Child(Type)
+              .Child(toUpdatePerson.Key)
+              .PutAsync(Area);
+        }
         public async Task UpdatePerson(string Email, Object profile)
         {
             var toUpdatePerson = (await firebase

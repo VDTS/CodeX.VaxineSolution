@@ -12,9 +12,11 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 {
     public class AreaViewModel : BaseViewModel
     {
-        private string _clusterName;
+        // Properties
+
         private AreaModel _area;
-        public AreaModel Area {
+        public AreaModel Area
+        {
             get { return _area; }
             set
             {
@@ -22,6 +24,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                 RaisedPropertyChanged(nameof(Area));
             }
         }
+        private string _clusterName;
         public string ClusterName
         {
             get { return _clusterName; }
@@ -92,53 +95,93 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             }
         }
 
-        public ICommand EditAreaCommand { private set; get; }
+        // Commands
+        public ICommand GoToEditAreaCommand { private set; get; }
         public ICommand SaveAreaCommand { private set; get; }
+        public ICommand GetDataCommand { private set; get; }
+
+        // Constructor
         public AreaViewModel()
         {
             GetArea();
-            EditAreaCommand = new Command(EditArea);
+            GoToEditAreaCommand = new Command(GoToEditArea);
             SaveAreaCommand = new Command(SaveArea);
+            GetDataCommand = new Command(GetArea);
         }
 
+        // Methods
         public async void GetArea()
         {
             var area = await Data.GetArea();
-            Area = new AreaModel
+            if(area != null)
             {
-                ClusterName = area.ClusterName,
-                CHWName = area.CHWName,
-                SocialMobilizerId = area.SocialMobilizerId,
-                TeamNo = area.TeamNo
-            };
+                Area = new AreaModel
+                {
+                    ClusterName = area.ClusterName,
+                    CHWName = area.CHWName,
+                    SocialMobilizerId = area.SocialMobilizerId,
+                    TeamNo = area.TeamNo
+                };
+
+                ClusterName = Area.ClusterName;
+                CHWName = Area.CHWName;
+                SocialMobilizerId = Area.SocialMobilizerId;
+                TeamNo = Area.TeamNo;
+            }
         }
-        public async void EditArea()
+        public async void SaveArea()
+        {
+            var area = await Data.GetArea();
+            if(area == null)
+            {
+                try
+                {
+                    await Data.AddDataNode(
+                        new AreaModel
+                        {
+                            ClusterName = ClusterName,
+                            TeamNo = TeamNo,
+                            CHWName = CHWName,
+                            SocialMobilizerId = SocialMobilizerId
+                        }, "Area"
+                        );
+                    var route = $"{nameof(AreaPage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            else
+            {
+                try
+                {
+                    await Data.UpdateArea(ClusterName,
+                        new AreaModel
+                        {
+                            ClusterName = ClusterName,
+                            TeamNo = TeamNo,
+                            CHWName = CHWName,
+                            SocialMobilizerId = SocialMobilizerId
+                        }, "Area"
+                        );
+                    var route = $"{nameof(AreaPage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
+
+        // GoTo Routes
+        public async void GoToEditArea()
         {
             var route = $"{nameof(EditAreaPage)}";
             await Shell.Current.GoToAsync(route);
-        }
-
-        public async void SaveArea()
-        {
-            try
-            {
-                await Data.AddDataNode(
-                    new AreaModel
-                    {
-                        ClusterName = ClusterName,
-                        TeamNo = TeamNo,
-                        CHWName = CHWName,
-                        SocialMobilizerId = SocialMobilizerId
-                    }, "Area"
-                    );
-                var route = $"{nameof(AreaPage)}";
-                await Shell.Current.GoToAsync(route);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
         }
     }
 }

@@ -15,7 +15,7 @@
     <ToolbarItem Order="Secondary"
                  Text="Edit"
                  Priority="1"
-                 Command="{Binding EditAreaCommand}" />
+                 Command="{Binding GoToEditAreaCommand}" />
     <ToolbarItem Order="Secondary"
                  Text="Delete"
                  Priority="2" />
@@ -25,23 +25,25 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <ScrollView>
-      <StackLayout>
-        <Label TextColor="Black"
-               Text="{Binding Area.ClusterName}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding Area.TeamNo}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding Area.SocialMobilizerId}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding Area.CHWName}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding TotalHouseholds}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding TotalMasjeeds}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding TotalChildren}"></Label>
-      </StackLayout>
-    </ScrollView>
+    <RefreshView  RefreshColor="HotPink" Command="{Binding GetDataCommand}">
+      <ScrollView>
+        <StackLayout>
+          <Label TextColor="Black"
+                 Text="{Binding Area.ClusterName}"></Label>
+          <Label TextColor="Black"
+                 Text="{Binding Area.TeamNo}"></Label>
+          <Label TextColor="Black"
+                 Text="{Binding Area.SocialMobilizerId}"></Label>
+          <Label TextColor="Black"
+                 Text="{Binding Area.CHWName}"></Label>
+          <Label TextColor="Black"
+                 Text="{Binding TotalHouseholds}"></Label>
+          <Label TextColor="Black"
+                 Text="{Binding TotalMasjeeds}"></Label>
+          <Label TextColor="Black"
+                 Text="{Binding TotalChildren}"></Label>
+        </StackLayout>
+      </ScrollView>
+    </RefreshView>
   </ContentPage.Content>
 </ContentPage>

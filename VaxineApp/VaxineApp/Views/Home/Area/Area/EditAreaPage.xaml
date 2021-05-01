@@ -14,7 +14,7 @@
         <local:CustomEntryRenderer TextColor="Black"
                                    Placeholder="Cluster Name"
                                    PlaceholderColor="Gray"
-                                   Text="{Binding ClusterName}"></local:CustomEntryRenderer>
+                                   Text="{Binding ClusterName, Mode=TwoWay}"></local:CustomEntryRenderer>
         <local:CustomEntryRenderer TextColor="Black"
                                    Placeholder="Team No."
                                    PlaceholderColor="Gray"
@@ -28,12 +28,6 @@
                                    PlaceholderColor="Gray"
                                    Text="{Binding CHWName}">
         </local:CustomEntryRenderer>
-        <Label TextColor="Black"
-               Text="{Binding TotalHouseholds}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding TotalMasjeeds}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding TotalChildren}"></Label>
 
         <Button Text="Update Area"
                 Command="{Binding SaveAreaCommand}"
