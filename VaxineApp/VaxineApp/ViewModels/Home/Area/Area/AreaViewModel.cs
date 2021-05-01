@@ -112,8 +112,8 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         // Methods
         public async void GetArea()
         {
-            var area = await Data.GetArea();
-            if(area != null)
+            var area = await Data.GetArea("U");
+            if (area != null)
             {
                 Area = new AreaModel
                 {
@@ -131,8 +131,8 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         }
         public async void SaveArea()
         {
-            var area = await Data.GetArea();
-            if(area == null)
+            var area = await Data.GetArea("U");
+            if (area == null)
             {
                 try
                 {

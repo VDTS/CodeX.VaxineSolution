@@ -18,6 +18,14 @@ namespace DataAccess.Models
         public List<InfluencerModel> Influencers { get; set; }
         public List<ClinicModel> Clinics { get; set; }
         public List<DoctorModel> Doctors { get; set; }
+        public AreaModel()
+        {
+            Masjeeds = new List<MasjeedModel>();
+            Schools = new List<SchoolModel>();
+            Influencers = new List<InfluencerModel>();
+            Clinics = new List<ClinicModel>();
+            Doctors = new List<DoctorModel>();
+        }
 
     }
 

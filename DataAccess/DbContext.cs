@@ -1,9 +1,11 @@
 ﻿using DataAccess.Models;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,40 +13,45 @@ namespace DataAccess
 {
     public class DbContext
     {
-        readonly FirebaseClient firebase = new FirebaseClient(UserSecretsManager.Settings["firebase"]);
-        public async Task AddDataNode(Object data, string Type)
+        // Firebase URL
+        public FirebaseClient Firebase { private set; get; }
+
+
+        // Constructor
+        public DbContext()
         {
-            await firebase
-              .Child(Type)
-              .PostAsync(data);
+            Firebase = new FirebaseClient(UserSecretsManager.Settings["firebase"]);
         }
 
-        public async Task UpdateArea(string ClusterName, Object Area, string Type)
+
+        // Get
+        public async Task<AreaModel> GetArea(string ClusterName)
         {
-            var toUpdatePerson = (await firebase
-              .Child(Type)
-              .OnceAsync<AreaModel>()).Where(a => a.Object.ClusterName == ClusterName).FirstOrDefault();
+            var j = (await Firebase.Child("Area")
+                            .OnceAsync<JObject>())
+                            .ToList()
+                            .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                            .Select(item => item.Key).FirstOrDefault();
 
-            await firebase
-              .Child(Type)
-              .Child(toUpdatePerson.Key)
-              .PutAsync(Area);
+            var dd = (await Firebase.Child($"Area/{j}")
+              .OnceAsync<JObject>())
+              .Select(item => item.Object).ToList();
+
+
+            var f = 90;
+            return new AreaModel();
+
+              //Select(item => new AreaModel
+              //{
+              //    ClusterName = item.Object.GetValue("ClusterName").ToString(),
+              //    CHWName = item.Object.GetValue("CHWName").ToString(),
+              //    SocialMobilizerId = int.Parse(item.Object.GetValue("SocialMobilizerId").ToString()),
+              //    TeamNo = item.Object.GetValue("TeamNo").ToString()
+              //}).FirstOrDefault();
         }
-        public async Task UpdatePerson(string Email, Object profile)
-        {
-            var toUpdatePerson = (await firebase
-              .Child("Profile")
-              .OnceAsync<ProfileModel>()).Where(a => a.Object.Email == Email).FirstOrDefault();
-
-            await firebase
-              .Child("Profile")
-              .Child(toUpdatePerson.Key)
-              .PutAsync(profile);
-        }
-
         public async Task<List<ChildModel>> GetChilds()
         {
-            return (await firebase
+            return (await Firebase
               .Child("Child")
               .OnceAsync<DataModel>()).Select(item => new ChildModel
               {
@@ -57,22 +64,32 @@ namespace DataAccess
 
               }).ToList();
         }
-
-        public async Task<AreaModel> GetArea()
+        public async Task<List<ClinicModel>> GetClinic(string ClusterName)
         {
-            return (await firebase
-              .Child("Area")
-              .OnceAsync<AreaModel>()).Select(item => new AreaModel
-              {
-                  ClusterName = item.Object.ClusterName,
-                  CHWName = item.Object.CHWName,
-                  SocialMobilizerId = item.Object.SocialMobilizerId,
-                  TeamNo = item.Object.TeamNo
-              }).FirstOrDefault();
+            try
+            {
+                var j = (await Firebase.Child("Area")
+                            .OnceAsync<JObject>())
+                            .ToList()
+                            .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                            .Select(item => item.Key).FirstOrDefault();
+
+                return (await Firebase.Child($"Area/{j}/Clinics").OnceAsync<ClinicModel>())
+                    .Select(item => new ClinicModel
+                    {
+                        ClinicName = item.Object.ClinicName,
+                        Fixed = item.Object.Fixed,
+                        Outreach = item.Object.Outreach
+                    }).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
         public async Task<List<ProfileModel>> GetProfiles()
         {
-            return (await firebase
+            return (await Firebase
               .Child("Profile")
               .OnceAsync<ProfileModel>()).Select(item => new ProfileModel
               {
@@ -84,14 +101,59 @@ namespace DataAccess
                   Role = item.Object.Role
               }).ToList();
         }
-
         public async Task<ProfileModel> GetProfile(string Email)
         {
             var allPersons = await GetProfiles();
-            await firebase
+            await Firebase
               .Child("Profile")
               .OnceAsync<ProfileModel>();
             return allPersons.Where(a => a.Email == Email).FirstOrDefault();
         }
+
+
+        // Set
+        public async Task AddDataNode(Object data, string URL)
+        {
+            await Firebase
+              .Child(URL)
+              .PostAsync(data);
+        }
+        public async Task SaveClinic(Object data, string URL)
+        {
+            var j = (await Firebase.Child("Area")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == "U")
+                .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase.Child($"Area/{j}/Clinics").PostAsync(data);
+        }
+
+        // Put
+        public async Task UpdateArea(string ClusterName, Object Area, string Type)
+        {
+            var toUpdatePerson = (await Firebase
+              .Child(Type)
+              .OnceAsync<AreaModel>()).Where(a => a.Object.ClusterName == ClusterName).FirstOrDefault();
+
+            await Firebase
+              .Child(Type)
+              .Child(toUpdatePerson.Key)
+              .PutAsync(Area);
+        }
+        public async Task UpdatePerson(string Email, Object profile)
+        {
+            var toUpdatePerson = (await Firebase
+              .Child("Profile")
+              .OnceAsync<ProfileModel>()).Where(a => a.Object.Email == Email).FirstOrDefault();
+
+            await Firebase
+              .Child("Profile")
+              .Child(toUpdatePerson.Key)
+              .PutAsync(profile);
+        }
+
+
+        // Delete
     }
 }

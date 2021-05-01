@@ -2,12 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Area.Clinic.AddClinicPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Clinic"
              Title="Add Clinic">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.BindingContext>
+    <ViewModel:ClinicViewModel></ViewModel:ClinicViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout>
+
+      <Entry Placeholder="Clinic Name"
+             PlaceholderColor="Gray"
+             TextColor="Black"
+             Text="{Binding ClinicName}"></Entry>
+      <Entry Placeholder="Fixed"
+             PlaceholderColor="Gray"
+             TextColor="Black"
+             Text="{Binding Fixed}"></Entry>
+      <Entry Placeholder="Outreach"
+             PlaceholderColor="Gray"
+             TextColor="Black"
+             Text="{Binding Outreach}"></Entry>
+
+      <Button Command="{Binding SaveClinicCommand}"></Button>
+
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

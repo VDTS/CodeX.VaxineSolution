@@ -12,6 +12,7 @@
                  Icon="Search.png"
                  Text="Search"
                  Priority="1" />
+
     <!--<ToolbarItem Order="Secondary"
                  Text="Edit"
                  Priority="1"/>
@@ -42,11 +43,12 @@
 
   <ContentPage.Content>
 
-    <CollectionView 
-      SelectionMode="Single"
-      SelectionChanged="CollectionView_SelectionChanged"
-      ItemsSource="{Binding Childs}">
+    <CollectionView SelectionMode="Single"
+                    SelectionChanged="CollectionView_SelectionChanged"
+                    ItemsSource="{Binding Childs}">
+      
       <CollectionView.Header>
+        
         <Grid Padding="10">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*"></ColumnDefinition>
