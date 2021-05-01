@@ -6,6 +6,7 @@
        xmlns:homeMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
        xmlns:homeClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
        xmlns:homeDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
+       xmlns:registration="clr-namespace:VaxineApp.Views.Home.Registration"
        xmlns:homeInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
        xmlns:homeSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
        xmlns:status="clr-namespace:VaxineApp.Views.Home.Status"
@@ -166,11 +167,11 @@
       <ShellContent Route="Insights"
                     ContentTemplate="{DataTemplate home:ReportPage}" />
     </Tab>
-    <!--<Tab Icon="Home_Registration.png"
+    <Tab Icon="Home_Registration.png"
          Title="Registration">
       <ShellContent Route="RegistrationPage"
-                    ContentTemplate="{DataTemplate home:RegistrationPage}" />
-    </Tab>-->
+                    ContentTemplate="{DataTemplate registration:RegistrationPage}" />
+    </Tab>
     <Tab Icon="Home_Area.png"
          Title="Area">
       <ShellContent Title="Area"

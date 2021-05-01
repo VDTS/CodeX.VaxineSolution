@@ -10,6 +10,7 @@ using DataAccess;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
+using VaxineApp.Views.Home.Registration;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
@@ -27,24 +28,47 @@ namespace VaxineApp.ViewModels.Home.Status
 
         }
         public ICommand RegistrationPageCommand { private set; get; }
+        public ICommand FamiliesCommand { private set; get; }
+
         //public ICommand CollectionView_SelectionChangedCommand { private set; get; }
         public async void Add()
         {
             var route = $"{nameof(RegistrationPage)}";
             await Shell.Current.GoToAsync(route);
         }
-        //public async Task GetChild()
-        //{
-        //    var child = await Data.GetChilds();
-        //    CopyToChilds(child);
+        public async void GetChild()
+        {
+            var child = await Data.GetChilds();
+            foreach (var item in child)
+            {
+                Childs.Add(
+                        new ChildModel
+                        {
+                            FullName = item.FullName,
+                            Gender = item.Gender,
+                            DOB = item.DOB,
+                            HouseNo = item.HouseNo,
+                            OPV0 = item.OPV0,
+                            RINo = item.RINo
+                        }
+                    );
+            }
+        }
 
-        //}
 
-        
         public StatusViewModel()
         {
+            Childs = new List<ChildModel>();
+            GetChild();
             RegistrationPageCommand = new Command(Add);
+            FamiliesCommand = new Command(Families);
             //CollectionView_SelectionChangedCommand = new Command<>(CollectionView_SelectionChanged);
+        }
+
+        async void Families(object obj)
+        {
+            var route = $"{nameof(FamilyPage)}";
+            await Shell.Current.GoToAsync(route);
         }
     }
 }

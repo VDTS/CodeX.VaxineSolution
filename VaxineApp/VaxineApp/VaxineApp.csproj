@@ -33,7 +33,7 @@
     <Compile Update="Views\Home\Area\Area\EditAreaPage.xaml.cs">
       <DependentUpon>EditAreaPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Home\RegistrationPage.xaml.cs">
+    <Compile Update="Views\Home\Registration\RegistrationPage.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -70,6 +70,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Status\ChildDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Status\FamilyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Status\StatusPage.xaml">

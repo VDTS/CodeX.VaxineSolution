@@ -6,6 +6,31 @@
              xmlns:viewmodels="clr-namespace:VaxineApp.ViewModels.Home.Status"
              xmlns:converters="clr-namespace:VaxineApp.Converters"
              Title="Status">
+  <ContentPage.ToolbarItems>
+
+    <ToolbarItem Order="Primary"
+                 Icon="Search.png"
+                 Text="Search"
+                 Priority="1" />
+    <ToolbarItem Order="Secondary"
+                 Text="Edit"
+                 Priority="1"/>
+    <ToolbarItem Order="Secondary"
+                 Text="Delete"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="Families"
+                 Command="{Binding FamiliesCommand}"
+                 Priority="3" />
+    <ToolbarItem Order="Secondary"
+                 Text="Add Child"
+                 Command="{Binding RegistrationPageCommand}"
+                 Priority="3" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="Share"
+                 Priority="0" />
+  </ContentPage.ToolbarItems>
   <ContentPage.BindingContext>
     <viewmodels:StatusViewModel></viewmodels:StatusViewModel>
   </ContentPage.BindingContext>
@@ -14,10 +39,6 @@
       <converters:BornDateToAgeInMonthsConverter x:Key="BornDateToAgeInMonthsConverter" />
     </ResourceDictionary>
   </ContentPage.Resources>
-  <ContentPage.ToolbarItems>
-    <ToolbarItem IconImageSource="Home_Registration.png"
-                 Command="{Binding RegistrationPageCommand}" />
-  </ContentPage.ToolbarItems>
 
   <ContentPage.Content>
 

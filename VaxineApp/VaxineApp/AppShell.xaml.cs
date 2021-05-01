@@ -13,6 +13,7 @@ using VaxineApp.Views.Home.Area.Doctor;
 using VaxineApp.Views.Home.Area.Influencer;
 using VaxineApp.Views.Home.Area.Masjeed;
 using VaxineApp.Views.Home.Area.School;
+using VaxineApp.Views.Home.Registration;
 
 namespace VaxineApp
 {
@@ -33,6 +34,8 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(InfluencerPage), typeof(InfluencerPage));
             Routing.RegisterRoute(nameof(MasjeedPage), typeof(MasjeedPage)); 
             Routing.RegisterRoute(nameof(SchoolPage), typeof(SchoolPage));
+            Routing.RegisterRoute(nameof(FamilyPage), typeof(FamilyPage));
+
         }
     }
 }

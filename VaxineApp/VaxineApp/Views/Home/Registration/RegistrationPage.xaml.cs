@@ -7,7 +7,7 @@ using VaxineApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home
+namespace VaxineApp.Views.Home.Registration
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegistrationPage : ContentPage

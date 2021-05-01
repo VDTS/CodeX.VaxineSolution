@@ -8,20 +8,42 @@
     <viewmodel:AreaViewModel></viewmodel:AreaViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
-    <ToolbarItem IconImageSource="Home_Registration.png"
+    <ToolbarItem Order="Primary"
+                 Icon="Search.png"
+                 Text="Search"
+                 Priority="1" />
+    <ToolbarItem Order="Secondary"
+                 Text="Edit"
+                 Priority="1"
                  Command="{Binding EditAreaCommand}" />
-    
+    <ToolbarItem Order="Secondary"
+                 Text="Delete"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="Add"
+                 Priority="3" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="Share"
+                 Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <ScrollView>
       <StackLayout>
-        <Label TextColor="Black" Text="{Binding Area.ClusterName}"></Label>
-        <Label TextColor="Black" Text="{Binding Area.TeamNo}"></Label>
-        <Label TextColor="Black" Text="{Binding Area.SocialMobilizerId}"></Label>
-        <Label TextColor="Black" Text="{Binding Area.CHWName}"></Label>
-        <Label TextColor="Black" Text="{Binding TotalHouseholds}"></Label>
-        <Label TextColor="Black" Text="{Binding TotalMasjeeds}"></Label>
-        <Label TextColor="Black" Text="{Binding TotalChildren}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding Area.ClusterName}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding Area.TeamNo}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding Area.SocialMobilizerId}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding Area.CHWName}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding TotalHouseholds}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding TotalMasjeeds}"></Label>
+        <Label TextColor="Black"
+               Text="{Binding TotalChildren}"></Label>
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>
