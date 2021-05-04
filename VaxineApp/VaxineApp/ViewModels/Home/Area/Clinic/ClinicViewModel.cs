@@ -1,8 +1,8 @@
-﻿using DataAccess.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.Models.Home.Area;
 using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.Forms;
@@ -24,7 +24,8 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         }
 
         private string _clinicName;
-        public string ClinicName {
+        public string ClinicName
+        {
             get { return _clinicName; }
             set
             {
@@ -33,7 +34,8 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
         }
         public string _fixed;
-        public string Fixed {
+        public string Fixed
+        {
             get { return _fixed; }
             set
             {
@@ -42,7 +44,8 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
         }
         public string _outreach;
-        public string Outreach {
+        public string Outreach
+        {
             get { return _outreach; }
             set
             {
@@ -62,12 +65,24 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             GetClinicCommand = new Command(GetClinic);
             AddClinicCommand = new Command(AddClinic);
             SaveClinicCommand = new Command(SaveClinic);
+            Clinics = new List<ClinicModel>();
         }
 
         // Methods
         public async void GetClinic()
         {
-            Clinics = await Data.GetClinic("U");
+            var data = await Data.GetNeClinic("T");
+            foreach (var item in data)
+            {
+                Clinics.Add(
+                    new ClinicModel
+                    {
+                        ClinicName = item.ClinicName,
+                        Fixed = item.Fixed,
+                        Outreach = item.Outreach
+                    }
+                    );
+            }
         }
         public async void SaveClinic()
         {
@@ -76,7 +91,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 ClinicName = ClinicName,
                 Fixed = Fixed,
                 Outreach = Outreach
-            }, "U");
+            }, "T");
             var route = $"{nameof(ClinicPage)}";
             await Shell.Current.GoToAsync(route);
         }

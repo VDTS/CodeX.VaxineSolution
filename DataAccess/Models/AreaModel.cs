@@ -7,18 +7,19 @@ namespace DataAccess.Models
     public class AreaModel
     {
         public string ClusterName { get; set; }
+        public List<TeamModel> Teams { get; set; }
+    }
+    public class TeamModel
+    {
         public string TeamNo { get; set; }
         public int SocialMobilizerId { get; set; }
         public string CHWName { get; set; }
-        public int TotalHouseholds { get; set; }
-        public int TotalMasjeeds { get; set; }
-        public int TotalChildren { get; set; }
         public List<MasjeedModel> Masjeeds { get; set; }
         public List<SchoolModel> Schools { get; set; }
         public List<InfluencerModel> Influencers { get; set; }
         public List<ClinicModel> Clinics { get; set; }
         public List<DoctorModel> Doctors { get; set; }
-        public AreaModel()
+        public TeamModel()
         {
             Masjeeds = new List<MasjeedModel>();
             Schools = new List<SchoolModel>();
@@ -26,7 +27,6 @@ namespace DataAccess.Models
             Clinics = new List<ClinicModel>();
             Doctors = new List<DoctorModel>();
         }
-
     }
 
     public class MasjeedModel

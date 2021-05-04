@@ -29,19 +29,11 @@
       <ScrollView>
         <StackLayout>
           <Label TextColor="Black"
-                 Text="{Binding Area.ClusterName}"></Label>
+                 Text="{Binding Team.TeamNo}"></Label>
           <Label TextColor="Black"
-                 Text="{Binding Area.TeamNo}"></Label>
+                 Text="{Binding Team.SocialMobilizerId}"></Label>
           <Label TextColor="Black"
-                 Text="{Binding Area.SocialMobilizerId}"></Label>
-          <Label TextColor="Black"
-                 Text="{Binding Area.CHWName}"></Label>
-          <Label TextColor="Black"
-                 Text="{Binding TotalHouseholds}"></Label>
-          <Label TextColor="Black"
-                 Text="{Binding TotalMasjeeds}"></Label>
-          <Label TextColor="Black"
-                 Text="{Binding TotalChildren}"></Label>
+                 Text="{Binding Team.CHWName}"></Label>
         </StackLayout>
       </ScrollView>
     </RefreshView>

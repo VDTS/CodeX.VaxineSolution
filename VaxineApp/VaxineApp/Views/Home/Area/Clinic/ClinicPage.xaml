@@ -25,8 +25,7 @@
   </ContentPage.ToolbarItems>
     <ContentPage.Content>
     <RefreshView RefreshColor="HotPink" Command="{Binding GetClinicCommand}">
-      <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding Clinics}">
+      <CollectionView SelectionMode="Single">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
@@ -71,17 +70,17 @@
                      HeightRequest="40"
                      Grid.Column="0"
                      TextColor="Black"
-                     Text="{Binding ClinicName}"></Label>
+                     Text="{Binding Clinics.ClinicName}"></Label>
               <Label Grid.Column="2"
                      Grid.Row="0"
                      FontSize="20"
                      TextColor="black"
-                     Text="{Binding Fixed}"></Label>
+                     Text="{Binding Clinics.Fixed}"></Label>
               <Label Grid.Column="2"
                      Grid.Row="1"
                      Padding="0, -5, 0, 0"
                      TextColor="Black"
-                     Text="{Binding Outreach}"></Label>
+                     Text="{Binding Clinics.Outreach}"></Label>
             </Grid>
           </DataTemplate>
         </CollectionView.ItemTemplate>

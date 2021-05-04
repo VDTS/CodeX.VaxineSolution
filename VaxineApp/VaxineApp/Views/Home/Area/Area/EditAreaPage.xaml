@@ -12,10 +12,6 @@
     <ScrollView>
       <StackLayout>
         <local:CustomEntryRenderer TextColor="Black"
-                                   Placeholder="Cluster Name"
-                                   PlaceholderColor="Gray"
-                                   Text="{Binding ClusterName, Mode=TwoWay}"></local:CustomEntryRenderer>
-        <local:CustomEntryRenderer TextColor="Black"
                                    Placeholder="Team No."
                                    PlaceholderColor="Gray"
                                    Text="{Binding TeamNo}"></local:CustomEntryRenderer>

@@ -7,6 +7,7 @@ using VaxineApp.Models.Home.Area;
 using DataAccess;
 using VaxineApp.Views.Home.Area.Area;
 using Xamarin.Forms;
+using VaxineApp.Models.Home.Area;
 
 namespace VaxineApp.ViewModels.Home.Area.Area
 {
@@ -14,14 +15,14 @@ namespace VaxineApp.ViewModels.Home.Area.Area
     {
         // Properties
 
-        private AreaModel _area;
-        public AreaModel Area
+        private TeamModel _team;
+        public TeamModel Team
         {
-            get { return _area; }
+            get { return _team; }
             set
             {
-                _area = value;
-                RaisedPropertyChanged(nameof(Area));
+                _team = value;
+                RaisedPropertyChanged(nameof(Team));
             }
         }
         private string _clusterName;
@@ -112,38 +113,35 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         // Methods
         public async void GetArea()
         {
-            var area = await Data.GetArea("U");
+            var area = await Data.GetNeArea("T", "1");
             if (area != null)
             {
-                Area = new AreaModel
+                Team = new TeamModel
                 {
-                    ClusterName = area.ClusterName,
                     CHWName = area.CHWName,
                     SocialMobilizerId = area.SocialMobilizerId,
                     TeamNo = area.TeamNo
                 };
 
-                ClusterName = Area.ClusterName;
-                CHWName = Area.CHWName;
-                SocialMobilizerId = Area.SocialMobilizerId;
-                TeamNo = Area.TeamNo;
+                CHWName = Team.CHWName;
+                SocialMobilizerId = Team.SocialMobilizerId;
+                TeamNo = Team.TeamNo;
             }
         }
         public async void SaveArea()
         {
-            var area = await Data.GetArea("U");
+            var area = await Data.GetNeArea("T", "1");
             if (area == null)
             {
                 try
                 {
-                    await Data.AddDataNode(
-                        new AreaModel
+                    await Data.AddAreaDataNode(
+                        new TeamModel
                         {
-                            ClusterName = ClusterName,
                             TeamNo = TeamNo,
                             CHWName = CHWName,
                             SocialMobilizerId = SocialMobilizerId
-                        }, "Area"
+                        }, "T", "Teams"
                         );
                     var route = $"{nameof(AreaPage)}";
                     await Shell.Current.GoToAsync(route);
@@ -157,14 +155,13 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             {
                 try
                 {
-                    await Data.UpdateArea(ClusterName,
-                        new AreaModel
-                        {
-                            ClusterName = ClusterName,
-                            TeamNo = TeamNo,
-                            CHWName = CHWName,
-                            SocialMobilizerId = SocialMobilizerId
-                        }, "Area"
+                    await Data.UpdateArea("T", "1",
+                         new TeamModel
+                         {
+                             TeamNo = TeamNo,
+                             CHWName = CHWName,
+                             SocialMobilizerId = SocialMobilizerId
+                         }
                         );
                     var route = $"{nameof(AreaPage)}";
                     await Shell.Current.GoToAsync(route);

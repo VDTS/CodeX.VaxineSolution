@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using DataAccess.Models.Nest;
 using Firebase.Database;
 using Firebase.Database.Query;
 using Newtonsoft.Json;
@@ -26,21 +27,24 @@ namespace DataAccess
 
 
         // Get
-        public async Task<GetAreaModel> GetArea(string ClusterName)
+        
+        public async Task<GetTeamModel> GetNeArea(string ClusterName, string TeamNo)
         {
+            var j = (await Firebase.Child("Kandahar-Area")
+            .OnceAsync<JObject>())
+            .ToList()
+            .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+            .Select(item => item.Key).FirstOrDefault();
+
             return (await Firebase
-              .Child($"Area")
-              .OnceAsync<JObject>()).Select(item => new GetAreaModel
+              .Child("Kandahar-Area").Child(j).Child("Teams")
+              .OnceAsync<JObject>()).Select(item => new GetTeamModel
               {
-                  ClusterName = item.Object.GetValue("ClusterName").ToString(),
                   CHWName = item.Object.GetValue("CHWName").ToString(),
                   SocialMobilizerId = int.Parse(item.Object.GetValue("SocialMobilizerId").ToString()),
-                  TeamNo = item.Object.GetValue("TeamNo").ToString(),
-                  TotalChildren = int.Parse(item.Object.GetValue("TotalChildren").ToString()),
-                  TotalHouseholds = int.Parse(item.Object.GetValue("TotalHouseholds").ToString()),
-                  TotalMasjeeds = int.Parse(item.Object.GetValue("TotalMasjeeds").ToString())
+                  TeamNo = item.Object.GetValue("TeamNo").ToString()
 
-              }).Where(item => item.ClusterName == ClusterName).FirstOrDefault();
+              }).Where(item => item.TeamNo == TeamNo).FirstOrDefault();
         }
         public async Task<List<ChildModel>> GetChilds()
         {
@@ -57,29 +61,32 @@ namespace DataAccess
 
               }).ToList();
         }
-        public async Task<List<ClinicModel>> GetClinic(string ClusterName)
+       
+        public async Task<List<ClinicModel>> GetNeClinic(string ClusterName)
         {
-            try
-            {
-                var j = (await Firebase.Child("Area")
-                            .OnceAsync<JObject>())
-                            .ToList()
-                            .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
-                            .Select(item => item.Key).FirstOrDefault();
 
-                return (await Firebase.Child($"Area/{j}/Clinics").OnceAsync<ClinicModel>())
-                    .Select(item => new ClinicModel
-                    {
-                        ClinicName = item.Object.ClinicName,
-                        Fixed = item.Object.Fixed,
-                        Outreach = item.Object.Outreach
-                    }).ToList();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            var j = (await Firebase.Child("Kandahar-Area")
+                        .OnceAsync<JObject>())
+                        .ToList()
+                        .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                        .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+                        .OnceAsync<JObject>())
+                        .ToList()
+                        .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                        .Select(item => item.Key).FirstOrDefault();
+
+            return (await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Clinics").OnceAsync<ClinicModel>())
+                .Select(item => new ClinicModel
+                {
+                    ClinicName = item.Object.ClinicName,
+                    Fixed = item.Object.Fixed,
+                    Outreach = item.Object.Outreach
+                }).ToList();
+
         }
+
         public async Task<List<ProfileModel>> GetProfiles()
         {
             return (await Firebase
@@ -111,28 +118,49 @@ namespace DataAccess
               .Child(URL)
               .PostAsync(data);
         }
+        public async Task AddAreaDataNode(Object data, string ClusterName, string URL)
+        {
+            var j = (await Firebase.Child("Kandahar-Area")
+            .OnceAsync<JObject>())
+            .ToList()
+            .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+            .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase
+              .Child($"Kandahar-Area/{j}/{URL}")
+              .PostAsync(data);
+        }
         public async Task SaveClinic(Object data, string URL)
         {
-            var j = (await Firebase.Child("Area")
+            var j = (await Firebase.Child("Kandahar-Area")
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("ClusterName").ToString() == "U")
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
                 .Select(item => item.Key).FirstOrDefault();
 
-            await Firebase.Child($"Area/{j}/Clinics").PostAsync(data);
+            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Clinics").PostAsync(data);
         }
 
         // Put
-        public async Task UpdateArea(string ClusterName, Object Area, string Type)
+        public async Task UpdateArea(string ClusterName, string TeamNo, object data)
         {
-            var toUpdatePerson = (await Firebase
-              .Child(Type)
-              .OnceAsync<AreaModel>()).Where(a => a.Object.ClusterName == ClusterName).FirstOrDefault();
+            var c = (await Firebase
+              .Child("Kandahar-Area")
+              .OnceAsync<JObject>()).Where(a => a.Object.GetValue("ClusterName").ToString() == ClusterName).FirstOrDefault();
+
+            var t = (await Firebase
+              .Child("Kandahar-Area").Child(c.Key).Child("Teams")
+              .OnceAsync<JObject>()).Where(a => a.Object.GetValue("TeamNo").ToString() == TeamNo).FirstOrDefault();
 
             await Firebase
-              .Child(Type)
-              .Child(toUpdatePerson.Key)
-              .PutAsync(Area);
+              .Child("Kandahar-Area").Child(c.Key).Child("Teams").Child(t.Key)
+              .PutAsync(data);
         }
         public async Task UpdatePerson(string Email, Object profile)
         {
