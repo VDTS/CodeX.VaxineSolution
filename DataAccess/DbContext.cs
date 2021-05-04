@@ -26,9 +26,8 @@ namespace DataAccess
         }
 
 
-        // Get
-        
-        public async Task<GetTeamModel> GetNeArea(string ClusterName, string TeamNo)
+        // Get Methods
+        public async Task<GetTeamModel> GetTeam(string ClusterName, string TeamNo)
         {
             var j = (await Firebase.Child("Kandahar-Area")
             .OnceAsync<JObject>())
@@ -46,7 +45,7 @@ namespace DataAccess
 
               }).Where(item => item.TeamNo == TeamNo).FirstOrDefault();
         }
-        public async Task<List<ChildModel>> GetChilds()
+        public async Task<List<ChildModel>> GetChild()
         {
             return (await Firebase
               .Child("Child")
@@ -61,8 +60,7 @@ namespace DataAccess
 
               }).ToList();
         }
-       
-        public async Task<List<ClinicModel>> GetNeClinic(string ClusterName)
+        public async Task<List<ClinicModel>> GetClinic(string ClusterName)
         {
 
             var j = (await Firebase.Child("Kandahar-Area")
@@ -86,8 +84,7 @@ namespace DataAccess
                 }).ToList();
 
         }
-
-        public async Task<List<ProfileModel>> GetProfiles()
+        public async Task<ProfileModel> GetProfile(string Email)
         {
             return (await Firebase
               .Child("Profile")
@@ -99,26 +96,19 @@ namespace DataAccess
                   Age = item.Object.Age,
                   Email = item.Object.Email,
                   Role = item.Object.Role
-              }).ToList();
+              }).ToList()
+              .Where(item => item.Email == Email).FirstOrDefault();
         }
-        public async Task<ProfileModel> GetProfile(string Email)
-        {
-            var allPersons = await GetProfiles();
-            await Firebase
-              .Child("Profile")
-              .OnceAsync<ProfileModel>();
-            return allPersons.Where(a => a.Email == Email).FirstOrDefault();
-        }
+        
 
-
-        // Set
-        public async Task AddDataNode(Object data, string URL)
+        // Post Methods
+        public async Task PostData(Object data, string URL)
         {
             await Firebase
               .Child(URL)
               .PostAsync(data);
         }
-        public async Task AddAreaDataNode(Object data, string ClusterName, string URL)
+        public async Task PostTeam(Object data, string ClusterName, string URL)
         {
             var j = (await Firebase.Child("Kandahar-Area")
             .OnceAsync<JObject>())
@@ -130,7 +120,7 @@ namespace DataAccess
               .Child($"Kandahar-Area/{j}/{URL}")
               .PostAsync(data);
         }
-        public async Task SaveClinic(Object data, string URL)
+        public async Task PostClinic(Object data, string URL)
         {
             var j = (await Firebase.Child("Kandahar-Area")
                 .OnceAsync<JObject>())
@@ -146,7 +136,7 @@ namespace DataAccess
 
             await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Clinics").PostAsync(data);
         }
-        public async Task SaveFamily(Object data, string URL)
+        public async Task PostFamily(Object data, string URL)
         {
             var j = (await Firebase.Child("Kandahar-Area")
                 .OnceAsync<JObject>())
@@ -163,8 +153,9 @@ namespace DataAccess
             await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Families").PostAsync(data);
         }
 
+
         // Put
-        public async Task UpdateArea(string ClusterName, string TeamNo, object data)
+        public async Task PutTeam(string ClusterName, string TeamNo, object data)
         {
             var c = (await Firebase
               .Child("Kandahar-Area")
@@ -178,7 +169,7 @@ namespace DataAccess
               .Child("Kandahar-Area").Child(c.Key).Child("Teams").Child(t.Key)
               .PutAsync(data);
         }
-        public async Task UpdatePerson(string Email, Object profile)
+        public async Task PutProfile(string Email, Object profile)
         {
             var toUpdatePerson = (await Firebase
               .Child("Profile")

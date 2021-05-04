@@ -71,7 +71,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         // Methods
         public async void GetClinic()
         {
-            var data = await Data.GetNeClinic("T");
+            var data = await Data.GetClinic("T");
             foreach (var item in data)
             {
                 Clinics.Add(
@@ -86,7 +86,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         }
         public async void SaveClinic()
         {
-            await Data.SaveClinic(new ClinicModel
+            await Data.PostClinic(new ClinicModel
             {
                 ClinicName = ClinicName,
                 Fixed = Fixed,

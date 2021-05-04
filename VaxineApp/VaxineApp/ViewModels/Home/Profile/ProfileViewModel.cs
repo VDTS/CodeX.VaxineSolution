@@ -150,7 +150,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             try
             {
-                await Data.UpdatePerson(Profile.Email,
+                await Data.PutProfile(Profile.Email,
                     new ProfileModel
                     {
                         FullName = FullName,

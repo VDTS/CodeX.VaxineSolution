@@ -53,7 +53,7 @@ namespace VaxineApp.ViewModels.Home.Family
         // Method
         public async void SaveFamily()
         {
-            await Data.SaveFamily(new FamilyModel
+            await Data.PostFamily(new FamilyModel
             {
                 HouseNo = HouseNo,
                 ParentName = ParentName,

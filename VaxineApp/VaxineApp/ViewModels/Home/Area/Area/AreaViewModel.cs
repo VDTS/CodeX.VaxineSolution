@@ -113,7 +113,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         // Methods
         public async void GetArea()
         {
-            var area = await Data.GetNeArea("T", "1");
+            var area = await Data.GetTeam("T", "1");
             if (area != null)
             {
                 Team = new TeamModel
@@ -130,12 +130,12 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         }
         public async void SaveArea()
         {
-            var area = await Data.GetNeArea("T", "1");
+            var area = await Data.GetTeam("T", "1");
             if (area == null)
             {
                 try
                 {
-                    await Data.AddAreaDataNode(
+                    await Data.PostTeam(
                         new TeamModel
                         {
                             TeamNo = TeamNo,
@@ -155,7 +155,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             {
                 try
                 {
-                    await Data.UpdateArea("T", "1",
+                    await Data.PutTeam("T", "1",
                          new TeamModel
                          {
                              TeamNo = TeamNo,

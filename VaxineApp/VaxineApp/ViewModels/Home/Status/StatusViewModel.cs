@@ -37,7 +37,7 @@ namespace VaxineApp.ViewModels.Home.Status
         //}
         public async void GetChild()
         {
-            var child = await Data.GetChilds();
+            var child = await Data.GetChild();
             foreach (var item in child)
             {
                 Childs.Add(

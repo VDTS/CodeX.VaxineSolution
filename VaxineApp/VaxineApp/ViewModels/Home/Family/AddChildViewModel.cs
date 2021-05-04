@@ -101,7 +101,7 @@ namespace VaxineApp.ViewModels.Home.Family
         {
             try
             {
-                await Data.AddDataNode(
+                await Data.PostData(
                     new DataModel
                     {
                         FullName = FullName,
