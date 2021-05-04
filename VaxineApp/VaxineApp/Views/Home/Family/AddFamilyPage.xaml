@@ -2,12 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Family.AddFamilyPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
              Title="Add Family">
+  <ContentPage.BindingContext>
+    <ViewModel:AddFamilyViewModel></ViewModel:AddFamilyViewModel>
+  </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding HouseNo}"
+                                 Placeholder="House No."
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding ParentName}"
+                                 Placeholder="Parent Name"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Text="{Binding PhoneNumber}"
+                                 Placeholder="Parent Number"
+                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+      <Button Text="Save" Command="{Binding SaveFamilyCommand}"></Button>
+    </StackLayout>
     </ContentPage.Content>
 </ContentPage>
