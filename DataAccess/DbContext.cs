@@ -1,6 +1,7 @@
 ﻿using DataAccess.Models;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -25,29 +26,21 @@ namespace DataAccess
 
 
         // Get
-        public async Task<AreaModel> GetArea(string ClusterName)
+        public async Task<GetAreaModel> GetArea(string ClusterName)
         {
-            var j = (await Firebase.Child("Area")
-                            .OnceAsync<JObject>())
-                            .ToList()
-                            .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
-                            .Select(item => item.Key).FirstOrDefault();
+            return (await Firebase
+              .Child($"Area")
+              .OnceAsync<JObject>()).Select(item => new GetAreaModel
+              {
+                  ClusterName = item.Object.GetValue("ClusterName").ToString(),
+                  CHWName = item.Object.GetValue("CHWName").ToString(),
+                  SocialMobilizerId = int.Parse(item.Object.GetValue("SocialMobilizerId").ToString()),
+                  TeamNo = item.Object.GetValue("TeamNo").ToString(),
+                  TotalChildren = int.Parse(item.Object.GetValue("TotalChildren").ToString()),
+                  TotalHouseholds = int.Parse(item.Object.GetValue("TotalHouseholds").ToString()),
+                  TotalMasjeeds = int.Parse(item.Object.GetValue("TotalMasjeeds").ToString())
 
-            var dd = (await Firebase.Child($"Area/{j}")
-              .OnceAsync<JObject>())
-              .Select(item => item.Object).ToList();
-
-
-            var f = 90;
-            return new AreaModel();
-
-              //Select(item => new AreaModel
-              //{
-              //    ClusterName = item.Object.GetValue("ClusterName").ToString(),
-              //    CHWName = item.Object.GetValue("CHWName").ToString(),
-              //    SocialMobilizerId = int.Parse(item.Object.GetValue("SocialMobilizerId").ToString()),
-              //    TeamNo = item.Object.GetValue("TeamNo").ToString()
-              //}).FirstOrDefault();
+              }).Where(item => item.ClusterName == ClusterName).FirstOrDefault();
         }
         public async Task<List<ChildModel>> GetChilds()
         {
