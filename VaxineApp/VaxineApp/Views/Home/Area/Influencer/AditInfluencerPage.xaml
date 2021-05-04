@@ -2,12 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Area.Influencer.AditInfluencerPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Influencer"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
              Title="Add Influencer">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.BindingContext>
+    <ViewModel:InfluencerViewModel></ViewModel:InfluencerViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout>
+
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Placeholder="Name"
+                                 PlaceholderColor="Gray"
+                                 Text="{Binding Name}"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Placeholder="Contact"
+                                 PlaceholderColor="Gray"
+                                 Text="{Binding Contact}"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Placeholder="Position"
+                                 PlaceholderColor="Gray"
+                                 Text="{Binding Position}">
+      </local:CustomEntryRenderer>
+      <Label Text="Does he providing support?"></Label>
+      <CheckBox IsChecked="{Binding DoesHeProvidingSupport}"></CheckBox>
+
+      <Button Text="Save"
+              Command="{Binding SaveInfluencerCommand}"></Button>
+
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
