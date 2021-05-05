@@ -6,7 +6,7 @@
              xmlns:local1="clr-namespace:VaxineApp.Renderers"
              Title="Add Doctor">
   <ContentPage.BindingContext>
-    <ViewModel:DoctorViewModel></ViewModel:DoctorViewModel>
+    <ViewModel:AddDoctorViewModel></ViewModel:AddDoctorViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout>

@@ -11,33 +11,27 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
     public class DoctorViewModel : BaseViewModel
     {
 
+        private List<DoctorModel> _doctor;
+        public List<DoctorModel> Doctor
+        {
+            get { return _doctor; }
+            set
+            {
+                _doctor = value;
+                RaisedPropertyChanged(nameof(Doctor));
+            }
+        }
         // Properties
-        private string _name;
-        public string Name {
-            get { return _name; }
-            set
-            {
-                _name = value;
-                RaisedPropertyChanged(nameof(Name));
-            }
-        }
-        private bool _isHeProvindingSupportForSIAAndVaccination;
-        public bool IsHeProvindingSupportForSIAAndVaccination {
-            get { return _isHeProvindingSupportForSIAAndVaccination; }
-            set
-            {
-                _isHeProvindingSupportForSIAAndVaccination = value;
-                RaisedPropertyChanged(nameof(IsHeProvindingSupportForSIAAndVaccination));
-            }
-        }
+        public ICommand GetDoctorCommand { private set; get; }
         public ICommand AddDoctorCommand { private set; get; }
-        public ICommand SaveDoctorCommand { private set; get; }
 
         // Constructor
         public DoctorViewModel()
         {
+            GetDoctor();
+            Doctor = new List<DoctorModel>();
+            GetDoctorCommand = new Command(GetDoctor);
             AddDoctorCommand = new Command(AddDoctor);
-            SaveDoctorCommand = new Command(SaveDoctor);
         }
 
 
@@ -48,19 +42,22 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             await Shell.Current.GoToAsync(route);
         }
 
-
-        // Methods
-        public async void SaveDoctor()
+        public async void GetDoctor()
         {
-            await Data.PostDoctor(new DoctorModel
+            var data = await Data.GetDoctor("T");
+            foreach (var item in data)
             {
-                Name = Name,
-                IsHeProvindingSupportForSIAAndVaccination = IsHeProvindingSupportForSIAAndVaccination
-            }, "T");
-
-            var route = $"{nameof(DoctorPage)}";
-            await Shell.Current.GoToAsync(route);
+                Doctor.Add(
+                    new DoctorModel
+                    {
+                        Name = item.Name,
+                        IsHeProvindingSupportForSIAAndVaccination = item.IsHeProvindingSupportForSIAAndVaccination
+                    }
+                    );
+            }
         }
+        // Methods
+
 
     }
 }

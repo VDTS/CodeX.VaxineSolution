@@ -84,6 +84,29 @@ namespace DataAccess
                 }).ToList();
 
         }
+        public async Task<List<DoctorModel>> GetDoctor(string ClusterName)
+        {
+
+            var j = (await Firebase.Child("Kandahar-Area")
+                        .OnceAsync<JObject>())
+                        .ToList()
+                        .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                        .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+                        .OnceAsync<JObject>())
+                        .ToList()
+                        .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                        .Select(item => item.Key).FirstOrDefault();
+
+            return (await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Doctor").OnceAsync<DoctorModel>())
+                .Select(item => new DoctorModel
+                {
+                    Name = item.Object.Name,
+                    IsHeProvindingSupportForSIAAndVaccination = item.Object.IsHeProvindingSupportForSIAAndVaccination
+                }).ToList();
+
+        }
         public async Task<ProfileModel> GetProfile(string Email)
         {
             return (await Firebase
