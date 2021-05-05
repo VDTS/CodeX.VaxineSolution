@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              Title="Add Masjeed">
   <ContentPage.BindingContext>
-    <ViewModel:MasjeedViewModel></ViewModel:MasjeedViewModel>
+    <ViewModel:AddMasjeedViewModel></ViewModel:AddMasjeedViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout>

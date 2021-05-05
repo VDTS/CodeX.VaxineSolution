@@ -10,76 +10,49 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 {
     public class MasjeedViewModel : BaseViewModel
     {
-        // Properties
-        private string _masjeedName;
-        public string MasjeedName
-        {
-            get { return _masjeedName; }
-            set
-            {
-                _masjeedName = value;
-                RaisedPropertyChanged(nameof(MasjeedName));
-            }
-        }
-        private string _keyInfluencer;
-        public string KeyInfluencer
-        {
-            get { return _keyInfluencer; }
-            set
-            {
-                _keyInfluencer = value;
-                RaisedPropertyChanged(nameof(KeyInfluencer));
-            }
-        }
-        private bool _doesImamSupportsVaccine;
-        public bool DoesImamSupportsVaccine
-        {
-            get { return _doesImamSupportsVaccine; }
-            set
-            {
-                _doesImamSupportsVaccine = value;
-                RaisedPropertyChanged(nameof(DoesImamSupportsVaccine));
-            }
-        }
-        private bool _doYouHavePermissionForAdsInMasjeed;
-        public bool DoYouHavePermissionForAdsInMasjeed
-        {
-            get { return _doYouHavePermissionForAdsInMasjeed; }
-            set
-            {
-                _doYouHavePermissionForAdsInMasjeed = value;
-                RaisedPropertyChanged(nameof(DoYouHavePermissionForAdsInMasjeed));
-            }
-        }
 
-
+        private List<MasjeedModel> _masjeed;
+        public List<MasjeedModel> Masjeed
+        {
+            get { return _masjeed; }
+            set
+            {
+                _masjeed = value;
+                RaisedPropertyChanged(nameof(Masjeed));
+            }
+        }
         // Commands
         public ICommand AddMasjeedCommand { private set; get; }
-        public ICommand SaveMasjeedCommand { private set; get; }
+        public ICommand GetMasjeedCommand { private set; get; }
 
 
         // Constructor
         public MasjeedViewModel()
         {
+            Masjeed = new List<MasjeedModel>();
+            GetMasjeed();
+            GetMasjeedCommand = new Command(GetMasjeed);
             AddMasjeedCommand = new Command(AddMasjeed);
-            SaveMasjeedCommand = new Command(SaveMasjeed);
         }
 
         // Methods
-        private async void SaveMasjeed()
+
+        public async void GetMasjeed()
         {
-            await Data.PostMasjeed(new MasjeedModel
+            var data = await Data.GetMasjeed("T");
+            foreach (var item in data)
             {
-                MasjeedName = MasjeedName,
-                KeyInfluencer = KeyInfluencer,
-                DoesImamSupportsVaccine = DoesImamSupportsVaccine,
-                DoYouHavePermissionForAdsInMasjeed = DoYouHavePermissionForAdsInMasjeed
-            }, "T");
-
-            var route = $"{nameof(MasjeedPage)}";
-            await Shell.Current.GoToAsync(route);
+                Masjeed.Add(
+                    new MasjeedModel
+                    {
+                        MasjeedName = item.MasjeedName,
+                        KeyInfluencer = item.KeyInfluencer,
+                        DoYouHavePermissionForAdsInMasjeed = item.DoYouHavePermissionForAdsInMasjeed,
+                        DoesImamSupportsVaccine  = item.DoesImamSupportsVaccine
+                    }
+                    );
+            }
         }
-
         // Route Methods
         async void AddMasjeed()
         {
