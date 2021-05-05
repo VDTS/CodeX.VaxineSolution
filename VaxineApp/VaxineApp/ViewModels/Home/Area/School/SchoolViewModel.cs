@@ -10,52 +10,45 @@ namespace VaxineApp.ViewModels.Home.Area.School
 {
     public class SchoolViewModel : BaseViewModel
     {
-        // Properties
-        private string _schoolName;
-        public string SchoolName
-        {
-            get { return _schoolName; }
-            set
-            {
-                _schoolName = value;
-                RaisedPropertyChanged(nameof(SchoolName));
-            }
-        }
-        private string _keyInfluencer;
-        public string KeyInfluencer
-        {
-            get { return _keyInfluencer; }
-            set
-            {
-                _keyInfluencer = value;
-                RaisedPropertyChanged(nameof(KeyInfluencer));
-            }
-        }
 
+        private List<SchoolModel> _school;
+        public List<SchoolModel> School
+        {
+            get { return _school; }
+            set
+            {
+                _school = value;
+                RaisedPropertyChanged(nameof(School));
+            }
+        }
 
         // Commands
         public ICommand AddSchoolCommand { private set; get; }
-        public ICommand SaveSchoolCommand { private set; get; }
-
+        public ICommand GetSchoolCommand { private set; get; }
         // Constructor
         public SchoolViewModel()
         {
+            School = new List<SchoolModel>();
+            GetSchool();
+            GetSchoolCommand = new Command(GetSchool);
             AddSchoolCommand = new Command(AddSchool);
-            SaveSchoolCommand = new Command(SaveSchool);
         }
 
 
         // Methods
-        private async void SaveSchool()
+        public async void GetSchool()
         {
-            await Data.PostSchool(new SchoolModel
+            var data = await Data.GetSchool("T");
+            foreach (var item in data)
             {
-                KeyInfluencer = KeyInfluencer,
-                SchoolName = SchoolName
-            }, "T");
-
-            var route = $"{nameof(SchoolPage)}";
-            await Shell.Current.GoToAsync(route);
+                School.Add(
+                    new SchoolModel
+                    {
+                        KeyInfluencer = item.KeyInfluencer,
+                        SchoolName = item.SchoolName
+                    }
+                    );
+            }
         }
 
 

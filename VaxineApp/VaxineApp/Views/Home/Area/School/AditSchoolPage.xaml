@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              Title="Add School">
   <ContentPage.BindingContext>
-    <ViewModel:SchoolViewModel></ViewModel:SchoolViewModel>
+    <ViewModel:AddSchoolViewModel></ViewModel:AddSchoolViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout>
