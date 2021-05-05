@@ -24,8 +24,10 @@
     <ContentPage.Content>
     <RefreshView>
       <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding Family}">
-
+                      ItemsSource="{Binding Family}"
+                      SelectionChanged="CollectionView_SelectionChanged"
+                      >
+        
         <CollectionView.Header>
 
           <Grid Padding="10">

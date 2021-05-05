@@ -4,7 +4,8 @@ using System.Text;
 
 namespace VaxineApp.ViewModels.Home.Family
 {
-    class FamilyDetailsViewModel
+    public class FamilyDetailsViewModel : BaseViewModel
     {
+        
     }
 }

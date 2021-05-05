@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Family.FamilyDetailsPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
              Title="Family Details">
+  <ContentPage.BindingContext>
+    <ViewModel:FamilyDetailsViewModel></ViewModel:FamilyDetailsViewModel>
+  </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Primary"
                  Icon="Search.png"
@@ -18,10 +22,22 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+      <Label WidthRequest="40"
+             HeightRequest="40"
+             Grid.Column="0"
+             TextColor="Black"
+             Text="{Binding HouseNo}"></Label>
+      <Label Grid.Column="2"
+             Grid.Row="0"
+             FontSize="20"
+             TextColor="black"
+             Text="{Binding ParentName}"></Label>
+      <Label Grid.Column="2"
+             Grid.Row="1"
+             Padding="0, -5, 0, 0"
+             TextColor="Black"
+             Text="{Binding PhoneNumber}"></Label>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

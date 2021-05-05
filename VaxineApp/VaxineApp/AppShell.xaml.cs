@@ -28,7 +28,8 @@ namespace VaxineApp
            
             Routing.RegisterRoute(nameof(FamilyListPage), typeof(FamilyListPage));
             Routing.RegisterRoute(nameof(AddFamilyPage), typeof(AddFamilyPage));
-            
+            Routing.RegisterRoute(nameof(FamilyDetailsPage), typeof(FamilyDetailsPage));
+
                 Routing.RegisterRoute(nameof(AreaPage), typeof(AreaPage));
                 Routing.RegisterRoute(nameof(EditAreaPage), typeof(EditAreaPage));
 
