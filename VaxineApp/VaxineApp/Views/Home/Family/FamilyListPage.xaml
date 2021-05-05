@@ -23,11 +23,65 @@
   </ContentPage.ToolbarItems>
     <ContentPage.Content>
     <RefreshView>
-      <CollectionView>
+      <CollectionView SelectionMode="Single"
+                      ItemsSource="{Binding Family}">
+
+        <CollectionView.Header>
+
+          <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.2*"></ColumnDefinition>
+              <ColumnDefinition Width="0.01*"></ColumnDefinition>
+              <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"></RowDefinition>
+              <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label WidthRequest="40"
+                   HeightRequest="40"
+                   Grid.Column="0"
+                   TextColor="Blue"
+                   Text="House No"></Label>
+            <Label Grid.Column="2"
+                   Grid.Row="0"
+                   FontSize="20"
+                   TextColor="Blue"
+                   Text="Parent Name"></Label>
+            <Label Grid.Column="2"
+                   Grid.Row="1"
+                   Padding="0, -5, 0, 0"
+                   TextColor="Blue"
+                   Text="Phone Number"></Label>
+          </Grid>
+        </CollectionView.Header>
         <CollectionView.ItemTemplate>
           <DataTemplate>
-            <Grid>
-              <Label Text="Hello" TextColor="Black"></Label>
+            <Grid Padding="10">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.01*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+              </Grid.RowDefinitions>
+              <Label WidthRequest="40"
+                     HeightRequest="40"
+                     Grid.Column="0"
+                     TextColor="Black"
+                     Text="{Binding HouseNo}"></Label>
+              <Label Grid.Column="2"
+                     Grid.Row="0"
+                     FontSize="20"
+                     TextColor="black"
+                     Text="{Binding ParentName}"></Label>
+              <Label Grid.Column="2"
+                     Grid.Row="1"
+                     Padding="0, -5, 0, 0"
+                     TextColor="Black"
+                     Text="{Binding PhoneNumber}"></Label>
             </Grid>
           </DataTemplate>
         </CollectionView.ItemTemplate>

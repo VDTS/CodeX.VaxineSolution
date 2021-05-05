@@ -4,12 +4,10 @@ using System.Text;
 
 namespace VaxineApp.Models
 {
-    public class FamilyModel
+    public class GetFamilyModel
     {
         public int HouseNo { get; set; }
         public string ParentName { get; set; }
         public string PhoneNumber { get; set; }
-
-        public List<ChildModel> Children { get; set; }
     }
 }
