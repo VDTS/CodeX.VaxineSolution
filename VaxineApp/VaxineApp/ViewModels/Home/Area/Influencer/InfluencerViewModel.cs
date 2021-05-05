@@ -10,68 +10,45 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 {
     public class InfluencerViewModel : BaseViewModel
     {
-        // Properties
-        private string _name;
-        public string Name {
-            get { return _name; }
+        private List<InfluencerModel> _influencer;
+        public List<InfluencerModel> Influencer
+        {
+            get { return _influencer; }
             set
             {
-                _name = value;
-                RaisedPropertyChanged(nameof(Name));
-            }
-        }
-        private string _postition;
-        public string Position {
-            get { return _postition; }
-            set
-            {
-                _postition = value;
-                RaisedPropertyChanged(nameof(Position));
-            }
-        }
-        private string _contact;
-        public string Contact {
-            get { return _contact; }
-            set
-            {
-                _contact = value;
-                RaisedPropertyChanged(nameof(Contact));
-            }
-        }
-        private bool _doesHeProvidingSupport;
-        public bool DoesHeProvidingSupport {
-            get { return _doesHeProvidingSupport; }
-            set
-            {
-                _doesHeProvidingSupport = value;
-                RaisedPropertyChanged(nameof(DoesHeProvidingSupport));
+                _influencer = value;
+                RaisedPropertyChanged(nameof(Influencer));
             }
         }
 
         // Commands
+        public ICommand GetInfluencerCommand { private set; get; }
         public ICommand AddInfluencerCommand { private set; get; }
-        public ICommand SaveInfluencerCommand { private set; get; }
 
         // Constructor
         public InfluencerViewModel()
         {
+            Influencer = new List<InfluencerModel>();
+            GetInfluencer();
+            GetInfluencerCommand = new Command(GetInfluencer);
             AddInfluencerCommand = new Command(AddInfluencer);
-            SaveInfluencerCommand = new Command(SaveInfluencer);
         }
 
-        // Methods
-        public async void SaveInfluencer()
+        public async void GetInfluencer()
         {
-            await Data.PostInfluencer(new InfluencerModel
+            var data = await Data.GetInfluencer("T");
+            foreach (var item in data)
             {
-               Name = Name,
-               Contact = Contact,
-               DoesHeProvidingSupport = DoesHeProvidingSupport,
-               Position =Position 
-            }, "T");
-
-            var route = $"{nameof(InfluencerPage)}";
-            await Shell.Current.GoToAsync(route);
+                Influencer.Add(
+                    new InfluencerModel
+                    {
+                       Name = item.Name,
+                       Contact = item.Contact,
+                       Position = item.Position, 
+                       DoesHeProvidingSupport = item.DoesHeProvidingSupport
+                    }
+                    );
+            }
         }
 
         // Route Methods

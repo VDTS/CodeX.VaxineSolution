@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              Title="Add Influencer">
   <ContentPage.BindingContext>
-    <ViewModel:InfluencerViewModel></ViewModel:InfluencerViewModel>
+    <ViewModel:AddInfluecerViewModel></ViewModel:AddInfluecerViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout>

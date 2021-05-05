@@ -18,14 +18,14 @@ namespace VaxineApp.Models.Home.Area
         public List<SchoolModel> Schools { get; set; }
         public List<InfluencerModel> Influencers { get; set; }
         public List<ClinicModel> Clinics { get; set; }
-        public List<DoctorModel> Doctors { get; set; }
+        public List<InfluencerModel> Doctors { get; set; }
         public TeamModel()
         {
             Masjeeds = new List<MasjeedModel>();
             Schools = new List<SchoolModel>();
             Influencers = new List<InfluencerModel>();
             Clinics = new List<ClinicModel>();
-            Doctors = new List<DoctorModel>();
+            Doctors = new List<InfluencerModel>();
         }
     }
 
