@@ -33,7 +33,7 @@ namespace VaxineApp.Models.Home.Area
     {
         public string MasjeedName { get; set; }
         public string KeyInfluencer { get; set; }
-        public string DoesImamSupportsVaccine { get; set; }
+        public bool DoesImamSupportsVaccine { get; set; }
         public bool DoYouHavePermissionForAdsInMasjeed { get; set; }
     }
 

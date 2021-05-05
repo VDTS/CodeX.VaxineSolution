@@ -2,12 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Area.Masjeed.AditMasjeedPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
              Title="Add Masjeed">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.BindingContext>
+    <ViewModel:MasjeedViewModel></ViewModel:MasjeedViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Placeholder="Masjeed Name"
+                                 PlaceholderColor="Gray"
+                                 Text="{Binding MasjeedName}"></local:CustomEntryRenderer>
+      <local:CustomEntryRenderer TextColor="Black"
+                                 Placeholder="Key Influencer"
+                                 PlaceholderColor="Gray"
+                                 Text="{Binding KeyInfluencer}"></local:CustomEntryRenderer>
+
+      <Label Text="Does Imam Supports Vaccine?"></Label>
+      <CheckBox IsChecked="{Binding DoesImamSupportsVaccine}"></CheckBox>
+
+      <Label Text="Do You Have Permission For Ads In Masjeed?"></Label>
+      <CheckBox IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
+
+      <Button Text="Save"
+              Command="{Binding SaveMasjeedCommand}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
