@@ -23,39 +23,9 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
         }
 
-        private string _clinicName;
-        public string ClinicName
-        {
-            get { return _clinicName; }
-            set
-            {
-                _clinicName = value;
-                RaisedPropertyChanged(nameof(ClinicName));
-            }
-        }
-        public string _fixed;
-        public string Fixed
-        {
-            get { return _fixed; }
-            set
-            {
-                _fixed = value;
-                RaisedPropertyChanged(nameof(Fixed));
-            }
-        }
-        public string _outreach;
-        public string Outreach
-        {
-            get { return _outreach; }
-            set
-            {
-                _outreach = value;
-                RaisedPropertyChanged(nameof(Outreach));
-            }
-        }
-        // Commands
+        
+        //Commands
         public ICommand AddClinicCommand { private set; get; }
-        public ICommand SaveClinicCommand { private set; get; }
         public ICommand GetClinicCommand { private set; get; }
 
         // Constructor
@@ -64,7 +34,6 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             GetClinic();
             GetClinicCommand = new Command(GetClinic);
             AddClinicCommand = new Command(AddClinic);
-            SaveClinicCommand = new Command(SaveClinic);
             Clinics = new List<ClinicModel>();
         }
 
@@ -84,17 +53,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                     );
             }
         }
-        public async void SaveClinic()
-        {
-            await Data.PostClinic(new ClinicModel
-            {
-                ClinicName = ClinicName,
-                Fixed = Fixed,
-                Outreach = Outreach
-            }, "T");
-            var route = $"{nameof(ClinicPage)}";
-            await Shell.Current.GoToAsync(route);
-        }
+        
         // GoTo Routes
         async void AddClinic()
         {

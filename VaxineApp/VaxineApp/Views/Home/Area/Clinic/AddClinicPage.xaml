@@ -5,7 +5,7 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Clinic"
              Title="Add Clinic">
   <ContentPage.BindingContext>
-    <ViewModel:ClinicViewModel></ViewModel:ClinicViewModel>
+    <ViewModel:AddClinicViewModel></ViewModel:AddClinicViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout>
