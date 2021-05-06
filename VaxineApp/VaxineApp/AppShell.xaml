@@ -11,6 +11,7 @@
          xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
          xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
+       xmlns:Login="clr-namespace:VaxineApp.Views.Login"
        xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
        xmlns:profileViewModel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
        Title="VaxineApp"
@@ -156,10 +157,14 @@
       </Grid>
     </DataTemplate>
   </Shell.FlyoutHeaderTemplate>
+  <FlyoutItem Route="LoginPage" FlyoutItemIsVisible="False" >
+    <ShellContent ContentTemplate="{DataTemplate Login:LoginPage}"></ShellContent>
+  </FlyoutItem>
+  
   <FlyoutItem Title="Home" Icon="FlyoutItem_Home.png">
     <Tab Icon="Home_Status.png"
          Title="Status">
-      <ShellContent Route="Status"
+      <ShellContent Route="StatusPage"
                     ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
     </Tab>
     <Tab Icon="Home_Insights.png"
@@ -217,7 +222,7 @@
   </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutMenuItem_Logout.png">
+            IconImageSource="FlyoutMenuItem_Logout.png" Clicked="MenuItem_Clicked">
   </MenuItem>
 
   <!--

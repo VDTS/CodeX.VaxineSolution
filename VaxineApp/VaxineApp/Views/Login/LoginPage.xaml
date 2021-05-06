@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Login.LoginPage"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False">
+  <ContentPage.Content>
+    <StackLayout Padding="40"
+                 VerticalOptions="Center"
+                 HorizontalOptions="FillAndExpand">
+      <Label TextColor="Black"
+             Text="Welcome to Login Page" />
+      <Entry TextColor="Black"
+             PlaceholderColor="Gray"
+             Placeholder="Email or Phone"></Entry>
+      <Entry TextColor="Black"
+             PlaceholderColor="Gray"
+             Placeholder="Password"></Entry>
+      <Button Text="Sign in" Clicked="Button_Clicked"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
