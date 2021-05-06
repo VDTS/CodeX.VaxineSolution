@@ -13,14 +13,29 @@ namespace VaxineApp.Views.Login
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        IAuth auth;
         public LoginPage()
         {
             InitializeComponent();
+            auth = DependencyService.Get<IAuth>();
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+            string Token = await auth.LoginWithEmailPassword(Email.Text, Password.Text);
+            if (Token != "")
+            {
+                await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+            }
+            else
+            {
+                ShowError();
+            }
+
+        }
+        async private void ShowError()
+        {
+            await DisplayAlert("Authentication Failed", "E-mail or password are incorrect. Try again!", "OK");
         }
     }
 }

@@ -11,10 +11,11 @@
                  HorizontalOptions="FillAndExpand">
       <Label TextColor="Black"
              Text="Welcome to Login Page" />
-      <Entry TextColor="Black"
+      <Entry TextColor="Black" x:Name="Email"
              PlaceholderColor="Gray"
              Placeholder="Email or Phone"></Entry>
       <Entry TextColor="Black"
+             x:Name="Password"
              PlaceholderColor="Gray"
              Placeholder="Password"></Entry>
       <Button Text="Sign in" Clicked="Button_Clicked"></Button>
