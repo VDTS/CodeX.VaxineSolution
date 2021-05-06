@@ -215,11 +215,13 @@
   </MenuItem>
   <MenuItem Text="AboutUs"
             StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutItem_AboutUs.png">
+            IconImageSource="FlyoutItem_AboutUs.png"
+            Command="{Binding GoToAboutUsPageCommand}">
   </MenuItem>
   <MenuItem Text="Help"
             StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutItem_Help.png">
+            IconImageSource="FlyoutItem_Help.png"
+            Command="{Binding GoToHelpPageCommand}">
   </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"

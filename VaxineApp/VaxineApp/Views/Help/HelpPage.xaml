@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Help.HelpPage">
+  <ContentPage.Content>
+    <StackLayout Padding="40">
+      <Label TextColor="Black"
+             Text="Help page is under implementation" />
+      <Label TextColor="Black"
+             Text="These features are under implementation"></Label>
+      <Label TextColor="Black"
+             Text="1: Youtube channel link, 2: App pop up message Demo, 3: Vaccine Guide"></Label>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

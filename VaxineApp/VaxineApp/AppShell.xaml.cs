@@ -16,6 +16,8 @@ using VaxineApp.Views.Home.Area.School;
 using VaxineApp.Views.Home.Family;
 using VaxineApp.Views.Login;
 using VaxineApp.Views.Settings;
+using VaxineApp.Views.Help;
+using VaxineApp.Views.AboutUs;
 
 namespace VaxineApp
 {
@@ -52,6 +54,8 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(EditProfile), typeof(EditProfile));
             Routing.RegisterRoute(nameof(Settings), typeof(Settings));
+            Routing.RegisterRoute(nameof(HelpPage), typeof(HelpPage));
+            Routing.RegisterRoute(nameof(AboutUsPage), typeof(AboutUsPage));
         }
     }
 }

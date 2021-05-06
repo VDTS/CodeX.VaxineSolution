@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.Views.AboutUs;
+using VaxineApp.Views.Help;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Login;
@@ -15,11 +17,15 @@ namespace VaxineApp.ViewModels
         public ICommand GoToProfileCommand { private set; get; }
         public ICommand GoToSettingsPageCommand { private set; get; }
         public ICommand LogginOutCommand { private set; get; }
+        public ICommand GoToHelpPageCommand { private set; get; }
+        public ICommand GoToAboutUsPageCommand { private set; get; }
         public AppShellViewModel()
         {
             GoToSettingsPageCommand = new Command(GoToSettingsPage);
             GoToProfileCommand = new Command(GoToProfile);
             LogginOutCommand = new Command(LogginOut);
+            GoToHelpPageCommand = new Command(GoToHelpPage);
+            GoToAboutUsPageCommand = new Command(GoToAboutUsPage);
         }
 
         private async void GoToProfile(object obj)
@@ -37,6 +43,16 @@ namespace VaxineApp.ViewModels
         private async void LogginOut(object obj)
         {
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+        }
+
+        private async void GoToHelpPage(object obj)
+        {
+            await Shell.Current.GoToAsync($"{nameof(HelpPage)}");
+        }
+
+        private async void GoToAboutUsPage(object obj)
+        {
+            await Shell.Current.GoToAsync($"{nameof(AboutUsPage)}");
         }
     }
 }
