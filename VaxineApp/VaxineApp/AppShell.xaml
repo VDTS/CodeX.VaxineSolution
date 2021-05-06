@@ -210,7 +210,8 @@
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
   <MenuItem Text="Settings"
             StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutItem_settings.png">
+            IconImageSource="FlyoutItem_settings.png"
+            Command="{Binding GoToSettingsPageCommand}">
   </MenuItem>
   <MenuItem Text="AboutUs"
             StyleClass="MenuItemLayoutStyle"
@@ -222,7 +223,7 @@
   </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutMenuItem_Logout.png" Clicked="MenuItem_Clicked">
+            IconImageSource="FlyoutMenuItem_Logout.png" Command="{Binding LogginOutCommand}">
   </MenuItem>
 
   <!--

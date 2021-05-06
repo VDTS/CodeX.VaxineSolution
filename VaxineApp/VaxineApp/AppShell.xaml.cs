@@ -15,6 +15,7 @@ using VaxineApp.Views.Home.Area.Masjeed;
 using VaxineApp.Views.Home.Area.School;
 using VaxineApp.Views.Home.Family;
 using VaxineApp.Views.Login;
+using VaxineApp.Views.Settings;
 
 namespace VaxineApp
 {
@@ -50,13 +51,7 @@ namespace VaxineApp
 
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(EditProfile), typeof(EditProfile));
-            
-
-        }
-
-        private async void MenuItem_Clicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            Routing.RegisterRoute(nameof(Settings), typeof(Settings));
         }
     }
 }

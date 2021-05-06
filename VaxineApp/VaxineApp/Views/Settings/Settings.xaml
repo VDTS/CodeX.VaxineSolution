@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Settings.Settings"
              Title="Settings">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.Content>
+    <StackLayout Padding="40">
+      <Label TextColor="Black" Text="Settings page is under implementation" />
+      <Label TextColor="Black"
+             Text="These features are under implementation"></Label>
+      <Label TextColor="Black"
+             Text="1: Dark mode, 2: Localization"></Label>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
