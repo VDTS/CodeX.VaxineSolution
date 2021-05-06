@@ -54,7 +54,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 Fixed = Fixed,
                 Outreach = Outreach
             }, "T");
-            var route = $"{nameof(ClinicPage)}";
+            var route = $"//{nameof(ClinicPage)}";
             await Shell.Current.GoToAsync(route);
         }
     }

@@ -59,7 +59,7 @@ namespace VaxineApp.ViewModels.Home.Family
                 ParentName = ParentName,
                 PhoneNumber = PhoneNumber
             }, "T");
-            var route = $"{nameof(FamilyListPage)}";
+            var route = $"//{nameof(FamilyListPage)}";
             await Shell.Current.GoToAsync(route);
         }
 

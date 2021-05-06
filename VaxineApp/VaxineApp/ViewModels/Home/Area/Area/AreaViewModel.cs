@@ -143,7 +143,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                             SocialMobilizerId = SocialMobilizerId
                         }, "T", "Teams"
                         );
-                    var route = $"{nameof(AreaPage)}";
+                    var route = $"//{nameof(AreaPage)}";
                     await Shell.Current.GoToAsync(route);
                 }
                 catch (Exception)
@@ -163,7 +163,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                              SocialMobilizerId = SocialMobilizerId
                          }
                         );
-                    var route = $"{nameof(AreaPage)}";
+                    var route = $"//{nameof(AreaPage)}";
                     await Shell.Current.GoToAsync(route);
                 }
                 catch (Exception)

@@ -44,7 +44,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                 IsHeProvindingSupportForSIAAndVaccination = IsHeProvindingSupportForSIAAndVaccination
             }, "T");
 
-            var route = $"{nameof(DoctorPage)}";
+            var route = $"//{nameof(DoctorPage)}";
             await Shell.Current.GoToAsync(route);
         }
     }

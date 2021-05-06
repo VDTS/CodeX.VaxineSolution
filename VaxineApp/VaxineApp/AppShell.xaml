@@ -169,38 +169,38 @@
     </Tab>
     <Tab Icon="Home_Insights.png"
          Title="Insights">
-      <ShellContent Route="Insights"
+      <ShellContent Route="InsightsPage"
                     ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
     </Tab>
     <Tab Icon="Home_Family.png"
          Title="Family">
-      <ShellContent Route="FamilyPage"
+      <ShellContent Route="FamilyListPage"
                     ContentTemplate="{DataTemplate HomeFamily:FamilyListPage}" />
     </Tab>
     <Tab Icon="Home_Area.png"
          Title="Area">
       <ShellContent Title="Area"
-                    Route="Area"
+                    Route="AreaPage"
                     ContentTemplate="{DataTemplate HomeArea:AreaPage}" />
       <ShellContent Title="Masjeed"
-                    Route="Masjeed"
+                    Route="MasjeedPage"
                     ContentTemplate="{DataTemplate HomeAreaMasjeed:MasjeedPage}" />
       <ShellContent Title="School"
-                    Route="School"
+                    Route="SchoolPage"
                     ContentTemplate="{DataTemplate HomeAreaSchool:SchoolPage}" />
       <ShellContent Title="Influencer"
-                    Route="Influencer"
+                    Route="InfluencerPage"
                     ContentTemplate="{DataTemplate HomeAreaInfluencer:InfluencerPage}" />
       <ShellContent Title="Clinic"
-                    Route="Clinic"
+                    Route="ClinicPage"
                     ContentTemplate="{DataTemplate HomeAreaClinic:ClinicPage}" />
       <ShellContent Title="Doctor"
-                    Route="Doctor"
+                    Route="DoctorPage"
                     ContentTemplate="{DataTemplate HomeAreaDoctor:DoctorPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="Profile">
-      <ShellContent Route="Profile"
+      <ShellContent Route="ProfilePage"
                     ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
     </Tab>
 

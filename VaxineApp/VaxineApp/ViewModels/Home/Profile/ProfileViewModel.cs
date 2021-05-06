@@ -162,7 +162,7 @@ namespace VaxineApp.ViewModels.Home.Profile
                         Role = Profile.Role
                     }
                     );
-                var route = $"{nameof(ProfilePage)}";
+                var route = $"//{nameof(ProfilePage)}";
                 await Shell.Current.GoToAsync(route);
             }
             catch (Exception)

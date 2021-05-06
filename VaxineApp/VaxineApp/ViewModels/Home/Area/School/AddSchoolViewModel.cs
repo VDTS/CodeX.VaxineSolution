@@ -47,7 +47,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 SchoolName = SchoolName
             }, "T");
 
-            var route = $"{nameof(SchoolPage)}";
+            var route = $"//{nameof(SchoolPage)}";
             await Shell.Current.GoToAsync(route);
         }
     }

@@ -68,7 +68,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 DoYouHavePermissionForAdsInMasjeed = DoYouHavePermissionForAdsInMasjeed
             }, "T");
 
-            var route = $"{nameof(MasjeedPage)}";
+            var route = $"//{nameof(MasjeedPage)}";
             await Shell.Current.GoToAsync(route);
         }
     }
