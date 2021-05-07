@@ -1,15 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models.Home.Area;
 using VaxineApp.Views.Home.Area.Influencer;
+using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Influencer
 {
     public class InfluencerViewModel : BaseViewModel
     {
+        private bool _isBusy;
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                RaisedPropertyChanged(nameof(IsBusy));
+            }
+        }
         private List<InfluencerModel> _influencer;
         public List<InfluencerModel> Influencer
         {
@@ -22,7 +35,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         }
 
         // Commands
-        public ICommand GetInfluencerCommand { private set; get; }
+        public AsyncCommand GetInfluencerCommand { private set; get; }
         public ICommand AddInfluencerCommand { private set; get; }
 
         // Constructor
@@ -30,7 +43,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         {
             Influencer = new List<InfluencerModel>();
             GetInfluencer();
-            GetInfluencerCommand = new Command(GetInfluencer);
+            GetInfluencerCommand = new AsyncCommand(Refresh);
             AddInfluencerCommand = new Command(AddInfluencer);
         }
 
@@ -56,6 +69,21 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         {
             var route = $"{nameof(AditInfluencerPage)}";
             await Shell.Current.GoToAsync(route);
+        }
+        async Task Refresh()
+        {
+            IsBusy = true;
+
+            await Task.Delay(2000);
+            Clear();
+            GetInfluencer();
+
+            IsBusy = false;
+        }
+
+        void Clear()
+        {
+            Influencer.Clear();
         }
     }
 }

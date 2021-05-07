@@ -8,12 +8,25 @@ using DataAccess;
 using VaxineApp.Views.Home.Area.Area;
 using Xamarin.Forms;
 using VaxineApp.Models.Home.Area;
+using Xamarin.CommunityToolkit.ObjectModel;
+using System.Threading.Tasks;
 
 namespace VaxineApp.ViewModels.Home.Area.Area
 {
     public class AreaViewModel : BaseViewModel
     {
         // Properties
+        private bool _isBusy;
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                RaisedPropertyChanged(nameof(IsBusy));
+            }
+        }
 
         private TeamModel _team;
         public TeamModel Team
@@ -99,7 +112,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         // Commands
         public ICommand GoToEditAreaCommand { private set; get; }
         public ICommand SaveAreaCommand { private set; get; }
-        public ICommand GetDataCommand { private set; get; }
+        public AsyncCommand GetDataCommand { private set; get; }
 
         // Constructor
         public AreaViewModel()
@@ -107,7 +120,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             GetArea();
             GoToEditAreaCommand = new Command(GoToEditArea);
             SaveAreaCommand = new Command(SaveArea);
-            GetDataCommand = new Command(GetArea);
+            GetDataCommand = new AsyncCommand(Refresh);
         }
 
         // Methods
@@ -179,6 +192,21 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         {
             var route = $"{nameof(EditAreaPage)}";
             await Shell.Current.GoToAsync(route);
+        }
+        async Task Refresh()
+        {
+            IsBusy = true;
+
+            await Task.Delay(2000);
+            Clear();
+            GetArea();
+
+            IsBusy = false;
+        }
+
+        void Clear()
+        {
+            Team = null;
         }
     }
 }

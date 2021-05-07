@@ -12,21 +12,6 @@
                  Icon="Search.png"
                  Text="Search"
                  Priority="1" />
-
-    <!--<ToolbarItem Order="Secondary"
-                 Text="Edit"
-                 Priority="1"/>
-    <ToolbarItem Order="Secondary"
-                 Text="Delete"
-                 Priority="2" />
-    <ToolbarItem Order="Secondary"
-                 Text="Families"
-                 Command="{Binding FamiliesCommand}"
-                 Priority="3" />
-    <ToolbarItem Order="Secondary"
-                 Text="Add Child"
-                 Command="{Binding RegistrationPageCommand}"
-                 Priority="3" />-->
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"
@@ -42,42 +27,12 @@
   </ContentPage.Resources>
 
   <ContentPage.Content>
-
-    <CollectionView SelectionMode="Single"
-                    SelectionChanged="CollectionView_SelectionChanged"
-                    ItemsSource="{Binding Childs}">
-      
-      <CollectionView.Header>
-        
-        <Grid Padding="10">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.2*"></ColumnDefinition>
-            <ColumnDefinition Width="0.01*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-          </Grid.RowDefinitions>
-          <Label WidthRequest="40"
-                 HeightRequest="40"
-                 Grid.Column="0"
-                 TextColor="Blue"
-                 Text="House No"></Label>
-          <Label Grid.Column="2"
-                 Grid.Row="0"
-                 FontSize="20"
-                 TextColor="Blue"
-                 Text="Child Name"></Label>
-          <Label Grid.Column="2"
-                 Grid.Row="1"
-                 Padding="0, -5, 0, 0"
-                 TextColor="Blue"
-                 Text="Age in Months"></Label>
-        </Grid>
-      </CollectionView.Header>
-      <CollectionView.ItemTemplate>
-        <DataTemplate>
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3">
+      <CollectionView SelectionMode="Single"
+                      SelectionChanged="CollectionView_SelectionChanged"
+                      ItemsSource="{Binding Childs}">
+        <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
               <ColumnDefinition Width="0.2*"></ColumnDefinition>
@@ -91,21 +46,51 @@
             <Label WidthRequest="40"
                    HeightRequest="40"
                    Grid.Column="0"
-                   TextColor="Black"
-                   Text="{Binding HouseNo}"></Label>
+                   TextColor="Blue"
+                   Text="House No"></Label>
             <Label Grid.Column="2"
                    Grid.Row="0"
                    FontSize="20"
-                   TextColor="black"
-                   Text="{Binding FullName}"></Label>
+                   TextColor="Blue"
+                   Text="Child Name"></Label>
             <Label Grid.Column="2"
                    Grid.Row="1"
                    Padding="0, -5, 0, 0"
-                   TextColor="Black"
-                   Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
+                   TextColor="Blue"
+                   Text="Age in Months"></Label>
           </Grid>
-        </DataTemplate>
-      </CollectionView.ItemTemplate>
-    </CollectionView>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+          <DataTemplate>
+            <Grid Padding="10">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.01*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+              </Grid.RowDefinitions>
+              <Label WidthRequest="40"
+                     HeightRequest="40"
+                     Grid.Column="0"
+                     TextColor="Black"
+                     Text="{Binding HouseNo}"></Label>
+              <Label Grid.Column="2"
+                     Grid.Row="0"
+                     FontSize="20"
+                     TextColor="black"
+                     Text="{Binding FullName}"></Label>
+              <Label Grid.Column="2"
+                     Grid.Row="1"
+                     Padding="0, -5, 0, 0"
+                     TextColor="Black"
+                     Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
+            </Grid>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </RefreshView>
   </ContentPage.Content>
 </ContentPage>

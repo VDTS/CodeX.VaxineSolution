@@ -22,7 +22,9 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
     <ContentPage.Content>
-    <RefreshView>
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
+                 Command="{Binding GetFamilyCommand}">
       <CollectionView SelectionMode="Single"
                       ItemsSource="{Binding Family}"
                       SelectionChanged="CollectionView_SelectionChanged"

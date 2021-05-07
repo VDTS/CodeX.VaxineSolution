@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models.Home.Area;
 using VaxineApp.Views.Home.Area.Doctor;
+using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Doctor
@@ -22,7 +24,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             }
         }
         // Properties
-        public ICommand GetDoctorCommand { private set; get; }
+        public AsyncCommand GetDoctorCommand { private set; get; }
         public ICommand AddDoctorCommand { private set; get; }
 
         // Constructor
@@ -30,7 +32,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         {
             GetDoctor();
             Doctor = new List<DoctorModel>();
-            GetDoctorCommand = new Command(GetDoctor);
+            GetDoctorCommand = new AsyncCommand(Refresh);
             AddDoctorCommand = new Command(AddDoctor);
         }
 
@@ -57,7 +59,31 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             }
         }
         // Methods
+        private bool _isBusy;
 
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                RaisedPropertyChanged(nameof(IsBusy));
+            }
+        }
+        async Task Refresh()
+        {
+            IsBusy = true;
 
+            await Task.Delay(2000);
+            Clear();
+            GetDoctor();
+
+            IsBusy = false;
+        }
+
+        void Clear()
+        {
+            Doctor.Clear();
+        }
     }
 }

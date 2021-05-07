@@ -24,7 +24,8 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
     <ContentPage.Content>
-    <RefreshView RefreshColor="HotPink"
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
                  Command="{Binding GetInfluencerCommand}">
       <CollectionView SelectionMode="Single"
                       ItemsSource="{Binding Influencer}">

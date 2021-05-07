@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models.Home.Area;
 using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
+using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Clinic
@@ -22,8 +24,18 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 RaisedPropertyChanged(nameof(Clinics));
             }
         }
+        private bool _isBusy;
 
-        
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                RaisedPropertyChanged(nameof(IsBusy));
+            }
+        }
+
         //Commands
         public ICommand AddClinicCommand { private set; get; }
         public ICommand GetClinicCommand { private set; get; }
@@ -32,7 +44,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         public ClinicViewModel()
         {
             GetClinic();
-            GetClinicCommand = new Command(GetClinic);
+            GetClinicCommand = new AsyncCommand(Refresh);
             AddClinicCommand = new Command(AddClinic);
             Clinics = new List<ClinicModel>();
         }
@@ -59,6 +71,22 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         {
             var route = $"{nameof(AddClinicPage)}";
             await Shell.Current.GoToAsync(route);
+        }
+
+        async Task Refresh()
+        {
+            IsBusy = true;
+
+            await Task.Delay(2000);
+            Clear();
+            GetClinic();
+
+            IsBusy = false;
+        }
+
+        void Clear()
+        {
+            Clinics.Clear();
         }
     }
 }

@@ -25,7 +25,9 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView  RefreshColor="HotPink" Command="{Binding GetDataCommand}">
+    <RefreshView  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                  RefreshColor="#2196f3"
+                  Command="{Binding GetDataCommand}">
       <ScrollView>
         <StackLayout>
           <Label TextColor="Black"

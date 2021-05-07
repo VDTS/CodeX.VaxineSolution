@@ -10,11 +10,23 @@ using DataAccess;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
+using Xamarin.CommunityToolkit.ObjectModel;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
     public class StatusViewModel : BaseViewModel
     {
+        private bool _isBusy;
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                RaisedPropertyChanged(nameof(IsBusy));
+            }
+        }
         private List<ChildModel> _childs;
         public List<ChildModel> Childs
         {
@@ -27,6 +39,7 @@ namespace VaxineApp.ViewModels.Home.Status
 
         }
         public ICommand RegistrationPageCommand { private set; get; }
+        public AsyncCommand GetFamilyCommand { private set; get; }
         public ICommand FamiliesCommand { private set; get; }
 
         //public ICommand CollectionView_SelectionChangedCommand { private set; get; }
@@ -59,6 +72,7 @@ namespace VaxineApp.ViewModels.Home.Status
         {
             Childs = new List<ChildModel>();
             GetChild();
+            GetFamilyCommand = new AsyncCommand(Refresh);
             //RegistrationPageCommand = new Command(Add);
             //FamiliesCommand = new Command(Families);
             //CollectionView_SelectionChangedCommand = new Command<>(CollectionView_SelectionChanged);
@@ -69,5 +83,20 @@ namespace VaxineApp.ViewModels.Home.Status
         //    var route = $"{nameof(FamilyPage)}";
         //    await Shell.Current.GoToAsync(route);
         //}
+        async Task Refresh()
+        {
+            IsBusy = true;
+
+            await Task.Delay(2000);
+            Clear();
+            GetChild();
+
+            IsBusy = false;
+        }
+
+        void Clear()
+        {
+            Childs.Clear();
+        }
     }
 }

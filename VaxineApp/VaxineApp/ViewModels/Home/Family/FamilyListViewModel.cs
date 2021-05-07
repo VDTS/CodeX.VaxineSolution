@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.Views.Home.Family;
+using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Family
@@ -20,13 +22,25 @@ namespace VaxineApp.ViewModels.Home.Family
                 RaisedPropertyChanged(nameof(Family));
             }
         }
+        private bool _isBusy;
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                RaisedPropertyChanged(nameof(IsBusy));
+            }
+        }
+
         public ICommand AddFamilyCommand { private set; get; }
-        public ICommand GetFamilyCommand { private set; get; }
+        public AsyncCommand GetFamilyCommand { private set; get; }
         public FamilyListViewModel()
         {
             Family = new List<GetFamilyModel>();
             GetFamily();
-            GetFamilyCommand = new Command(GetFamily);
+            GetFamilyCommand = new AsyncCommand(Refresh);
             AddFamilyCommand = new Command(AddFamily);
         }
 
@@ -49,6 +63,21 @@ namespace VaxineApp.ViewModels.Home.Family
         {
             var route = $"{nameof(AddFamilyPage)}";
             await Shell.Current.GoToAsync(route);
+        }
+        async Task Refresh()
+        {
+            IsBusy = true;
+
+            await Task.Delay(2000);
+            Clear();
+            GetFamily();
+
+            IsBusy = false;
+        }
+
+        void Clear()
+        {
+            Family.Clear();
         }
     }
 }
