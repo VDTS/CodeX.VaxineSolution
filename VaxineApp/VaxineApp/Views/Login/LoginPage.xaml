@@ -3,22 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Login.LoginPage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Login"
              Shell.FlyoutBehavior="Disabled"
              Shell.NavBarIsVisible="False">
+  <ContentPage.BindingContext>
+    <ViewModel:LoginViewModel></ViewModel:LoginViewModel>
+  </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout Padding="40"
-                 VerticalOptions="Center"
-                 HorizontalOptions="FillAndExpand">
-      <Label TextColor="Black"
-             Text="Welcome to Login Page" />
-      <Entry TextColor="Black" x:Name="Email"
-             PlaceholderColor="Gray"
-             Placeholder="Email or Phone"></Entry>
-      <Entry TextColor="Black"
-             x:Name="Password"
-             PlaceholderColor="Gray"
-             Placeholder="Password"></Entry>
-      <Button Text="Sign in" Clicked="Button_Clicked"></Button>
-    </StackLayout>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.2*"></RowDefinition>
+        <RowDefinition Height="0.4*"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Label Grid.Row="0" TextColor="Gray" Text="X" Padding="20" FontSize="Large" HorizontalOptions="End">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding CloseAppCommand}">
+          </TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+      <StackLayout Grid.Row="1" VerticalOptions="Center"
+                   HorizontalOptions="FillAndExpand">
+        <Image Source="AppIcon.png"
+               WidthRequest="100"
+               HeightRequest="100"></Image>
+      </StackLayout>
+      <StackLayout Padding="40, 50, 40, 40"
+                   Grid.Row="2"
+                   Spacing="10">
+        <Entry TextColor="Black"
+               Text="{Binding Email}"
+               PlaceholderColor="Gray"
+               Placeholder="Email or Phone"></Entry>
+        <Entry TextColor="Black"
+               IsPassword="True"
+               ClearButtonVisibility="WhileEditing"
+               IsTextPredictionEnabled="false"
+               Text="{Binding Password}"
+               PlaceholderColor="Gray"
+               Placeholder="Password"></Entry>
+        <Button Text="Sign in"
+                Command="{Binding SignInCommand}"></Button>
+        <Label TextColor="Blue" TextDecorations="Underline"
+               Text="forgot password">
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}">
+            </TapGestureRecognizer>
+          </Label.GestureRecognizers>
+        </Label>
+        <StackLayout Orientation="Horizontal" Spacing="10">
+          <CheckBox IsChecked="{Binding RememberMe}"></CheckBox>
+          <Label TextColor="Black"
+                 Text="Remember me"></Label>
+        </StackLayout>
+
+      </StackLayout>
+    </Grid>
+    
   </ContentPage.Content>
 </ContentPage>
