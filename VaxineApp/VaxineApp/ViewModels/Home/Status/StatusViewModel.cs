@@ -59,7 +59,6 @@ namespace VaxineApp.ViewModels.Home.Status
                             FullName = item.FullName,
                             Gender = item.Gender,
                             DOB = item.DOB,
-                            HouseNo = item.HouseNo,
                             OPV0 = item.OPV0,
                             RINo = item.RINo
                         }

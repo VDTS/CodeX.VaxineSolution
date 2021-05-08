@@ -21,8 +21,6 @@
       <StackLayout Grid.Row="0"
                    Padding="20, 40, 20, 20">
         <Label TextColor="Black"
-               Text="{Binding HouseNo}"></Label>
-        <Label TextColor="Black"
                Text="{Binding FullName, Mode=TwoWay}"></Label>
         <Label TextColor="Black"
                Text="{Binding Gender}">

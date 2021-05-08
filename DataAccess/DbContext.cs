@@ -52,7 +52,6 @@ namespace DataAccess
               .OnceAsync<DataModel>()).Select(item => new ChildModel
               {
                   FullName = item.Object.FullName,
-                  HouseNo = item.Object.HouseNo,
                   DOB = item.Object.DOB,
                   Gender = item.Object.Gender,
                   OPV0 = item.Object.OPV0,
