@@ -10,7 +10,7 @@
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem IconImageSource="Universal_Edit.png"
-                 Command="{Binding EditProfileCommand}" />
+                 Command="{Binding EditProfileCommand}"/>
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout Padding="20, 40, 20, 20">
@@ -32,7 +32,9 @@
       <Label TextColor="Black"
              Text="{Binding Profile.Role}"></Label>
       <Label TextColor="Black"
-             Text="{Binding Profile.Email}"></Label>
+             AutomationId="ProfilePage_Email"
+             Text="{Binding Profile.Email}"
+             ></Label>
 
     </StackLayout>
   </ContentPage.Content>

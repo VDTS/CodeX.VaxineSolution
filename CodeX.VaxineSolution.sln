@@ -7,7 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxineApp.Android", "Vaxine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaxineApp", "VaxineApp\VaxineApp\VaxineApp.csproj", "{A696ACF5-AFAF-4E3E-8F53-1B2D707548FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C4074621-61D4-4189-8E13-B65CB9EDB67A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxineAppUITest", "VaxineAppUITest\VaxineAppUITest.csproj", "{AFC95805-2FD6-4707-AB48-5C3A68F350D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxineAppNUnitTest", "VaxineAppNUnitTest\VaxineAppNUnitTest.csproj", "{0A9ED049-495A-432C-9A50-051CE7D36211}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,9 +37,21 @@ Global
 		{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC95805-2FD6-4707-AB48-5C3A68F350D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC95805-2FD6-4707-AB48-5C3A68F350D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC95805-2FD6-4707-AB48-5C3A68F350D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC95805-2FD6-4707-AB48-5C3A68F350D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9ED049-495A-432C-9A50-051CE7D36211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9ED049-495A-432C-9A50-051CE7D36211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9ED049-495A-432C-9A50-051CE7D36211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9ED049-495A-432C-9A50-051CE7D36211}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AFC95805-2FD6-4707-AB48-5C3A68F350D5} = {C4074621-61D4-4189-8E13-B65CB9EDB67A}
+		{0A9ED049-495A-432C-9A50-051CE7D36211} = {C4074621-61D4-4189-8E13-B65CB9EDB67A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CB64915-DE49-4862-8BBE-CFA3754E2BF9}
