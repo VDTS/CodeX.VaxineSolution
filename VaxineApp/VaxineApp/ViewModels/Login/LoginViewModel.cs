@@ -58,7 +58,11 @@ namespace VaxineApp.ViewModels.Login
         }
         private void CloseApp()
         {
+<<<<<<< HEAD
             System.Diagnostics.Process.GetCurrentProcess().Kill();
+=======
+            System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
+>>>>>>> c36ad67de379a8f3309b5785322f2d27216cd294
         }
         private async void SignIn(object sender)
         {
