@@ -12,7 +12,8 @@
     <pages:AddChildPage />
   </d:ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout Padding="20, 40, 20, 20">
+    <StackLayout Padding="20, 40, 20, 20"
+                 x:Name="PageContent">
       <local:CustomEntryRenderer TextColor="Black"
                                  Text="{Binding FullName, Mode=TwoWay}"
                                  Placeholder="Full Name"
@@ -47,7 +48,7 @@
                   IsChecked="{Binding OPV0, Mode=TwoWay}" />
       </Grid>
       <Button Text="Save"
-              Command="{Binding SaveDataCommand}"
+             Clicked="Button_Clicked"
               Margin="20"></Button>
     </StackLayout>
 

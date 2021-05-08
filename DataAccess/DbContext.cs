@@ -255,6 +255,28 @@ namespace DataAccess
 
             await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Clinics").PostAsync(data);
         }
+        public async Task PostChild(Object data, string URL, int HouseNo)
+        {
+            var j = (await Firebase.Child("Kandahar-Area")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
+                .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                .Select(item => item.Key).FirstOrDefault();
+
+            var f = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams").Child(p).Child("Families")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => int.Parse(item.Object.GetValue("HouseNo").ToString()) == HouseNo)
+                .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Families/{f}").PostAsync(data);
+        }
         public async Task PostDoctor(Object data, string URL)
         {
             var j = (await Firebase.Child("Kandahar-Area")

@@ -38,8 +38,9 @@ namespace VaxineApp.Views.Home.Family
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            var route = $"{new AddChildPage(Family.HouseNo)}";
-            await Shell.Current.GoToAsync(route);
+            await Navigation.PushAsync(new AddChildPage(Family.HouseNo));
+            //var route = $"{new AddChildPage(Family.HouseNo)}";
+            //await Shell.Current.GoToAsync(route);
         }
     }
 }
