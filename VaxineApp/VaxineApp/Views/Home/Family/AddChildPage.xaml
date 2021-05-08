@@ -3,11 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Family.AddChildPage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:pages="clr-namespace:VaxineApp.Views.Home.Family"
              Title="Add Child">
-  <ContentPage.BindingContext>
-    <ViewModel:AddChildViewModel></ViewModel:AddChildViewModel>
-  </ContentPage.BindingContext>
+             <!--xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"-->
+    <!--<ViewModel:AddChildViewModel></ViewModel:AddChildViewModel>-->
+  <d:ContentPage.BindingContext>
+    <pages:AddChildPage />
+  </d:ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout Padding="20, 40, 20, 20">
       <local:CustomEntryRenderer TextColor="Black"
