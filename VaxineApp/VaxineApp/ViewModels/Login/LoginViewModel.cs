@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.Views.Home.Status;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Login
@@ -65,12 +66,15 @@ namespace VaxineApp.ViewModels.Login
             string Token = await auth.LoginWithEmailPassword(Email, Password);
             if (Token != "")
             {
+                Preferences.Set("Email", Email);
                 await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
             }
             else
             {
                 ShowError();
             }
+            await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+
 
         }
         async private void ShowError()

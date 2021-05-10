@@ -8,6 +8,7 @@ using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Login;
 using VaxineApp.Views.Settings;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels
@@ -19,6 +20,27 @@ namespace VaxineApp.ViewModels
         public ICommand LogginOutCommand { private set; get; }
         public ICommand GoToHelpPageCommand { private set; get; }
         public ICommand GoToAboutUsPageCommand { private set; get; }
+        private string _userName;
+        public string UserName {
+            get { return _userName; }
+            set
+            {
+                _userName = value;
+                RaisedPropertyChanged(nameof(UserName));
+            }
+        }
+        private string _role;
+
+        public string Role
+        {
+            get { return _role; }
+            set
+            {
+                _role = value;
+                RaisedPropertyChanged(nameof(Role));
+            }
+        }
+
         public AppShellViewModel()
         {
             GoToSettingsPageCommand = new Command(GoToSettingsPage);
@@ -26,6 +48,8 @@ namespace VaxineApp.ViewModels
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
             GoToAboutUsPageCommand = new Command(GoToAboutUsPage);
+            UserName = Preferences.Get("FullName", "");
+            Role = Preferences.Get("Role", "");
         }
 
         private async void GoToProfile(object obj)

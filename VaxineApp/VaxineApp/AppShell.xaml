@@ -13,7 +13,6 @@
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
        xmlns:Login="clr-namespace:VaxineApp.Views.Login"
        xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
-       xmlns:profileViewModel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
        Title="VaxineApp"
        x:Class="VaxineApp.AppShell">
   <Shell.BindingContext>
@@ -130,7 +129,7 @@
                Margin="10, 30, 0, 0"
                HorizontalOptions="Start"
                Grid.Row="0" />
-        <Label Text="User Name"
+        <Label Text="{Binding UserName}"
                TextColor="Black"
                FontAttributes="Bold"
                FontSize="20"
@@ -143,7 +142,7 @@
           </Label.GestureRecognizers>
         </Label>
 
-        <Label Text="Role"
+        <Label Text="{Binding Role}"
                FontAttributes="Bold"
                TextColor="Black"
                HorizontalTextAlignment="Start"
@@ -165,7 +164,7 @@
     <Tab Icon="Home_Status.png"
          Title="Status">
       <ShellContent Route="StatusPage"
-                    ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
+                    ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
     </Tab>
     <Tab Icon="Home_Insights.png"
          Title="Insights">

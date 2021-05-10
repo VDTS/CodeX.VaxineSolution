@@ -6,11 +6,13 @@ using VaxineApp.Models;
 using DataAccess;
 using VaxineApp.Views.Home.Profile;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
     public class ProfileViewModel : BaseViewModel
     {
+        public string userEmail = Preferences.Get("Email", "");
         public ICommand SaveDataCommand { private set; get; }
         public ICommand EditProfileCommand { private set; get; }
         private string _fullName;
@@ -126,7 +128,7 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public async void GetProfile()
         {
-            var profile = await Data.GetProfile("Yassin@gmail.com");
+            var profile = await Data.GetProfile(userEmail);
             Profile = new ProfileModel
             {
                 FullName = profile.FullName,
@@ -139,6 +141,8 @@ namespace VaxineApp.ViewModels.Home.Profile
                 Password = profile.Password,
                 Role = profile.Role
             };
+            Preferences.Set("FullName", Profile.FullName);
+            Preferences.Set("Role", Profile.Role);
             FullName = Profile.FullName;
             Gender = Profile.Gender;
             FatherOrHusbandName = Profile.FatherOrHusbandName;
@@ -150,7 +154,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             try
             {
-                await Data.PutProfile(Profile.Email,
+                await Data.PutProfile(userEmail,
                     new ProfileModel
                     {
                         FullName = FullName,
