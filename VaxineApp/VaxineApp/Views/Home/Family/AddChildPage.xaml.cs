@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.Models.Home.Area;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -89,7 +90,7 @@ namespace VaxineApp.Views.Home.Family
                 OPV0 = OPV0,
                 RINo = RINo
             }, "T", HouseNo);
-            await Navigation.PushAsync(new FamilyDetailsPage());
+            await Navigation.PushAsync(new FamilyDetailsPage(new GetFamilyModel { HouseNo = HouseNo}));
             //var route = $"../";
             //await Shell.Current.GoToAsync(route);
         }

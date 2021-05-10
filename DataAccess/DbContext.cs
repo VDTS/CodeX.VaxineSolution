@@ -83,6 +83,44 @@ namespace DataAccess
                 }).ToList();
 
         }
+        public async Task<List<ChildModel>> GetChild(string ClusterName, int HouseNo)
+        {
+
+            var j = (await Firebase.Child("Kandahar-Area")
+               .OnceAsync<JObject>())
+               .ToList()
+               .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
+               .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                .Select(item => item.Key).FirstOrDefault();
+
+            var f = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams").Child(p).Child("Families")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => int.Parse(item.Object.GetValue("HouseNo").ToString()) == HouseNo)
+                .Select(item => item.Key).FirstOrDefault();
+
+
+            return (await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Families/{f}/Childs").OnceAsync<ChildModel>())
+                .Select(item => new ChildModel
+                {
+                    FullName = item.Object.FullName,
+                    //DOB = item.Object.DOB,
+                    Gender = item.Object.Gender
+                    //OPV0 = item.Object.OPV0,
+                    //RINo = item.Object.RINo
+                    //FullName = item.Object.GetValue("FullName").ToString(),
+                    //Gender = item.Object.GetValue("Gender").ToString(),
+                    //DOB = DateTime.Parse(item.Object.GetValue("DOB").ToString()),
+                    //OPV0 = bool.Parse(item.Object.GetValue("OPV0").ToString()),
+                    //RINo = int.Parse(item.Object.GetValue("RINo").ToString())
+                }).ToList();
+
+        }
         public async Task<List<DoctorModel>> GetDoctor(string ClusterName)
         {
 
@@ -275,7 +313,7 @@ namespace DataAccess
                 .Where(item => int.Parse(item.Object.GetValue("HouseNo").ToString()) == HouseNo)
                 .Select(item => item.Key).FirstOrDefault();
 
-            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Families/{f}").PostAsync(data);
+            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Families/{f}/Childs").PostAsync(data);
         }
         public async Task PostDoctor(Object data, string URL)
         {

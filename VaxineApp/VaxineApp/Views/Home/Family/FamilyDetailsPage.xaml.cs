@@ -1,6 +1,7 @@
 ﻿using DataAccess;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,19 +16,52 @@ namespace VaxineApp.Views.Home.Family
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FamilyDetailsPage : ContentPage
     {
-        public GetFamilyModel Family { get; set; }
         protected DbContext Data = new DbContext();
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void RaisedPropertyChanged(string PropertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
+        }
+        public GetFamilyModel Family { get; set; }
+        private List<ChildModel> _childs;
+        public List<ChildModel> Childs
+        {
+            get { return _childs; }
+            set
+            {
+                _childs = value;
+                RaisedPropertyChanged(nameof(Childs));
+            }
+        }
         public FamilyDetailsPage(GetFamilyModel family)
         {
-            InitializeComponent();
-            AddChildCommand = new Command(AddChild);
+            Childs = new List<ChildModel>();
             Family = family;
+            LoadData();
+            AddChildCommand = new Command(AddChild);
+            InitializeComponent();
             PageContent.BindingContext = this;
         }
-        public FamilyDetailsPage()
-        {
 
+        private async void LoadData()
+        {
+            var data = await Data.GetChild("T", Family.HouseNo);
+            foreach (var item in data)
+            {
+                Childs.Add(
+                    new ChildModel
+                    {
+                        FullName = item.FullName,
+                        //DOB = item.DOB,
+                        //Gender = item.Gender,
+                        //OPV0 = item.OPV0,
+                        //RINo = item.RINo
+                    });
+            }
         }
+
+        public FamilyDetailsPage()
+        { }
         public ICommand AddChildCommand { private set; get; }
 
         public async void AddChild()
