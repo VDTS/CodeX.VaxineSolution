@@ -27,5 +27,7 @@ namespace VaxineApp.Models
         [Required]
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
+        public string Team { get; set; }
+        public string Cluster { get; set; }
     }
 }

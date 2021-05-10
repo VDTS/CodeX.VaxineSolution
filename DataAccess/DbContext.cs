@@ -275,7 +275,10 @@ namespace DataAccess
                   Gender = item.Object.Gender,
                   Age = item.Object.Age,
                   Email = item.Object.Email,
-                  Role = item.Object.Role
+                  Role = item.Object.Role,
+                  Cluster = item.Object.Cluster,
+                  Team = item.Object.Team
+                    
               }).ToList()
               .Where(item => item.Email == Email).FirstOrDefault();
         }

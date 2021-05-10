@@ -32,14 +32,14 @@
                    Grid.Row="2"
                    Spacing="10">
         <Entry TextColor="Black"
-               Text="{Binding Email}"
+               Text="{Binding UserEmail}"
                PlaceholderColor="Gray"
                Placeholder="Email or Phone"></Entry>
         <Entry TextColor="Black"
                IsPassword="True"
                ClearButtonVisibility="WhileEditing"
                IsTextPredictionEnabled="false"
-               Text="{Binding Password}"
+               Text="{Binding UserPassword}"
                PlaceholderColor="Gray"
                Placeholder="Password"></Entry>
         <Button Text="Sign in"

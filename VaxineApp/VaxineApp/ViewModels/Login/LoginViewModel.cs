@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Login
 {
-    public class LoginViewModel : BaseViewModel
+    public partial class LoginViewModel : BaseViewModel
     {
         IAuth auth;
         public ICommand CloseAppCommand { private set; get; }
@@ -25,26 +25,26 @@ namespace VaxineApp.ViewModels.Login
             }
         }
 
-        private string _email;
+        private string _userEmail;
 
-        public string Email
+        public string UserEmail
         {
-            get { return _email; }
+            get { return _userEmail; }
             set
             {
-                _email = value;
-                RaisedPropertyChanged(nameof(Email));
+                _userEmail = value;
+                RaisedPropertyChanged(nameof(UserEmail));
             }
         }
-        private string _password;
+        private string _userPassword;
 
-        public string Password
+        public string UserPassword
         {
-            get { return _password; }
+            get { return _userPassword; }
             set
             {
-                _password = value;
-                RaisedPropertyChanged(nameof(Password));
+                _userPassword = value;
+                RaisedPropertyChanged(nameof(UserPassword));
             }
         }
 
@@ -56,6 +56,9 @@ namespace VaxineApp.ViewModels.Login
             SignInCommand = new Command(SignIn);
             ForgotPasswordCommand = new Command(ForgotPassword);
             CloseAppCommand = new Command(CloseApp);
+            SaveDataCommand = new Command(SaveData);
+            EditProfileCommand = new Command(EditProfile);
+            
         }
         private void CloseApp()
         {
@@ -63,10 +66,11 @@ namespace VaxineApp.ViewModels.Login
         }
         private async void SignIn(object sender)
         {
-            string Token = await auth.LoginWithEmailPassword(Email, Password);
+            string Token = await auth.LoginWithEmailPassword(UserEmail, UserPassword);
             if (Token != "")
             {
-                Preferences.Set("Email", Email);
+                Preferences.Set("Email", UserEmail);
+                GetProfile();
                 await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
             }
             else

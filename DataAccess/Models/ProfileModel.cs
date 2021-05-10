@@ -16,5 +16,7 @@ namespace DataAccess.Models
         public string ConfirmEmail { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
+        public string Team { get; set; }
+        public string Cluster { get; set; }
     }
 }

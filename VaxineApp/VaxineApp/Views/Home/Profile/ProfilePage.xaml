@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Profile.ProfilePage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
+             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Login"
              Title="Profile">
   <ContentPage.BindingContext>
-    <viewmodel:ProfileViewModel></viewmodel:ProfileViewModel>
+    <viewmodel:LoginViewModel></viewmodel:LoginViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem IconImageSource="Universal_Edit.png"
