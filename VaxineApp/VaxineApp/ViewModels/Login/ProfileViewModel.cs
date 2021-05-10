@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Login
 {
-    public partial class LoginViewModel
+    public partial class LoginViewModel : BaseViewModel
     {
 
         public string userEmail = Preferences.Get("Email", "");
