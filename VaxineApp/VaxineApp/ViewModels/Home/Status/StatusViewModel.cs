@@ -11,6 +11,7 @@ using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 using Xamarin.CommunityToolkit.ObjectModel;
+using System.Collections.ObjectModel;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
@@ -27,14 +28,14 @@ namespace VaxineApp.ViewModels.Home.Status
                 RaisedPropertyChanged(nameof(IsBusy));
             }
         }
-        private List<ChildModel> _childs;
-        public List<ChildModel> Childs
+        private ObservableCollection<GetChildGroupedbyFamilyModel> _childGroupedbyFamily;
+        public ObservableCollection<GetChildGroupedbyFamilyModel> FamilyGroup
         {
-            get { return _childs; }
+            get { return _childGroupedbyFamily; }
             set
             {
-                _childs = value;
-                RaisedPropertyChanged(nameof(Childs));
+                _childGroupedbyFamily = value;
+                RaisedPropertyChanged(nameof(FamilyGroup));
             }
 
         }
@@ -42,46 +43,41 @@ namespace VaxineApp.ViewModels.Home.Status
         public AsyncCommand GetFamilyCommand { private set; get; }
         public ICommand FamiliesCommand { private set; get; }
 
-        //public ICommand CollectionView_SelectionChangedCommand { private set; get; }
-        //public async void Add()
-        //{
-        //    var route = $"{nameof(RegistrationPage)}";
-        //    await Shell.Current.GoToAsync(route);
-        //}
         public async void GetChild()
         {
-            var child = await Data.GetChild();
-            foreach (var item in child)
+            var family = await Data.GetFamily("T");
+            foreach (var item in family)
             {
-                Childs.Add(
-                        new ChildModel
+                var child = await Data.GetChild("T", item.HouseNo);
+                foreach (var item2 in child)
+                {
+                    FamilyGroup.Add(
+                    new GetChildGroupedbyFamilyModel(item.HouseNo, new List<GetChildModel>
+                    {
+                        new GetChildModel
                         {
-                            FullName = item.FullName,
-                            Gender = item.Gender,
-                            DOB = item.DOB,
-                            OPV0 = item.OPV0,
-                            RINo = item.RINo
+                            FullName = item2.FullName,
+                            Gender = item2.Gender,
+                            DOB = item2.DOB,
+                            OPV0 = item2.OPV0,
+                            RINo = item2.RINo
                         }
-                    );
+                    }));
+                }
             }
+
         }
 
 
         public StatusViewModel()
         {
-            Childs = new List<ChildModel>();
+            FamilyGroup = new ObservableCollection<GetChildGroupedbyFamilyModel>();
             GetChild();
             GetFamilyCommand = new AsyncCommand(Refresh);
             //RegistrationPageCommand = new Command(Add);
             //FamiliesCommand = new Command(Families);
             //CollectionView_SelectionChangedCommand = new Command<>(CollectionView_SelectionChanged);
         }
-
-        //async void Families(object obj)
-        //{
-        //    var route = $"{nameof(FamilyPage)}";
-        //    await Shell.Current.GoToAsync(route);
-        //}
         async Task Refresh()
         {
             IsBusy = true;
@@ -95,7 +91,7 @@ namespace VaxineApp.ViewModels.Home.Status
 
         void Clear()
         {
-            Childs.Clear();
+            FamilyGroup.Clear();
         }
     }
 }

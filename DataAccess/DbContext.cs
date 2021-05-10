@@ -59,6 +59,29 @@ namespace DataAccess
 
               }).ToList();
         }
+        //public async Task<List<GetChildGroupedbyFamilyModel>> GetChildGroupedbyFamily(string ClusterName, string Team)
+        //{
+        //    var j = (await Firebase.Child("Kandahar-Area")
+        //                .OnceAsync<JObject>())
+        //                .ToList()
+        //                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+        //                .Select(item => item.Key).FirstOrDefault();
+
+        //    var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+        //                .OnceAsync<JObject>())
+        //                .ToList()
+        //                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+        //                .Select(item => item.Key).FirstOrDefault();
+
+        //    return (await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Families").OnceAsync<JObject>())
+        //        .Select(item => new GetChildGroupedbyFamilyModel
+        //        {
+        //            HouseNo = int.Parse(item.Object.GetValue("HouseNo").ToString()),
+        //            ParentName = item.Object.GetValue("ParentName").ToString(),
+        //            PhoneNumber = item.Object.GetValue("PhoneNumber").ToString(),
+        //            Childs = item.Object.Property("Childs")
+        //        }).ToList();
+        //}
         public async Task<List<ClinicModel>> GetClinic(string ClusterName)
         {
 

@@ -29,7 +29,7 @@
   <ContentPage.Content>
     <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3">
-      <CollectionView SelectionMode="Single"
+      <!--<CollectionView SelectionMode="Single"
                       SelectionChanged="CollectionView_SelectionChanged"
                       ItemsSource="{Binding Childs}">
         <CollectionView.Header>
@@ -80,7 +80,45 @@
             </Grid>
           </DataTemplate>
         </CollectionView.ItemTemplate>
+      </CollectionView>-->
+      <CollectionView ItemsSource="{Binding FamilyGroup, Mode=TwoWay}"
+                      IsGrouped="True">
+
+        <CollectionView.ItemTemplate>
+          <DataTemplate>
+            <Grid Padding="0, 10, 0, 0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.01*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+              </Grid.RowDefinitions>
+              <Image WidthRequest="40"
+                     HeightRequest="40"
+                     Grid.Column="0"
+                     Source="{Binding FullName}"></Image>
+              <Label x:Name="FullNameLabel"
+                     Grid.Column="2"
+                     Grid.Row="0"
+                     FontSize="20"
+                     Text="{Binding Gender}"></Label>
+              <Label Grid.Column="2"
+                     Grid.Row="1"
+                     Padding="0, -5, 0, 0"
+                     Text="{Binding OPV0}"></Label>
+            </Grid>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+        <CollectionView.GroupHeaderTemplate>
+          <DataTemplate>
+            <Label Text="{Binding HouseNo}" />
+          </DataTemplate>
+        </CollectionView.GroupHeaderTemplate>
       </CollectionView>
+
     </RefreshView>
   </ContentPage.Content>
 </ContentPage>
