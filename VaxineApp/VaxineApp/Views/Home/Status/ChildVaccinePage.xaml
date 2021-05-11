@@ -9,7 +9,7 @@
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem IconImageSource="Home_Registration.png"
-                 Command="{Binding AddVaccineCommand}"/>
+                 Command="{Binding AddVaccineCommand}" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <Grid>
@@ -20,23 +20,17 @@
       </Grid.RowDefinitions>
       <StackLayout Grid.Row="0"
                    Padding="20, 40, 20, 20">
-        <Label TextColor="Black"
-               Text="{Binding FullName, Mode=TwoWay}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding Gender}">
+        <Label Text="{Binding FullName, Mode=TwoWay}"></Label>
+        <Label Text="{Binding Gender}">
         </Label>
-        <Label TextColor="Black"
-               Text="{Binding RINo, Mode=TwoWay}"></Label>
-        <Label TextColor="Black"
-               Text="{Binding DOB}"></Label>
-
+        <Label Text="{Binding RINo, Mode=TwoWay}"></Label>
+        <Label Text="{Binding DOB}"></Label>
         <Grid>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.3*"></ColumnDefinition>
             <ColumnDefinition Width="0.7*"></ColumnDefinition>
           </Grid.ColumnDefinitions>
           <Label Text="OPV0"
-                 TextColor="Black"
                  Grid.Column="0"></Label>
           <CheckBox Grid.Column="1"
                     IsChecked="{Binding OPV0}"
@@ -44,7 +38,6 @@
         </Grid>
       </StackLayout>
       <CollectionView Grid.Row="1">
-        
       </CollectionView>
     </Grid>
   </ContentPage.Content>

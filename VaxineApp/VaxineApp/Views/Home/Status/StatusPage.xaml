@@ -7,7 +7,6 @@
              xmlns:converters="clr-namespace:VaxineApp.Converters"
              Title="Status">
   <ContentPage.ToolbarItems>
-
     <ToolbarItem Order="Primary"
                  Icon="Search.png"
                  Text="Search"
@@ -29,61 +28,8 @@
   <ContentPage.Content>
     <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3">
-      <!--<CollectionView SelectionMode="Single"
-                      SelectionChanged="CollectionView_SelectionChanged"
-                      ItemsSource="{Binding Childs}">
-        <CollectionView.Header>
-          <Grid Padding="10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="0.2*"></ColumnDefinition>
-              <ColumnDefinition Width="0.01*"></ColumnDefinition>
-              <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-              <RowDefinition Height="Auto"></RowDefinition>
-              <RowDefinition Height="Auto"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Label Grid.Column="2"
-                   Grid.Row="0"
-                   FontSize="20"
-                   TextColor="Blue"
-                   Text="Child Name"></Label>
-            <Label Grid.Column="2"
-                   Grid.Row="1"
-                   Padding="0, -5, 0, 0"
-                   TextColor="Blue"
-                   Text="Age in Months"></Label>
-          </Grid>
-        </CollectionView.Header>
-        <CollectionView.ItemTemplate>
-          <DataTemplate>
-            <Grid Padding="10">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                <ColumnDefinition Width="0.01*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-              </Grid.ColumnDefinitions>
-              <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-              </Grid.RowDefinitions>
-              <Label Grid.Column="2"
-                     Grid.Row="0"
-                     FontSize="20"
-                     TextColor="black"
-                     Text="{Binding FullName}"></Label>
-              <Label Grid.Column="2"
-                     Grid.Row="1"
-                     Padding="0, -5, 0, 0"
-                     TextColor="Black"
-                     Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
-            </Grid>
-          </DataTemplate>
-        </CollectionView.ItemTemplate>
-      </CollectionView>-->
       <CollectionView ItemsSource="{Binding FamilyGroup, Mode=TwoWay}"
                       IsGrouped="True">
-
         <CollectionView.ItemTemplate>
           <DataTemplate>
             <Grid Padding="0, 10, 0, 0">
@@ -118,7 +64,6 @@
           </DataTemplate>
         </CollectionView.GroupHeaderTemplate>
       </CollectionView>
-
     </RefreshView>
   </ContentPage.Content>
 </ContentPage>

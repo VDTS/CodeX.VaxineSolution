@@ -17,13 +17,14 @@
                  Priority="2" />
     <ToolbarItem Order="Secondary"
                  Text="Add"
-                 Priority="3" Command="{Binding AddInfluencerCommand}"/>
+                 Priority="3"
+                 Command="{Binding AddInfluencerCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"
                  Priority="0" />
   </ContentPage.ToolbarItems>
-    <ContentPage.Content>
+  <ContentPage.Content>
     <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding GetInfluencerCommand}">
@@ -43,17 +44,14 @@
             <Label WidthRequest="40"
                    HeightRequest="40"
                    Grid.Column="0"
-                   TextColor="Blue"
                    Text="ClinicName"></Label>
             <Label Grid.Column="2"
                    Grid.Row="0"
                    FontSize="20"
-                   TextColor="Blue"
                    Text="Fixed"></Label>
             <Label Grid.Column="2"
                    Grid.Row="1"
                    Padding="0, -5, 0, 0"
-                   TextColor="Blue"
                    Text="Outreach"></Label>
           </Grid>
         </CollectionView.Header>
@@ -73,20 +71,17 @@
               <Label WidthRequest="40"
                      HeightRequest="40"
                      Grid.Column="0"
-                     TextColor="Black"
                      Text="{Binding Name}"></Label>
               <Label Grid.Column="2"
                      Grid.Row="0"
                      FontSize="20"
-                     TextColor="black"
                      Text="{Binding Position}"></Label>
               <Label Grid.Column="2"
                      Grid.Row="1"
                      Padding="0, -5, 0, 0"
-                     TextColor="Black"
                      Text="{Binding Contact}"></Label>
               <Grid Grid.Column="3">
-                <Label Text="Does He Providing Support" TextColor="Black"></Label>
+                <Label Text="Does He Providing Support"></Label>
                 <CheckBox IsChecked="{Binding DoesHeProvidingSupport}"></CheckBox>
               </Grid>
             </Grid>

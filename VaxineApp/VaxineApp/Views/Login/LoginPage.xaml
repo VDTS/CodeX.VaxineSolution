@@ -16,13 +16,18 @@
         <RowDefinition Height="0.4*"></RowDefinition>
         <RowDefinition Height="*"></RowDefinition>
       </Grid.RowDefinitions>
-      <Label Grid.Row="0" TextColor="Gray" Text="X" Padding="20" FontSize="Large" HorizontalOptions="End">
+      <Label Grid.Row="0"
+             Text="X"
+             Padding="20"
+             FontSize="Large"
+             HorizontalOptions="End">
         <Label.GestureRecognizers>
           <TapGestureRecognizer Command="{Binding CloseAppCommand}">
           </TapGestureRecognizer>
         </Label.GestureRecognizers>
       </Label>
-      <StackLayout Grid.Row="1" VerticalOptions="Center"
+      <StackLayout Grid.Row="1"
+                   VerticalOptions="Center"
                    HorizontalOptions="FillAndExpand">
         <Image Source="AppIcon.png"
                WidthRequest="100"
@@ -31,34 +36,28 @@
       <StackLayout Padding="40, 50, 40, 40"
                    Grid.Row="2"
                    Spacing="10">
-        <Entry TextColor="Black"
-               Text="{Binding UserEmail}"
-               PlaceholderColor="Gray"
+        <Entry Text="{Binding UserEmail}"
                Placeholder="Email or Phone"></Entry>
-        <Entry TextColor="Black"
-               IsPassword="True"
+        <Entry IsPassword="True"
                ClearButtonVisibility="WhileEditing"
                IsTextPredictionEnabled="false"
                Text="{Binding UserPassword}"
-               PlaceholderColor="Gray"
                Placeholder="Password"></Entry>
         <Button Text="Sign in"
                 Command="{Binding SignInCommand}"></Button>
-        <Label TextColor="Blue" TextDecorations="Underline"
+        <Label TextDecorations="Underline"
                Text="forgot password">
           <Label.GestureRecognizers>
             <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}">
             </TapGestureRecognizer>
           </Label.GestureRecognizers>
         </Label>
-        <StackLayout Orientation="Horizontal" Spacing="10">
+        <StackLayout Orientation="Horizontal"
+                     Spacing="10">
           <CheckBox IsChecked="{Binding RememberMe}"></CheckBox>
-          <Label TextColor="Black"
-                 Text="Remember me"></Label>
+          <Label Text="Remember me"></Label>
         </StackLayout>
-
       </StackLayout>
     </Grid>
-    
   </ContentPage.Content>
 </ContentPage>

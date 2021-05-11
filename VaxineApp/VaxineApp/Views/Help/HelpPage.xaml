@@ -4,12 +4,9 @@
              x:Class="VaxineApp.Views.Help.HelpPage">
   <ContentPage.Content>
     <StackLayout Padding="40">
-      <Label TextColor="Black"
-             Text="Help page is under implementation" />
-      <Label TextColor="Black"
-             Text="These features are under implementation"></Label>
-      <Label TextColor="Black"
-             Text="1: Youtube channel link, 2: App pop up message Demo, 3: Vaccine Guide"></Label>
+      <Label Text="Help page is under implementation" />
+      <Label Text="These features are under implementation"></Label>
+      <Label Text="1: Youtube channel link, 2: App pop up message Demo, 3: Vaccine Guide"></Label>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

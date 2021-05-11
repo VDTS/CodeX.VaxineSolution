@@ -17,14 +17,14 @@
                  Priority="2" />
     <ToolbarItem Order="Secondary"
                  Text="Add"
-                 Priority="3" 
-                 Command="{Binding AddMasjeedCommand}"/>
+                 Priority="3"
+                 Command="{Binding AddMasjeedCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"
                  Priority="0" />
   </ContentPage.ToolbarItems>
-    <ContentPage.Content>
+  <ContentPage.Content>
     <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding GetMasjeedCommand}">
@@ -45,17 +45,14 @@
             <Label WidthRequest="40"
                    HeightRequest="40"
                    Grid.Column="0"
-                   TextColor="Blue"
                    Text="ClinicName"></Label>
             <Label Grid.Column="2"
                    Grid.Row="0"
                    FontSize="20"
-                   TextColor="Blue"
                    Text="Fixed"></Label>
             <Label Grid.Column="2"
                    Grid.Row="1"
                    Padding="0, -5, 0, 0"
-                   TextColor="Blue"
                    Text="Outreach"></Label>
           </Grid>
         </CollectionView.Header>
@@ -75,21 +72,17 @@
               <Label WidthRequest="40"
                      HeightRequest="40"
                      Grid.Column="0"
-                     TextColor="Black"
                      Text="{Binding MasjeedName}"></Label>
               <Label Grid.Column="2"
                      Grid.Row="0"
                      FontSize="20"
-                     TextColor="black"
                      Text="{Binding KeyInfluencer}"></Label>
               <Grid Grid.Column="3">
-                <Label Text="DoesImamSupportsVaccine"
-                       TextColor="Black"></Label>
+                <Label Text="DoesImamSupportsVaccine"></Label>
                 <CheckBox IsChecked="{Binding DoesImamSupportsVaccine}"></CheckBox>
               </Grid>
               <Grid Grid.Column="4">
-                <Label Text="DoYouHavePermissionForAdsInMasjeed"
-                       TextColor="Black"></Label>
+                <Label Text="DoYouHavePermissionForAdsInMasjeed"></Label>
                 <CheckBox IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
               </Grid>
             </Grid>

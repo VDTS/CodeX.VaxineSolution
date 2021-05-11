@@ -5,11 +5,9 @@
              Title="Settings">
   <ContentPage.Content>
     <StackLayout Padding="40">
-      <Label TextColor="Black" Text="Settings page is under implementation" />
-      <Label TextColor="Black"
-             Text="These features are under implementation"></Label>
-      <Label TextColor="Black"
-             Text="1: Dark mode, 2: Localization"></Label>
+      <Label Text="Settings page is under implementation" />
+      <Label Text="These features are under implementation"></Label>
+      <Label Text="1: Dark mode, 2: Localization"></Label>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

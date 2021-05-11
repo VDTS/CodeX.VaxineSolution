@@ -11,14 +11,13 @@
   <ContentPage.Content>
     <StackLayout>
 
-      <local1:CustomEntryRenderer TextColor="Black"
-                                 Placeholder="Name"
-                                 PlaceholderColor="Gray"
-                                  Text="{Binding Name}"></local1:CustomEntryRenderer>
-      <Label TextColor="Black" Text="IsHeProvindingSupportForSIAAndVaccination"></Label>
+      <Entry Placeholder="Name"
+             Text="{Binding Name}"></Entry>
+      <Label  Text="IsHeProvindingSupportForSIAAndVaccination"></Label>
       <CheckBox Grid.Column="1"
                 IsChecked="{Binding IsHeProvindingSupportForSIAAndVaccination, Mode=TwoWay}" />
-      <Button Text="Save" Command="{Binding SaveDoctorCommand}"></Button>
+      <Button Text="Save"
+              Command="{Binding SaveDoctorCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

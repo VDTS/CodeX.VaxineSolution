@@ -10,14 +10,10 @@
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Placeholder="Masjeed Name"
-                                 PlaceholderColor="Gray"
-                                 Text="{Binding MasjeedName}"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Placeholder="Key Influencer"
-                                 PlaceholderColor="Gray"
-                                 Text="{Binding KeyInfluencer}"></local:CustomEntryRenderer>
+      <Entry Placeholder="Masjeed Name"
+             Text="{Binding MasjeedName}"></Entry>
+      <Entry Placeholder="Key Influencer"
+             Text="{Binding KeyInfluencer}"></Entry>
 
       <Label Text="Does Imam Supports Vaccine?"></Label>
       <CheckBox IsChecked="{Binding DoesImamSupportsVaccine}"></CheckBox>

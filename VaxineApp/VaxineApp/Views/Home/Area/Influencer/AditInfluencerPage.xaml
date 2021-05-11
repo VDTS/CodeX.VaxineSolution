@@ -11,19 +11,13 @@
   <ContentPage.Content>
     <StackLayout>
 
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Placeholder="Name"
-                                 PlaceholderColor="Gray"
-                                 Text="{Binding Name}"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Placeholder="Contact"
-                                 PlaceholderColor="Gray"
-                                 Text="{Binding Contact}"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Placeholder="Position"
-                                 PlaceholderColor="Gray"
-                                 Text="{Binding Position}">
-      </local:CustomEntryRenderer>
+      <Entry Placeholder="Name"
+             Text="{Binding Name}"></Entry>
+      <Entry Placeholder="Contact"
+             Text="{Binding Contact}"></Entry>
+      <Entry Placeholder="Position"
+             Text="{Binding Position}">
+      </Entry>
       <Label Text="Does he providing support?"></Label>
       <CheckBox IsChecked="{Binding DoesHeProvidingSupport}"></CheckBox>
 

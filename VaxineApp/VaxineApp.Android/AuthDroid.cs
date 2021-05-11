@@ -33,7 +33,7 @@ namespace VaxineApp.Droid
 
                 return signUpTask.Result != null;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }

@@ -4,12 +4,9 @@
              x:Class="VaxineApp.Views.AboutUs.AboutUsPage">
   <ContentPage.Content>
     <StackLayout Padding="40">
-      <Label TextColor="Black"
-             Text="About us page is under implementation" />
-      <Label TextColor="Black"
-             Text="These features are under implementation"></Label>
-      <Label TextColor="Black"
-             Text="1: about us"></Label>
+      <Label Text="About us page is under implementation" />
+      <Label Text="These features are under implementation"></Label>
+      <Label Text="1: about us"></Label>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

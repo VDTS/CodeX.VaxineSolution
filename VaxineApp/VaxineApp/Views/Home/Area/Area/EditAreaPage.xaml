@@ -11,19 +11,13 @@
   <ContentPage.Content>
     <ScrollView>
       <StackLayout>
-        <local:CustomEntryRenderer TextColor="Black"
-                                   Placeholder="Team No."
-                                   PlaceholderColor="Gray"
-                                   Text="{Binding TeamNo}"></local:CustomEntryRenderer>
-        <local:CustomEntryRenderer TextColor="Black"
-                                   Placeholder="Social Mobilizer Id"
-                                   PlaceholderColor="Gray"
-                                   Text="{Binding SocialMobilizerId}"></local:CustomEntryRenderer>
-        <local:CustomEntryRenderer TextColor="Black"
-                                   Placeholder="CHW Name"
-                                   PlaceholderColor="Gray"
+        <Entry Placeholder="Team No."
+                                   Text="{Binding TeamNo}"></Entry>
+        <Entry Placeholder="Social Mobilizer Id"
+                                   Text="{Binding SocialMobilizerId}"></Entry>
+        <Entry Placeholder="CHW Name"
                                    Text="{Binding CHWName}">
-        </local:CustomEntryRenderer>
+        </Entry>
 
         <Button Text="Update Area"
                 Command="{Binding SaveAreaCommand}"

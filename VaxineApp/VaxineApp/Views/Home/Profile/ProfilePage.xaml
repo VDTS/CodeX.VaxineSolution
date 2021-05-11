@@ -10,7 +10,7 @@
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem IconImageSource="Universal_Edit.png"
-                 Command="{Binding EditProfileCommand}"/>
+                 Command="{Binding EditProfileCommand}" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout Padding="20, 40, 20, 20">
@@ -18,24 +18,15 @@
       <BoxView   VerticalOptions="Center"
                  HorizontalOptions="Center"
                  HeightRequest="1"
-                 WidthRequest="200"
-                 Color="#5b5d68"></BoxView>
-      <Label TextColor="Black"
-             Text="{Binding Profile.FullName}"></Label>
-      <Label TextColor="Black"
-             Text="{Binding Profile.Gender}">
+                 WidthRequest="200"></BoxView>
+      <Label Text="{Binding Profile.FullName}"></Label>
+      <Label Text="{Binding Profile.Gender}">
       </Label>
-      <Label TextColor="Black"
-             Text="{Binding Profile.FatherOrHusbandName}"></Label>
-      <Label TextColor="Black"
-             Text="{Binding Profile.Age}"></Label>
-      <Label TextColor="Black"
-             Text="{Binding Profile.Role}"></Label>
-      <Label TextColor="Black"
-             AutomationId="ProfilePage_Email"
-             Text="{Binding Profile.Email}"
-             ></Label>
-
+      <Label Text="{Binding Profile.FatherOrHusbandName}"></Label>
+      <Label Text="{Binding Profile.Age}"></Label>
+      <Label Text="{Binding Profile.Role}"></Label>
+      <Label AutomationId="ProfilePage_Email"
+             Text="{Binding Profile.Email}"></Label>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

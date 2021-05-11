@@ -9,22 +9,13 @@
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout>
-
       <Entry Placeholder="Clinic Name"
-             PlaceholderColor="Gray"
-             TextColor="Black"
              Text="{Binding ClinicName}"></Entry>
       <Entry Placeholder="Fixed"
-             PlaceholderColor="Gray"
-             TextColor="Black"
              Text="{Binding Fixed}"></Entry>
       <Entry Placeholder="Outreach"
-             PlaceholderColor="Gray"
-             TextColor="Black"
              Text="{Binding Outreach}"></Entry>
-
       <Button Command="{Binding SaveClinicCommand}"></Button>
-
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

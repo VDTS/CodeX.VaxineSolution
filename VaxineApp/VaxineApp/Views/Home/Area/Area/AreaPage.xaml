@@ -30,12 +30,9 @@
                   Command="{Binding GetDataCommand}">
       <ScrollView>
         <StackLayout>
-          <Label TextColor="Black"
-                 Text="{Binding Team.TeamNo}"></Label>
-          <Label TextColor="Black"
-                 Text="{Binding Team.SocialMobilizerId}"></Label>
-          <Label TextColor="Black"
-                 Text="{Binding Team.CHWName}"></Label>
+          <Label Text="{Binding Team.TeamNo}"></Label>
+          <Label Text="{Binding Team.SocialMobilizerId}"></Label>
+          <Label Text="{Binding Team.CHWName}"></Label>
         </StackLayout>
       </ScrollView>
     </RefreshView>

@@ -23,25 +23,26 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-      <Grid Padding="10">
-        <Grid.RowDefinitions>
-          <RowDefinition Height="0.06*"></RowDefinition>
-          <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <StackLayout Grid.Row="0" x:Name="PageContent" Orientation="Horizontal" Spacing="40">
-      <Label FontSize="Default"
-             Grid.Column="0"
-             TextColor="Black"
-             Text="{Binding Family.HouseNo}"></Label>
-      <Label FontSize="Large"
-             TextColor="black"
-             Text="{Binding Family.ParentName}"></Label>
-      <Label FontSize="Medium"
-             TextColor="Black"
-             Text="{Binding Family.PhoneNumber}"></Label>
-    </StackLayout>
-    <RefreshView Grid.Row="0">
-        <CollectionView SelectionMode="Single" ItemsSource="{Binding Childs}">
+    <Grid Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.06*"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0"
+                   x:Name="PageContent"
+                   Orientation="Horizontal"
+                   Spacing="40">
+        <Label FontSize="Default"
+               Grid.Column="0"
+               Text="{Binding Family.HouseNo}"></Label>
+        <Label FontSize="Large"
+               Text="{Binding Family.ParentName}"></Label>
+        <Label FontSize="Medium"
+               Text="{Binding Family.PhoneNumber}"></Label>
+      </StackLayout>
+      <RefreshView Grid.Row="0">
+        <CollectionView SelectionMode="Single"
+                        ItemsSource="{Binding Childs}">
           <CollectionView.Header>
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
@@ -70,7 +71,7 @@
             </DataTemplate>
           </CollectionView.ItemTemplate>
         </CollectionView>
-    </RefreshView>
-      </Grid>
+      </RefreshView>
+    </Grid>
   </ContentPage.Content>
 </ContentPage>

@@ -10,14 +10,10 @@
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Placeholder="School Name"
-                                 PlaceholderColor="Gray"
-                                 Text="{Binding SchoolName}"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Placeholder="Key Influencer"
-                                 PlaceholderColor="Gray"
-                                 Text="{Binding KeyInfluencer}"></local:CustomEntryRenderer>
+      <Entry Placeholder="School Name"
+             Text="{Binding SchoolName}"></Entry>
+      <Entry Placeholder="Key Influencer"
+             Text="{Binding KeyInfluencer}"></Entry>
       <Button Text="Save"
               Command="{Binding SaveSchoolCommand}"></Button>
     </StackLayout>

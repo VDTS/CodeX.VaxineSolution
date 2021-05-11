@@ -14,15 +14,10 @@
       <BoxView   VerticalOptions="Center"
                  HorizontalOptions="Center"
                  HeightRequest="1"
-                 WidthRequest="200"
-                 Color="#5b5d68"></BoxView>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding FullName}"
-                                 Placeholder="Name"
-                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+                 WidthRequest="200"></BoxView>
+      <Entry Text="{Binding FullName}"
+                                 Placeholder="Name"></Entry>
       <Picker Title="Gender"
-              TextColor="Black"
-              TitleColor="Black"
               SelectedItem="{Binding Gender}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
@@ -31,38 +26,25 @@
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding FatherOrHusbandName}"
-                                 Placeholder="Father or Husband Name"
-                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding Age}"
-                                 Placeholder="Age"
-                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
-      <!--<DatePicker TextColor="Black" Date="{Binding D}"></DatePicker>-->
-
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding Email}"
+      <Entry Text="{Binding FatherOrHusbandName}"
+                                 Placeholder="Father or Husband Name"></Entry>
+      <Entry Text="{Binding Age}"
+                                 Placeholder="Age"></Entry>
+      <Entry Text="{Binding Email}"
                                  AutomationId="EditProfilePage_Email"
-                                 Placeholder="Email"
-                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding ConfirmEmail}"
-                                 Placeholder="Confirm Email"
-                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding Password}"
+                                 Placeholder="Email"></Entry>
+      <Entry Text="{Binding ConfirmEmail}"
+                                 Placeholder="Confirm Email"></Entry>
+      <Entry Text="{Binding Password}"
                                  Placeholder="Password"
-                                 IsPassword="True"
-                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
-      <local:CustomEntryRenderer TextColor="Black"
-                                 Text="{Binding ConfirmPassword}"
+                                 IsPassword="True"></Entry>
+      <Entry Text="{Binding ConfirmPassword}"
                                  Placeholder=" Confirm Password"
-                                 IsPassword="True"
-                                 PlaceholderColor="Gray"></local:CustomEntryRenderer>
+                                 IsPassword="True"></Entry>
       <Button Text="Update Profile"
               Command="{Binding SaveDataCommand}"
-              Margin="20" AutomationId="EditProfile_SaveButton"></Button>
+              Margin="20"
+              AutomationId="EditProfile_SaveButton"></Button>
     </StackLayout>
   </ScrollView>
 </ContentPage>

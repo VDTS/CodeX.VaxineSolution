@@ -44,17 +44,14 @@
             <Label WidthRequest="40"
                    HeightRequest="40"
                    Grid.Column="0"
-                   TextColor="Blue"
                    Text="ClinicName"></Label>
             <Label Grid.Column="2"
                    Grid.Row="0"
                    FontSize="20"
-                   TextColor="Blue"
                    Text="Fixed"></Label>
             <Label Grid.Column="2"
                    Grid.Row="1"
                    Padding="0, -5, 0, 0"
-                   TextColor="Blue"
                    Text="Outreach"></Label>
           </Grid>
         </CollectionView.Header>
@@ -73,17 +70,14 @@
               <Label WidthRequest="40"
                      HeightRequest="40"
                      Grid.Column="0"
-                     TextColor="Black"
                      Text="{Binding ClinicName}"></Label>
               <Label Grid.Column="2"
                      Grid.Row="0"
                      FontSize="20"
-                     TextColor="black"
                      Text="{Binding Fixed}"></Label>
               <Label Grid.Column="2"
                      Grid.Row="1"
                      Padding="0, -5, 0, 0"
-                     TextColor="Black"
                      Text="{Binding Outreach}"></Label>
             </Grid>
           </DataTemplate>
