@@ -46,7 +46,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 
         public async void GetDoctor()
         {
-            var data = await Data.GetDoctor("T");
+            var data = await Data.GetDoctor();
             foreach (var item in data)
             {
                 Doctor.Add(

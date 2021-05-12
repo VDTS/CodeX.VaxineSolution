@@ -140,7 +140,7 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public async void GetProfile()
         {
-            var data = await Data.GetProfile(PrefUserEmail);
+            var data = await Data.GetProfile();
 
             if(data != null)
             {

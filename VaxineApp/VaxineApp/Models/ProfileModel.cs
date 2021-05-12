@@ -29,5 +29,6 @@ namespace VaxineApp.Models
         public string ConfirmPassword { get; set; }
         public string Team { get; set; }
         public string Cluster { get; set; }
+        public string Area { get; set; }
     }
 }

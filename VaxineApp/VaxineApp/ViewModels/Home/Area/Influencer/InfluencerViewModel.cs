@@ -49,7 +49,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 
         public async void GetInfluencer()
         {
-            var data = await Data.GetInfluencer("T");
+            var data = await Data.GetInfluencer();
             foreach (var item in data)
             {
                 Influencer.Add(

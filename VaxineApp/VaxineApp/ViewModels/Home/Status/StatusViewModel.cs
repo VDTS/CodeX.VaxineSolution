@@ -45,10 +45,10 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void GetChild()
         {
-            var family = await Data.GetFamily("T");
+            var family = await Data.GetFamily();
             foreach (var item in family)
             {
-                var child = await Data.GetChild("T", item.HouseNo);
+                var child = await Data.GetChild(item.HouseNo);
                 foreach (var item2 in child)
                 {
                     FamilyGroup.Add(

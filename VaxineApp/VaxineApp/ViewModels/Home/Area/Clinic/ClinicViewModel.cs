@@ -52,7 +52,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         // Methods
         public async void GetClinic()
         {
-            var data = await Data.GetClinic("T");
+            var data = await Data.GetClinic();
             foreach (var item in data)
             {
                 Clinics.Add(

@@ -51,7 +51,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
         public async void GetMasjeed()
         {
-            var data = await Data.GetMasjeed("T");
+            var data = await Data.GetMasjeed();
             foreach (var item in data)
             {
                 Masjeed.Add(

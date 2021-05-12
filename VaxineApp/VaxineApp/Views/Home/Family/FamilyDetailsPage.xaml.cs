@@ -45,7 +45,7 @@ namespace VaxineApp.Views.Home.Family
 
         private async void LoadData()
         {
-            var data = await Data.GetChild("T", Family.HouseNo);
+            var data = await Data.GetChild(Family.HouseNo);
             foreach (var item in data)
             {
                 Childs.Add(

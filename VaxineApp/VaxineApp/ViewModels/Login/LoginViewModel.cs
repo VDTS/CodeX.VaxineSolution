@@ -106,7 +106,7 @@ namespace VaxineApp.ViewModels.Login
         async private void ForgotPassword() { }
         public async void GetProfile()
         {
-            var data = await Data.GetProfile(Preferences.Get("PrefEmail", ""));
+            var data = await Data.GetProfile();
 
             if (data != null)
             {
@@ -122,13 +122,14 @@ namespace VaxineApp.ViewModels.Login
                     Password = data.Password,
                     Role = data.Role,
                     Team = data.Team,
-                    Cluster = data.Cluster
-                    
+                    Cluster = data.Cluster,
+                    Area = data.Area
                 };
                 Preferences.Set("PrefFullName", Profile.FullName);
                 Preferences.Set("PrefRole", Profile.Role);
                 Preferences.Set("PrefTeam", Profile.Team);
                 Preferences.Set("PrefCluster", Profile.Cluster);
+                Preferences.Set("PrefArea", Profile.Area);
             }
  }
         #endregion

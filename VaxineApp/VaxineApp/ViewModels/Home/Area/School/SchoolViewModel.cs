@@ -40,7 +40,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
         // Methods
         public async void GetSchool()
         {
-            var data = await Data.GetSchool("T");
+            var data = await Data.GetSchool();
             foreach (var item in data)
             {
                 School.Add(

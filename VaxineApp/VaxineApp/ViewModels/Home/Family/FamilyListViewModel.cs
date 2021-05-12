@@ -46,7 +46,7 @@ namespace VaxineApp.ViewModels.Home.Family
 
         public async void GetFamily()
         {
-            var data = await Data.GetFamily("T");
+            var data = await Data.GetFamily();
             foreach (var item in data)
             {
                 Family.Add(
