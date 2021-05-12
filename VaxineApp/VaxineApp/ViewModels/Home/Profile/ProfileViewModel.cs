@@ -157,12 +157,6 @@ namespace VaxineApp.ViewModels.Home.Profile
                     Role = data.Role
                 };
 
-                Preferences.Set("PrefFullName", Profile.FullName);
-                Preferences.Set("PrefRole", Profile.Role);
-                Preferences.Set("PrefTeam", Profile.Team);
-                Preferences.Set("PrefCluster", Profile.Cluster);
-
-
                 FullName = Profile.FullName;
                 Gender = Profile.Gender;
                 FatherOrHusbandName = Profile.FatherOrHusbandName;
@@ -170,8 +164,6 @@ namespace VaxineApp.ViewModels.Home.Profile
                 Email = Profile.Email;
                 Role = Profile.Role;
             }
-
-
         }
         async void SaveData(object obj)
         {

@@ -120,10 +120,15 @@ namespace VaxineApp.ViewModels.Login
                     FatherOrHusbandName = data.FatherOrHusbandName,
                     Gender = data.Gender,
                     Password = data.Password,
-                    Role = data.Role
+                    Role = data.Role,
+                    Team = data.Team,
+                    Cluster = data.Cluster
+                    
                 };
                 Preferences.Set("PrefFullName", Profile.FullName);
                 Preferences.Set("PrefRole", Profile.Role);
+                Preferences.Set("PrefTeam", Profile.Team);
+                Preferences.Set("PrefCluster", Profile.Cluster);
             }
  }
         #endregion
