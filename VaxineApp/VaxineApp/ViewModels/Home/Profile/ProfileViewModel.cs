@@ -7,14 +7,22 @@ using VaxineApp.Views.Home.Profile;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace VaxineApp.ViewModels.Login
+namespace VaxineApp.ViewModels.Home.Profile
 {
-    public partial class LoginViewModel : BaseViewModel
+    public class ProfileViewModel : BaseViewModel
     {
+        #region Preferences
+        public string PrefUserEmail = Preferences.Get("PrefEmail", "");
+        #endregion
 
-        public string userEmail = Preferences.Get("Email", "");
+        #region Commands
         public ICommand SaveDataCommand { private set; get; }
         public ICommand EditProfileCommand { private set; get; }
+
+        #endregion
+
+        #region Properties
+
         private string _fullName;
         public string FullName
         {
@@ -119,38 +127,57 @@ namespace VaxineApp.ViewModels.Login
                 RaisedPropertyChanged(nameof(Profile));
             }
         }
+        #endregion
+
+        public ProfileViewModel()
+        {
+            SaveDataCommand = new Command(SaveData);
+            EditProfileCommand = new Command(EditProfile);
+            GetProfile();
+        }
+
+        #region Methods
 
         public async void GetProfile()
         {
-            var profile = await Data.GetProfile(userEmail);
-            Profile = new ProfileModel
+            var data = await Data.GetProfile(PrefUserEmail);
+
+            if(data != null)
             {
-                FullName = profile.FullName,
-                Age = profile.Age,
-                ConfirmEmail = profile.ConfirmEmail,
-                ConfirmPassword = profile.ConfirmPassword,
-                Email = profile.Email,
-                FatherOrHusbandName = profile.FatherOrHusbandName,
-                Gender = profile.Gender,
-                Password = profile.Password,
-                Role = profile.Role
-            };
-            Preferences.Set("FullName", Profile.FullName);
-            Preferences.Set("Role", Profile.Role);
-            Preferences.Set("Team", Profile.Team);
-            Preferences.Set("Cluster", Profile.Cluster);
-            FullName = Profile.FullName;
-            Gender = Profile.Gender;
-            FatherOrHusbandName = Profile.FatherOrHusbandName;
-            Age = Profile.Age;
-            Email = Profile.Email;
-            Role = Profile.Role;
+                Profile = new ProfileModel
+                {
+                    FullName = data.FullName,
+                    Age = data.Age,
+                    ConfirmEmail = data.ConfirmEmail,
+                    ConfirmPassword = data.ConfirmPassword,
+                    Email = data.Email,
+                    FatherOrHusbandName = data.FatherOrHusbandName,
+                    Gender = data.Gender,
+                    Password = data.Password,
+                    Role = data.Role
+                };
+
+                Preferences.Set("PrefFullName", Profile.FullName);
+                Preferences.Set("PrefRole", Profile.Role);
+                Preferences.Set("PrefTeam", Profile.Team);
+                Preferences.Set("PrefCluster", Profile.Cluster);
+
+
+                FullName = Profile.FullName;
+                Gender = Profile.Gender;
+                FatherOrHusbandName = Profile.FatherOrHusbandName;
+                Age = Profile.Age;
+                Email = Profile.Email;
+                Role = Profile.Role;
+            }
+
+
         }
         async void SaveData(object obj)
         {
             try
             {
-                await Data.PutProfile(userEmail,
+                await Data.PutProfile(PrefUserEmail,
                     new ProfileModel
                     {
                         FullName = FullName,
@@ -170,11 +197,16 @@ namespace VaxineApp.ViewModels.Login
                 throw;
             }
         }
+        #endregion
+
+        #region RouteMethods
         public async void EditProfile(object obj)
         {
             var route = $"{nameof(EditProfile)}";
             await Shell.Current.GoToAsync(route);
         }
+
+        #endregion
 
     }
 }

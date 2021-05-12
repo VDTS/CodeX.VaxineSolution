@@ -36,12 +36,12 @@
       <StackLayout Padding="40, 50, 40, 40"
                    Grid.Row="2"
                    Spacing="10">
-        <Entry Text="{Binding UserEmail}"
+        <Entry Text="{Binding InputUserEmail}"
                Placeholder="Email or Phone"></Entry>
         <Entry IsPassword="True"
                ClearButtonVisibility="WhileEditing"
                IsTextPredictionEnabled="false"
-               Text="{Binding UserPassword}"
+               Text="{Binding InputUserPassword}"
                Placeholder="Password"></Entry>
         <Button Text="Sign in"
                 Command="{Binding SignInCommand}"></Button>

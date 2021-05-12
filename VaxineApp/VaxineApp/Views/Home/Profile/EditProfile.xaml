@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Profile.EditProfile"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Login"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
              Title="Edit Profile">
   <ContentPage.BindingContext>
-    <viewmodel:LoginViewModel></viewmodel:LoginViewModel>
+    <ViewModel:ProfileViewModel></ViewModel:ProfileViewModel>
   </ContentPage.BindingContext>
   <ScrollView>
     <StackLayout Padding="20, 40, 20, 20">
