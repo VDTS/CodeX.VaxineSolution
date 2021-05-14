@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.AboutUs;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home;

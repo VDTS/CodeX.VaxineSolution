@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace VaxineApp.ViewModels
+namespace VaxineApp.ViewModels.Base
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

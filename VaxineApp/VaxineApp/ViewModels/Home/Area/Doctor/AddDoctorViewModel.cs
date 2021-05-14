@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Doctor;
 using Xamarin.Forms;
 

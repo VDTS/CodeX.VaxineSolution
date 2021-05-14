@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Clinic
 {
-    public class AddClinicViewModel :BaseViewModel
+    public class AddClinicViewModel : BaseViewModel
     {
         private string _clinicName;
         public string ClinicName

@@ -8,6 +8,7 @@ using DataAccess;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
+using VaxineApp.ViewModels.Base;
 
 namespace VaxineApp.ViewModels.Home.Family
 {

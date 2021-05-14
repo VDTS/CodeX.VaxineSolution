@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using VaxineApp.Models.Home.Area;
 using Xamarin.CommunityToolkit.ObjectModel;
 using System.Threading.Tasks;
+using VaxineApp.ViewModels.Base;
 
 namespace VaxineApp.ViewModels.Home.Area.Area
 {

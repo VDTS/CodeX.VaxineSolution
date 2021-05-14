@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using VaxineApp.ViewModels.Base;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
-    class AddVaccineViewModel
+    public class AddVaccineViewModel : BaseViewModel
     {
     }
 }
