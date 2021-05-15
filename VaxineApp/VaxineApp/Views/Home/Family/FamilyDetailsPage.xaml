@@ -3,11 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Family.FamilyDetailsPage"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:pages="clr-namespace:VaxineApp.Views.Home.Family"
+             xmlns:family="clr-namespace:VaxineApp.ViewModels.Home.Family"
+             x:DataType="family:FamilyDetailsViewModel"
              Title="Family Details">
-  <d:ContentPage.BindingContext>
-    <pages:FamilyDetailsPage />
-  </d:ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Primary"
                  Icon="Search.png"
@@ -16,7 +14,7 @@
     <ToolbarItem Order="Secondary"
                  Text="Add Child"
                  Priority="3"
-                 Clicked="ToolbarItem_Clicked" />
+                 Command="{Binding AddChildCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"
@@ -64,9 +62,9 @@
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0"
                        FontSize="20"
-                       Text="{Binding FullName}"></Label>
+                       Text="{Binding Childs.Count}"></Label>
                 <Label Grid.Column="1"
-                       Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
+                       Text="{Binding Childs.Count, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
               </Grid>
             </DataTemplate>
           </CollectionView.ItemTemplate>

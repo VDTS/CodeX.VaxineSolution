@@ -27,7 +27,8 @@
                  Command="{Binding GetFamilyCommand}">
       <CollectionView SelectionMode="Single"
                       ItemsSource="{Binding Family}"
-                      SelectionChanged="CollectionView_SelectionChanged">
+                      SelectedItem="{Binding SelectedFamily}"
+                      SelectionChangedCommand="{Binding TapOnItemCommand}">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>

@@ -23,6 +23,18 @@ namespace VaxineApp.ViewModels.Home.Family
                 RaisedPropertyChanged(nameof(Family));
             }
         }
+        private GetFamilyModel _selectedFamily;
+
+        public GetFamilyModel SelectedFamily
+        {
+            get { return _selectedFamily; }
+            set
+            {
+                _selectedFamily = value;
+                RaisedPropertyChanged(nameof(SelectedFamily));
+            }
+        }
+
         private bool _isBusy;
 
         public bool IsBusy
@@ -36,9 +48,12 @@ namespace VaxineApp.ViewModels.Home.Family
         }
 
         public ICommand AddFamilyCommand { private set; get; }
+        public ICommand TapOnItemCommand { private set; get; }
         public AsyncCommand GetFamilyCommand { private set; get; }
         public FamilyListViewModel()
         {
+
+            TapOnItemCommand = new Command(CollectionView_SelectionChanged);
             Family = new List<GetFamilyModel>();
             GetFamily();
             GetFamilyCommand = new AsyncCommand(Refresh);
@@ -79,6 +94,19 @@ namespace VaxineApp.ViewModels.Home.Family
         void Clear()
         {
             Family.Clear();
+        }
+
+        private async void CollectionView_SelectionChanged(object sender)
+        {
+            if (SelectedFamily == null)
+            {
+                return;
+            }
+            else
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(SelectedFamily));
+                ((CollectionView)sender).SelectedItem = null;
+            }
         }
     }
 }

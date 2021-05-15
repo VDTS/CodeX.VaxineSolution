@@ -16,19 +16,5 @@ namespace VaxineApp.Views.Home.Family
         {
             InitializeComponent();
         }
-
-        private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var family = e.CurrentSelection.FirstOrDefault() as GetFamilyModel;
-            if (family == null)
-            {
-                return;
-            }
-            else
-            {
-                await Navigation.PushAsync(new FamilyDetailsPage(family));
-                ((CollectionView)sender).SelectedItem = null;
-            }
-        }
     }
 }
