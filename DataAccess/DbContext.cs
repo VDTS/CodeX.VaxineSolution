@@ -53,20 +53,6 @@ namespace DataAccess
 
               }).Where(item => item.TeamNo == Team).FirstOrDefault();
         }
-        public async Task<List<ChildModel>> GetChild()
-        {
-            return (await Firebase
-              .Child("Child")
-              .OnceAsync<DataModel>()).Select(item => new ChildModel
-              {
-                  FullName = item.Object.FullName,
-                  DOB = item.Object.DOB,
-                  Gender = item.Object.Gender,
-                  OPV0 = item.Object.OPV0,
-                  RINo = item.Object.RINo
-
-              }).ToList();
-        }
         public async Task<List<ClinicModel>> GetClinic()
         {
 
@@ -117,15 +103,10 @@ namespace DataAccess
                 .Select(item => new ChildModel
                 {
                     FullName = item.Object.FullName,
-                    //DOB = item.Object.DOB,
-                    Gender = item.Object.Gender
-                    //OPV0 = item.Object.OPV0,
-                    //RINo = item.Object.RINo
-                    //FullName = item.Object.GetValue("FullName").ToString(),
-                    //Gender = item.Object.GetValue("Gender").ToString(),
-                    //DOB = DateTime.Parse(item.Object.GetValue("DOB").ToString()),
-                    //OPV0 = bool.Parse(item.Object.GetValue("OPV0").ToString()),
-                    //RINo = int.Parse(item.Object.GetValue("RINo").ToString())
+                    DOB = DateTime.Parse(item.Object.DOB.ToString()),
+                    Gender = item.Object.Gender,
+                    OPV0 = bool.Parse(item.Object.OPV0.ToString()),
+                    RINo = int.Parse(item.Object.RINo.ToString())
                 }).ToList();
 
         }

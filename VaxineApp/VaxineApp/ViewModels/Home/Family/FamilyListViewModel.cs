@@ -105,7 +105,7 @@ namespace VaxineApp.ViewModels.Home.Family
             else
             {
                 await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(SelectedFamily));
-                ((CollectionView)sender).SelectedItem = null;
+                //((CollectionView)sender).SelectedItem = null;
             }
         }
     }

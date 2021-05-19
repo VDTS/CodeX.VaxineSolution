@@ -40,20 +40,16 @@ namespace VaxineApp.ViewModels.Home.Family
                     new ChildModel
                     {
                         FullName = item.FullName,
-                        //DOB = item.DOB,
-                        //Gender = item.Gender,
-                        //OPV0 = item.OPV0,
-                        //RINo = item.RINo
+                        DOB = item.DOB,
+                        Gender = item.Gender,
+                        OPV0 = item.OPV0,
+                        RINo = item.RINo
                     });
             }
         }
         public async void AddChild()
         {
-            var route = $"//{new AddChildPage(Family.HouseNo)}";
-            await Shell.Current.GoToAsync(route);
-            
+            await App.Current.MainPage.Navigation.PushAsync(new AddChildPage(Family.HouseNo));
         }
-
-        
     }
 }

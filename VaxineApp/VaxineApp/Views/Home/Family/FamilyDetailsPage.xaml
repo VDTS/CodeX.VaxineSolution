@@ -3,9 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Family.FamilyDetailsPage"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:family="clr-namespace:VaxineApp.ViewModels.Home.Family"
-             x:DataType="family:FamilyDetailsViewModel"
+             xmlns:converters="clr-namespace:VaxineApp.Converters"
              Title="Family Details">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:BornDateToAgeInMonthsConverter x:Key="BornDateToAgeInMonthsConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Primary"
                  Icon="Search.png"
@@ -23,7 +27,7 @@
   <ContentPage.Content>
     <Grid Padding="10">
       <Grid.RowDefinitions>
-        <RowDefinition Height="0.06*"></RowDefinition>
+        <RowDefinition Height="0.1*"></RowDefinition>
         <RowDefinition Height="*"></RowDefinition>
       </Grid.RowDefinitions>
       <StackLayout Grid.Row="0"
@@ -38,7 +42,7 @@
         <Label FontSize="Medium"
                Text="{Binding Family.PhoneNumber}"></Label>
       </StackLayout>
-      <RefreshView Grid.Row="0">
+      <RefreshView Grid.Row="1">
         <CollectionView SelectionMode="Single"
                         ItemsSource="{Binding Childs}">
           <CollectionView.Header>
@@ -62,9 +66,9 @@
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0"
                        FontSize="20"
-                       Text="{Binding Childs.Count}"></Label>
+                       Text="{Binding FullName}"></Label>
                 <Label Grid.Column="1"
-                       Text="{Binding Childs.Count, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
+                       Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
               </Grid>
             </DataTemplate>
           </CollectionView.ItemTemplate>
