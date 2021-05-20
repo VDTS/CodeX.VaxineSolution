@@ -468,5 +468,42 @@ namespace DataAccess
             var data = await GetDoctor();
             return data.Count;
         }
+
+
+        // Get Data for Charts (Insights)
+
+        public async Task<List<FemaleVsMaleChildModel>> GetFemaleVsMaleChilds()
+        {
+            int female = 0;
+            int male = 0;
+            var family = await GetFamily();
+            foreach (var item in family)
+            {
+                var child = await GetChild(item.HouseNo);
+                foreach (var item2 in child)
+                {
+                    if(item2.Gender == "Male")
+                    {
+                        male++;
+                    }
+                    else
+                    {
+                        female++;
+                    }
+                }
+            }
+            return new List<FemaleVsMaleChildModel> {
+                new FemaleVsMaleChildModel
+                {
+                    Indicator = "Male",
+                    Counts = male
+                },
+                new FemaleVsMaleChildModel
+                {
+                    Indicator = "Female",
+                    Counts = female
+                }
+            };
+        }
     }
 }

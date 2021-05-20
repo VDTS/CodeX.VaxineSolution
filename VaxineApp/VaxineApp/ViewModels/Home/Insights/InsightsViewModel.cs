@@ -3,6 +3,7 @@ using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
 using Entry = Microcharts.ChartEntry;
 
@@ -10,8 +11,8 @@ namespace VaxineApp.ViewModels.Home.Insights
 {
     public class InsightsViewModel : BaseViewModel
     {
-        private BarChart _femaleVsMaleChart;
-        public BarChart FemaleVsMaleChart
+        private PieChart _femaleVsMaleChart;
+        public PieChart FemaleVsMaleChart
         {
             get => _femaleVsMaleChart;
             set
@@ -32,53 +33,51 @@ namespace VaxineApp.ViewModels.Home.Insights
             "A00000", "00A000", "0000A0", "A0A000", "A000A0", "00A0A0", "A0A0A0",
             "E00000", "00E000", "0000E0", "E0E000", "E000E0", "00E0E0", "E0E0E0",
         };
-
-        public class Data
+        private List<FemaleVsMaleChildModel> _femaleVsMaleData;
+        public List<FemaleVsMaleChildModel> FemaleVsMaleData
         {
-            public string FullName { get; set; }
-            public int Counts { get; set; }
+            get => _femaleVsMaleData;
+            set
+            {
+                _femaleVsMaleData = value;
+                RaisedPropertyChanged(nameof(FemaleVsMaleData));
+            }
         }
         public InsightsViewModel()
         {
             Entries = new List<Entry>();
-            List<Data> data = new List<Data>();
-            data.Add(
-                    new Data
-                    {
-                        FullName = "Ahmad",
-                        Counts = 123
-                    }
-                );
-            data.Add(
-                new Data
-                {
-                    FullName = "Rafiq",
-                    Counts = 143
-                }
-                );
-            data.Add(
-                    new Data
-                    {
-                        FullName = "Numan",
-                        Counts = 453
-                    }
-                );
+            FemaleVsMaleData = new List<FemaleVsMaleChildModel>();
+            LoadData();
+        }
+
+        private async void LoadData()
+        {
+            var data = await Data.GetFemaleVsMaleChilds();
             foreach (var item in data)
+            {
+                FemaleVsMaleData.Add(
+                    new FemaleVsMaleChildModel
+                    {
+                        Indicator = item.Indicator,
+                        Counts = item.Counts
+                    }
+                );
+            }
+
+            foreach (var item in FemaleVsMaleData)
             {
                 Entries.Add(new Entry(item.Counts)
                 {
-                    Label = item.FullName,
+                    Label = item.Indicator,
                     ValueLabel = item.Counts.ToString(),
                     Color = SKColor.Parse($"#{ColourValues[c++]}")
                 });
             }
-            FemaleVsMaleChart = new BarChart()
+            FemaleVsMaleChart = new PieChart()
             {
                 Entries = Entries
             };
             FemaleVsMaleChart.LabelTextSize = 40;
-            FemaleVsMaleChart.PointSize = 40;
         }
-
     }
 }
