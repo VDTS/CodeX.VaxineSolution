@@ -164,7 +164,7 @@
     <Tab Icon="Home_Status.png"
          Title="Status">
       <ShellContent Route="StatusPage"
-                    ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
+                    ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
     </Tab>
     <Tab Icon="Home_Insights.png"
          Title="Insights">

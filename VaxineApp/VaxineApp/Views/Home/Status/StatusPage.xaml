@@ -29,6 +29,8 @@
     <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3">
       <CollectionView ItemsSource="{Binding FamilyGroup, Mode=TwoWay}"
+                      SelectionMode="Single"
+                      SelectionChanged="CollectionView_SelectionChanged"
                       IsGrouped="True">
         <CollectionView.ItemTemplate>
           <DataTemplate>
@@ -42,10 +44,10 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
               </Grid.RowDefinitions>
-              <Image WidthRequest="40"
+              <Label WidthRequest="40"
                      HeightRequest="40"
                      Grid.Column="0"
-                     Source="{Binding FullName}"></Image>
+                     Text="{Binding FullName}"></Label>
               <Label x:Name="FullNameLabel"
                      Grid.Column="2"
                      Grid.Row="0"
@@ -54,7 +56,7 @@
               <Label Grid.Column="2"
                      Grid.Row="1"
                      Padding="0, -5, 0, 0"
-                     Text="{Binding OPV0}"></Label>
+                     Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
             </Grid>
           </DataTemplate>
         </CollectionView.ItemTemplate>

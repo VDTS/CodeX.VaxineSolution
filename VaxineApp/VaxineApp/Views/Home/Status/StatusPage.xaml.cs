@@ -31,9 +31,5 @@ namespace VaxineApp.Views.Home.Status
                 ((CollectionView)sender).SelectedItem = null;
             }
         }
-        //private async void Registration_Clicked(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new RegistrationPage());
-        //}
     }
 }
