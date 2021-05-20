@@ -170,7 +170,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             try
             {
-                await Data.PutProfile(PrefUserEmail,
+                await Data.PutProfile(
                     new ProfileModel
                     {
                         FullName = FullName,

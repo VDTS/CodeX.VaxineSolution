@@ -155,7 +155,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                             TeamNo = TeamNo,
                             CHWName = CHWName,
                             SocialMobilizerId = SocialMobilizerId
-                        }, "T", "Teams"
+                        }
                         );
                     var route = $"//{nameof(AreaPage)}";
                     await Shell.Current.GoToAsync(route);
@@ -169,7 +169,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             {
                 try
                 {
-                    await Data.PutTeam("T", "1",
+                    await Data.PutTeam(
                          new TeamModel
                          {
                              TeamNo = TeamNo,

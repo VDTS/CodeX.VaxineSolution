@@ -43,7 +43,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             {
                 Name = Name,
                 IsHeProvindingSupportForSIAAndVaccination = IsHeProvindingSupportForSIAAndVaccination
-            }, "T");
+            });
 
             var route = $"//{nameof(DoctorPage)}";
             await Shell.Current.GoToAsync(route);

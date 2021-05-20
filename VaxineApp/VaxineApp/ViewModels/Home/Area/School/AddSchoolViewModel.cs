@@ -46,7 +46,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
             {
                 KeyInfluencer = KeyInfluencer,
                 SchoolName = SchoolName
-            }, "T");
+            });
 
             var route = $"//{nameof(SchoolPage)}";
             await Shell.Current.GoToAsync(route);

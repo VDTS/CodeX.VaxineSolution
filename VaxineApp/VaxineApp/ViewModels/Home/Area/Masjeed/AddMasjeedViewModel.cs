@@ -67,7 +67,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 KeyInfluencer = KeyInfluencer,
                 DoesImamSupportsVaccine = DoesImamSupportsVaccine,
                 DoYouHavePermissionForAdsInMasjeed = DoYouHavePermissionForAdsInMasjeed
-            }, "T");
+            });
 
             var route = $"//{nameof(MasjeedPage)}";
             await Shell.Current.GoToAsync(route);

@@ -69,7 +69,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                 Contact = Contact,
                 DoesHeProvidingSupport = DoesHeProvidingSupport,
                 Position = Position
-            }, "T");
+            });
 
             var route = $"//{nameof(InfluencerPage)}";
             await Shell.Current.GoToAsync(route);

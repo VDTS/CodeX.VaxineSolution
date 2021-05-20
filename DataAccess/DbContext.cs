@@ -22,6 +22,8 @@ namespace DataAccess
         public string Team { get; set; }
         public string Area { get; set; }
         public string Email { get; set; }
+
+
         // Constructor
         public DbContext()
         {
@@ -30,7 +32,6 @@ namespace DataAccess
             Team = Preferences.Get("PrefTeam", "");
             Area = Preferences.Get("PrefArea", "");
             Email = Preferences.Get("PrefEmail", "");
-
         }
 
 
@@ -65,7 +66,7 @@ namespace DataAccess
             var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                         .OnceAsync<JObject>())
                         .ToList()
-                        .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                        .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                         .Select(item => item.Key).FirstOrDefault();
 
             return (await Firebase.Child($"{Area}/{j}/Teams/{p}/Clinics").OnceAsync<ClinicModel>())
@@ -83,13 +84,13 @@ namespace DataAccess
             var j = (await Firebase.Child(Area)
                .OnceAsync<JObject>())
                .ToList()
-               .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
+               .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
                .Select(item => item.Key).FirstOrDefault();
 
             var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                 .Select(item => item.Key).FirstOrDefault();
 
             var f = (await Firebase.Child(Area).Child(j).Child("Teams").Child(p).Child("Families")
@@ -122,7 +123,7 @@ namespace DataAccess
             var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                         .OnceAsync<JObject>())
                         .ToList()
-                        .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                        .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                         .Select(item => item.Key).FirstOrDefault();
 
             return (await Firebase.Child($"{Area}/{j}/Teams/{p}/Doctor").OnceAsync<DoctorModel>())
@@ -145,7 +146,7 @@ namespace DataAccess
             var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                         .OnceAsync<JObject>())
                         .ToList()
-                        .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                        .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                         .Select(item => item.Key).FirstOrDefault();
 
             return (await Firebase.Child($"{Area}/{j}/Teams/{p}/Influencer").OnceAsync<InfluencerModel>())
@@ -170,7 +171,7 @@ namespace DataAccess
             var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                         .OnceAsync<JObject>())
                         .ToList()
-                        .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                        .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                         .Select(item => item.Key).FirstOrDefault();
 
             return (await Firebase.Child($"{Area}/{j}/Teams/{p}/Masjeed").OnceAsync<MasjeedModel>())
@@ -195,7 +196,7 @@ namespace DataAccess
             var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                         .OnceAsync<JObject>())
                         .ToList()
-                        .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                        .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                         .Select(item => item.Key).FirstOrDefault();
 
             return (await Firebase.Child($"{Area}/{j}/Teams/{p}/School").OnceAsync<SchoolModel>())
@@ -218,7 +219,7 @@ namespace DataAccess
             var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                         .OnceAsync<JObject>())
                         .ToList()
-                        .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                        .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                         .Select(item => item.Key).FirstOrDefault();
 
             return (await Firebase.Child($"{Area}/{j}/Teams/{p}/Families").OnceAsync<GetFamilyModel>())
@@ -252,160 +253,154 @@ namespace DataAccess
 
 
         // Post Methods
-        public async Task PostData(Object data, string URL)
+        public async Task PostTeam(Object data)
         {
-            await Firebase
-              .Child(URL)
-              .PostAsync(data);
-        }
-        public async Task PostTeam(Object data, string ClusterName, string URL)
-        {
-            var j = (await Firebase.Child("Kandahar-Area")
+            var j = (await Firebase.Child(Area)
             .OnceAsync<JObject>())
             .ToList()
             .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
             .Select(item => item.Key).FirstOrDefault();
 
             await Firebase
-              .Child($"Kandahar-Area/{j}/{URL}")
+              .Child($"Kandahar-Area/{j}/Teams")
               .PostAsync(data);
         }
-        public async Task PostClinic(Object data, string URL)
+        public async Task PostClinic(Object data)
         {
-            var j = (await Firebase.Child("Kandahar-Area")
+            var j = (await Firebase.Child(Area)
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
                 .Select(item => item.Key).FirstOrDefault();
 
-            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                 .Select(item => item.Key).FirstOrDefault();
 
-            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Clinics").PostAsync(data);
+            await Firebase.Child($"{Area}/{j}/Teams/{p}/Clinics").PostAsync(data);
         }
-        public async Task PostChild(Object data, string URL, int HouseNo)
+        public async Task PostChild(Object data, int HouseNo)
         {
-            var j = (await Firebase.Child("Kandahar-Area")
+            var j = (await Firebase.Child(Area)
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
                 .Select(item => item.Key).FirstOrDefault();
 
-            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                 .Select(item => item.Key).FirstOrDefault();
 
-            var f = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams").Child(p).Child("Families")
+            var f = (await Firebase.Child(Area).Child(j).Child("Teams").Child(p).Child("Families")
                 .OnceAsync<JObject>())
                 .ToList()
                 .Where(item => int.Parse(item.Object.GetValue("HouseNo").ToString()) == HouseNo)
                 .Select(item => item.Key).FirstOrDefault();
 
-            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Families/{f}/Childs").PostAsync(data);
+            await Firebase.Child($"{Area}/{j}/Teams/{p}/Families/{f}/Childs").PostAsync(data);
         }
-        public async Task PostDoctor(Object data, string URL)
+        public async Task PostDoctor(Object data)
         {
-            var j = (await Firebase.Child("Kandahar-Area")
+            var j = (await Firebase.Child(Area)
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
+                .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase.Child($"{Area}/{j}/Teams/{p}/Doctor").PostAsync(data);
+        }
+        public async Task PostInfluencer(Object data)
+        {
+            var j = (await Firebase.Child(Area)
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
+                .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase.Child($"{Area}/{j}/Teams/{p}/Influencer").PostAsync(data);
+        }
+        public async Task PostMasjeed(Object data)
+        {
+            var j = (await Firebase.Child(Area)
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
+                .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase.Child($"{Area}/{j}/Teams/{p}/Masjeed").PostAsync(data);
+        }
+        public async Task PostSchool(Object data)
+        {
+            var j = (await Firebase.Child(Area)
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
                 .Select(item => item.Key).FirstOrDefault();
 
             var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                 .Select(item => item.Key).FirstOrDefault();
 
-            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Doctor").PostAsync(data);
+            await Firebase.Child($"{Area}/{j}/Teams/{p}/School").PostAsync(data);
         }
-        public async Task PostInfluencer(Object data, string URL)
+        public async Task PostFamily(Object data)
         {
-            var j = (await Firebase.Child("Kandahar-Area")
+            var j = (await Firebase.Child(Area)
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
                 .Select(item => item.Key).FirstOrDefault();
 
-            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
                 .OnceAsync<JObject>())
                 .ToList()
-                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
                 .Select(item => item.Key).FirstOrDefault();
 
-            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Influencer").PostAsync(data);
-        }
-        public async Task PostMasjeed(Object data, string URL)
-        {
-            var j = (await Firebase.Child("Kandahar-Area")
-                .OnceAsync<JObject>())
-                .ToList()
-                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
-                .Select(item => item.Key).FirstOrDefault();
-
-            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
-                .OnceAsync<JObject>())
-                .ToList()
-                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
-                .Select(item => item.Key).FirstOrDefault();
-
-            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Masjeed").PostAsync(data);
-        }
-        public async Task PostSchool(Object data, string URL)
-        {
-            var j = (await Firebase.Child("Kandahar-Area")
-                .OnceAsync<JObject>())
-                .ToList()
-                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
-                .Select(item => item.Key).FirstOrDefault();
-
-            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
-                .OnceAsync<JObject>())
-                .ToList()
-                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
-                .Select(item => item.Key).FirstOrDefault();
-
-            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/School").PostAsync(data);
-        }
-        public async Task PostFamily(Object data, string URL)
-        {
-            var j = (await Firebase.Child("Kandahar-Area")
-                .OnceAsync<JObject>())
-                .ToList()
-                .Where(item => item.Object.GetValue("ClusterName").ToString() == "T")
-                .Select(item => item.Key).FirstOrDefault();
-
-            var p = (await Firebase.Child("Kandahar-Area").Child(j).Child("Teams")
-                .OnceAsync<JObject>())
-                .ToList()
-                .Where(item => item.Object.GetValue("TeamNo").ToString() == "1")
-                .Select(item => item.Key).FirstOrDefault();
-
-            await Firebase.Child($"Kandahar-Area/{j}/Teams/{p}/Families").PostAsync(data);
+            await Firebase.Child($"{Area}/{j}/Teams/{p}/Families").PostAsync(data);
         }
 
 
         // Put
-        public async Task PutTeam(string ClusterName, string TeamNo, object data)
+        public async Task PutTeam(object data)
         {
             var c = (await Firebase
-              .Child("Kandahar-Area")
+              .Child(Area)
               .OnceAsync<JObject>()).Where(a => a.Object.GetValue("ClusterName").ToString() == ClusterName).FirstOrDefault();
 
             var t = (await Firebase
-              .Child("Kandahar-Area").Child(c.Key).Child("Teams")
-              .OnceAsync<JObject>()).Where(a => a.Object.GetValue("TeamNo").ToString() == TeamNo).FirstOrDefault();
+              .Child(Area).Child(c.Key).Child("Teams")
+              .OnceAsync<JObject>()).Where(a => a.Object.GetValue("TeamNo").ToString() == Team).FirstOrDefault();
 
             await Firebase
-              .Child("Kandahar-Area").Child(c.Key).Child("Teams").Child(t.Key)
+              .Child(Area).Child(c.Key).Child("Teams").Child(t.Key)
               .PutAsync(data);
         }
-        public async Task PutProfile(string Email, Object profile)
+        public async Task PutProfile(Object profile)
         {
             var toUpdatePerson = (await Firebase
               .Child("Profile")
