@@ -8,14 +8,19 @@
     <ViewModel:AddClinicViewModel></ViewModel:AddClinicViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout>
+    <StackLayout Padding="40" Spacing="10">
       <Entry Placeholder="Clinic Name"
              Text="{Binding ClinicName}"></Entry>
       <Entry Placeholder="Fixed"
              Text="{Binding Fixed}"></Entry>
       <Entry Placeholder="Outreach"
              Text="{Binding Outreach}"></Entry>
-      <Button Command="{Binding SaveClinicCommand}"></Button>
+      <Button Text="Save"
+        TranslationY="50"
+        WidthRequest="130"
+        HeightRequest="50"
+        HorizontalOptions="Center"
+        Command="{Binding SaveClinicCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

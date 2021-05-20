@@ -9,14 +9,20 @@
     <ViewModel:AddDoctorViewModel></ViewModel:AddDoctorViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout>
+    <StackLayout Padding="40" Spacing="10">
 
       <Entry Placeholder="Name"
              Text="{Binding Name}"></Entry>
-      <Label  Text="IsHeProvindingSupportForSIAAndVaccination"></Label>
-      <CheckBox Grid.Column="1"
+      <StackLayout Orientation="Horizontal">
+        <CheckBox
                 IsChecked="{Binding IsHeProvindingSupportForSIAAndVaccination, Mode=TwoWay}" />
+        <Label  Text="Is he provinding support forSIA and vaccination"></Label>
+        </StackLayout>
       <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
               Command="{Binding SaveDoctorCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>

@@ -9,19 +9,27 @@
     <ViewModel:AddMasjeedViewModel></ViewModel:AddMasjeedViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout>
+    <StackLayout Padding="40" Spacing="10">
       <Entry Placeholder="Masjeed Name"
              Text="{Binding MasjeedName}"></Entry>
       <Entry Placeholder="Key Influencer"
              Text="{Binding KeyInfluencer}"></Entry>
 
-      <Label Text="Does Imam Supports Vaccine?"></Label>
-      <CheckBox IsChecked="{Binding DoesImamSupportsVaccine}"></CheckBox>
+      <StackLayout Orientation="Horizontal" Spacing="10" Padding="0, 10, 0, 0">
+        <CheckBox IsChecked="{Binding DoesImamSupportsVaccine}"></CheckBox>
+        <Label Text="Does Imam Supports Vaccine?"></Label>
+      </StackLayout>
 
-      <Label Text="Do You Have Permission For Ads In Masjeed?"></Label>
-      <CheckBox IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
+      <StackLayout Orientation="Horizontal" Spacing="10">
+        <CheckBox IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
+        <Label Text="Do You Have Permission For Ads In Masjeed?"></Label>
+      </StackLayout>
 
       <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
               Command="{Binding SaveMasjeedCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>

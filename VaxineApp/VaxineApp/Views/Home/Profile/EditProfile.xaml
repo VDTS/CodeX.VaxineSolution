@@ -9,7 +9,7 @@
     <ViewModel:ProfileViewModel></ViewModel:ProfileViewModel>
   </ContentPage.BindingContext>
   <ScrollView>
-    <StackLayout Padding="20, 40, 20, 20">
+    <StackLayout Padding="40" Spacing="10">
       <Image Source="Profile_PhotoPlaceholder.png"></Image>
       <BoxView   VerticalOptions="Center"
                  HorizontalOptions="Center"
@@ -31,19 +31,14 @@
       <Entry Text="{Binding Age}"
                                  Placeholder="Age"></Entry>
       <Entry Text="{Binding Email}"
-                                 AutomationId="EditProfilePage_Email"
-                                 Placeholder="Email"></Entry>
-      <Entry Text="{Binding ConfirmEmail}"
-                                 Placeholder="Confirm Email"></Entry>
-      <Entry Text="{Binding Password}"
-                                 Placeholder="Password"
-                                 IsPassword="True"></Entry>
-      <Entry Text="{Binding ConfirmPassword}"
-                                 Placeholder=" Confirm Password"
-                                 IsPassword="True"></Entry>
+             AutomationId="EditProfilePage_Email"
+             Placeholder="Email"></Entry>
       <Button Text="Update Profile"
+          TranslationY="50"
+              WidthRequest="170"
+              HeightRequest="50"
+              HorizontalOptions="Center"
               Command="{Binding SaveDataCommand}"
-              Margin="20"
               AutomationId="EditProfile_SaveButton"></Button>
     </StackLayout>
   </ScrollView>

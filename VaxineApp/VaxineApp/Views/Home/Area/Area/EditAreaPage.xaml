@@ -2,15 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Area.Area.EditAreaPage"
-             xmlns:viewmodel="clr-namespace:VaxineApp.ViewModels.Home.Area.Area"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Area"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              Title="Add Area">
   <ContentPage.BindingContext>
-    <viewmodel:AreaViewModel></viewmodel:AreaViewModel>
+    <ViewModel:AreaViewModel></ViewModel:AreaViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <ScrollView>
-      <StackLayout>
+    <ScrollView Padding="40">
+      <StackLayout Spacing="10">
         <Entry Placeholder="Team No."
                                    Text="{Binding TeamNo}"></Entry>
         <Entry Placeholder="Social Mobilizer Id"
@@ -19,9 +19,9 @@
                                    Text="{Binding CHWName}">
         </Entry>
 
-        <Button Text="Update Area"
+        <Button Text="Update Area" TranslationY="50" WidthRequest="130" HeightRequest="50" HorizontalOptions="Center"
                 Command="{Binding SaveAreaCommand}"
-                Margin="20"></Button>
+                ></Button>
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>

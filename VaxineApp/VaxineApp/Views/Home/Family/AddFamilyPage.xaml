@@ -9,7 +9,7 @@
     <ViewModel:AddFamilyViewModel></ViewModel:AddFamilyViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout>
+    <StackLayout Padding="40" Spacing="10">
       <Entry Text="{Binding HouseNo}"
                                  Placeholder="House No."
                                  Keyboard="Numeric"></Entry>
@@ -18,6 +18,10 @@
       <Entry Text="{Binding PhoneNumber}"
                                  Placeholder="Parent Number"></Entry>
       <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
               Command="{Binding SaveFamilyCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>

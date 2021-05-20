@@ -9,12 +9,16 @@
     <ViewModel:AddSchoolViewModel></ViewModel:AddSchoolViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout>
+    <StackLayout Padding="40" Spacing="10">
       <Entry Placeholder="School Name"
              Text="{Binding SchoolName}"></Entry>
       <Entry Placeholder="Key Influencer"
              Text="{Binding KeyInfluencer}"></Entry>
       <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
               Command="{Binding SaveSchoolCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>

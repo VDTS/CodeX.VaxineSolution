@@ -12,7 +12,7 @@
     <pages:AddChildPage />
   </d:ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout Padding="20, 40, 20, 20"
+    <StackLayout Padding="40" Spacing="10"
                  x:Name="PageContent">
       <Entry Text="{Binding FullName, Mode=TwoWay}"
                                  Placeholder="Full Name"></Entry>
@@ -29,17 +29,16 @@
                                  Placeholder="RI Number"></Entry>
       <DatePicker Date="{Binding DOB, Mode=TwoWay}"></DatePicker>
 
-      <Grid>
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="0.3*"></ColumnDefinition>
-          <ColumnDefinition Width="0.7*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Label Text="OPV0"
-               Grid.Column="0"></Label>
-        <CheckBox Grid.Column="1"
-                  IsChecked="{Binding OPV0, Mode=TwoWay}" />
-      </Grid>
+      <StackLayout Orientation="Horizontal" Spacing="10">
+        <CheckBox IsChecked="{Binding OPV0, Mode=TwoWay}" />
+        <Label Text="OPV0"></Label>
+      </StackLayout>
+     
       <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
               Clicked="Button_Clicked"
               Margin="20"></Button>
     </StackLayout>
