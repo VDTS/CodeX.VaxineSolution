@@ -99,6 +99,50 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                 RaisedPropertyChanged(nameof(TotalMasjeeds));
             }
         }
+
+        private int _totalSchools;
+        public int TotalSchools
+        {
+            get { return _totalSchools; }
+            set
+            {
+                _totalSchools = value;
+                RaisedPropertyChanged(nameof(TotalSchools));
+            }
+        }
+
+        private int _totalClinics;
+        public int TotalClinics
+        {
+            get { return _totalClinics; }
+            set
+            {
+                _totalClinics = value;
+                RaisedPropertyChanged(nameof(TotalClinics));
+            }
+        }
+
+        private int _totalDoctors;
+        public int TotalDoctors
+        {
+            get { return _totalDoctors; }
+            set
+            {
+                _totalDoctors = value;
+                RaisedPropertyChanged(nameof(TotalDoctors));
+            }
+        }
+
+        private int _totalInfluencers;
+        public int TotalInfluencers
+        {
+            get { return _totalInfluencers; }
+            set
+            {
+                _totalInfluencers = value;
+                RaisedPropertyChanged(nameof(TotalInfluencers));
+            }
+        }
         private int _totalChildren;
         public int TotalChildren
         {
@@ -122,6 +166,18 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             GoToEditAreaCommand = new Command(GoToEditArea);
             SaveAreaCommand = new Command(SaveArea);
             GetDataCommand = new AsyncCommand(Refresh);
+            GetStat();
+        }
+
+        private async void GetStat()
+        {
+            TotalHouseholds = await Data.GetHouseholdsStats();
+            TotalChildren = await Data.GetChildrenStats();
+            TotalMasjeeds = await Data.GetMasjeedsStats();
+            TotalSchools = await Data.GetSchoolsStats();
+            TotalInfluencers = await Data.GetInfluencersStats();
+            TotalClinics = await Data.GetClinicStats();
+            TotalDoctors = await Data.GetDoctorsStats();
         }
 
         // Methods
@@ -201,6 +257,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             await Task.Delay(2000);
             Clear();
             GetArea();
+            GetStat();
 
             IsBusy = false;
         }

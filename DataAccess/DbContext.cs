@@ -28,10 +28,10 @@ namespace DataAccess
         public DbContext()
         {
             Firebase = new FirebaseClient(UserSecretsManager.Settings["firebase"]);
-            ClusterName = Preferences.Get("PrefCluster", "");
-            Team = Preferences.Get("PrefTeam", "");
-            Area = Preferences.Get("PrefArea", "");
-            Email = Preferences.Get("PrefEmail", "");
+            ClusterName = Preferences.Get("PrefCluster", "T");
+            Team = Preferences.Get("PrefTeam", "1");
+            Area = Preferences.Get("PrefArea", "Kandahar-Area");
+            Email = Preferences.Get("PrefEmail", "ahmad@gmail.com");
         }
 
 
@@ -414,5 +414,59 @@ namespace DataAccess
 
 
         // Delete
+
+
+
+        // Get Statistics
+        public async Task<int> GetClinicStats()
+        {
+            var data = await GetClinic();
+            return data.Count;
+        }
+
+        public async Task<int> GetHouseholdsStats()
+        {
+            var data = await GetFamily();
+            return data.Count;
+        }
+
+        public async Task<int> GetChildrenStats()
+        {
+            int data = 0;
+            var family = await GetFamily();
+            foreach (var item in family)
+            {
+                var child = await GetChild(item.HouseNo);
+                foreach (var item2 in child)
+                {
+                    data++;
+                }
+            }
+            return data;
+        }
+
+        public async Task<int> GetMasjeedsStats()
+        {
+            var data = await GetMasjeed();
+            return data.Count;
+        }
+
+        public async Task<int> GetSchoolsStats()
+        {
+            var data = await GetSchool();
+            return data.Count;
+        }
+
+        public async Task<int> GetInfluencersStats()
+        {
+            var data = await GetInfluencer();
+            return data.Count;
+        }
+
+        public async Task<int> GetDoctorsStats()
+        {
+            var data = await GetDoctor();
+            return data.Count;
+        }
     }
 }
