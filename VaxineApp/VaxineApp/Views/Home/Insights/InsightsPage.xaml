@@ -2,12 +2,41 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Insights.InsightsPage"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Insights"
              Title="Insights">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+  <ContentPage.BindingContext>
+    <ViewModel:InsightsViewModel></ViewModel:InsightsViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <ScrollView>
+      <Grid Padding="20">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="0.5*"></RowDefinition>
+          <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+          <Label Text="Female vs Male"
+                 FontSize="Large"></Label>
+          <BoxView   VerticalOptions="Center"
+                     HorizontalOptions="Start"
+                     HeightRequest="1" Color="Black"
+                     WidthRequest="160"></BoxView>
+          <microcharts:ChartView HeightRequest="500"
+                                 Chart="{Binding FemaleVsMaleChart}" />
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout Grid.Row="1">
+        <Label Text="Female vs Male"
+               FontSize="Large"></Label>
+          <BoxView VerticalOptions="Center"
+                     HorizontalOptions="Start"
+                     HeightRequest="1"
+                     Color="Black"
+                     WidthRequest="160"></BoxView>
+          <microcharts:ChartView HeightRequest="500"
+                                 Chart="{Binding FemaleVsMaleChart}" />
+      </StackLayout>
+      </Grid>
+    </ScrollView>
+  </ContentPage.Content>
 </ContentPage>
