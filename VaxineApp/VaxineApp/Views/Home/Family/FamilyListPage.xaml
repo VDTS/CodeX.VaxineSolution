@@ -22,7 +22,7 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding GetFamilyCommand}">
       <CollectionView SelectionMode="Single"
@@ -33,24 +33,20 @@
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
               <ColumnDefinition Width="0.2*"></ColumnDefinition>
-              <ColumnDefinition Width="0.01*"></ColumnDefinition>
-              <ColumnDefinition Width="*"></ColumnDefinition>
+              <ColumnDefinition Width="0.8*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
               <RowDefinition Height="Auto"></RowDefinition>
               <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <Label WidthRequest="40"
-                   HeightRequest="40"
-                   Grid.Column="0"
+            <Label 
+                   Grid.Column="0" Grid.Row="0"
                    Text="House No"></Label>
-            <Label Grid.Column="2"
+            <Label Grid.Column="1"
                    Grid.Row="0"
-                   FontSize="20"
                    Text="Parent Name"></Label>
-            <Label Grid.Column="2"
+            <Label Grid.Column="1"
                    Grid.Row="1"
-                   Padding="0, -5, 0, 0"
                    Text="Phone Number"></Label>
           </Grid>
         </CollectionView.Header>
@@ -59,24 +55,20 @@
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                <ColumnDefinition Width="0.01*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="0.8*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
               <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
               </Grid.RowDefinitions>
-              <Label WidthRequest="40"
-                     HeightRequest="40"
-                     Grid.Column="0"
+              <Label
+                     Grid.Column="0" Grid.Row="0"
                      Text="{Binding HouseNo}"></Label>
-              <Label Grid.Column="2"
+              <Label Grid.Column="1"
                      Grid.Row="0"
-                     FontSize="20"
                      Text="{Binding ParentName}"></Label>
-              <Label Grid.Column="2"
+              <Label Grid.Column="1"
                      Grid.Row="1"
-                     Padding="0, -5, 0, 0"
                      Text="{Binding PhoneNumber}"></Label>
             </Grid>
           </DataTemplate>

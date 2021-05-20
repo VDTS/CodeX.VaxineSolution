@@ -26,43 +26,61 @@
   </ContentPage.Resources>
 
   <ContentPage.Content>
-    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView Padding="20"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3">
       <CollectionView ItemsSource="{Binding FamilyGroup, Mode=TwoWay}"
                       SelectionMode="Single"
                       SelectionChanged="CollectionView_SelectionChanged"
                       IsGrouped="True">
+        <CollectionView.Header>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.6*"></ColumnDefinition>
+              <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"></RowDefinition>
+              <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0"
+                   Grid.Row="0"
+                   FontSize="Medium"
+                   Text="House No"></Label>
+            <Label Grid.Column="0"
+                   Grid.Row="1"
+                   Text="Child Name"></Label>
+            <Label Grid.Column="1"
+                   Grid.Row="1"
+                   Text="Age (months)"></Label>
+          </Grid>
+        </CollectionView.Header>
         <CollectionView.ItemTemplate>
           <DataTemplate>
-            <Grid Padding="0, 10, 0, 0">
+            <Grid>
               <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                <ColumnDefinition Width="0.01*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
               <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
               </Grid.RowDefinitions>
-              <Label WidthRequest="40"
-                     HeightRequest="40"
-                     Grid.Column="0"
-                     Text="{Binding FullName}"></Label>
-              <Label x:Name="FullNameLabel"
-                     Grid.Column="2"
-                     Grid.Row="0"
-                     FontSize="20"
-                     Text="{Binding Gender}"></Label>
-              <Label Grid.Column="2"
+              <Label Grid.Column="0"
                      Grid.Row="1"
-                     Padding="0, -5, 0, 0"
+                     Text="{Binding FullName}"></Label>
+              <Label Grid.Column="1"
+                     Grid.Row="1"
                      Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
             </Grid>
           </DataTemplate>
         </CollectionView.ItemTemplate>
         <CollectionView.GroupHeaderTemplate>
           <DataTemplate>
-            <Label Text="{Binding HouseNo}" />
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   FontSize="Medium"
+                   Text="{Binding HouseNo}" />
           </DataTemplate>
         </CollectionView.GroupHeaderTemplate>
       </CollectionView>

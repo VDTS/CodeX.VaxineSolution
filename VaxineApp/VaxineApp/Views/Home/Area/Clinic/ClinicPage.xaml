@@ -25,7 +25,7 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding GetClinicCommand}">
       <CollectionView SelectionMode="Single"
@@ -33,25 +33,18 @@
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="0.2*"></ColumnDefinition>
-              <ColumnDefinition Width="0.01*"></ColumnDefinition>
-              <ColumnDefinition Width="*"></ColumnDefinition>
+              <ColumnDefinition Width="0.4*"></ColumnDefinition>
+              <ColumnDefinition Width="0.3*"></ColumnDefinition>
+              <ColumnDefinition Width="0.3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-              <RowDefinition Height="Auto"></RowDefinition>
-              <RowDefinition Height="Auto"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Label WidthRequest="40"
-                   HeightRequest="40"
+            <Label 
                    Grid.Column="0"
                    Text="ClinicName"></Label>
-            <Label Grid.Column="2"
-                   Grid.Row="0"
-                   FontSize="20"
+            <Label Grid.Column="1"
+                   
                    Text="Fixed"></Label>
             <Label Grid.Column="2"
-                   Grid.Row="1"
-                   Padding="0, -5, 0, 0"
+                  
                    Text="Outreach"></Label>
           </Grid>
         </CollectionView.Header>
@@ -59,25 +52,18 @@
           <DataTemplate>
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                <ColumnDefinition Width="0.01*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
-              <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-              </Grid.RowDefinitions>
-              <Label WidthRequest="40"
-                     HeightRequest="40"
+              <Label 
                      Grid.Column="0"
                      Text="{Binding ClinicName}"></Label>
-              <Label Grid.Column="2"
-                     Grid.Row="0"
-                     FontSize="20"
+              <Label Grid.Column="1"
+                    
                      Text="{Binding Fixed}"></Label>
               <Label Grid.Column="2"
-                     Grid.Row="1"
-                     Padding="0, -5, 0, 0"
+                    
                      Text="{Binding Outreach}"></Label>
             </Grid>
           </DataTemplate>

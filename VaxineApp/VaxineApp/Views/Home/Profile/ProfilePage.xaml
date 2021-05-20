@@ -13,20 +13,29 @@
                  Command="{Binding EditProfileCommand}" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <StackLayout Padding="20, 40, 20, 20">
+    <ScrollView>
+    <StackLayout Padding="40" Spacing="10">
       <Image Source="Profile_PhotoPlaceholder.png"></Image>
       <BoxView   VerticalOptions="Center"
                  HorizontalOptions="Center"
-                 HeightRequest="1"
+                 HeightRequest="30"
                  WidthRequest="200"></BoxView>
-      <Label Text="{Binding Profile.FullName}"></Label>
-      <Label Text="{Binding Profile.Gender}">
-      </Label>
-      <Label Text="{Binding Profile.FatherOrHusbandName}"></Label>
-      <Label Text="{Binding Profile.Age}"></Label>
-      <Label Text="{Binding Profile.Role}"></Label>
-      <Label AutomationId="ProfilePage_Email"
+      <Label Text="Name"></Label>
+      <Label FontSize="Large" Text="{Binding Profile.FullName}"></Label>
+      <Label Text="Gender"></Label>
+      <Label FontSize="Large" Text="{Binding Profile.Gender}"></Label>
+      <Label Text="Father or Husband Name"></Label>
+      <Label FontSize="Large" Text="{Binding Profile.FatherOrHusbandName}"></Label>
+      <Label Text="Age"></Label>
+      <Label FontSize="Large"
+               Text="{Binding Profile.Age}"></Label>
+      <Label Text="Role"></Label>
+      <Label FontSize="Large" Text="{Binding Profile.Role}"></Label>
+      <Label Text="Email"></Label>
+        <Label FontSize="Large"
+               AutomationId="ProfilePage_Email"
              Text="{Binding Profile.Email}"></Label>
     </StackLayout>
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>

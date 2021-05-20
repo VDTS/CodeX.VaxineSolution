@@ -25,7 +25,7 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding GetSchoolCommand}">
       <CollectionView SelectionMode="Single"
@@ -33,43 +33,27 @@
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="0.2*"></ColumnDefinition>
-              <ColumnDefinition Width="0.01*"></ColumnDefinition>
-              <ColumnDefinition Width="*"></ColumnDefinition>
-              <ColumnDefinition Width="0.2"></ColumnDefinition>
+              <ColumnDefinition Width="0.5*"></ColumnDefinition>
+              <ColumnDefinition Width="0.5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-              <RowDefinition Height="Auto"></RowDefinition>
-              <RowDefinition Height="Auto"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Label WidthRequest="40"
-                   HeightRequest="40"
+            <Label 
                    Grid.Column="0"
-                   Text="ClinicName"></Label>
-            <Label Grid.Column="2"
-                   Grid.Row="0"
-                   FontSize="20"
-                   Text="Fixed"></Label>
+                   Text="School Name"></Label>
+            <Label Grid.Column="1"
+                   Text="Key Influencer"></Label>
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
           <DataTemplate>
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
-              <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-              </Grid.RowDefinitions>
-              <Label WidthRequest="40"
-                     HeightRequest="40"
+              <Label 
                      Grid.Column="0"
                      Text="{Binding SchoolName}"></Label>
-              <Label Grid.Column="2"
-                     Grid.Row="0"
-                     FontSize="20"
+              <Label Grid.Column="1"
                      Text="{Binding KeyInfluencer}"></Label>
             </Grid>
           </DataTemplate>
