@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
-using VaxineApp.Models.Home.Area;
 using VaxineApp.ViewModels.Home.Family;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
