@@ -122,12 +122,9 @@ namespace VaxineApp.ViewModels.Login
                 {
                     FullName = data.FullName,
                     Age = data.Age,
-                    ConfirmEmail = data.ConfirmEmail,
-                    ConfirmPassword = data.ConfirmPassword,
                     Email = data.Email,
                     FatherOrHusbandName = data.FatherOrHusbandName,
                     Gender = data.Gender,
-                    Password = data.Password,
                     Role = data.Role,
                     Team = data.Team,
                     Cluster = data.Cluster,

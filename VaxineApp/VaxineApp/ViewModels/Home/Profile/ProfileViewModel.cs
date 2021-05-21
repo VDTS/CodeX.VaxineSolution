@@ -149,12 +149,9 @@ namespace VaxineApp.ViewModels.Home.Profile
                 {
                     FullName = data.FullName,
                     Age = data.Age,
-                    ConfirmEmail = data.ConfirmEmail,
-                    ConfirmPassword = data.ConfirmPassword,
                     Email = data.Email,
                     FatherOrHusbandName = data.FatherOrHusbandName,
                     Gender = data.Gender,
-                    Password = data.Password,
                     Role = data.Role
                 };
 
@@ -178,7 +175,6 @@ namespace VaxineApp.ViewModels.Home.Profile
                         Age = Age,
                         FatherOrHusbandName = FatherOrHusbandName,
                         Email = Email,
-                        Password = Password,
                         Role = Profile.Role
                     }
                     );

@@ -17,16 +17,6 @@ namespace VaxineApp.Models
         [DataType(DataType.EmailAddress)]
         [Required]
         public string Email { get; set; }
-        [DataType(DataType.EmailAddress)]
-        [Compare("Email")]
-        public string ConfirmEmail { get; set; }
-        [DataType(DataType.Password)]
-        [Required]
-        public string Password { get; set; }
-        [DataType(DataType.Password)]
-        [Required]
-        [Compare("Password")]
-        public string ConfirmPassword { get; set; }
         public string Team { get; set; }
         public string Cluster { get; set; }
         public string Area { get; set; }

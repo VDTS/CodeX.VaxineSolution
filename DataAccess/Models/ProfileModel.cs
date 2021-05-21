@@ -13,9 +13,6 @@ namespace DataAccess.Models
         public int Age { get; set; }
         public string Role { get; set; }
         public string Email { get; set; }
-        public string ConfirmEmail { get; set; }
-        public string Password { get; set; }
-        public string ConfirmPassword { get; set; }
         public string Team { get; set; }
         public string Cluster { get; set; }
         public string Area { get; set; }
