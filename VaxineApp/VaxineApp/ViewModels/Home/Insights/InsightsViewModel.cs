@@ -22,16 +22,14 @@ namespace VaxineApp.ViewModels.Home.Insights
             }
         }
         public List<Entry> Entries;
-        private int c = 0;
         public string[] ColourValues = new string[] {
-            "FF0000", "00FF00", "0000FF", "FFFF00", "FF00FF", "00FFFF", "000000",
-            "800000", "008000", "000080", "808000", "800080", "008080", "808080",
-            "C00000", "00C000", "0000C0", "C0C000", "C000C0", "00C0C0", "C0C0C0",
-            "400000", "004000", "000040", "404000", "400040", "004040", "404040",
-            "200000", "002000", "000020", "202000", "200020", "002020", "202020",
-            "600000", "006000", "000060", "606000", "600060", "006060", "606060",
-            "A00000", "00A000", "0000A0", "A0A000", "A000A0", "00A0A0", "A0A0A0",
-            "E00000", "00E000", "0000E0", "E0E000", "E000E0", "00E0E0", "E0E0E0",
+            "FFB900",  "E74856", "0078D7",   "0099BC",  "7A7574",  "767676",
+            "FF8C00",  "E81123",  "0063B1",  "2D7D9A",  "5D5A58",  "4C4A48",
+            "F7630C",  "EA005E",  "8E8CD8",  "00B7C3",  "68768A",  "69797E",
+            "CA5010",  "C30052",  "6B69D6",  "038387",  "515C6B",  "4A5459",
+            "DA3B01",  "E3008C",  "8764B8",  "00B294",  "567C73",  "647C64",
+            "EF6950",  "BF0077",  "744DA9",  "018574",  "486860",  "525E54",
+            "D13438",  "C239B3",  "B146C2",  "00CC6A",  "498205",  "847545"
         };
         private List<FemaleVsMaleChildModel> _femaleVsMaleData;
         public List<FemaleVsMaleChildModel> FemaleVsMaleData
@@ -66,11 +64,13 @@ namespace VaxineApp.ViewModels.Home.Insights
 
             foreach (var item in FemaleVsMaleData)
             {
+                Random rd = new Random();
+                int c = rd.Next(1, 42);
                 Entries.Add(new Entry(item.Counts)
                 {
                     Label = item.Indicator,
                     ValueLabel = item.Counts.ToString(),
-                    Color = SKColor.Parse($"#{ColourValues[c++]}")
+                    Color = SKColor.Parse($"#{ColourValues[c]}")
                 });
             }
             FemaleVsMaleChart = new PieChart()
