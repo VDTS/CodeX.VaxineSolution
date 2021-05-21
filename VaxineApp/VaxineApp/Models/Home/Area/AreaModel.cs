@@ -4,45 +4,23 @@ using System.Text;
 
 namespace VaxineApp.Models.Home.Area
 {
-    public class AreaModel
-    {
-        public string ClusterName { get; set; }
-        public List<TeamModel> Teams { get; set; }
-    }
     public class TeamModel
     {
         public string TeamNo { get; set; }
         public int SocialMobilizerId { get; set; }
         public string CHWName { get; set; }
-        public List<MasjeedModel> Masjeeds { get; set; }
-        public List<SchoolModel> Schools { get; set; }
-        public List<InfluencerModel> Influencers { get; set; }
-        public List<ClinicModel> Clinics { get; set; }
-        public List<InfluencerModel> Doctors { get; set; }
-        public TeamModel()
-        {
-            Masjeeds = new List<MasjeedModel>();
-            Schools = new List<SchoolModel>();
-            Influencers = new List<InfluencerModel>();
-            Clinics = new List<ClinicModel>();
-            Doctors = new List<InfluencerModel>();
-        }
     }
-
-    public class MasjeedModel
+    public class ClinicModel
     {
-        public string MasjeedName { get; set; }
-        public string KeyInfluencer { get; set; }
-        public bool DoesImamSupportsVaccine { get; set; }
-        public bool DoYouHavePermissionForAdsInMasjeed { get; set; }
+        public string ClinicName { get; set; }
+        public string Fixed { get; set; }
+        public string Outreach { get; set; }
     }
-
-    public class SchoolModel
+    public class DoctorModel
     {
-        public string SchoolName { get; set; }
-        public string KeyInfluencer { get; set; }
+        public string Name { get; set; }
+        public bool IsHeProvindingSupportForSIAAndVaccination { get; set; }
     }
-
     public class InfluencerModel
     {
         public string Name { get; set; }
@@ -50,25 +28,16 @@ namespace VaxineApp.Models.Home.Area
         public string Contact { get; set; }
         public bool DoesHeProvidingSupport { get; set; }
     }
-
-    public class ClinicModel
+    public class MasjeedModel
     {
-        public string ClinicName { get; set; }
-        public string Fixed { get; set; }
-        public string Outreach { get; set; }
+        public string MasjeedName { get; set; }
+        public string KeyInfluencer { get; set; }
+        public bool DoesImamSupportsVaccine { get; set; }
+        public bool DoYouHavePermissionForAdsInMasjeed { get; set; }
     }
-
-    public class DoctorModel
+    public class SchoolModel
     {
-        public string Name { get; set; }
-        public bool IsHeProvindingSupportForSIAAndVaccination { get; set; }
-    }
-    public class FamilyModel
-    {
-        public int HouseNo { get; set; }
-        public string ParentName { get; set; }
-        public string PhoneNumber { get; set; }
-
-        public List<ChildModel> Children { get; set; }
+        public string SchoolName { get; set; }
+        public string KeyInfluencer { get; set; }
     }
 }

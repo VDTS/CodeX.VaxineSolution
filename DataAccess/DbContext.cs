@@ -1,5 +1,4 @@
 ﻿using DataAccess.Models;
-using DataAccess.Models.Nest;
 using Firebase.Database;
 using Firebase.Database.Query;
 using Newtonsoft.Json;
@@ -36,7 +35,7 @@ namespace DataAccess
 
 
         // Get Methods
-        public async Task<GetTeamModel> GetTeam()
+        public async Task<TeamModel> GetTeam()
         {
             var j = (await Firebase.Child(Area)
             .OnceAsync<JObject>())
@@ -46,7 +45,7 @@ namespace DataAccess
 
             return (await Firebase
               .Child(Area).Child(j).Child("Teams")
-              .OnceAsync<JObject>()).Select(item => new GetTeamModel
+              .OnceAsync<JObject>()).Select(item => new TeamModel
               {
                   CHWName = item.Object.GetValue("CHWName").ToString(),
                   SocialMobilizerId = int.Parse(item.Object.GetValue("SocialMobilizerId").ToString()),
