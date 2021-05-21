@@ -4,10 +4,94 @@
              x:Class="VaxineApp.Views.Settings.Settings"
              Title="Settings">
   <ContentPage.Content>
-    <StackLayout Padding="40">
-      <Label Text="Settings page is under implementation" />
-      <Label Text="These features are under implementation"></Label>
-      <Label Text="1: Dark mode, 2: Localization"></Label>
-    </StackLayout>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.25*"></RowDefinition>
+        <RowDefinition Height="0.1*"></RowDefinition>
+        <RowDefinition Height="0.65*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <StackLayout
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="0">
+        <Label FontSize="40"
+               TextColor="#2196f3"
+               Text="Settings"></Label>
+      </StackLayout>
+      <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="End" Spacing="20" Padding="0, 0, 20, 0">
+        <Label TextColor="#2196f3" Text="" FontSize="25" FontFamily="SegoeMDL2"></Label>
+        <Label TextColor="#2196f3" Text=""
+               FontSize="25"
+               FontFamily="SegoeMDL2"></Label>
+      </StackLayout>
+      <ScrollView Grid.Row="2" Padding="25">
+        <StackLayout Orientation="Vertical" Spacing="20">
+          <StackLayout Spacing="20">
+            <Label FontSize="Body"
+                   TextColor="Black" Text="Accessibility"></Label>
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30">
+              <Label FontSize="30"
+                     Text=""
+                     TextColor="#2196f3"
+                     FontFamily="SegoeMDL2"></Label>
+              <Label TextColor="Black"
+                     FontSize="20"
+                     Text="Font"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30">
+              <Label FontSize="30"
+                     Text=""
+                     TextColor="#2196f3"
+                     FontFamily="SegoeMDL2"></Label>
+              <Label TextColor="Black"
+                     FontSize="20"
+                     Text="Themes"></Label>
+            </StackLayout>
+          </StackLayout>
+          <StackLayout Spacing="20">
+            <Label  FontSize="Body"
+                    TextColor="Black"
+                    Text="Localization"></Label>
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30">
+              <Label FontSize="30"
+                     Text=""
+                     TextColor="#2196f3"
+                     FontFamily="SegoeMDL2"></Label>
+              <Label TextColor="Black"
+                     FontSize="20"
+                     Text="Language"></Label>
+            </StackLayout>
+          </StackLayout>
+          <StackLayout Spacing="20">
+            <Label  FontSize="Body"
+                    TextColor="Black"
+                    Text="More"></Label>
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30">
+              <Label FontSize="30"
+                     Text=""
+                     TextColor="#2196f3"
+                     FontFamily="SegoeMDL2"></Label>
+              <Label TextColor="Black"
+                     FontSize="20"
+                     Text="Notifications"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30">
+              <Label FontSize="30"
+                     Text=""
+                     TextColor="#2196f3"
+                     FontFamily="SegoeMDL2"></Label>
+              <Label TextColor="Black"
+                     FontSize="20"
+                     Text="Report bug"></Label>
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+      </ScrollView>
+    </Grid>
   </ContentPage.Content>
 </ContentPage>
