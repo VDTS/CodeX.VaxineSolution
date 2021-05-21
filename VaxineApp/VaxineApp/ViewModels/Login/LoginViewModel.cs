@@ -88,16 +88,23 @@ namespace VaxineApp.ViewModels.Login
         }
         private async void SignIn(object sender)
         {
-            string Token = await auth.LoginWithEmailPassword(InputUserEmail, InputUserPassword);
-            if (Token != "")
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                Preferences.Set("PrefEmail", InputUserEmail);
-                GetProfile();
-                await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+                await App.Current.MainPage.DisplayAlert("No internet", "Check you internet connection", "Ok");
             }
             else
             {
-                ShowError();
+                string Token = await auth.LoginWithEmailPassword(InputUserEmail, InputUserPassword);
+                if (Token != "")
+                {
+                    Preferences.Set("PrefEmail", InputUserEmail);
+                    GetProfile();
+                    await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+                }
+                else
+                {
+                    ShowError();
+                }
             }
         }
         async private void ShowError()
@@ -132,7 +139,7 @@ namespace VaxineApp.ViewModels.Login
                 Preferences.Set("PrefCluster", Profile.Cluster);
                 Preferences.Set("PrefArea", Profile.Area);
             }
- }
+        }
         #endregion
 
     }
