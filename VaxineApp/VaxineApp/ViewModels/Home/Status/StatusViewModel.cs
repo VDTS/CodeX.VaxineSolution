@@ -29,8 +29,8 @@ namespace VaxineApp.ViewModels.Home.Status
                 RaisedPropertyChanged(nameof(IsBusy));
             }
         }
-        private ObservableCollection<GetChildGroupedbyFamilyModel> _childGroupedbyFamily;
-        public ObservableCollection<GetChildGroupedbyFamilyModel> FamilyGroup
+        private ObservableCollection<ChildGroupbyFamilyModel> _childGroupedbyFamily;
+        public ObservableCollection<ChildGroupbyFamilyModel> FamilyGroup
         {
             get { return _childGroupedbyFamily; }
             set
@@ -53,9 +53,9 @@ namespace VaxineApp.ViewModels.Home.Status
                 foreach (var item2 in child)
                 {
                     FamilyGroup.Add(
-                    new GetChildGroupedbyFamilyModel(item.HouseNo, new List<GetChildModel>
+                    new ChildGroupbyFamilyModel(item.HouseNo, new List<ChildModel>
                     {
-                        new GetChildModel
+                        new ChildModel
                         {
                             FullName = item2.FullName,
                             Gender = item2.Gender,
@@ -72,7 +72,7 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public StatusViewModel()
         {
-            FamilyGroup = new ObservableCollection<GetChildGroupedbyFamilyModel>();
+            FamilyGroup = new ObservableCollection<ChildGroupbyFamilyModel>();
             GetChild();
             GetFamilyCommand = new AsyncCommand(Refresh);
             //RegistrationPageCommand = new Command(Add);
