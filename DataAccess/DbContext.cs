@@ -102,6 +102,7 @@ namespace DataAccess
             return (await Firebase.Child($"{Area}/{j}/Teams/{p}/Families/{f}/Childs").OnceAsync<ChildModel>())
                 .Select(item => new ChildModel
                 {
+                    HouseNo = item.Object.HouseNo,
                     FullName = item.Object.FullName,
                     DOB = DateTime.Parse(item.Object.DOB.ToString()),
                     Gender = item.Object.Gender,

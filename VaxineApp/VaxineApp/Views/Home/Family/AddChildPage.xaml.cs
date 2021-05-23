@@ -83,6 +83,7 @@ namespace VaxineApp.Views.Home.Family
         {
             await Data.PostChild(new ChildModel
             {
+                HouseNo = HouseNo,
                 FullName = FullName,
                 DOB = DOB, 
                 Gender = Gender,
