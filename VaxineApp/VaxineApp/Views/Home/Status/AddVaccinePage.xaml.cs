@@ -12,7 +12,7 @@ namespace VaxineApp.Views.Home.Status
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddVaccinePage : ContentPage
     {
-        public AddVaccinePage()
+        public AddVaccinePage(int HouseNo)
         {
             InitializeComponent();
         }

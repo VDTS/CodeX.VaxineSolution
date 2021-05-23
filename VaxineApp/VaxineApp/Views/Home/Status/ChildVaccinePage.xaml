@@ -2,11 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Status.ChildVaccinePage"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status"
              Title="Child Details">
-  <ContentPage.BindingContext>
-    <ViewModel:ChildVaccineViewModel></ViewModel:ChildVaccineViewModel>
-  </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem IconImageSource="Home_Registration.png"
                  Command="{Binding AddVaccineCommand}" />
@@ -20,11 +16,11 @@
       </Grid.RowDefinitions>
       <StackLayout Grid.Row="0"
                    Padding="20, 40, 20, 20">
-        <Label Text="{Binding FullName, Mode=TwoWay}"></Label>
-        <Label Text="{Binding Gender}">
+        <Label Text="{Binding Child.FullName, Mode=TwoWay}"></Label>
+        <Label Text="{Binding Child.Gender}">
         </Label>
-        <Label Text="{Binding RINo, Mode=TwoWay}"></Label>
-        <Label Text="{Binding DOB}"></Label>
+        <Label Text="{Binding Child.RINo, Mode=TwoWay}"></Label>
+        <Label Text="{Binding Child.DOB}"></Label>
         <Grid>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.3*"></ColumnDefinition>
@@ -33,7 +29,7 @@
           <Label Text="OPV0"
                  Grid.Column="0"></Label>
           <CheckBox Grid.Column="1"
-                    IsChecked="{Binding OPV0}"
+                    IsChecked="{Binding Child.OPV0}"
                     IsEnabled="False" />
         </Grid>
       </StackLayout>
