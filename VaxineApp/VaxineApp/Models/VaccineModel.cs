@@ -10,11 +10,6 @@ namespace VaxineApp.Models
         [Required]
         public DateTime VaccinePeriod { get; set; }
         [Required]
-        public VaccineStatus VaccineStatus { get; set; }
-        public UserMetaData UserMetaData { get; set; }
-        public VaccineModel()
-        {
-            UserMetaData = new UserMetaData();
-        }
+        public string VaccineStatus { get; set; }
     }
 }

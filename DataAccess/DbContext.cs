@@ -383,6 +383,34 @@ namespace DataAccess
 
             await Firebase.Child($"{Area}/{j}/Teams/{p}/Families").PostAsync(data);
         }
+        public async Task PostVaccine(int HouseNo, Object data)
+        {
+            var j = (await Firebase.Child(Area)
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var f = (await Firebase.Child(Area).Child(j).Child("Teams").Child(p).Child("Families")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => int.Parse(item.Object.GetValue("HouseNo").ToString()) == HouseNo)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var o = (await Firebase.Child(Area).Child(j).Child("Teams").Child(p).Child("Families").Child(f).Child("Childs")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => int.Parse(item.Object.GetValue("HouseNo").ToString()) == HouseNo)
+                .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase.Child($"{Area}/{j}/Teams/{p}/Families/{f}/Childs/{o}/Vaccine").PostAsync(data);
+        }
 
 
         // Put

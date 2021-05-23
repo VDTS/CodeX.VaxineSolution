@@ -8,10 +8,5 @@ namespace DataAccess.Models
     {
         public DateTime VaccinePeriod { get; set; }
         public VaccineStatus VaccineStatus { get; set; }
-        public UserMetaData UserMetaData { get; set; }
-        public VaccineModel()
-        {
-            UserMetaData = new UserMetaData();
-        }
     }
 }
