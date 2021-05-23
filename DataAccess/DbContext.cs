@@ -231,6 +231,42 @@ namespace DataAccess
                 }).ToList();
 
         }
+        public async Task<List<VaccineModel>> GetVaccine(int HouseNo)
+        {
+
+            var j = (await Firebase.Child(Area)
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var f = (await Firebase.Child(Area).Child(j).Child("Teams").Child(p).Child("Families")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => int.Parse(item.Object.GetValue("HouseNo").ToString()) == HouseNo)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var o = (await Firebase.Child(Area).Child(j).Child("Teams").Child(p).Child("Families").Child(f).Child("Childs")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => int.Parse(item.Object.GetValue("HouseNo").ToString()) == HouseNo)
+                .Select(item => item.Key).FirstOrDefault();
+
+
+            return (await Firebase.Child($"{Area}/{j}/Teams/{p}/Families/{f}/Childs/{o}/Vaccine").OnceAsync<VaccineModel>())
+                .Select(item => new VaccineModel
+                {
+                    VaccineStatus = item.Object.VaccineStatus,
+                    VaccinePeriod = item.Object.VaccinePeriod
+                }).ToList();
+
+        }
         public async Task<ProfileModel> GetProfile()
         {
             return (await Firebase
