@@ -50,22 +50,21 @@ namespace VaxineApp.ViewModels.Home.Status
             foreach (var item in family)
             {
                 var child = await Data.GetChild(item.HouseNo);
+                List<ChildModel> lp = new List<ChildModel>();
                 foreach (var item2 in child)
                 {
-                    FamilyGroup.Add(
-                    new ChildGroupbyFamilyModel(item.HouseNo, new List<ChildModel>
+                    lp.Add(
+                    new ChildModel
                     {
-                        new ChildModel
-                        {
                             HouseNo = item.HouseNo,
                             FullName = item2.FullName,
                             Gender = item2.Gender,
                             DOB = item2.DOB,
                             OPV0 = item2.OPV0,
                             RINo = item2.RINo
-                        }
-                    }));
+                    });
                 }
+                FamilyGroup.Add(new ChildGroupbyFamilyModel(item.HouseNo, lp));
             }
 
         }
