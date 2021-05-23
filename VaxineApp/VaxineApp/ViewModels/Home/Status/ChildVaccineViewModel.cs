@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
@@ -82,6 +84,8 @@ namespace VaxineApp.ViewModels.Home.Status
                     }
                     );
             }
+
+            CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).FirstOrDefault();
         }
 
         public async void Add()
