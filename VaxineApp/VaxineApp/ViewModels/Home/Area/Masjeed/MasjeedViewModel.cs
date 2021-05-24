@@ -6,6 +6,7 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Masjeed;
+using VaxineApp.Views.Shared;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
@@ -36,6 +37,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         }
         // Commands
         public ICommand AddMasjeedCommand { private set; get; }
+        public ICommand GoToMapCommand { private set; get; }
         public AsyncCommand GetMasjeedCommand { private set; get; }
 
 
@@ -46,6 +48,13 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             GetMasjeed();
             GetMasjeedCommand = new AsyncCommand(Refresh);
             AddMasjeedCommand = new Command(AddMasjeed);
+            GoToMapCommand = new Command(GoToMap);
+        }
+
+        private async void GoToMap(object obj)
+        {
+            var route = $"{nameof(GoogleMapPage)}";
+            await Shell.Current.GoToAsync(route);
         }
 
         // Methods

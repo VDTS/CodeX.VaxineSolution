@@ -18,6 +18,7 @@ using VaxineApp.Views.Login;
 using VaxineApp.Views.Settings;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.AboutUs;
+using VaxineApp.Views.Shared;
 
 namespace VaxineApp
 {
@@ -31,6 +32,7 @@ namespace VaxineApp
            
             Routing.RegisterRoute(nameof(FamilyListPage), typeof(FamilyListPage));
             Routing.RegisterRoute(nameof(AddFamilyPage), typeof(AddFamilyPage));
+            Routing.RegisterRoute(nameof(GoogleMapPage), typeof(GoogleMapPage));
 
                 Routing.RegisterRoute(nameof(AreaPage), typeof(AreaPage));
                 Routing.RegisterRoute(nameof(EditAreaPage), typeof(EditAreaPage));

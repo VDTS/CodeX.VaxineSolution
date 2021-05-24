@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="VaxineApp.Views.Shared.GoogleMapPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Shared"
+             Title="{Binding PageName}">
+  <ContentPage.BindingContext>
+    <ViewModel:GoogleMapViewModel></ViewModel:GoogleMapViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout>
+      <maps:Map MapType="Street">
+        <maps:Map.ItemTemplate>
+          <DataTemplate>
+            <maps:Pin Type="Place" Position="{Binding Position}"
+                      Address="{Binding Address}"
+                      Label="{Binding Label}" />
+          </DataTemplate>
+        </maps:Map.ItemTemplate>
+      </maps:Map>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
