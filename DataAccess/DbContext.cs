@@ -26,7 +26,7 @@ namespace DataAccess
         // Constructor
         public DbContext()
         {
-            Firebase = new FirebaseClient(UserSecretsManager.Settings["firebase"]);
+            Firebase = new FirebaseClient(@"https://my-first-project-test-a22d1-default-rtdb.firebaseio.com/");
             ClusterName = Preferences.Get("PrefCluster", "T");
             Team = Preferences.Get("PrefTeam", "1");
             Area = Preferences.Get("PrefArea", "Kandahar-Area");
