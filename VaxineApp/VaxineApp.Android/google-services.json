@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "581148243090",
+    "firebase_url": "https://my-first-project-test-a22d1-default-rtdb.firebaseio.com",
+    "project_id": "my-first-project-test-a22d1",
+    "storage_bucket": "my-first-project-test-a22d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581148243090:android:ab448a2e2013de94c8e24b",
+        "android_client_info": {
+          "package_name": "com.Vaccine.GPSApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581148243090-uirobnot63odjq6duacbgvpb8h0etkbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2XKRo177HCm9orpDy_Nr3DNDf98uoC9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581148243090-uirobnot63odjq6duacbgvpb8h0etkbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581148243090:android:0f934dd76bad90c3c8e24b",
+        "android_client_info": {
+          "package_name": "com.codex.vaxineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581148243090-uirobnot63odjq6duacbgvpb8h0etkbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2XKRo177HCm9orpDy_Nr3DNDf98uoC9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581148243090-uirobnot63odjq6duacbgvpb8h0etkbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
