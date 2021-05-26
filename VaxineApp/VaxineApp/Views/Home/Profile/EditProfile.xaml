@@ -29,10 +29,7 @@
       <Entry Text="{Binding FatherOrHusbandName}"
                                  Placeholder="Father or Husband Name"></Entry>
       <Entry Text="{Binding Age}"
-                                 Placeholder="Age"></Entry>
-      <Entry Text="{Binding Email}"
-             AutomationId="EditProfilePage_Email"
-             Placeholder="Email"></Entry>
+             Placeholder="Age"></Entry>
       <Button Text="Update Profile"
           TranslationY="50"
               WidthRequest="170"

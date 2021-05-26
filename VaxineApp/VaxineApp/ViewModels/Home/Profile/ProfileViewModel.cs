@@ -152,7 +152,10 @@ namespace VaxineApp.ViewModels.Home.Profile
                     Email = data.Email,
                     FatherOrHusbandName = data.FatherOrHusbandName,
                     Gender = data.Gender,
-                    Role = data.Role
+                    Role = data.Role,
+                    Team = data.Team,
+                    Cluster = data.Cluster,
+                    Area = data.Area
                 };
 
                 FullName = Profile.FullName;
@@ -175,7 +178,10 @@ namespace VaxineApp.ViewModels.Home.Profile
                         Age = Age,
                         FatherOrHusbandName = FatherOrHusbandName,
                         Email = Email,
-                        Role = Profile.Role
+                        Role = Profile.Role,
+                        Area = Profile.Area,
+                        Cluster = Profile.Cluster,
+                        Team = Profile.Team
                     }
                     );
                 var route = $"//{nameof(ProfilePage)}";
