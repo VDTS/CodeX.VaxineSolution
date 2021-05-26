@@ -57,12 +57,14 @@ namespace VaxineApp.ViewModels
         {
             var route = $"{nameof(ProfilePage)}";
             await Shell.Current.GoToAsync(route);
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private async void GoToSettingsPage(object obj)
         {
             var route = $"{nameof(Settings)}";
             await Shell.Current.GoToAsync(route);
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private async void LogginOut(object obj)
@@ -74,11 +76,13 @@ namespace VaxineApp.ViewModels
         private async void GoToHelpPage(object obj)
         {
             await Shell.Current.GoToAsync($"{nameof(HelpPage)}");
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private async void GoToAboutUsPage(object obj)
         {
             await Shell.Current.GoToAsync($"{nameof(AboutUsPage)}");
+            Shell.Current.FlyoutIsPresented = false;
         }
     }
 }
