@@ -73,7 +73,10 @@ namespace DataAccess
                 {
                     ClinicName = item.Object.ClinicName,
                     Fixed = item.Object.Fixed,
-                    Outreach = item.Object.Outreach
+                    Outreach = item.Object.Outreach,
+                    Latitude = double.Parse(item.Object.Latitude.ToString()),
+                    Longitude = double.Parse(item.Object.Longitude.ToString())
+
                 }).ToList();
 
         }

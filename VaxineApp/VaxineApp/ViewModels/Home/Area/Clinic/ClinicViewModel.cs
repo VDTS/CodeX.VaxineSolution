@@ -61,7 +61,9 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                     {
                         ClinicName = item.ClinicName,
                         Fixed = item.Fixed,
-                        Outreach = item.Outreach
+                        Outreach = item.Outreach,
+                        Latitude = item.Latitude,
+                        Longitude = item.Longitude
                     }
                     );
             }

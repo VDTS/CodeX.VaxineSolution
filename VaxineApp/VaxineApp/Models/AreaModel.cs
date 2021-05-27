@@ -15,6 +15,8 @@ namespace VaxineApp.Models
         public string ClinicName { get; set; }
         public string Fixed { get; set; }
         public string Outreach { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
     public class DoctorModel
     {

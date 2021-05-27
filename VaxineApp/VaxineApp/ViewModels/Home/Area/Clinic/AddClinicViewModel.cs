@@ -41,6 +41,26 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 RaisedPropertyChanged(nameof(Outreach));
             }
         }
+        public double _latitude;
+        public double Latitude
+        {
+            get { return _latitude; }
+            set
+            {
+                _latitude = value;
+                RaisedPropertyChanged(nameof(Latitude));
+            }
+        }
+        public double _longitude;
+        public double Longitude
+        {
+            get { return _longitude; }
+            set
+            {
+                _longitude = value;
+                RaisedPropertyChanged(nameof(Longitude));
+            }
+        }
         public ICommand SaveClinicCommand { private set; get; }
         public AddClinicViewModel()
         {
@@ -53,7 +73,9 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             {
                 ClinicName = ClinicName,
                 Fixed = Fixed,
-                Outreach = Outreach
+                Outreach = Outreach,
+                Latitude = Latitude,
+                Longitude = Longitude
             });
             var route = $"//{nameof(ClinicPage)}";
             await Shell.Current.GoToAsync(route);
