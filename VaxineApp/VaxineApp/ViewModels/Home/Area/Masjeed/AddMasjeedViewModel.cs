@@ -52,6 +52,26 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 RaisedPropertyChanged(nameof(DoYouHavePermissionForAdsInMasjeed));
             }
         }
+        public double _latitude;
+        public double Latitude
+        {
+            get { return _latitude; }
+            set
+            {
+                _latitude = value;
+                RaisedPropertyChanged(nameof(Latitude));
+            }
+        }
+        public double _longitude;
+        public double Longitude
+        {
+            get { return _longitude; }
+            set
+            {
+                _longitude = value;
+                RaisedPropertyChanged(nameof(Longitude));
+            }
+        }
         public ICommand SaveMasjeedCommand { private set; get; }
         public AddMasjeedViewModel()
         {
@@ -66,7 +86,10 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 MasjeedName = MasjeedName,
                 KeyInfluencer = KeyInfluencer,
                 DoesImamSupportsVaccine = DoesImamSupportsVaccine,
-                DoYouHavePermissionForAdsInMasjeed = DoYouHavePermissionForAdsInMasjeed
+                DoYouHavePermissionForAdsInMasjeed = DoYouHavePermissionForAdsInMasjeed,
+                Longitude = Longitude,
+                Latitude = Latitude
+
             });
 
             var route = $"//{nameof(MasjeedPage)}";

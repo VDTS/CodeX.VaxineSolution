@@ -14,6 +14,26 @@
              Text="{Binding SchoolName}"></Entry>
       <Entry Placeholder="Key Influencer"
              Text="{Binding KeyInfluencer}"></Entry>
+      <StackLayout Orientation="Horizontal">
+        <Entry Placeholder="Latitude"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding Latitude}"></Entry>
+        <Entry Placeholder="Longitude"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding Longitude}"></Entry>
+        <Button Text=""
+                FontFamily="SegoeMDL2"
+                WidthRequest="50"
+                HeightRequest="50"
+                FontSize="25"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                Command="{Binding AddLocationCommand}"></Button>
+      </StackLayout>
+
       <Button Text="Save"
               TranslationY="50"
               WidthRequest="130"

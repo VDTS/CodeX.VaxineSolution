@@ -70,7 +70,9 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                         MasjeedName = item.MasjeedName,
                         KeyInfluencer = item.KeyInfluencer,
                         DoYouHavePermissionForAdsInMasjeed = item.DoYouHavePermissionForAdsInMasjeed,
-                        DoesImamSupportsVaccine  = item.DoesImamSupportsVaccine
+                        DoesImamSupportsVaccine  = item.DoesImamSupportsVaccine,
+                        Latitude = item.Latitude,
+                        Longitude = item.Longitude
                     }
                     );
             }

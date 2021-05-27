@@ -36,10 +36,14 @@ namespace DataAccess.Models
         public string KeyInfluencer { get; set; }
         public bool DoesImamSupportsVaccine { get; set; }
         public bool DoYouHavePermissionForAdsInMasjeed { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
     public class SchoolModel
     {
         public string SchoolName { get; set; }
         public string KeyInfluencer { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }
