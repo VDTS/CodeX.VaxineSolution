@@ -48,7 +48,9 @@ namespace VaxineApp.ViewModels.Home.Area.School
                     new SchoolModel
                     {
                         KeyInfluencer = item.KeyInfluencer,
-                        SchoolName = item.SchoolName
+                        SchoolName = item.SchoolName,
+                        Longitude = item.Longitude,
+                        Latitude = item.Latitude
                     }
                     );
             }

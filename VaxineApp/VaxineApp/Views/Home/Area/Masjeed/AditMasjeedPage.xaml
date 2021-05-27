@@ -24,6 +24,25 @@
         <CheckBox IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
         <Label Text="Do You Have Permission For Ads In Masjeed?"></Label>
       </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Entry Placeholder="Latitude"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding Latitude}"></Entry>
+        <Entry Placeholder="Longitude"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding Longitude}"></Entry>
+        <Button Text=""
+                FontFamily="SegoeMDL2"
+                WidthRequest="50"
+                HeightRequest="50"
+                FontSize="25"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                Command="{Binding AddLocationCommand}"></Button>
+      </StackLayout>
 
       <Button Text="Save"
               TranslationY="50"

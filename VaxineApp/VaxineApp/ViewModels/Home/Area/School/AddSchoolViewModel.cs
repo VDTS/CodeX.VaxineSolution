@@ -33,7 +33,26 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 RaisedPropertyChanged(nameof(KeyInfluencer));
             }
         }
-
+        public double _latitude;
+        public double Latitude
+        {
+            get { return _latitude; }
+            set
+            {
+                _latitude = value;
+                RaisedPropertyChanged(nameof(Latitude));
+            }
+        }
+        public double _longitude;
+        public double Longitude
+        {
+            get { return _longitude; }
+            set
+            {
+                _longitude = value;
+                RaisedPropertyChanged(nameof(Longitude));
+            }
+        }
         public ICommand SaveSchoolCommand { private set; get; }
         public AddSchoolViewModel()
         {
@@ -45,7 +64,9 @@ namespace VaxineApp.ViewModels.Home.Area.School
             await Data.PostSchool(new SchoolModel
             {
                 KeyInfluencer = KeyInfluencer,
-                SchoolName = SchoolName
+                SchoolName = SchoolName,
+                Longitude = Longitude,
+                Latitude = Latitude
             });
 
             var route = $"//{nameof(SchoolPage)}";

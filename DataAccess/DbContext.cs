@@ -183,7 +183,9 @@ namespace DataAccess
                     MasjeedName = item.Object.MasjeedName,
                     KeyInfluencer = item.Object.KeyInfluencer,
                     DoesImamSupportsVaccine = item.Object.DoesImamSupportsVaccine,
-                    DoYouHavePermissionForAdsInMasjeed = item.Object.DoYouHavePermissionForAdsInMasjeed
+                    DoYouHavePermissionForAdsInMasjeed = item.Object.DoYouHavePermissionForAdsInMasjeed,
+                    Latitude = double.Parse(item.Object.Latitude.ToString()),
+                    Longitude = double.Parse(item.Object.Longitude.ToString())
                 }).ToList();
 
         }
@@ -206,7 +208,9 @@ namespace DataAccess
                 .Select(item => new SchoolModel
                 {
                     SchoolName = item.Object.SchoolName,
-                    KeyInfluencer = item.Object.KeyInfluencer
+                    KeyInfluencer = item.Object.KeyInfluencer,
+                    Latitude = double.Parse(item.Object.Latitude.ToString()),
+                    Longitude = double.Parse(item.Object.Longitude.ToString())
                 }).ToList();
 
         }
