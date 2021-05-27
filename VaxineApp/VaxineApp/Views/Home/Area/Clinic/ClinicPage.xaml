@@ -21,6 +21,11 @@
                  Command="{Binding AddClinicCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
+                 Command="{Binding GoToMapCommand}"
+                 Text="Go on map"
+                 Priority="0" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
                  Text="Share"
                  Priority="0" />
   </ContentPage.ToolbarItems>
