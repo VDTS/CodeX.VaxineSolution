@@ -24,6 +24,17 @@ namespace VaxineApp.ViewModels.Home.Status
             }
 
         }
+        private bool _isBusy;
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                RaisedPropertyChanged(nameof(IsBusy));
+            }
+
+        }
 
         private ChildModel _child;
 
@@ -60,7 +71,7 @@ namespace VaxineApp.ViewModels.Home.Status
             }
         }
 
-
+        public ICommand GetDataCommand { private set; get; }
         public ICommand AddVaccineCommand { private set; get; }
         public ChildVaccineViewModel(ChildModel child)
         {
@@ -85,7 +96,7 @@ namespace VaxineApp.ViewModels.Home.Status
                     );
             }
 
-            CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).FirstOrDefault();
+            CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
         }
 
         public async void Add()
