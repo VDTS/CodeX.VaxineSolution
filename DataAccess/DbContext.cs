@@ -486,7 +486,29 @@ namespace DataAccess
 
         // Delete
 
+        public async Task DelClinic(string ClinicName)
+        {
+            var j = (await Firebase.Child(Area)
+               .OnceAsync<JObject>())
+               .ToList()
+               .Where(item => item.Object.GetValue("ClusterName").ToString() == ClusterName)
+               .Select(item => item.Key).FirstOrDefault();
 
+            var p = (await Firebase.Child(Area).Child(j).Child("Teams")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("TeamNo").ToString() == Team)
+                .Select(item => item.Key).FirstOrDefault();
+
+            var d = (await Firebase.Child(Area).Child(j).Child("Teams").Child(p).Child("Clinics")
+                .OnceAsync<JObject>())
+                .ToList()
+                .Where(item => item.Object.GetValue("ClinicName").ToString() == ClinicName)
+                .Select(item => item.Key).FirstOrDefault();
+
+            await Firebase.Child(Area).Child(j).Child("Teams").Child(p).Child("Clinics").Child(d).DeleteAsync();
+
+        }
 
         // Get Statistics
         public async Task<int> GetClinicStats()

@@ -14,6 +14,7 @@
                  Priority="1" />
     <ToolbarItem Order="Secondary"
                  Text="Delete"
+                 Command="{Binding DeleteClinicCommand}"
                  Priority="2" />
     <ToolbarItem Order="Secondary"
                  Text="Add"
@@ -34,6 +35,7 @@
                  RefreshColor="#2196f3"
                  Command="{Binding GetClinicCommand}">
       <CollectionView SelectionMode="Single"
+                      SelectedItem="{Binding SelectedClinic}"
                       ItemsSource="{Binding Clinics}">
         <CollectionView.Header>
           <Grid Padding="10">
