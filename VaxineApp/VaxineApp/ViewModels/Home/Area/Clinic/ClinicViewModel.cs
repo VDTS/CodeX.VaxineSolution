@@ -26,6 +26,17 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
         }
         private bool _isBusy;
+        private ClinicModel _selectedClinic;
+
+        public ClinicModel SelectedClinic
+        {
+            get { return _selectedClinic; }
+            set
+            {
+                _selectedClinic = value;
+                RaisedPropertyChanged(nameof(SelectedClinic));
+            }
+        }
 
         public bool IsBusy
         {
@@ -40,15 +51,24 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         //Commands
         public ICommand AddClinicCommand { private set; get; }
         public ICommand GetClinicCommand { private set; get; }
+        public ICommand DeleteClinicCommand { private set; get; }
 
         // Constructor
         public ClinicViewModel()
         {
+            SelectedClinic = new ClinicModel();
             GetClinic();
             GetClinicCommand = new AsyncCommand(Refresh);
             AddClinicCommand = new Command(AddClinic);
+            DeleteClinicCommand = new Command(DeleteClinic);
             Clinics = new List<ClinicModel>();
         }
+
+        private async void DeleteClinic(object obj)
+        {
+            await Data.DelClinic(SelectedClinic.ClinicName);
+        }
+
 
         // Methods
         public async void GetClinic()
@@ -68,7 +88,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                     );
             }
         }
-        
+
         // GoTo Routes
         async void AddClinic()
         {
