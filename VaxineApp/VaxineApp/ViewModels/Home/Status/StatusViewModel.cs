@@ -46,6 +46,7 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void GetChild()
         {
+            await Task.Delay(4000);
             var family = await Data.GetFamily();
             foreach (var item in family)
             {

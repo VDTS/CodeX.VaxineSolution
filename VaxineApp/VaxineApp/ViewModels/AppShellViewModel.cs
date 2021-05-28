@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
@@ -49,8 +50,8 @@ namespace VaxineApp.ViewModels
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
             GoToAboutUsPageCommand = new Command(GoToAboutUsPage);
-            UserName = Preferences.Get("PrefFullName", "");
-            Role = Preferences.Get("PrefRole", "");
+            UserName = SharedData.FullName;
+            Role = SharedData.Role;
         }
 
         private async void GoToProfile(object obj)
@@ -69,7 +70,6 @@ namespace VaxineApp.ViewModels
 
         private async void LogginOut(object obj)
         {
-            Preferences.Clear();
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
 
