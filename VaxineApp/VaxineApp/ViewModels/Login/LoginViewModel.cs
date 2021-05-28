@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
@@ -97,7 +98,7 @@ namespace VaxineApp.ViewModels.Login
                 string Token = await auth.LoginWithEmailPassword(InputUserEmail, InputUserPassword);
                 if (Token != "")
                 {
-                    Preferences.Set("PrefEmail", InputUserEmail);
+                    SharedData.Email = InputUserEmail;
                     GetProfile();
                     await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
                 }
@@ -115,6 +116,11 @@ namespace VaxineApp.ViewModels.Login
         public async void GetProfile()
         {
             var data = await Data.GetProfile();
+            SharedData.Area = data.Area;
+            SharedData.ClusterName = data.Cluster;
+            SharedData.Team = data.Team;
+            SharedData.FullName = data.FullName;
+            SharedData.Role = data.Role;
 
             if (data != null)
             {
@@ -130,11 +136,6 @@ namespace VaxineApp.ViewModels.Login
                     Cluster = data.Cluster,
                     Area = data.Area
                 };
-                Preferences.Set("PrefFullName", Profile.FullName);
-                Preferences.Set("PrefRole", Profile.Role);
-                Preferences.Set("PrefTeam", Profile.Team);
-                Preferences.Set("PrefCluster", Profile.Cluster);
-                Preferences.Set("PrefArea", Profile.Area);
             }
         }
         #endregion
