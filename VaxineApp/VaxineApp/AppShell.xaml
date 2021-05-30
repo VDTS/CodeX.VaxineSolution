@@ -235,6 +235,15 @@
             IconImageSource="FlyoutItem_Help.png"
             Command="{Binding GoToHelpPageCommand}">
   </MenuItem>
+  <MenuItem Text="Feedback"
+            StyleClass="MenuItemLayoutStyle"
+            Command="{Binding FeedbackPageCommand}">
+    <MenuItem.IconImageSource>
+      <FontImageSource FontFamily="SegoeMDL2"
+                       Glyph="&#xED15;"
+                       Color="Black" />
+    </MenuItem.IconImageSource>
+  </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutMenuItem_Logout.png"
