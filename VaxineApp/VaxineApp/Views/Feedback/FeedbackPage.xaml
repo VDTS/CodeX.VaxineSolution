@@ -11,9 +11,11 @@
     <ScrollView>
         <StackLayout Padding="10" Spacing="10">
         <Label Text="Select Category" />
-        <StackLayout Orientation="Horizontal">
-          <RadioButton Content="Suggestion" IsChecked="{Binding SuggestionRadioButton}" />
-          <RadioButton Content="Problem" />
+        <StackLayout Orientation="Horizontal"
+                     RadioButtonGroup.GroupName="IssueCategory">
+          <RadioButton Content="Suggestion"
+                       Value="{Binding SuggestionRadioButton}" IsChecked="{Binding SuggestionRadioButton}" />
+          <RadioButton Value="{Binding ProblemRadioButton}" Content="Problem" IsChecked="{Binding ProblemRadioButton}"/>
         </StackLayout>
         <Label Text="Issue Title"></Label>
           <Editor Text="{Binding IssueTitle}"
