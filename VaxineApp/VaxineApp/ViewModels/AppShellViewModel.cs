@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.AboutUs;
+using VaxineApp.Views.Feedback;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Profile;
@@ -22,6 +23,7 @@ namespace VaxineApp.ViewModels
         public ICommand LogginOutCommand { private set; get; }
         public ICommand GoToHelpPageCommand { private set; get; }
         public ICommand GoToAboutUsPageCommand { private set; get; }
+        public ICommand FeedbackPageCommand { private set; get; }
         private string _userName;
         public string UserName {
             get { return _userName; }
@@ -50,8 +52,16 @@ namespace VaxineApp.ViewModels
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
             GoToAboutUsPageCommand = new Command(GoToAboutUsPage);
+            FeedbackPageCommand = new Command(GoToFeedbackPage);
             UserName = SharedData.FullName;
             Role = SharedData.Role;
+        }
+
+        private async void GoToFeedbackPage(object obj)
+        {
+            var route = $"{nameof(FeedbackPage)}";
+            await Shell.Current.GoToAsync(route);
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private async void GoToProfile(object obj)

@@ -5,11 +5,11 @@
        xmlns:HomeInsights="clr-namespace:VaxineApp.Views.Home.Insights"
        xmlns:HomeFamily="clr-namespace:VaxineApp.Views.Home.Family"
        xmlns:HomeArea="clr-namespace:VaxineApp.Views.Home.Area.Area"
-         xmlns:HomeAreaClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
-         xmlns:HomeAreaDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
-         xmlns:HomeAreaInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
-         xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
-         xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
+       xmlns:HomeAreaClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
+       xmlns:HomeAreaDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
+       xmlns:HomeAreaInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
+       xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
+       xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
        xmlns:Login="clr-namespace:VaxineApp.Views.Login"
        xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
@@ -156,13 +156,19 @@
       </Grid>
     </DataTemplate>
   </Shell.FlyoutHeaderTemplate>
-  <FlyoutItem Route="LoginPage" FlyoutItemIsVisible="False" >
+  <FlyoutItem Route="LoginPage"
+              FlyoutItemIsVisible="False">
     <ShellContent ContentTemplate="{DataTemplate Login:LoginPage}"></ShellContent>
   </FlyoutItem>
-  
-  <FlyoutItem Title="Home" Icon="FlyoutItem_Home.png">
-    <Tab Icon="Home_Status.png"
-         Title="Status">
+
+  <FlyoutItem Title="Home"
+              Icon="FlyoutItem_Home.png">
+    <Tab Title="Home">
+      <Tab.Icon>
+        <FontImageSource Glyph="&#xE10F;"
+                         FontFamily="SegoeMDL2"
+                         Size="24" />
+      </Tab.Icon>
       <ShellContent Route="StatusPage"
                     ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
     </Tab>
@@ -171,8 +177,12 @@
       <ShellContent Route="InsightsPage"
                     ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
     </Tab>
-    <Tab Icon="Home_Family.png"
-         Title="Family">
+    <Tab Title="Family">
+      <Tab.Icon>
+        <FontImageSource Glyph="&#xECC8;"
+                         FontFamily="SegoeMDL2"
+                         Size="24" />
+      </Tab.Icon>
       <ShellContent Route="FamilyListPage"
                     ContentTemplate="{DataTemplate HomeFamily:FamilyListPage}" />
     </Tab>
@@ -205,12 +215,15 @@
 
   </FlyoutItem>
 
-
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
   <MenuItem Text="Settings"
             StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutItem_settings.png"
             Command="{Binding GoToSettingsPageCommand}">
+    <MenuItem.IconImageSource>
+      <FontImageSource FontFamily="SegoeMDL2"
+                       Glyph="&#xE115;"
+                       Color="Black" />
+    </MenuItem.IconImageSource>
   </MenuItem>
   <MenuItem Text="AboutUs"
             StyleClass="MenuItemLayoutStyle"
@@ -222,9 +235,19 @@
             IconImageSource="FlyoutItem_Help.png"
             Command="{Binding GoToHelpPageCommand}">
   </MenuItem>
+  <MenuItem Text="Feedback"
+            StyleClass="MenuItemLayoutStyle"
+            Command="{Binding FeedbackPageCommand}">
+    <MenuItem.IconImageSource>
+      <FontImageSource FontFamily="SegoeMDL2"
+                       Glyph="&#xED15;"
+                       Color="Black" />
+    </MenuItem.IconImageSource>
+  </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutMenuItem_Logout.png" Command="{Binding LogginOutCommand}">
+            IconImageSource="FlyoutMenuItem_Logout.png"
+            Command="{Binding LogginOutCommand}">
   </MenuItem>
 
   <!--

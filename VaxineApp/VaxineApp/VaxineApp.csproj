@@ -36,6 +36,7 @@
     <PackageReference Include="Microsoft.AppCenter" Version="4.2.0" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.2.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.2.0" />
+    <PackageReference Include="Octokit" Version="0.50.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
     <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
@@ -72,6 +73,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Views\AboutUs\AboutUsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Feedback\FeedbackPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Help\HelpPage.xaml">

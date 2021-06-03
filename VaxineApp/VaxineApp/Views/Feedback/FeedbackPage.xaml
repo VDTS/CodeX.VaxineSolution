@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Feedback.FeedbackPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Feedback"
+             Title="Feedback">
+  <ContentPage.BindingContext>
+    <ViewModel:FeedbackViewModel></ViewModel:FeedbackViewModel>
+  </ContentPage.BindingContext>
+    <ContentPage.Content>
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+        <Label Text="Select Category" />
+        <StackLayout Orientation="Horizontal"
+                     RadioButtonGroup.GroupName="IssueCategory">
+          <RadioButton Content="Suggestion"
+                       Value="{Binding SuggestionRadioButton}" IsChecked="{Binding SuggestionRadioButton}" />
+          <RadioButton Value="{Binding ProblemRadioButton}" Content="Problem" IsChecked="{Binding ProblemRadioButton}"/>
+        </StackLayout>
+        <Label Text="Issue Title"></Label>
+          <Editor Text="{Binding IssueTitle}"
+                  HeightRequest="50" />
+        <Label Text="Issue details"></Label>
+        <Editor Text="{Binding IssueDetails}"
+              HeightRequest="280" />
+        <Button Text="" FontFamily="SegoeMDL2" WidthRequest="60" HorizontalOptions="End" Command="{Binding SubmitIssueOnGithubCommand}"></Button>
+        </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>
