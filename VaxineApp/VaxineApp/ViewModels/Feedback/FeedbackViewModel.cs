@@ -103,6 +103,10 @@ namespace VaxineApp.ViewModels.Feedback
                 }
 
                 var issue = await client.Issue.Create("VDTS", "RoadMap", i);
+                if(issue.State.Value.ToString() == "Open")
+                {
+                    await App.Current.MainPage.DisplayAlert("Issue", "Issue submited", "OK");
+                }
             }
             catch (Exception)
             {
