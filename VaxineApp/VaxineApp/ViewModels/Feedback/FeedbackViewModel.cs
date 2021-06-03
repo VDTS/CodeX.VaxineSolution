@@ -75,7 +75,7 @@ namespace VaxineApp.ViewModels.Feedback
             {
                 var client = new GitHubClient(new ProductHeaderValue("VDTSApps"));
 
-                var tokenAuth = new Credentials(SecretsVault.GithubApiKeyForCreatingIssues);
+                var tokenAuth = new Credentials(Constants.GithubApiKeyForCreatingIssues);
                 client.Credentials = tokenAuth;
 
                 var i = new NewIssue(IssueTitle);
