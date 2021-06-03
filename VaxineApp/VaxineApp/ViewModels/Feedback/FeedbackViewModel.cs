@@ -8,6 +8,8 @@ using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 using Octokit.Internal;
 using System.Collections.ObjectModel;
+using VaxineApp.Models.Metadata;
+using DataAccess;
 
 namespace VaxineApp.ViewModels.Feedback
 {
@@ -73,13 +75,17 @@ namespace VaxineApp.ViewModels.Feedback
         {
             try
             {
+                UserMetaData umd = new UserMetaData();
                 var client = new GitHubClient(new ProductHeaderValue("RoadMap"));
 
                 var tokenAuth = new Credentials(Constants.GithubApiKeyForCreatingIssues);
                 client.Credentials = tokenAuth;
 
                 var i = new NewIssue(IssueTitle);
-                i.Body = IssueDetails;
+
+
+                i.Body = $"Issue: {IssueDetails} {Environment.NewLine} Device ID: {umd.DeviceId} {Environment.NewLine}  Device Manufacturer: {umd.DeviceManufacturer} {Environment.NewLine} Device Model: {umd.DeviceModel}  {Environment.NewLine} Device Name: {umd.DeviceName} {Environment.NewLine} Device Platform: {umd.DevicePlatform} {Environment.NewLine} Device Version: {umd.DeviceVersion} {Environment.NewLine} IMEI: {umd.IMEI} {Environment.NewLine} TimeStamp: {umd.TimeStamp} {Environment.NewLine} User Email: {SharedData.Email}";
+
                 if(SuggestionRadioButton == false && ProblemRadioButton == true)
                 {
                     i.Labels.Add("Problem");
