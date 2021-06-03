@@ -7,4 +7,4 @@ then
 
 fi
 
-sed -i -e "s/\[VSAC_GITHUB_API_KEY]/$VSAC_GITHUB_API_KEY/g" SecretsVault.cs
+sed -i -e "s/\[VSAC_GITHUB_API_KEY]/$VSAC_GITHUB_API_KEY/g" ../VaxineApp/SecretsVault.cs
