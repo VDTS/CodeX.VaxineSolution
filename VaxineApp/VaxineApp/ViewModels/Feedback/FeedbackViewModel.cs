@@ -73,7 +73,7 @@ namespace VaxineApp.ViewModels.Feedback
         {
             try
             {
-                var client = new GitHubClient(new ProductHeaderValue("VDTSApps"));
+                var client = new GitHubClient(new ProductHeaderValue("RoadMap"));
 
                 var tokenAuth = new Credentials(Constants.GithubApiKeyForCreatingIssues);
                 client.Credentials = tokenAuth;
@@ -89,7 +89,7 @@ namespace VaxineApp.ViewModels.Feedback
                     i.Labels.Add("Suggestion");
                 }
 
-                var issue = await client.Issue.Create("VDTS", "VDTSApps", i);
+                var issue = await client.Issue.Create("VDTS", "RoadMap", i);
             }
             catch (Exception)
             {
