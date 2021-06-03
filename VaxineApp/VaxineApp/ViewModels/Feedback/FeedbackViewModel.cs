@@ -16,6 +16,7 @@ namespace VaxineApp.ViewModels.Feedback
     public class FeedbackViewModel : BaseViewModel
     {
         public ICommand SubmitIssueOnGithubCommand { private set; get; }
+        public ICommand AttachScreenshotOnGithubIssueCommand { private set; get; }
         private string _issueTitle;
         public string IssueTitle
         {
@@ -62,6 +63,12 @@ namespace VaxineApp.ViewModels.Feedback
         public FeedbackViewModel()
         {
             SubmitIssueOnGithubCommand = new Command(SubmitIssueOnGithub);
+            AttachScreenshotOnGithubIssueCommand = new Command(AttachScreenshotOnGithubIssue);
+        }
+
+        private void AttachScreenshotOnGithubIssue(object obj)
+        {
+            
         }
 
         private async void SubmitIssueOnGithub()
@@ -84,7 +91,7 @@ namespace VaxineApp.ViewModels.Feedback
                 var i = new NewIssue(IssueTitle);
 
 
-                i.Body = $"Issue: {IssueDetails} {Environment.NewLine} Device ID: {umd.DeviceId} {Environment.NewLine}  Device Manufacturer: {umd.DeviceManufacturer} {Environment.NewLine} Device Model: {umd.DeviceModel}  {Environment.NewLine} Device Name: {umd.DeviceName} {Environment.NewLine} Device Platform: {umd.DevicePlatform} {Environment.NewLine} Device Version: {umd.DeviceVersion} {Environment.NewLine} IMEI: {umd.IMEI} {Environment.NewLine} TimeStamp: {umd.TimeStamp} {Environment.NewLine} User Email: {SharedData.Email}";
+                i.Body = $"Issue: {IssueDetails} {Environment.NewLine} Device Manufacturer: {umd.DeviceManufacturer} {Environment.NewLine} Device Model: {umd.DeviceModel}  {Environment.NewLine} Device Name: {umd.DeviceName} {Environment.NewLine} Device Platform: {umd.DevicePlatform} {Environment.NewLine} Device Version: {umd.DeviceVersion} {Environment.NewLine} User Email: {SharedData.Email}";
 
                 if(SuggestionRadioButton == false && ProblemRadioButton == true)
                 {
