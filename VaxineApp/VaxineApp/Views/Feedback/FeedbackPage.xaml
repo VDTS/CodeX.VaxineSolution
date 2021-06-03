@@ -23,7 +23,12 @@
         <Label Text="Issue details"></Label>
         <Editor Text="{Binding IssueDetails}"
               HeightRequest="280" />
-        <Button Text="" FontFamily="SegoeMDL2" WidthRequest="60" HorizontalOptions="End" Command="{Binding SubmitIssueOnGithubCommand}"></Button>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+          <Button Text=""
+                  FontFamily="SegoeMDL2"
+                  WidthRequest="60" Command="{Binding AttachScreenshotOnGithubIssueCommand}"></Button>
+          <Button Text="" FontFamily="SegoeMDL2" WidthRequest="60" HorizontalOptions="End" Command="{Binding SubmitIssueOnGithubCommand}"></Button>
+        </StackLayout>
         </StackLayout>
     </ScrollView>
   </ContentPage.Content>
