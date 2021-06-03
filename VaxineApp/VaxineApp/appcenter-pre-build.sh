@@ -1,16 +1,10 @@
-if [ -z "$GITHUB_API_KEY_FOR_CREATING_ISSUES" ]
+#!/usr/bin/env bash
+
+if [ "$APPCENTER_BRANCH" == "main"];
 then
-    echo "You need define the GITHUB_API_KEY_FOR_CREATING_ISSUES variable in App Center"
-    exit
+
+/usr/libexec/plistbuddy -c "Set :CFBundleDisplayName VDTSXamarin.$APPCENTER_BRANCH" "droid/AndroidManifest"
+
 fi
 
-APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/SecretsVault.cs
-
-if [ -e "$APP_CONSTANT_FILE" ]
-then
-    echo "Updating GithubApiKeyForCreatingIssues to $GITHUB_API_KEY_FOR_CREATING_ISSUES in SecretsVault.cs"
-    sed -i '' 's#GithubApiKeyForCreatingIssues = "[-A-Za-z0-9:_./]*"#GithubApiKeyForCreatingIssues = "'$GITHUB_API_KEY_FOR_CREATING_ISSUES'"#' $APP_CONSTANT_FILE
-
-    echo "File content:"
-    cat $APP_CONSTANT_FILE
-fi
+sed -i -e "s/\[VSAC_GITHUB_API_KEY]/$VSAC_GITHUB_API_KEY/g" SecretsVault.cs
