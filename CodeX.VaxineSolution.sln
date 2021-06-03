@@ -13,7 +13,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C4074621
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxineAppUITest", "VaxineAppUITest\VaxineAppUITest.csproj", "{AFC95805-2FD6-4707-AB48-5C3A68F350D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxineAppNUnitTest", "VaxineAppNUnitTest\VaxineAppNUnitTest.csproj", "{0A9ED049-495A-432C-9A50-051CE7D36211}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaxineAppNUnitTest", "VaxineAppNUnitTest\VaxineAppNUnitTest.csproj", "{0A9ED049-495A-432C-9A50-051CE7D36211}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{722AF3B8-A3C8-49AC-BE12-5550114484BA}"
+	ProjectSection(SolutionItems) = preProject
+		appcenter-pre-build.sh = appcenter-pre-build.sh
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
