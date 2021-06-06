@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccessLib.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -69,14 +70,21 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         }
         public async void SaveClinic()
         {
-            await Data.PostClinic(new ClinicModel
+            ClinicModel clinic = new ClinicModel()
             {
+                Id = Guid.NewGuid(),
                 ClinicName = ClinicName,
                 Fixed = Fixed,
                 Outreach = Outreach,
                 Latitude = Latitude,
                 Longitude = Longitude
-            });
+            };
+
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, "Clinic/T");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+
             var route = $"//{nameof(ClinicPage)}";
             await Shell.Current.GoToAsync(route);
         }
