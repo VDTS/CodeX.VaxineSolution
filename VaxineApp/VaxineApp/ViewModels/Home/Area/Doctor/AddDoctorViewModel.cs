@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccessLib.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -39,11 +40,17 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         }
         public async void SaveDoctor()
         {
-            await Data.PostDoctor(new DoctorModel
+            DoctorModel clinic = new DoctorModel()
             {
+                Id = Guid.NewGuid(),
                 Name = Name,
                 IsHeProvindingSupportForSIAAndVaccination = IsHeProvindingSupportForSIAAndVaccination
-            });
+            };
+
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, "Doctor/T");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
             var route = $"//{nameof(DoctorPage)}";
             await Shell.Current.GoToAsync(route);
