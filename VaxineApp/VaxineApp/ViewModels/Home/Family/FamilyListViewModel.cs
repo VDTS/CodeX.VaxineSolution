@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,15 +63,16 @@ namespace VaxineApp.ViewModels.Home.Family
 
         public async void GetFamily()
         {
-            var data = await Data.GetFamily();
-            foreach (var item in data)
+            var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
+            foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
             {
                 Family.Add(
                     new GetFamilyModel
                     {
-                        ParentName = item.ParentName,
-                        PhoneNumber = item.PhoneNumber,
-                        HouseNo = item.HouseNo
+                        ParentName = item.Value.ParentName,
+                        PhoneNumber = item.Value.PhoneNumber,
+                        HouseNo = item.Value.HouseNo
                     }
                     );
             }
