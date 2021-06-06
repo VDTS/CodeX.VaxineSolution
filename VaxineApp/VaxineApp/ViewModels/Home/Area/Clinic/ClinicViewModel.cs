@@ -74,7 +74,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         // Methods
         public async void GetClinic()
         {
-            var data = await DataService.Get($"Clinic/T");
+            var data = await DataService.Get($"Clinic/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(data);
             foreach (KeyValuePair<string, ClinicModel> item in clinic)
             {

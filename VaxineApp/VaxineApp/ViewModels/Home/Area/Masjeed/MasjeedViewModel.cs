@@ -62,7 +62,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
         public async void GetMasjeed()
         {
-            var data = await DataService.Get($"Masjeed/T");
+            var data = await DataService.Get($"Masjeed/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(data);
             foreach (KeyValuePair<string, MasjeedModel> item in clinic)
             {

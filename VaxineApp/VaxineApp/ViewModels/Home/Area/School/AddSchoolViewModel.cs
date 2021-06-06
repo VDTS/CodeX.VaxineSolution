@@ -73,7 +73,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
 
             var data = JsonConvert.SerializeObject(clinic);
 
-            string a = DataService.Post(data, "School/T");
+            string a = DataService.Post(data, "School/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
             var route = $"//{nameof(SchoolPage)}";
