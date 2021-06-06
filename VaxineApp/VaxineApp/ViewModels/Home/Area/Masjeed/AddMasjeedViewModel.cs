@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccessLib.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -81,16 +82,21 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         }
         private async void SaveMasjeed()
         {
-            await Data.PostMasjeed(new MasjeedModel
+            MasjeedModel clinic = new MasjeedModel()
             {
+                Id = Guid.NewGuid(),
                 MasjeedName = MasjeedName,
                 KeyInfluencer = KeyInfluencer,
                 DoesImamSupportsVaccine = DoesImamSupportsVaccine,
                 DoYouHavePermissionForAdsInMasjeed = DoYouHavePermissionForAdsInMasjeed,
                 Longitude = Longitude,
                 Latitude = Latitude
+            };
 
-            });
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, "Masjeed/T");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
             var route = $"//{nameof(MasjeedPage)}";
             await Shell.Current.GoToAsync(route);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,18 +62,19 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
         public async void GetMasjeed()
         {
-            var data = await Data.GetMasjeed();
-            foreach (var item in data)
+            var data = await DataService.Get($"Masjeed/T");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(data);
+            foreach (KeyValuePair<string, MasjeedModel> item in clinic)
             {
                 Masjeed.Add(
                     new MasjeedModel
                     {
-                        MasjeedName = item.MasjeedName,
-                        KeyInfluencer = item.KeyInfluencer,
-                        DoYouHavePermissionForAdsInMasjeed = item.DoYouHavePermissionForAdsInMasjeed,
-                        DoesImamSupportsVaccine  = item.DoesImamSupportsVaccine,
-                        Latitude = item.Latitude,
-                        Longitude = item.Longitude
+                        MasjeedName = item.Value.MasjeedName,
+                        KeyInfluencer = item.Value.KeyInfluencer,
+                        DoYouHavePermissionForAdsInMasjeed = item.Value.DoYouHavePermissionForAdsInMasjeed,
+                        DoesImamSupportsVaccine = item.Value.DoesImamSupportsVaccine,
+                        Latitude = item.Value.Latitude,
+                        Longitude = item.Value.Longitude
                     }
                     );
             }
