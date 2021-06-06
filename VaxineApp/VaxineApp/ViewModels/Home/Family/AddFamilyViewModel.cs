@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccessLib.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -54,12 +55,19 @@ namespace VaxineApp.ViewModels.Home.Family
         // Method
         public async void SaveFamily()
         {
-            await Data.PostFamily(new GetFamilyModel
+            GetFamilyModel clinic = new GetFamilyModel()
             {
+                Id = Guid.NewGuid(),
                 HouseNo = HouseNo,
                 ParentName = ParentName,
                 PhoneNumber = PhoneNumber
-            });
+            };
+
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, "Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+
             var route = $"//{nameof(FamilyListPage)}";
             await Shell.Current.GoToAsync(route);
         }
