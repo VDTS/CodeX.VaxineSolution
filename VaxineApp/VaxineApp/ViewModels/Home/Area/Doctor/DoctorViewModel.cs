@@ -48,7 +48,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 
         public async void GetDoctor()
         {
-            var data = await DataService.Get($"Doctor/T");
+            var data = await DataService.Get($"Doctor/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(data);
             foreach (KeyValuePair<string, DoctorModel> item in clinic)
             {

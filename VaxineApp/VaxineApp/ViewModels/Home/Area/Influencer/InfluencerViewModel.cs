@@ -51,7 +51,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 
         public async void GetInfluencer()
         {
-            var data = await DataService.Get($"Influencer/T");
+            var data = await DataService.Get($"Influencer/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(data);
             foreach (KeyValuePair<string, InfluencerModel> item in clinic)
             {

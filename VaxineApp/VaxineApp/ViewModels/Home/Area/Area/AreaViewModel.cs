@@ -181,7 +181,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         // Methods
         public async void GetArea()
         {
-            var data = await DataService.Get($"Team/ThirdCluster");
+            var data = await DataService.Get($"Team/e6a79ace-b4b5-408c-a8d6-e40b3e3238ee");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(data);
             foreach (KeyValuePair<string, TeamModel> item in clinic)
             {
