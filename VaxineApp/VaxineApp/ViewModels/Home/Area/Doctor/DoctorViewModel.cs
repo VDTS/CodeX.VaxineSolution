@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,15 +48,16 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 
         public async void GetDoctor()
         {
-            var data = await Data.GetDoctor();
-            foreach (var item in data)
+            var data = await DataService.Get($"Doctor/T");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(data);
+            foreach (KeyValuePair<string, DoctorModel> item in clinic)
             {
                 Doctor.Add(
-                    new DoctorModel
-                    {
-                        Name = item.Name,
-                        IsHeProvindingSupportForSIAAndVaccination = item.IsHeProvindingSupportForSIAAndVaccination
-                    }
+                        new DoctorModel
+                        {
+                            Name = item.Value.Name,
+                            IsHeProvindingSupportForSIAAndVaccination = item.Value.IsHeProvindingSupportForSIAAndVaccination
+                        }
                     );
             }
         }
