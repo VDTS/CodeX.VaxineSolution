@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,16 +42,17 @@ namespace VaxineApp.ViewModels.Home.Area.School
         // Methods
         public async void GetSchool()
         {
-            var data = await Data.GetSchool();
-            foreach (var item in data)
+            var data = await DataService.Get($"School/T");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(data);
+            foreach (KeyValuePair<string, SchoolModel> item in clinic)
             {
                 School.Add(
                     new SchoolModel
                     {
-                        KeyInfluencer = item.KeyInfluencer,
-                        SchoolName = item.SchoolName,
-                        Longitude = item.Longitude,
-                        Latitude = item.Latitude
+                        KeyInfluencer = item.Value.KeyInfluencer,
+                        SchoolName = item.Value.SchoolName,
+                        Longitude = item.Value.Longitude,
+                        Latitude = item.Value.Latitude
                     }
                     );
             }

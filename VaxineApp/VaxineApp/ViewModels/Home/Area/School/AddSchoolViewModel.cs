@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccessLib.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -61,13 +62,19 @@ namespace VaxineApp.ViewModels.Home.Area.School
         }
         private async void SaveSchool()
         {
-            await Data.PostSchool(new SchoolModel
+            SchoolModel clinic = new SchoolModel()
             {
+                Id = Guid.NewGuid(),
                 KeyInfluencer = KeyInfluencer,
                 SchoolName = SchoolName,
                 Longitude = Longitude,
                 Latitude = Latitude
-            });
+            };
+
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, "School/T");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
             var route = $"//{nameof(SchoolPage)}";
             await Shell.Current.GoToAsync(route);
