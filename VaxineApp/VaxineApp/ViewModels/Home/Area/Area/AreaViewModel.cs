@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
-using DataAccess;
 using VaxineApp.Views.Home.Area.Area;
 using Xamarin.Forms;
 using Xamarin.CommunityToolkit.ObjectModel;
 using System.Threading.Tasks;
 using VaxineApp.ViewModels.Base;
+using Newtonsoft.Json;
 
 namespace VaxineApp.ViewModels.Home.Area.Area
 {
@@ -181,20 +181,20 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         // Methods
         public async void GetArea()
         {
-            var area = await Data.GetTeam();
-            if (area != null)
+            var data = await DataService.Get($"Team/ThirdCluster");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(data);
+            foreach (KeyValuePair<string, TeamModel> item in clinic)
             {
                 Team = new TeamModel
                 {
-                    CHWName = area.CHWName,
-                    SocialMobilizerId = area.SocialMobilizerId,
-                    TeamNo = area.TeamNo
+                    CHWName = item.Value.CHWName,
+                    SocialMobilizerId = item.Value.SocialMobilizerId,
+                    TeamNo = item.Value.TeamNo
                 };
-
-                CHWName = Team.CHWName;
-                SocialMobilizerId = Team.SocialMobilizerId;
-                TeamNo = Team.TeamNo;
             }
+            CHWName = Team.CHWName;
+            SocialMobilizerId = Team.SocialMobilizerId;
+            TeamNo = Team.TeamNo;
         }
         //public async void SaveArea()
         //{
