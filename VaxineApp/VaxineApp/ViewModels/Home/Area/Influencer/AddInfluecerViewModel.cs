@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccessLib.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -57,19 +58,24 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         public AddInfluecerViewModel()
         {
             SaveInfluencerCommand = new Command(SaveInfluencer);
-
         }
 
         // Methods
         public async void SaveInfluencer()
         {
-            await Data.PostInfluencer(new InfluencerModel
+            InfluencerModel clinic = new InfluencerModel()
             {
+                Id = Guid.NewGuid(),
                 Name = Name,
                 Contact = Contact,
                 DoesHeProvidingSupport = DoesHeProvidingSupport,
                 Position = Position
-            });
+            };
+
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, "Influencer/T");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
             var route = $"//{nameof(InfluencerPage)}";
             await Shell.Current.GoToAsync(route);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,16 +51,17 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 
         public async void GetInfluencer()
         {
-            var data = await Data.GetInfluencer();
-            foreach (var item in data)
+            var data = await DataService.Get($"Influencer/T");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(data);
+            foreach (KeyValuePair<string, InfluencerModel> item in clinic)
             {
                 Influencer.Add(
                     new InfluencerModel
                     {
-                       Name = item.Name,
-                       Contact = item.Contact,
-                       Position = item.Position, 
-                       DoesHeProvidingSupport = item.DoesHeProvidingSupport
+                        Name = item.Value.Name,
+                        Contact = item.Value.Contact,
+                        Position = item.Value.Position,
+                        DoesHeProvidingSupport = item.Value.DoesHeProvidingSupport
                     }
                     );
             }
