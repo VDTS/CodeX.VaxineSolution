@@ -1,4 +1,4 @@
-﻿using DataAccess;
+﻿using DataAccessLib;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -99,7 +99,6 @@ namespace VaxineApp.ViewModels.Login
                 if (Token != "")
                 {
                     SharedData.Email = InputUserEmail;
-                    GetProfile();
                     await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
                 }
                 else
@@ -113,31 +112,6 @@ namespace VaxineApp.ViewModels.Login
             await Application.Current.MainPage.DisplayAlert("Authentication failed!", "E-mail or password are incorrect. Try again!", "Cancel");
         }
         async private void ForgotPassword() { }
-        public async void GetProfile()
-        {
-            var data = await Data.GetProfile();
-            SharedData.Area = data.Area;
-            SharedData.ClusterName = data.Cluster;
-            SharedData.Team = data.Team;
-            SharedData.FullName = data.FullName;
-            SharedData.Role = data.Role;
-
-            if (data != null)
-            {
-                Profile = new ProfileModel
-                {
-                    FullName = data.FullName,
-                    Age = data.Age,
-                    Email = data.Email,
-                    FatherOrHusbandName = data.FatherOrHusbandName,
-                    Gender = data.Gender,
-                    Role = data.Role,
-                    Team = data.Team,
-                    Cluster = data.Cluster,
-                    Area = data.Area
-                };
-            }
-        }
         #endregion
 
     }
