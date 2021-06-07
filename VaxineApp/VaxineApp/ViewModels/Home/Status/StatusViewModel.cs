@@ -60,8 +60,6 @@ namespace VaxineApp.ViewModels.Home.Status
                     new ChildModel
                     {
                         Id = item2.Value.Id,
-                        HouseNo = item2.Value.HouseNo,
-                        FullName = item2.Value.FullName,
                         Gender = item2.Value.Gender,
                         DOB = item2.Value.DOB,
                         OPV0 = item2.Value.OPV0,
