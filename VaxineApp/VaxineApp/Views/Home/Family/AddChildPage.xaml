@@ -6,11 +6,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:pages="clr-namespace:VaxineApp.Views.Home.Family"
              Title="Add Child">
-  <!--xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"-->
-  <!--<ViewModel:AddChildViewModel></ViewModel:AddChildViewModel>-->
-  <d:ContentPage.BindingContext>
-    <pages:AddChildPage />
-  </d:ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10"
                  x:Name="PageContent">
@@ -39,7 +34,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Clicked="Button_Clicked"
+              Command="{Binding AddChildCommand}"
               Margin="20"></Button>
     </StackLayout>
 

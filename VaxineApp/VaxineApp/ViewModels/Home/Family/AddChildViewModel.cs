@@ -8,11 +8,90 @@ using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 using VaxineApp.ViewModels.Base;
+using Newtonsoft.Json;
+using VaxineApp.Views.Home.Family;
 
 namespace VaxineApp.ViewModels.Home.Family
 {
-    public class AddChildViewModel
+    public class AddChildViewModel : BaseViewModel
     {
+        Guid FamilyId;
+        public ICommand AddChildCommand { private set; get; }
+        public AddChildViewModel(Guid _familyId)
+        {
+            FamilyId = _familyId;
+            AddChildCommand = new Command(AddChild);
+        }
+        
+        private string _fullName;
+        public string FullName
+        {
+            get { return _fullName; }
+            set
+            {
+                _fullName = value;
+                RaisedPropertyChanged(nameof(FullName));
+            }
+        }
+        private DateTime _dOB;
+        public DateTime DOB
+        {
+            get { return _dOB; }
+            set
+            {
+                _dOB = value;
+                RaisedPropertyChanged(nameof(DOB));
+            }
+        }
+        private string _gender;
+        public string Gender
+        {
+            get { return _gender; }
+            set
+            {
+                _gender = value;
+                RaisedPropertyChanged(nameof(Gender));
+            }
+        }
+        private bool _oPV0;
+        public bool OPV0
+        {
+            get { return _oPV0; }
+            set
+            {
+                _oPV0 = value;
+                RaisedPropertyChanged(nameof(OPV0));
+            }
+        }
+        private int _rINo;
+        public int RINo
+        {
+            get { return _rINo; }
+            set
+            {
+                _rINo = value;
+                RaisedPropertyChanged(nameof(RINo));
+            }
+        }
 
+        private async void AddChild()
+        {
+            ChildModel clinic = new ChildModel()
+            {
+                Id = Guid.NewGuid(),
+                FullName = FullName,
+                DOB = DOB,
+                Gender = Gender,
+                OPV0 = OPV0,
+                RINo = RINo
+            };
+
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, $"Child/{FamilyId}");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+
+            await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(new GetFamilyModel { Id = FamilyId }));
+        }
     }
 }
