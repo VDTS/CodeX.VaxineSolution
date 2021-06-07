@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
@@ -33,23 +34,24 @@ namespace VaxineApp.ViewModels.Home.Family
         }
         private async void LoadData()
         {
-            var data = await Data.GetChild(Family.HouseNo);
-            foreach (var item in data)
+            var data = await DataService.Get($"Child/{Family.Id}");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data);
+            foreach (KeyValuePair<string, ChildModel> item in clinic)
             {
                 Childs.Add(
-                    new ChildModel
-                    {
-                        FullName = item.FullName,
-                        DOB = item.DOB,
-                        Gender = item.Gender,
-                        OPV0 = item.OPV0,
-                        RINo = item.RINo
-                    });
+                     new ChildModel
+                     {
+                         FullName = item.Value.FullName,
+                         DOB = item.Value.DOB,
+                         Gender = item.Value.Gender,
+                         OPV0 = item.Value.OPV0,
+                         RINo = item.Value.RINo
+                     });
             }
         }
         public async void AddChild()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new AddChildPage(Family.HouseNo));
+            await App.Current.MainPage.Navigation.PushAsync(new AddChildPage(Family.Id));
         }
     }
 }
