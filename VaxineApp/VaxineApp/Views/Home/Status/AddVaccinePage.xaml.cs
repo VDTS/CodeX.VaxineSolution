@@ -12,10 +12,10 @@ namespace VaxineApp.Views.Home.Status
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddVaccinePage : ContentPage
     {
-        public AddVaccinePage(int HouseNo)
+        public AddVaccinePage(Guid ChildId)
         {
             InitializeComponent();
-            BindingContext = new AddVaccineViewModel(HouseNo);
+            BindingContext = new AddVaccineViewModel(ChildId);
         }
     }
 }

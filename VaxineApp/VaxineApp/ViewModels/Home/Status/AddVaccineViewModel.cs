@@ -7,6 +7,7 @@ using VaxineApp.ViewModels.Base;
 using Xamarin.Forms;
 using VaxineApp.Views.Home.Status;
 using VaxineApp.Views.Home.Family;
+using Newtonsoft.Json;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
@@ -35,21 +36,27 @@ namespace VaxineApp.ViewModels.Home.Status
         }
 
         public ICommand AddVaccineCommand { private set; get; }
-        int HouseNo;
-        public AddVaccineViewModel(int houseNo)
+        Guid ChildId;
+        public AddVaccineViewModel(Guid _childId)
         {
-            HouseNo = houseNo;
+            ChildId = _childId;
             AddVaccineCommand = new Command(AddVaccine);
         }
 
         private async void AddVaccine(object obj)
         {
-            await Data.PostVaccine(HouseNo ,new VaccineModel
+            VaccineModel clinic = new VaccineModel()
             {
+                Id = Guid.NewGuid(),
                 VaccinePeriod = VaccinePeriod,
                 VaccineStatus = VaccineStatus
-            });
-            await App.Current.MainPage.Navigation.PushAsync(new ChildVaccinePage(new ChildModel { HouseNo = HouseNo }));
+            };
+
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, $"Vaccine/{ChildId}");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+            await App.Current.MainPage.Navigation.PushAsync(new ChildVaccinePage(new ChildModel { Id = ChildId }));
         }
     }
 }

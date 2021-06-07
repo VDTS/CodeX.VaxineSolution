@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -84,24 +85,24 @@ namespace VaxineApp.ViewModels.Home.Status
 
         private async void LoadVaccine()
         {
-            var data = await Data.GetVaccine(Child.HouseNo);
-            foreach (var item in data)
+            var data = await DataService.Get($"Vaccine/{Child.Id}");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(data);
+            foreach (KeyValuePair<string, VaccineModel> item in clinic)
             {
                 VaccineList.Add(
                     new VaccineModel
                     {
-                       VaccinePeriod = item.VaccinePeriod,
-                       VaccineStatus = item.VaccineStatus
+                        VaccinePeriod = item.Value.VaccinePeriod,
+                        VaccineStatus = item.Value.VaccineStatus
                     }
                     );
             }
-
             CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
         }
 
         public async void Add()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new AddVaccinePage(Child.HouseNo));
+            await App.Current.MainPage.Navigation.PushAsync(new AddVaccinePage(Child.Id));
         }
     }
 }

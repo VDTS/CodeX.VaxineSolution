@@ -13,6 +13,7 @@ using Xamarin.Forms;
 using Xamarin.CommunityToolkit.ObjectModel;
 using System.Collections.ObjectModel;
 using VaxineApp.ViewModels.Base;
+using Newtonsoft.Json;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
@@ -46,30 +47,30 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void GetChild()
         {
-            await Task.Delay(4000);
-            var family = await Data.GetFamily();
-            foreach (var item in family)
+            var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
+            foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
             {
-                var child = await Data.GetChild(item.HouseNo);
+                var data2 = await DataService.Get($"Child/{item.Value.Id}");
+                var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
                 List<ChildModel> lp = new List<ChildModel>();
-                foreach (var item2 in child)
+                foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
                 {
                     lp.Add(
                     new ChildModel
                     {
-                            HouseNo = item.HouseNo,
-                            FullName = item2.FullName,
-                            Gender = item2.Gender,
-                            DOB = item2.DOB,
-                            OPV0 = item2.OPV0,
-                            RINo = item2.RINo
+                        Id = item2.Value.Id,
+                        HouseNo = item2.Value.HouseNo,
+                        FullName = item2.Value.FullName,
+                        Gender = item2.Value.Gender,
+                        DOB = item2.Value.DOB,
+                        OPV0 = item2.Value.OPV0,
+                        RINo = item2.Value.RINo
                     });
                 }
-                FamilyGroup.Add(new ChildGroupbyFamilyModel(item.HouseNo, lp));
+                FamilyGroup.Add(new ChildGroupbyFamilyModel(item.Value.HouseNo, lp));
             }
-
         }
-
 
         public StatusViewModel()
         {
