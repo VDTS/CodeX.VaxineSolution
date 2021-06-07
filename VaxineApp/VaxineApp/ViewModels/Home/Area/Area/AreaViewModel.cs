@@ -169,13 +169,48 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
         private async void GetStat()
         {
-            TotalHouseholds = await Data.GetHouseholdsStats();
-            TotalChildren = await Data.GetChildrenStats();
-            TotalMasjeeds = await Data.GetMasjeedsStats();
-            TotalSchools = await Data.GetSchoolsStats();
-            TotalInfluencers = await Data.GetInfluencersStats();
-            TotalClinics = await Data.GetClinicStats();
-            TotalDoctors = await Data.GetDoctorsStats();
+
+            var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
+            int _children = 0;
+            foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+            {
+                var data2 = await DataService.Get($"Child/{item.Value.Id}");
+                var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
+                int _familyChildCount = 0;
+                foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                {
+                    _familyChildCount++;
+                }
+                _children += _familyChildCount;
+            }
+
+            TotalChildren = _children;
+            
+            
+            var _familyData = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _family = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_familyData);
+            TotalHouseholds = _family.Count;
+
+            var _masjeedData = await DataService.Get($"Masjeed/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _masjeed = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_masjeedData);
+            TotalMasjeeds = _masjeed.Count;
+
+            var _schoolData = await DataService.Get($"School/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _school = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_schoolData);
+            TotalSchools = _school.Count;
+
+            var _influencerData = await DataService.Get($"Influencer/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _influencer = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_influencerData);
+            TotalInfluencers = _influencer.Count;
+
+            var _clinicData = await DataService.Get($"Clinic/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_clinicData);
+            TotalClinics = _clinic.Count;
+
+            var _doctorData = await DataService.Get($"Doctor/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _doctor = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_doctorData);
+            TotalDoctors = _doctor.Count;
         }
 
         // Methods
