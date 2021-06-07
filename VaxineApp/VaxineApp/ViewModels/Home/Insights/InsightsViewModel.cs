@@ -1,4 +1,5 @@
 ﻿using Microcharts;
+using Newtonsoft.Json;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
@@ -50,17 +51,40 @@ namespace VaxineApp.ViewModels.Home.Insights
 
         private async void LoadData()
         {
-            var data = await Data.GetFemaleVsMaleChilds();
-            foreach (var item in data)
+            var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
+            int _maleChildren = 0;
+            int _femaleChildren = 0;
+            foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
             {
-                FemaleVsMaleData.Add(
+                var data2 = await DataService.Get($"Child/{item.Value.Id}");
+                var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
+                foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                {
+                    if(item2.Value.Gender == "Female")
+                    {
+                        _femaleChildren++;
+                    }
+                    else
+                    {
+                        _maleChildren++;
+                    }
+                }
+            }
+            FemaleVsMaleData.Add(
                     new FemaleVsMaleChildModel
                     {
-                        Indicator = item.Indicator,
-                        Counts = item.Counts
+                        Indicator = "Male",
+                        Counts = _maleChildren
+                    }
+                ) ;
+            FemaleVsMaleData.Add(
+                    new FemaleVsMaleChildModel
+                    {
+                        Indicator = "Female",
+                        Counts = _femaleChildren
                     }
                 );
-            }
 
             foreach (var item in FemaleVsMaleData)
             {
