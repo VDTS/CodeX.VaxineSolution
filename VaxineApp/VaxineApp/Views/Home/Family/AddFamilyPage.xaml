@@ -10,7 +10,7 @@
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
-      <Entry Text="{Binding HouseNo}"
+      <Entry Text="{Binding HouseNo, Mode=OneWayToSource}"
                                  Placeholder="House No."
                                  Keyboard="Numeric"></Entry>
       <Entry Text="{Binding ParentName}"

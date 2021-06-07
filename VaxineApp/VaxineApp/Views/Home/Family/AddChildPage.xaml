@@ -17,7 +17,7 @@
       <Entry Text="{Binding FullName, Mode=TwoWay}"
                                  Placeholder="Full Name"></Entry>
       <Picker Title="Gender"
-              SelectedItem="{Binding Gender, Mode=TwoWay}">
+              SelectedItem="{Binding Gender, Mode=OneWayToSource}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
             <x:String>Male</x:String>
@@ -25,9 +25,9 @@
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
-      <Entry Text="{Binding RINo, Mode=TwoWay}"
+      <Entry Text="{Binding RINo, Mode=OneWayToSource}"
                                  Placeholder="RI Number"></Entry>
-      <DatePicker Date="{Binding DOB, Mode=TwoWay}"></DatePicker>
+      <DatePicker Date="{Binding DOB, Mode=OneWayToSource}"></DatePicker>
 
       <StackLayout Orientation="Horizontal" Spacing="10">
         <CheckBox IsChecked="{Binding OPV0, Mode=TwoWay}" />
