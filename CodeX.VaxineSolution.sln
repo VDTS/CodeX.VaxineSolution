@@ -7,15 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxineApp.Android", "Vaxine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaxineApp", "VaxineApp\VaxineApp\VaxineApp.csproj", "{A696ACF5-AFAF-4E3E-8F53-1B2D707548FA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C4074621-61D4-4189-8E13-B65CB9EDB67A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxineAppUITest", "VaxineAppUITest\VaxineAppUITest.csproj", "{AFC95805-2FD6-4707-AB48-5C3A68F350D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaxineAppNUnitTest", "VaxineAppNUnitTest\VaxineAppNUnitTest.csproj", "{0A9ED049-495A-432C-9A50-051CE7D36211}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLib", "DataAccessLib\DataAccessLib.csproj", "{B67F1D73-7EC8-4877-A9F2-04F1DE6A01ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLib", "DataAccessLib\DataAccessLib.csproj", "{B67F1D73-7EC8-4877-A9F2-04F1DE6A01ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{A696ACF5-AFAF-4E3E-8F53-1B2D707548FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A696ACF5-AFAF-4E3E-8F53-1B2D707548FA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A696ACF5-AFAF-4E3E-8F53-1B2D707548FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75016FCC-E5CF-48F1-A077-8F2C8F651FD6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFC95805-2FD6-4707-AB48-5C3A68F350D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AFC95805-2FD6-4707-AB48-5C3A68F350D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFC95805-2FD6-4707-AB48-5C3A68F350D5}.Release|Any CPU.ActiveCfg = Release|Any CPU

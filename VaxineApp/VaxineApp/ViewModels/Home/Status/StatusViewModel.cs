@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
-using DataAccess;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
@@ -60,6 +59,7 @@ namespace VaxineApp.ViewModels.Home.Status
                     new ChildModel
                     {
                         Id = item2.Value.Id,
+                        FullName = item2.Value.FullName,
                         Gender = item2.Value.Gender,
                         DOB = item2.Value.DOB,
                         OPV0 = item2.Value.OPV0,

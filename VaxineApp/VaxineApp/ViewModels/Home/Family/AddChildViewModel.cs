@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
-using DataAccess;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
