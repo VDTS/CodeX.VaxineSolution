@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccessLib;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
@@ -132,7 +134,7 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public ProfileViewModel()
         {
-            SaveDataCommand = new Command(SaveData);
+            //SaveDataCommand = new Command(SaveData);
             EditProfileCommand = new Command(EditProfile);
             GetProfile();
         }
@@ -141,57 +143,52 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public async void GetProfile()
         {
-            var data = await Data.GetProfile();
-
-            if(data != null)
+            var data = await DataService.Get($"Profile");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
+            foreach (KeyValuePair<string, ProfileModel> item in clinic)
             {
-                Profile = new ProfileModel
+                if(item.Value.Email == SharedData.Email)
                 {
-                    FullName = data.FullName,
-                    Age = data.Age,
-                    Email = data.Email,
-                    FatherOrHusbandName = data.FatherOrHusbandName,
-                    Gender = data.Gender,
-                    Role = data.Role,
-                    Team = data.Team,
-                    Cluster = data.Cluster,
-                    Area = data.Area
-                };
-
-                FullName = Profile.FullName;
-                Gender = Profile.Gender;
-                FatherOrHusbandName = Profile.FatherOrHusbandName;
-                Age = Profile.Age;
-                Email = Profile.Email;
-                Role = Profile.Role;
-            }
-        }
-        async void SaveData(object obj)
-        {
-            try
-            {
-                await Data.PutProfile(
-                    new ProfileModel
+                    Profile = new ProfileModel
                     {
-                        FullName = FullName,
-                        Gender = Gender,
-                        Age = Age,
-                        FatherOrHusbandName = FatherOrHusbandName,
-                        Email = Email,
-                        Role = Profile.Role,
-                        Area = Profile.Area,
-                        Cluster = Profile.Cluster,
-                        Team = Profile.Team
-                    }
-                    );
-                var route = $"//{nameof(ProfilePage)}";
-                await Shell.Current.GoToAsync(route);
-            }
-            catch (Exception)
-            {
-                throw;
+                        FullName = item.Value.FullName,
+                        Age = item.Value.Age,
+                        Email = item.Value.Email,
+                        FatherOrHusbandName = item.Value.FatherOrHusbandName,
+                        Gender = item.Value.Gender,
+                        Role = item.Value.Role,
+                        TeamId = item.Value.TeamId,
+                        ClusterId = item.Value.ClusterId
+                    };
+                }
             }
         }
+        //async void SaveData(object obj)
+        //{
+        //    try
+        //    {
+        //        await Data.PutProfile(
+        //            new ProfileModel
+        //            {
+        //                FullName = FullName,
+        //                Gender = Gender,
+        //                Age = Age,
+        //                FatherOrHusbandName = FatherOrHusbandName,
+        //                Email = Email,
+        //                Role = Profile.Role,
+        //                Area = Profile.Area,
+        //                Cluster = Profile.Cluster,
+        //                Team = Profile.Team
+        //            }
+        //            );
+        //        var route = $"//{nameof(ProfilePage)}";
+        //        await Shell.Current.GoToAsync(route);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
         #endregion
 
         #region RouteMethods
