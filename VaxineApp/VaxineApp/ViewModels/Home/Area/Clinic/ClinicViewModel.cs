@@ -67,7 +67,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 
         private async void DeleteClinic(object obj)
         {
-            await Data.DelClinic(SelectedClinic.ClinicName);
+            //await Data.DelClinic(SelectedClinic.ClinicName);
         }
 
 

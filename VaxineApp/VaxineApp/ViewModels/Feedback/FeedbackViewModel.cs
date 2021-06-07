@@ -1,4 +1,5 @@
 ﻿using Octokit;
+using DataAccessLib;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,6 @@ using Xamarin.Forms;
 using Octokit.Internal;
 using System.Collections.ObjectModel;
 using VaxineApp.Models.Metadata;
-using DataAccess;
 
 namespace VaxineApp.ViewModels.Feedback
 {

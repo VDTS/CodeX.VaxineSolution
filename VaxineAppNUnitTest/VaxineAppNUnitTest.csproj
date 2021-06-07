@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
     <ProjectReference Include="..\VaxineApp\VaxineApp\VaxineApp.csproj" />
   </ItemGroup>
 
