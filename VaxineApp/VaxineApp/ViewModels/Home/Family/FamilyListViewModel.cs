@@ -48,6 +48,7 @@ namespace VaxineApp.ViewModels.Home.Family
             }
         }
 
+
         public ICommand AddFamilyCommand { private set; get; }
         public ICommand TapOnItemCommand { private set; get; }
         public AsyncCommand GetFamilyCommand { private set; get; }
@@ -70,6 +71,7 @@ namespace VaxineApp.ViewModels.Home.Family
                 Family.Add(
                     new GetFamilyModel
                     {
+                        Id = item.Value.Id,
                         ParentName = item.Value.ParentName,
                         PhoneNumber = item.Value.PhoneNumber,
                         HouseNo = item.Value.HouseNo

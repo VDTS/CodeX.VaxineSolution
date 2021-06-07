@@ -1,4 +1,5 @@
-﻿using DataAccess;
+﻿using DataAccessLib.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace VaxineApp.Views.Home.Family
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddChildPage : ContentPage
     {
-        protected DbContext Data = new DbContext();
+        protected DbService DataService = new DbService();
         public event PropertyChangedEventHandler PropertyChanged;
         public void RaisedPropertyChanged(string PropertyName)
         {
@@ -66,31 +67,39 @@ namespace VaxineApp.Views.Home.Family
                 RaisedPropertyChanged(nameof(RINo));
             }
         }
-        int HouseNo;
+        Guid FamilyId;
         //public ICommand SaveDataCommand { private set; get; }
         public AddChildPage()
         {
 
         }
-        public AddChildPage(int houseNo)
+        public AddChildPage(Guid familyId)
         {
             InitializeComponent();
-            HouseNo = houseNo;
+            FamilyId = familyId;
             PageContent.BindingContext = this;
             //SaveDataCommand = new Command(SaveChild);
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Data.PostChild(new ChildModel
+            ChildModel clinic = new ChildModel()
             {
-                HouseNo = HouseNo,
+                Id = Guid.NewGuid(),
                 FullName = FullName,
-                DOB = DOB, 
+                DOB = DOB,
                 Gender = Gender,
                 OPV0 = OPV0,
                 RINo = RINo
-            }, HouseNo);
-            await Navigation.PushAsync(new FamilyDetailsPage(new GetFamilyModel { HouseNo = HouseNo}));
+            };
+
+            var data = JsonConvert.SerializeObject(clinic);
+
+            string a = DataService.Post(data, $"Child/{FamilyId}");
+            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+
+            //var route = $"//{nameof(ClinicPage)}";
+            //await Shell.Current.GoToAsync(route);
+            await Navigation.PushAsync(new FamilyDetailsPage(new GetFamilyModel { Id = FamilyId}));
             //var route = $"../";
             //await Shell.Current.GoToAsync(route);
         }
