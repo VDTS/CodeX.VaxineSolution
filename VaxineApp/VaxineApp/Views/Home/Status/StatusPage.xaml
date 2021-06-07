@@ -31,7 +31,8 @@
                  RefreshColor="#2196f3">
       <CollectionView ItemsSource="{Binding FamilyGroup, Mode=TwoWay}"
                       SelectionMode="Single"
-                      SelectionChanged="CollectionView_SelectionChanged"
+                      SelectionChangedCommand="{Binding SelectionChangedCommand}"
+                      SelectedItem="{Binding SelectedItem}"
                       IsGrouped="True">
         <CollectionView.Header>
           <Grid>

@@ -15,21 +15,6 @@ namespace VaxineApp.Views.Home.Status
         public StatusPage()
         {
             InitializeComponent();
-
-        }
-
-        async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var child = e.CurrentSelection.FirstOrDefault() as ChildModel;
-            if (child == null)
-            {
-                return;
-            }
-            else
-            {
-                await Navigation.PushAsync(new ChildVaccinePage(child));
-                ((CollectionView)sender).SelectedItem = null;
-            }
         }
     }
 }

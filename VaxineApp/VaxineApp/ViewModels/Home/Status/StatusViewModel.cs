@@ -18,6 +18,17 @@ namespace VaxineApp.ViewModels.Home.Status
 {
     public class StatusViewModel : BaseViewModel
     {
+        private ChildModel _selectedItem;
+
+        public ChildModel SelectedItem
+        {
+            get { return _selectedItem; }
+            set
+            {
+                _selectedItem = value;
+                RaisedPropertyChanged(nameof(SelectedItem));
+            }
+        }
         private bool _isBusy;
 
         public bool IsBusy
@@ -42,6 +53,7 @@ namespace VaxineApp.ViewModels.Home.Status
         }
         public ICommand RegistrationPageCommand { private set; get; }
         public AsyncCommand GetFamilyCommand { private set; get; }
+        public ICommand SelectionChangedCommand { private set; get; }
         public ICommand FamiliesCommand { private set; get; }
 
         public async void GetChild()
@@ -77,8 +89,21 @@ namespace VaxineApp.ViewModels.Home.Status
             GetFamilyCommand = new AsyncCommand(Refresh);
             //RegistrationPageCommand = new Command(Add);
             //FamiliesCommand = new Command(Families);
-            //CollectionView_SelectionChangedCommand = new Command<>(CollectionView_SelectionChanged);
+            SelectionChangedCommand = new Command(SelectionChanged);
         }
+
+        private async void SelectionChanged(object obj)
+        {
+            if (SelectedItem == null)
+            {
+                return;
+            }
+            else
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new ChildVaccinePage(SelectedItem));
+            }
+        }
+
         async Task Refresh()
         {
             IsBusy = true;
