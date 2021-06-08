@@ -57,8 +57,7 @@ namespace VaxineApp.ViewModels.Home.Status
             string a = DataService.Post(data, $"Vaccine/{Child.Id}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
-            var JsonChild = JsonConvert.SerializeObject(Child);
-            var route = $"{nameof(ChildVaccinePage)}?Child={JsonChild}";
+            var route = $"//{nameof(StatusPage)}";
             await Shell.Current.GoToAsync(route);
         }
     }
