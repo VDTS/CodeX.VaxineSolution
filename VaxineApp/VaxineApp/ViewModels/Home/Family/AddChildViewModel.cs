@@ -91,8 +91,7 @@ namespace VaxineApp.ViewModels.Home.Family
             string a = DataService.Post(data, $"Child/{Family.Id}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
-            var JsonFamily = JsonConvert.SerializeObject(Family);
-            var route = $"{nameof(FamilyDetailsPage)}?Family={JsonFamily}";
+            var route = $"//{nameof(FamilyListPage)}";
             await Shell.Current.GoToAsync(route);
         }
     }
