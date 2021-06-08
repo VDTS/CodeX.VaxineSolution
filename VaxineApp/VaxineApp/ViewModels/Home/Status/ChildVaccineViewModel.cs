@@ -102,7 +102,9 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void Add()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new AddVaccinePage(Child.Id));
+            var jsonChild = JsonConvert.SerializeObject(Child);
+            var route = $"{nameof(AddVaccinePage)}?Child={jsonChild}";
+            await Shell.Current.GoToAsync(route);
         }
     }
 }

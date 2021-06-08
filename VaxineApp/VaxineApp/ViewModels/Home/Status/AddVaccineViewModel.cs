@@ -36,10 +36,10 @@ namespace VaxineApp.ViewModels.Home.Status
         }
 
         public ICommand AddVaccineCommand { private set; get; }
-        Guid ChildId;
-        public AddVaccineViewModel(Guid _childId)
+        ChildModel Child;
+        public AddVaccineViewModel(ChildModel _child)
         {
-            ChildId = _childId;
+            Child = _child;
             AddVaccineCommand = new Command(AddVaccine);
         }
 
@@ -54,10 +54,12 @@ namespace VaxineApp.ViewModels.Home.Status
 
             var data = JsonConvert.SerializeObject(clinic);
 
-            string a = DataService.Post(data, $"Vaccine/{ChildId}");
+            string a = DataService.Post(data, $"Vaccine/{Child.Id}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-            //await App.Current.MainPage.Navigation.PushAsync(new ChildVaccinePage(new ChildModel { Id = ChildId }));
-            await Shell.Current.GoToAsync("..");
+
+            var JsonChild = JsonConvert.SerializeObject(Child);
+            var route = $"{nameof(ChildVaccinePage)}?Child={JsonChild}";
+            await Shell.Current.GoToAsync(route);
         }
     }
 }
