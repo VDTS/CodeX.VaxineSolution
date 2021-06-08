@@ -91,7 +91,7 @@ namespace VaxineApp.ViewModels.Home.Family
             string a = DataService.Post(data, $"Child/{FamilyId}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
-            await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(new GetFamilyModel { Id = FamilyId }));
+            //await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(new GetFamilyModel { Id = FamilyId }));
         }
     }
 }

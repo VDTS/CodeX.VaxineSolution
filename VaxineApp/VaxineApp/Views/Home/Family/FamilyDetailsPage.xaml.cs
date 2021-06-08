@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -12,13 +13,19 @@ using Xamarin.Forms.Xaml;
 
 namespace VaxineApp.Views.Home.Family
 {
+    [QueryProperty(nameof(Family), nameof(Family))]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FamilyDetailsPage : ContentPage
     {
-        public FamilyDetailsPage(GetFamilyModel family)
+        public string Family { get; set; }
+        public FamilyDetailsPage()
         {
             InitializeComponent();
-            BindingContext = new FamilyDetailsViewModel(family);
+        }
+        protected override void OnAppearing()
+        {
+            var result = JsonConvert.DeserializeObject<GetFamilyModel>(Family);
+            BindingContext = new FamilyDetailsViewModel(result);
         }
     }
 }
