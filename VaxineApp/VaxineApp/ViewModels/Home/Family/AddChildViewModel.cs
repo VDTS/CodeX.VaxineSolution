@@ -15,11 +15,11 @@ namespace VaxineApp.ViewModels.Home.Family
 {
     public class AddChildViewModel : BaseViewModel
     {
-        Guid FamilyId;
+        GetFamilyModel Family;
         public ICommand AddChildCommand { private set; get; }
-        public AddChildViewModel(Guid _familyId)
+        public AddChildViewModel(GetFamilyModel _family)
         {
-            FamilyId = _familyId;
+            Family = _family;
             AddChildCommand = new Command(AddChild);
         }
         
@@ -88,10 +88,12 @@ namespace VaxineApp.ViewModels.Home.Family
 
             var data = JsonConvert.SerializeObject(clinic);
 
-            string a = DataService.Post(data, $"Child/{FamilyId}");
+            string a = DataService.Post(data, $"Child/{Family.Id}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
-            //await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(new GetFamilyModel { Id = FamilyId }));
+            var JsonFamily = JsonConvert.SerializeObject(Family);
+            var route = $"{nameof(FamilyDetailsPage)}?Family={JsonFamily}";
+            await Shell.Current.GoToAsync(route);
         }
     }
 }

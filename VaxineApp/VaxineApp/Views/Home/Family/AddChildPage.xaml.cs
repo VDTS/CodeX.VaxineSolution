@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -12,11 +13,11 @@ using Xamarin.Forms.Xaml;
 
 namespace VaxineApp.Views.Home.Family
 {
-    [QueryProperty(nameof(FamilyId), nameof(FamilyId))]
+    [QueryProperty(nameof(Family), nameof(Family))]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddChildPage : ContentPage
     {
-        public string FamilyId { get; set; }
+        public string Family { get; set; }
         public AddChildPage()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace VaxineApp.Views.Home.Family
 
         protected override void OnAppearing()
         {
-            Guid.TryParse(FamilyId, out var result);
+            var result = JsonConvert.DeserializeObject<GetFamilyModel>(Family);
             BindingContext = new AddChildViewModel(result) ;
         }
     }
