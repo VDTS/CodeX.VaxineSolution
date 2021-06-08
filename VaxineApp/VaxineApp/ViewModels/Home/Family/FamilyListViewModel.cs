@@ -108,7 +108,10 @@ namespace VaxineApp.ViewModels.Home.Family
             }
             else
             {
-                await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(SelectedFamily));
+                var JsonSelectedFamily = JsonConvert.SerializeObject(SelectedFamily);
+                var route = $"{nameof(FamilyDetailsPage)}?Family={JsonSelectedFamily}";
+                await Shell.Current.GoToAsync(route);
+                //await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(SelectedFamily));
                 //((CollectionView)sender).SelectedItem = null;
             }
         }
