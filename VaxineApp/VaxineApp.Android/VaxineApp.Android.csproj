@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="AuthDroid.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="NativeApi\PhotoPickerService.cs" />
     <Compile Include="Renderer\AndroidEntryRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,5 +180,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\AppIcon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

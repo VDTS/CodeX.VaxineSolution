@@ -7,6 +7,9 @@
   <ScrollView>
     <StackLayout Padding="40" Spacing="10">
       <Image Source="Profile_PhotoPlaceholder.png"></Image>
+      <Button Text=""
+              FontFamily="SegoeMDL2"
+              Command="{Binding OpenFileBrowserCommad}"></Button>
       <BoxView   VerticalOptions="Center"
                  HorizontalOptions="Center"
                  HeightRequest="1"
