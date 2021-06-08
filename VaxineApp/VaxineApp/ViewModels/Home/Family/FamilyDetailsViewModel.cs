@@ -51,7 +51,8 @@ namespace VaxineApp.ViewModels.Home.Family
         }
         public async void AddChild()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new AddChildPage(Family.Id));
+            var route = $"{nameof(AddChildPage)}?FamilyId={Family.Id}";
+            await Shell.Current.GoToAsync(route);
         }
     }
 }
