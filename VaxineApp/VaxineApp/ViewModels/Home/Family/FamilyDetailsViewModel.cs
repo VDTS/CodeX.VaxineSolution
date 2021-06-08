@@ -51,7 +51,8 @@ namespace VaxineApp.ViewModels.Home.Family
         }
         public async void AddChild()
         {
-            var route = $"{nameof(AddChildPage)}?FamilyId={Family.Id}";
+            var JsonFamily = JsonConvert.SerializeObject(Family);
+            var route = $"{nameof(AddChildPage)}?Family={JsonFamily}";
             await Shell.Current.GoToAsync(route);
         }
     }
