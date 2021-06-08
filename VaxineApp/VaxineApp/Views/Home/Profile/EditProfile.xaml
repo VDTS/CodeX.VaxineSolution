@@ -3,11 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Profile.EditProfile"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
              Title="Edit Profile">
-  <ContentPage.BindingContext>
-    <ViewModel:ProfileViewModel></ViewModel:ProfileViewModel>
-  </ContentPage.BindingContext>
   <ScrollView>
     <StackLayout Padding="40" Spacing="10">
       <Image Source="Profile_PhotoPlaceholder.png"></Image>
@@ -15,10 +11,10 @@
                  HorizontalOptions="Center"
                  HeightRequest="1"
                  WidthRequest="200"></BoxView>
-      <Entry Text="{Binding FullName}"
+      <Entry Text="{Binding Profile.FullName}"
                                  Placeholder="Name"></Entry>
       <Picker Title="Gender"
-              SelectedItem="{Binding Gender}">
+              SelectedItem="{Binding Profile.Gender}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
             <x:String>Male</x:String>
@@ -26,9 +22,9 @@
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
-      <Entry Text="{Binding FatherOrHusbandName}"
+      <Entry Text="{Binding Profile.FatherOrHusbandName}"
                                  Placeholder="Father or Husband Name"></Entry>
-      <Entry Text="{Binding Age, Mode=OneWayToSource}"
+      <Entry Text="{Binding Profile.Age}"
              Placeholder="Age"></Entry>
       <Button Text="Update Profile"
           TranslationY="50"
