@@ -4,6 +4,7 @@
              x:Class="VaxineApp.Views.Login.LoginPage"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Login"
+             xmlns:Behaviors="clr-namespace:VaxineApp.Behaviors"
              Shell.FlyoutBehavior="Disabled"
              Shell.NavBarIsVisible="False">
   <ContentPage.BindingContext>
@@ -37,7 +38,11 @@
                    Grid.Row="2"
                    Spacing="10">
         <Entry Text="{Binding InputUserEmail}"
-               Placeholder="Email or Phone"></Entry>
+               Placeholder="Email or Phone">
+          <Entry.Behaviors>
+            <Behaviors:LoginEmailBehavior></Behaviors:LoginEmailBehavior>
+          </Entry.Behaviors>
+        </Entry>
         <Entry IsPassword="True"
                ClearButtonVisibility="WhileEditing"
                IsTextPredictionEnabled="false"
