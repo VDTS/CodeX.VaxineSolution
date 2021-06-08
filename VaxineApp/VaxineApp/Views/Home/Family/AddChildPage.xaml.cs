@@ -12,13 +12,20 @@ using Xamarin.Forms.Xaml;
 
 namespace VaxineApp.Views.Home.Family
 {
+    [QueryProperty(nameof(FamilyId), nameof(FamilyId))]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddChildPage : ContentPage
     {
-        public AddChildPage(Guid FamilyId)
+        public string FamilyId { get; set; }
+        public AddChildPage()
         {
             InitializeComponent();
-            BindingContext = new AddChildViewModel(FamilyId) ;
+        }
+
+        protected override void OnAppearing()
+        {
+            Guid.TryParse(FamilyId, out var result);
+            BindingContext = new AddChildViewModel(result) ;
         }
     }
 }
