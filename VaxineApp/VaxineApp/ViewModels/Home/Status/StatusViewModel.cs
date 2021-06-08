@@ -100,7 +100,9 @@ namespace VaxineApp.ViewModels.Home.Status
             }
             else
             {
-                await App.Current.MainPage.Navigation.PushAsync(new ChildVaccinePage(SelectedItem));
+                var SelectedItemJson = JsonConvert.SerializeObject(SelectedItem);
+                var route = $"{nameof(ChildVaccinePage)}?Child={SelectedItemJson}";
+                await Shell.Current.GoToAsync(route);
             }
         }
 
