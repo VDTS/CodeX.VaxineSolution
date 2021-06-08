@@ -56,7 +56,8 @@ namespace VaxineApp.ViewModels.Home.Status
 
             string a = DataService.Post(data, $"Vaccine/{ChildId}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-            await App.Current.MainPage.Navigation.PushAsync(new ChildVaccinePage(new ChildModel { Id = ChildId }));
+            //await App.Current.MainPage.Navigation.PushAsync(new ChildVaccinePage(new ChildModel { Id = ChildId }));
+            await Shell.Current.GoToAsync("..");
         }
     }
 }
