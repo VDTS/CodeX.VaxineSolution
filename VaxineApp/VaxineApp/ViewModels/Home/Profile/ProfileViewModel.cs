@@ -19,7 +19,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         #endregion
 
         #region Commands
-        public ICommand SaveDataCommand { private set; get; }
+        
         public ICommand EditProfileCommand { private set; get; }
 
         #endregion
@@ -134,7 +134,6 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public ProfileViewModel()
         {
-            //SaveDataCommand = new Command(SaveData);
             EditProfileCommand = new Command(EditProfile);
             GetProfile();
         }
@@ -163,38 +162,14 @@ namespace VaxineApp.ViewModels.Home.Profile
                 }
             }
         }
-        //async void SaveData(object obj)
-        //{
-        //    try
-        //    {
-        //        await Data.PutProfile(
-        //            new ProfileModel
-        //            {
-        //                FullName = FullName,
-        //                Gender = Gender,
-        //                Age = Age,
-        //                FatherOrHusbandName = FatherOrHusbandName,
-        //                Email = Email,
-        //                Role = Profile.Role,
-        //                Area = Profile.Area,
-        //                Cluster = Profile.Cluster,
-        //                Team = Profile.Team
-        //            }
-        //            );
-        //        var route = $"//{nameof(ProfilePage)}";
-        //        await Shell.Current.GoToAsync(route);
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+        
         #endregion
 
         #region RouteMethods
         public async void EditProfile(object obj)
         {
-            var route = $"{nameof(EditProfile)}";
+            var ProfileJson = JsonConvert.SerializeObject(Profile);
+            var route = $"{nameof(EditProfile)}?Profile={ProfileJson}";
             await Shell.Current.GoToAsync(route);
         }
 
