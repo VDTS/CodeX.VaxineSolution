@@ -156,6 +156,28 @@
       </Grid>
     </DataTemplate>
   </Shell.FlyoutHeaderTemplate>
+  <Shell.FlyoutFooterTemplate>
+    <DataTemplate>
+      <Grid HeightRequest="50">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.2*"></ColumnDefinition>
+          <ColumnDefinition Width="0.3*"></ColumnDefinition>
+          <ColumnDefinition Width="0.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0"
+                Text="" FontFamily="SegoeMDL2" BackgroundColor="Transparent" TextColor="Black" FontSize="30" HorizontalOptions="Start"></Button>
+        <Label Grid.Column="1" Text="Automatic" VerticalOptions="Center" FontSize="18" TextColor="Black"></Label>
+        <Button Grid.Column="2"
+                Text=""
+                Command="{Binding GoToSettingsPageCommand}" 
+                FontFamily="SegoeMDL2"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                FontSize="30"
+                HorizontalOptions="End"></Button>
+      </Grid>
+    </DataTemplate>
+  </Shell.FlyoutFooterTemplate>
   <FlyoutItem Route="LoginPage"
               FlyoutItemIsVisible="False">
     <ShellContent ContentTemplate="{DataTemplate Login:LoginPage}"></ShellContent>
@@ -216,15 +238,6 @@
   </FlyoutItem>
 
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-  <MenuItem Text="Settings"
-            StyleClass="MenuItemLayoutStyle"
-            Command="{Binding GoToSettingsPageCommand}">
-    <MenuItem.IconImageSource>
-      <FontImageSource FontFamily="SegoeMDL2"
-                       Glyph="&#xE115;"
-                       Color="Black" />
-    </MenuItem.IconImageSource>
-  </MenuItem>
   <MenuItem Text="AboutUs"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutItem_AboutUs.png"
