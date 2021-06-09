@@ -137,11 +137,7 @@
                VerticalTextAlignment="end"
                Padding="20, 0, 0, 50"
                Grid.Row="1">
-          <Label.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding GoToProfileCommand}" />
-          </Label.GestureRecognizers>
         </Label>
-
         <Label Text="{Binding Role}"
                FontAttributes="Bold"
                TextColor="Black"
@@ -149,9 +145,6 @@
                VerticalTextAlignment="end"
                Padding="20, 0, 0, 20"
                Grid.Row="1">
-          <Label.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding GoToProfileCommand}" />
-          </Label.GestureRecognizers>
         </Label>
       </Grid>
     </DataTemplate>
@@ -238,33 +231,15 @@
   </FlyoutItem>
 
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-  <MenuItem Text="AboutUs"
+  <MenuItem Text="Profile"
             StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutItem_AboutUs.png"
-            Command="{Binding GoToAboutUsPageCommand}">
+            IconImageSource="FlyoutItem_Help.png"
+            Command="{Binding GoToProfilePageCommand}">
   </MenuItem>
   <MenuItem Text="Help"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutItem_Help.png"
             Command="{Binding GoToHelpPageCommand}">
-  </MenuItem>
-  <MenuItem Text="Feedback"
-            StyleClass="MenuItemLayoutStyle"
-            Command="{Binding FeedbackPageCommand}">
-    <MenuItem.IconImageSource>
-      <FontImageSource FontFamily="SegoeMDL2"
-                       Glyph="&#xED15;"
-                       Color="Black" />
-    </MenuItem.IconImageSource>
-  </MenuItem>
-  <MenuItem Text="PrivacyPolicy"
-            StyleClass="MenuItemLayoutStyle"
-            Command="{Binding PrivacyPolicyCommand}">
-    <MenuItem.IconImageSource>
-      <FontImageSource FontFamily="SegoeMDL2"
-                       Glyph="&#xE71D;"
-                       Color="Black" />
-    </MenuItem.IconImageSource>
   </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"
