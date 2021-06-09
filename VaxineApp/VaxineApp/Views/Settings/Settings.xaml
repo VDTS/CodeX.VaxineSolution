@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Settings.Settings"
              Shell.TabBarIsVisible="False"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings"
              Title="Settings">
+  <ContentPage.BindingContext>
+    <ViewModel:SettingsViewModel></ViewModel:SettingsViewModel>
+  </ContentPage.BindingContext>
   <ContentPage.Content>
     <Grid>
       <Grid.RowDefinitions>
@@ -11,25 +15,35 @@
         <RowDefinition Height="0.1*"></RowDefinition>
         <RowDefinition Height="0.65*"></RowDefinition>
       </Grid.RowDefinitions>
-      <StackLayout
-                   HorizontalOptions="Center"
+      <StackLayout HorizontalOptions="Center"
                    VerticalOptions="Center"
                    Grid.Row="0">
         <Label FontSize="40"
                TextColor="#2196f3"
                Text="Settings"></Label>
       </StackLayout>
-      <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="End" Spacing="20" Padding="0, 0, 20, 0">
-        <Label TextColor="#2196f3" Text="" FontSize="25" FontFamily="SegoeMDL2"></Label>
-        <Label TextColor="#2196f3" Text=""
+      <StackLayout Grid.Row="1"
+                   Orientation="Horizontal"
+                   HorizontalOptions="End"
+                   Spacing="20"
+                   Padding="0, 0, 20, 0">
+        <Label TextColor="#2196f3"
+               Text=""
+               FontSize="25"
+               FontFamily="SegoeMDL2"></Label>
+        <Label TextColor="#2196f3"
+               Text=""
                FontSize="25"
                FontFamily="SegoeMDL2"></Label>
       </StackLayout>
-      <ScrollView Grid.Row="2" Padding="25">
-        <StackLayout Orientation="Vertical" Spacing="20">
+      <ScrollView Grid.Row="2"
+                  Padding="25">
+        <StackLayout Orientation="Vertical"
+                     Spacing="20">
           <StackLayout Spacing="20">
             <Label FontSize="Body"
-                   TextColor="Black" Text="Accessibility"></Label>
+                   TextColor="Black"
+                   Text="Accessibility"></Label>
             <StackLayout Orientation="Horizontal"
                          Spacing="30">
               <Label FontSize="30"
@@ -88,7 +102,44 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="Report bug"></Label>
+                     Text="Report bug">
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding FeedbackPageCommand}"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+              </Label>
+            </StackLayout>
+          </StackLayout>
+          <StackLayout Spacing="20">
+            <Label  FontSize="Body"
+                    TextColor="Black"
+                    Text="About"></Label>
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30">
+              <Label FontSize="30"
+                     Text=""
+                     TextColor="#2196f3"
+                     FontFamily="SegoeMDL2"></Label>
+              <Label TextColor="Black"
+                     FontSize="20"
+                     Text="Privacy Policy">
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding PrivacyPolicyCommand}"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+              </Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30">
+              <Label FontSize="30"
+                     Text=""
+                     TextColor="#2196f3"
+                     FontFamily="SegoeMDL2"></Label>
+              <Label TextColor="Black"
+                     FontSize="20"
+                     Text="About us">
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding GoToAboutUsPageCommand}"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+              </Label>
             </StackLayout>
           </StackLayout>
         </StackLayout>

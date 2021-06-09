@@ -23,9 +23,6 @@ namespace VaxineApp.ViewModels
         public ICommand GoToSettingsPageCommand { private set; get; }
         public ICommand LogginOutCommand { private set; get; }
         public ICommand GoToHelpPageCommand { private set; get; }
-        public ICommand GoToAboutUsPageCommand { private set; get; }
-        public ICommand FeedbackPageCommand { private set; get; }
-        public ICommand PrivacyPolicyCommand { private set; get; }
         private string _userName;
         public string UserName {
             get { return _userName; }
@@ -53,25 +50,8 @@ namespace VaxineApp.ViewModels
             GoToProfileCommand = new Command(GoToProfile);
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
-            GoToAboutUsPageCommand = new Command(GoToAboutUsPage);
-            FeedbackPageCommand = new Command(GoToFeedbackPage);
-            PrivacyPolicyCommand = new Command(PrivacyPolicy);
             UserName = SharedData.FullName;
             Role = SharedData.Role;
-        }
-
-        private async void PrivacyPolicy(object obj)
-        {
-            var route = $"{nameof(PrivacyPolicyPage)}";
-            await Shell.Current.GoToAsync(route);
-            Shell.Current.FlyoutIsPresented = false;
-        }
-
-        private async void GoToFeedbackPage(object obj)
-        {
-            var route = $"{nameof(FeedbackPage)}";
-            await Shell.Current.GoToAsync(route);
-            Shell.Current.FlyoutIsPresented = false;
         }
 
         private async void GoToProfile(object obj)
@@ -99,10 +79,5 @@ namespace VaxineApp.ViewModels
             Shell.Current.FlyoutIsPresented = false;
         }
 
-        private async void GoToAboutUsPage(object obj)
-        {
-            await Shell.Current.GoToAsync($"{nameof(AboutUsPage)}");
-            Shell.Current.FlyoutIsPresented = false;
-        }
     }
 }
