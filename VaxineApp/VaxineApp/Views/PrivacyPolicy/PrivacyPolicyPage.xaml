@@ -7,11 +7,12 @@
   <ContentPage.BindingContext>
     <ViewModel:PrivacyPolicyViewModel></ViewModel:PrivacyPolicyViewModel>
   </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.Content>
+    <ScrollView Padding="20">
+      <StackLayout>
+        <Label Text="V1.0 - beta" FontSize="Large"></Label>
+        <Label Text="{Binding Content}" />
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
 </ContentPage>
