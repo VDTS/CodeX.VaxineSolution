@@ -4,6 +4,7 @@
              x:Class="VaxineApp.Views.Home.Area.Area.EditAreaPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Area"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
              Title="Add Area">
   <ContentPage.BindingContext>
     <ViewModel:AreaViewModel></ViewModel:AreaViewModel>

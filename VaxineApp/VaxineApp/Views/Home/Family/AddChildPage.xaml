@@ -5,6 +5,8 @@
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:pages="clr-namespace:VaxineApp.Views.Home.Family"
+             Shell.TabBarIsVisible="False"
+             Shell.PresentationMode="Modal"
              Title="Add Child">
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10"

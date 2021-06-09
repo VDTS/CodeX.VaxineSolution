@@ -4,6 +4,8 @@
              x:Class="VaxineApp.Views.Home.Family.AddFamilyPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
+             Shell.PresentationMode="Modal"
              Title="Add Family">
   <ContentPage.BindingContext>
     <ViewModel:AddFamilyViewModel></ViewModel:AddFamilyViewModel>
