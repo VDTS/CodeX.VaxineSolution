@@ -154,9 +154,6 @@
     <AndroidResource Include="Resources\drawable\ToolbarItem_Share.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Profile_PhotoPlaceholder.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Universal_Edit.png" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +177,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\AppIcon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ProfilePhoto.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

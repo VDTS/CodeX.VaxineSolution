@@ -15,8 +15,18 @@
   <ContentPage.Content>
     <ScrollView>
     <StackLayout Padding="40" Spacing="10">
-      <Image Source="Profile_PhotoPlaceholder.png"></Image>
-      <BoxView   VerticalOptions="Center"
+        <Frame CornerRadius="100"
+               HeightRequest="180"
+               WidthRequest="180"
+               HorizontalOptions="Center"
+               Padding="0"
+               IsClippedToBounds="True">
+          <Image Source="ProfilePhoto.jpg"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+          </Image>
+        </Frame>
+        <BoxView   VerticalOptions="Center"
                  HorizontalOptions="Center"
                  HeightRequest="30"
                  WidthRequest="200"></BoxView>
