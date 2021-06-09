@@ -11,6 +11,7 @@ using VaxineApp.Views.Home.Profile;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
@@ -47,7 +48,7 @@ namespace VaxineApp.ViewModels.Home.Profile
                 OpenFileBrowser();
             }else if(action == "Camera")
             {
-                await App.Current.MainPage.DisplayAlert("Not submitted!", "The camera functionality is under construction", "OK");
+                await TakePhotoAsync();
             }
             else
             {
@@ -64,6 +65,47 @@ namespace VaxineApp.ViewModels.Home.Profile
                 //image.Source = ImageSource.FromStream(() => stream);
             }
             //(sender as Button).IsEnabled = true;
+        }
+
+        async Task TakePhotoAsync()
+        {
+            try
+            {
+                var photo = await MediaPicker.CapturePhotoAsync();
+                await LoadPhotoAsync(photo);
+                await App.Current.MainPage.DisplayAlert("Not submitted!", "Taking photo functionality is under construction", "OK");
+
+                //Console.WriteLine($"CapturePhotoAsync COMPLETED: {PhotoPath}");
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature is now supported on the device
+            }
+            catch (PermissionException pEx)
+            {
+                // Permissions not granted
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"CapturePhotoAsync THREW: {ex.Message}");
+            }
+        }
+
+        async Task LoadPhotoAsync(FileResult photo)
+        {
+            // canceled
+            if (photo == null)
+            {
+                //PhotoPath = null;
+                return;
+            }
+            // save the file into local storage
+            var newFile = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+            using (var stream = await photo.OpenReadAsync())
+            using (var newStream = File.OpenWrite(newFile))
+                await stream.CopyToAsync(newStream);
+
+            //PhotoPath = newFile;
         }
     }
 }
