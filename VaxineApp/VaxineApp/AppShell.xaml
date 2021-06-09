@@ -244,6 +244,15 @@
                        Color="Black" />
     </MenuItem.IconImageSource>
   </MenuItem>
+  <MenuItem Text="PrivacyPolicy"
+            StyleClass="MenuItemLayoutStyle"
+            Command="{Binding PrivacyPolicyCommand}">
+    <MenuItem.IconImageSource>
+      <FontImageSource FontFamily="SegoeMDL2"
+                       Glyph="&#xE71D;"
+                       Color="Black" />
+    </MenuItem.IconImageSource>
+  </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutMenuItem_Logout.png"
