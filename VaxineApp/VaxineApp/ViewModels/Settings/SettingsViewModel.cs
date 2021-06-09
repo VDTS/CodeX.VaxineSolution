@@ -25,19 +25,19 @@ namespace VaxineApp.ViewModels.Settings
         }
         private async void GoToFeedbackPage(object obj)
         {
-            var route = $"{nameof(FeedbackPage)}";
-            await Shell.Current.GoToAsync(route);
+            var navigationPage = new NavigationPage(new FeedbackPage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
         private async void PrivacyPolicy(object obj)
         {
-            var route = $"{nameof(PrivacyPolicyPage)}";
-            await Shell.Current.GoToAsync(route);
+            var navigationPage = new NavigationPage(new PrivacyPolicyPage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
 
         private async void GoToAboutUsPage(object obj)
         {
-            var route = $"//{nameof(AboutUsPage)}";
-            await Shell.Current.GoToAsync(route);
+            var navigationPage = new NavigationPage(new AboutUsPage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
     }
 }
