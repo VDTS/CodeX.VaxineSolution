@@ -4,6 +4,7 @@
              x:Class="VaxineApp.Views.Home.Area.Masjeed.AditMasjeedPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
              Title="Add Masjeed">
   <ContentPage.BindingContext>
     <ViewModel:AddMasjeedViewModel></ViewModel:AddMasjeedViewModel>

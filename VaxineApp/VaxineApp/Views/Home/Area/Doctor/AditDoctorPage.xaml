@@ -4,6 +4,7 @@
              x:Class="VaxineApp.Views.Home.Area.Doctor.AditDoctorPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Doctor"
              xmlns:local1="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
              Title="Add Doctor">
   <ContentPage.BindingContext>
     <ViewModel:AddDoctorViewModel></ViewModel:AddDoctorViewModel>

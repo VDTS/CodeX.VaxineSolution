@@ -4,6 +4,7 @@
              x:Class="VaxineApp.Views.Home.Area.Influencer.AditInfluencerPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Influencer"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
              Title="Add Influencer">
   <ContentPage.BindingContext>
     <ViewModel:AddInfluecerViewModel></ViewModel:AddInfluecerViewModel>

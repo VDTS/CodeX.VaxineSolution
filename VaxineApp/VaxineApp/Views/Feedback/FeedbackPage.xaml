@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Feedback.FeedbackPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Feedback"
+             Shell.TabBarIsVisible="False"
              Title="Feedback">
   <ContentPage.BindingContext>
     <ViewModel:FeedbackViewModel></ViewModel:FeedbackViewModel>

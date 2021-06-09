@@ -4,6 +4,7 @@
              x:Class="VaxineApp.Views.Home.Area.School.AditSchoolPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.School"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
              Title="Add School">
   <ContentPage.BindingContext>
     <ViewModel:AddSchoolViewModel></ViewModel:AddSchoolViewModel>
