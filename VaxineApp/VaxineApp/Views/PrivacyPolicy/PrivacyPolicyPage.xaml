@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.PrivacyPolicy.PrivacyPolicyPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.PrivacyPolicy"
+             Shell.TabBarIsVisible="False"
              Title="Privacy Policy">
   <ContentPage.BindingContext>
     <ViewModel:PrivacyPolicyViewModel></ViewModel:PrivacyPolicyViewModel>
