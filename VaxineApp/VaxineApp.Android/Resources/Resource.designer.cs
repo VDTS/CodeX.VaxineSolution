@@ -21735,7 +21735,7 @@ namespace VaxineApp.Droid
 			public const int notify_panel_notification_icon_bg = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int Profile_PhotoPlaceholder = 2131165359;
+			public const int ProfilePhoto = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
 			public const int SavePDF = 2131165360;

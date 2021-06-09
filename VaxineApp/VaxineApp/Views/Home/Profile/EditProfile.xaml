@@ -7,7 +7,17 @@
              Title="Edit Profile">
   <ScrollView>
     <StackLayout Padding="40" Spacing="10">
-      <Image Source="Profile_PhotoPlaceholder.png"></Image>
+      <Frame CornerRadius="100"
+             HeightRequest="180"
+             WidthRequest="180"
+             HorizontalOptions="Center"
+             Padding="0"
+             IsClippedToBounds="True">
+        <Image Source="ProfilePhoto.jpg"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+        </Image>
+      </Frame>
       <Button Text=""
               FontFamily="SegoeMDL2"
               Command="{Binding BrowsePhotoCommad}"></Button>
