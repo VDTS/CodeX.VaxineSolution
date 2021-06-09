@@ -15,14 +15,42 @@ namespace VaxineApp.ViewModels.Settings
         public ICommand PrivacyPolicyCommand { private set; get; }
         public ICommand FeedbackPageCommand { private set; get; }
         public ICommand GoToAboutUsPageCommand { private set; get; }
-
+        public ICommand FontPageCommand { private set; get; }
+        public ICommand ThemesPageCommand { private set; get; }
+        public ICommand LanguagePageCommand { private set; get; }
+        public ICommand NotificationPageCommand { private set; get; }
         public SettingsViewModel()
         {
             FeedbackPageCommand = new Command(GoToFeedbackPage);
             PrivacyPolicyCommand = new Command(PrivacyPolicy);
             GoToAboutUsPageCommand = new Command(GoToAboutUsPage);
+            FontPageCommand = new Command(FontPage);
+            ThemesPageCommand = new Command(ThemesPage);
+            LanguagePageCommand = new Command(LanguagePage);
+            NotificationPageCommand = new Command(NotificationPage);
 
         }
+
+        private async void NotificationPage(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "Notifications functionality is under construction", "OK");
+        }
+
+        private async void ThemesPage(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "Themes functionality is under construction", "OK");
+        }
+
+        private async void FontPage(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "Font functionality is under construction", "OK");
+        }
+
+        private async void LanguagePage(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "Language functionality is under construction", "OK");
+        }
+
         private async void GoToFeedbackPage(object obj)
         {
             var navigationPage = new NavigationPage(new FeedbackPage());
