@@ -111,6 +111,7 @@ namespace VaxineApp.ViewModels.Home.Family
                 var JsonSelectedFamily = JsonConvert.SerializeObject(SelectedFamily);
                 var route = $"{nameof(FamilyDetailsPage)}?Family={JsonSelectedFamily}";
                 await Shell.Current.GoToAsync(route);
+                SelectedFamily = null;
                 //await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(SelectedFamily));
                 //((CollectionView)sender).SelectedItem = null;
             }
