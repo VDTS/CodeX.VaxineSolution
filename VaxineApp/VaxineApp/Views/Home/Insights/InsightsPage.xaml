@@ -8,6 +8,13 @@
   <ContentPage.BindingContext>
     <ViewModel:InsightsViewModel></ViewModel:InsightsViewModel>
   </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="Save as PDF"
+                 Command="{Binding SaveAsPDFCommand}"
+                 Priority="0" />
+  </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <ScrollView>
       <Grid Padding="20">

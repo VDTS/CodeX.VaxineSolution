@@ -12,20 +12,22 @@
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
-                 Text="Delete"
-                 Priority="2" />
-    <ToolbarItem Order="Secondary"
                  Text="Add"
                  Priority="3"
                  Command="{Binding AddMasjeedCommand}" />
     <ToolbarItem Order="Secondary"
-                 Icon="SavePDF"
-                 Text="Share"
-                 Priority="0" />
+                 Text="Delete"
+                 Command="{Binding DeleteCommand}"
+                 Priority="2" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Command="{Binding GoToMapCommand}"
                  Text="Go on map"
+                 Priority="0" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="Save as PDF"
+                 Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>

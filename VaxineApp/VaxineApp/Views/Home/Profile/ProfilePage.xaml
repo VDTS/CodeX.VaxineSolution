@@ -9,8 +9,11 @@
     <ViewModel:ProfileViewModel></ViewModel:ProfileViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
-    <ToolbarItem IconImageSource="Universal_Edit.png"
-                 Command="{Binding EditProfileCommand}" />
+    <ToolbarItem Command="{Binding EditProfileCommand}"
+                 Priority="0"
+                 Text="Edit"
+                 Order="Secondary"
+                 />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <ScrollView>

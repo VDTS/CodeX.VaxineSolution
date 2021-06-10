@@ -12,7 +12,8 @@
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
-                 Text="Share"
+                 Text="Save as PDF"
+                 Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.BindingContext>
