@@ -1,4 +1,5 @@
 ﻿using DataAccessLib;
+using DataAccessLib.Databases;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         #endregion
 
         #region Commands
-        
+
         public ICommand EditProfileCommand { private set; get; }
 
         #endregion
@@ -142,27 +143,25 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public async void GetProfile()
         {
-            var data = await DataService.Get($"Profile");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
-            foreach (KeyValuePair<string, ProfileModel> item in clinic)
+            SqliteDataService sqliteDataService = new SqliteDataService();
+            sqliteDataService.Initialize(Preferences.Get("ProfileEmail", ""));
+            var profileValue = sqliteDataService.Get("Profile");
+            var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
+
+            Profile = new ProfileModel
             {
-                if(item.Value.Email == SharedData.Email)
-                {
-                    Profile = new ProfileModel
-                    {
-                        FullName = item.Value.FullName,
-                        Age = item.Value.Age,
-                        Email = item.Value.Email,
-                        FatherOrHusbandName = item.Value.FatherOrHusbandName,
-                        Gender = item.Value.Gender,
-                        Role = item.Value.Role,
-                        TeamId = item.Value.TeamId,
-                        ClusterId = item.Value.ClusterId
-                    };
-                }
-            }
+                FullName = profile.FullName,
+                Age = profile.Age,
+                Email = profile.Email,
+                FatherOrHusbandName = profile.FatherOrHusbandName,
+                Gender = profile.Gender,
+                Role = profile.Role,
+                TeamId = profile.TeamId,
+                ClusterId = profile.ClusterId
+            };
+
         }
-        
+
         #endregion
 
         #region RouteMethods
