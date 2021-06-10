@@ -6,11 +6,10 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status"
              xmlns:converters="clr-namespace:VaxineApp.Converters"
              Title="Status">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="Search Children" />
+  </Shell.SearchHandler>
   <ContentPage.ToolbarItems>
-    <ToolbarItem Order="Primary"
-                 Icon="Search.png"
-                 Text="Search"
-                 Priority="1" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"

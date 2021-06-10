@@ -4,14 +4,13 @@
              x:Class="VaxineApp.Views.Home.Family.FamilyListPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
              Title="Family List">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="Search Family" />
+  </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:FamilyListViewModel></ViewModel:FamilyListViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
-    <ToolbarItem Order="Primary"
-                 Icon="Search.png"
-                 Text="Search"
-                 Priority="1" />
     <ToolbarItem Order="Secondary"
                  Text="Add Family"
                  Priority="3"
