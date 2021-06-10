@@ -28,6 +28,7 @@ namespace VaxineApp.ViewModels
         public ICommand LogginOutCommand { private set; get; }
         public ICommand GoToHelpPageCommand { private set; get; }
         public ICommand RemoveAccountCommand { private set; get; }
+        public ICommand GoToDarkThemesPageCommand { private set; get; }
         private string _userName;
         public string UserName {
             get { return _userName; }
@@ -56,12 +57,18 @@ namespace VaxineApp.ViewModels
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
             RemoveAccountCommand = new Command(RemoveAccount);
+            GoToDarkThemesPageCommand = new Command(GoToDarkThemesPage);
             SqliteDataService sqliteDataService = new SqliteDataService();
             sqliteDataService.Initialize(Preferences.Get("ProfileEmail", ""));
             var profileValue = sqliteDataService.Get("Profile");
             var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
             UserName = profile.FullName;
             Role = profile.Role;
+        }
+
+        private async void GoToDarkThemesPage()
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
         private async void GoToProfile(object obj)

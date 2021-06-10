@@ -166,7 +166,7 @@
           <ColumnDefinition Width="0.5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0"
-                Text="" FontFamily="SegoeMDL2" BackgroundColor="Transparent" TextColor="Black" FontSize="30" HorizontalOptions="Start"></Button>
+                Text="" FontFamily="SegoeMDL2" BackgroundColor="Transparent" TextColor="Black" FontSize="30" HorizontalOptions="Start" Command="{Binding GoToDarkThemesPageCommand}"></Button>
         <Label Grid.Column="1" Text="Automatic" VerticalOptions="Center" FontSize="18" TextColor="Black"></Label>
         <Button Grid.Column="2"
                 Text=""
