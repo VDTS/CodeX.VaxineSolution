@@ -103,6 +103,7 @@ namespace VaxineApp.ViewModels.Home.Status
                 var SelectedItemJson = JsonConvert.SerializeObject(SelectedItem);
                 var route = $"{nameof(ChildVaccinePage)}?Child={SelectedItemJson}";
                 await Shell.Current.GoToAsync(route);
+                SelectedItem = null;
             }
         }
 
