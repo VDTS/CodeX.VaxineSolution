@@ -4,14 +4,13 @@
              x:Class="VaxineApp.Views.Home.Area.Influencer.InfluencerPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Influencer"
              Title="Influencer">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="Search" />
+  </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:InfluencerViewModel></ViewModel:InfluencerViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
-    <ToolbarItem Order="Primary"
-                 Icon="Search.png"
-                 Text="Search"
-                 Priority="1" />
     <ToolbarItem Order="Secondary"
                  Text="Delete"
                  Priority="2" />

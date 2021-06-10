@@ -4,14 +4,13 @@
              x:Class="VaxineApp.Views.Home.Area.Masjeed.MasjeedPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
              Title="Masjeed">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="Search" />
+  </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:MasjeedViewModel></ViewModel:MasjeedViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
-    <ToolbarItem Order="Primary"
-                 Icon="Search.png"
-                 Text="Search"
-                 Priority="1" />
     <ToolbarItem Order="Secondary"
                  Text="Delete"
                  Priority="2" />
