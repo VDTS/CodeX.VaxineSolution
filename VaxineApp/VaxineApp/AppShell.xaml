@@ -179,10 +179,7 @@
       </Grid>
     </DataTemplate>
   </Shell.FlyoutFooterTemplate>
-  <FlyoutItem Route="LoginPage"
-              FlyoutItemIsVisible="False">
-    <ShellContent ContentTemplate="{DataTemplate Login:LoginPage}"></ShellContent>
-  </FlyoutItem>
+
 
   <FlyoutItem Title="Home">
     <FlyoutItem.Icon>
@@ -241,7 +238,9 @@
     </Tab>
 
   </FlyoutItem>
-
+  <ShellItem Route="LoginPage" FlyoutItemIsVisible="False">
+    <ShellContent ContentTemplate="{DataTemplate Login:LoginPage}"></ShellContent>
+  </ShellItem>
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
   <MenuItem Text="Profile"
             StyleClass="MenuItemLayoutStyle"
