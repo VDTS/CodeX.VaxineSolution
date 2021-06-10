@@ -14,6 +14,9 @@ using VaxineApp.Views.Settings;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using VaxineApp.Views.PrivacyPolicy;
+using DataAccessLib.Databases;
+using Newtonsoft.Json;
+using DataAccessLib.Models;
 
 namespace VaxineApp.ViewModels
 {
@@ -50,8 +53,12 @@ namespace VaxineApp.ViewModels
             GoToProfileCommand = new Command(GoToProfile);
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
-            UserName = SharedData.FullName;
-            Role = SharedData.Role;
+            SqliteDataService sqliteDataService = new SqliteDataService();
+            sqliteDataService.Initialize(Preferences.Get("ProfileEmail", ""));
+            var profileValue = sqliteDataService.Get("Profile");
+            var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
+            UserName = profile.FullName;
+            Role = profile.Role;
         }
 
         private async void GoToProfile(object obj)

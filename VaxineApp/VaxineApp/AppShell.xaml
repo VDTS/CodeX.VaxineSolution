@@ -137,7 +137,7 @@
             </Image>
           </Frame>
         </StackLayout>
-        <Label Text="Mishary Rashid"
+        <Label Text="{Binding UserName}"
                TextColor="Black"
                FontAttributes="Bold"
                FontSize="20"
@@ -146,7 +146,7 @@
                Padding="20, 0, 0, 50"
                Grid.Row="1">
         </Label>
-        <Label Text="Mobilizer"
+        <Label Text="{Binding Role}"
                FontAttributes="Bold"
                TextColor="Black"
                HorizontalTextAlignment="Center"
