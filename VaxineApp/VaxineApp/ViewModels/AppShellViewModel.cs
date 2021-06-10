@@ -80,6 +80,7 @@ namespace VaxineApp.ViewModels
 
         private async void LogginOut(object obj)
         {
+            await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
         private async void RemoveAccount(object obj)

@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using VaxineApp.Views.Login;
 
 namespace VaxineApp
 {
@@ -14,7 +15,15 @@ namespace VaxineApp
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
+            var isLoogged = Xamarin.Essentials.SecureStorage.GetAsync("isLogged").Result;
+            if (isLoogged == "1")
+            {
+                MainPage = new AppShell();
+            }
+            else
+            {
+                MainPage = new LoginPage();
+            }
         }
 
         protected override void OnStart()
