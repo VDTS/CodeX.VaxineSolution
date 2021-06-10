@@ -1,4 +1,6 @@
 ﻿using DataAccessLib;
+using DataAccessLib.Databases;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -98,8 +100,7 @@ namespace VaxineApp.ViewModels.Login
                 string Token = await auth.LoginWithEmailPassword(InputUserEmail, InputUserPassword);
                 if (Token != "")
                 {
-                    SharedData.Email = InputUserEmail;
-                    await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+                    LoadProfile(InputUserEmail);
                 }
                 else
                 {
@@ -107,6 +108,24 @@ namespace VaxineApp.ViewModels.Login
                 }
             }
         }
+
+        private async void LoadProfile(string email)
+        {
+            Preferences.Set("ProfileEmail", email);
+            SqliteDataService sqliteDataService = new SqliteDataService();
+            sqliteDataService.Initialize(email);
+            var data = await DataService.Get($"Profile");
+            var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
+            foreach (KeyValuePair<string, ProfileModel> item in clinic)
+            {
+                if (item.Value.Email == email)
+                {
+                    sqliteDataService.InsertData(new Data { Key = "Profile", Value = JsonConvert.SerializeObject(item.Value) });
+                }
+            }
+            await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+        }
+
         async private void ShowError()
         {
             await Application.Current.MainPage.DisplayAlert("Authentication failed!", "E-mail or password are incorrect. Try again!", "Cancel");
