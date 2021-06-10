@@ -17,6 +17,7 @@ using VaxineApp.Views.PrivacyPolicy;
 using DataAccessLib.Databases;
 using Newtonsoft.Json;
 using DataAccessLib.Models;
+using System.Linq;
 
 namespace VaxineApp.ViewModels
 {
@@ -26,6 +27,7 @@ namespace VaxineApp.ViewModels
         public ICommand GoToSettingsPageCommand { private set; get; }
         public ICommand LogginOutCommand { private set; get; }
         public ICommand GoToHelpPageCommand { private set; get; }
+        public ICommand RemoveAccountCommand { private set; get; }
         private string _userName;
         public string UserName {
             get { return _userName; }
@@ -53,6 +55,7 @@ namespace VaxineApp.ViewModels
             GoToProfileCommand = new Command(GoToProfile);
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
+            RemoveAccountCommand = new Command(RemoveAccount);
             SqliteDataService sqliteDataService = new SqliteDataService();
             sqliteDataService.Initialize(Preferences.Get("ProfileEmail", ""));
             var profileValue = sqliteDataService.Get("Profile");
@@ -79,7 +82,10 @@ namespace VaxineApp.ViewModels
         {
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
-
+        private async void RemoveAccount(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "Logout with Removing account and cache functionality is under construction", "OK");
+        }
         private async void GoToHelpPage(object obj)
         {
             await Shell.Current.GoToAsync($"{nameof(HelpPage)}");
