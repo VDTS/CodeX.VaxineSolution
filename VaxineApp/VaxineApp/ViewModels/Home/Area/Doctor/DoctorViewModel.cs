@@ -29,14 +29,35 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         // Properties
         public AsyncCommand GetDoctorCommand { private set; get; }
         public ICommand AddDoctorCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+        public ICommand EditCommand { private set; get; }
 
         // Constructor
         public DoctorViewModel()
         {
             GetDoctor();
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            DeleteCommand = new Command(Delete);
+            EditCommand = new Command(Edit);
             Doctor = new List<DoctorModel>();
             GetDoctorCommand = new AsyncCommand(Refresh);
             AddDoctorCommand = new Command(AddDoctor);
+        }
+
+        private async void Edit(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void Delete(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
 

@@ -66,9 +66,9 @@ namespace VaxineApp.ViewModels.Feedback
             AttachScreenshotOnGithubIssueCommand = new Command(AttachScreenshotOnGithubIssue);
         }
 
-        private void AttachScreenshotOnGithubIssue(object obj)
+        private async void AttachScreenshotOnGithubIssue(object obj)
         {
-            
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
         private async void SubmitIssueOnGithub()

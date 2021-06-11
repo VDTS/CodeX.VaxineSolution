@@ -54,10 +54,16 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         public ICommand AddClinicCommand { private set; get; }
         public ICommand GetClinicCommand { private set; get; }
         public ICommand DeleteClinicCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+        public ICommand GoToMapCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
 
         // Constructor
         public ClinicViewModel()
         {
+            DeleteCommand = new Command(Delete);
+            GoToMapCommand = new Command(GoToMap);
+            SaveAsPDFCommand = new Command(SaveAsPDF);
             SelectedClinic = new ClinicModel();
             GetClinic();
             GetClinicCommand = new AsyncCommand(Refresh);
@@ -66,9 +72,24 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             Clinics = new List<ClinicModel>();
         }
 
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void GoToMap(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void Delete(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
         private async void DeleteClinic(object obj)
         {
-            //await Data.DelClinic(SelectedClinic.ClinicName);
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
 

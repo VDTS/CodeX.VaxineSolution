@@ -39,6 +39,9 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         }
         // Commands
         public ICommand AddMasjeedCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+        public ICommand EditCommand { private set; get; }
         public ICommand GoToMapCommand { private set; get; }
         public AsyncCommand GetMasjeedCommand { private set; get; }
 
@@ -47,10 +50,28 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         public MasjeedViewModel()
         {
             Masjeed = new List<MasjeedModel>();
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            DeleteCommand = new Command(Delete);
+            EditCommand = new Command(Edit);
             GetMasjeed();
             GetMasjeedCommand = new AsyncCommand(Refresh);
             AddMasjeedCommand = new Command(AddMasjeed);
             GoToMapCommand = new Command(GoToMap);
+        }
+
+        private async void Edit(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void Delete(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
         private async void GoToMap(object obj)

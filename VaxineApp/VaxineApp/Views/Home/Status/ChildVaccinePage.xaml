@@ -3,24 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Home.Status.ChildVaccinePage"
              Title="Child Details">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="Search" />
+  </Shell.SearchHandler>
   <ContentPage.ToolbarItems>
-    <ToolbarItem Order="Primary"
-                   Icon="Search.png"
-                   Text="Search"
-                   Priority="1" />
-    <ToolbarItem Icon="Home_Registration.png"
-                 Order="Secondary"
+    <ToolbarItem Order="Secondary"
                  Text="Add Vaccine"
                  Command="{Binding AddVaccineCommand}" />
       <ToolbarItem Order="Secondary"
                    Text="Edit Current Vaccine"
+                   Command="{Binding EditCurrentVaccineCommand}"
                    Priority="3" />
     <ToolbarItem Order="Secondary"
                  Text="Delete Current Vaccine"
+                 Command="{Binding DeleteCurrentVaccineCommand}"
                  Priority="0" />
-      <ToolbarItem Order="Secondary"
-                   Text="Share"
-                   Priority="0" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="Save as PDF"
+                 Command="{Binding SaveAsPDFCommand}"
+                 Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <RefreshView  IsRefreshing="{Binding IsBusy, Mode=OneWay}"

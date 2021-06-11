@@ -53,14 +53,20 @@ namespace VaxineApp.ViewModels.Home.Family
         public ICommand AddFamilyCommand { private set; get; }
         public ICommand TapOnItemCommand { private set; get; }
         public AsyncCommand GetFamilyCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
         public FamilyListViewModel()
         {
-
+            SaveAsPDFCommand = new Command(SaveAsPDF);
             TapOnItemCommand = new Command(CollectionView_SelectionChanged);
             Family = new List<GetFamilyModel>();
             GetFamily();
             GetFamilyCommand = new AsyncCommand(Refresh);
             AddFamilyCommand = new Command(AddFamily);
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
         public async void GetFamily()

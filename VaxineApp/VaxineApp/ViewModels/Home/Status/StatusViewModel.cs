@@ -56,6 +56,7 @@ namespace VaxineApp.ViewModels.Home.Status
         public AsyncCommand GetFamilyCommand { private set; get; }
         public ICommand SelectionChangedCommand { private set; get; }
         public ICommand FamiliesCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
 
         public async void GetChild()
         {
@@ -85,12 +86,18 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public StatusViewModel()
         {
+            SaveAsPDFCommand = new Command(SaveAsPDF);
             FamilyGroup = new ObservableCollection<ChildGroupbyFamilyModel>();
             GetChild();
             GetFamilyCommand = new AsyncCommand(Refresh);
             //RegistrationPageCommand = new Command(Add);
             //FamiliesCommand = new Command(Families);
             SelectionChangedCommand = new Command(SelectionChanged);
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
         private async void SelectionChanged(object obj)
