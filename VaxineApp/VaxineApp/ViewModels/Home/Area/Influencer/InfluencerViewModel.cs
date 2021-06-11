@@ -40,14 +40,35 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         // Commands
         public AsyncCommand GetInfluencerCommand { private set; get; }
         public ICommand AddInfluencerCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+        public ICommand EditCommand { private set; get; }
 
         // Constructor
         public InfluencerViewModel()
         {
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            DeleteCommand = new Command(Delete);
+            EditCommand = new Command(Edit);
             Influencer = new List<InfluencerModel>();
             GetInfluencer();
             GetInfluencerCommand = new AsyncCommand(Refresh);
             AddInfluencerCommand = new Command(AddInfluencer);
+        }
+
+        private async void Edit(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void Delete(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
         public async void GetInfluencer()

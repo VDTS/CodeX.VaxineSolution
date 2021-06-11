@@ -137,7 +137,10 @@ namespace VaxineApp.ViewModels.Login
         {
             await Application.Current.MainPage.DisplayAlert("Authentication failed!", "E-mail or password are incorrect. Try again!", "Cancel");
         }
-        async private void ForgotPassword() { }
+        async private void ForgotPassword() 
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
         #endregion
 
     }

@@ -156,16 +156,30 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         // Commands
         public ICommand GoToEditAreaCommand { private set; get; }
         public ICommand SaveAreaCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
         public AsyncCommand GetDataCommand { private set; get; }
 
         // Constructor
         public AreaViewModel()
         {
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            DeleteCommand = new Command(Delete);
             GetArea();
             GoToEditAreaCommand = new Command(GoToEditArea);
-            //SaveAreaCommand = new Command(SaveArea);
+            SaveAreaCommand = new Command(SaveArea);
             GetDataCommand = new AsyncCommand(Refresh);
             GetStat();
+        }
+
+        private async void Delete(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
         private async void GetStat()
@@ -232,51 +246,52 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             SocialMobilizerId = Team.SocialMobilizerId;
             TeamNo = Team.TeamNo;
         }
-        //public async void SaveArea()
-        //{
-        //    var area = await Data.GetTeam();
-        //    if (area == null)
-        //    {
-        //        try
-        //        {
-        //            await Data.PostTeam(
-        //                new TeamModel
-        //                {
-        //                    TeamNo = TeamNo,
-        //                    CHWName = CHWName,
-        //                    SocialMobilizerId = SocialMobilizerId
-        //                }
-        //                );
-        //            var route = $"//{nameof(AreaPage)}";
-        //            await Shell.Current.GoToAsync(route);
-        //        }
-        //        catch (Exception)
-        //        {
-        //            throw;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        try
-        //        {
-        //            await Data.PutTeam(
-        //                 new TeamModel
-        //                 {
-        //                     TeamNo = TeamNo,
-        //                     CHWName = CHWName,
-        //                     SocialMobilizerId = SocialMobilizerId
-        //                 }
-        //                );
-        //            var route = $"//{nameof(AreaPage)}";
-        //            await Shell.Current.GoToAsync(route);
-        //        }
-        //        catch (Exception)
-        //        {
+        public async void SaveArea()
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            //    var area = await Data.GetTeam();
+            //    if (area == null)
+            //    {
+            //        try
+            //        {
+            //            await Data.PostTeam(
+            //                new TeamModel
+            //                {
+            //                    TeamNo = TeamNo,
+            //                    CHWName = CHWName,
+            //                    SocialMobilizerId = SocialMobilizerId
+            //                }
+            //                );
+            //            var route = $"//{nameof(AreaPage)}";
+            //            await Shell.Current.GoToAsync(route);
+            //        }
+            //        catch (Exception)
+            //        {
+            //            throw;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        try
+            //        {
+            //            await Data.PutTeam(
+            //                 new TeamModel
+            //                 {
+            //                     TeamNo = TeamNo,
+            //                     CHWName = CHWName,
+            //                     SocialMobilizerId = SocialMobilizerId
+            //                 }
+            //                );
+            //            var route = $"//{nameof(AreaPage)}";
+            //            await Shell.Current.GoToAsync(route);
+            //        }
+            //        catch (Exception)
+            //        {
 
-        //            throw;
-        //        }
-        //    }
-        //}
+            //            throw;
+            //        }
+            //    }
+        }
 
         // GoTo Routes
         public async void GoToEditArea()

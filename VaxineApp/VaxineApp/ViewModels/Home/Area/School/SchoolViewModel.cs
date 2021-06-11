@@ -30,13 +30,41 @@ namespace VaxineApp.ViewModels.Home.Area.School
         // Commands
         public ICommand AddSchoolCommand { private set; get; }
         public AsyncCommand GetSchoolCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand GoToMapCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+        public ICommand EditCommand { private set; get; }
         // Constructor
         public SchoolViewModel()
         {
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            GoToMapCommand = new Command(GoToMap);
+            DeleteCommand = new Command(Delete);
+            EditCommand = new Command(Edit);
             School = new List<SchoolModel>();
             GetSchool();
             GetSchoolCommand = new AsyncCommand(Refresh);
             AddSchoolCommand = new Command(AddSchool);
+        }
+
+        private async void Edit(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void Delete(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void GoToMap(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
 

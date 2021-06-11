@@ -74,13 +74,34 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public ICommand GetDataCommand { private set; get; }
         public ICommand AddVaccineCommand { private set; get; }
+        public ICommand EditCurrentVaccineCommand { private set; get; }
+        public ICommand DeleteCurrentVaccineCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
         public ChildVaccineViewModel(ChildModel child)
         {
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            EditCurrentVaccineCommand = new Command(EditCurrentVaccine);
+            DeleteCurrentVaccineCommand = new Command(DeleteCurrentVaccine);
             VaccineList = new List<VaccineModel>();
             CurrentVaccine = new VaccineModel();
             Child = child;
             LoadVaccine();
             AddVaccineCommand = new Command(Add);
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void DeleteCurrentVaccine(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void EditCurrentVaccine(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
         private async void LoadVaccine()

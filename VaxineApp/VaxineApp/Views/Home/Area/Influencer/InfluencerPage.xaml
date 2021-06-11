@@ -16,6 +16,10 @@
                  Priority="3"
                  Command="{Binding AddInfluencerCommand}" />
     <ToolbarItem Order="Secondary"
+                 Text="Edit"
+                 Command="{Binding EditCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
                  Text="Delete"
                  Command="{Binding DeleteCommand}"
                  Priority="2" />
