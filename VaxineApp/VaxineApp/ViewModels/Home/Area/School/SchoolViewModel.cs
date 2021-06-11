@@ -8,6 +8,7 @@ using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.School;
 using Xamarin.CommunityToolkit.ObjectModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.School
@@ -42,7 +43,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
         // Methods
         public async void GetSchool()
         {
-            var data = await DataService.Get($"School/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var data = await DataService.Get($"School/{Preferences.Get("TeamId", "")}");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(data);
             foreach (KeyValuePair<string, SchoolModel> item in clinic)
             {
