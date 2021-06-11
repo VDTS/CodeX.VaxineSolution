@@ -8,6 +8,7 @@ using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Influencer;
 using Xamarin.CommunityToolkit.ObjectModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Influencer
@@ -51,7 +52,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 
         public async void GetInfluencer()
         {
-            var data = await DataService.Get($"Influencer/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var data = await DataService.Get($"Influencer/{Preferences.Get("TeamId", "")}");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(data);
             foreach (KeyValuePair<string, InfluencerModel> item in clinic)
             {

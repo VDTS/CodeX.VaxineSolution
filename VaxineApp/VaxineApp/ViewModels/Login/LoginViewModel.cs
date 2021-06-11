@@ -121,6 +121,8 @@ namespace VaxineApp.ViewModels.Login
                 if (item.Value.Email == email)
                 {
                     sqliteDataService.InsertData(new Data { Key = "Profile", Value = JsonConvert.SerializeObject(item.Value) });
+                    Preferences.Set("ClusterId", item.Value.ClusterId);
+                    Preferences.Set("TeamId", item.Value.TeamId);
                 }
             }
             if(RememberMe == true)

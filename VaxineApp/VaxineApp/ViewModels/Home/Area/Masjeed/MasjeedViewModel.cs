@@ -9,6 +9,7 @@ using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Masjeed;
 using VaxineApp.Views.Shared;
 using Xamarin.CommunityToolkit.ObjectModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Masjeed
@@ -62,7 +63,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
         public async void GetMasjeed()
         {
-            var data = await DataService.Get($"Masjeed/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var data = await DataService.Get($"Masjeed/{Preferences.Get("TeamId", "")}");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(data);
             foreach (KeyValuePair<string, MasjeedModel> item in clinic)
             {

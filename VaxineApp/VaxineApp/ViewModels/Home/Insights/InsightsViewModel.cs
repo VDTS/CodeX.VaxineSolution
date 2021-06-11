@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
+using Xamarin.Essentials;
 using Entry = Microcharts.ChartEntry;
 
 namespace VaxineApp.ViewModels.Home.Insights
@@ -51,7 +52,7 @@ namespace VaxineApp.ViewModels.Home.Insights
 
         private async void LoadData()
         {
-            var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
             int _maleChildren = 0;
             int _femaleChildren = 0;

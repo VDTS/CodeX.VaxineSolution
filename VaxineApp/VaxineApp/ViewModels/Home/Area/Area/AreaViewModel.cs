@@ -9,6 +9,7 @@ using Xamarin.CommunityToolkit.ObjectModel;
 using System.Threading.Tasks;
 using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
+using Xamarin.Essentials;
 
 namespace VaxineApp.ViewModels.Home.Area.Area
 {
@@ -170,7 +171,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         private async void GetStat()
         {
 
-            var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var data = await DataService.Get($"Family/{Preferences.Get("TeamId","")}");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
             int _children = 0;
             foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
@@ -188,27 +189,27 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             TotalChildren = _children;
             
             
-            var _familyData = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _familyData = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
             var _family = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_familyData);
             TotalHouseholds = _family.Count;
 
-            var _masjeedData = await DataService.Get($"Masjeed/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _masjeedData = await DataService.Get($"Masjeed/{Preferences.Get("TeamId", "")}");
             var _masjeed = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_masjeedData);
             TotalMasjeeds = _masjeed.Count;
 
-            var _schoolData = await DataService.Get($"School/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _schoolData = await DataService.Get($"School/{Preferences.Get("TeamId", "")}");
             var _school = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_schoolData);
             TotalSchools = _school.Count;
 
-            var _influencerData = await DataService.Get($"Influencer/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _influencerData = await DataService.Get($"Influencer/{Preferences.Get("TeamId", "")}");
             var _influencer = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_influencerData);
             TotalInfluencers = _influencer.Count;
 
-            var _clinicData = await DataService.Get($"Clinic/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _clinicData = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
             var _clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_clinicData);
             TotalClinics = _clinic.Count;
 
-            var _doctorData = await DataService.Get($"Doctor/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var _doctorData = await DataService.Get($"Doctor/{Preferences.Get("TeamId", "")}");
             var _doctor = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_doctorData);
             TotalDoctors = _doctor.Count;
         }
@@ -216,7 +217,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         // Methods
         public async void GetArea()
         {
-            var data = await DataService.Get($"Team/e6a79ace-b4b5-408c-a8d6-e40b3e3238ee");
+            var data = await DataService.Get($"Team/{Preferences.Get("ClusterId", "")}");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(data);
             foreach (KeyValuePair<string, TeamModel> item in clinic)
             {

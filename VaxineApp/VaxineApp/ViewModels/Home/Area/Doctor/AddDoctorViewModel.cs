@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Doctor;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Doctor
@@ -49,7 +50,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 
             var data = JsonConvert.SerializeObject(clinic);
 
-            string a = DataService.Post(data, "Doctor/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            string a = DataService.Post(data, $"Doctor/{Preferences.Get("TeamId", "")}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
             var route = $"//{nameof(DoctorPage)}";

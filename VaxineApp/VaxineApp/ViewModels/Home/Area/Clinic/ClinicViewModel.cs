@@ -9,6 +9,7 @@ using VaxineApp.ViewModels.Base;
 using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.CommunityToolkit.ObjectModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Clinic
@@ -74,7 +75,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         // Methods
         public async void GetClinic()
         {
-            var data = await DataService.Get($"Clinic/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var data = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(data);
             foreach (KeyValuePair<string, ClinicModel> item in clinic)
             {

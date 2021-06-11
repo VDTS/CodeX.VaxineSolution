@@ -13,6 +13,7 @@ using Xamarin.CommunityToolkit.ObjectModel;
 using System.Collections.ObjectModel;
 using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
+using Xamarin.Essentials;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
@@ -58,7 +59,7 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void GetChild()
         {
-            var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e");
+            var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
             foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
             {
