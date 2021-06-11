@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
 using VaxineApp.Views.Home.Family;
+using Xamarin.Essentials;
 
 namespace VaxineApp.ViewModels.Home.Family
 {
@@ -83,7 +84,8 @@ namespace VaxineApp.ViewModels.Home.Family
                 DOB = DOB,
                 Gender = Gender,
                 OPV0 = OPV0,
-                RINo = RINo
+                RINo = RINo,
+                RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
             };
 
             var data = JsonConvert.SerializeObject(clinic);

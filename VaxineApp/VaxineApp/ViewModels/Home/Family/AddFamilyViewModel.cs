@@ -61,7 +61,8 @@ namespace VaxineApp.ViewModels.Home.Family
                 Id = Guid.NewGuid(),
                 HouseNo = HouseNo,
                 ParentName = ParentName,
-                PhoneNumber = PhoneNumber
+                PhoneNumber = PhoneNumber,
+                RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
             };
 
             var data = JsonConvert.SerializeObject(clinic);

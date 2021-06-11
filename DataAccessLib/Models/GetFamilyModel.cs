@@ -10,6 +10,7 @@ namespace DataAccessLib.Models
         public int HouseNo { get; set; }
         public string ParentName { get; set; }
         public string PhoneNumber { get; set; }
+        public Guid RegisteredBy { get; set; }
         public GetFamilyModel()
         {
             Id = new Guid();

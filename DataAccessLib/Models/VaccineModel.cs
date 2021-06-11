@@ -8,5 +8,6 @@ namespace DataAccessLib.Models
     {
         public DateTime VaccinePeriod { get; set; }
         public string VaccineStatus { get; set; }
+        public Guid RegisteredBy { get; set; }
     }
 }
