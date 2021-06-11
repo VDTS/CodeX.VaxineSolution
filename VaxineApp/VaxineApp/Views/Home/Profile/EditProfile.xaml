@@ -5,8 +5,8 @@
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              Shell.TabBarIsVisible="False"
              Title="Edit Profile">
-  <ScrollView>
-    <StackLayout Padding="40" Spacing="10">
+  <AbsoluteLayout Padding="20" HorizontalOptions="Center">
+    <StackLayout Spacing="10">
       <Frame CornerRadius="100"
              HeightRequest="180"
              WidthRequest="180"
@@ -18,15 +18,8 @@
                VerticalOptions="Center">
         </Image>
       </Frame>
-      <Button Text=""
-              FontFamily="SegoeMDL2"
-              Command="{Binding BrowsePhotoCommad}"></Button>
-      <BoxView   VerticalOptions="Center"
-                 HorizontalOptions="Center"
-                 HeightRequest="1"
-                 WidthRequest="200"></BoxView>
       <Entry Text="{Binding Profile.FullName}"
-                                 Placeholder="Name"></Entry>
+             Placeholder="Name"></Entry>
       <Picker Title="Gender"
               SelectedItem="{Binding Profile.Gender}">
         <Picker.ItemsSource>
@@ -37,16 +30,25 @@
         </Picker.ItemsSource>
       </Picker>
       <Entry Text="{Binding Profile.FatherOrHusbandName}"
-                                 Placeholder="Father or Husband Name"></Entry>
+             Placeholder="Father or Husband Name"></Entry>
       <Entry Text="{Binding Profile.Age}"
              Placeholder="Age"></Entry>
       <Button Text="Update Profile"
-          TranslationY="50"
+              TranslationY="50"
               WidthRequest="170"
               HeightRequest="50"
               HorizontalOptions="Center"
               Command="{Binding SaveDataCommand}"
               AutomationId="EditProfile_SaveButton"></Button>
     </StackLayout>
-  </ScrollView>
+    <Button Text=""
+            FontFamily="SegoeMDL2"
+            WidthRequest="45"
+            HeightRequest="45"
+            CornerRadius="40"
+            FontSize="20"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds=".85,.25,45,45"
+            Command="{Binding BrowsePhotoCommad}"></Button>
+  </AbsoluteLayout>
 </ContentPage>
