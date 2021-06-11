@@ -12,6 +12,7 @@ namespace VaxineApp.Models
         public string Gender { get; set; }
         public bool OPV0 { get; set; }
         public int RINo { get; set; }
+        public Guid RegisteredBy { get; set; }
         public ChildModel()
         {
             Id = new Guid();

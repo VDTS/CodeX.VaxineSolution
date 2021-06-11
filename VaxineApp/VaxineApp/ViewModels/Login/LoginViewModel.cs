@@ -123,6 +123,7 @@ namespace VaxineApp.ViewModels.Login
                     sqliteDataService.InsertData(new Data { Key = "Profile", Value = JsonConvert.SerializeObject(item.Value) });
                     Preferences.Set("ClusterId", item.Value.ClusterId);
                     Preferences.Set("TeamId", item.Value.TeamId);
+                    Preferences.Set("UserId", item.Value.Id.ToString());
                 }
             }
             if(RememberMe == true)

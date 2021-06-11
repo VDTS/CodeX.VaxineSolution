@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using VaxineApp.Views.Home.Status;
 using VaxineApp.Views.Home.Family;
 using Newtonsoft.Json;
+using Xamarin.Essentials;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
@@ -49,7 +50,8 @@ namespace VaxineApp.ViewModels.Home.Status
             {
                 Id = Guid.NewGuid(),
                 VaccinePeriod = VaccinePeriod,
-                VaccineStatus = VaccineStatus
+                VaccineStatus = VaccineStatus,
+                RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
             };
 
             var data = JsonConvert.SerializeObject(clinic);
