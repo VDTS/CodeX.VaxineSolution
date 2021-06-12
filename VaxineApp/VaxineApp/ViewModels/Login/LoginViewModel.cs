@@ -97,15 +97,24 @@ namespace VaxineApp.ViewModels.Login
             }
             else
             {
-                string Token = await auth.LoginWithEmailPassword(InputUserEmail, InputUserPassword);
-                if (Token != "")
+                try
                 {
-                    LoadProfile(InputUserEmail);
+                    string Token = await auth.LoginWithEmailPassword(InputUserEmail, InputUserPassword);
+                        if (Token != "")
+                        {
+                            LoadProfile(InputUserEmail);
+                        }
+                        else
+                        {
+                            ShowError();
+                        }
                 }
-                else
+                catch (Exception ex)
                 {
-                    ShowError();
+                    await App.Current.MainPage.DisplayAlert("Error", ex.Message.ToString(), "OK");
+                    return;
                 }
+                
             }
         }
 
