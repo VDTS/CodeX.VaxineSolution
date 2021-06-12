@@ -68,6 +68,17 @@ namespace VaxineApp.ViewModels.Home.Area.School
         }
 
 
+        private async void GoToMap(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+
         // Methods
         public async void GetSchool()
         {
