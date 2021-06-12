@@ -16,7 +16,9 @@
       <Label Text="Release" FontSize="Large"></Label>
       <Label Text="{Binding Release}"></Label>
       <Label Text="Whats New?" FontSize="Large"></Label>
-      <Label Text="{Binding WhatsNewContent}"></Label>
+      <ScrollView>
+        <Label Text="{Binding WhatsNewContent}"></Label>
+      </ScrollView>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
