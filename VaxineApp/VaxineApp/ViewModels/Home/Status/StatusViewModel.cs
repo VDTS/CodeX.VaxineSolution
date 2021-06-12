@@ -90,8 +90,6 @@ namespace VaxineApp.ViewModels.Home.Status
             FamilyGroup = new ObservableCollection<ChildGroupbyFamilyModel>();
             GetChild();
             GetFamilyCommand = new AsyncCommand(Refresh);
-            //RegistrationPageCommand = new Command(Add);
-            //FamiliesCommand = new Command(Families);
             SelectionChangedCommand = new Command(SelectionChanged);
         }
 

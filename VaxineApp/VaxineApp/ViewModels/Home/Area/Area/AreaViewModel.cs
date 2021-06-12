@@ -249,48 +249,6 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         public async void SaveArea()
         {
             await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
-            //    var area = await Data.GetTeam();
-            //    if (area == null)
-            //    {
-            //        try
-            //        {
-            //            await Data.PostTeam(
-            //                new TeamModel
-            //                {
-            //                    TeamNo = TeamNo,
-            //                    CHWName = CHWName,
-            //                    SocialMobilizerId = SocialMobilizerId
-            //                }
-            //                );
-            //            var route = $"//{nameof(AreaPage)}";
-            //            await Shell.Current.GoToAsync(route);
-            //        }
-            //        catch (Exception)
-            //        {
-            //            throw;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        try
-            //        {
-            //            await Data.PutTeam(
-            //                 new TeamModel
-            //                 {
-            //                     TeamNo = TeamNo,
-            //                     CHWName = CHWName,
-            //                     SocialMobilizerId = SocialMobilizerId
-            //                 }
-            //                );
-            //            var route = $"//{nameof(AreaPage)}";
-            //            await Shell.Current.GoToAsync(route);
-            //        }
-            //        catch (Exception)
-            //        {
-
-            //            throw;
-            //        }
-            //    }
         }
 
         // GoTo Routes
