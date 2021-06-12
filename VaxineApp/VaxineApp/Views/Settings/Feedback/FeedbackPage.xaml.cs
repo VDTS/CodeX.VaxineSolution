@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home.Area.Masjeed
+namespace VaxineApp.Views.Settings.Feedback
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AditMasjeedPage : ContentPage
+    public partial class FeedbackPage : ContentPage
     {
-        public AditMasjeedPage()
+        public FeedbackPage()
         {
             InitializeComponent();
         }

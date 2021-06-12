@@ -168,7 +168,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         public async void EditProfile(object obj)
         {
             var ProfileJson = JsonConvert.SerializeObject(Profile);
-            var route = $"{nameof(EditProfile)}?Profile={ProfileJson}";
+            var route = $"{nameof(EditProfilePage)}?Profile={ProfileJson}";
             await Shell.Current.GoToAsync(route);
         }
 

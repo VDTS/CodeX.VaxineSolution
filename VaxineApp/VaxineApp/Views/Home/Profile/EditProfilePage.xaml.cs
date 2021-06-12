@@ -13,10 +13,10 @@ namespace VaxineApp.Views.Home.Profile
 {
     [QueryProperty(nameof(Profile), nameof(Profile))]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EditProfile : ContentPage
+    public partial class EditProfilePage : ContentPage
     {
         public string Profile { get; set; }
-        public EditProfile()
+        public EditProfilePage()
         {
             InitializeComponent();
         }

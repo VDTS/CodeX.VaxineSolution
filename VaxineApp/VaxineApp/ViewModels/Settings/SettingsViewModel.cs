@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.ViewModels.Base;
-using VaxineApp.Views.AboutUs;
-using VaxineApp.Views.Feedback;
-using VaxineApp.Views.PrivacyPolicy;
+using VaxineApp.Views.Settings.AboutUs;
+using VaxineApp.Views.Settings.Feedback;
+using VaxineApp.Views.Settings.PrivacyPolicy;
 using VaxineApp.Views.Settings.WhatsNew;
 using Xamarin.Forms;
 

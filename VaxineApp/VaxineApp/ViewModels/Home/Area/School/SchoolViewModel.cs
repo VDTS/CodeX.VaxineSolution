@@ -101,7 +101,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
         // Route Methods
         async void AddSchool()
         {
-            var route = $"{nameof(AditSchoolPage)}";
+            var route = $"{nameof(AddSchoolPage)}";
             await Shell.Current.GoToAsync(route);
         }
         async Task Refresh()

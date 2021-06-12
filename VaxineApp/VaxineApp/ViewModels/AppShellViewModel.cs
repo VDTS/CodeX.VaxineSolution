@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.ViewModels.Base;
-using VaxineApp.Views.AboutUs;
-using VaxineApp.Views.Feedback;
+using VaxineApp.Views.Settings.AboutUs;
+using VaxineApp.Views.Settings.Feedback;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Profile;
@@ -13,7 +13,7 @@ using VaxineApp.Views.Login;
 using VaxineApp.Views.Settings;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using VaxineApp.Views.PrivacyPolicy;
+using VaxineApp.Views.Settings.PrivacyPolicy;
 using DataAccessLib.Databases;
 using Newtonsoft.Json;
 using DataAccessLib.Models;
@@ -80,7 +80,7 @@ namespace VaxineApp.ViewModels
 
         private async void GoToSettingsPage(object obj)
         {
-            var route = $"{nameof(Settings)}";
+            var route = $"{nameof(SettingsPage)}";
             await Shell.Current.GoToAsync(route);
             Shell.Current.FlyoutIsPresented = false;
         }

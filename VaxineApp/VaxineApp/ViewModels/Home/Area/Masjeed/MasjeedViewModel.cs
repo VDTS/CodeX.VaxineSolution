@@ -104,7 +104,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         // Route Methods
         async void AddMasjeed()
         {
-            var route = $"{nameof(AditMasjeedPage)}";
+            var route = $"{nameof(AddMasjeedPage)}";
             await Shell.Current.GoToAsync(route);
         }
         async Task Refresh()
