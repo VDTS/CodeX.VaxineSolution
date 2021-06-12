@@ -85,20 +85,27 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         public async void GetMasjeed()
         {
             var data = await DataService.Get($"Masjeed/{Preferences.Get("TeamId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(data);
-            foreach (KeyValuePair<string, MasjeedModel> item in clinic)
+            if (data != "null" && data != "Error")
             {
-                Masjeed.Add(
-                    new MasjeedModel
-                    {
-                        MasjeedName = item.Value.MasjeedName,
-                        KeyInfluencer = item.Value.KeyInfluencer,
-                        DoYouHavePermissionForAdsInMasjeed = item.Value.DoYouHavePermissionForAdsInMasjeed,
-                        DoesImamSupportsVaccine = item.Value.DoesImamSupportsVaccine,
-                        Latitude = item.Value.Latitude,
-                        Longitude = item.Value.Longitude
-                    }
-                    );
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(data);
+                foreach (KeyValuePair<string, MasjeedModel> item in clinic)
+                {
+                    Masjeed.Add(
+                        new MasjeedModel
+                        {
+                            MasjeedName = item.Value.MasjeedName,
+                            KeyInfluencer = item.Value.KeyInfluencer,
+                            DoYouHavePermissionForAdsInMasjeed = item.Value.DoYouHavePermissionForAdsInMasjeed,
+                            DoesImamSupportsVaccine = item.Value.DoesImamSupportsVaccine,
+                            Latitude = item.Value.Latitude,
+                            Longitude = item.Value.Longitude
+                        }
+                        );
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Masjeed", "For adding, Go to add button", "OK");
             }
         }
         // Route Methods

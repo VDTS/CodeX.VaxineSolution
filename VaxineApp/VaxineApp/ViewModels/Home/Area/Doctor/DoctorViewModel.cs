@@ -71,16 +71,23 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         public async void GetDoctor()
         {
             var data = await DataService.Get($"Doctor/{Preferences.Get("TeamId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(data);
-            foreach (KeyValuePair<string, DoctorModel> item in clinic)
+            if (data != "null" && data != "Error")
             {
-                Doctor.Add(
-                        new DoctorModel
-                        {
-                            Name = item.Value.Name,
-                            IsHeProvindingSupportForSIAAndVaccination = item.Value.IsHeProvindingSupportForSIAAndVaccination
-                        }
-                    );
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(data);
+                foreach (KeyValuePair<string, DoctorModel> item in clinic)
+                {
+                    Doctor.Add(
+                            new DoctorModel
+                            {
+                                Name = item.Value.Name,
+                                IsHeProvindingSupportForSIAAndVaccination = item.Value.IsHeProvindingSupportForSIAAndVaccination
+                            }
+                        );
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Doctors", "For adding, Go to add tab", "OK");
             }
         }
         // Methods

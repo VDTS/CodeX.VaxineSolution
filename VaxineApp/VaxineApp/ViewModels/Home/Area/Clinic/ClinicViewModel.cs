@@ -97,17 +97,24 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         public async void GetClinic()
         {
             var data = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(data);
-            foreach (KeyValuePair<string, ClinicModel> item in clinic)
+            if (data != "null" && data != "Error")
             {
-                Clinics.Add(
-                        new ClinicModel
-                        {
-                            ClinicName = item.Value.ClinicName,
-                            Fixed = item.Value.Fixed,
-                            Outreach = item.Value.Outreach
-                        }
-                    );
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(data);
+                foreach (KeyValuePair<string, ClinicModel> item in clinic)
+                {
+                    Clinics.Add(
+                            new ClinicModel
+                            {
+                                ClinicName = item.Value.ClinicName,
+                                Fixed = item.Value.Fixed,
+                                Outreach = item.Value.Outreach
+                            }
+                        );
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Clinics", "For adding, Go to clinic tab", "OK");
             }
         }
 

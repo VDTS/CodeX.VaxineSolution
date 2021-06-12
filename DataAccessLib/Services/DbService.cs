@@ -50,12 +50,12 @@ namespace DataAccessLib.Services
                     }
                     else
                     {
-                        return "No internet";
+                        return "Error";
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    return ex.Message.ToString();
+                    return "Error";
                 }
 
             }

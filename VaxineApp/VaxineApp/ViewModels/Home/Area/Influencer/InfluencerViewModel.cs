@@ -74,18 +74,25 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         public async void GetInfluencer()
         {
             var data = await DataService.Get($"Influencer/{Preferences.Get("TeamId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(data);
-            foreach (KeyValuePair<string, InfluencerModel> item in clinic)
+            if (data != "null" && data != "Error")
             {
-                Influencer.Add(
-                    new InfluencerModel
-                    {
-                        Name = item.Value.Name,
-                        Contact = item.Value.Contact,
-                        Position = item.Value.Position,
-                        DoesHeProvidingSupport = item.Value.DoesHeProvidingSupport
-                    }
-                    );
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(data);
+                foreach (KeyValuePair<string, InfluencerModel> item in clinic)
+                {
+                    Influencer.Add(
+                        new InfluencerModel
+                        {
+                            Name = item.Value.Name,
+                            Contact = item.Value.Contact,
+                            Position = item.Value.Position,
+                            DoesHeProvidingSupport = item.Value.DoesHeProvidingSupport
+                        }
+                        );
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Influencer", "For adding, Go to add button", "OK");
             }
         }
 

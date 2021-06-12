@@ -72,18 +72,25 @@ namespace VaxineApp.ViewModels.Home.Family
         public async void GetFamily()
         {
             var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
-            foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+            if (data != "null" && data != "Error")
             {
-                Family.Add(
-                    new GetFamilyModel
-                    {
-                        Id = item.Value.Id,
-                        ParentName = item.Value.ParentName,
-                        PhoneNumber = item.Value.PhoneNumber,
-                        HouseNo = item.Value.HouseNo
-                    }
-                    );
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
+                foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+                {
+                    Family.Add(
+                        new GetFamilyModel
+                        {
+                            Id = item.Value.Id,
+                            ParentName = item.Value.ParentName,
+                            PhoneNumber = item.Value.PhoneNumber,
+                            HouseNo = item.Value.HouseNo
+                        }
+                        );
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Families and Children", "For adding, Go to Family tab", "OK");
             }
         }
         async void AddFamily()

@@ -35,18 +35,25 @@ namespace VaxineApp.ViewModels.Home.Family
         private async void LoadData()
         {
             var data = await DataService.Get($"Child/{Family.Id}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data);
-            foreach (KeyValuePair<string, ChildModel> item in clinic)
+            if (data != "null" && data != "Error")
             {
-                Childs.Add(
-                     new ChildModel
-                     {
-                         FullName = item.Value.FullName,
-                         DOB = item.Value.DOB,
-                         Gender = item.Value.Gender,
-                         OPV0 = item.Value.OPV0,
-                         RINo = item.Value.RINo
-                     });
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data);
+                foreach (KeyValuePair<string, ChildModel> item in clinic)
+                {
+                    Childs.Add(
+                         new ChildModel
+                         {
+                             FullName = item.Value.FullName,
+                             DOB = item.Value.DOB,
+                             Gender = item.Value.Gender,
+                             OPV0 = item.Value.OPV0,
+                             RINo = item.Value.RINo
+                         });
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Families and Children", "For adding, Click add button", "OK");
             }
         }
         public async void AddChild()
