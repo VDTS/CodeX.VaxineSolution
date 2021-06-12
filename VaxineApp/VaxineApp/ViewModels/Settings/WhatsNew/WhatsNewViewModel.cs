@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using System.Text;
 using VaxineApp.ViewModels.Base;
 
@@ -48,14 +50,20 @@ namespace VaxineApp.ViewModels.Settings.WhatsNew
                 RaisedPropertyChanged(nameof(WhatsNewContent));
             }
         }
-
         public WhatsNewViewModel()
         {
             Version = "1.0 - alpha";
             BuildNo = "34";
-            WhatsNewContent = "Coming soon";
             Release = "25";
-        }
 
+            DownloadFile();
+        }
+        public void DownloadFile()
+        {
+            WebClient client = new WebClient();
+            Stream stream = client.OpenRead("https://raw.githubusercontent.com/VDTS/docs/main/ReleaseNotes/25.txt");
+            StreamReader reader = new StreamReader(stream);
+            WhatsNewContent = reader.ReadToEnd();
+        }
     }
 }
