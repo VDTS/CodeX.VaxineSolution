@@ -58,8 +58,8 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
         {
             CheckForUpdateCommand = new Command(CheckForUpdate);
             Version = "1.0 - alpha";
-            BuildNo = "42";
-            Release = "33";
+            BuildNo = "46";
+            Release = "35";
 
             DownloadFile();
         }
@@ -73,7 +73,7 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
         {
             try{
                     WebClient client = new WebClient();
-                    Stream stream = client.OpenRead("https://raw.githubusercontent.com/VDTS/docs/main/ReleaseNotes/33.txt");
+                    Stream stream = client.OpenRead("https://raw.githubusercontent.com/VDTS/docs/main/ReleaseNotes/35.txt");
                     StreamReader reader = new StreamReader(stream);
                     WhatsNewContent = reader.ReadToEnd();
                  }
