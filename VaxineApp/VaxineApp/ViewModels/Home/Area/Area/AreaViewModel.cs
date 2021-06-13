@@ -185,66 +185,101 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         private async void GetStat()
         {
 
-            var data = await DataService.Get($"Family/{Preferences.Get("TeamId","")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
-            int _children = 0;
-            foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+            var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
+            if (data != "null" & data != "Error")
             {
-                var data2 = await DataService.Get($"Child/{item.Value.Id}");
-                var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
-                int _familyChildCount = 0;
-                foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
+                int _children = 0;
+                foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
                 {
-                    _familyChildCount++;
+                    var data2 = await DataService.Get($"Child/{item.Value.Id}");
+                    if (data != "null" & data != "Error")
+                    {
+                        var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
+                        int _familyChildCount = 0;
+                        foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                        {
+                            _familyChildCount++;
+                        }
+                        _children += _familyChildCount;
+                    }
                 }
-                _children += _familyChildCount;
+
+                TotalChildren = _children;
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
             }
 
-            TotalChildren = _children;
-            
-            
+
             var _familyData = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            var _family = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_familyData);
-            TotalHouseholds = _family.Count;
+            if (_familyData != "null" & data != "Error")
+            {
+                var _family = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_familyData);
+                TotalHouseholds = _family.Count;
+            }
 
             var _masjeedData = await DataService.Get($"Masjeed/{Preferences.Get("TeamId", "")}");
-            var _masjeed = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_masjeedData);
-            TotalMasjeeds = _masjeed.Count;
+            if (_masjeedData != "null" & _masjeedData != "Error")
+            {
+                var _masjeed = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_masjeedData);
+                TotalMasjeeds = _masjeed.Count;
+            }
 
             var _schoolData = await DataService.Get($"School/{Preferences.Get("TeamId", "")}");
-            var _school = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_schoolData);
-            TotalSchools = _school.Count;
+            if (_schoolData != "null" & _schoolData != "Error")
+            {
+                var _school = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_schoolData);
+                TotalSchools = _school.Count;
+            }
 
             var _influencerData = await DataService.Get($"Influencer/{Preferences.Get("TeamId", "")}");
-            var _influencer = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_influencerData);
-            TotalInfluencers = _influencer.Count;
+            if (_influencerData != "null" & _influencerData != "Error")
+            {
+                var _influencer = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_influencerData);
+                TotalInfluencers = _influencer.Count;
+            }
 
             var _clinicData = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
-            var _clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_clinicData);
-            TotalClinics = _clinic.Count;
+            if (_clinicData != "null" & _clinicData != "Error")
+            {
+                var _clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_clinicData);
+                TotalClinics = _clinic.Count;
+            }
 
             var _doctorData = await DataService.Get($"Doctor/{Preferences.Get("TeamId", "")}");
-            var _doctor = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_doctorData);
-            TotalDoctors = _doctor.Count;
+            if (_doctorData != "null" & _doctorData != "Error")
+            {
+                var _doctor = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_doctorData);
+                TotalDoctors = _doctor.Count;
+            }
         }
 
         // Methods
         public async void GetArea()
         {
             var data = await DataService.Get($"Team/{Preferences.Get("ClusterId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(data);
-            foreach (KeyValuePair<string, TeamModel> item in clinic)
+            if (data != "null" & data != "Error")
             {
-                Team = new TeamModel
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(data);
+                foreach (KeyValuePair<string, TeamModel> item in clinic)
                 {
-                    CHWName = item.Value.CHWName,
-                    SocialMobilizerId = item.Value.SocialMobilizerId,
-                    TeamNo = item.Value.TeamNo
-                };
+                    Team = new TeamModel
+                    {
+                        CHWName = item.Value.CHWName,
+                        SocialMobilizerId = item.Value.SocialMobilizerId,
+                        TeamNo = item.Value.TeamNo
+                    };
+                }
+                CHWName = Team.CHWName;
+                SocialMobilizerId = Team.SocialMobilizerId;
+                TeamNo = Team.TeamNo;
             }
-            CHWName = Team.CHWName;
-            SocialMobilizerId = Team.SocialMobilizerId;
-            TeamNo = Team.TeamNo;
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+            }
         }
         public async void SaveArea()
         {

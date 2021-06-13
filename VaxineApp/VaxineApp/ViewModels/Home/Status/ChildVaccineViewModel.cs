@@ -107,18 +107,25 @@ namespace VaxineApp.ViewModels.Home.Status
         private async void LoadVaccine()
         {
             var data = await DataService.Get($"Vaccine/{Child.Id}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(data);
-            foreach (KeyValuePair<string, VaccineModel> item in clinic)
+            if (data != "null" & data != "Error")
             {
-                VaccineList.Add(
-                    new VaccineModel
-                    {
-                        VaccinePeriod = item.Value.VaccinePeriod,
-                        VaccineStatus = item.Value.VaccineStatus
-                    }
-                    );
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(data);
+                foreach (KeyValuePair<string, VaccineModel> item in clinic)
+                {
+                    VaccineList.Add(
+                        new VaccineModel
+                        {
+                            VaccinePeriod = item.Value.VaccinePeriod,
+                            VaccineStatus = item.Value.VaccineStatus
+                        }
+                        );
+                }
+                CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
             }
-            CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+            }
         }
 
         public async void Add()

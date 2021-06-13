@@ -61,26 +61,36 @@ namespace VaxineApp.ViewModels.Home.Status
         public async void GetChild()
         {
             var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
-            foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+            if (data != "null" & data != "Error")
             {
-                var data2 = await DataService.Get($"Child/{item.Value.Id}");
-                var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
-                List<ChildModel> lp = new List<ChildModel>();
-                foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
+                foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
                 {
-                    lp.Add(
-                    new ChildModel
+                    var data2 = await DataService.Get($"Child/{item.Value.Id}");
+                    if (data2 != "null" & data2 != "Error")
                     {
-                        Id = item2.Value.Id,
-                        FullName = item2.Value.FullName,
-                        Gender = item2.Value.Gender,
-                        DOB = item2.Value.DOB,
-                        OPV0 = item2.Value.OPV0,
-                        RINo = item2.Value.RINo
-                    });
+                        var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
+                        List<ChildModel> lp = new List<ChildModel>();
+                        foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                        {
+                            lp.Add(
+                            new ChildModel
+                            {
+                                Id = item2.Value.Id,
+                                FullName = item2.Value.FullName,
+                                Gender = item2.Value.Gender,
+                                DOB = item2.Value.DOB,
+                                OPV0 = item2.Value.OPV0,
+                                RINo = item2.Value.RINo
+                            });
+                        }
+                        FamilyGroup.Add(new ChildGroupbyFamilyModel(item.Value.HouseNo, lp));
+                    }
                 }
-                FamilyGroup.Add(new ChildGroupbyFamilyModel(item.Value.HouseNo, lp));
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
             }
         }
 
