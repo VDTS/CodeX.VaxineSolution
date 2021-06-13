@@ -52,25 +52,32 @@ namespace VaxineApp.ViewModels.Home.Insights
 
         private async void LoadData()
         {
-            var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
             int _maleChildren = 0;
             int _femaleChildren = 0;
-            foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+            var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
+            if (data != "null" & data != "Error")
             {
-                var data2 = await DataService.Get($"Child/{item.Value.Id}");
-                var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
-                foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
+                foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
                 {
-                    if(item2.Value.Gender == "Female")
+                    var data2 = await DataService.Get($"Child/{item.Value.Id}");
+                    var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
+                    foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
                     {
-                        _femaleChildren++;
-                    }
-                    else
-                    {
-                        _maleChildren++;
+                        if (item2.Value.Gender == "Female")
+                        {
+                            _femaleChildren++;
+                        }
+                        else
+                        {
+                            _maleChildren++;
+                        }
                     }
                 }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
             }
             FemaleVsMaleData.Add(
                     new FemaleVsMaleChildModel
@@ -78,7 +85,7 @@ namespace VaxineApp.ViewModels.Home.Insights
                         Indicator = "Male",
                         Counts = _maleChildren
                     }
-                ) ;
+                );
             FemaleVsMaleData.Add(
                     new FemaleVsMaleChildModel
                     {

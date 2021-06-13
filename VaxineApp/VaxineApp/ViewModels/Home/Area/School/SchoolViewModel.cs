@@ -72,18 +72,25 @@ namespace VaxineApp.ViewModels.Home.Area.School
         public async void GetSchool()
         {
             var data = await DataService.Get($"School/{Preferences.Get("TeamId", "")}");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(data);
-            foreach (KeyValuePair<string, SchoolModel> item in clinic)
+            if (data != "null" & data != "Error")
             {
-                School.Add(
-                    new SchoolModel
-                    {
-                        KeyInfluencer = item.Value.KeyInfluencer,
-                        SchoolName = item.Value.SchoolName,
-                        Longitude = item.Value.Longitude,
-                        Latitude = item.Value.Latitude
-                    }
-                    );
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(data);
+                foreach (KeyValuePair<string, SchoolModel> item in clinic)
+                {
+                    School.Add(
+                        new SchoolModel
+                        {
+                            KeyInfluencer = item.Value.KeyInfluencer,
+                            SchoolName = item.Value.SchoolName,
+                            Longitude = item.Value.Longitude,
+                            Latitude = item.Value.Latitude
+                        }
+                        );
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
             }
         }
         private bool _isBusy;
