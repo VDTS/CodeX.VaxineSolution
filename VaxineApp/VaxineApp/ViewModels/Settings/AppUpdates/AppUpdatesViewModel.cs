@@ -58,8 +58,8 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
         {
             CheckForUpdateCommand = new Command(CheckForUpdate);
             Version = "1.0 - alpha";
-            BuildNo = "36";
-            Release = "27";
+            BuildNo = "37";
+            Release = "28";
 
             DownloadFile();
         }
@@ -71,10 +71,16 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
 
         public void DownloadFile()
         {
-            WebClient client = new WebClient();
-            Stream stream = client.OpenRead("https://raw.githubusercontent.com/VDTS/docs/main/ReleaseNotes/27.txt");
-            StreamReader reader = new StreamReader(stream);
-            WhatsNewContent = reader.ReadToEnd();
+            try{
+                    WebClient client = new WebClient();
+                    Stream stream = client.OpenRead("https://raw.githubusercontent.com/VDTS/docs/main/ReleaseNotes/27.txt");
+                    StreamReader reader = new StreamReader(stream);
+                    WhatsNewContent = reader.ReadToEnd();
+                 }
+                catch (Exception)
+                {
+                    WhatsNewContent = $"No release note available for this release, for earlier versions release note, see https://github.com/VDTS/docs/tree/main/ReleaseNotes";
+                }
         }
     }
 }
