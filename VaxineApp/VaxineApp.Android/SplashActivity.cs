@@ -6,6 +6,10 @@ using Android.OS;
 using Android.Util;
 using AndroidX.AppCompat.App;
 using VaxineApp.Droid;
+using Microsoft.AppCenter.Distribute;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace com.xamarin.sample.splashscreen
 {
