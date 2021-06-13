@@ -159,6 +159,20 @@
                 </Label.GestureRecognizers>
               </Label>
             </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Spacing="30">
+              <Label FontSize="30"
+                     Text=""
+                     TextColor="#2196f3"
+                     FontFamily="SegoeMDL2"></Label>
+              <Label TextColor="Black"
+                     FontSize="20"
+                     Text="App Updates">
+                <Label.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding AppUpdatesPageCommand}"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+              </Label>
+            </StackLayout>
           </StackLayout>
         </StackLayout>
       </ScrollView>
