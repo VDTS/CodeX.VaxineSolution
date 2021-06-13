@@ -6,6 +6,7 @@ using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.AboutUs;
 using VaxineApp.Views.Feedback;
 using VaxineApp.Views.PrivacyPolicy;
+using VaxineApp.Views.Settings.AppUpdates;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Settings
@@ -19,6 +20,7 @@ namespace VaxineApp.ViewModels.Settings
         public ICommand ThemesPageCommand { private set; get; }
         public ICommand LanguagePageCommand { private set; get; }
         public ICommand NotificationPageCommand { private set; get; }
+        public ICommand AppUpdatesPageCommand { private set; get; }
         public SettingsViewModel()
         {
             FeedbackPageCommand = new Command(GoToFeedbackPage);
@@ -28,7 +30,14 @@ namespace VaxineApp.ViewModels.Settings
             ThemesPageCommand = new Command(ThemesPage);
             LanguagePageCommand = new Command(LanguagePage);
             NotificationPageCommand = new Command(NotificationPage);
+            AppUpdatesPageCommand = new Command(AppUpdatesPage);
 
+        }
+
+        private async void AppUpdatesPage(object obj)
+        {
+            var navigationPage = new NavigationPage(new AppUpdatesPage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
 
         private async void NotificationPage(object obj)

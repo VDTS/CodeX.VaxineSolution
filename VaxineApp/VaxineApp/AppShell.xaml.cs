@@ -21,6 +21,7 @@ using VaxineApp.Views.AboutUs;
 using VaxineApp.Views.Shared;
 using VaxineApp.Views.Feedback;
 using VaxineApp.Views.PrivacyPolicy;
+using VaxineApp.Views.Settings.AppUpdates;
 
 namespace VaxineApp
 {
@@ -64,7 +65,7 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(AboutUsPage), typeof(AboutUsPage));
             Routing.RegisterRoute(nameof(FeedbackPage), typeof(FeedbackPage));
             Routing.RegisterRoute(nameof(PrivacyPolicyPage), typeof(PrivacyPolicyPage));
-
+            Routing.RegisterRoute(nameof(AppUpdatesPage), typeof(AppUpdatesPage));
         }
     }
 }

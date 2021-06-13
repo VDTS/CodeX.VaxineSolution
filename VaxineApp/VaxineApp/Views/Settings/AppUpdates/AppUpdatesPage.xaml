@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Settings.AppUpdates.AppUpdatesPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AppUpdates"
+             Title="What's New?">
+  <ContentPage.BindingContext>
+    <ViewModel:AppUpdatesViewModel></ViewModel:AppUpdatesViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout Padding="20">
+      <Label Text="Version"
+             FontSize="Large"></Label>
+      <Label Text="{Binding Version}"></Label>
+      <Label Text="Build"
+             FontSize="Large"></Label>
+      <Label Text="{Binding BuildNo}"></Label>
+      <Label Text="Release"
+             FontSize="Large"></Label>
+      <Label Text="{Binding Release}"></Label>
+      <Label Text="Whats New?"
+             FontSize="Large"></Label>
+      <ScrollView>
+        <Label Text="{Binding WhatsNewContent}"></Label>
+      </ScrollView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
