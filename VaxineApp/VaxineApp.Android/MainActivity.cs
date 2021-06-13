@@ -8,6 +8,7 @@ using Firebase;
 using System.IO;
 using Android.Content;
 using System.Threading.Tasks;
+using Microsoft.AppCenter.Distribute;
 
 namespace VaxineApp.Droid
 {
@@ -17,6 +18,7 @@ namespace VaxineApp.Droid
         internal static MainActivity Instance { get; private set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Distribute.SetEnabledForDebuggableBuild(true);
             Instance = this;
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);

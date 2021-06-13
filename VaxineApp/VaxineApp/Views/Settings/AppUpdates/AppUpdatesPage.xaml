@@ -7,7 +7,13 @@
   <ContentPage.BindingContext>
     <ViewModel:AppUpdatesViewModel></ViewModel:AppUpdatesViewModel>
   </ContentPage.BindingContext>
-  <ContentPage.Content>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="Check for updates"
+                 Priority="3"
+                 Command="{Binding CheckForUpdateCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
     <StackLayout Padding="20">
       <Label Text="Version"
              FontSize="Large"></Label>
