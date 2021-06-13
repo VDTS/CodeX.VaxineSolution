@@ -6,6 +6,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using VaxineApp.Views.Login;
+using Microsoft.AppCenter.Distribute;
 
 namespace VaxineApp
 {
@@ -28,7 +29,7 @@ namespace VaxineApp
 
         protected override void OnStart()
         {
-            AppCenter.Start("android=518d8341-3aa8-467f-ae69-fdae9b224b1b;", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("android=518d8341-3aa8-467f-ae69-fdae9b224b1b;", typeof(Analytics), typeof(Crashes), typeof(Distribute));
         }
 
         protected override void OnSleep()
