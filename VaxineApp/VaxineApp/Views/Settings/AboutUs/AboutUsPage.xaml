@@ -2,13 +2,61 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Settings.AboutUs.AboutUsPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AboutUs"
              Shell.TabBarIsVisible="False"
              Title="About us">
+  <ContentPage.BindingContext>
+    <ViewModel:AboutUsViewModel></ViewModel:AboutUsViewModel>
+  </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout Padding="40">
-      <Label Text="About us page is under implementation" />
-      <Label Text="These features are under implementation"></Label>
-      <Label Text="1: about us"></Label>
-    </StackLayout>
+    <Grid Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0"
+                   Orientation="Vertical"
+                   Spacing="20">
+        <Label Text="About VDTS" FontSize="Large"></Label>
+        <Label FontSize="Default"
+               Text="VDTS is a digital immunization software that helps in distributing and tracking vaccinations with a mobile app and web portal. It will help the field vaccinators to register children for tracking their vaccinations. The team offers digital solutions."></Label>
+        <Label Text="Our Team" FontSize="Large"></Label>
+        <Label Text="VDTS team has expertise in healthcare, public health, immunization, Communications, and digital technology."></Label>
+      </StackLayout>
+      <RefreshView Grid.Row="1">
+        <CollectionView ItemsSource="{Binding Persons}">
+          <CollectionView.ItemTemplate>
+            <DataTemplate>
+              <Grid Padding="10">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto"></RowDefinition>
+                  <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Vertical" Spacing="10">
+                <Frame CornerRadius="100"
+                       HeightRequest="180"
+                       WidthRequest="180"
+                       HorizontalOptions="Center"
+                       Padding="0"
+                       IsClippedToBounds="True">
+                  <Image Source="{Binding PhotoURL}"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                  </Image>
+                </Frame>
+                <Label FontSize="20" HorizontalOptions="Center"
+                       Text="{Binding FullName}"></Label>
+                <Label Text="{Binding Role}" HorizontalOptions="Center"></Label>
+                  <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="LinkedIn"></Button>
+                    <Button Text="Twitter"></Button>
+                  </StackLayout>
+                </StackLayout>
+              </Grid>
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
+      </RefreshView>
+    </Grid>
   </ContentPage.Content>
 </ContentPage>

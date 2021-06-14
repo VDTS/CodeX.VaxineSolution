@@ -15,6 +15,7 @@ using DataAccessLib.Databases;
 using Newtonsoft.Json;
 using DataAccessLib.Models;
 using System.Linq;
+using VaxineApp.Views.Settings.Main;
 
 namespace VaxineApp.ViewModels
 {
@@ -77,7 +78,7 @@ namespace VaxineApp.ViewModels
 
         private async void GoToSettingsPage(object obj)
         {
-            var route = $"{nameof(Settings)}";
+            var route = $"{nameof(SettingsPage)}";
             await Shell.Current.GoToAsync(route);
             Shell.Current.FlyoutIsPresented = false;
         }
