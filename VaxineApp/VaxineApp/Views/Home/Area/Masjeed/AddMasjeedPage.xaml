@@ -1,20 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Home.Area.School.AditSchoolPage"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.School"
+             x:Class="VaxineApp.Views.Home.Area.Masjeed.AddMasjeedPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
              xmlns:local="clr-namespace:VaxineApp.Renderers"
              Shell.TabBarIsVisible="False"
-             Title="Add School">
+             Title="Add Masjeed">
   <ContentPage.BindingContext>
-    <ViewModel:AddSchoolViewModel></ViewModel:AddSchoolViewModel>
+    <ViewModel:AddMasjeedViewModel></ViewModel:AddMasjeedViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
-      <Entry Placeholder="School Name"
-             Text="{Binding SchoolName}"></Entry>
+      <Entry Placeholder="Masjeed Name"
+             Text="{Binding MasjeedName}"></Entry>
       <Entry Placeholder="Key Influencer"
              Text="{Binding KeyInfluencer}"></Entry>
+
+      <StackLayout Orientation="Horizontal" Spacing="10" Padding="0, 10, 0, 0">
+        <CheckBox IsChecked="{Binding DoesImamSupportsVaccine}"></CheckBox>
+        <Label Text="Does Imam Supports Vaccine?"></Label>
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal" Spacing="10">
+        <CheckBox IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
+        <Label Text="Do You Have Permission For Ads In Masjeed?"></Label>
+      </StackLayout>
       <StackLayout Orientation="Horizontal">
         <Entry Placeholder="Latitude"
                IsEnabled="False"
@@ -40,7 +50,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding SaveSchoolCommand}"></Button>
+              Command="{Binding SaveMasjeedCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

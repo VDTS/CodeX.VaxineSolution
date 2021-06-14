@@ -11,7 +11,7 @@ using Octokit.Internal;
 using System.Collections.ObjectModel;
 using VaxineApp.Models.Metadata;
 
-namespace VaxineApp.ViewModels.Feedback
+namespace VaxineApp.ViewModels.Settings.Feedback
 {
     public class FeedbackViewModel : BaseViewModel
     {

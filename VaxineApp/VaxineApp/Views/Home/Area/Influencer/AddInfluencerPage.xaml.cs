@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Settings
+namespace VaxineApp.Views.Home.Area.Influencer
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Settings : ContentPage
+    public partial class AddInfluencerPage : ContentPage
     {
-        public Settings()
+        public AddInfluencerPage()
         {
             InitializeComponent();
         }
