@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace VaxineApp.Views.Home.Area.Doctor
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AditDoctorPage : ContentPage
+    public partial class AddDoctorPage : ContentPage
     {
-        public AditDoctorPage()
+        public AddDoctorPage()
         {
             InitializeComponent();
         }

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Feedback
+namespace VaxineApp.Views.Settings.AboutUs
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FeedbackPage : ContentPage
+    public partial class AboutUsPage : ContentPage
     {
-        public FeedbackPage()
+        public AboutUsPage()
         {
             InitializeComponent();
         }

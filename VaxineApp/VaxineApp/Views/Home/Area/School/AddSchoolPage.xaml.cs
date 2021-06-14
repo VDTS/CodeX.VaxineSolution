@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.AboutUs
+namespace VaxineApp.Views.Home.Area.School
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AboutUsPage : ContentPage
+    public partial class AddSchoolPage : ContentPage
     {
-        public AboutUsPage()
+        public AddSchoolPage()
         {
             InitializeComponent();
         }

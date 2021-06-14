@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home.Area.Influencer
+namespace VaxineApp.Views.Home.Area.Masjeed
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AditInfluencerPage : ContentPage
+    public partial class AddMasjeedPage : ContentPage
     {
-        public AditInfluencerPage()
+        public AddMasjeedPage()
         {
             InitializeComponent();
         }

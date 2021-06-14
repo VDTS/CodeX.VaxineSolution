@@ -17,11 +17,12 @@ using VaxineApp.Views.Home.Family;
 using VaxineApp.Views.Login;
 using VaxineApp.Views.Settings;
 using VaxineApp.Views.Help;
-using VaxineApp.Views.AboutUs;
 using VaxineApp.Views.Shared;
-using VaxineApp.Views.Feedback;
-using VaxineApp.Views.PrivacyPolicy;
 using VaxineApp.Views.Settings.AppUpdates;
+using VaxineApp.Views.Settings.AboutUs;
+using VaxineApp.Views.Settings.Feedback;
+using VaxineApp.Views.Settings.PrivacyPolicy;
+using VaxineApp.Views.Settings.Main;
 
 namespace VaxineApp
 {
@@ -44,23 +45,23 @@ namespace VaxineApp
                 Routing.RegisterRoute(nameof(EditAreaPage), typeof(EditAreaPage));
 
                 Routing.RegisterRoute(nameof(MasjeedPage), typeof(MasjeedPage));
-                Routing.RegisterRoute(nameof(AditMasjeedPage), typeof(AditMasjeedPage));
+                Routing.RegisterRoute(nameof(AddMasjeedPage), typeof(AddMasjeedPage));
 
                 Routing.RegisterRoute(nameof(SchoolPage), typeof(SchoolPage));
-                Routing.RegisterRoute(nameof(AditSchoolPage), typeof(AditSchoolPage));
+                Routing.RegisterRoute(nameof(AddSchoolPage), typeof(AddSchoolPage));
 
                 Routing.RegisterRoute(nameof(InfluencerPage), typeof(InfluencerPage));
-                Routing.RegisterRoute(nameof(AditInfluencerPage), typeof(AditInfluencerPage));
+                Routing.RegisterRoute(nameof(AddInfluencerPage), typeof(AddInfluencerPage));
 
                 Routing.RegisterRoute(nameof(ClinicPage), typeof(ClinicPage));
                 Routing.RegisterRoute(nameof(AddClinicPage), typeof(AddClinicPage));
 
                 Routing.RegisterRoute(nameof(DoctorPage), typeof(DoctorPage));
-                Routing.RegisterRoute(nameof(AditDoctorPage), typeof(AditDoctorPage));
+                Routing.RegisterRoute(nameof(AddDoctorPage), typeof(AddDoctorPage));
 
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(EditProfile), typeof(EditProfile));
-            Routing.RegisterRoute(nameof(Settings), typeof(Settings));
+            Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
             Routing.RegisterRoute(nameof(HelpPage), typeof(HelpPage));
             Routing.RegisterRoute(nameof(AboutUsPage), typeof(AboutUsPage));
             Routing.RegisterRoute(nameof(FeedbackPage), typeof(FeedbackPage));

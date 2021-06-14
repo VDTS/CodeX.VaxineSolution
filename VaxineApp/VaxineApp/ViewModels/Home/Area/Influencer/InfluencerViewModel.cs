@@ -99,7 +99,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         // Route Methods
         async void AddInfluencer()
         {
-            var route = $"{nameof(AditInfluencerPage)}";
+            var route = $"{nameof(AddInfluencerPage)}";
             await Shell.Current.GoToAsync(route);
         }
         async Task Refresh()

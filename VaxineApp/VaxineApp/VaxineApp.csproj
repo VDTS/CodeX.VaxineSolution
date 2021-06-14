@@ -55,6 +55,18 @@
     <Compile Update="Views\Home\Area\Area\EditAreaPage.xaml.cs">
       <DependentUpon>EditAreaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Home\Area\Doctor\AddDoctorPage.xaml.cs">
+      <DependentUpon>AddDoctorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Area\Influencer\AddInfluencerPage.xaml.cs">
+      <DependentUpon>AddInfluencerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Area\Masjeed\AddMasjeedPage.xaml.cs">
+      <DependentUpon>AddMasjeedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Area\School\AddSchoolPage.xaml.cs">
+      <DependentUpon>AddSchoolPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Home\Family\AddFamilyPage.xaml.cs">
       <DependentUpon>AddFamilyPage.xaml</DependentUpon>
     </Compile>
@@ -70,13 +82,16 @@
     <Compile Update="Views\Home\Insights\InsightsPage.xaml.cs">
       <DependentUpon>InsightsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Settings\Main\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\AboutUs\AboutUsPage.xaml">
+    <EmbeddedResource Update="Views\Settings\AboutUs\AboutUsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Feedback\FeedbackPage.xaml">
+    <EmbeddedResource Update="Views\Settings\Feedback\FeedbackPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Help\HelpPage.xaml">
@@ -94,25 +109,25 @@
     <EmbeddedResource Update="Views\Home\Area\Clinic\ClinicPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\Doctor\AditDoctorPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\Doctor\AddDoctorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Doctor\DoctorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\Influencer\AditInfluencerPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\Influencer\AddInfluencerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Influencer\InfluencerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\Masjeed\AditMasjeedPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\Masjeed\AddMasjeedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Masjeed\MasjeedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\School\AditSchoolPage.xaml">
+    <EmbeddedResource Update="Views\Home\Area\School\AddSchoolPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\School\SchoolPage.xaml">
@@ -151,13 +166,13 @@
     <EmbeddedResource Update="Views\Login\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\PrivacyPolicy\PrivacyPolicyPage.xaml">
+    <EmbeddedResource Update="Views\Settings\PrivacyPolicy\PrivacyPolicyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings\AppUpdates\AppUpdatesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Settings\Settings.xaml">
+    <EmbeddedResource Update="Views\Settings\Main\SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Shared\GoogleMapPage.xaml">

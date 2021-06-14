@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.PrivacyPolicy
+namespace VaxineApp.Views.Settings.Main
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PrivacyPolicyPage : ContentPage
+    public partial class SettingsPage : ContentPage
     {
-        public PrivacyPolicyPage()
+        public SettingsPage()
         {
             InitializeComponent();
         }

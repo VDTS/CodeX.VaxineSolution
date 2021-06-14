@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using VaxineApp.ViewModels.Base;
 
-namespace VaxineApp.ViewModels.PrivacyPolicy
+namespace VaxineApp.ViewModels.Settings.PrivacyPolicy
 {
     public class PrivacyPolicyViewModel : BaseViewModel
     {

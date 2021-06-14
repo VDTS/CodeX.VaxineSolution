@@ -64,7 +64,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         // Route Methods
         async void AddDoctor()
         {
-            var route = $"{nameof(AditDoctorPage)}";
+            var route = $"{nameof(AddDoctorPage)}";
             await Shell.Current.GoToAsync(route);
         }
 
