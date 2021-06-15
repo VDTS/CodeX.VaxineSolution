@@ -15,6 +15,20 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 {
     public class InfluencerViewModel : BaseViewModel
     {
+
+        private InfluencerModel _selectedInfluencer;
+
+        public InfluencerModel SelectedInfluencer
+        {
+            get { return _selectedInfluencer; }
+            set
+            {
+                _selectedInfluencer = value;
+                RaisedPropertyChanged(nameof(SelectedInfluencer));
+            }
+        }
+
+
         private bool _isBusy;
 
         public bool IsBusy
@@ -43,22 +57,32 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
         public ICommand EditCommand { private set; get; }
-
         // Constructor
         public InfluencerViewModel()
         {
             SaveAsPDFCommand = new Command(SaveAsPDF);
             DeleteCommand = new Command(Delete);
-            EditCommand = new Command(Edit);
+            EditCommand = new Command(EditClinic);
             Influencer = new List<InfluencerModel>();
             GetInfluencer();
             GetInfluencerCommand = new AsyncCommand(Refresh);
             AddInfluencerCommand = new Command(AddInfluencer);
-        }
+            SelectedInfluencer = new InfluencerModel();
 
-        private async void Edit(object obj)
+        }
+        private async void EditClinic()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (SelectedInfluencer.Name != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(SelectedInfluencer);
+                var route = $"{nameof(EditInfluencerPage)}?Influencer={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+                SelectedInfluencer = null;
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No influencer", "Select an influencer", "OK");
+            }
         }
 
         private async void Delete(object obj)

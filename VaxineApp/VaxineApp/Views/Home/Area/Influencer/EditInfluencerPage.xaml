@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Home.Area.Influencer.EditInfluencerPage"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
+             Title="Edit Influencer">
+  <ContentPage.Content>
+    <StackLayout Padding="40" Spacing="10">
+
+      <Entry Placeholder="Name"
+             Text="{Binding Influencer.Name}"></Entry>
+      <Entry Placeholder="Contact"
+             Text="{Binding Influencer.Contact}"></Entry>
+      <Entry Placeholder="Position"
+             Text="{Binding Influencer.Position}">
+      </Entry>
+      <StackLayout Orientation="Horizontal" Spacing="10">
+        <CheckBox IsChecked="{Binding Influencer.DoesHeProvidingSupport}"></CheckBox>
+        <Label Text="Does he providing support?"></Label>
+      </StackLayout>
+
+      <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding UpdateInfluencerCommand}"></Button>
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
