@@ -16,6 +16,7 @@ using Newtonsoft.Json;
 using DataAccessLib.Models;
 using System.Linq;
 using VaxineApp.Views.Settings.Main;
+using VaxineApp.Views.Settings.Themes;
 
 namespace VaxineApp.ViewModels
 {
@@ -26,7 +27,7 @@ namespace VaxineApp.ViewModels
         public ICommand LogginOutCommand { private set; get; }
         public ICommand GoToHelpPageCommand { private set; get; }
         public ICommand RemoveAccountCommand { private set; get; }
-        public ICommand GoToDarkThemesPageCommand { private set; get; }
+        public ICommand GoToThemesPageCommand { private set; get; }
         private string _userName;
         public string UserName {
             get { return _userName; }
@@ -55,7 +56,7 @@ namespace VaxineApp.ViewModels
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
             RemoveAccountCommand = new Command(RemoveAccount);
-            GoToDarkThemesPageCommand = new Command(GoToDarkThemesPage);
+            GoToThemesPageCommand = new Command(GoToThemesPage);
             SqliteDataService sqliteDataService = new SqliteDataService();
             sqliteDataService.Initialize(Preferences.Get("ProfileEmail", ""));
             var profileValue = sqliteDataService.Get("Profile");
@@ -64,9 +65,11 @@ namespace VaxineApp.ViewModels
             Role = profile.Role;
         }
 
-        private async void GoToDarkThemesPage()
+        private async void GoToThemesPage()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            var route = $"{nameof(ThemesPage)}";
+            await Shell.Current.GoToAsync(route);
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private async void GoToProfile(object obj)

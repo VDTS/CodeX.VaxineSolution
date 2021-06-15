@@ -34,7 +34,11 @@
         <Label TextColor="#2196f3"
                Text=""
                FontSize="25"
-               FontFamily="SegoeMDL2"></Label>
+               FontFamily="SegoeMDL2">
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}"></TapGestureRecognizer>
+          </Label.GestureRecognizers>
+        </Label>
       </StackLayout>
       <ScrollView Grid.Row="2"
                   Padding="25">
