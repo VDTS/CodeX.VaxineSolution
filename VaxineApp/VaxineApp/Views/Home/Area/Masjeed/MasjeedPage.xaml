@@ -39,7 +39,8 @@
                  RefreshColor="#2196f3"
                  Command="{Binding GetMasjeedCommand}">
       <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding Masjeed}">
+                      ItemsSource="{Binding Masjeed}"
+                      SelectedItem="{Binding SelectedMasjeed}">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>

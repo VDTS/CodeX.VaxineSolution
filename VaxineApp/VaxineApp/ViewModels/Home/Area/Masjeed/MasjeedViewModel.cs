@@ -16,6 +16,17 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 {
     public class MasjeedViewModel : BaseViewModel
     {
+        private MasjeedModel _selectedMasjeed;
+
+        public MasjeedModel SelectedMasjeed
+        {
+            get { return _selectedMasjeed; }
+            set
+            {
+                _selectedMasjeed = value;
+                RaisedPropertyChanged(nameof(SelectedMasjeed));
+            }
+        }
         private bool _isBusy;
 
         public bool IsBusy
@@ -52,16 +63,27 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             Masjeed = new List<MasjeedModel>();
             SaveAsPDFCommand = new Command(SaveAsPDF);
             DeleteCommand = new Command(Delete);
-            EditCommand = new Command(Edit);
+            EditCommand = new Command(EditClinic);
             GetMasjeed();
             GetMasjeedCommand = new AsyncCommand(Refresh);
             AddMasjeedCommand = new Command(AddMasjeed);
             GoToMapCommand = new Command(GoToMap);
+            SelectedMasjeed = new MasjeedModel();
         }
 
-        private async void Edit(object obj)
+        private async void EditClinic()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (SelectedMasjeed.MasjeedName != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(SelectedMasjeed);
+                var route = $"{nameof(EditMasjeedPage)}?Masjeed={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+                SelectedMasjeed = null;
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Masjeed", "Select a Masjeed", "OK");
+            }
         }
 
         private async void Delete(object obj)
