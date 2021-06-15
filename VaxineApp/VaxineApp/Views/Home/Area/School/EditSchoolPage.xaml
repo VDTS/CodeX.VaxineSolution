@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Home.Area.School.EditSchoolPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.School"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
+             Title="Edit School">
+  <ContentPage.Content>
+    <StackLayout Padding="40" Spacing="10">
+      <Entry Placeholder="School Name"
+             Text="{Binding School.SchoolName}"></Entry>
+      <Entry Placeholder="Key Influencer"
+             Text="{Binding School.KeyInfluencer}"></Entry>
+      <StackLayout Orientation="Horizontal">
+        <Entry Placeholder="Latitude"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding School.Latitude}"></Entry>
+        <Entry Placeholder="Longitude"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding School.Longitude}"></Entry>
+        <Button Text=""
+                FontFamily="SegoeMDL2"
+                WidthRequest="50"
+                HeightRequest="50"
+                FontSize="25"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                Command="{Binding AddLocationCommand}"></Button>
+      </StackLayout>
+
+      <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding UpdateSchoolCommand}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

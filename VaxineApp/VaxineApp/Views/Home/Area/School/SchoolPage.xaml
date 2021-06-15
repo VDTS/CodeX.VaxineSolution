@@ -39,7 +39,8 @@
                  RefreshColor="#2196f3"
                  Command="{Binding GetSchoolCommand}">
       <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding School}">
+                      ItemsSource="{Binding School}"
+                      SelectedItem="{Binding SelectedSchool}">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>

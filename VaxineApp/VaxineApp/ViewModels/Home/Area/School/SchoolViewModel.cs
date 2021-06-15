@@ -15,6 +15,18 @@ namespace VaxineApp.ViewModels.Home.Area.School
 {
     public class SchoolViewModel : BaseViewModel
     {
+        private SchoolModel _selectedSchool;
+
+        public SchoolModel SelectedSchool
+        {
+            get { return _selectedSchool; }
+            set
+            {
+                _selectedSchool = value;
+                RaisedPropertyChanged(nameof(SelectedSchool));
+            }
+        }
+
 
         private List<SchoolModel> _school;
         public List<SchoolModel> School
@@ -40,18 +52,27 @@ namespace VaxineApp.ViewModels.Home.Area.School
             SaveAsPDFCommand = new Command(SaveAsPDF);
             GoToMapCommand = new Command(GoToMap);
             DeleteCommand = new Command(Delete);
-            EditCommand = new Command(Edit);
+            EditCommand = new Command(EditClinic);
             School = new List<SchoolModel>();
             GetSchool();
             GetSchoolCommand = new AsyncCommand(Refresh);
             AddSchoolCommand = new Command(AddSchool);
+            SelectedSchool = new SchoolModel();
         }
-
-        private async void Edit(object obj)
+        private async void EditClinic()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (SelectedSchool.SchoolName != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(SelectedSchool);
+                var route = $"{nameof(EditSchoolPage)}?School={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+                SelectedSchool = null;
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No school", "Select a school", "OK");
+            }
         }
-
         private async void Delete(object obj)
         {
             await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
