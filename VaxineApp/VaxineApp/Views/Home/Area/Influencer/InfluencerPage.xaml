@@ -34,7 +34,8 @@
                  RefreshColor="#2196f3"
                  Command="{Binding GetInfluencerCommand}">
       <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding Influencer}">
+                      ItemsSource="{Binding Influencer}"
+                      SelectedItem="{Binding SelectedInfluencer}">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
