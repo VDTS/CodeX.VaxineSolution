@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Settings.AppUpdates.AppUpdatesPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AppUpdates"
+             x:Name="AppUpdates"
              Title="What's New?">
   <ContentPage.BindingContext>
     <ViewModel:AppUpdatesViewModel></ViewModel:AppUpdatesViewModel>
@@ -12,23 +13,43 @@
                  Text="Check for updates"
                  Priority="3"
                  Command="{Binding CheckForUpdateCommand}" />
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
     <StackLayout Padding="20">
       <Label Text="Version"
              FontSize="Large"></Label>
-      <Label Text="{Binding Version}"></Label>
+      <Label Text="{Binding AppNewUpdates.Version}"></Label>
       <Label Text="Build"
              FontSize="Large"></Label>
-      <Label Text="{Binding BuildNo}"></Label>
-      <Label Text="Release"
+      <Label Text="{Binding AppNewUpdates.Build}"></Label>
+      <Label Text="Release No"
              FontSize="Large"></Label>
-      <Label Text="{Binding Release}"></Label>
+      <Label Text="{Binding AppNewUpdates.ReleaseNo}"></Label>
+      <Label Text="Release branch"
+             FontSize="Large"></Label>
+      <Label Text="{Binding AppNewUpdates.ReleaseBranch}"></Label>
       <Label Text="Whats New?"
              FontSize="Large"></Label>
-      <ScrollView>
-        <Label Text="{Binding WhatsNewContent}"></Label>
+      <ScrollView Padding="10">
+        <CollectionView ItemsSource="{Binding AppNewUpdates.Content}">
+          <CollectionView.ItemTemplate>
+            <DataTemplate>
+              <StackLayout Padding="5">
+                <Label Text="{Binding Location}"
+                       TextColor="blue">
+                  <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.TapToGoToPageCommand, Source={x:Reference AppUpdates}}"
+                                          CommandParameter="{Binding Location}"></TapGestureRecognizer>
+                  </Label.GestureRecognizers>
+                </Label>
+                <Label Text="{Binding Updates}"></Label>
+              </StackLayout>
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
       </ScrollView>
+      <Label Text="No new Updates"
+             IsVisible="{Binding IsUpdatesAvailable}"></Label>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
