@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Settings.AboutUs.AboutUsPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AboutUs"
+             x:Name="AboutUs"
              Shell.TabBarIsVisible="False"
              Title="About us">
   <ContentPage.BindingContext>
@@ -48,8 +49,11 @@
                        Text="{Binding FullName}"></Label>
                 <Label Text="{Binding Role}" HorizontalOptions="Center"></Label>
                   <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="LinkedIn"></Button>
-                    <Button Text="Twitter"></Button>
+                    <Button Text="LinkedIn"
+                            Command="{Binding BindingContext.GoToLinkedInCommand, Source={x:Reference AboutUs}}" CommandParameter="{Binding LinkedInURL}"></Button>
+                    <Button Text="Twitter" Command="{Binding BindingContext.GoToTwitterCommand, Source={x:Reference AboutUs}}"
+                            CommandParameter="{Binding TwitterURL}">
+                    </Button>
                   </StackLayout>
                 </StackLayout>
               </Grid>
