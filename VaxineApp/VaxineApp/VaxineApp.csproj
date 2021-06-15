@@ -25,6 +25,7 @@
   </ItemGroup>
   
   <ItemGroup>
+    <None Remove="Fonts\FontAwesome5.otf" />
     <None Remove="Fonts\segmdl2.ttf" />
   </ItemGroup>
   
