@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.ViewModels.Base;
+using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Settings.AboutUs;
 using VaxineApp.Views.Settings.AppUpdates;
 using VaxineApp.Views.Settings.Feedback;
@@ -25,6 +26,7 @@ namespace VaxineApp.ViewModels.Settings.Main
         public ICommand LanguagePageCommand { private set; get; }
         public ICommand NotificationPageCommand { private set; get; }
         public ICommand AppUpdatesPageCommand { private set; get; }
+        public ICommand GoToProfilePageCommand { private set; get; }
         public SettingsViewModel()
         {
             FeedbackPageCommand = new Command(GoToFeedbackPage);
@@ -35,7 +37,13 @@ namespace VaxineApp.ViewModels.Settings.Main
             LanguagePageCommand = new Command(LanguagePage);
             NotificationPageCommand = new Command(NotificationPage);
             AppUpdatesPageCommand = new Command(AppUpdatesPage);
+            GoToProfilePageCommand = new Command(GoToProfilePage);
+        }
 
+        private async void GoToProfilePage(object obj)
+        {
+            var navigationPage = new NavigationPage(new ProfilePage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
 
         private async void AppUpdatesPage(object obj)
