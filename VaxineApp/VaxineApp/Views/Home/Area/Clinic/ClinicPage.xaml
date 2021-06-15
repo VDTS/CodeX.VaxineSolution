@@ -16,6 +16,10 @@
                  Priority="3"
                  Command="{Binding AddClinicCommand}" />
     <ToolbarItem Order="Secondary"
+                 Text="Edit"
+                 Priority="3"
+                 Command="{Binding EditClinicCommand}" />
+    <ToolbarItem Order="Secondary"
                  Text="Delete"
                  Command="{Binding DeleteCommand}"
                  Priority="2" />

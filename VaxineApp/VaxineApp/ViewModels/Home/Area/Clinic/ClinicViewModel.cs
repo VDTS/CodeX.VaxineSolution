@@ -57,6 +57,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         public ICommand DeleteCommand { private set; get; }
         public ICommand GoToMapCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand EditClinicCommand { private set; get; }
 
         // Constructor
         public ClinicViewModel()
@@ -65,11 +66,27 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             GoToMapCommand = new Command(GoToMap);
             SaveAsPDFCommand = new Command(SaveAsPDF);
             SelectedClinic = new ClinicModel();
+            EditClinicCommand = new Command(EditClinic);
             GetClinic();
             GetClinicCommand = new AsyncCommand(Refresh);
             AddClinicCommand = new Command(AddClinic);
             DeleteClinicCommand = new Command(DeleteClinic);
             Clinics = new List<ClinicModel>();
+        }
+
+        private async void EditClinic()
+        {
+            if(SelectedClinic.ClinicName != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(SelectedClinic);
+                var route = $"{nameof(EditClinicPage)}?Clinic={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+                SelectedClinic = null;
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Clinic", "Select a clinic", "OK");
+            }
         }
 
         private async void SaveAsPDF(object obj)
