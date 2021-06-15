@@ -39,10 +39,10 @@ namespace DataAccessLib.Services
         }
         public async Task<string> Get(string Node)
         {
-            string url = $"{BaseUrl}Kandahar-Area/{Node}.json";
-            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
+            try
             {
-                try
+                string url = $"{BaseUrl}Kandahar-Area/{Node}.json";
+                using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
                 {
                     if (response.IsSuccessStatusCode)
                     {
@@ -52,12 +52,12 @@ namespace DataAccessLib.Services
                     {
                         return "Error";
                     }
-                }
-                catch (Exception)
-                {
-                    return "Error";
-                }
 
+                }
+            }
+            catch (Exception)
+            {
+                return "Error";
             }
         }
     }
