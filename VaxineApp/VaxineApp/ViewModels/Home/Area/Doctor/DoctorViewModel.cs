@@ -15,6 +15,16 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 {
     public class DoctorViewModel : BaseViewModel
     {
+        private DoctorModel _selectedDoctor;
+        public DoctorModel SelectedDoctor
+        {
+            get { return _selectedDoctor; }
+            set
+            {
+                _selectedDoctor = value;
+                RaisedPropertyChanged(nameof(SelectedDoctor));
+            }
+        }
 
         private List<DoctorModel> _doctor;
         public List<DoctorModel> Doctor
@@ -39,15 +49,26 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             GetDoctor();
             SaveAsPDFCommand = new Command(SaveAsPDF);
             DeleteCommand = new Command(Delete);
-            EditCommand = new Command(Edit);
+            EditCommand = new Command(EditDoctor);
             Doctor = new List<DoctorModel>();
             GetDoctorCommand = new AsyncCommand(Refresh);
             AddDoctorCommand = new Command(AddDoctor);
+            SelectedDoctor = new DoctorModel();
         }
 
-        private async void Edit(object obj)
+        private async void EditDoctor()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (SelectedDoctor.Name != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(SelectedDoctor);
+                var route = $"{nameof(EditDoctorPage)}?Doctor={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+                SelectedDoctor = null;
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Doctor", "Select a doctor", "OK");
+            }
         }
 
         private async void Delete(object obj)

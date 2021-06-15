@@ -35,7 +35,8 @@
                  RefreshColor="#2196f3"
                  Command="{Binding GetDoctorCommand}">
       <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding Doctor}">
+                      ItemsSource="{Binding Doctor}"
+                      SelectedItem="{Binding SelectedDoctor}">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
