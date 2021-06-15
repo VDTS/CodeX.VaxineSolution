@@ -8,6 +8,7 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Status;
+using VaxineApp.Views.Login.ForgotPassword;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -149,7 +150,8 @@ namespace VaxineApp.ViewModels.Login
         }
         async private void ForgotPassword() 
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            var navigationPage = new NavigationPage(new ForgotPasswordPage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
         #endregion
 
