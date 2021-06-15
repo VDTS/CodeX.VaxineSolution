@@ -53,6 +53,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Settings\Language\LanguagePage.xaml.cs">
+      <DependentUpon>LanguagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings\Notifications\NotificationsPage.xaml.cs">
+      <DependentUpon>NotificationsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Home\Area\Area\EditAreaPage.xaml.cs">
       <DependentUpon>EditAreaPage.xaml</DependentUpon>
     </Compile>
@@ -104,6 +110,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\Settings\Font\FontPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\Language\LanguagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\Notifications\NotificationsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\Themes\ThemesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings\AboutUs\AboutUsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

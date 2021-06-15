@@ -6,7 +6,11 @@ using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Settings.AboutUs;
 using VaxineApp.Views.Settings.AppUpdates;
 using VaxineApp.Views.Settings.Feedback;
+using VaxineApp.Views.Settings.Font;
+using VaxineApp.Views.Settings.Language;
+using VaxineApp.Views.Settings.Notifications;
 using VaxineApp.Views.Settings.PrivacyPolicy;
+using VaxineApp.Views.Settings.Themes;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Settings.Main
@@ -42,22 +46,26 @@ namespace VaxineApp.ViewModels.Settings.Main
 
         private async void NotificationPage(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "Notifications functionality is under construction", "OK");
+            var navigationPage = new NavigationPage(new NotificationsPage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
 
         private async void ThemesPage(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "Themes functionality is under construction", "OK");
+            var navigationPage = new NavigationPage(new ThemesPage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
 
         private async void FontPage(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "Font functionality is under construction", "OK");
+            var navigationPage = new NavigationPage(new FontPage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
 
         private async void LanguagePage(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "Language functionality is under construction", "OK");
+            var navigationPage = new NavigationPage(new LanguagePage());
+            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
         }
 
         private async void GoToFeedbackPage(object obj)
