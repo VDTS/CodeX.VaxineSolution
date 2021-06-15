@@ -56,14 +56,29 @@
     <Compile Update="Views\Home\Area\Area\EditAreaPage.xaml.cs">
       <DependentUpon>EditAreaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Home\Area\Clinic\EditClinicPage.xaml.cs">
+      <DependentUpon>EditClinicPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Area\Doctor\EditDoctorPage.xaml.cs">
+      <DependentUpon>EditDoctorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Home\Area\Doctor\AddDoctorPage.xaml.cs">
       <DependentUpon>AddDoctorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Area\Influencer\EditInfluencerPage.xaml.cs">
+      <DependentUpon>EditInfluencerPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Home\Area\Influencer\AddInfluencerPage.xaml.cs">
       <DependentUpon>AddInfluencerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Home\Area\Masjeed\EditMasjeedPage.xaml.cs">
+      <DependentUpon>EditMasjeedPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Home\Area\Masjeed\AddMasjeedPage.xaml.cs">
       <DependentUpon>AddMasjeedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Home\Area\School\EditSchoolPage.xaml.cs">
+      <DependentUpon>EditSchoolPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Home\Area\School\AddSchoolPage.xaml.cs">
       <DependentUpon>AddSchoolPage.xaml</DependentUpon>
