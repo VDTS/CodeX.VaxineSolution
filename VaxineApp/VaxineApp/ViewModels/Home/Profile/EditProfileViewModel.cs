@@ -20,11 +20,18 @@ namespace VaxineApp.ViewModels.Home.Profile
         public ProfileModel Profile { get; set; }
         public ICommand SaveDataCommand { private set; get; }
         public ICommand BrowsePhotoCommad { private set; get; }
+        public ICommand ChangePasswordCommand { private set; get; }
         public EditProfileViewModel(ProfileModel _profile)
         {
             Profile = _profile;
             SaveDataCommand = new Command(SaveData);
+            ChangePasswordCommand = new Command(ChangePassword);
             BrowsePhotoCommad = new Command(BrowsePhoto);
+        }
+
+        private async void ChangePassword(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "The Gallery functionality is under construction", "OK");
         }
 
         async void SaveData(object obj)
