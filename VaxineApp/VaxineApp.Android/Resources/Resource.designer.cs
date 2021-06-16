@@ -21729,6 +21729,9 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0x7F0700A5
 			public const int navigation_empty_icon = 2131165349;
 			
+			// aapt resource value: 0x7F0700B1
+			public const int NotificationsIcon = 2131165361;
+			
 			// aapt resource value: 0x7F0700A6
 			public const int notification_action_background = 2131165350;
 			
@@ -21762,47 +21765,47 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0x7F0700B0
 			public const int notification_tile_bg = 2131165360;
 			
-			// aapt resource value: 0x7F0700B1
-			public const int notify_panel_notification_icon_bg = 2131165361;
-			
 			// aapt resource value: 0x7F0700B2
-			public const int ProfilePhoto = 2131165362;
+			public const int notify_panel_notification_icon_bg = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int SaeedaRasuly = 2131165363;
+			public const int ProfilePhoto = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int SavePDF = 2131165364;
+			public const int SaeedaRasuly = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int Search = 2131165365;
+			public const int SavePDF = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int splash_logo = 2131165366;
+			public const int Search = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int splash_screen = 2131165367;
+			public const int splash_logo = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int test_custom_background = 2131165368;
+			public const int splash_screen = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int ToolbarItem_Notifications = 2131165369;
+			public const int test_custom_background = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int ToolbarItem_Search = 2131165370;
+			public const int ToolbarItem_Notifications = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int ToolbarItem_Share = 2131165371;
+			public const int ToolbarItem_Search = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int tooltip_frame_dark = 2131165372;
+			public const int ToolbarItem_Share = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int tooltip_frame_light = 2131165373;
+			public const int tooltip_frame_dark = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int Universal_Edit = 2131165374;
+			public const int tooltip_frame_light = 2131165374;
+			
+			// aapt resource value: 0x7F0700BF
+			public const int Universal_Edit = 2131165375;
 			
 			static Drawable()
 			{

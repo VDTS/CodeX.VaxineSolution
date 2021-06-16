@@ -12,6 +12,9 @@ using Microsoft.AppCenter.Distribute;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using VaxineApp.Droid.NativeApi;
+using Xamarin.Forms;
+using VaxineApp.AndroidNativeApi;
 
 namespace VaxineApp.Droid
 {
@@ -27,8 +30,10 @@ namespace VaxineApp.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.FormsMaps.Init(this, savedInstanceState);
-            FirebaseApp.InitializeApp(Application.Context);
+            FirebaseApp.InitializeApp(Android.App.Application.Context);
             LoadApplication(new App());
+
+            CreateNotificationFromIntent(Intent);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -60,6 +65,24 @@ namespace VaxineApp.Droid
                 {
                     PickImageTaskCompletionSource.SetResult(null);
                 }
+            }
+        }
+
+
+        // Push Notifications
+        protected override void OnNewIntent(Intent intent)
+        {
+            CreateNotificationFromIntent(intent);
+        }
+
+        void CreateNotificationFromIntent(Intent intent)
+        {
+            if (intent?.Extras != null)
+            {
+                string title = intent.GetStringExtra(AndroidNotificationManager.TitleKey);
+                string message = intent.GetStringExtra(AndroidNotificationManager.MessageKey);
+
+                DependencyService.Get<INotificationManager>().ReceiveNotification(title, message);
             }
         }
     }
