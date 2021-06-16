@@ -1,43 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Input;
 using VaxineApp.AndroidNativeApi;
+using VaxineApp.ViewModels.Base;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Settings.Notifications
+namespace VaxineApp.ViewModels.Settings.Notifications
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NotificationsPage : ContentPage
+    public class NotificationsViewModel : BaseViewModel
     {
         INotificationManager notificationManager;
-        int notificationNumber = 0;
+        public ICommand SendNotificationCommand { private set; get; }
+        public ICommand ScheduleNotificationCommand { private set; get; }
 
-        public NotificationsPage()
+        public NotificationsViewModel()
         {
-            InitializeComponent();
             notificationManager = DependencyService.Get<INotificationManager>();
             notificationManager.NotificationReceived += (sender, eventArgs) =>
             {
                 var evtData = (NotificationEventArgs)eventArgs;
                 ShowNotification(evtData.Title, evtData.Message);
             };
+
+            SendNotificationCommand = new Command<EventArgs>(OnSendClick);
+            ScheduleNotificationCommand = new Command<EventArgs>(OnScheduleClick);
         }
-        void OnSendClick(object sender, EventArgs e)
+
+        void OnSendClick(EventArgs e)
         {
-            notificationNumber++;
-            string title = $"Missed Children";
-            string message = $"Abdul Jabbar's son missed from Vaccine";
+            string title = $"Title";
+            string message = $"Body";
             notificationManager.SendNotification(title, message);
         }
 
-        void OnScheduleClick(object sender, EventArgs e)
+        void OnScheduleClick(EventArgs e)
         {
-            notificationNumber++;
-            string title = $"Missed Children";
-            string message = $"Abdul Jabbar's son missed from Vaccine";
+            string title = $"Title Scheduled";
+            string message = $"Body Scheduled";
             notificationManager.SendNotification(title, message, DateTime.Now.AddSeconds(10));
         }
 
@@ -49,7 +49,7 @@ namespace VaxineApp.Views.Settings.Notifications
                 {
                     Text = $"Notification Received:\nTitle: {title}\nMessage: {message}"
                 };
-                stackLayout.Children.Add(msg);
+                //stackLayout.Children.Add(msg);
             });
         }
     }

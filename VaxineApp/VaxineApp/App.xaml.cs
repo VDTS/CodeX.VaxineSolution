@@ -8,6 +8,7 @@ using Microsoft.AppCenter.Crashes;
 using VaxineApp.Views.Login;
 using Microsoft.AppCenter.Distribute;
 using System.Threading.Tasks;
+using VaxineApp.AndroidNativeApi;
 
 namespace VaxineApp
 {
@@ -17,6 +18,9 @@ namespace VaxineApp
         public App()
         {
             InitializeComponent();
+
+            DependencyService.Get<INotificationManager>().Initialize();
+
             var isLoogged = Xamarin.Essentials.SecureStorage.GetAsync("isLogged").Result;
             if (isLoogged == "1")
             {
