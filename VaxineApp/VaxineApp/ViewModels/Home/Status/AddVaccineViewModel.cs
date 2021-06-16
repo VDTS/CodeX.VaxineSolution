@@ -49,7 +49,7 @@ namespace VaxineApp.ViewModels.Home.Status
             VaccineModel clinic = new VaccineModel()
             {
                 Id = Guid.NewGuid(),
-                VaccinePeriod = VaccinePeriod,
+                VaccinePeriod = VaccinePeriod.Date.ToUniversalTime(),
                 VaccineStatus = VaccineStatus,
                 RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
             };

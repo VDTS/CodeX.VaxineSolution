@@ -81,7 +81,7 @@ namespace VaxineApp.ViewModels.Home.Family
             {
                 Id = Guid.NewGuid(),
                 FullName = FullName,
-                DOB = DOB,
+                DOB = DOB.Date.ToUniversalTime(),
                 Gender = Gender,
                 OPV0 = OPV0,
                 RINo = RINo,
