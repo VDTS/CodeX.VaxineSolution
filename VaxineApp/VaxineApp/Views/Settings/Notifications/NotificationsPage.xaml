@@ -3,11 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Settings.Notifications.NotificationsPage"
              Title="Notifications">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.Content>
+    <StackLayout Margin="0,35,0,0"
+                 x:Name="stackLayout">
+      <Label Text="Click the button below to create a local notification."
+             TextColor="Red"
+             HorizontalOptions="Center"
+             VerticalOptions="Start" />
+      <Button Text="Create Notification"
+              HorizontalOptions="Center"
+              VerticalOptions="Start"
+              Clicked="OnSendClick" />
+      <Label Text="Click the button below to schedule a local notification for in 10 seconds time."
+             TextColor="Red"
+             HorizontalOptions="Center"
+             VerticalOptions="Start" />
+      <Button Text="Create Notification"
+              HorizontalOptions="Center"
+              VerticalOptions="Start"
+              Clicked="OnScheduleClick" />
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
