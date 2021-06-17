@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Home.Family.EditFamilyPage"
+             xmlns:local="clr-namespace:VaxineApp.Renderers"
+             Shell.TabBarIsVisible="False"
+             Shell.PresentationMode="Modal"
+             Title="Edit Family">
+  <ContentPage.Content>
+    <StackLayout Padding="40" Spacing="10">
+      <Entry Text="{Binding Family.HouseNo, Mode=OneWayToSource}"
+                                 Placeholder="House No."
+                                 Keyboard="Numeric"></Entry>
+      <Entry Text="{Binding Family.ParentName}"
+                                 Placeholder="Parent Name"></Entry>
+      <Entry Text="{Binding Family.PhoneNumber}"
+                                 Placeholder="Parent Number"></Entry>
+      <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding UpdateFamilyCommand}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

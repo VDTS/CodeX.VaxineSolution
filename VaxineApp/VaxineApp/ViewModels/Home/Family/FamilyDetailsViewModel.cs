@@ -16,6 +16,7 @@ namespace VaxineApp.ViewModels.Home.Family
     {
         public ICommand AddChildCommand { private set; get; }
         public ICommand EditChildCommand { private set; get; }
+        public ICommand EditFamilyCommand { private set; get; }
 
         private ChildModel _selectedChild;
 
@@ -49,7 +50,17 @@ namespace VaxineApp.ViewModels.Home.Family
             LoadData();
             AddChildCommand = new Command(AddChild);
             EditChildCommand = new Command(EditChild);
+            EditFamilyCommand = new Command(EditFamily);
         }
+
+
+        private async void EditFamily()
+        {
+            var jsonClinic = JsonConvert.SerializeObject(Family);
+            var route = $"{nameof(EditFamilyPage)}?Family={jsonClinic}";
+            await Shell.Current.GoToAsync(route);
+        }
+
         private async void LoadData()
         {
             var data = await DataService.Get($"Child/{Family.Id}");
