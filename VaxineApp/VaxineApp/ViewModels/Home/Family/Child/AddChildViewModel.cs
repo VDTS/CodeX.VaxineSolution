@@ -23,7 +23,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
             Family = _family;
             AddChildCommand = new Command(AddChild);
         }
-        
+
         private string _fullName;
         public string FullName
         {
@@ -77,17 +77,18 @@ namespace VaxineApp.ViewModels.Home.Family.Child
 
         private async void AddChild()
         {
-            ChildModel clinic = new ChildModel()
+            if (DateTime.UtcNow.Year - DOB.Year <= 5)
             {
-                Id = Guid.NewGuid(),
-                FullName = FullName,
-                DOB = DOB.Date.ToUniversalTime(),
-                Gender = Gender,
-                OPV0 = OPV0,
-                RINo = RINo,
-                RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
-            };
-
+                ChildModel clinic = new ChildModel()
+                {
+                    Id = Guid.NewGuid(),
+                    FullName = FullName,
+                    DOB = DOB.Date.ToUniversalTime(),
+                    Gender = Gender,
+                    OPV0 = OPV0,
+                    RINo = RINo,
+                    RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
+                };
             var data = JsonConvert.SerializeObject(clinic);
 
             string a = DataService.Post(data, $"Child/{Family.Id}");
@@ -95,6 +96,11 @@ namespace VaxineApp.ViewModels.Home.Family.Child
 
             var route = $"//{nameof(FamilyListPage)}";
             await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Older than 5 yrs", "Children older than 5 years not allowed", "OK");
+            }
         }
     }
 }
