@@ -54,7 +54,8 @@
           </StackLayout>
           <CollectionView Grid.Row="2"
                           SelectionMode="Single"
-                          ItemsSource="{Binding VaccineList}">
+                          ItemsSource="{Binding VaccineList}"
+                          SelectedItem="{Binding SelectedVaccine}">
             <CollectionView.Header>
               <Grid>
                 <Grid.ColumnDefinitions>
