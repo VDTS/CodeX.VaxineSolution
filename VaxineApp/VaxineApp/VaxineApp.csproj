@@ -182,7 +182,7 @@
     <EmbeddedResource Update="Views\Home\Profile\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Family\AddChildPage.xaml">
+    <EmbeddedResource Update="Views\Home\Family\Child\AddChildPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Family\AddFamilyPage.xaml">

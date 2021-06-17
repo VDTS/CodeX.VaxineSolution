@@ -7,6 +7,7 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Family;
+using VaxineApp.Views.Home.Family.Child;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Family
