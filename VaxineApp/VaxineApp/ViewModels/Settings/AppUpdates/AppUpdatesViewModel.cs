@@ -60,7 +60,7 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
             try
             {
                 WebClient client = new WebClient();
-                Stream stream = client.OpenRead("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/38.json");
+                Stream stream = client.OpenRead("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/1.1.json");
                 StreamReader reader = new StreamReader(stream);
                 string data = reader.ReadToEnd();
                 AppNewUpdates = JsonConvert.DeserializeObject<Root>(data);
