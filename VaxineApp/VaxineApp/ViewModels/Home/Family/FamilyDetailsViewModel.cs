@@ -8,6 +8,7 @@ using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Family;
 using VaxineApp.Views.Home.Family.Child;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Family
@@ -17,6 +18,7 @@ namespace VaxineApp.ViewModels.Home.Family
         public ICommand AddChildCommand { private set; get; }
         public ICommand EditChildCommand { private set; get; }
         public ICommand EditFamilyCommand { private set; get; }
+        public ICommand CallToTheNumberCommand { private set; get; }
 
         private ChildModel _selectedChild;
 
@@ -51,6 +53,7 @@ namespace VaxineApp.ViewModels.Home.Family
             AddChildCommand = new Command(AddChild);
             EditChildCommand = new Command(EditChild);
             EditFamilyCommand = new Command(EditFamily);
+            CallToTheNumberCommand = new Command<string>(CallToTheNumber);
         }
 
 
@@ -105,6 +108,26 @@ namespace VaxineApp.ViewModels.Home.Family
             var JsonFamily = JsonConvert.SerializeObject(Family);
             var route = $"{nameof(AddChildPage)}?Family={JsonFamily}";
             await Shell.Current.GoToAsync(route);
+        }
+
+        public async void CallToTheNumber(string number)
+        {
+            try
+            {
+                PhoneDialer.Open(number);
+            }
+            catch (ArgumentNullException anEx)
+            {
+                await App.Current.MainPage.DisplayAlert("Error!", "Null number", "OK");
+            }
+            catch (FeatureNotSupportedException ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Not supported on this device", "OK");
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Can't dail the number", "OK");
+            }
         }
     }
 }
