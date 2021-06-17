@@ -53,6 +53,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Home\Family\Child\EditChildPage.xaml.cs">
+      <DependentUpon>EditChildPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Settings\Language\LanguagePage.xaml.cs">
       <DependentUpon>LanguagePage.xaml</DependentUpon>
     </Compile>

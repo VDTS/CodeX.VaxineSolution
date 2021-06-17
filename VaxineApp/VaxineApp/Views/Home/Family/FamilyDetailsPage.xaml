@@ -20,6 +20,10 @@
                  Priority="3"
                  Command="{Binding AddChildCommand}" />
     <ToolbarItem Order="Secondary"
+                 Text="Edit Child"
+                 Priority="3"
+                 Command="{Binding EditChildCommand}" />
+    <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Save as PDF"
                  Command="{Binding SaveAsPDFCommand}"
@@ -45,7 +49,8 @@
       </StackLayout>
       <RefreshView Grid.Row="1">
         <CollectionView SelectionMode="Single"
-                        ItemsSource="{Binding Childs}">
+                        ItemsSource="{Binding Childs}"
+                        SelectedItem="{Binding SelectedChild}">
           <CollectionView.Header>
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
