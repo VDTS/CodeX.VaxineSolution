@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.StaticData;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
@@ -16,7 +17,8 @@ namespace VaxineApp.ViewModels.Home.Family
         // Properites
 
         private int _houseNo;
-        public int HouseNo {
+        public int HouseNo
+        {
             get { return _houseNo; }
             set
             {
@@ -25,7 +27,8 @@ namespace VaxineApp.ViewModels.Home.Family
             }
         }
         private string _parentName;
-        public string ParentName {
+        public string ParentName
+        {
             get { return _parentName; }
             set
             {
@@ -34,7 +37,8 @@ namespace VaxineApp.ViewModels.Home.Family
             }
         }
         private string _phoneNumber;
-        public string PhoneNumber {
+        public string PhoneNumber
+        {
             get { return _phoneNumber; }
             set
             {
@@ -56,22 +60,27 @@ namespace VaxineApp.ViewModels.Home.Family
         // Method
         public async void SaveFamily()
         {
-            GetFamilyModel clinic = new GetFamilyModel()
+            if (!StaticDataStore.FamilyNumbers.Contains(HouseNo))
             {
-                Id = Guid.NewGuid(),
-                HouseNo = HouseNo,
-                ParentName = ParentName,
-                PhoneNumber = PhoneNumber,
-                RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
-            };
+                GetFamilyModel clinic = new GetFamilyModel()
+                {
+                    Id = Guid.NewGuid(),
+                    HouseNo = HouseNo,
+                    ParentName = ParentName,
+                    PhoneNumber = PhoneNumber,
+                    RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
+                };
+                var data = JsonConvert.SerializeObject(clinic);
+                string a = DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
+                await App.Current.MainPage.DisplayAlert("Data submited", "Successfully posted", "OK");
 
-            var data = JsonConvert.SerializeObject(clinic);
-
-            string a = DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
-            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-
-            var route = $"//{nameof(FamilyListPage)}";
-            await Shell.Current.GoToAsync(route);
+                var route = $"//{nameof(FamilyListPage)}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Duplicate data", $"{HouseNo} Family already exist.", "OK");
+            }
         }
 
     }

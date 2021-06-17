@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.StaticData;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Family;
 using Xamarin.CommunityToolkit.ObjectModel;
@@ -77,6 +78,7 @@ namespace VaxineApp.ViewModels.Home.Family
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
                 foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
                 {
+                    StaticDataStore.FamilyNumbers.Add(item.Value.HouseNo);
                     Family.Add(
                         new GetFamilyModel
                         {
