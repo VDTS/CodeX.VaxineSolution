@@ -10,7 +10,7 @@ using VaxineApp.Views.Home.Family;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 
-namespace VaxineApp.ViewModels.Home.Status
+namespace VaxineApp.ViewModels.Home.Status.Vaccine
 {
     public class AddVaccineViewModel : BaseViewModel
     {
