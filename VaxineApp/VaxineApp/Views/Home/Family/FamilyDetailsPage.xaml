@@ -24,6 +24,10 @@
                  Priority="3"
                  Command="{Binding EditChildCommand}" />
     <ToolbarItem Order="Secondary"
+                 Text="Edit Family"
+                 Priority="3"
+                 Command="{Binding EditFamilyCommand}" />
+    <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Save as PDF"
                  Command="{Binding SaveAsPDFCommand}"
