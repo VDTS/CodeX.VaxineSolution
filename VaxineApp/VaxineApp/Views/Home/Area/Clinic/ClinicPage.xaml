@@ -5,24 +5,48 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Clinic"
              Title="Clinic">
   <Shell.SearchHandler>
-    <SearchHandler Placeholder="Search" />
+    <SearchHandler SearchBoxVisibility="{Binding IsSearchVisible}" IsSearchEnabled="True" Placeholder="Search" />
   </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:ClinicViewModel></ViewModel:ClinicViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
-    <ToolbarItem Order="Secondary"
-                 Text="Add"
+    <ToolbarItem Order="Primary"
                  Priority="3"
-                 Command="{Binding AddClinicCommand}" />
-    <ToolbarItem Order="Secondary"
-                 Text="Edit"
+                 IsEnabled="{Binding IsToolbarIconsVisible}"
+                 Command="{Binding CancelSelection}">
+      <ToolbarItem.IconImageSource>
+        <FontImageSource Glyph=""
+                         Size="15"
+                         FontFamily="SegoeMDL2" />
+      </ToolbarItem.IconImageSource>
+    </ToolbarItem>
+    <ToolbarItem Text="Add"
+                 Order="Secondary"
                  Priority="3"
-                 Command="{Binding EditClinicCommand}" />
-    <ToolbarItem Order="Secondary"
-                 Text="Delete"
+                 Command="{Binding AddClinicCommand}">
+    </ToolbarItem>
+    <ToolbarItem Order="Primary"
+                 Priority="3"
+                 IsEnabled="{Binding IsToolbarIconsVisible}"
+                 Command="{Binding EditClinicCommand}">
+      <ToolbarItem.IconImageSource>
+        <FontImageSource Glyph=""
+                         Size="15"
+                         FontFamily="SegoeMDL2" />
+      </ToolbarItem.IconImageSource>
+    </ToolbarItem>
+    <ToolbarItem Order="Primary"
+                 IsEnabled="{Binding IsToolbarIconsVisible}"
                  Command="{Binding DeleteCommand}"
-                 Priority="2" />
+                 Priority="2">
+      <ToolbarItem.IconImageSource>
+        <FontImageSource Glyph=""
+                         Size="15"
+                         FontFamily="SegoeMDL2" />
+      </ToolbarItem.IconImageSource>
+    </ToolbarItem>
+
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Command="{Binding GoToMapCommand}"
