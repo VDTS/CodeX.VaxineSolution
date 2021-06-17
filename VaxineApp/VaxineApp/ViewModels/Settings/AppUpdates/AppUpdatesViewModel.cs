@@ -6,6 +6,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.AndroidNativeApi;
 using VaxineApp.ViewModels.Base;
 using Xamarin.Forms;
 
@@ -57,10 +58,12 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
 
         public void DownloadFile()
         {
+            string v = DependencyService.Get<IAppVersion>().GetVersion();
+            int b = DependencyService.Get<IAppVersion>().GetBuild();
             try
             {
                 WebClient client = new WebClient();
-                Stream stream = client.OpenRead("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/1.1.json");
+                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{v}.json"));
                 StreamReader reader = new StreamReader(stream);
                 string data = reader.ReadToEnd();
                 AppNewUpdates = JsonConvert.DeserializeObject<Root>(data);
