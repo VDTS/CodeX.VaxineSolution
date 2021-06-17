@@ -15,6 +15,21 @@ namespace VaxineApp.ViewModels.Home.Family
     public class FamilyDetailsViewModel : BaseViewModel
     {
         public ICommand AddChildCommand { private set; get; }
+        public ICommand EditChildCommand { private set; get; }
+
+        private ChildModel _selectedChild;
+
+        public ChildModel SelectedChild
+        {
+            get { return _selectedChild; }
+            set
+            {
+                _selectedChild = value;
+                RaisedPropertyChanged(nameof(SelectedChild));
+            }
+        }
+
+
         private ObservableCollection<ChildModel> _childs;
         public ObservableCollection<ChildModel> Childs
         {
@@ -29,9 +44,11 @@ namespace VaxineApp.ViewModels.Home.Family
         public FamilyDetailsViewModel(GetFamilyModel family)
         {
             Family = family;
+            SelectedChild = new ChildModel();
             Childs = new ObservableCollection<ChildModel>();
             LoadData();
             AddChildCommand = new Command(AddChild);
+            EditChildCommand = new Command(EditChild);
         }
         private async void LoadData()
         {
@@ -55,6 +72,21 @@ namespace VaxineApp.ViewModels.Home.Family
             else
             {
                 await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+            }
+        }
+
+        private async void EditChild()
+        {
+            if (SelectedChild.FullName != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(SelectedChild);
+                var route = $"{nameof(EditChildPage)}?Child={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+                SelectedChild = null;
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Child", "Select a child", "OK");
             }
         }
         public async void AddChild()
