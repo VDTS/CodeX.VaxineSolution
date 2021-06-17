@@ -63,7 +63,7 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
                     Role = "Program manager and UX designer",
                     PhotoURL = "SaeedaRasuly.jpg",
                     LinkedInURL = "https://linkedin.com/in/saeeda-rasuly-377327169",
-                    TwitterURL = "https://twitter.com/@RasulySaeeda"
+                    TwitterURL = "https://twitter.com/RasulySaeeda"
                 }
                 );
 
@@ -85,7 +85,7 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
                     Role = "Developer and UI Designer",
                     PhotoURL = "AbdulBasir.jpg",
                     LinkedInURL = "https://linkedin.com/in/abdul-basir-zafar-271097193",
-                    TwitterURL = "https://twitter.com/@abBasirZafar"
+                    TwitterURL = "https://twitter.com/abBasirZafar"
                 }
                 );
         }
