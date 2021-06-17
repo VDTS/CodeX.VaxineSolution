@@ -17,6 +17,29 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
     public class ClinicViewModel : BaseViewModel
     {
         // Properties
+        private bool _isToolbarIconsVisible;
+
+        public bool IsToolbarIconsVisible
+        {
+            get { return _isToolbarIconsVisible; }
+            set
+            {
+                _isToolbarIconsVisible = value;
+                RaisedPropertyChanged(nameof(IsToolbarIconsVisible));
+            }
+        }
+        private string _isSearchVisible;
+
+        public string IsSearchVisible
+        {
+            get { return _isSearchVisible; }
+            set
+            {
+                _isSearchVisible = value;
+                RaisedPropertyChanged(nameof(IsSearchVisible));
+            }
+        }
+
         private List<ClinicModel> _clinics;
         public List<ClinicModel> Clinics
         {
@@ -72,6 +95,8 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             AddClinicCommand = new Command(AddClinic);
             DeleteClinicCommand = new Command(DeleteClinic);
             Clinics = new List<ClinicModel>();
+            IsToolbarIconsVisible = false;
+            //IsSearchVisible = "Collapsable";
         }
 
         private async void EditClinic()
