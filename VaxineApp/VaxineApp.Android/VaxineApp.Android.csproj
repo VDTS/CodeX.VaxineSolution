@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NativeApi\AlarmHandler.cs" />
+    <Compile Include="NativeApi\AndroidAppVersion.cs" />
     <Compile Include="NativeApi\AndroidNotificationManager.cs" />
     <Compile Include="AuthDroid.cs" />
     <Compile Include="MainActivity.cs" />
