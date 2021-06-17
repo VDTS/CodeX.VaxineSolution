@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
 
-namespace VaxineApp.ViewModels.Home.Family
+namespace VaxineApp.ViewModels.Home.Family.Child
 {
     public class AddChildViewModel : BaseViewModel
     {

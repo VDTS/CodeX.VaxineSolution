@@ -7,11 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
-using VaxineApp.ViewModels.Home.Family;
+using VaxineApp.ViewModels.Home.Family.Child;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Home.Family
+namespace VaxineApp.Views.Home.Family.Child
 {
     [QueryProperty(nameof(Family), nameof(Family))]
     [XamlCompilation(XamlCompilationOptions.Compile)]
