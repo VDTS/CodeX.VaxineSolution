@@ -47,9 +47,15 @@
                Grid.Column="0"
                Text="{Binding Family.HouseNo}"></Label>
         <Label FontSize="Large"
-               Text="{Binding Family.ParentName}"></Label>
+               Text="{Binding Family.ParentName}">
+        </Label>
         <Label FontSize="Medium"
-               Text="{Binding Family.PhoneNumber}"></Label>
+               Text="{Binding Family.PhoneNumber}">
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding CallToTheNumberCommand}"
+                                  CommandParameter="{Binding Family.PhoneNumber}"></TapGestureRecognizer>
+          </Label.GestureRecognizers>
+        </Label>
       </StackLayout>
       <RefreshView Grid.Row="1">
         <CollectionView SelectionMode="Single"
