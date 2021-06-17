@@ -100,9 +100,18 @@ namespace VaxineApp.ViewModels.Home.Status
             await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
-        private async void EditCurrentVaccine(object obj)
+        private async void EditCurrentVaccine()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (CurrentVaccine.VaccineStatus != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(CurrentVaccine);
+                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No vaccine", "Add vaccine first", "OK");
+            }
         }
 
         private async void LoadVaccine()

@@ -59,6 +59,9 @@
     <Compile Update="Views\Home\Family\Child\EditChildPage.xaml.cs">
       <DependentUpon>EditChildPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Home\Status\Vaccine\EditVaccinePage.xaml.cs">
+      <DependentUpon>EditVaccinePage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Settings\Language\LanguagePage.xaml.cs">
       <DependentUpon>LanguagePage.xaml</DependentUpon>
     </Compile>
