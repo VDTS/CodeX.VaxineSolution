@@ -34,8 +34,10 @@ namespace VaxineApp
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(StatusPage), typeof(StatusPage));
-            Routing.RegisterRoute(nameof(AddVaccinePage), typeof(AddVaccinePage));
             Routing.RegisterRoute(nameof(ChildVaccinePage), typeof(ChildVaccinePage));
+
+            Routing.RegisterRoute(nameof(AddVaccinePage), typeof(AddVaccinePage));
+            Routing.RegisterRoute(nameof(EditVaccinePage), typeof(EditVaccinePage));
            
             Routing.RegisterRoute(nameof(FamilyListPage), typeof(FamilyListPage));
             Routing.RegisterRoute(nameof(FamilyDetailsPage), typeof(FamilyDetailsPage));
