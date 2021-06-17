@@ -203,7 +203,7 @@
     <EmbeddedResource Update="Views\Home\Insights\InsightsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Status\AddVaccinePage.xaml">
+    <EmbeddedResource Update="Views\Home\Status\Vaccine\AddVaccinePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Status\ChildVaccinePage.xaml">

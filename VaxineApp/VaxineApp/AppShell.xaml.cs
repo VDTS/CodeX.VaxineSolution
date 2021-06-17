@@ -24,6 +24,7 @@ using VaxineApp.Views.Settings.Language;
 using VaxineApp.Views.Settings.Notifications;
 using VaxineApp.Views.Login.ForgotPassword;
 using VaxineApp.Views.Home.Family.Child;
+using VaxineApp.Views.Home.Status.Vaccine;
 
 namespace VaxineApp
 {
