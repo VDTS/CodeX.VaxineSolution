@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using VaxineApp.Models;
-using VaxineApp.Views;
-using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 using System.Windows.Input;
@@ -14,8 +11,6 @@ using VaxineApp.Views.Home.Area.Influencer;
 using VaxineApp.Views.Home.Area.Masjeed;
 using VaxineApp.Views.Home.Area.School;
 using VaxineApp.Views.Home.Family;
-using VaxineApp.Views.Login;
-using VaxineApp.Views.Settings;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Shared;
 using VaxineApp.Views.Settings.AppUpdates;
@@ -28,6 +23,7 @@ using VaxineApp.Views.Settings.Themes;
 using VaxineApp.Views.Settings.Language;
 using VaxineApp.Views.Settings.Notifications;
 using VaxineApp.Views.Login.ForgotPassword;
+using VaxineApp.Views.Home.Family.Child;
 
 namespace VaxineApp
 {
