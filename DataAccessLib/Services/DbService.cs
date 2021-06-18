@@ -60,5 +60,24 @@ namespace DataAccessLib.Services
                 return "Error";
             }
         }
+
+        public async Task<string> Delete(string Node)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), $"{BaseUrl}Kandahar-Area/{Node}.json"))
+                {
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return "Deleted";
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
+                }
+            }
+        }
     }
 }

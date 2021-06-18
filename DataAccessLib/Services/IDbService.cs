@@ -11,5 +11,6 @@ namespace DataAccessLib.Services
     {
         public string Post(string data, string Node);
         public Task<string> Get(string Node);
+        public Task<string> Delete(string Node);
     }
 }
