@@ -81,6 +81,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand EditClinicCommand { private set; get; }
         public ICommand ClinicSelectionChangedCommand { private set; get; }
+        public ICommand CancelSelectionCommand { private set; get; }
 
         // Constructor
         public ClinicViewModel()
@@ -93,23 +94,36 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             GetClinic();
             GetClinicCommand = new AsyncCommand(Refresh);
             AddClinicCommand = new Command(AddClinic);
-            ClinicSelectionChangedCommand = new Command(ClinicSelectionChanged);
+            //ClinicSelectionChangedCommand = new Command(ClinicSelectionChanged);
+            CancelSelectionCommand = new Command(CancelSelection);
             Clinics = new List<ClinicModel>();
         }
 
-        private void ClinicSelectionChanged(object obj)
+        private void CancelSelection(object obj)
         {
-            if(SelectedClinic.ClinicName != null)
+            if(SelectedClinic.FId != null)
             {
-                IsSearchVisible = "Hidden";
-                IsToolbarIconsVisible = true;
+                SelectedClinic = null;
             }
             else
             {
-                IsSearchVisible = "Expanded";
-                IsToolbarIconsVisible = false;
+                return;
             }
         }
+
+        //private void ClinicSelectionChanged(object obj)
+        //{
+        //    if(SelectedClinic.ClinicName != null)
+        //    {
+        //        IsSearchVisible = "Hidden";
+        //        IsToolbarIconsVisible = true;
+        //    }
+        //    else
+        //    {
+        //        IsSearchVisible = "Expanded";
+        //        IsToolbarIconsVisible = false;
+        //    }
+        //}
 
         private async void EditClinic()
         {

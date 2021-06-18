@@ -14,7 +14,7 @@
     <ToolbarItem Order="Primary"
                  Priority="3"
                  IsEnabled="{Binding IsToolbarIconsVisible}"
-                 Command="{Binding CancelSelection}">
+                 Command="{Binding CancelSelectionCommand}">
       <ToolbarItem.IconImageSource>
         <FontImageSource Glyph=""
                          Size="15"
