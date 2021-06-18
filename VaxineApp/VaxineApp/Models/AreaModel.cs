@@ -12,6 +12,7 @@ namespace VaxineApp.Models
     }
     public class ClinicModel
     {
+        public string FId { get; set; }
         public string ClinicName { get; set; }
         public string Fixed { get; set; }
         public string Outreach { get; set; }

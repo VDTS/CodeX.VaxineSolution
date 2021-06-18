@@ -76,11 +76,11 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         //Commands
         public ICommand AddClinicCommand { private set; get; }
         public ICommand GetClinicCommand { private set; get; }
-        public ICommand DeleteClinicCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
         public ICommand GoToMapCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand EditClinicCommand { private set; get; }
+        public ICommand ClinicSelectionChangedCommand { private set; get; }
 
         // Constructor
         public ClinicViewModel()
@@ -93,10 +93,22 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             GetClinic();
             GetClinicCommand = new AsyncCommand(Refresh);
             AddClinicCommand = new Command(AddClinic);
-            DeleteClinicCommand = new Command(DeleteClinic);
+            ClinicSelectionChangedCommand = new Command(ClinicSelectionChanged);
             Clinics = new List<ClinicModel>();
-            IsToolbarIconsVisible = false;
-            //IsSearchVisible = "Collapsable";
+        }
+
+        private void ClinicSelectionChanged(object obj)
+        {
+            if(SelectedClinic.ClinicName != null)
+            {
+                IsSearchVisible = "Hidden";
+                IsToolbarIconsVisible = true;
+            }
+            else
+            {
+                IsSearchVisible = "Expanded";
+                IsToolbarIconsVisible = false;
+            }
         }
 
         private async void EditClinic()
@@ -123,15 +135,24 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         {
             await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
-
         private async void Delete(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
-        }
-
-        private async void DeleteClinic(object obj)
-        {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if(SelectedClinic.ClinicName != null)
+            {
+                var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
+                if(data == "Deleted")
+                {
+                    await App.Current.MainPage.DisplayAlert("Deleted", $"item has been deleted", "OK");
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No item selected", "Select an item to delete", "OK");
+            }
         }
 
 
@@ -147,6 +168,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                     Clinics.Add(
                             new ClinicModel
                             {
+                                FId = item.Key,
                                 ClinicName = item.Value.ClinicName,
                                 Fixed = item.Value.Fixed,
                                 Outreach = item.Value.Outreach

@@ -64,7 +64,8 @@
                  Command="{Binding GetClinicCommand}">
       <CollectionView SelectionMode="Single"
                       SelectedItem="{Binding SelectedClinic}"
-                      ItemsSource="{Binding Clinics}">
+                      ItemsSource="{Binding Clinics}"
+                      SelectionChangedCommand="{Binding ClinicSelectionChangedCommand}">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
