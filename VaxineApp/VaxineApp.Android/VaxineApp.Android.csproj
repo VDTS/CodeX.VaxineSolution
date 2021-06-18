@@ -80,6 +80,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="my_widget_class.cs" />
     <Compile Include="NativeApi\AlarmHandler.cs" />
     <Compile Include="NativeApi\AndroidAppVersion.cs" />
     <Compile Include="NativeApi\AndroidNotificationManager.cs" />
@@ -201,6 +202,13 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\NotificationsIcon.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\my_widget.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\my_widget_provider.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
