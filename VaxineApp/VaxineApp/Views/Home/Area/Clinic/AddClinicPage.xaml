@@ -9,22 +9,25 @@
     <ViewModel:AddClinicViewModel></ViewModel:AddClinicViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout Padding="40" Spacing="10">
+    <StackLayout Padding="40"
+                 Spacing="10">
       <Entry Placeholder="Clinic Name"
-             Text="{Binding ClinicName}"></Entry>
+             Text="{Binding Clinic.ClinicName}"></Entry>
       <Entry Placeholder="Fixed"
-             Text="{Binding Fixed}"></Entry>
+             Text="{Binding Clinic.Fixed}"></Entry>
       <Entry Placeholder="Outreach"
-             Text="{Binding Outreach}"></Entry>
+             Text="{Binding Clinic.Outreach}"></Entry>
       <StackLayout Orientation="Horizontal">
         <Entry Placeholder="Latitude"
                IsEnabled="False"
                WidthRequest="140"
-             Text="{Binding Latitude}"></Entry>
-      <Entry Placeholder="Longitude" IsEnabled="False"
-             WidthRequest="140"
-             Text="{Binding Longitude}"></Entry>
-        <Button Text="" FontFamily="SegoeMDL2"
+               Text="{Binding Clinic.Latitude}"></Entry>
+        <Entry Placeholder="Longitude"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding Clinic.Longitude}"></Entry>
+        <Button Text=""
+                FontFamily="SegoeMDL2"
                 WidthRequest="50"
                 HeightRequest="50"
                 FontSize="25"
@@ -34,13 +37,12 @@
                 Command="{Binding AddLocationCommand}"></Button>
       </StackLayout>
 
-      
       <Button Text="Save"
-        TranslationY="50"
-        WidthRequest="130"
-        HeightRequest="50"
-        HorizontalOptions="Center"
-        Command="{Binding SaveClinicCommand}"></Button>
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding PostCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
