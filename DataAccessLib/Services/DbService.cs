@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -71,6 +72,27 @@ namespace DataAccessLib.Services
                     if (response.IsSuccessStatusCode)
                     {
                         return "Deleted";
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
+                }
+            }
+        }
+        public async Task<string> Put(string data, string Node)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("PUT"), $"{BaseUrl}Kandahar-Area/{Node}.json"))
+                {
+                    request.Content = new StringContent(data);
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return "Submit";
                     }
                     else
                     {
