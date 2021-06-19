@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.Essentials;
@@ -11,83 +12,54 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Clinic
 {
-    public class AddClinicViewModel : BaseViewModel
+    public class AddClinicViewModel : ViewModelBase
     {
-        private string _clinicName;
-        public string ClinicName
+        // Property
+        private ClinicModel clinic;
+        public ClinicModel Clinic
         {
-            get { return _clinicName; }
+            get
+            {
+                return clinic;
+            }
             set
             {
-                _clinicName = value;
-                RaisedPropertyChanged(nameof(ClinicName));
+                clinic = value;
+                OnPropertyChanged();
             }
         }
-        public string _fixed;
-        public string Fixed
-        {
-            get { return _fixed; }
-            set
-            {
-                _fixed = value;
-                RaisedPropertyChanged(nameof(Fixed));
-            }
-        }
-        public string _outreach;
-        public string Outreach
-        {
-            get { return _outreach; }
-            set
-            {
-                _outreach = value;
-                RaisedPropertyChanged(nameof(Outreach));
-            }
-        }
-        public double _latitude;
-        public double Latitude
-        {
-            get { return _latitude; }
-            set
-            {
-                _latitude = value;
-                RaisedPropertyChanged(nameof(Latitude));
-            }
-        }
-        public double _longitude;
-        public double Longitude
-        {
-            get { return _longitude; }
-            set
-            {
-                _longitude = value;
-                RaisedPropertyChanged(nameof(Longitude));
-            }
-        }
-        public ICommand SaveClinicCommand { private set; get; }
+
+        // Commands
+        public ICommand PostCommand { private set; get; }
+
+        // ctor
         public AddClinicViewModel()
         {
-            SaveClinicCommand = new Command(SaveClinic);
+            // Property
+            Clinic = new ClinicModel();
 
+            // Command
+            PostCommand = new Command(Post);
         }
-        public async void SaveClinic()
+
+        public async void Post()
         {
-            ClinicModel clinic = new ClinicModel()
+            // Validate clinic
+            if (Clinic.ClinicName != null)
             {
-                Id = Guid.NewGuid(),
-                ClinicName = ClinicName,
-                Fixed = Fixed,
-                Outreach = Outreach,
-                Latitude = Latitude,
-                Longitude = Longitude
-            };
+                Clinic.Id = new Guid();
+                var data = JsonConvert.SerializeObject(Clinic);
 
-            var data = JsonConvert.SerializeObject(clinic);
+                string a = DataService.Post(data, $"Clinic/{Preferences.Get("TeamId", "")}");
+                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
-            string a = DataService.Post(data, $"Clinic/{Preferences.Get("TeamId", "")}");
-            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-
-            var route = $"//{nameof(ClinicPage)}";
-            await Shell.Current.GoToAsync(route);
+                var route = $"//{nameof(ClinicPage)}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Empty fields", "Add data to required fields", "OK");
+            }
         }
     }
 }

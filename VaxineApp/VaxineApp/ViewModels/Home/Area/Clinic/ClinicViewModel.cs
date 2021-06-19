@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
@@ -14,154 +16,151 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Clinic
 {
-    public class ClinicViewModel : BaseViewModel
+    public class ClinicViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
-        // Properties
-        private bool _isToolbarIconsVisible;
-
-        public bool IsToolbarIconsVisible
+        // Property
+        private ObservableCollection<ClinicModel> clinics;
+        public ObservableCollection<ClinicModel> Clinics
         {
-            get { return _isToolbarIconsVisible; }
-            set
+            get
             {
-                _isToolbarIconsVisible = value;
-                RaisedPropertyChanged(nameof(IsToolbarIconsVisible));
+                return clinics;
             }
-        }
-        private string _isSearchVisible;
-
-        public string IsSearchVisible
-        {
-            get { return _isSearchVisible; }
             set
             {
-                _isSearchVisible = value;
-                RaisedPropertyChanged(nameof(IsSearchVisible));
+                clinics = value;
+                OnPropertyChanged();
             }
         }
 
-        private List<ClinicModel> _clinics;
-        public List<ClinicModel> Clinics
-        {
-            get { return _clinics; }
-            set
-            {
-                _clinics = value;
-                RaisedPropertyChanged(nameof(Clinics));
-            }
-        }
-        private bool _isBusy;
-        private ClinicModel _selectedClinic;
-
+        private ClinicModel selectedClinic;
         public ClinicModel SelectedClinic
         {
-            get { return _selectedClinic; }
+            get
+            {
+                return selectedClinic;
+            }
             set
             {
-                _selectedClinic = value;
-                RaisedPropertyChanged(nameof(SelectedClinic));
+                selectedClinic = value;
+                OnPropertyChanged();
             }
         }
 
+        private bool isBusy;
         public bool IsBusy
         {
-            get { return _isBusy; }
+            get
+            {
+                return isBusy;
+            }
             set
             {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
+                isBusy = value;
+                OnPropertyChanged();
             }
         }
 
-        //Commands
-        public ICommand AddClinicCommand { private set; get; }
-        public ICommand GetClinicCommand { private set; get; }
-        public ICommand DeleteCommand { private set; get; }
-        public ICommand GoToMapCommand { private set; get; }
-        public ICommand SaveAsPDFCommand { private set; get; }
-        public ICommand EditClinicCommand { private set; get; }
-        public ICommand ClinicSelectionChangedCommand { private set; get; }
-        public ICommand CancelSelectionCommand { private set; get; }
+        private bool isToolbarIconsVisible;
+        public bool IsToolbarIconsVisible
+        {
+            get
+            {
+                return isToolbarIconsVisible;
+            }
+            set
+            {
+                isToolbarIconsVisible = value;
+                OnPropertyChanged();
+            }
+        }
 
-        // Constructor
+        private bool isSearchVisible;
+        public bool IsSearchVisible
+        {
+            get
+            {
+                return isSearchVisible;
+            }
+            set
+            {
+                isSearchVisible = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
+        // Commands
+        // Crud Commands
+        public ICommand PutCommand { private set; get; }
+        public ICommand PostCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+
+
+        // Other Commands
+        public ICommand SelectionCommand { private set; get; }
+        public ICommand CancelSelectionCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
+
+
+        // Goto Commands
+        public ICommand GoToPostPageCommand { private set; get; }
+        public ICommand GoToPutPageCommand { private set; get; }
+        public ICommand GoToDetailsPageCommand { private set; get; }
+        public ICommand GoToMapPageCommand { private set; get; }
+
+
+        // Functional Commands
+        public ICommand SaveAsPDFCommand { private set; get; }
+
+        // ctor
         public ClinicViewModel()
         {
-            DeleteCommand = new Command(Delete);
-            GoToMapCommand = new Command(GoToMap);
-            SaveAsPDFCommand = new Command(SaveAsPDF);
+            // Property
+            Clinics = new ObservableCollection<ClinicModel>();
             SelectedClinic = new ClinicModel();
-            EditClinicCommand = new Command(EditClinic);
-            GetClinic();
-            GetClinicCommand = new AsyncCommand(Refresh);
-            AddClinicCommand = new Command(AddClinic);
-            //ClinicSelectionChangedCommand = new Command(ClinicSelectionChanged);
+            IsSearchVisible = true;
+            IsToolbarIconsVisible = false;
+
+            // Get
+            Get();
+
+            // Commands
+            PullRefreshCommand = new Command(Refresh);
+            DeleteCommand = new Command(Delete);
+            GoToPostPageCommand = new Command(GoToPostPage);
             CancelSelectionCommand = new Command(CancelSelection);
-            Clinics = new List<ClinicModel>();
+            GoToPutPageCommand = new Command(GoToPutPage);
         }
 
-        private void CancelSelection(object obj)
+        public void Clear()
         {
-            if(SelectedClinic.FId != null)
-            {
-                SelectedClinic = null;
-            }
-            else
-            {
-                return;
-            }
+            Clinics.Clear();
         }
 
-        //private void ClinicSelectionChanged(object obj)
-        //{
-        //    if(SelectedClinic.ClinicName != null)
-        //    {
-        //        IsSearchVisible = "Hidden";
-        //        IsToolbarIconsVisible = true;
-        //    }
-        //    else
-        //    {
-        //        IsSearchVisible = "Expanded";
-        //        IsToolbarIconsVisible = false;
-        //    }
-        //}
-
-        private async void EditClinic()
+        public async void Delete()
         {
-            if(SelectedClinic.ClinicName != null)
+            if (SelectedClinic.Id != null)
             {
-                var jsonClinic = JsonConvert.SerializeObject(SelectedClinic);
-                var route = $"{nameof(EditClinicPage)}?Clinic={jsonClinic}";
-                await Shell.Current.GoToAsync(route);
-                SelectedClinic = null;
-            }
-            else
-            {
-                await App.Current.MainPage.DisplayAlert("No Clinic", "Select a clinic", "OK");
-            }
-        }
-
-        private async void SaveAsPDF(object obj)
-        {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
-        }
-
-        private async void GoToMap(object obj)
-        {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
-        }
-        private async void Delete(object obj)
-        {
-            if(SelectedClinic.ClinicName != null)
-            {
-                var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
-                if(data == "Deleted")
+                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedClinic.ClinicName}?", "Yes", "No");
+                if (isDeleteAccepted)
                 {
-                    await App.Current.MainPage.DisplayAlert("Deleted", $"item has been deleted", "OK");
+                    var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
+                    if (data == "Deleted")
+                    {
+                        Clinics.Remove(SelectedClinic);
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                    }
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                    return;
                 }
+
             }
             else
             {
@@ -169,9 +168,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
         }
 
-
-        // Methods
-        public async void GetClinic()
+        public async void Get()
         {
             var data = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
@@ -196,27 +193,73 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
         }
 
-        // GoTo Routes
-        async void AddClinic()
+        public void GoToDetailsPage()
         {
+            throw new NotImplementedException();
+        }
+
+        public async void GoToMapPage()
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        public async void GoToPostPage()
+        {
+            SelectedClinic = null;
             var route = $"{nameof(AddClinicPage)}";
             await Shell.Current.GoToAsync(route);
         }
 
-        async Task Refresh()
+        public async void GoToPutPage()
+        {
+            if (SelectedClinic.ClinicName != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(SelectedClinic);
+                var route = $"{nameof(EditClinicPage)}?Clinic={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Clinic", "Select a clinic", "OK");
+            }
+        }
+
+        public void Post()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Put()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void Refresh()
         {
             IsBusy = true;
 
-            await Task.Delay(2000);
             Clear();
-            GetClinic();
+            Get();
+            await Task.Delay(2000);
 
             IsBusy = false;
         }
 
-        void Clear()
+        public async void SaveAsPDF()
         {
-            Clinics.Clear();
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        public void CancelSelection()
+        {
+            if (SelectedClinic.Id != null)
+            {
+                SelectedClinic = null;
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

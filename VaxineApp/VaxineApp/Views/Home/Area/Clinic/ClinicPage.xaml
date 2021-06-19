@@ -5,7 +5,9 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Clinic"
              Title="Clinic">
   <Shell.SearchHandler>
-    <SearchHandler SearchBoxVisibility="{Binding IsSearchVisible}" IsSearchEnabled="True" Placeholder="Search" />
+    <SearchHandler SearchBoxVisibility="{Binding IsSearchVisible}"
+                   IsSearchEnabled="True"
+                   Placeholder="Search" />
   </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:ClinicViewModel></ViewModel:ClinicViewModel>
@@ -24,12 +26,12 @@
     <ToolbarItem Text="Add"
                  Order="Secondary"
                  Priority="3"
-                 Command="{Binding AddClinicCommand}">
+                 Command="{Binding GoToPostPageCommand}">
     </ToolbarItem>
     <ToolbarItem Order="Primary"
                  Priority="3"
                  IsEnabled="{Binding IsToolbarIconsVisible}"
-                 Command="{Binding EditClinicCommand}">
+                 Command="{Binding GoToPutPageCommand}">
       <ToolbarItem.IconImageSource>
         <FontImageSource Glyph=""
                          Size="15"
@@ -49,7 +51,7 @@
 
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
-                 Command="{Binding GoToMapCommand}"
+                 Command="{Binding GoToMapPageCommand}"
                  Text="Go on map"
                  Priority="0" />
     <ToolbarItem Order="Secondary"
@@ -59,13 +61,14 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView Padding="10"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
-                 Command="{Binding GetClinicCommand}">
+                 Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
                       SelectedItem="{Binding SelectedClinic}"
-                      ItemsSource="{Binding Clinics}"
-                      SelectionChangedCommand="{Binding ClinicSelectionChangedCommand}">
+                      SelectionChangedCommand="{Binding SelectionCommand}"
+                      ItemsSource="{Binding Clinics}">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>
@@ -73,14 +76,11 @@
               <ColumnDefinition Width="0.3*"></ColumnDefinition>
               <ColumnDefinition Width="0.3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label 
-                   Grid.Column="0"
+            <Label Grid.Column="0"
                    Text="ClinicName"></Label>
             <Label Grid.Column="1"
-                   
                    Text="Fixed"></Label>
             <Label Grid.Column="2"
-                  
                    Text="Outreach"></Label>
           </Grid>
         </CollectionView.Header>
@@ -92,14 +92,11 @@
                 <ColumnDefinition Width="0.3*"></ColumnDefinition>
                 <ColumnDefinition Width="0.3*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
-              <Label 
-                     Grid.Column="0"
+              <Label Grid.Column="0"
                      Text="{Binding ClinicName}"></Label>
               <Label Grid.Column="1"
-                    
                      Text="{Binding Fixed}"></Label>
               <Label Grid.Column="2"
-                    
                      Text="{Binding Outreach}"></Label>
             </Grid>
           </DataTemplate>
