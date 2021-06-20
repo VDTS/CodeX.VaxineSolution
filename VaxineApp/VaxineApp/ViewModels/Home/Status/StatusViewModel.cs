@@ -14,51 +14,80 @@ using System.Collections.ObjectModel;
 using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using VaxineApp.MVVMHelper;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
-    public class StatusViewModel : BaseViewModel
+    public class StatusViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
-        private ChildModel _selectedItem;
-
-        public ChildModel SelectedItem
-        {
-            get { return _selectedItem; }
-            set
-            {
-                _selectedItem = value;
-                RaisedPropertyChanged(nameof(SelectedItem));
-            }
-        }
-        private bool _isBusy;
-
-        public bool IsBusy
-        {
-            get { return _isBusy; }
-            set
-            {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
-            }
-        }
-        private ObservableCollection<ChildGroupbyFamilyModel> _childGroupedbyFamily;
+        // Property
+        private ObservableCollection<ChildGroupbyFamilyModel> familyGroup;
         public ObservableCollection<ChildGroupbyFamilyModel> FamilyGroup
         {
-            get { return _childGroupedbyFamily; }
+            get
+            {
+                return familyGroup;
+            }
             set
             {
-                _childGroupedbyFamily = value;
-                RaisedPropertyChanged(nameof(FamilyGroup));
+                familyGroup = value;
+                OnPropertyChanged();
             }
-
         }
-        public ICommand RegistrationPageCommand { private set; get; }
-        public AsyncCommand GetFamilyCommand { private set; get; }
-        public ICommand SelectionChangedCommand { private set; get; }
-        public ICommand FamiliesCommand { private set; get; }
-        public ICommand SaveAsPDFCommand { private set; get; }
 
-        public async void GetChild()
+        private ChildModel selectedChild;
+        public ChildModel SelectedChild
+        {
+            get
+            {
+                return selectedChild;
+            }
+            set
+            {
+                selectedChild = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool isBusy;
+        public bool IsBusy
+        {
+            get
+            {
+                return isBusy;
+            }
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        // Command
+
+        public ICommand SelectionCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand GoToDetailsPageCommand { private set; get; }
+
+
+        // ctor
+        public StatusViewModel()
+        {
+            // Property
+            FamilyGroup = new ObservableCollection<ChildGroupbyFamilyModel>();
+
+
+            // Get
+            Get();
+
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            PullRefreshCommand = new Command(Refresh);
+            GoToDetailsPageCommand = new Command(GoToDetailsPage);
+        }
+
+        public async void Get()
         {
             var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
@@ -94,51 +123,75 @@ namespace VaxineApp.ViewModels.Home.Status
             }
         }
 
-        public StatusViewModel()
+        public void Put()
         {
-            SaveAsPDFCommand = new Command(SaveAsPDF);
-            FamilyGroup = new ObservableCollection<ChildGroupbyFamilyModel>();
-            GetChild();
-            GetFamilyCommand = new AsyncCommand(Refresh);
-            //RegistrationPageCommand = new Command(Add);
-            //FamiliesCommand = new Command(Families);
-            SelectionChangedCommand = new Command(SelectionChanged);
+            throw new NotImplementedException();
         }
 
-        private async void SaveAsPDF(object obj)
+        public void Post()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            FamilyGroup.Clear();
+        }
+
+        public void CancelSelection()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void SaveAsPDF()
         {
             await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
-        private async void SelectionChanged(object obj)
+        public async void Refresh()
         {
-            if (SelectedItem == null)
+            IsBusy = true;
+
+            Clear();
+            Get();
+            await Task.Delay(2000);
+
+            IsBusy = false;
+        }
+
+        public void GoToPostPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GoToPutPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void GoToDetailsPage()
+        {
+            if (SelectedChild == null)
             {
                 return;
             }
             else
             {
-                var SelectedItemJson = JsonConvert.SerializeObject(SelectedItem);
+                var SelectedItemJson = JsonConvert.SerializeObject(SelectedChild);
                 var route = $"{nameof(ChildVaccinePage)}?Child={SelectedItemJson}";
                 await Shell.Current.GoToAsync(route);
-                SelectedItem = null;
+                SelectedChild = null;
             }
         }
 
-        async Task Refresh()
+        public void GoToMapPage()
         {
-            IsBusy = true;
-
-            await Task.Delay(2000);
-            Clear();
-            GetChild();
-
-            IsBusy = false;
-        }
-
-        void Clear()
-        {
-            FamilyGroup.Clear();
+            throw new NotImplementedException();
         }
     }
 }
