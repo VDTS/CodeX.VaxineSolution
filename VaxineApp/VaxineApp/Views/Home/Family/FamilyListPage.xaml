@@ -14,7 +14,7 @@
     <ToolbarItem Order="Secondary"
                  Text="Add Family"
                  Priority="3"
-                 Command="{Binding AddFamilyCommand}" />
+                 Command="{Binding GoToPostPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Save as PDF"
@@ -24,11 +24,11 @@
   <ContentPage.Content>
     <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
-                 Command="{Binding GetFamilyCommand}">
+                 Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding Family}"
+                      ItemsSource="{Binding Families}"
                       SelectedItem="{Binding SelectedFamily}"
-                      SelectionChangedCommand="{Binding TapOnItemCommand}">
+                      SelectionChangedCommand="{Binding SelectionCommand}">
         <CollectionView.Header>
           <Grid Padding="10">
             <Grid.ColumnDefinitions>

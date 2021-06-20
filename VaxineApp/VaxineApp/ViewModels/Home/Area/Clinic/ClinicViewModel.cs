@@ -97,6 +97,11 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         public ICommand PostCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
 
+        // Crud Commands fo child item
+
+        public ICommand SubPutCommand { private set; get; }
+        public ICommand SubPostCommand { private set; get; }
+        public ICommand SubDeleteCommand { private set; get; }
 
         // Other Commands
         public ICommand SelectionCommand { private set; get; }
@@ -110,9 +115,14 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         public ICommand GoToDetailsPageCommand { private set; get; }
         public ICommand GoToMapPageCommand { private set; get; }
 
+        // Goto Commands fo child item
+        public ICommand GoToSubPostPageCommand { private set; get; }
+        public ICommand GoToSubPutPageCommand { private set; get; }
+        public ICommand GoToSubDetailsPageCommand { private set; get; }
 
         // Functional Commands
         public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand DialerCommand { private set; get; }
 
         // ctor
         public ClinicViewModel()

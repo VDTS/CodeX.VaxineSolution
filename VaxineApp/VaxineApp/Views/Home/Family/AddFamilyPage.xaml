@@ -12,19 +12,21 @@
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
-      <Entry Text="{Binding HouseNo, Mode=OneWayToSource}"
+      <Entry Text="{Binding Family.HouseNo, Mode=OneWayToSource}"
                                  Placeholder="House No."
                                  Keyboard="Numeric"></Entry>
-      <Entry Text="{Binding ParentName}"
+      <Entry Text="{Binding Family.ParentName}"
                                  Placeholder="Parent Name"></Entry>
-      <Entry Text="{Binding PhoneNumber}"
-                                 Placeholder="Parent Number"></Entry>
+      <Entry Text="{Binding Family.PhoneNumber}"
+                                 Placeholder="Parent Number"
+                                  Keyboard="Telephone"
+             ></Entry>
       <Button Text="Save"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding SaveFamilyCommand}"></Button>
+              Command="{Binding PostCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

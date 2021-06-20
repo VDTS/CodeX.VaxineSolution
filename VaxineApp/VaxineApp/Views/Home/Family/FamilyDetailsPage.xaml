@@ -5,24 +5,25 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:converters="clr-namespace:VaxineApp.Converters"
              Title="Family Details">
+  <Shell.SearchHandler>
+    <SearchHandler SearchBoxVisibility="{Binding IsSearchVisible}"
+                   IsSearchEnabled="True"
+                   Placeholder="Search" />
+  </Shell.SearchHandler>
   <ContentPage.Resources>
     <ResourceDictionary>
       <converters:BornDateToAgeInMonthsConverter x:Key="BornDateToAgeInMonthsConverter" />
     </ResourceDictionary>
   </ContentPage.Resources>
   <ContentPage.ToolbarItems>
-    <ToolbarItem Order="Primary"
-                 Icon="Search.png"
-                 Text="Search"
-                 Priority="1" />
     <ToolbarItem Order="Secondary"
                  Text="Add Child"
                  Priority="3"
-                 Command="{Binding AddChildCommand}" />
+                 Command="{Binding GoToSubPostPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Text="Edit Child"
                  Priority="3"
-                 Command="{Binding EditChildCommand}" />
+                 Command="{Binding GoToSubPutPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Text="Edit Family"
                  Priority="3"
@@ -52,12 +53,15 @@
         <Label FontSize="Medium"
                Text="{Binding Family.PhoneNumber}">
           <Label.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding CallToTheNumberCommand}"
+            <TapGestureRecognizer Command="{Binding DialerCommand}"
                                   CommandParameter="{Binding Family.PhoneNumber}"></TapGestureRecognizer>
           </Label.GestureRecognizers>
         </Label>
       </StackLayout>
-      <RefreshView Grid.Row="1">
+      <RefreshView Grid.Row="1"
+                   IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                   RefreshColor="#2196f3"
+                   Command="{Binding PullRefreshCommand}">
         <CollectionView SelectionMode="Single"
                         ItemsSource="{Binding Childs}"
                         SelectedItem="{Binding SelectedChild}">
