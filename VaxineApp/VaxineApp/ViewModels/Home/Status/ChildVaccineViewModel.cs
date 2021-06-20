@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Status;
 using VaxineApp.Views.Home.Status.Vaccine;
@@ -13,108 +15,113 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
-    public class ChildVaccineViewModel : BaseViewModel
+    public class ChildVaccineViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
-        private VaccineModel _vaccine;
-        public VaccineModel Vaccine
-        {
-            get { return _vaccine; }
-            set
-            {
-                _vaccine = value;
-                RaisedPropertyChanged(nameof(Vaccine));
-            }
 
-        }
-        private bool _isBusy;
-        public bool IsBusy
-        {
-            get { return _isBusy; }
-            set
-            {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
-            }
-
-        }
-
-        private ChildModel _child;
-
+        // Property
+        private ChildModel child;
         public ChildModel Child
         {
-            get { return _child; }
+            get
+            {
+                return child;
+            }
             set
             {
-                _child = value;
-                RaisedPropertyChanged(nameof(Child));
+                child = value;
+                OnPropertyChanged();
             }
         }
 
-        private VaccineModel _currentVaccine;
+        private ObservableCollection<VaccineModel> vaccineList;
+        public ObservableCollection<VaccineModel> VaccineList
+        {
+            get
+            {
+                return vaccineList;
+            }
+            set
+            {
+                vaccineList = value;
+                OnPropertyChanged();
+            }
+        }
 
+        private VaccineModel currentVaccine;
         public VaccineModel CurrentVaccine
         {
-            get { return _currentVaccine; }
+            get
+            {
+                return currentVaccine;
+            }
             set
             {
-                _currentVaccine = value;
-                RaisedPropertyChanged(nameof(CurrentVaccine));
+                currentVaccine = value;
+                OnPropertyChanged();
             }
         }
-        private List<VaccineModel> _vaccineList;
 
-        public List<VaccineModel> VaccineList
+        private bool isBusy;
+        public bool IsBusy
         {
-            get { return _vaccineList; }
+            get
+            {
+                return isBusy;
+            }
             set
             {
-                _vaccineList = value;
-                RaisedPropertyChanged(nameof(VaccineList));
+                isBusy = value;
+                OnPropertyChanged();
             }
+
         }
 
-        public ICommand GetDataCommand { private set; get; }
-        public ICommand AddVaccineCommand { private set; get; }
-        public ICommand EditCurrentVaccineCommand { private set; get; }
-        public ICommand DeleteCurrentVaccineCommand { private set; get; }
+
+
+        // Command
         public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand GoToSubPostPageCommand { private set; get; }
+        public ICommand GoToSubPutPageCommand { private set; get; }
+        public ICommand SubDeleteCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
+
+        // ctor
         public ChildVaccineViewModel(ChildModel child)
         {
-            SaveAsPDFCommand = new Command(SaveAsPDF);
-            EditCurrentVaccineCommand = new Command(EditCurrentVaccine);
-            DeleteCurrentVaccineCommand = new Command(DeleteCurrentVaccine);
-            VaccineList = new List<VaccineModel>();
-            CurrentVaccine = new VaccineModel();
+            // Property
             Child = child;
-            LoadVaccine();
-            AddVaccineCommand = new Command(Add);
+            VaccineList = new ObservableCollection<VaccineModel>();
+            CurrentVaccine = new VaccineModel();
+
+
+            // Get
+            Get();
+
+
+            // Command
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            GoToSubPutPageCommand = new Command(GoToPutPage);
+            SubDeleteCommand = new Command(Delete);
+            GoToSubPostPageCommand = new Command(GoToPostPage);
+            PullRefreshCommand = new Command(Refresh);
         }
 
-        private async void SaveAsPDF(object obj)
+        public void CancelSelection()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            VaccineList.Clear();
+        }
+
+        public async void Delete()
         {
             await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
-        private async void DeleteCurrentVaccine(object obj)
-        {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
-        }
-
-        private async void EditCurrentVaccine()
-        {
-            if (CurrentVaccine.VaccineStatus != null)
-            {
-                var jsonClinic = JsonConvert.SerializeObject(CurrentVaccine);
-                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}";
-                await Shell.Current.GoToAsync(route);
-            }
-            else
-            {
-                await App.Current.MainPage.DisplayAlert("No vaccine", "Add vaccine first", "OK");
-            }
-        }
-
-        private async void LoadVaccine()
+        public async void Get()
         {
             var data = await DataService.Get($"Vaccine/{Child.Id}");
             if (data != "null" & data != "Error")
@@ -138,11 +145,62 @@ namespace VaxineApp.ViewModels.Home.Status
             }
         }
 
-        public async void Add()
+        public void GoToDetailsPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GoToMapPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void GoToPostPage()
         {
             var jsonChild = JsonConvert.SerializeObject(Child);
             var route = $"{nameof(AddVaccinePage)}?Child={jsonChild}";
             await Shell.Current.GoToAsync(route);
         }
+
+        public async void GoToPutPage()
+        {
+            if (CurrentVaccine.VaccineStatus != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(CurrentVaccine);
+                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No vaccine", "Add vaccine first", "OK");
+            }
+        }
+
+        public void Post()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Put()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void Refresh()
+        {
+            IsBusy = true;
+
+            Clear();
+            Get();
+            await Task.Delay(2000);
+
+            IsBusy = false;
+        }
+
+        public void SaveAsPDF()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

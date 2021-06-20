@@ -28,7 +28,8 @@
   <ContentPage.Content>
     <RefreshView Padding="20"
                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                 RefreshColor="#2196f3">
+                 RefreshColor="#2196f3"
+                 Command="{Binding PullRefreshCommand}">
       <CollectionView ItemsSource="{Binding FamilyGroup, Mode=TwoWay}"
                       SelectionMode="Single"
                       SelectionChangedCommand="{Binding GoToDetailsPageCommand}"
