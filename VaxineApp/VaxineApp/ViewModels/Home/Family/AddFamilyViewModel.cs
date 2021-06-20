@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Family;
@@ -12,76 +13,119 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Family
 {
-    public class AddFamilyViewModel : BaseViewModel
+    public class AddFamilyViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
-        // Properites
+        // Property
 
-        private int _houseNo;
-        public int HouseNo
+        private GetFamilyModel family;
+        public GetFamilyModel Family
         {
-            get { return _houseNo; }
+            get
+            {
+                return family;
+            }
             set
             {
-                _houseNo = value;
-                RaisedPropertyChanged(nameof(HouseNo));
+                family = value;
+                OnPropertyChanged();
             }
         }
-        private string _parentName;
-        public string ParentName
-        {
-            get { return _parentName; }
-            set
-            {
-                _parentName = value;
-                RaisedPropertyChanged(nameof(ParentName));
-            }
-        }
-        private string _phoneNumber;
-        public string PhoneNumber
-        {
-            get { return _phoneNumber; }
-            set
-            {
-                _phoneNumber = value;
-                RaisedPropertyChanged(nameof(PhoneNumber));
-            }
-        }
+
 
         // Commands
 
-        public ICommand SaveFamilyCommand { private set; get; }
+        public ICommand PostCommand { private set; get; }
         // Constructor
         public AddFamilyViewModel()
         {
-            SaveFamilyCommand = new Command(SaveFamily);
+            // Property
+            Family = new GetFamilyModel();
+
+            // Command
+            PostCommand = new Command(Post);
         }
 
 
-        // Method
-        public async void SaveFamily()
+        public void Get()
         {
-            if (!StaticDataStore.FamilyNumbers.Contains(HouseNo))
-            {
-                GetFamilyModel clinic = new GetFamilyModel()
-                {
-                    Id = Guid.NewGuid(),
-                    HouseNo = HouseNo,
-                    ParentName = ParentName,
-                    PhoneNumber = PhoneNumber,
-                    RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
-                };
-                var data = JsonConvert.SerializeObject(clinic);
-                string a = DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
-                await App.Current.MainPage.DisplayAlert("Data submited", "Successfully posted", "OK");
+            throw new NotImplementedException();
+        }
 
-                var route = $"//{nameof(FamilyListPage)}";
-                await Shell.Current.GoToAsync(route);
+        public void Put()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void Post()
+        {
+            if (Family.HouseNo != 0)
+            {
+                if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
+                {
+                    Family.Id = Guid.NewGuid();
+                    Family.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+
+                    var data = JsonConvert.SerializeObject(Family);
+                    string a = DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
+                    await App.Current.MainPage.DisplayAlert("Data submited", "Successfully posted", "OK");
+
+                    var route = $"//{nameof(FamilyListPage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Duplicate data", $"{Family.HouseNo} Family already exist.", "OK");
+                }
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Duplicate data", $"{HouseNo} Family already exist.", "OK");
+                await App.Current.MainPage.DisplayAlert("Empty Field", "Add data to required fields", "OK");
             }
         }
 
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CancelSelection()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveAsPDF()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Refresh()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GoToPostPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GoToPutPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GoToDetailsPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GoToMapPage()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

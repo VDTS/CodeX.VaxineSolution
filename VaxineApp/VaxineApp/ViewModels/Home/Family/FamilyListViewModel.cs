@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Family;
@@ -14,63 +16,74 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Family
 {
-    public class FamilyListViewModel : BaseViewModel
+    public class FamilyListViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
-        private List<GetFamilyModel> _family;
-        public List<GetFamilyModel> Family
+        private ObservableCollection<GetFamilyModel> families;
+        public ObservableCollection<GetFamilyModel> Families
         {
-            get { return _family; }
+            get
+            {
+                return families;
+            }
             set
             {
-                _family = value;
-                RaisedPropertyChanged(nameof(Family));
+                families = value;
+                OnPropertyChanged();
             }
         }
-        private GetFamilyModel _selectedFamily;
 
+        private GetFamilyModel selectedFamily;
         public GetFamilyModel SelectedFamily
         {
-            get { return _selectedFamily; }
+            get
+            {
+                return selectedFamily;
+            }
             set
             {
-                _selectedFamily = value;
-                RaisedPropertyChanged(nameof(SelectedFamily));
+                selectedFamily = value;
+                OnPropertyChanged();
             }
         }
 
-        private bool _isBusy;
 
+        private bool isBusy;
         public bool IsBusy
         {
-            get { return _isBusy; }
+
+            get
+            {
+                return isBusy;
+            }
             set
             {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
+                isBusy = value;
+                OnPropertyChanged();
             }
         }
 
-
-        public ICommand AddFamilyCommand { private set; get; }
-        public ICommand TapOnItemCommand { private set; get; }
-        public AsyncCommand GetFamilyCommand { private set; get; }
+        public ICommand GoToPostPageCommand { private set; get; }
+        public ICommand SelectionCommand { private set; get; }
+        public ICommand CancelSelectionCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
+
         public FamilyListViewModel()
         {
+            // Property
+            Families = new ObservableCollection<GetFamilyModel>();
+
+            // Get
+            Get();
+
+            // Commands
             SaveAsPDFCommand = new Command(SaveAsPDF);
-            TapOnItemCommand = new Command(CollectionView_SelectionChanged);
-            Family = new List<GetFamilyModel>();
-            GetFamily();
-            GetFamilyCommand = new AsyncCommand(Refresh);
-            AddFamilyCommand = new Command(AddFamily);
+            SelectionCommand = new Command(GoToDetailsPage);
+            PullRefreshCommand = new Command(Refresh);
+            GoToPostPageCommand = new Command(GoToPostPage);
         }
 
-        private async void SaveAsPDF(object obj)
-        {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
-        }
-
-        public async void GetFamily()
+        public async void Get()
         {
             var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
@@ -79,7 +92,7 @@ namespace VaxineApp.ViewModels.Home.Family
                 foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
                 {
                     StaticDataStore.FamilyNumbers.Add(item.Value.HouseNo);
-                    Family.Add(
+                    Families.Add(
                         new GetFamilyModel
                         {
                             Id = item.Value.Id,
@@ -95,28 +108,60 @@ namespace VaxineApp.ViewModels.Home.Family
                 await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
             }
         }
-        async void AddFamily()
+
+        public void Put()
         {
-            var route = $"{nameof(AddFamilyPage)}";
-            await Shell.Current.GoToAsync(route);
+            throw new NotImplementedException();
         }
-        async Task Refresh()
+
+        public void Post()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            Families.Clear();
+        }
+
+        public void CancelSelection()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void SaveAsPDF()
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        public async void Refresh()
         {
             IsBusy = true;
 
-            await Task.Delay(2000);
             Clear();
-            GetFamily();
+            Get();
+            await Task.Delay(2000);
 
             IsBusy = false;
         }
 
-        void Clear()
+        public async void GoToPostPage()
         {
-            Family.Clear();
+            var route = $"{nameof(AddFamilyPage)}";
+            await Shell.Current.GoToAsync(route);
         }
 
-        private async void CollectionView_SelectionChanged(object sender)
+        public void GoToPutPage()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void GoToDetailsPage()
         {
             if (SelectedFamily == null)
             {
@@ -127,10 +172,14 @@ namespace VaxineApp.ViewModels.Home.Family
                 var JsonSelectedFamily = JsonConvert.SerializeObject(SelectedFamily);
                 var route = $"{nameof(FamilyDetailsPage)}?Family={JsonSelectedFamily}";
                 await Shell.Current.GoToAsync(route);
+
                 SelectedFamily = null;
-                //await App.Current.MainPage.Navigation.PushAsync(new FamilyDetailsPage(SelectedFamily));
-                //((CollectionView)sender).SelectedItem = null;
             }
+        }
+
+        public void GoToMapPage()
+        {
+            throw new NotImplementedException();
         }
     }
 }
