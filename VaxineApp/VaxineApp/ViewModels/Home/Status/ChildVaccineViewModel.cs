@@ -93,7 +93,6 @@ namespace VaxineApp.ViewModels.Home.Status
             VaccineList = new ObservableCollection<VaccineModel>();
             CurrentVaccine = new VaccineModel();
 
-
             // Get
             Get();
 
@@ -118,7 +117,32 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void Delete()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (CurrentVaccine.FId != null)
+            {
+                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete vaccine: {CurrentVaccine.VaccineStatus}?", "Yes", "No");
+                if (isDeleteAccepted)
+                {
+                    var data = await DataService.Delete($"Vaccine/{Child.Id}/{CurrentVaccine.FId}");
+                    if (data == "Deleted")
+                    {
+                        VaccineList.Remove(CurrentVaccine);
+                        CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                    }
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No vaccine available", "Vaccine list is empty, can't delete anything", "OK");
+            }
         }
 
         public async void Get()
@@ -132,8 +156,11 @@ namespace VaxineApp.ViewModels.Home.Status
                     VaccineList.Add(
                         new VaccineModel
                         {
+                            Id = item.Value.Id,
+                            RegisteredBy = item.Value.RegisteredBy,
                             VaccinePeriod = item.Value.VaccinePeriod,
-                            VaccineStatus = item.Value.VaccineStatus
+                            VaccineStatus = item.Value.VaccineStatus,
+                            FId = item.Key
                         }
                         );
                 }
@@ -164,10 +191,10 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void GoToPutPage()
         {
-            if (CurrentVaccine.VaccineStatus != null)
+            if (CurrentVaccine.FId != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(CurrentVaccine);
-                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}";
+                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}&ChildId={Child.Id}";
                 await Shell.Current.GoToAsync(route);
             }
             else

@@ -9,33 +9,61 @@ using VaxineApp.Views.Home.Status;
 using VaxineApp.Views.Home.Family;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using VaxineApp.MVVMHelper;
 
 namespace VaxineApp.ViewModels.Home.Status.Vaccine
 {
-    public class EditVaccineViewModel : BaseViewModel
+    public class EditVaccineViewModel : ViewModelBase
     {
-       
-        private VaccineModel _vaccine;
+        // Property
+        private VaccineModel vaccine;
         public VaccineModel Vaccine
         {
-            get { return _vaccine; }
+            get
+            {
+                return vaccine;
+            }
             set
             {
-                _vaccine = value;
-                RaisedPropertyChanged(nameof(Vaccine));
+                vaccine = value;
+                OnPropertyChanged();
             }
         }
 
-        public ICommand UpdateVaccineCommand { private set; get; }
-        public EditVaccineViewModel(VaccineModel vaccine)
+        private Guid ChildId;
+
+        // Command
+        public ICommand PutCommand { private set; get; }
+
+        // ctor
+        public EditVaccineViewModel(VaccineModel vaccine, Guid childId)
         {
+            // Property
             Vaccine = vaccine;
-            UpdateVaccineCommand = new Command(UpdateVaccine);
+            ChildId = childId;
+
+            // Command
+            PutCommand = new Command(Put);
         }
 
-        private async void UpdateVaccine(object obj)
+
+        // Method
+        private async void Put()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            // Changing date to UTC time
+            Vaccine.VaccinePeriod.ToFileTimeUtc();
+            var jsonData = JsonConvert.SerializeObject(Vaccine);
+            var data = await DataService.Put(jsonData, $"Vaccine/{ChildId}/{Vaccine.FId}");
+            if (data == "Submit")
+            {
+                await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
+                var route = $"//{nameof(StatusPage)}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+            }
         }
     }
 }
