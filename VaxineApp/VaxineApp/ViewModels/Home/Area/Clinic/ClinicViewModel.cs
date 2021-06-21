@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.RealCacheLib;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
@@ -180,7 +181,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 
         public async void Get()
         {
-            var data = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
+            var data = await requestsHandler.Get($"Clinic/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
             {
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(data);

@@ -169,7 +169,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             GoToEditAreaCommand = new Command(GoToEditArea);
             SaveAreaCommand = new Command(SaveArea);
             GetDataCommand = new AsyncCommand(Refresh);
-            GetStat();
+            //GetStat();
         }
 
         private async void Delete(object obj)
