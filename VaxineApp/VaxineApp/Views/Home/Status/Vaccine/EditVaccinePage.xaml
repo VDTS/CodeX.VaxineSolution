@@ -7,9 +7,9 @@
              Title="Add Vaccine">
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
-      <DatePicker Date="{Binding VaccinePeriod, Mode=OneWayToSource}"></DatePicker>
+      <DatePicker Date="{Binding Vaccine.VaccinePeriod, Mode=TwoWay}"></DatePicker>
       <Picker Title="Vaccine Status"
-              SelectedItem="{Binding VaccineStatus, Mode=TwoWay}">
+              SelectedItem="{Binding Vaccine.VaccineStatus, Mode=TwoWay}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
             <x:String>Pluse</x:String>
@@ -31,12 +31,12 @@
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
-      <Button Text="Add"
+      <Button Text="Update"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding AddVaccineCommand}"
+              Command="{Binding PutCommand}"
               Margin="20"></Button>
     </StackLayout>
   </ContentPage.Content>

@@ -9,52 +9,48 @@ using VaxineApp.Views.Home.Status;
 using VaxineApp.Views.Home.Family;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using VaxineApp.MVVMHelper;
 
 namespace VaxineApp.ViewModels.Home.Status.Vaccine
 {
-    public class AddVaccineViewModel : BaseViewModel
+    public class AddVaccineViewModel : ViewModelBase
     {
-        private DateTime _vaccinePeriod;
-        public DateTime VaccinePeriod
+        // Property
+        private VaccineModel vaccine;
+        public VaccineModel Vaccine
         {
-            get { return _vaccinePeriod; }
+            get
+            {
+                return vaccine;
+            }
             set
             {
-                _vaccinePeriod = value;
-                RaisedPropertyChanged(nameof(VaccinePeriod));
+                vaccine = value;
+                OnPropertyChanged();
             }
         }
 
-        private string _vaccineStatus;
-        public string VaccineStatus
-        {
-            get { return _vaccineStatus; }
-            set
-            {
-                _vaccineStatus = value;
-                RaisedPropertyChanged(nameof(VaccineStatus));
-            }
-        }
-
-        public ICommand AddVaccineCommand { private set; get; }
         ChildModel Child;
+
+        // Command
+        public ICommand PostCommand { private set; get; }
+
         public AddVaccineViewModel(ChildModel _child)
         {
+            // Property
             Child = _child;
-            AddVaccineCommand = new Command(AddVaccine);
+
+
+            // Command
+            PostCommand = new Command(Post);
         }
 
-        private async void AddVaccine(object obj)
+        private async void Post(object obj)
         {
-            VaccineModel clinic = new VaccineModel()
-            {
-                Id = Guid.NewGuid(),
-                VaccinePeriod = VaccinePeriod.Date.ToUniversalTime(),
-                VaccineStatus = VaccineStatus,
-                RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
-            };
+            Vaccine.Id = Guid.NewGuid();
+            Vaccine.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
 
-            var data = JsonConvert.SerializeObject(clinic);
+            var data = JsonConvert.SerializeObject(Vaccine);
 
             string a = DataService.Post(data, $"Vaccine/{Child.Id}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");

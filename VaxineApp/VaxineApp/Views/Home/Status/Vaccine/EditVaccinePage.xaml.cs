@@ -13,10 +13,12 @@ using Xamarin.Forms.Xaml;
 namespace VaxineApp.Views.Home.Status.Vaccine
 {
     [QueryProperty(nameof(Vaccine), nameof(Vaccine))]
+    [QueryProperty(nameof(ChildId), nameof(ChildId))]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditVaccinePage : ContentPage
     {
         public string Vaccine { get; set; }
+        public string ChildId { get; set; }
         public EditVaccinePage()
         {
             InitializeComponent();
@@ -24,7 +26,7 @@ namespace VaxineApp.Views.Home.Status.Vaccine
         protected override void OnAppearing()
         {
             var result = JsonConvert.DeserializeObject<VaccineModel>(Vaccine);
-            BindingContext = new EditVaccineViewModel(result);
+            BindingContext = new EditVaccineViewModel(result, Guid.Parse(ChildId));
         }
     }
 }
