@@ -53,6 +53,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ParentAppShell.xaml.cs">
+      <DependentUpon>ParentAppShell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="SupAppShell.xaml.cs">
+      <DependentUpon>SupAppShell.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Home\Family\EditFamilyPage.xaml.cs">
       <DependentUpon>EditFamilyPage.xaml</DependentUpon>
     </Compile>
