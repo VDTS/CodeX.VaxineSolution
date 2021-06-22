@@ -24,7 +24,23 @@ namespace VaxineApp
             var isLoogged = Xamarin.Essentials.SecureStorage.GetAsync("isLogged").Result;
             if (isLoogged == "1")
             {
-                MainPage = new AppShell();
+                var role = Xamarin.Essentials.SecureStorage.GetAsync("Role").Result;
+                if (role == "Mobilizer")
+                {
+                    MainPage = new AppShell();
+                }
+                else if(role == "Supervisor")
+                {
+                    MainPage = new SupAppShell();
+                }
+                else if(role == "Parent")
+                {
+                    MainPage = new ParentAppShell();
+                }
+                else
+                {
+                    throw new Exception("role not found");
+                }
             }
             else
             {
