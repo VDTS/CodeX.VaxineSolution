@@ -19,7 +19,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding UpdateDoctorCommand}"></Button>
+              Command="{Binding PutCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

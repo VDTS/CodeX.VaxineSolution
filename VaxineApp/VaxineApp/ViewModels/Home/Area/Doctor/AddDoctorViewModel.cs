@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Doctor;
 using Xamarin.Essentials;
@@ -11,44 +12,37 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Doctor
 {
-    public class AddDoctorViewModel : BaseViewModel
+    public class AddDoctorViewModel : ViewModelBase
     {
-        private string _name;
-        public string Name
+        // Property
+        private DoctorModel doctor;
+        public DoctorModel Doctor
         {
-            get { return _name; }
-            set
+            get
             {
-                _name = value;
-                RaisedPropertyChanged(nameof(Name));
+                return doctor;
             }
-        }
-        private bool _isHeProvindingSupportForSIAAndVaccination;
-        public bool IsHeProvindingSupportForSIAAndVaccination
-        {
-            get { return _isHeProvindingSupportForSIAAndVaccination; }
             set
             {
-                _isHeProvindingSupportForSIAAndVaccination = value;
-                RaisedPropertyChanged(nameof(IsHeProvindingSupportForSIAAndVaccination));
+                doctor = value;
+                OnPropertyChanged();
             }
         }
 
-        public ICommand SaveDoctorCommand { private set; get; }
+
+        // Command
+        public ICommand PostCommand { private set; get; }
+
+        // ctor
         public AddDoctorViewModel()
         {
-            SaveDoctorCommand = new Command(SaveDoctor);
+            PostCommand = new Command(Post);
         }
-        public async void SaveDoctor()
-        {
-            DoctorModel clinic = new DoctorModel()
-            {
-                Id = Guid.NewGuid(),
-                Name = Name,
-                IsHeProvindingSupportForSIAAndVaccination = IsHeProvindingSupportForSIAAndVaccination
-            };
 
-            var data = JsonConvert.SerializeObject(clinic);
+        private async void Post()
+        {
+            Doctor.Id = Guid.NewGuid();
+            var data = JsonConvert.SerializeObject(Doctor);
 
             string a = DataService.Post(data, $"Doctor/{Preferences.Get("TeamId", "")}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");

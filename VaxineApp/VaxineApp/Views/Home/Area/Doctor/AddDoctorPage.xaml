@@ -13,10 +13,10 @@
     <StackLayout Padding="40" Spacing="10">
 
       <Entry Placeholder="Name"
-             Text="{Binding Name}"></Entry>
+             Text="{Binding Doctor.Name}"></Entry>
       <StackLayout Orientation="Horizontal">
         <CheckBox
-                IsChecked="{Binding IsHeProvindingSupportForSIAAndVaccination, Mode=TwoWay}" />
+                IsChecked="{Binding Doctor.IsHeProvindingSupportForSIAAndVaccination, Mode=TwoWay}" />
         <Label  Text="Is he provinding support forSIA and vaccination"></Label>
         </StackLayout>
       <Button Text="Save"
@@ -24,7 +24,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding SaveDoctorCommand}"></Button>
+              Command="{Binding PostCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

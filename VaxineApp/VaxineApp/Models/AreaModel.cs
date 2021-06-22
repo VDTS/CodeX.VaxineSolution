@@ -26,8 +26,14 @@ namespace VaxineApp.Models
     }
     public class DoctorModel
     {
+        public string FId { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public bool IsHeProvindingSupportForSIAAndVaccination { get; set; }
+        public DoctorModel()
+        {
+            Id = new Guid();
+        }
     }
     public class InfluencerModel
     {
