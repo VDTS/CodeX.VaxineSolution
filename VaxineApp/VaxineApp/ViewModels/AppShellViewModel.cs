@@ -29,7 +29,8 @@ namespace VaxineApp.ViewModels
         public ICommand RemoveAccountCommand { private set; get; }
         public ICommand GoToThemesPageCommand { private set; get; }
         private string _userName;
-        public string UserName {
+        public string UserName
+        {
             get { return _userName; }
             set
             {
@@ -93,7 +94,40 @@ namespace VaxineApp.ViewModels
         }
         private async void RemoveAccount(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "Logout with Removing account and cache functionality is under construction", "OK");
+            var isDeleteAccount = await App.Current.MainPage.DisplayAlert("Do you want to remove cache", "This will cause deleting data that ain't synced with database", "Yes", "No");
+            if (isDeleteAccount)
+            {
+                await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
+                await Xamarin.Essentials.SecureStorage.SetAsync("role", "0");
+                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                try
+                {
+                    var dataPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+
+                    var cachePath = System.IO.Path.GetTempPath();
+
+                    // If exist, delete the cache directory and everything in it recursivly
+                    if (System.IO.Directory.Exists(cachePath))
+                        System.IO.Directory.Delete(cachePath, true);
+
+                    // If not exist, restore just the directory that was deleted
+                    //if (!System.IO.Directory.Exists(cachePath))
+                    //    System.IO.Directory.CreateDirectory(cachePath);
+
+                    // If exist, delete the cache directory and everything in it recursivly
+                    if (System.IO.Directory.Exists(dataPath))
+                        System.IO.Directory.Delete(dataPath, true);
+
+                    // If not exist, restore just the directory that was deleted
+                    //if (!System.IO.Directory.Exists(dataPath))
+                    //    System.IO.Directory.CreateDirectory(dataPath);
+                }
+                catch (Exception) { }
+            }
+            else {
+                await App.Current.MainPage.DisplayAlert("Canceled", "If you want to logout, go click on logout", "OK");
+            }
+
         }
         private async void GoToHelpPage(object obj)
         {
