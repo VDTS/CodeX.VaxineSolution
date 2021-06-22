@@ -16,6 +16,9 @@
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout Padding="20">
+      <Label Text="Version Name"
+             FontSize="Large"></Label>
+      <Label Text="{Binding AppVersion}"></Label>
       <Label Text="Version"
              FontSize="Large"></Label>
       <Label Text="{Binding AppNewUpdates.Version}"></Label>

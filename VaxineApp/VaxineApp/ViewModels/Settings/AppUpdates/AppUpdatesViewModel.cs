@@ -36,11 +36,21 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
                 RaisedPropertyChanged(nameof(AppNewUpdates));
             }
         }
-
+        private string _appVersion;
+        public string AppVersion
+        {
+            get { return _appVersion; }
+            set
+            {
+                _appVersion = value;
+                RaisedPropertyChanged(nameof(AppVersion));
+            }
+        }
         public ICommand CheckForUpdateCommand { private set; get; }
         public ICommand TapToGoToPageCommand { private set; get; }
         public AppUpdatesViewModel()
         {
+            AppVersion = DependencyService.Get<IAppVersion>().GetVersion();
             CheckForUpdateCommand = new Command(CheckForUpdate);
             TapToGoToPageCommand = new Command<string>(TapToGoToPage);
             DownloadFile();
@@ -58,12 +68,11 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
 
         public void DownloadFile()
         {
-            string v = DependencyService.Get<IAppVersion>().GetVersion();
             int b = DependencyService.Get<IAppVersion>().GetBuild();
             try
             {
                 WebClient client = new WebClient();
-                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{v}.json"));
+                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{AppVersion}.json"));
                 StreamReader reader = new StreamReader(stream);
                 string data = reader.ReadToEnd();
                 AppNewUpdates = JsonConvert.DeserializeObject<Root>(data);

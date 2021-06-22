@@ -39,7 +39,7 @@ namespace VaxineApp
                 }
                 else
                 {
-                    throw new Exception("role not found");
+                    MainPage = new LoginPage();
                 }
             }
             else
