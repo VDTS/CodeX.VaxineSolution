@@ -99,6 +99,8 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                     Doctors.Add(
                             new DoctorModel
                             {
+                                FId = item.Key.ToString(),
+                                Id = item.Value.Id,
                                 Name = item.Value.Name,
                                 IsHeProvindingSupportForSIAAndVaccination = item.Value.IsHeProvindingSupportForSIAAndVaccination
                             }
@@ -121,9 +123,28 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             throw new NotImplementedException();
         }
 
-        public void Delete()
+        public async void Delete()
         {
-            throw new NotImplementedException();
+            if (SelectedDoctor.FId != null)
+            {
+                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedDoctor.Name}?", "Yes", "No");
+                if (isDeleteAccepted)
+                {
+                    var data = await DataService.Delete($"Doctor/{Preferences.Get("TeamId", "")}/{SelectedDoctor.FId}");
+                    if (data == "Deleted")
+                    {
+                        Doctors.Remove(SelectedDoctor);
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
         }
 
         public void Clear()
@@ -133,7 +154,14 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 
         public void CancelSelection()
         {
-            throw new NotImplementedException();
+            if (SelectedDoctor.FId != null)
+            {
+                SelectedDoctor = null;
+            }
+            else
+            {
+                return;
+            }
         }
 
         public async void SaveAsPDF()
@@ -181,6 +209,6 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         public void GoToMapPage()
         {
             throw new NotImplementedException();
-        } 
+        }
     }
 }
