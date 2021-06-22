@@ -15,10 +15,10 @@
     <ToolbarItem Order="Secondary"
                  Text="Add"
                  Priority="3"
-                 Command="{Binding AddDoctorCommand}" />
+                 Command="{Binding GoToPostPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Text="Edit"
-                 Command="{Binding EditCommand}"
+                 Command="{Binding GoToPutPageCommand}"
                  Priority="2" />
     <ToolbarItem Order="Secondary"
                  Text="Delete"
@@ -33,9 +33,9 @@
   <ContentPage.Content>
     <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
-                 Command="{Binding GetDoctorCommand}">
+                 Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding Doctor}"
+                      ItemsSource="{Binding Doctors}"
                       SelectedItem="{Binding SelectedDoctor}">
         <CollectionView.Header>
           <Grid Padding="10">

@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Doctor;
 using Xamarin.CommunityToolkit.ObjectModel;
@@ -13,50 +15,150 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Doctor
 {
-    public class DoctorViewModel : BaseViewModel
+    public class DoctorViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
-        private DoctorModel _selectedDoctor;
+        // Property
+        private DoctorModel selectedDoctor;
         public DoctorModel SelectedDoctor
         {
-            get { return _selectedDoctor; }
+            get
+            {
+                return selectedDoctor;
+            }
             set
             {
-                _selectedDoctor = value;
-                RaisedPropertyChanged(nameof(SelectedDoctor));
+                selectedDoctor = value;
+                OnPropertyChanged();
             }
         }
 
-        private List<DoctorModel> _doctor;
-        public List<DoctorModel> Doctor
+        private ObservableCollection<DoctorModel> doctors;
+        public ObservableCollection<DoctorModel> Doctors
         {
-            get { return _doctor; }
+            get
+            {
+                return doctors;
+            }
             set
             {
-                _doctor = value;
-                RaisedPropertyChanged(nameof(Doctor));
+                doctors = value;
+                OnPropertyChanged();
             }
         }
-        // Properties
-        public AsyncCommand GetDoctorCommand { private set; get; }
-        public ICommand AddDoctorCommand { private set; get; }
-        public ICommand SaveAsPDFCommand { private set; get; }
-        public ICommand DeleteCommand { private set; get; }
-        public ICommand EditCommand { private set; get; }
 
-        // Constructor
+        private bool isBusy;
+        public bool IsBusy
+        {
+            get
+            {
+                return isBusy;
+            }
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        // Command
+        public ICommand PullRefreshCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand GoToPostPageCommand { private set; get; }
+        public ICommand GoToPutPageCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+
+
+        // ctor
         public DoctorViewModel()
         {
-            GetDoctor();
-            SaveAsPDFCommand = new Command(SaveAsPDF);
-            DeleteCommand = new Command(Delete);
-            EditCommand = new Command(EditDoctor);
-            Doctor = new List<DoctorModel>();
-            GetDoctorCommand = new AsyncCommand(Refresh);
-            AddDoctorCommand = new Command(AddDoctor);
+            // Property
+            Doctors = new ObservableCollection<DoctorModel>();
             SelectedDoctor = new DoctorModel();
+
+
+            // Get
+            Get();
+
+            // Command
+            PullRefreshCommand = new Command(Refresh);
+            DeleteCommand = new Command(Delete);
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            GoToPutPageCommand = new Command(GoToPutPage);
+            GoToPostPageCommand = new Command(GoToPostPage);
         }
 
-        private async void EditDoctor()
+        public async void Get()
+        {
+            var data = await DataService.Get($"Doctor/{Preferences.Get("TeamId", "")}");
+            if (data != "null" & data != "Error")
+            {
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(data);
+                foreach (KeyValuePair<string, DoctorModel> item in clinic)
+                {
+                    Doctors.Add(
+                            new DoctorModel
+                            {
+                                Name = item.Value.Name,
+                                IsHeProvindingSupportForSIAAndVaccination = item.Value.IsHeProvindingSupportForSIAAndVaccination
+                            }
+                        );
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+            }
+        }
+
+        public void Put()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Post()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            Doctors.Clear();
+        }
+
+        public void CancelSelection()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void SaveAsPDF()
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        public async void Refresh()
+        {
+            IsBusy = true;
+
+            Clear();
+            Get();
+            await Task.Delay(2000);
+
+            IsBusy = false;
+        }
+
+        public async void GoToPostPage()
+        {
+            var route = $"{nameof(AddDoctorPage)}";
+            await Shell.Current.GoToAsync(route);
+        }
+
+        public async void GoToPutPage()
         {
             if (SelectedDoctor.Name != null)
             {
@@ -71,72 +173,14 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             }
         }
 
-        private async void Delete(object obj)
+        public void GoToDetailsPage()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            throw new NotImplementedException();
         }
 
-        private async void SaveAsPDF(object obj)
+        public void GoToMapPage()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
-        }
-
-
-        // Route Methods
-        async void AddDoctor()
-        {
-            var route = $"{nameof(AddDoctorPage)}";
-            await Shell.Current.GoToAsync(route);
-        }
-
-        public async void GetDoctor()
-        {
-            var data = await DataService.Get($"Doctor/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
-            {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(data);
-                foreach (KeyValuePair<string, DoctorModel> item in clinic)
-                {
-                    Doctor.Add(
-                            new DoctorModel
-                            {
-                                Name = item.Value.Name,
-                                IsHeProvindingSupportForSIAAndVaccination = item.Value.IsHeProvindingSupportForSIAAndVaccination
-                            }
-                        );
-                }
-            }
-            else
-            {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
-            }
-        }
-        // Methods
-        private bool _isBusy;
-
-        public bool IsBusy
-        {
-            get { return _isBusy; }
-            set
-            {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
-            }
-        }
-        async Task Refresh()
-        {
-            IsBusy = true;
-
-            await Task.Delay(2000);
-            Clear();
-            GetDoctor();
-
-            IsBusy = false;
-        }
-
-        void Clear()
-        {
-            Doctor.Clear();
-        }
+            throw new NotImplementedException();
+        } 
     }
 }
