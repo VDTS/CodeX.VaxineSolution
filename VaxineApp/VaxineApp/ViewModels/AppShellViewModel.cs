@@ -58,12 +58,8 @@ namespace VaxineApp.ViewModels
             GoToHelpPageCommand = new Command(GoToHelpPage);
             RemoveAccountCommand = new Command(RemoveAccount);
             GoToThemesPageCommand = new Command(GoToThemesPage);
-            SqliteDataService sqliteDataService = new SqliteDataService();
-            sqliteDataService.Initialize(Preferences.Get("ProfileEmail", ""));
-            var profileValue = sqliteDataService.Get("Profile");
-            var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
-            UserName = profile.FullName;
-            Role = profile.Role;
+            UserName = Preferences.Get("UserName", "");
+            Role = Preferences.Get("Role","");
         }
 
         private async void GoToThemesPage()
