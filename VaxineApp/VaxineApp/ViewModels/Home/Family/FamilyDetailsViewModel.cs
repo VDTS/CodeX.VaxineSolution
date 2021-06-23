@@ -123,7 +123,7 @@ namespace VaxineApp.ViewModels.Home.Family
             if (SelectedChild.FullName != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(SelectedChild);
-                var route = $"{nameof(EditChildPage)}?Child={jsonClinic}";
+                var route = $"{nameof(EditChildPage)}?Child={jsonClinic}&FamilyId={Family.Id}";
                 await Shell.Current.GoToAsync(route);
                 SelectedChild = null;
             }
@@ -165,6 +165,7 @@ namespace VaxineApp.ViewModels.Home.Family
                     Childs.Add(
                          new ChildModel
                          {
+                             FId = item.Key.ToString(),
                              Id = item.Value.Id,
                              FullName = item.Value.FullName,
                              DOB = item.Value.DOB,
