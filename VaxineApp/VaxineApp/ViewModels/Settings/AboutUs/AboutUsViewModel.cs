@@ -1,34 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Settings.AboutUs
 {
-    public class AboutUsViewModel : BaseViewModel
+    public class AboutUsViewModel : ViewModelBase
     {
+        // Property
+        private ObservableCollection<AboutUsModel> persons;
+        public ObservableCollection<AboutUsModel> Persons
+        {
+            get
+            {
+                return persons;
+            }
+            set
+            {
+                persons = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // Command
         public ICommand GoToLinkedInCommand { private set; get; }
         public ICommand GoToTwitterCommand { private set; get; }
 
-        private List<AboutUsModel> _persons;
-        public List<AboutUsModel> Persons
-        {
-            get { return _persons; }
-            set
-            {
-                _persons = value;
-                RaisedPropertyChanged(nameof(Persons));
-            }
-        }
         public AboutUsViewModel()
         {
+            // Property
+            Persons = new ObservableCollection<AboutUsModel>();
+
+            // Get
+            AddBio();
+
+            // Command
             GoToLinkedInCommand = new Command<string>(GoToLinkedIn);
             GoToTwitterCommand = new Command<string>(GoToTwitter);
-            Persons = new List<AboutUsModel>();
-            AddBio();
         }
 
         private async void GoToTwitter(string url)
