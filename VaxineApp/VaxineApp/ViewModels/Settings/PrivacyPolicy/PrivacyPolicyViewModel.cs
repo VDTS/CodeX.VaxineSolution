@@ -3,23 +3,28 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 
 namespace VaxineApp.ViewModels.Settings.PrivacyPolicy
 {
-    public class PrivacyPolicyViewModel : BaseViewModel
+    public class PrivacyPolicyViewModel : ViewModelBase
     {
-        private string _content;
-
+        // Property
+        private string content;
         public string Content
         {
-            get { return _content; }
+            get
+            {
+                return content;
+            }
             set
             {
-                _content = value;
-                RaisedPropertyChanged(nameof(Content));
+                content = value;
+                OnPropertyChanged();
             }
         }
+
         public PrivacyPolicyViewModel()
         {
             DownloadFile();
