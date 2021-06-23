@@ -10,56 +10,74 @@ using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Settings;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using DataAccessLib.Databases;
 using Newtonsoft.Json;
 using DataAccessLib.Models;
 using System.Linq;
 using VaxineApp.Views.Settings.Main;
 using VaxineApp.Views.Settings.Themes;
 using VaxineApp.AccessShellDir.Views.Login;
+using VaxineApp.MVVMHelper;
 
 namespace VaxineApp.ViewModels
 {
-    public class AppShellViewModel : BaseViewModel
+    public class AppShellViewModel : ViewModelBase
     {
+        // Property
+        private string userName;
+        public string UserName
+        {
+            get
+            {
+                return userName;
+            }
+            set
+            {
+                userName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string role;
+        public string Role
+        {
+            get
+            {
+                return role;
+            }
+            set
+            {
+                role = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // Command
         public ICommand GoToProfileCommand { private set; get; }
         public ICommand GoToSettingsPageCommand { private set; get; }
         public ICommand LogginOutCommand { private set; get; }
         public ICommand GoToHelpPageCommand { private set; get; }
         public ICommand RemoveAccountCommand { private set; get; }
         public ICommand GoToThemesPageCommand { private set; get; }
-        private string _userName;
-        public string UserName
-        {
-            get { return _userName; }
-            set
-            {
-                _userName = value;
-                RaisedPropertyChanged(nameof(UserName));
-            }
-        }
-        private string _role;
-
-        public string Role
-        {
-            get { return _role; }
-            set
-            {
-                _role = value;
-                RaisedPropertyChanged(nameof(Role));
-            }
-        }
-
+       
+        // ctor
         public AppShellViewModel()
         {
+            // Get
+            sqliteDataCache.Initialize(Preferences.Get("ProfileEmail", ""));
+            var profileValue = sqliteDataCache.Get("Profile");
+            var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
+
+            //// Property
+            UserName = profile.FullName;
+            Role = profile.Role;
+
+            // Command
             GoToSettingsPageCommand = new Command(GoToSettingsPage);
             GoToProfileCommand = new Command(GoToProfile);
             LogginOutCommand = new Command(LogginOut);
             GoToHelpPageCommand = new Command(GoToHelpPage);
             RemoveAccountCommand = new Command(RemoveAccount);
             GoToThemesPageCommand = new Command(GoToThemesPage);
-            UserName = Preferences.Get("UserName", "");
-            Role = Preferences.Get("Role","");
         }
 
         private async void GoToThemesPage()
