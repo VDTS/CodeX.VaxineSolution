@@ -37,10 +37,16 @@ namespace VaxineApp.Models
     }
     public class InfluencerModel
     {
+        public string FId { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Position { get; set; }
         public string Contact { get; set; }
         public bool DoesHeProvidingSupport { get; set; }
+        public InfluencerModel()
+        {
+            Id = new Guid();
+        }
     }
     public class MasjeedModel
     {

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Influencer;
 using Xamarin.Essentials;
@@ -11,69 +12,41 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Influencer
 {
-    public class AddInfluecerViewModel : BaseViewModel
+    public class AddInfluecerViewModel : ViewModelBase
     {
-        // Properties
-        private string _name;
-        public string Name
+        // Property
+        private InfluencerModel influencer;
+        public InfluencerModel Influencer
         {
-            get { return _name; }
-            set
+            get
             {
-                _name = value;
-                RaisedPropertyChanged(nameof(Name));
+                return influencer;
             }
-        }
-        private string _postition;
-        public string Position
-        {
-            get { return _postition; }
             set
             {
-                _postition = value;
-                RaisedPropertyChanged(nameof(Position));
-            }
-        }
-        private string _contact;
-        public string Contact
-        {
-            get { return _contact; }
-            set
-            {
-                _contact = value;
-                RaisedPropertyChanged(nameof(Contact));
-            }
-        }
-        private bool _doesHeProvidingSupport;
-        public bool DoesHeProvidingSupport
-        {
-            get { return _doesHeProvidingSupport; }
-            set
-            {
-                _doesHeProvidingSupport = value;
-                RaisedPropertyChanged(nameof(DoesHeProvidingSupport));
+                influencer = value;
+                OnPropertyChanged();
             }
         }
 
-        public ICommand SaveInfluencerCommand { private set; get; }
+        // Command
+        public ICommand PostCommand { private set; get; }
+
+        // ctor
         public AddInfluecerViewModel()
         {
-            SaveInfluencerCommand = new Command(SaveInfluencer);
+            // Property
+            Influencer = new InfluencerModel();
+
+            // Command
+            PostCommand = new Command(Post);
         }
 
-        // Methods
-        public async void SaveInfluencer()
+        public async void Post()
         {
-            InfluencerModel clinic = new InfluencerModel()
-            {
-                Id = Guid.NewGuid(),
-                Name = Name,
-                Contact = Contact,
-                DoesHeProvidingSupport = DoesHeProvidingSupport,
-                Position = Position
-            };
+            Influencer.Id = Guid.NewGuid();
 
-            var data = JsonConvert.SerializeObject(clinic);
+            var data = JsonConvert.SerializeObject(Influencer);
 
             string a = DataService.Post(data, $"Influencer/{Preferences.Get("TeamId", "")}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
