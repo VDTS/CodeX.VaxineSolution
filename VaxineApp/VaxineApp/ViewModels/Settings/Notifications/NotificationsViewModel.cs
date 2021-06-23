@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.AndroidNativeApi;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Settings.Notifications
 {
-    public class NotificationsViewModel : BaseViewModel
+    public class NotificationsViewModel : ViewModelBase
     {
         INotificationManager notificationManager;
         public ICommand SendNotificationCommand { private set; get; }
