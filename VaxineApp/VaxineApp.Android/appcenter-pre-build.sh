@@ -8,3 +8,4 @@ then
 fi
 
 sed -i -e "s/\[VSAC_GITHUB_API_KEY]/$VSAC_GITHUB_API_KEY/g" ../VaxineApp/Constants.cs
+sed -i -e "s/\[FB_API_KEY]/$FB_API_KEY/g" ../DataAccessLib/Constants.cs

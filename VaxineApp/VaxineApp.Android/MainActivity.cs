@@ -30,7 +30,6 @@ namespace VaxineApp.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.FormsMaps.Init(this, savedInstanceState);
-            FirebaseApp.InitializeApp(Android.App.Application.Context);
             LoadApplication(new App());
 
             CreateNotificationFromIntent(Intent);

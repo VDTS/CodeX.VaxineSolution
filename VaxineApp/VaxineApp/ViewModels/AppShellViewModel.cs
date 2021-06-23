@@ -63,13 +63,13 @@ namespace VaxineApp.ViewModels
         public AppShellViewModel()
         {
             // Get
-            sqliteDataCache.Initialize(Preferences.Get("ProfileEmail", ""));
-            var profileValue = sqliteDataCache.Get("Profile");
-            var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
+            //sqliteDataCache.Initialize(Preferences.Get("ProfileEmail", ""));
+            //var profileValue = sqliteDataCache.Get("Profile");
+            //var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
 
-            //// Property
-            UserName = profile.FullName;
-            Role = profile.Role;
+            ////// Property
+            //UserName = profile.FullName;
+            //Role = profile.Role;
 
             // Command
             GoToSettingsPageCommand = new Command(GoToSettingsPage);
