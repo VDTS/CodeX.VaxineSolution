@@ -103,7 +103,7 @@ namespace VaxineApp.ViewModels.Login
                     string Token = await auth.LoginWithEmailPassword(InputUserEmail, InputUserPassword);
                     if (Token != "")
                     {
-                        LoadProfile(InputUserEmail);
+                        LoadProfile(InputUserEmail.ToLower()); ;
                     }
                     else
                     {
@@ -128,7 +128,7 @@ namespace VaxineApp.ViewModels.Login
             var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
             foreach (KeyValuePair<string, ProfileModel> item in clinic)
             {
-                if (item.Value.Email == email)
+                if (item.Value.Email.ToLower() == email)
                 {
                     sqliteDataService.InsertData(new Data { Key = "Profile", Value = JsonConvert.SerializeObject(item.Value) });
                     Preferences.Set("ClusterId", item.Value.ClusterId);
