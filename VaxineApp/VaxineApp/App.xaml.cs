@@ -5,7 +5,6 @@ using Xamarin.Forms.Xaml;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using VaxineApp.Views.Login;
 using Microsoft.AppCenter.Distribute;
 using System.Threading.Tasks;
 using VaxineApp.AndroidNativeApi;
@@ -39,12 +38,12 @@ namespace VaxineApp
                 }
                 else
                 {
-                    MainPage = new LoginPage();
+                    MainPage = new AccessShell();
                 }
             }
             else
             {
-                MainPage = new LoginPage();
+                MainPage = new AccessShell();
             }
         }
 

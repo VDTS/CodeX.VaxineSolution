@@ -7,7 +7,6 @@ using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Profile;
-using VaxineApp.Views.Login;
 using VaxineApp.Views.Settings;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -17,6 +16,7 @@ using DataAccessLib.Models;
 using System.Linq;
 using VaxineApp.Views.Settings.Main;
 using VaxineApp.Views.Settings.Themes;
+using VaxineApp.AccessShellDir.Views.Login;
 
 namespace VaxineApp.ViewModels
 {
@@ -86,6 +86,7 @@ namespace VaxineApp.ViewModels
         private async void LogginOut(object obj)
         {
             await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
+            Application.Current.MainPage = new AccessShell();
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
         private async void RemoveAccount(object obj)
@@ -95,6 +96,7 @@ namespace VaxineApp.ViewModels
             {
                 await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
                 await Xamarin.Essentials.SecureStorage.SetAsync("role", "0");
+                Application.Current.MainPage = new AccessShell();
                 await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
                 try
                 {

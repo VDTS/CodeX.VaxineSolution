@@ -22,7 +22,6 @@ using VaxineApp.Views.Settings.Font;
 using VaxineApp.Views.Settings.Themes;
 using VaxineApp.Views.Settings.Language;
 using VaxineApp.Views.Settings.Notifications;
-using VaxineApp.Views.Login.ForgotPassword;
 using VaxineApp.Views.Home.Family.Child;
 using VaxineApp.Views.Home.Status.Vaccine;
 
@@ -85,11 +84,6 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(ThemesPage), typeof(ThemesPage));
             Routing.RegisterRoute(nameof(LanguagePage), typeof(LanguagePage));
             Routing.RegisterRoute(nameof(NotificationsPage), typeof(NotificationsPage));
-
-
-            Routing.RegisterRoute(nameof(ForgotPasswordPage), typeof(ForgotPasswordPage));
-            Routing.RegisterRoute(nameof(ResetByEmail), typeof(ResetByEmail));
-            Routing.RegisterRoute(nameof(ResetByPhoneNumber), typeof(ResetByPhoneNumber));
 
         }
     }

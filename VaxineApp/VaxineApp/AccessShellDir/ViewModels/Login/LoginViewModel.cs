@@ -5,14 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.Models;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Status;
-using VaxineApp.Views.Login.ForgotPassword;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace VaxineApp.ViewModels.Login
+namespace VaxineApp.AccessShellDir.ViewModels.Login
 {
     public partial class LoginViewModel : BaseViewModel
     {

@@ -11,7 +11,6 @@
        xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
        xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
-       xmlns:Login="clr-namespace:VaxineApp.Views.Login"
        xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
        Title="VaxineApp"
        x:Class="VaxineApp.ParentAppShell">
@@ -196,7 +195,6 @@
     </DataTemplate>
   </Shell.FlyoutFooterTemplate>
 
-
   <FlyoutItem Title="Home">
     <FlyoutItem.Icon>
       <FontImageSource FontFamily="SegoeMDL2"
@@ -252,11 +250,7 @@
       <ShellContent Route="ProfilePage"
                     ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
     </Tab>
-
   </FlyoutItem>
-  <ShellItem Route="LoginPage" FlyoutItemIsVisible="False">
-    <ShellContent ContentTemplate="{DataTemplate Login:LoginPage}"></ShellContent>
-  </ShellItem>
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
   <MenuItem Text="Profile"
             StyleClass="MenuItemLayoutStyle"

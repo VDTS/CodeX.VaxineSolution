@@ -53,6 +53,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="AccessShell.xaml.cs">
+      <DependentUpon>AccessShell.xaml</DependentUpon>
+    </Compile>
     <Compile Update="ParentAppShell.xaml.cs">
       <DependentUpon>ParentAppShell.xaml</DependentUpon>
     </Compile>
@@ -125,13 +128,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\Login\ForgotPassword\ForgotPasswordPage.xaml">
+    <EmbeddedResource Update="AccessShellDir\Views\Login\ForgotPassword\ForgotPasswordPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Login\ForgotPassword\ResetByEmail.xaml">
+    <EmbeddedResource Update="AccessShellDir\Views\Login\ForgotPassword\ResetByEmail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Login\ForgotPassword\ResetByPhoneNumber.xaml">
+    <EmbeddedResource Update="AccessShellDir\Views\Login\ForgotPassword\ResetByPhoneNumber.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings\Font\FontPage.xaml">
@@ -221,7 +224,7 @@
     <EmbeddedResource Update="Views\Home\Status\StatusPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Login\LoginPage.xaml">
+    <EmbeddedResource Update="AccessShellDir\Views\Login\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings\PrivacyPolicy\PrivacyPolicyPage.xaml">

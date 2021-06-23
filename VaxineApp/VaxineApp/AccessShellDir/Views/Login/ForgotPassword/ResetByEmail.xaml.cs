@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.Views.Login.ForgotPassword
+namespace VaxineApp.AccessShellDir.Views.Login.ForgotPassword
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ForgotPasswordPage : ContentPage
+    public partial class ResetByEmail : ContentPage
     {
-        public ForgotPasswordPage()
+        public ResetByEmail()
         {
             InitializeComponent();
         }
