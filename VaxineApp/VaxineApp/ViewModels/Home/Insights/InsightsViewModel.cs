@@ -3,27 +3,64 @@ using Newtonsoft.Json;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 using Entry = Microcharts.ChartEntry;
 
 namespace VaxineApp.ViewModels.Home.Insights
 {
-    public class InsightsViewModel : BaseViewModel
+    public class InsightsViewModel : ViewModelBase
     {
-        private PieChart _femaleVsMaleChart;
+        // Property
+        private PieChart femaleVsMaleChart;
         public PieChart FemaleVsMaleChart
         {
-            get => _femaleVsMaleChart;
+            get
+            {
+                return femaleVsMaleChart;
+            }
             set
             {
-                _femaleVsMaleChart = value;
-                RaisedPropertyChanged(nameof(FemaleVsMaleChart));
+                femaleVsMaleChart = value;
+                OnPropertyChanged();
             }
         }
-        public List<Entry> Entries;
+
+        private ObservableCollection<Entry> entries;
+        public ObservableCollection<Entry> Entries
+        {
+            get
+            {
+                return entries;
+            }
+            set
+            {
+                entries = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<FemaleVsMaleChildModel> femaleVsMaleData;
+        public ObservableCollection<FemaleVsMaleChildModel> FemaleVsMaleData
+        {
+            get
+            {
+                return femaleVsMaleData;
+            }
+            set
+            {
+                femaleVsMaleData = value;
+                OnPropertyChanged();
+            }
+        }
+
         public string[] ColourValues = new string[] {
             "FFB900",  "E74856", "0078D7",   "0099BC",  "7A7574",  "767676",
             "FF8C00",  "E81123",  "0063B1",  "2D7D9A",  "5D5A58",  "4C4A48",
@@ -33,44 +70,70 @@ namespace VaxineApp.ViewModels.Home.Insights
             "EF6950",  "BF0077",  "744DA9",  "018574",  "486860",  "525E54",
             "D13438",  "C239B3",  "B146C2",  "00CC6A",  "498205",  "847545"
         };
-        private List<FemaleVsMaleChildModel> _femaleVsMaleData;
-        public List<FemaleVsMaleChildModel> FemaleVsMaleData
+
+        private bool isBusy;
+        public bool IsBusy
         {
-            get => _femaleVsMaleData;
+            get
+            {
+                return isBusy;
+            }
             set
             {
-                _femaleVsMaleData = value;
-                RaisedPropertyChanged(nameof(FemaleVsMaleData));
+                isBusy = value;
+                OnPropertyChanged();
             }
         }
+
+
+        // Command
+        public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
+        // ctor
         public InsightsViewModel()
         {
-            Entries = new List<Entry>();
-            FemaleVsMaleData = new List<FemaleVsMaleChildModel>();
-            LoadData();
+            // Property
+            Entries = new ObservableCollection<Entry>();
+            FemaleVsMaleData = new ObservableCollection<FemaleVsMaleChildModel>();
+            Entries = new ObservableCollection<Entry>();
+
+            // Get
+            Get();
+
+            // Command
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            PullRefreshCommand = new Command(Refresh);
         }
 
-        private async void LoadData()
+        private async void SaveAsPDF(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+        }
+
+        private async void Get()
         {
             int _maleChildren = 0;
             int _femaleChildren = 0;
             var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            if (data != "null" && data != "Error")
             {
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
                 foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
                 {
                     var data2 = await DataService.Get($"Child/{item.Value.Id}");
-                    var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
-                    foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                    if (data2 != "null" && data2 != "Error")
                     {
-                        if (item2.Value.Gender == "Female")
+                        var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
+                        foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
                         {
-                            _femaleChildren++;
-                        }
-                        else
-                        {
-                            _maleChildren++;
+                            if (item2.Value.Gender == "Female")
+                            {
+                                _femaleChildren++;
+                            }
+                            else
+                            {
+                                _maleChildren++;
+                            }
                         }
                     }
                 }
@@ -110,6 +173,24 @@ namespace VaxineApp.ViewModels.Home.Insights
                 Entries = Entries
             };
             FemaleVsMaleChart.LabelTextSize = 40;
+        }
+
+        public async void Refresh()
+        {
+            IsBusy = true;
+
+            Clear();
+            Get();
+            await Task.Delay(2000);
+
+            IsBusy = false;
+        }
+
+        public void Clear()
+        {
+            FemaleVsMaleData.Clear();
+            Entries.Clear();
+            FemaleVsMaleChart = null;
         }
     }
 }
