@@ -63,6 +63,7 @@ namespace DataAccessLib.Models
     }
     public class MasjeedModel
     {
+        public string FId { get; set; }
         public Guid Id { get; set; }
         public string MasjeedName { get; set; }
         public string KeyInfluencer { get; set; }

@@ -50,12 +50,18 @@ namespace VaxineApp.Models
     }
     public class MasjeedModel
     {
+        public string FId { get; set; }
+        public Guid Id { get; set; }
         public string MasjeedName { get; set; }
         public string KeyInfluencer { get; set; }
         public bool DoesImamSupportsVaccine { get; set; }
         public bool DoYouHavePermissionForAdsInMasjeed { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public MasjeedModel()
+        {
+            Id = new Guid();
+        }
     }
     public class SchoolModel
     {

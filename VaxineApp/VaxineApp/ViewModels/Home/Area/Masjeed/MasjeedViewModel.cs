@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Masjeed;
 using VaxineApp.Views.Shared;
@@ -14,64 +16,82 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Masjeed
 {
-    public class MasjeedViewModel : BaseViewModel
+    public class MasjeedViewModel : ViewModelBase
     {
-        private MasjeedModel _selectedMasjeed;
-
+        // Property
+        private MasjeedModel selectedMasjeed;
         public MasjeedModel SelectedMasjeed
         {
-            get { return _selectedMasjeed; }
+            get
+            {
+                return selectedMasjeed;
+            }
             set
             {
-                _selectedMasjeed = value;
-                RaisedPropertyChanged(nameof(SelectedMasjeed));
+                selectedMasjeed = value;
+                OnPropertyChanged();
             }
         }
-        private bool _isBusy;
 
+        private bool isBusy;
         public bool IsBusy
         {
-            get { return _isBusy; }
+            get
+            {
+                return isBusy;
+            }
             set
             {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
+                isBusy = value;
+                OnPropertyChanged();
             }
         }
-        private List<MasjeedModel> _masjeed;
-        public List<MasjeedModel> Masjeed
+
+        private ObservableCollection<MasjeedModel> masjeeds;
+        public ObservableCollection<MasjeedModel> Masjeeds
         {
-            get { return _masjeed; }
+            get
+            {
+                return masjeeds;
+            }
             set
             {
-                _masjeed = value;
-                RaisedPropertyChanged(nameof(Masjeed));
+                masjeeds = value;
+                OnPropertyChanged();
             }
         }
+
         // Commands
-        public ICommand AddMasjeedCommand { private set; get; }
+        public ICommand GoToPostPageCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
-        public ICommand EditCommand { private set; get; }
+        public ICommand GoToPutPageCommand { private set; get; }
         public ICommand GoToMapCommand { private set; get; }
-        public AsyncCommand GetMasjeedCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
 
 
-        // Constructor
+        // ctor
         public MasjeedViewModel()
         {
-            Masjeed = new List<MasjeedModel>();
+            // Property
+            Masjeeds = new ObservableCollection<MasjeedModel>();
+            SelectedMasjeed = new MasjeedModel();
+
+
+            // Get
+            Get();
+
+
+            // Command
             SaveAsPDFCommand = new Command(SaveAsPDF);
             DeleteCommand = new Command(Delete);
-            EditCommand = new Command(EditClinic);
-            GetMasjeed();
-            GetMasjeedCommand = new AsyncCommand(Refresh);
-            AddMasjeedCommand = new Command(AddMasjeed);
+            GoToPutPageCommand = new Command(GoToPutPage);
+            PullRefreshCommand = new Command(Refresh);
+            GoToPostPageCommand = new Command(GoToPostPage);
             GoToMapCommand = new Command(GoToMap);
-            SelectedMasjeed = new MasjeedModel();
         }
 
-        private async void EditClinic()
+        private async void GoToPutPage()
         {
             if (SelectedMasjeed.MasjeedName != null)
             {
@@ -88,7 +108,32 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
         private async void Delete(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+
+            if (SelectedMasjeed.FId != null)
+            {
+                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedMasjeed.MasjeedName}?", "Yes", "No");
+                if (isDeleteAccepted)
+                {
+                    var data = await DataService.Delete($"Masjeed/{Preferences.Get("TeamId", "")}/{SelectedMasjeed.FId}");
+                    if (data == "Deleted")
+                    {
+                        Masjeeds.Remove(SelectedMasjeed);
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                    }
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No item selected", "Select an item to delete", "OK");
+            }
         }
 
         private async void SaveAsPDF(object obj)
@@ -102,9 +147,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             await Shell.Current.GoToAsync(route);
         }
 
-        // Methods
-
-        public async void GetMasjeed()
+        public async void Get()
         {
             var data = await DataService.Get($"Masjeed/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
@@ -112,9 +155,11 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(data);
                 foreach (KeyValuePair<string, MasjeedModel> item in clinic)
                 {
-                    Masjeed.Add(
+                    Masjeeds.Add(
                         new MasjeedModel
                         {
+                            FId = item.Key.ToString(),
+                            Id = item.Value.Id,
                             MasjeedName = item.Value.MasjeedName,
                             KeyInfluencer = item.Value.KeyInfluencer,
                             DoYouHavePermissionForAdsInMasjeed = item.Value.DoYouHavePermissionForAdsInMasjeed,
@@ -130,26 +175,26 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
             }
         }
-        // Route Methods
-        async void AddMasjeed()
+
+        async void GoToPostPage()
         {
             var route = $"{nameof(AddMasjeedPage)}";
             await Shell.Current.GoToAsync(route);
         }
-        async Task Refresh()
+        async void Refresh()
         {
             IsBusy = true;
 
-            await Task.Delay(2000);
             Clear();
-            GetMasjeed();
+            Get();
+            await Task.Delay(2000);
 
             IsBusy = false;
         }
 
         void Clear()
         {
-            Masjeed.Clear();
+            Masjeeds.Clear();
         }
     }
 }
