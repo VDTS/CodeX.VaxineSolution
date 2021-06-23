@@ -12,28 +12,28 @@
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
       <Entry Placeholder="Masjeed Name"
-             Text="{Binding MasjeedName}"></Entry>
+             Text="{Binding Masjeed.MasjeedName}"></Entry>
       <Entry Placeholder="Key Influencer"
-             Text="{Binding KeyInfluencer}"></Entry>
+             Text="{Binding Masjeed.KeyInfluencer}"></Entry>
 
       <StackLayout Orientation="Horizontal" Spacing="10" Padding="0, 10, 0, 0">
-        <CheckBox IsChecked="{Binding DoesImamSupportsVaccine}"></CheckBox>
+        <CheckBox IsChecked="{Binding Masjeed.DoesImamSupportsVaccine}"></CheckBox>
         <Label Text="Does Imam Supports Vaccine?"></Label>
       </StackLayout>
 
       <StackLayout Orientation="Horizontal" Spacing="10">
-        <CheckBox IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
+        <CheckBox IsChecked="{Binding Masjeed.DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
         <Label Text="Do You Have Permission For Ads In Masjeed?"></Label>
       </StackLayout>
       <StackLayout Orientation="Horizontal">
         <Entry Placeholder="Latitude"
                IsEnabled="False"
                WidthRequest="140"
-               Text="{Binding Latitude}"></Entry>
+               Text="{Binding Masjeed.Latitude}"></Entry>
         <Entry Placeholder="Longitude"
                IsEnabled="False"
                WidthRequest="140"
-               Text="{Binding Longitude}"></Entry>
+               Text="{Binding Masjeed.Longitude}"></Entry>
         <Button Text=""
                 FontFamily="SegoeMDL2"
                 WidthRequest="50"
@@ -50,7 +50,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding SaveMasjeedCommand}"></Button>
+              Command="{Binding PostCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
