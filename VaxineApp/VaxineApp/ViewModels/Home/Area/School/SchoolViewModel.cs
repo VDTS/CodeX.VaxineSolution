@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.School;
 using Xamarin.CommunityToolkit.ObjectModel;
@@ -13,53 +15,79 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.School
 {
-    public class SchoolViewModel : BaseViewModel
+    public class SchoolViewModel : ViewModelBase
     {
-        private SchoolModel _selectedSchool;
-
+        // Property
+        private SchoolModel selectedSchool;
         public SchoolModel SelectedSchool
         {
-            get { return _selectedSchool; }
+            get
+            {
+                return selectedSchool;
+            }
             set
             {
-                _selectedSchool = value;
-                RaisedPropertyChanged(nameof(SelectedSchool));
+                selectedSchool = value;
+                OnPropertyChanged();
             }
         }
 
-
-        private List<SchoolModel> _school;
-        public List<SchoolModel> School
+        private ObservableCollection<SchoolModel> schools;
+        public ObservableCollection<SchoolModel> Schools
         {
-            get { return _school; }
+            get
+            {
+                return schools;
+            }
             set
             {
-                _school = value;
-                RaisedPropertyChanged(nameof(School));
+                schools = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool isBusy;
+        public bool IsBusy
+        {
+            get
+            {
+                return isBusy;
+            }
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged();
             }
         }
 
         // Commands
-        public ICommand AddSchoolCommand { private set; get; }
-        public AsyncCommand GetSchoolCommand { private set; get; }
+        public ICommand GoToPostPageCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand GoToMapCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
-        public ICommand EditCommand { private set; get; }
-        // Constructor
+        public ICommand GoToPutPageCommand { private set; get; }
+
+        // ctor
         public SchoolViewModel()
         {
+            // Property
+            Schools = new ObservableCollection<SchoolModel>();
+            SelectedSchool = new SchoolModel();
+
+            // Get
+            Get();
+
+            //Command
             SaveAsPDFCommand = new Command(SaveAsPDF);
             GoToMapCommand = new Command(GoToMap);
             DeleteCommand = new Command(Delete);
-            EditCommand = new Command(EditClinic);
-            School = new List<SchoolModel>();
-            GetSchool();
-            GetSchoolCommand = new AsyncCommand(Refresh);
-            AddSchoolCommand = new Command(AddSchool);
-            SelectedSchool = new SchoolModel();
+            GoToPutPageCommand = new Command(GoToPutPage);
+            PullRefreshCommand = new Command(Refresh);
+            GoToPostPageCommand = new Command(GoToPostPage);
         }
-        private async void EditClinic()
+
+        private async void GoToPutPage()
         {
             if (SelectedSchool.SchoolName != null)
             {
@@ -75,7 +103,31 @@ namespace VaxineApp.ViewModels.Home.Area.School
         }
         private async void Delete(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (SelectedSchool.FId != null)
+            {
+                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedSchool.SchoolName}?", "Yes", "No");
+                if (isDeleteAccepted)
+                {
+                    var data = await DataService.Delete($"School/{Preferences.Get("TeamId", "")}/{SelectedSchool.FId}");
+                    if (data == "Deleted")
+                    {
+                        Schools.Remove(SelectedSchool);
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                    }
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No item selected", "Select an item to delete", "OK");
+            }
         }
 
         private async void GoToMap(object obj)
@@ -89,8 +141,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
         }
 
 
-        // Methods
-        public async void GetSchool()
+        public async void Get()
         {
             var data = await DataService.Get($"School/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
@@ -98,9 +149,11 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(data);
                 foreach (KeyValuePair<string, SchoolModel> item in clinic)
                 {
-                    School.Add(
+                    Schools.Add(
                         new SchoolModel
                         {
+                            FId = item.Key.ToString(),
+                            Id = item.Value.Id,
                             KeyInfluencer = item.Value.KeyInfluencer,
                             SchoolName = item.Value.SchoolName,
                             Longitude = item.Value.Longitude,
@@ -114,38 +167,27 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
             }
         }
-        private bool _isBusy;
 
-        public bool IsBusy
-        {
-            get { return _isBusy; }
-            set
-            {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
-            }
-        }
 
-        // Route Methods
-        async void AddSchool()
+        async void GoToPostPage()
         {
             var route = $"{nameof(AddSchoolPage)}";
             await Shell.Current.GoToAsync(route);
         }
-        async Task Refresh()
+        async void Refresh()
         {
             IsBusy = true;
 
             await Task.Delay(2000);
             Clear();
-            GetSchool();
+            Get();
 
             IsBusy = false;
         }
 
         void Clear()
         {
-            School.Clear();
+            Schools.Clear();
         }
     }
 }

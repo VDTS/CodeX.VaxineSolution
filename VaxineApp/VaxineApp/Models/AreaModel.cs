@@ -65,9 +65,15 @@ namespace VaxineApp.Models
     }
     public class SchoolModel
     {
+        public string FId { get; set; }
+        public Guid Id { get; set; }
         public string SchoolName { get; set; }
         public string KeyInfluencer { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public SchoolModel()
+        {
+            Id = new Guid();
+        }
     }
 }
