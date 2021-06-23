@@ -6,6 +6,7 @@ namespace VaxineApp.Models
 {
     public class ChildModel
     {
+        public string FId { get; set; }
         public Guid Id { get; set; }
         public string FullName { get; set; }
         public DateTime DOB { get; set; }

@@ -14,7 +14,7 @@
       <Entry Text="{Binding Child.FullName, Mode=TwoWay}"
                                  Placeholder="Full Name"></Entry>
       <Picker Title="Gender"
-              SelectedItem="{Binding Child.Gender, Mode=OneWayToSource}">
+              SelectedItem="{Binding Child.Gender}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
             <x:String>Male</x:String>
@@ -22,7 +22,7 @@
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
-      <Entry Text="{Binding Child.RINo, Mode=OneWayToSource}"
+      <Entry Text="{Binding Child.RINo}" Keyboard="Numeric"
                                  Placeholder="RI Number"></Entry>
       <DatePicker Date="{Binding Child.DOB, Mode=OneWayToSource}"></DatePicker>
 
@@ -36,7 +36,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding UpdateChildCommand}"
+              Command="{Binding PutCommand}"
               Margin="20"></Button>
     </StackLayout>
 

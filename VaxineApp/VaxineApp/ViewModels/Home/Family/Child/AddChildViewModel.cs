@@ -54,6 +54,8 @@ namespace VaxineApp.ViewModels.Home.Family.Child
             {
                 Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
                 Child.Id = Guid.NewGuid();
+                Child.DOB = Child.DOB.ToUniversalTime();
+
                 var data = JsonConvert.SerializeObject(Child);
 
                 string a = DataService.Post(data, $"Child/{Family.Id}");

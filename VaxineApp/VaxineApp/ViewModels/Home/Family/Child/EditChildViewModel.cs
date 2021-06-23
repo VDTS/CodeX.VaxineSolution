@@ -11,33 +11,52 @@ using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
+using VaxineApp.MVVMHelper;
 
 namespace VaxineApp.ViewModels.Home.Family.Child
 {
-    public class EditChildViewModel : BaseViewModel
+    public class EditChildViewModel : ViewModelBase
     {
-        private ChildModel _child;
-
+        // Property
+        private ChildModel child;
         public ChildModel Child
         {
-            get { return _child; }
+            get
+            {
+                return child;
+            }
             set
             {
-                _child = value;
-                RaisedPropertyChanged(nameof(Child));
+                child = value;
+                OnPropertyChanged();
             }
         }
 
-        public ICommand UpdateChildCommand { private set; get; }
-        public EditChildViewModel(ChildModel child)
+        Guid FamilyId;
+        // Command
+        public ICommand PutCommand { private set; get; }
+
+        public EditChildViewModel(ChildModel child, Guid familyId)
         {
+            FamilyId = familyId;
             Child = child;
-            UpdateChildCommand = new Command(UpdateChild);
+            PutCommand = new Command(Put);
         }
 
-        private async void UpdateChild(object obj)
+        private async void Put()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            var jsonData = JsonConvert.SerializeObject(Child);
+            var data = await DataService.Put(jsonData, $"Child/{FamilyId}/{Child.FId}");
+            if (data == "Submit")
+            {
+                await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
+                var route = $"//{nameof(StatusPage)}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+            }
         }
     }
 }

@@ -14,9 +14,11 @@ using Xamarin.Forms.Xaml;
 namespace VaxineApp.Views.Home.Family.Child
 {
     [QueryProperty(nameof(Child), nameof(Child))]
+    [QueryProperty(nameof(FamilyId), nameof(FamilyId))]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditChildPage : ContentPage
     {
+        public string FamilyId { get; set; }
         public string Child { get; set; }
         public EditChildPage()
         {
@@ -26,7 +28,7 @@ namespace VaxineApp.Views.Home.Family.Child
         protected override void OnAppearing()
         {
             var result = JsonConvert.DeserializeObject<ChildModel>(Child);
-            BindingContext = new EditChildViewModel(result) ;
+            BindingContext = new EditChildViewModel(result, Guid.Parse(FamilyId));
         }
     }
 }
