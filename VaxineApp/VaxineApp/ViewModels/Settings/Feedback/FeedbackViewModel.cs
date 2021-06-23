@@ -10,56 +10,74 @@ using Xamarin.Forms;
 using Octokit.Internal;
 using System.Collections.ObjectModel;
 using VaxineApp.Models.Metadata;
+using VaxineApp.MVVMHelper;
 
 namespace VaxineApp.ViewModels.Settings.Feedback
 {
-    public class FeedbackViewModel : BaseViewModel
+    public class FeedbackViewModel : ViewModelBase
     {
-        public ICommand SubmitIssueOnGithubCommand { private set; get; }
-        public ICommand AttachScreenshotOnGithubIssueCommand { private set; get; }
-        private string _issueTitle;
+        // Property
+        private string issueTitle;
         public string IssueTitle
         {
-            get { return _issueTitle; }
+            get
+            {
+                return issueTitle;
+            }
             set
             {
-                _issueTitle = value;
-                RaisedPropertyChanged(nameof(IssueTitle));
+                issueTitle = value;
+                OnPropertyChanged();
             }
         }
-        private bool _suggestionRadioButton;
+
+        private bool suggestionRadioButton;
         public bool SuggestionRadioButton
         {
-            get { return _suggestionRadioButton; }
+            get
+            {
+                return clinics;
+            }
             set
             {
-                _suggestionRadioButton = value;
-                RaisedPropertyChanged(nameof(SuggestionRadioButton));
+                clinics = value;
+                OnPropertyChanged();
             }
         }
 
-        private bool _problemRadioButton;
+        private bool problemRadioButton;
         public bool ProblemRadioButton
         {
-            get { return _problemRadioButton; }
+            get
+            {
+                return problemRadioButton;
+            }
             set
             {
-                _problemRadioButton = value;
-                RaisedPropertyChanged(nameof(ProblemRadioButton));
+                problemRadioButton = value;
+                OnPropertyChanged();
             }
         }
 
-        private string _issueDetails;
+        private string issueDetails;
         public string IssueDetails
         {
-            get { return _issueDetails; }
+            get
+            {
+                return clinics;
+            }
             set
             {
-                _issueDetails = value;
-                RaisedPropertyChanged(nameof(IssueDetails));
+                clinics = value;
+                OnPropertyChanged();
             }
         }
 
+        // Command
+        public ICommand SubmitIssueOnGithubCommand { private set; get; }
+        public ICommand AttachScreenshotOnGithubIssueCommand { private set; get; }
+
+        // ctor
         public FeedbackViewModel()
         {
             SubmitIssueOnGithubCommand = new Command(SubmitIssueOnGithub);
