@@ -2,78 +2,107 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
 
 namespace VaxineApp.ViewModels.Shared
 {
-    public class GoogleMapViewModel : BaseViewModel
+    public class GoogleMapViewModel : ViewModelBase
     {
-        private string _pageName;
+        // Property
+        private string pageName;
         public string PageName {
-            get { return _pageName; }
+            get
+            {
+                return pageName;
+            }
             set
             {
-                _pageName = value;
-                RaisedPropertyChanged(nameof(PageName));
+                pageName = value;
+                OnPropertyChanged();
             }
         }
-        private double _longitude;
+
+        private double longitude;
         public double Longitude
         {
-            get { return _longitude; }
+            get
+            {
+                return longitude;
+            }
             set
             {
-                _longitude = value;
-                RaisedPropertyChanged(nameof(Longitude));
+                longitude = value;
+                OnPropertyChanged();
             }
         }
-        private double _latitude;
+
+        private double latitude;
         public double Latitude {
-            get { return _latitude; }
+            get
+            {
+                return latitude;
+            }
             set
             {
-                _latitude = value;
-                RaisedPropertyChanged(nameof(Latitude));
+                latitude = value;
+                OnPropertyChanged();
             }
         }
-        private Position _position;
+
+        private Position position;
         public Position Position {
-            get { return _position; }
+            get
+            {
+                return position;
+            }
             set
             {
-                _position = value;
-                RaisedPropertyChanged(nameof(Position));
+                position = value;
+                OnPropertyChanged();
             }
         }
-        private string _label;
+
+        private string label;
         public string Label {
-            get { return _label; }
+            get
+            {
+                return label;
+            }
             set
             {
-                _label = value;
-                RaisedPropertyChanged(nameof(Label));
+                label = value;
+                OnPropertyChanged();
             }
         }
-        private string _address;
+
+        private string address;
         public string Address {
-            get { return _address; }
+            get
+            {
+                return address;
+            }
             set
             {
-                _address = value;
-                RaisedPropertyChanged(nameof(Address));
+                address = value;
+                OnPropertyChanged();
             }
         }
+
+        // ctor
         public GoogleMapViewModel()
         {
-            GetLocation();
+            // Property
             PageName = "Google Map";
             Label = "Kandahar";
             Address = "Kandahar City, Kandahar, Af";
+
+            // Get
+            GetLocation();
             //Position = new Position(Latitude, Longitude);
             Position = new Position(30.342, 40.454);
-
         }
 
         public async Task GetLocation()
