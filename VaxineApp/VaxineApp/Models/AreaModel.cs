@@ -6,9 +6,15 @@ namespace VaxineApp.Models
 {
     public class TeamModel
     {
+        public string FId { get; set; }
+        public Guid Id { get; set; }
         public string TeamNo { get; set; }
         public int SocialMobilizerId { get; set; }
         public string CHWName { get; set; }
+        public TeamModel()
+        {
+            Id = new Guid();
+        }
     }
     public class ClinicModel
     {

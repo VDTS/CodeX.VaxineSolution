@@ -10,171 +10,188 @@ using System.Threading.Tasks;
 using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using VaxineApp.MVVMHelper;
 
 namespace VaxineApp.ViewModels.Home.Area.Area
 {
-    public class AreaViewModel : BaseViewModel
+    public class AreaViewModel : ViewModelBase
     {
-        // Properties
-        private bool _isBusy;
+        // Property
 
+        private bool isBusy;
         public bool IsBusy
         {
-            get { return _isBusy; }
+            get
+            {
+                return isBusy;
+            }
             set
             {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
+                isBusy = value;
+                OnPropertyChanged();
             }
         }
 
-        private TeamModel _team;
+        private TeamModel team;
         public TeamModel Team
         {
-            get { return _team; }
+            get
+            {
+                return team;
+            }
             set
             {
-                _team = value;
-                RaisedPropertyChanged(nameof(Team));
+                team = value;
+                OnPropertyChanged();
             }
         }
-        private string _clusterName;
+
+        private string clusterName;
         public string ClusterName
         {
-            get { return _clusterName; }
+            get
+            {
+                return clusterName;
+            }
             set
             {
-                _clusterName = value;
-                RaisedPropertyChanged(nameof(ClusterName));
+                clusterName = value;
+                OnPropertyChanged();
             }
         }
-        private string _teamNo;
-        public string TeamNo
-        {
-            get { return _teamNo; }
-            set
-            {
-                _teamNo = value;
-                RaisedPropertyChanged(nameof(TeamNo));
-            }
-        }
-        private int _socialMobilizerId;
-        public int SocialMobilizerId
-        {
-            get { return _socialMobilizerId; }
-            set
-            {
-                _socialMobilizerId = value;
-                RaisedPropertyChanged(nameof(SocialMobilizerId));
-            }
-        }
-        private string _cHWName;
-        public string CHWName
-        {
-            get { return _cHWName; }
-            set
-            {
-                _cHWName = value;
-                RaisedPropertyChanged(nameof(CHWName));
-            }
-        }
-        private int _totalHouseholds;
+
+        
+        private int totalHouseholds;
         public int TotalHouseholds
         {
-            get { return _totalHouseholds; }
+            get
+            {
+                return totalHouseholds;
+            }
             set
             {
-                _totalHouseholds = value;
-                RaisedPropertyChanged(nameof(TotalHouseholds));
+                totalHouseholds = value;
+                OnPropertyChanged();
             }
         }
-        private int _totalMasjeeds;
+
+        private int totalMasjeeds;
         public int TotalMasjeeds
         {
-            get { return _totalMasjeeds; }
+            get
+            {
+                return totalMasjeeds;
+            }
             set
             {
-                _totalMasjeeds = value;
-                RaisedPropertyChanged(nameof(TotalMasjeeds));
+                totalMasjeeds = value;
+                OnPropertyChanged();
             }
         }
 
-        private int _totalSchools;
+        private int totalSchools;
         public int TotalSchools
         {
-            get { return _totalSchools; }
+            get
+            {
+                return totalSchools;
+            }
             set
             {
-                _totalSchools = value;
-                RaisedPropertyChanged(nameof(TotalSchools));
+                totalSchools = value;
+                OnPropertyChanged();
             }
         }
 
-        private int _totalClinics;
+        private int totalClinics;
         public int TotalClinics
         {
-            get { return _totalClinics; }
+            get
+            {
+                return totalClinics;
+            }
             set
             {
-                _totalClinics = value;
-                RaisedPropertyChanged(nameof(TotalClinics));
+                totalClinics = value;
+                OnPropertyChanged();
             }
         }
 
-        private int _totalDoctors;
+        private int totalDoctors;
         public int TotalDoctors
         {
-            get { return _totalDoctors; }
+            get
+            {
+                return totalDoctors;
+            }
             set
             {
-                _totalDoctors = value;
-                RaisedPropertyChanged(nameof(TotalDoctors));
+                totalDoctors = value;
+                OnPropertyChanged();
             }
         }
 
-        private int _totalInfluencers;
+        private int totalInfluencers;
         public int TotalInfluencers
         {
-            get { return _totalInfluencers; }
+            get
+            {
+                return totalInfluencers;
+            }
             set
             {
-                _totalInfluencers = value;
-                RaisedPropertyChanged(nameof(TotalInfluencers));
+                totalInfluencers = value;
+                OnPropertyChanged();
             }
         }
-        private int _totalChildren;
+
+        private int totalChildren;
         public int TotalChildren
         {
-            get { return _totalChildren; }
+            get
+            {
+                return totalChildren;
+            }
             set
             {
-                _totalChildren = value;
-                RaisedPropertyChanged(nameof(TotalChildren));
+                totalChildren = value;
+                OnPropertyChanged();
             }
         }
 
         // Commands
-        public ICommand GoToEditAreaCommand { private set; get; }
-        public ICommand SaveAreaCommand { private set; get; }
-        public ICommand DeleteCommand { private set; get; }
+        public ICommand GoToPutPageCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
-        public AsyncCommand GetDataCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
 
-        // Constructor
+        // ctor
         public AreaViewModel()
         {
+            // Property
+            Team = new TeamModel();
+
+            // Get
+            Get();
+            GetStat();
+
+            // Command
             SaveAsPDFCommand = new Command(SaveAsPDF);
-            DeleteCommand = new Command(Delete);
-            GetArea();
-            GoToEditAreaCommand = new Command(GoToEditArea);
-            SaveAreaCommand = new Command(SaveArea);
-            GetDataCommand = new AsyncCommand(Refresh);
-            //GetStat();
+            GoToPutPageCommand = new Command(GoToPutpage);
+            PullRefreshCommand = new AsyncCommand(Refresh);
         }
 
-        private async void Delete(object obj)
+        private async void GoToPutpage()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (Team.TeamNo != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(Team);
+                var route = $"{nameof(EditAreaPage)}?Team={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No Clinic", "Select a clinic", "OK");
+            }
         }
 
         private async void SaveAsPDF(object obj)
@@ -184,7 +201,6 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
         private async void GetStat()
         {
-
             var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
             {
@@ -193,7 +209,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                 foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
                 {
                     var data2 = await DataService.Get($"Child/{item.Value.Id}");
-                    if (data != "null" & data != "Error")
+                    if (data2 != "null" && data2 != "Error")
                     {
                         var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
                         int _familyChildCount = 0;
@@ -214,7 +230,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
 
             var _familyData = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            if (_familyData != "null" & data != "Error")
+            if (_familyData != "null" && _familyData != "Error")
             {
                 var _family = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(_familyData);
                 TotalHouseholds = _family.Count;
@@ -255,9 +271,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                 TotalDoctors = _doctor.Count;
             }
         }
-
-        // Methods
-        public async void GetArea()
+        public async void Get()
         {
             var data = await DataService.Get($"Team/{Preferences.Get("ClusterId", "")}");
             if (data != "null" & data != "Error")
@@ -267,69 +281,21 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                 {
                     Team = new TeamModel
                     {
+                        Id = item.Value.Id,
+                        FId = item.Key.ToString(),
                         CHWName = item.Value.CHWName,
                         SocialMobilizerId = item.Value.SocialMobilizerId,
                         TeamNo = item.Value.TeamNo
                     };
                 }
-                CHWName = Team.CHWName;
-                SocialMobilizerId = Team.SocialMobilizerId;
-                TeamNo = Team.TeamNo;
             }
             else
             {
                 await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
             }
         }
-        public async void SaveArea()
-        {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
-            //    var area = await Data.GetTeam();
-            //    if (area == null)
-            //    {
-            //        try
-            //        {
-            //            await Data.PostTeam(
-            //                new TeamModel
-            //                {
-            //                    TeamNo = TeamNo,
-            //                    CHWName = CHWName,
-            //                    SocialMobilizerId = SocialMobilizerId
-            //                }
-            //                );
-            //            var route = $"//{nameof(AreaPage)}";
-            //            await Shell.Current.GoToAsync(route);
-            //        }
-            //        catch (Exception)
-            //        {
-            //            throw;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        try
-            //        {
-            //            await Data.PutTeam(
-            //                 new TeamModel
-            //                 {
-            //                     TeamNo = TeamNo,
-            //                     CHWName = CHWName,
-            //                     SocialMobilizerId = SocialMobilizerId
-            //                 }
-            //                );
-            //            var route = $"//{nameof(AreaPage)}";
-            //            await Shell.Current.GoToAsync(route);
-            //        }
-            //        catch (Exception)
-            //        {
 
-            //            throw;
-            //        }
-            //    }
-        }
-
-        // GoTo Routes
-        public async void GoToEditArea()
+        public async void GoToPutPage()
         {
             var route = $"{nameof(EditAreaPage)}";
             await Shell.Current.GoToAsync(route);
@@ -340,15 +306,21 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
             await Task.Delay(2000);
             Clear();
-            GetArea();
+            Get();
             GetStat();
 
             IsBusy = false;
         }
-
         void Clear()
         {
             Team = null;
+            TotalChildren = 0;
+            TotalInfluencers = 0;
+            TotalDoctors = 0;
+            TotalClinics = 0;
+            TotalSchools = 0;
+            TotalMasjeeds = 0;
+            TotalHouseholds = 0;
         }
     }
 }
