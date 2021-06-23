@@ -11,91 +11,56 @@ using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
+using VaxineApp.MVVMHelper;
 
 namespace VaxineApp.ViewModels.Home.Family.Child
 {
-    public class AddChildViewModel : BaseViewModel
+    public class AddChildViewModel : ViewModelBase
     {
+        // Property
         GetFamilyModel Family;
-        public ICommand AddChildCommand { private set; get; }
-        public AddChildViewModel(GetFamilyModel _family)
-        {
-            Family = _family;
-            AddChildCommand = new Command(AddChild);
-        }
 
-        private string _fullName;
-        public string FullName
+        private ChildModel child;
+        public ChildModel Child
         {
-            get { return _fullName; }
-            set
+            get
             {
-                _fullName = value;
-                RaisedPropertyChanged(nameof(FullName));
+                return child;
             }
-        }
-        private DateTime _dOB;
-        public DateTime DOB
-        {
-            get { return _dOB; }
             set
             {
-                _dOB = value;
-                RaisedPropertyChanged(nameof(DOB));
-            }
-        }
-        private string _gender;
-        public string Gender
-        {
-            get { return _gender; }
-            set
-            {
-                _gender = value;
-                RaisedPropertyChanged(nameof(Gender));
-            }
-        }
-        private bool _oPV0;
-        public bool OPV0
-        {
-            get { return _oPV0; }
-            set
-            {
-                _oPV0 = value;
-                RaisedPropertyChanged(nameof(OPV0));
-            }
-        }
-        private int _rINo;
-        public int RINo
-        {
-            get { return _rINo; }
-            set
-            {
-                _rINo = value;
-                RaisedPropertyChanged(nameof(RINo));
+                child = value;
+                OnPropertyChanged();
             }
         }
 
-        private async void AddChild()
+        // Command
+        public ICommand PutCommand { private set; get; }
+
+        // ctor
+        public AddChildViewModel(GetFamilyModel family)
         {
-            if (DateTime.UtcNow.Year - DOB.Year <= 5)
+            // Property
+            Family = family;
+            Child = new ChildModel();
+
+            // Command
+            PutCommand = new Command(Put);
+        }
+
+        private async void Put()
+        {
+            if (DateTime.UtcNow.Year - Child.DOB.Year <= 5)
             {
-                ChildModel clinic = new ChildModel()
-                {
-                    Id = Guid.NewGuid(),
-                    FullName = FullName,
-                    DOB = DOB.Date.ToUniversalTime(),
-                    Gender = Gender,
-                    OPV0 = OPV0,
-                    RINo = RINo,
-                    RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""))
-                };
-            var data = JsonConvert.SerializeObject(clinic);
+                Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+                Child.Id = Guid.NewGuid();
+                var data = JsonConvert.SerializeObject(Child);
 
-            string a = DataService.Post(data, $"Child/{Family.Id}");
-            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+                string a = DataService.Post(data, $"Child/{Family.Id}");
+                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
-            var route = $"//{nameof(FamilyListPage)}";
-            await Shell.Current.GoToAsync(route);
+                var route = $"//{nameof(FamilyListPage)}";
+                await Shell.Current.GoToAsync(route);
             }
             else
             {

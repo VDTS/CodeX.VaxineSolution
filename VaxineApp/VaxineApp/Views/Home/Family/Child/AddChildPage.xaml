@@ -11,10 +11,10 @@
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10"
                  x:Name="PageContent">
-      <Entry Text="{Binding FullName, Mode=TwoWay}"
+      <Entry Text="{Binding Child.FullName, Mode=TwoWay}"
                                  Placeholder="Full Name"></Entry>
       <Picker Title="Gender"
-              SelectedItem="{Binding Gender, Mode=OneWayToSource}">
+              SelectedItem="{Binding Child.Gender, Mode=OneWayToSource}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
             <x:String>Male</x:String>
@@ -22,12 +22,12 @@
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
-      <Entry Text="{Binding RINo, Mode=OneWayToSource}"
+      <Entry Text="{Binding Child.RINo, Mode=OneWayToSource}"
                                  Placeholder="RI Number"></Entry>
-      <DatePicker Date="{Binding DOB, Mode=OneWayToSource}"></DatePicker>
+      <DatePicker Date="{Binding Child.DOB, Mode=OneWayToSource}"></DatePicker>
 
       <StackLayout Orientation="Horizontal" Spacing="10">
-        <CheckBox IsChecked="{Binding OPV0, Mode=TwoWay}" />
+        <CheckBox IsChecked="{Binding Child.OPV0, Mode=TwoWay}" />
         <Label Text="OPV0"></Label>
       </StackLayout>
      
@@ -36,7 +36,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding AddChildCommand}"
+              Command="{Binding PutCommand}"
               Margin="20"></Button>
     </StackLayout>
 
