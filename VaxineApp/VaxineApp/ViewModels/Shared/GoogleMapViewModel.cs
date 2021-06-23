@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using VaxineApp.MVVMHelper;
-using VaxineApp.ViewModels.Base;
 using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
 

@@ -8,7 +8,6 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.RealCacheLib;
-using VaxineApp.ViewModels.Base;
 using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.CommunityToolkit.ObjectModel;

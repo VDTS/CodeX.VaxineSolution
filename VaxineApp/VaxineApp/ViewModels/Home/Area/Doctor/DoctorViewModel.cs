@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
-using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Doctor;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;

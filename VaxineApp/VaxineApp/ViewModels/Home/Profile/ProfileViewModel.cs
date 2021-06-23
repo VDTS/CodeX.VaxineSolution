@@ -6,7 +6,6 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
-using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Profile;
 using Xamarin.Essentials;
 using Xamarin.Forms;

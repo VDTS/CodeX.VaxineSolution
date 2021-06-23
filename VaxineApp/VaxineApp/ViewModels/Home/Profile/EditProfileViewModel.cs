@@ -6,7 +6,6 @@ using System.IO;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.AndroidNativeApi;
-using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Profile;
 using Xamarin.Forms;
 using Xamarin.Essentials;

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.MVVMHelper;
-using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
