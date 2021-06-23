@@ -8,7 +8,7 @@
              Title="Edit Family">
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
-      <Entry Text="{Binding Family.HouseNo, Mode=OneWayToSource}"
+      <Entry Text="{Binding Family.HouseNo}"
                                  Placeholder="House No."
                                  Keyboard="Numeric"></Entry>
       <Entry Text="{Binding Family.ParentName}"
@@ -20,7 +20,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding UpdateFamilyCommand}"></Button>
+              Command="{Binding PutCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
