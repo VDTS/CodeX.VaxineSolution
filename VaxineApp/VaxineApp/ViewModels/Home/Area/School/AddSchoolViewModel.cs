@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.School;
 using Xamarin.Essentials;
@@ -11,68 +12,42 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.School
 {
-    public class AddSchoolViewModel : BaseViewModel
+    public class AddSchoolViewModel : ViewModelBase
     {
 
-        // Properties
-        private string _schoolName;
-        public string SchoolName
+        // Property
+        private SchoolModel school;
+        public SchoolModel School
         {
-            get { return _schoolName; }
+            get
+            {
+                return school;
+            }
             set
             {
-                _schoolName = value;
-                RaisedPropertyChanged(nameof(SchoolName));
+                school = value;
+                OnPropertyChanged();
             }
         }
-        private string _keyInfluencer;
-        public string KeyInfluencer
-        {
-            get { return _keyInfluencer; }
-            set
-            {
-                _keyInfluencer = value;
-                RaisedPropertyChanged(nameof(KeyInfluencer));
-            }
-        }
-        public double _latitude;
-        public double Latitude
-        {
-            get { return _latitude; }
-            set
-            {
-                _latitude = value;
-                RaisedPropertyChanged(nameof(Latitude));
-            }
-        }
-        public double _longitude;
-        public double Longitude
-        {
-            get { return _longitude; }
-            set
-            {
-                _longitude = value;
-                RaisedPropertyChanged(nameof(Longitude));
-            }
-        }
-        public ICommand SaveSchoolCommand { private set; get; }
+
+        // Command
+        public ICommand PostCommand { private set; get; }
+
+        // ctor
         public AddSchoolViewModel()
         {
-            SaveSchoolCommand = new Command(SaveSchool);
+            // Property
+            School = new SchoolModel();
 
+            // Command
+            PostCommand = new Command(Post);
         }
-        private async void SaveSchool()
-        {
-            SchoolModel clinic = new SchoolModel()
-            {
-                Id = Guid.NewGuid(),
-                KeyInfluencer = KeyInfluencer,
-                SchoolName = SchoolName,
-                Longitude = Longitude,
-                Latitude = Latitude
-            };
 
-            var data = JsonConvert.SerializeObject(clinic);
+        private async void Post()
+        {
+            School.Id = Guid.NewGuid();
+
+            var data = JsonConvert.SerializeObject(School);
 
             string a = DataService.Post(data, $"School/{Preferences.Get("TeamId", "")}");
             await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");

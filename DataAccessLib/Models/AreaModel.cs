@@ -78,6 +78,7 @@ namespace DataAccessLib.Models
     }
     public class SchoolModel
     {
+        public string FId { get; set; }
         public Guid Id { get; set; }
         public string SchoolName { get; set; }
         public string KeyInfluencer { get; set; }
