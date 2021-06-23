@@ -19,37 +19,10 @@
       <Label Text="Version Name"
              FontSize="Large"></Label>
       <Label Text="{Binding AppVersion}"></Label>
-      <Label Text="Version"
-             FontSize="Large"></Label>
-      <Label Text="{Binding AppNewUpdates.Version}"></Label>
-      <Label Text="Build"
-             FontSize="Large"></Label>
-      <Label Text="{Binding AppNewUpdates.Build}"></Label>
-      <Label Text="Release No"
-             FontSize="Large"></Label>
-      <Label Text="{Binding AppNewUpdates.ReleaseNo}"></Label>
-      <Label Text="Release branch"
-             FontSize="Large"></Label>
-      <Label Text="{Binding AppNewUpdates.ReleaseBranch}"></Label>
       <Label Text="Whats New?"
              FontSize="Large"></Label>
       <ScrollView Padding="10">
-        <CollectionView ItemsSource="{Binding AppNewUpdates.Content}">
-          <CollectionView.ItemTemplate>
-            <DataTemplate>
-              <StackLayout Padding="5">
-                <Label Text="{Binding Location}"
-                       TextColor="blue">
-                  <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding BindingContext.TapToGoToPageCommand, Source={x:Reference AppUpdates}}"
-                                          CommandParameter="{Binding Location}"></TapGestureRecognizer>
-                  </Label.GestureRecognizers>
-                </Label>
-                <Label Text="{Binding Updates}"></Label>
-              </StackLayout>
-            </DataTemplate>
-          </CollectionView.ItemTemplate>
-        </CollectionView>
+        <Label Text="{Binding AppNewUpdates}"></Label>
       </ScrollView>
       <Label Text="No new Updates"
              IsVisible="{Binding IsUpdatesAvailable}"></Label>
