@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
+using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.ViewModels.Base;
-using VaxineApp.Views.Login.ForgotPassword;
 using Xamarin.Forms;
 
-namespace VaxineApp.ViewModels.Login.ForgotPassword
+namespace VaxineApp.AccessShellDir.ViewModels.Login.ForgotPassword
 {
     public class ForgotPasswordViewModel : BaseViewModel
     {
