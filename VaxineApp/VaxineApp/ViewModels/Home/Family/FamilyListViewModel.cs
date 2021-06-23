@@ -95,6 +95,7 @@ namespace VaxineApp.ViewModels.Home.Family
                     Families.Add(
                         new GetFamilyModel
                         {
+                            FId = item.Key.ToString(),
                             Id = item.Value.Id,
                             ParentName = item.Value.ParentName,
                             PhoneNumber = item.Value.PhoneNumber,

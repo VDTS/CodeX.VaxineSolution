@@ -27,7 +27,7 @@
     <ToolbarItem Order="Secondary"
                  Text="Edit Family"
                  Priority="3"
-                 Command="{Binding EditFamilyCommand}" />
+                 Command="{Binding GoToPutPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Save as PDF"

@@ -75,6 +75,7 @@ namespace VaxineApp.ViewModels.Home.Family
         public ICommand SelectionCommand { private set; get; }
         public ICommand CancelSelectionCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
+        public ICommand GoToPutPageCommand { private set; get; }
 
         // ctor
         public FamilyDetailsViewModel(GetFamilyModel family)
@@ -90,7 +91,7 @@ namespace VaxineApp.ViewModels.Home.Family
             // Command
             GoToSubPostPageCommand = new Command(GoToSubPostPage);
             GoToSubPutPageCommand = new Command(GoToSubPutPage);
-            //GoToPutPageCommand = new Command(GoToSubPutPage);
+            GoToPutPageCommand = new Command(GoToPutPage);
             DialerCommand = new Command<string>(Dialer);
             //SelectionCommand = new Command();
             //CancelSelectionCommand = new Command();
