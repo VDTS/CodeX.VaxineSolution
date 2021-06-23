@@ -4,35 +4,44 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using Xamarin.Forms;
 
 namespace VaxineApp.AccessShellDir.ViewModels.Login.ForgotPassword
 {
-    public class ForgotPasswordViewModel : BaseViewModel
+    public class ForgotPasswordViewModel : ViewModelBase
     {
-        private string _email;
+        // Property
+        private string email;
         public string Email
         {
-            get { return _email; }
+            get
+            {
+                return email;
+            }
             set
             {
-                _email = value;
-                RaisedPropertyChanged(nameof(Email));
+                email = value;
+                OnPropertyChanged();
             }
         }
 
-        private bool _isNextPageVisible;
+        private bool isNextPageVisible;
         public bool IsNextPageVisible
         {
-            get { return _isNextPageVisible; }
+            get
+            {
+                return isNextPageVisible;
+            }
             set
             {
-                _isNextPageVisible = value;
-                RaisedPropertyChanged(nameof(IsNextPageVisible));
+                isNextPageVisible = value;
+                OnPropertyChanged();
             }
         }
 
+        // Command
         public ICommand ResetPasswordByEmailCommand { private set; get; }
         public ICommand ResetPasswordByPhoneNumberCommand { private set; get; }
         public ICommand ValidateEmailOrPhoneCommand { private set; get; }
