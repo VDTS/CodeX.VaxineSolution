@@ -36,6 +36,10 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         // ctor
         public AddDoctorViewModel()
         {
+            // Property
+            Doctor = new DoctorModel();
+
+            // Command
             PostCommand = new Command(Post);
         }
 
