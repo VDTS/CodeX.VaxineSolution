@@ -7,58 +7,71 @@ using System.Net;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.AndroidNativeApi;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Settings.AppUpdates
 {
-    public class AppUpdatesViewModel : BaseViewModel
+    public class AppUpdatesViewModel : ViewModelBase
     {
-        private bool _isUpdatesAvailable;
-
+        // Property
+        private bool isUpdatesAvailable;
         public bool IsUpdatesAvailable
         {
-            get { return _isUpdatesAvailable; }
+            get
+            {
+                return isUpdatesAvailable;
+            }
             set
             {
-                _isUpdatesAvailable = value;
-                RaisedPropertyChanged(nameof(IsUpdatesAvailable));
+                isUpdatesAvailable = value;
+                OnPropertyChanged();
             }
         }
 
-        private Root _appNewUpdates;
-        public Root AppNewUpdates
+        private string appNewUpdates;
+        public string AppNewUpdates
         {
-            get { return _appNewUpdates; }
+            get
+            {
+                return appNewUpdates;
+            }
             set
             {
-                _appNewUpdates = value;
-                RaisedPropertyChanged(nameof(AppNewUpdates));
+                appNewUpdates = value;
+                OnPropertyChanged();
             }
         }
-        private string _appVersion;
+
+        private string appVersion;
         public string AppVersion
         {
-            get { return _appVersion; }
+            get
+            {
+                return appVersion;
+            }
             set
             {
-                _appVersion = value;
-                RaisedPropertyChanged(nameof(AppVersion));
+                appVersion = value;
+                OnPropertyChanged();
             }
         }
+
+        // Command
         public ICommand CheckForUpdateCommand { private set; get; }
-        public ICommand TapToGoToPageCommand { private set; get; }
+
+        // ctor
         public AppUpdatesViewModel()
         {
+            // Property
             AppVersion = DependencyService.Get<IAppVersion>().GetVersion();
-            CheckForUpdateCommand = new Command(CheckForUpdate);
-            TapToGoToPageCommand = new Command<string>(TapToGoToPage);
-            DownloadFile();
-        }
 
-        private async void TapToGoToPage(string url)
-        {
-            await App.Current.MainPage.DisplayAlert($"{url}", "Hyperlink to the page is under development", "OK");
+            // Get
+            DownloadFile();
+
+            // Command
+            CheckForUpdateCommand = new Command(CheckForUpdate);
         }
 
         private void CheckForUpdate(object obj)
@@ -72,30 +85,15 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
             try
             {
                 WebClient client = new WebClient();
-                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{AppVersion}.json"));
+                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{AppVersion}.txt"));
                 StreamReader reader = new StreamReader(stream);
-                string data = reader.ReadToEnd();
-                AppNewUpdates = JsonConvert.DeserializeObject<Root>(data);
+                AppNewUpdates = reader.ReadToEnd();
             }
             catch (Exception)
             {
                 IsUpdatesAvailable = true;
             }
         }
-    }
-    public class Content
-    {
-        public string Location { get; set; }
-        public string Updates { get; set; }
-    }
-
-    public class Root
-    {
-        public string Version { get; set; }
-        public string Build { get; set; }
-        public string ReleaseNo { get; set; }
-        public string ReleaseBranch { get; set; }
-        public List<Content> Content { get; set; }
     }
 }
 
