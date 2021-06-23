@@ -15,15 +15,24 @@ using System.Threading.Tasks;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
-    public class EditProfileViewModel : BaseViewModel
+    public class EditProfileViewModel
     {
+        // Profile
         public ProfileModel Profile { get; set; }
+
+
+        // Command
         public ICommand SaveDataCommand { private set; get; }
         public ICommand BrowsePhotoCommad { private set; get; }
         public ICommand ChangePasswordCommand { private set; get; }
+
+        // ctor
         public EditProfileViewModel(ProfileModel _profile)
         {
+            // Property
             Profile = _profile;
+
+            // Command
             SaveDataCommand = new Command(SaveData);
             ChangePasswordCommand = new Command(ChangePassword);
             BrowsePhotoCommad = new Command(BrowsePhoto);

@@ -9,7 +9,7 @@
     <ViewModel:ProfileViewModel></ViewModel:ProfileViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
-    <ToolbarItem Command="{Binding EditProfileCommand}"
+    <ToolbarItem Command="{Binding GoToPutPageCommand}"
                  Priority="0"
                  Text="Edit"
                  Order="Secondary"
