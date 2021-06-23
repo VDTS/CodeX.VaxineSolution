@@ -50,6 +50,7 @@ namespace DataAccessLib.Models
     }
     public class InfluencerModel
     {
+        public string FId { get; set; }
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Position { get; set; }

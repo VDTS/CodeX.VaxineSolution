@@ -13,14 +13,14 @@
     <StackLayout Padding="40" Spacing="10">
 
       <Entry Placeholder="Name"
-             Text="{Binding Name}"></Entry>
+             Text="{Binding Influencer.Name}"></Entry>
       <Entry Placeholder="Contact"
-             Text="{Binding Contact}"></Entry>
+             Text="{Binding Influencer.Contact}" Keyboard="Telephone"></Entry>
       <Entry Placeholder="Position"
-             Text="{Binding Position}">
+             Text="{Binding Influencer.Position}">
       </Entry>
       <StackLayout Orientation="Horizontal" Spacing="10">
-        <CheckBox IsChecked="{Binding DoesHeProvidingSupport}"></CheckBox>
+        <CheckBox IsChecked="{Binding Influencer.DoesHeProvidingSupport}"></CheckBox>
         <Label Text="Does he providing support?"></Label>
       </StackLayout>
 
@@ -29,7 +29,7 @@
               WidthRequest="130"
               HeightRequest="50"
               HorizontalOptions="Center"
-              Command="{Binding SaveInfluencerCommand}"></Button>
+              Command="{Binding PostCommand}"></Button>
 
     </StackLayout>
   </ContentPage.Content>

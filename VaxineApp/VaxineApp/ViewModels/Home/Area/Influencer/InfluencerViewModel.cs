@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Influencer;
 using Xamarin.CommunityToolkit.ObjectModel;
@@ -13,64 +15,79 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Influencer
 {
-    public class InfluencerViewModel : BaseViewModel
+    public class InfluencerViewModel : ViewModelBase
     {
+        // Property
 
-        private InfluencerModel _selectedInfluencer;
-
+        private InfluencerModel selectedInfluencer;
         public InfluencerModel SelectedInfluencer
         {
-            get { return _selectedInfluencer; }
+            get
+            {
+                return selectedInfluencer;
+            }
             set
             {
-                _selectedInfluencer = value;
-                RaisedPropertyChanged(nameof(SelectedInfluencer));
+                selectedInfluencer = value;
+                OnPropertyChanged();
             }
         }
 
-
-        private bool _isBusy;
-
+        private bool isBusy;
         public bool IsBusy
         {
-            get { return _isBusy; }
+            get
+            {
+                return isBusy;
+            }
             set
             {
-                _isBusy = value;
-                RaisedPropertyChanged(nameof(IsBusy));
+                isBusy = value;
+                OnPropertyChanged();
             }
         }
-        private List<InfluencerModel> _influencer;
-        public List<InfluencerModel> Influencer
+
+        private ObservableCollection<InfluencerModel> influencers;
+        public ObservableCollection<InfluencerModel> Influencers
         {
-            get { return _influencer; }
+            get
+            {
+                return influencers;
+            }
             set
             {
-                _influencer = value;
-                RaisedPropertyChanged(nameof(Influencer));
+                influencers = value;
+                OnPropertyChanged();
             }
         }
 
         // Commands
-        public AsyncCommand GetInfluencerCommand { private set; get; }
-        public ICommand AddInfluencerCommand { private set; get; }
+
+        public ICommand PullRefreshCommand { private set; get; }
+        public ICommand GoToPostPageCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
-        public ICommand EditCommand { private set; get; }
+        public ICommand GoToPutPageCommand { private set; get; }
+
         // Constructor
         public InfluencerViewModel()
         {
+            // Property
+            SelectedInfluencer = new InfluencerModel();
+            influencers = new ObservableCollection<InfluencerModel>();
+
+            // Get
+            Get();
+
+            // Command
             SaveAsPDFCommand = new Command(SaveAsPDF);
             DeleteCommand = new Command(Delete);
-            EditCommand = new Command(EditClinic);
-            Influencer = new List<InfluencerModel>();
-            GetInfluencer();
-            GetInfluencerCommand = new AsyncCommand(Refresh);
-            AddInfluencerCommand = new Command(AddInfluencer);
-            SelectedInfluencer = new InfluencerModel();
-
+            GoToPutPageCommand = new Command(GoToPutPage);
+            PullRefreshCommand = new Command(Refresh);
+            GoToPostPageCommand = new Command(GoToPostPage);
         }
-        private async void EditClinic()
+
+        private async void GoToPutPage()
         {
             if (SelectedInfluencer.Name != null)
             {
@@ -85,9 +102,33 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
             }
         }
 
-        private async void Delete(object obj)
+        public async void Delete()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            if (SelectedInfluencer.Id != null)
+            {
+                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedInfluencer.FId}?", "Yes", "No");
+                if (isDeleteAccepted)
+                {
+                    var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedInfluencer.FId}");
+                    if (data == "Deleted")
+                    {
+                        influencers.Remove(SelectedInfluencer);
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                    }
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("No item selected", "Select an item to delete", "OK");
+            }
         }
 
         private async void SaveAsPDF(object obj)
@@ -95,7 +136,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
             await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
-        public async void GetInfluencer()
+        public async void Get()
         {
             var data = await DataService.Get($"Influencer/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
@@ -103,9 +144,11 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(data);
                 foreach (KeyValuePair<string, InfluencerModel> item in clinic)
                 {
-                    Influencer.Add(
+                    influencers.Add(
                         new InfluencerModel
                         {
+                            Id = item.Value.Id,
+                            FId = item.Key.ToString(),
                             Name = item.Value.Name,
                             Contact = item.Value.Contact,
                             Position = item.Value.Position,
@@ -120,26 +163,25 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
             }
         }
 
-        // Route Methods
-        async void AddInfluencer()
+        async void GoToPostPage()
         {
             var route = $"{nameof(AddInfluencerPage)}";
             await Shell.Current.GoToAsync(route);
         }
-        async Task Refresh()
+        public async void Refresh()
         {
             IsBusy = true;
 
-            await Task.Delay(2000);
             Clear();
-            GetInfluencer();
+            Get();
+            await Task.Delay(2000);
 
             IsBusy = false;
         }
 
         void Clear()
         {
-            Influencer.Clear();
+            influencers.Clear();
         }
     }
 }

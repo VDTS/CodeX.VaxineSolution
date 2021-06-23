@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.MVVMHelper;
 using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Area.Influencer;
 using Xamarin.Essentials;
@@ -11,29 +12,49 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Influencer
 {
-    public class EditInfluecerViewModel : BaseViewModel
+    public class EditInfluecerViewModel : ViewModelBase
     {
-        private InfluencerModel _influencer;
+        // Property
+        private InfluencerModel influencer;
         public InfluencerModel Influencer
         {
-            get { return _influencer; }
+            get
+            {
+                return influencer;
+            }
             set
             {
-                _influencer = value;
-                RaisedPropertyChanged(nameof(Influencer));
+                influencer = value;
+                OnPropertyChanged();
             }
         }
-        public ICommand UpdateInfluencerCommand { private set; get; }
+
+        // Command
+        public ICommand PutCommand { private set; get; }
 
         public EditInfluecerViewModel(InfluencerModel influencer)
         {
+            // Property
             Influencer = influencer;
-            UpdateInfluencerCommand = new Command(UpdateInfluencer);
+
+            // Command
+            PutCommand = new Command(Put);
         }
 
-        private async void UpdateInfluencer(object obj)
+        public async void Put()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            var jsonData = JsonConvert.SerializeObject(Influencer);
+            var data = await DataService.Put(jsonData, $"Influencer/{Preferences.Get("TeamId", "")}/{Influencer.FId}");
+            if (data == "Submit")
+            {
+                await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
+                var route = $"//{nameof(InfluencerPage)}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+            }
         }
     } 
 }
