@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 using Octokit.Internal;
@@ -36,11 +35,11 @@ namespace VaxineApp.ViewModels.Settings.Feedback
         {
             get
             {
-                return clinics;
+                return suggestionRadioButton;
             }
             set
             {
-                clinics = value;
+                suggestionRadioButton = value;
                 OnPropertyChanged();
             }
         }
@@ -64,11 +63,11 @@ namespace VaxineApp.ViewModels.Settings.Feedback
         {
             get
             {
-                return clinics;
+                return issueDetails;
             }
             set
             {
-                clinics = value;
+                issueDetails = value;
                 OnPropertyChanged();
             }
         }

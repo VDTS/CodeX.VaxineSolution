@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using VaxineApp.ViewModels.Base;
+using VaxineApp.MVVMHelper;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Settings.AboutUs;
 using VaxineApp.Views.Settings.AppUpdates;
@@ -16,8 +16,9 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Settings.Main
 {
-    public class SettingsViewModel : BaseViewModel
+    public class SettingsViewModel
     {
+        // Command
         public ICommand PrivacyPolicyCommand { private set; get; }
         public ICommand FeedbackPageCommand { private set; get; }
         public ICommand GoToAboutUsPageCommand { private set; get; }
@@ -27,6 +28,8 @@ namespace VaxineApp.ViewModels.Settings.Main
         public ICommand NotificationPageCommand { private set; get; }
         public ICommand AppUpdatesPageCommand { private set; get; }
         public ICommand GoToProfilePageCommand { private set; get; }
+
+        // ctor
         public SettingsViewModel()
         {
             FeedbackPageCommand = new Command(GoToFeedbackPage);

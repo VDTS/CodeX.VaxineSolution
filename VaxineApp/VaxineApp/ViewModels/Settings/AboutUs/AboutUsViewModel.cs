@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.MVVMHelper;
-using VaxineApp.ViewModels.Base;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

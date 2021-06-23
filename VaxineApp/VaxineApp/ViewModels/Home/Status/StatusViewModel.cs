@@ -11,7 +11,6 @@ using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
 using Xamarin.CommunityToolkit.ObjectModel;
 using System.Collections.ObjectModel;
-using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;

@@ -5,7 +5,6 @@ using System.Text.RegularExpressions;
 using System.Windows.Input;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.MVVMHelper;
-using VaxineApp.ViewModels.Base;
 using Xamarin.Forms;
 
 namespace VaxineApp.AccessShellDir.ViewModels.Login.ForgotPassword

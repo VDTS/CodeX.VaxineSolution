@@ -7,7 +7,6 @@ using VaxineApp.Models;
 using VaxineApp.Views.Home;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Forms;
-using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;

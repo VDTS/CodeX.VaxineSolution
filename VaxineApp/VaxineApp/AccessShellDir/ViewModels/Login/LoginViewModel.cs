@@ -8,7 +8,6 @@ using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.RealCacheLib;
-using VaxineApp.ViewModels.Base;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Essentials;
 using Xamarin.Forms;

@@ -7,7 +7,6 @@ using VaxineApp.Views.Home.Area.Area;
 using Xamarin.Forms;
 using Xamarin.CommunityToolkit.ObjectModel;
 using System.Threading.Tasks;
-using VaxineApp.ViewModels.Base;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;

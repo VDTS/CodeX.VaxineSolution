@@ -4,7 +4,6 @@ using System.IO;
 using System.Net;
 using System.Text;
 using VaxineApp.MVVMHelper;
-using VaxineApp.ViewModels.Base;
 
 namespace VaxineApp.ViewModels.Settings.PrivacyPolicy
 {

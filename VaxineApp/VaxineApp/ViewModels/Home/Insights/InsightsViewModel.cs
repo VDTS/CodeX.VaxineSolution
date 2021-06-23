@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
-using VaxineApp.ViewModels.Base;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Entry = Microcharts.ChartEntry;
