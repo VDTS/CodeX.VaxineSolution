@@ -11,11 +11,7 @@
     <ToolbarItem Order="Secondary"
                  Text="Edit"
                  Priority="1"
-                 Command="{Binding GoToEditAreaCommand}" />
-    <ToolbarItem Order="Secondary"
-                 Text="Delete"
-                 Command="{Binding DeleteCommand}"
-                 Priority="2" />
+                 Command="{Binding GoToPutPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Save as PDF"
@@ -25,7 +21,7 @@
   <ContentPage.Content>
     <RefreshView  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                   RefreshColor="#2196f3"
-                  Command="{Binding GetDataCommand}">
+                  Command="{Binding PullRefreshCommand}">
       <ScrollView Padding="20">
         <Grid>
           <Grid.RowDefinitions>
