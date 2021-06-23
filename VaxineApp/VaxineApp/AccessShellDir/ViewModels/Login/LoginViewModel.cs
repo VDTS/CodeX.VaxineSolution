@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DataAccessLib.Account;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,9 +18,6 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
     public partial class LoginViewModel : ViewModelBase
     {
         // Property
-
-        IAuth auth;
-
         private bool rememberMe;
         public bool RememberMe
         {
@@ -76,6 +74,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
         }
 
+        public AccountManagement Account { get; set; }
+
         // Command
         public ICommand CloseAppCommand { private set; get; }
         public ICommand ForgotPasswordCommand { private set; get; }
@@ -85,8 +85,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
         public LoginViewModel()
         {
             // Property
-            auth = DependencyService.Get<IAuth>();
             Profile = new ProfileModel();
+            Account = new AccountManagement();
 
             // Commands init
             SignInCommand = new Command(SignIn);
@@ -109,8 +109,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             {
                 try
                 {
-                    string Token = await auth.LoginWithEmailPassword(InputUserEmail, InputUserPassword);
-                    if (Token != "")
+                    string Token = await Account.SignIn(InputUserEmail, InputUserPassword);
+                    if (Token != "Error" && Token != "null")
                     {
                         LoadProfile(InputUserEmail.ToLower()); ;
                     }

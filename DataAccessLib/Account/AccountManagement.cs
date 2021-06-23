@@ -60,8 +60,10 @@ namespace DataAccessLib.Account
                     var response = await httpClient.SendAsync(request);
                     if (response.IsSuccessStatusCode)
                     {
-                        var s1 = JsonConvert.DeserializeObject<JObject>(response.Content.ToString());
-                        return s1.GetValue("idToken").ToString();
+                        // pick only Token from response.
+                        //var s1 = JsonConvert.DeserializeObject<JObject>(response.Content.ToString());
+                        //return s1.GetValue("idToken").ToString();
+                        return "OK";
                     }
                     else
                     {
