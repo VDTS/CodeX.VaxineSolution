@@ -13,32 +13,36 @@
         <RowDefinition Height="Auto"></RowDefinition>
         <RowDefinition Height="Auto"></RowDefinition>
       </Grid.RowDefinitions>
-      <AbsoluteLayout Grid.Row="0" Padding="20" HorizontalOptions="Center">
-      <StackLayout Spacing="10">
-        <Frame CornerRadius="100"
-               HeightRequest="180"
-               WidthRequest="180"
-               HorizontalOptions="Center"
-               Padding="0"
-               IsClippedToBounds="True">
-          <Image Source="ProfilePhoto.jpg"
+      <AbsoluteLayout Grid.Row="0"
+                      Padding="20"
+                      HorizontalOptions="Center">
+        <StackLayout Spacing="10">
+          <Frame CornerRadius="100"
+                 HeightRequest="180"
+                 WidthRequest="180"
                  HorizontalOptions="Center"
-                 VerticalOptions="Center">
-          </Image>
-        </Frame>
-      </StackLayout>
-      <Button Text=""
-              FontFamily="SegoeMDL2"
-              WidthRequest="45"
-              HeightRequest="45"
-              CornerRadius="40"
-              FontSize="20"
-              AbsoluteLayout.LayoutFlags="PositionProportional"
-              AbsoluteLayout.LayoutBounds=".85,1.05,45,45"
-              Command="{Binding BrowsePhotoCommad}"></Button>
-    </AbsoluteLayout>
-      <StackLayout Grid.Row="1" Padding="40">
-        <Label Text="Profile" FontSize="Large"></Label>
+                 Padding="0"
+                 IsClippedToBounds="True">
+            <Image Source="ProfilePhoto.jpg"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+            </Image>
+          </Frame>
+        </StackLayout>
+        <Button Text=""
+                FontFamily="SegoeMDL2"
+                WidthRequest="45"
+                HeightRequest="45"
+                CornerRadius="40"
+                FontSize="20"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds=".85,1.05,45,45"
+                Command="{Binding BrowsePhotoCommad}"></Button>
+      </AbsoluteLayout>
+      <StackLayout Grid.Row="1"
+                   Padding="40">
+        <Label Text="Profile"
+               FontSize="Large"></Label>
         <Entry Text="{Binding Profile.FullName}"
                Placeholder="Name"></Entry>
         <Picker Title="Gender"
@@ -63,14 +67,19 @@
                 Command="{Binding SaveDataCommand}"
                 AutomationId="EditProfile_SaveButton"></Button>
       </StackLayout>
-      <StackLayout Grid.Row="2" Padding="40">
+      <StackLayout Grid.Row="2"
+                   Padding="40">
         <Label Text="Security"
                FontSize="Large"></Label>
-        <Entry IsPassword="True" Placeholder="Current Password" Text="{Binding CurrentPassword}"></Entry>
         <Entry IsPassword="True"
-               Placeholder="New Password" Text="{Binding NewPassword}"></Entry>
+               Placeholder="Current Password"
+               Text="{Binding CurrentPassword}"></Entry>
         <Entry IsPassword="True"
-               Placeholder="Confirm Password" Text="{Binding ConfirmPassword}"></Entry>
+               Placeholder="New Password"
+               Text="{Binding NewPassword}"></Entry>
+        <Entry IsPassword="True"
+               Placeholder="Confirm Password"
+               Text="{Binding ConfirmPassword}"></Entry>
         <Button Text="Save"
                 TranslationY="20"
                 TranslationX="95"
@@ -84,12 +93,12 @@
                    Padding="40">
         <Label Text="Change Email"
                FontSize="Large"></Label>
-        <Entry IsPassword="True"
-               Placeholder="Current Email"></Entry>
-        <Entry IsPassword="True"
-               Placeholder="New Email"></Entry>
-        <Entry IsPassword="True"
-               Placeholder="Confirm Email"></Entry>
+        <Entry Placeholder="Current Email"
+               Text="{Binding CurrentEmail}"></Entry>
+        <Entry Placeholder="New Email"
+               Text="{Binding NewEmail}"></Entry>
+        <Entry Placeholder="Confirm Email"
+               Text="{Binding ConfirmEmail}"></Entry>
         <Button Text="Save"
                 TranslationY="20"
                 TranslationX="95"

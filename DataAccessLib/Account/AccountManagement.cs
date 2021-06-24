@@ -48,6 +48,31 @@ namespace DataAccessLib.Account
                 }
             }
         }
+
+        public async Task<string> ChangeEmail(string email, string token)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                {
+                    var r = new EmailRoot() { idToken = token, email = email, returnSecureToken = true };
+                    string s1 = JsonConvert.SerializeObject(r);
+                    request.Content = new StringContent(s1);
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return "OK";
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
+                }
+            }
+        }
+
         public async Task<string> SignIn(string email, string password)
         {
             var identityModel = new SignInModel() { email = email, password = password, returnSecureToken = true };
