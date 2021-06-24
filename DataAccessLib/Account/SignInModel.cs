@@ -24,4 +24,10 @@ namespace DataAccessLib.Account
         public string email { get; set; }
         public bool returnSecureToken { get; set; }
     }
+
+    public class VerifyEmailModel
+    {
+        public string requestType { get; set; }
+        public string idToken { get; set; }
+    }
 }

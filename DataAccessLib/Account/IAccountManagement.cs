@@ -10,5 +10,6 @@ namespace DataAccessLib.Account
         public Task<string> SignIn(string email, string password);
         public Task<string> ChangeAccountPassword(string email, string password);
         public Task<string> ChangeEmail(string email, string token);
+        public Task<string> VerifyEmail(string Token);
     }
 }
