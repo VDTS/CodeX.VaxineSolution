@@ -38,6 +38,7 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
         {
             // Property
             Child = _child;
+            Vaccine = new VaccineModel();
 
 
             // Command
