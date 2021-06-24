@@ -14,12 +14,13 @@ using System.Threading.Tasks;
 using VaxineApp.MVVMHelper;
 using DataAccessLib.Account;
 using VaxineApp.AccessShellDir.Views.Login;
+using System.Text.RegularExpressions;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
     public class EditProfileViewModel : ViewModelBase
     {
-        // Profile
+        // Property
         public ProfileModel Profile { get; set; }
 
         private string currentPassword;
@@ -66,10 +67,54 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         AccountManagement Account { get; set; }
 
+        private string currentEmail;
+        public string CurrentEmail
+        {
+            get
+            {
+                return currentEmail;
+            }
+            set
+            {
+                currentEmail = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string newEmail;
+        public string NewEmail
+        {
+            get
+            {
+                return newEmail;
+            }
+            set
+            {
+                newEmail = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string confirmEmail;
+        public string ConfirmEmail
+        {
+            get
+            {
+                return confirmEmail;
+            }
+            set
+            {
+                confirmEmail = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         // Command
         public ICommand SaveDataCommand { private set; get; }
         public ICommand BrowsePhotoCommad { private set; get; }
         public ICommand ChangePasswordCommand { private set; get; }
+        public ICommand ChangeEmailCommand { private set; get; }
 
         // ctor
         public EditProfileViewModel(ProfileModel _profile)
@@ -82,6 +127,58 @@ namespace VaxineApp.ViewModels.Home.Profile
             SaveDataCommand = new Command(SaveData);
             ChangePasswordCommand = new Command(ChangePassword);
             BrowsePhotoCommad = new Command(BrowsePhoto);
+            ChangeEmailCommand = new Command(ChangeEmail);
+        }
+
+        private async void ChangeEmail()
+        {
+            if (!string.IsNullOrEmpty(CurrentEmail) && !string.IsNullOrEmpty(NewEmail) && !string.IsNullOrEmpty(ConfirmEmail))
+            {
+                if (NewEmail == ConfirmEmail)
+                {
+                    string emailRegex = @"^([\w\. \-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+                    bool isMatched = Regex.IsMatch(NewEmail, emailRegex);
+                    if (isMatched)
+                    {
+                        string result = await App.Current.MainPage.DisplayPromptAsync("Enter your Password", "You are entering sudo mode.");
+                        string Token = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), result);
+                        if (Token != "Error" && Token != "null")
+                        {
+                            var message = await Account.ChangeEmail(NewEmail, Token);
+                            if (message == "OK")
+                            {
+                                await App.Current.MainPage.DisplayAlert("", "Email Changed!", "OK");
+                                await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
+
+                                // Change Email in profile
+
+                                Application.Current.MainPage = new AccessShell();
+                                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                            }
+                            else
+                            {
+                                await App.Current.MainPage.DisplayAlert("Error!", "Try again!", "OK");
+                            }
+                        }
+                        else
+                        {
+                            await App.Current.MainPage.DisplayAlert("Password Error", "Make sure you typed password correctly!", "OK");
+                        }
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("New Email Error", "Email is baddly formatted", "OK");
+                    }
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("", "Emails are not the same", "OK");
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Fill in required fields", "Current, new and Confirm Emails are required", "OK");
+            }
         }
 
         private async void ChangePassword()

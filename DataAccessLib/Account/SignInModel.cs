@@ -17,4 +17,11 @@ namespace DataAccessLib.Account
         public string password { get; set; }
         public bool returnSecureToken { get; set; }
     }
+
+    public class EmailRoot
+    {
+        public string idToken { get; set; }
+        public string email { get; set; }
+        public bool returnSecureToken { get; set; }
+    }
 }
