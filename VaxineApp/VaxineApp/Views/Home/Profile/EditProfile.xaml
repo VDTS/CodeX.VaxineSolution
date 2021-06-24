@@ -11,6 +11,7 @@
         <RowDefinition Height="Auto"></RowDefinition>
         <RowDefinition Height="Auto"></RowDefinition>
         <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
       </Grid.RowDefinitions>
       <AbsoluteLayout Grid.Row="0" Padding="20" HorizontalOptions="Center">
       <StackLayout Spacing="10">
@@ -77,6 +78,25 @@
                 HeightRequest="40"
                 HorizontalOptions="Center"
                 Command="{Binding ChangePasswordCommand}"
+                AutomationId="EditProfile_SaveButton"></Button>
+      </StackLayout>
+      <StackLayout Grid.Row="3"
+                   Padding="40">
+        <Label Text="Change Email"
+               FontSize="Large"></Label>
+        <Entry IsPassword="True"
+               Placeholder="Current Email"></Entry>
+        <Entry IsPassword="True"
+               Placeholder="New Email"></Entry>
+        <Entry IsPassword="True"
+               Placeholder="Confirm Email"></Entry>
+        <Button Text="Save"
+                TranslationY="20"
+                TranslationX="95"
+                WidthRequest="80"
+                HeightRequest="40"
+                HorizontalOptions="Center"
+                Command="{Binding ChangeEmailCommand}"
                 AutomationId="EditProfile_SaveButton"></Button>
       </StackLayout>
     </Grid>
