@@ -150,6 +150,12 @@ namespace VaxineApp.ViewModels.Home.Profile
                                 await App.Current.MainPage.DisplayAlert("", "Email Changed!", "OK");
                                 await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
 
+                                string s1 = await Account.VerifyEmail(Token);
+                                if(s1 == "OK")
+                                {
+                                    await App.Current.MainPage.DisplayAlert("Email Verification send", "Go to your email, and confirm verification", "OK");
+                                }
+
                                 // Change Email in profile
 
                                 Application.Current.MainPage = new AccessShell();

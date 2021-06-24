@@ -97,5 +97,29 @@ namespace DataAccessLib.Account
                 }
             }
         }
+
+        public async Task<string> VerifyEmail(string Token)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                {
+                    VerifyEmailModel verifyEmailModel = new VerifyEmailModel() { idToken = Token, requestType = "VERIFY_EMAIL" };
+                    string s1 = JsonConvert.SerializeObject(verifyEmailModel);
+                    request.Content = new StringContent(s1);
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return "OK";
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
+                }
+            }
+        }
     }
 }
