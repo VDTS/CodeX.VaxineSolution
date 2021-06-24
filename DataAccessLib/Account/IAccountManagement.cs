@@ -8,6 +8,6 @@ namespace DataAccessLib.Account
     public interface IAccountManagement
     {
         public Task<string> SignIn(string email, string password);
-        public Task<string> ChangeAccountPassword(string password);
+        public Task<string> ChangeAccountPassword(string email, string password);
     }
 }

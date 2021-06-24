@@ -25,20 +25,21 @@ namespace DataAccessLib.Account
 
 
         // Methdos
-        public async Task<string> ChangeAccountPassword(string password)
+        public async Task<string> ChangeAccountPassword(string token, string password)
         {
             using (var httpClient = new HttpClient())
             {
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
                 {
-                    string s1 = string.Concat("{\"idToken\":\"","On2NAlvvSBPSCXtQXgr6I1jwMRL2\"",",\"password\":\"", password, ",\"returnSecureToken\":true}");
+                    var r = new Root() { idToken = token, password = password, returnSecureToken = true };
+                    string s1 = JsonConvert.SerializeObject(r);
                     request.Content = new StringContent(s1);
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
                     if (response.IsSuccessStatusCode)
                     {
-                        return "Password Changed!";
+                        return "OK";
                     }
                     else
                     {
@@ -60,10 +61,9 @@ namespace DataAccessLib.Account
                     var response = await httpClient.SendAsync(request);
                     if (response.IsSuccessStatusCode)
                     {
-                        // pick only Token from response.
-                        //var s1 = JsonConvert.DeserializeObject<JObject>(response.Content.ToString());
-                        //return s1.GetValue("idToken").ToString();
-                        return "OK";
+                        var a = response.Content.ReadAsStringAsync().Result;
+                        var s1 = JsonConvert.DeserializeObject<JObject>(a);
+                        return s1.GetValue("idToken").ToString();
                     }
                     else
                     {

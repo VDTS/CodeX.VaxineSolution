@@ -10,4 +10,11 @@ namespace DataAccessLib.Account
         public string password { get; set; }
         public bool returnSecureToken { get; set; }
     }
+
+    public class Root
+    {
+        public string idToken { get; set; }
+        public string password { get; set; }
+        public bool returnSecureToken { get; set; }
+    }
 }

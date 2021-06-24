@@ -11,14 +11,60 @@ using Xamarin.Forms;
 using Xamarin.Essentials;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using VaxineApp.MVVMHelper;
+using DataAccessLib.Account;
+using VaxineApp.AccessShellDir.Views.Login;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
-    public class EditProfileViewModel
+    public class EditProfileViewModel : ViewModelBase
     {
         // Profile
         public ProfileModel Profile { get; set; }
 
+        private string currentPassword;
+        public string CurrentPassword
+        {
+            get
+            {
+                return currentPassword;
+            }
+            set
+            {
+                currentPassword = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string newPassword;
+        public string NewPassword
+        {
+            get
+            {
+                return newPassword;
+            }
+            set
+            {
+                newPassword = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string confirmPassword;
+        public string ConfirmPassword
+        {
+            get
+            {
+                return confirmPassword;
+            }
+            set
+            {
+                confirmPassword = value;
+                OnPropertyChanged();
+            }
+        }
+
+        AccountManagement Account { get; set; }
 
         // Command
         public ICommand SaveDataCommand { private set; get; }
@@ -30,6 +76,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             // Property
             Profile = _profile;
+            Account = new AccountManagement();
 
             // Command
             SaveDataCommand = new Command(SaveData);
@@ -37,9 +84,49 @@ namespace VaxineApp.ViewModels.Home.Profile
             BrowsePhotoCommad = new Command(BrowsePhoto);
         }
 
-        private async void ChangePassword(object obj)
+        private async void ChangePassword()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "The Gallery functionality is under construction", "OK");
+            if (NewPassword != null && ConfirmPassword != null && CurrentPassword != null)
+            {
+                if (NewPassword == ConfirmPassword)
+                {
+                    if (NewPassword.Length >= 8)
+                    {
+                        string Token = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), CurrentPassword);
+                        if (Token != "Error" && Token != "null")
+                        {
+                            var message = await Account.ChangeAccountPassword(Token, NewPassword);
+                            if (message == "OK")
+                            {
+                                await App.Current.MainPage.DisplayAlert("", "Password Changed!", "OK");
+                                await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
+                                Application.Current.MainPage = new AccessShell();
+                                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                            }
+                            else
+                            {
+                                await App.Current.MainPage.DisplayAlert("Error!", "Try again!", "OK");
+                            }
+                        }
+                        else
+                        {
+                            await App.Current.MainPage.DisplayAlert("Old Password Error", "Make sure you typed the old password correctly!", "OK");
+                        }
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("New Password Error", "Password must not be less then 8 letters, and should contain letters, numbers and symbols", "OK");
+                    }
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("", "Passwords are not the same", "OK");
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Fill in required fields", "Current, new and Confirm Passwords are required", "OK");
+            }
         }
 
         async void SaveData(object obj)
@@ -58,10 +145,11 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             var action = await App.Current.MainPage.DisplayActionSheet("Open photo", "Cancel", null, "Gallery", "Camera", "Remove");
             Debug.WriteLine("Action: " + action);
-            if(action == "Gallery")
+            if (action == "Gallery")
             {
                 OpenFileBrowser();
-            }else if(action == "Camera")
+            }
+            else if (action == "Camera")
             {
                 await TakePhotoAsync();
             }

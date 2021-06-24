@@ -65,11 +65,11 @@
       <StackLayout Grid.Row="2" Padding="40">
         <Label Text="Security"
                FontSize="Large"></Label>
-        <Entry IsPassword="True" Placeholder="Current Password"></Entry>
+        <Entry IsPassword="True" Placeholder="Current Password" Text="{Binding CurrentPassword}"></Entry>
         <Entry IsPassword="True"
-               Placeholder="New Password"></Entry>
+               Placeholder="New Password" Text="{Binding NewPassword}"></Entry>
         <Entry IsPassword="True"
-               Placeholder="Confirm Password"></Entry>
+               Placeholder="Confirm Password" Text="{Binding ConfirmPassword}"></Entry>
         <Button Text="Save"
                 TranslationY="20"
                 TranslationX="95"
