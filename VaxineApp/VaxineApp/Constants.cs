@@ -7,5 +7,6 @@ namespace VaxineApp
     public static class Constants
     {
         public static string GithubApiKeyForCreatingIssues { get; set; } = "[VSAC_GITHUB_API_KEY]";
+        public static string SyncFusionCommunityLicenseKey { get; set; } = "[SF_COMMUNITY_LICENSE_KEY]";
     }
 }

@@ -18,6 +18,9 @@ namespace VaxineApp
         {
             InitializeComponent();
 
+            // Syncfusion License
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Constants.SyncFusionCommunityLicenseKey);
+
             DependencyService.Get<INotificationManager>().Initialize();
 
             var isLoogged = Xamarin.Essentials.SecureStorage.GetAsync("isLogged").Result;
