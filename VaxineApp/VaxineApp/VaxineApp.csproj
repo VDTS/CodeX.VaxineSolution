@@ -39,6 +39,7 @@
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.2.0" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="4.2.0" />
     <PackageReference Include="Octokit" Version="0.50.0" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.1.0.69" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
     <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
