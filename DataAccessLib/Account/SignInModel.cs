@@ -30,4 +30,18 @@ namespace DataAccessLib.Account
         public string requestType { get; set; }
         public string idToken { get; set; }
     }
+    public class ResetCodeRoot
+    {
+        public string requestType { get; set; }
+        public string email { get; set; }
+    }
+    public class ResetCodeReturnRoot
+    {
+        public string oobCode { get; set; }
+    }
+    public class ConfirmPasswordRoot
+    {
+        public string oobCode { get; set; }
+        public string newPassword { get; set; }
+    }
 }
