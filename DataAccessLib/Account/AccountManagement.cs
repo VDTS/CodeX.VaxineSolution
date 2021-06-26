@@ -48,7 +48,6 @@ namespace DataAccessLib.Account
                 }
             }
         }
-
         public async Task<string> ChangeEmail(string email, string token)
         {
             using (var httpClient = new HttpClient())
@@ -72,7 +71,6 @@ namespace DataAccessLib.Account
                 }
             }
         }
-
         public async Task<string> SignIn(string email, string password)
         {
             var identityModel = new SignInModel() { email = email, password = password, returnSecureToken = true };
@@ -97,7 +95,6 @@ namespace DataAccessLib.Account
                 }
             }
         }
-
         public async Task<string> VerifyEmail(string Token)
         {
             using (var httpClient = new HttpClient())
@@ -121,5 +118,75 @@ namespace DataAccessLib.Account
                 }
             }
         }
+        public async Task<string> SendPasswordResetcode(string email)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                ResetCodeRoot resetCodeRoot = new ResetCodeRoot() { email = email, requestType = "PASSWORD_RESET" };
+                var resetCodeRootJson = JsonConvert.SerializeObject(resetCodeRoot);
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                {
+                    request.Content = new StringContent(resetCodeRootJson);
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return "OK";
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
+                }
+            }
+        }
+        public async Task<string> VerifyPasswordResetCode(string resetCode)
+        {
+            ResetCodeReturnRoot resetCodeRoot = new ResetCodeReturnRoot() { oobCode = resetCode };
+            var JsonData = JsonConvert.SerializeObject(resetCodeRoot);
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                {
+                    request.Content = new StringContent(JsonData);
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return "OK";
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
+                }
+            }
+        }
+        public async Task<string> ConfirmPasswordReset(string resetCode, string NewPassword)
+        {
+            ConfirmPasswordRoot confirmPasswordRoot = new ConfirmPasswordRoot() { oobCode = resetCode, newPassword = NewPassword };
+            var jsonData = JsonConvert.SerializeObject(confirmPasswordRoot);
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                {
+                    request.Content = new StringContent(jsonData);
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return "OK";
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
+                }
+            }
+        }
+
     }
 }
