@@ -1,8 +1,10 @@
-﻿using System;
+﻿using DataAccessLib.Account;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
+using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.MVVMHelper;
 using Xamarin.Forms;
@@ -26,59 +28,34 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login.ForgotPassword
             }
         }
 
-        private bool isNextPageVisible;
-        public bool IsNextPageVisible
-        {
-            get
-            {
-                return isNextPageVisible;
-            }
-            set
-            {
-                isNextPageVisible = value;
-                OnPropertyChanged();
-            }
-        }
-
         // Command
         public ICommand ResetPasswordByEmailCommand { private set; get; }
-        public ICommand ResetPasswordByPhoneNumberCommand { private set; get; }
-        public ICommand ValidateEmailOrPhoneCommand { private set; get; }
         public ForgotPasswordViewModel()
         {
-            IsNextPageVisible = false;
-            ValidateEmailOrPhoneCommand = new Command(ValidateEmailOrPhone);
             ResetPasswordByEmailCommand = new Command(ResetPasswordByEmail);
-            ResetPasswordByPhoneNumberCommand = new Command(ResetPasswordByPhoneNumber);
         }
 
-        private async void ResetPasswordByPhoneNumber(object obj)
+        private async void ResetPasswordByEmail()
         {
-            var navigationPage = new NavigationPage(new ResetByPhoneNumber());
-            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
-            
-        }
-
-        private async void ResetPasswordByEmail(object obj)
-        {
-            var navigationPage = new NavigationPage(new ResetByEmail());
-            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
-        }
-
-        private void ValidateEmailOrPhone(object obj)
-        {
-            if (!string.IsNullOrEmpty(Email))
+            try
             {
-                string emailRegex = @"^([\w\. \-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-                bool isMatched = Regex.IsMatch(Email, emailRegex);
-                if (isMatched)
+                AccountManagement Account = new AccountManagement();
+                var a = await Account.SendPasswordResetcode(Email);
+
+                if (a == "OK")
                 {
-                    IsNextPageVisible = true;
+                    await App.Current.MainPage.DisplayAlert("Reset Email Sent", $"Check your email: {Email}", "OK");
+                    Application.Current.MainPage = new AccessShell();
+                    await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
                 }
                 else
                 {
-                    IsNextPageVisible = false;
+                    await App.Current.MainPage.DisplayAlert("Try again later", "Verification code has failed", "OK");
                 }
+            }
+            catch (Exception)
+            {
+                await App.Current.MainPage.DisplayAlert("Try again later", "Verification code has failed", "OK");
             }
         }
     }

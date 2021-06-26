@@ -10,9 +10,6 @@ namespace VaxineApp
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(ForgotPasswordPage), typeof(ForgotPasswordPage));
-            Routing.RegisterRoute(nameof(ResetByEmail), typeof(ResetByEmail));
-            Routing.RegisterRoute(nameof(ResetByPhoneNumber), typeof(ResetByPhoneNumber));
-
         }
     }
 }
