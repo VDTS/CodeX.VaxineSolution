@@ -133,27 +133,34 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
 
             sqliteDataCache.Initialize(email);
             var data = await DataService.Get($"Profile");
-            var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
-            foreach (KeyValuePair<string, ProfileModel> item in clinic)
+            if (data != "Error" && data != "null")
             {
-                if (item.Value.Email.ToLower() == email)
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
+                foreach (KeyValuePair<string, ProfileModel> item in clinic)
                 {
-                    sqliteDataCache.InsertData(new Data { Key = "Profile", Value = JsonConvert.SerializeObject(item.Value) });
-                    Preferences.Set("ClusterId", item.Value.ClusterId);
-                    Preferences.Set("TeamId", item.Value.TeamId);
-                    Preferences.Set("UserId", item.Value.Id.ToString());
-                    await Xamarin.Essentials.SecureStorage.SetAsync("Role", item.Value.Role);
+                    if (item.Value.Email.ToLower() == email)
+                    {
+                        sqliteDataCache.InsertData(new Data { Key = "Profile", Value = JsonConvert.SerializeObject(item.Value) });
+                        Preferences.Set("ClusterId", item.Value.ClusterId);
+                        Preferences.Set("TeamId", item.Value.TeamId);
+                        Preferences.Set("UserId", item.Value.Id.ToString());
+                        await Xamarin.Essentials.SecureStorage.SetAsync("Role", item.Value.Role);
+                    }
                 }
+                if (RememberMe == true)
+                {
+                    await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "1");
+                }
+                Application.Current.MainPage = new AppShell();
+                await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
             }
-            if(RememberMe == true)
+            else
             {
-                await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "1");
+                await App.Current.MainPage.DisplayAlert("Error!", "Profile Not found", "OK");
             }
-            Application.Current.MainPage = new AppShell();
-            await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
         }
 
-        async private void ForgotPassword() 
+        async private void ForgotPassword()
         {
             var navigationPage = new NavigationPage(new ForgotPasswordPage());
             await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
