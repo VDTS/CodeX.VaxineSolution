@@ -21,6 +21,7 @@ namespace VaxineApp.Models
         public string TeamId { get; set; }
         public string ClusterId { get; set; }
         public string PhotoURL { get; set; }
+        public string LocalId { get; set; }
         public ProfileModel()
         {
             Id = new Guid();
