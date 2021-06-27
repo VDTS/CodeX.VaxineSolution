@@ -48,9 +48,15 @@ namespace VaxineApp.ViewModels.Home.Area.School
 
             var data = JsonConvert.SerializeObject(School);
 
-            string a = DataService.Post(data, $"School/{Preferences.Get("TeamId", "")}");
-            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-
+            string a = await DataService.Post(data, $"School/{Preferences.Get("TeamId", "")}");
+            if (a == "OK")
+            {
+                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+            }
             var route = $"//{nameof(SchoolPage)}";
             await Shell.Current.GoToAsync(route);
         }

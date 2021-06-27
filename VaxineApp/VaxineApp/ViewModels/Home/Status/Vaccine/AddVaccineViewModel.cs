@@ -52,9 +52,15 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
 
             var data = JsonConvert.SerializeObject(Vaccine);
 
-            string a = DataService.Post(data, $"Vaccine/{Child.Id}");
-            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-
+            string a = await DataService.Post(data, $"Vaccine/{Child.Id}");
+            if (a == "OK")
+            {
+                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+            }
             var route = $"//{nameof(StatusPage)}";
             await Shell.Current.GoToAsync(route);
         }

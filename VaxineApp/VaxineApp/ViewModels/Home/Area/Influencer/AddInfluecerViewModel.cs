@@ -47,9 +47,15 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 
             var data = JsonConvert.SerializeObject(Influencer);
 
-            string a = DataService.Post(data, $"Influencer/{Preferences.Get("TeamId", "")}");
-            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-
+            string a = await DataService.Post(data, $"Influencer/{Preferences.Get("TeamId", "")}");
+            if (a == "OK")
+            {
+                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+            }
             var route = $"//{nameof(InfluencerPage)}";
             await Shell.Current.GoToAsync(route);
         }

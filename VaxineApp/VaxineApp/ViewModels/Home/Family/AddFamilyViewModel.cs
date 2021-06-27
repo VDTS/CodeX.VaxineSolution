@@ -65,11 +65,18 @@ namespace VaxineApp.ViewModels.Home.Family
                     Family.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
 
                     var data = JsonConvert.SerializeObject(Family);
-                    string a = DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
-                    await App.Current.MainPage.DisplayAlert("Data submited", "Successfully posted", "OK");
+                    string a = await DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
+                    if (a == "OK")
+                    {
+                        await App.Current.MainPage.DisplayAlert("Data submited", "Successfully posted", "OK");
 
-                    var route = $"//{nameof(FamilyListPage)}";
-                    await Shell.Current.GoToAsync(route);
+                        var route = $"//{nameof(FamilyListPage)}";
+                        await Shell.Current.GoToAsync(route);
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+                    }
                 }
                 else
                 {

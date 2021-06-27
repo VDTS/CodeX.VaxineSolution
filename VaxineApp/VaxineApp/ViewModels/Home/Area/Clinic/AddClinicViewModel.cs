@@ -49,11 +49,18 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 Clinic.Id = new Guid();
                 var data = JsonConvert.SerializeObject(Clinic);
 
-                string a = DataService.Post(data, $"Clinic/{Preferences.Get("TeamId", "")}");
-                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+                string a = await DataService.Post(data, $"Clinic/{Preferences.Get("TeamId", "")}");
+                if (a == "OK")
+                {
+                    await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
 
-                var route = $"//{nameof(ClinicPage)}";
-                await Shell.Current.GoToAsync(route);
+                    var route = $"//{nameof(ClinicPage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+                }
             }
             else
             {
