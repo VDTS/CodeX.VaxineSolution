@@ -41,6 +41,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             // Property
             PrefUserEmail = Preferences.Get("PrefEmail", "");
+            Profile = new ProfileModel();
 
             // Get
             Get();
@@ -56,23 +57,32 @@ namespace VaxineApp.ViewModels.Home.Profile
             await Shell.Current.GoToAsync(route);
         }
 
-        public void Get()
+        public async void Get()
         {
-            sqliteDataCache.Initialize(Preferences.Get("ProfileEmail", ""));
-            var profileValue = sqliteDataCache.Get("Profile");
-            var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
-            
-            Profile = new ProfileModel
+            var data = await DataService.Get($"Profile");
+            if (data != "null" && data != "Error")
             {
-                FullName = profile.FullName,
-                Age = profile.Age,
-                Email = profile.Email,
-                FatherOrHusbandName = profile.FatherOrHusbandName,
-                Gender = profile.Gender,
-                Role = profile.Role,
-                TeamId = profile.TeamId,
-                ClusterId = profile.ClusterId
-            };
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
+                foreach (KeyValuePair<string, ProfileModel> item in clinic)
+                {
+                    if (item.Value.LocalId == Preferences.Get("UserLocalId", ""))
+                    {
+                        Profile = new ProfileModel
+                        {
+                            FId = item.Key.ToString(),
+                            Id = item.Value.Id, 
+                            FullName = item.Value.FullName,
+                            Age = item.Value.Age,
+                            FatherOrHusbandName = item.Value.FatherOrHusbandName,
+                            Gender = item.Value.Gender
+                        };
+                    }
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Error!", "Profile Not found", "OK");
+            }
         }
     }
 }

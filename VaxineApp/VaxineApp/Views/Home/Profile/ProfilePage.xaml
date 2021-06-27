@@ -43,12 +43,9 @@
       <Label FontSize="Large"
                Text="{Binding Profile.Age}"></Label>
       <Label Text="Role"></Label>
-      <Label FontSize="Large" Text="{Binding Profile.Role}"></Label>
-      <Label Text="Email"></Label>
         <Label FontSize="Large"
-               AutomationId="ProfilePage_Email"
-             Text="{Binding Profile.Email}"></Label>
-    </StackLayout>
+               Text="{Binding Profile.Role}"></Label>
+      </StackLayout>
     </ScrollView>
   </ContentPage.Content>
 </ContentPage>

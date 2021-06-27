@@ -8,6 +8,7 @@ namespace VaxineApp.Models
     public class ProfileModel
     {
         // Image property
+        public string FId { get; set; }
         public Guid Id { get; set; }
         public string FullName { get; set; }
         public string Gender { get; set; }
@@ -15,12 +16,8 @@ namespace VaxineApp.Models
         public int Age { get; set; }
         [Required]
         public string Role { get; set; }
-        [DataType(DataType.EmailAddress)]
-        [Required]
-        public string Email { get; set; }
         public string TeamId { get; set; }
         public string ClusterId { get; set; }
-        public string PhotoURL { get; set; }
         public string LocalId { get; set; }
         public ProfileModel()
         {
