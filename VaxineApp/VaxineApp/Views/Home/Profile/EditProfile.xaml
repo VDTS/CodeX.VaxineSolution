@@ -64,7 +64,7 @@
                 WidthRequest="80"
                 HeightRequest="40"
                 HorizontalOptions="Center"
-                Command="{Binding SaveDataCommand}"
+                Command="{Binding PutCommand}"
                 AutomationId="EditProfile_SaveButton"></Button>
       </StackLayout>
       <StackLayout Grid.Row="2"
