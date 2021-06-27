@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using VaxineApp.DataAccessLib;
+using Xamarin.Essentials;
 
 namespace DataAccessLib.Account
 {
@@ -86,6 +87,7 @@ namespace DataAccessLib.Account
                     {
                         var a = response.Content.ReadAsStringAsync().Result;
                         var s1 = JsonConvert.DeserializeObject<JObject>(a);
+                        Preferences.Set("UserLocalId", s1.GetValue("localId").ToString());
                         return s1.GetValue("idToken").ToString();
                     }
                     else

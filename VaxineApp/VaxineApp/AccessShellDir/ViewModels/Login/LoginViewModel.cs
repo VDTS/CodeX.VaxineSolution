@@ -138,7 +138,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
                 foreach (KeyValuePair<string, ProfileModel> item in clinic)
                 {
-                    if (item.Value.Email.ToLower() == email)
+                    if (item.Value.LocalId == Preferences.Get("UserLocalId", ""))
                     {
                         sqliteDataCache.InsertData(new Data { Key = "Profile", Value = JsonConvert.SerializeObject(item.Value) });
                         Preferences.Set("ClusterId", item.Value.ClusterId);
