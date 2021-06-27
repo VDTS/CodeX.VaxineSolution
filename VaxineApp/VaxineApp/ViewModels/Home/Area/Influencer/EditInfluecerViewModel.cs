@@ -1,9 +1,6 @@
-﻿using DataAccessLib.Models;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
 using System.Windows.Input;
+using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.Views.Home.Area.Influencer;
 using Xamarin.Essentials;

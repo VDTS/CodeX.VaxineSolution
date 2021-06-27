@@ -1,21 +1,12 @@
 ﻿using System;
-using DataAccessLib;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
-using VaxineApp.Views.Help;
-using VaxineApp.Views.Home;
-using VaxineApp.Views.Home.Profile;
-using VaxineApp.Views.Settings;
-using Xamarin.Essentials;
-using Xamarin.Forms;
-using Newtonsoft.Json;
-using DataAccessLib.Models;
-using System.Linq;
-using VaxineApp.Views.Settings.Main;
-using VaxineApp.Views.Settings.Themes;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.MVVMHelper;
+using VaxineApp.Views.Help;
+using VaxineApp.Views.Home.Profile;
+using VaxineApp.Views.Settings.Main;
+using VaxineApp.Views.Settings.Themes;
+using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels
 {
