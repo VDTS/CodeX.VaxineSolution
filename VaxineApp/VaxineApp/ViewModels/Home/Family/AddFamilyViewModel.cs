@@ -1,9 +1,7 @@
-﻿using DataAccessLib.Models;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
+using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Family;

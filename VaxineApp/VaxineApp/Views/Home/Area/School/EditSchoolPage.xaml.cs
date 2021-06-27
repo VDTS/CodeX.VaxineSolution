@@ -1,10 +1,5 @@
-﻿using DataAccessLib.Models;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+using VaxineApp.Models;
 using VaxineApp.ViewModels.Home.Area.School;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
