@@ -1,5 +1,4 @@
-﻿using DataAccessLib.Models;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +14,7 @@ using VaxineApp.MVVMHelper;
 using DataAccessLib.Account;
 using VaxineApp.AccessShellDir.Views.Login;
 using System.Text.RegularExpressions;
+using VaxineApp.Models;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
@@ -111,7 +111,7 @@ namespace VaxineApp.ViewModels.Home.Profile
 
 
         // Command
-        public ICommand SaveDataCommand { private set; get; }
+        public ICommand PutCommand { private set; get; }
         public ICommand BrowsePhotoCommad { private set; get; }
         public ICommand ChangePasswordCommand { private set; get; }
         public ICommand ChangeEmailCommand { private set; get; }
@@ -124,7 +124,7 @@ namespace VaxineApp.ViewModels.Home.Profile
             Account = new AccountManagement();
 
             // Command
-            SaveDataCommand = new Command(SaveData);
+            PutCommand = new Command(Put);
             ChangePasswordCommand = new Command(ChangePassword);
             BrowsePhotoCommad = new Command(BrowsePhoto);
             ChangeEmailCommand = new Command(ChangeEmail);
@@ -232,16 +232,20 @@ namespace VaxineApp.ViewModels.Home.Profile
             }
         }
 
-        async void SaveData(object obj)
+        async void Put(object obj)
         {
-            //var data = JsonConvert.SerializeObject(Profile);
-
-            //string a = DataService.Post(data, "Profile");
-            //await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-
-            //var route = $"//{nameof(ProfilePage)}";
-            //await Shell.Current.GoToAsync(route);
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "The Gallery functionality is under construction", "OK");
+            var jsonData = JsonConvert.SerializeObject(Profile);
+            var data = await DataService.Put(jsonData, $"Profile/{Profile.FId}");
+            if (data == "Submit")
+            {
+                await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
+                var route = $"//{nameof(ProfilePage)}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+            }
 
         }
         async void BrowsePhoto(object sender)

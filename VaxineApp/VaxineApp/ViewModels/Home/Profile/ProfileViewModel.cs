@@ -70,6 +70,10 @@ namespace VaxineApp.ViewModels.Home.Profile
                         Profile = new ProfileModel
                         {
                             FId = item.Key.ToString(),
+                            ClusterId = item.Value.ClusterId,
+                            LocalId = item.Value.LocalId,
+                            Role = item.Value.Role, 
+                            TeamId = item.Value.TeamId,
                             Id = item.Value.Id, 
                             FullName = item.Value.FullName,
                             Age = item.Value.Age,
