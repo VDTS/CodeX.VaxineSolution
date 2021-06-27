@@ -45,9 +45,15 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
             var data = JsonConvert.SerializeObject(Masjeed);
 
-            string a = DataService.Post(data, $"Masjeed/{Preferences.Get("TeamId", "")}");
-            await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
-
+            string a = await DataService.Post(data, $"Masjeed/{Preferences.Get("TeamId", "")}");
+            if (a == "OK")
+            {
+                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+            }
             var route = $"//{nameof(MasjeedPage)}";
             await Shell.Current.GoToAsync(route);
         }
