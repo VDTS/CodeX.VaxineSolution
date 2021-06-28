@@ -1,13 +1,11 @@
-﻿using System;
-using VaxineApp.Views;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Microsoft.AppCenter;
+﻿using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
-using System.Threading.Tasks;
 using VaxineApp.AndroidNativeApi;
+using VaxineApp.Resx;
+using Xamarin.CommunityToolkit.Helpers;
+using Xamarin.Forms;
 
 namespace VaxineApp
 {
@@ -17,6 +15,11 @@ namespace VaxineApp
         public App()
         {
             InitializeComponent();
+
+            // Localization
+
+            LocalizationResourceManager.Current.PropertyChanged += (_, _) => AppResources.Culture = LocalizationResourceManager.Current.CurrentCulture;
+            LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
 
             // Syncfusion License
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Constants.SyncFusionCommunityLicenseKey);

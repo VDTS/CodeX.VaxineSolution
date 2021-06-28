@@ -15,6 +15,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <LangVersion>latest</LangVersion>
     <UserSecretsId>3e029ffa-6048-4d09-bad8-29ab67ccf971</UserSecretsId>
   </PropertyGroup>
   
@@ -59,6 +60,11 @@
     </Compile>
     <Compile Update="ParentAppShell.xaml.cs">
       <DependentUpon>ParentAppShell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Resx\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Update="SupAppShell.xaml.cs">
       <DependentUpon>SupAppShell.xaml</DependentUpon>
@@ -131,6 +137,10 @@
   <ItemGroup>
     <EmbeddedResource Update="AccessShellDir\Views\Login\ForgotPassword\ForgotPasswordPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resx\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings\Font\FontPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
