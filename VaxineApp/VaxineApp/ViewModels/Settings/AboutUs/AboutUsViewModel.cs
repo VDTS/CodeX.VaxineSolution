@@ -82,7 +82,7 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
             Persons.Add(
                 new AboutUsModel
                 {
-                    FullName = "Mohammed Yaseen Zaheen",
+                    FullName = "Mohammed Yasin Zahin",
                     Role = "Contents Developer and UX Designer",
                     PhotoURL = "MohammadYaseen.jpg",
                     LinkedInURL = "https://linkedin.com/in/mohammad-yasin-zahin-95753517b",
