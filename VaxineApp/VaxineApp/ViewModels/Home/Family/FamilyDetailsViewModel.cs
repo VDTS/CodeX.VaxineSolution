@@ -94,6 +94,7 @@ namespace VaxineApp.ViewModels.Home.Family
             DialerCommand = new Command<string>(Dialer);
             PullRefreshCommand = new Command(Refresh);
             SubDeleteCommand = new Command(SubDelete);
+            DeleteCommand = new Command(Delete);
         }
 
         private async void SubDelete(object obj)
@@ -180,9 +181,33 @@ namespace VaxineApp.ViewModels.Home.Family
         {
             Childs.Clear();
         }
-        public void Delete()
+        public async void Delete()
         {
-            throw new NotImplementedException();
+            if (Childs.Count == 0)
+            {
+                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {Family.ParentName}'s Family?", "Yes", "No");
+                if (isDeleteAccepted)
+                {
+                    var data = await DataService.Delete($"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
+                    if (data == "Deleted")
+                    {
+                        var route = $"//{nameof(FamilyListPage)}";
+                        await Shell.Current.GoToAsync(route);
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Not Deleted", $"{Family.ParentName}'s family has {Childs.Count} childs, delete them before.", "OK");
+            }
         }
 
         public async void Get()

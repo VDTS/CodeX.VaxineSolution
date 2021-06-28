@@ -29,6 +29,10 @@
                  Priority="3"
                  Command="{Binding SubDeleteCommand}" />
     <ToolbarItem Order="Secondary"
+                 Text="Delete this Family"
+                 Priority="3"
+                 Command="{Binding DeleteCommand}" />
+    <ToolbarItem Order="Secondary"
                  Text="Edit Family"
                  Priority="3"
                  Command="{Binding GoToPutPageCommand}" />
