@@ -12,6 +12,7 @@
        xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
        xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
+       xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
        Title="VaxineApp"
        x:Class="VaxineApp.AppShell">
   <Shell.BindingContext>
@@ -160,13 +161,13 @@
             <Label Text=""
                    FontFamily="SegoeMDL2"
                    TextColor="Green"></Label>
-            <Label Text="ONLINE"></Label>
+            <Label Text="{xct:Translate Online}"></Label>
           </StackLayout>
           <StackLayout Orientation="Horizontal"
                        HorizontalOptions="End">
             <Label Text="    "></Label>
             <Label Text="" FontFamily="SegoeMDL2"></Label>
-            <Label Text="ON"></Label>
+            <Label Text="{xct:Translate On}"></Label>
           </StackLayout>
         </StackLayout>
       </Grid>
@@ -195,13 +196,13 @@
     </DataTemplate>
   </Shell.FlyoutFooterTemplate>
 
-  <FlyoutItem Title="Home">
+  <FlyoutItem Title="{xct:Translate Home}">
     <FlyoutItem.Icon>
       <FontImageSource FontFamily="SegoeMDL2"
                        Glyph="&#xE80F;"
                        Color="Black" />
     </FlyoutItem.Icon>
-    <Tab Title="Home">
+    <Tab Title="{xct:Translate Home}">
       <Tab.Icon>
         <FontImageSource Glyph="&#xE10F;"
                          FontFamily="SegoeMDL2"
@@ -211,11 +212,11 @@
                     ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
     </Tab>
     <Tab Icon="Home_Insights.png"
-         Title="Insights">
+         Title="{xct:Translate Insights}">
       <ShellContent Route="InsightsPage"
                     ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
     </Tab>
-    <Tab Title="Family">
+    <Tab Title="{xct:Translate Family}">
       <Tab.Icon>
         <FontImageSource Glyph="&#xECC8;"
                          FontFamily="SegoeMDL2"
@@ -225,35 +226,35 @@
                     ContentTemplate="{DataTemplate HomeFamily:FamilyListPage}" />
     </Tab>
     <Tab Icon="Home_Area.png"
-         Title="Area">
-      <ShellContent Title="Area"
+         Title="{xct:Translate Area}">
+      <ShellContent Title="{xct:Translate Area}"
                     Route="AreaPage"
                     ContentTemplate="{DataTemplate HomeArea:AreaPage}" />
-      <ShellContent Title="Masjeed"
+      <ShellContent Title="{xct:Translate Masjeed}"
                     Route="MasjeedPage"
                     ContentTemplate="{DataTemplate HomeAreaMasjeed:MasjeedPage}" />
-      <ShellContent Title="School"
+      <ShellContent Title="{xct:Translate School}"
                     Route="SchoolPage"
                     ContentTemplate="{DataTemplate HomeAreaSchool:SchoolPage}" />
-      <ShellContent Title="Influencer"
+      <ShellContent Title="{xct:Translate Influencer}"
                     Route="InfluencerPage"
                     ContentTemplate="{DataTemplate HomeAreaInfluencer:InfluencerPage}" />
-      <ShellContent Title="Clinic"
+      <ShellContent Title="{xct:Translate Clinic}"
                     Route="ClinicPage"
                     ContentTemplate="{DataTemplate HomeAreaClinic:ClinicPage}" />
-      <ShellContent Title="Doctor"
+      <ShellContent Title="{xct:Translate Doctor}"
                     Route="DoctorPage"
                     ContentTemplate="{DataTemplate HomeAreaDoctor:DoctorPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
-         Title="Profile">
+         Title="{xct:Translate Profile}">
       <ShellContent Route="ProfilePage"
                     ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
     </Tab>
 
   </FlyoutItem>
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-  <MenuItem Text="Profile"
+  <MenuItem Text="{xct:Translate Profile}"
             StyleClass="MenuItemLayoutStyle"
             Command="{Binding GoToProfileCommand}">
     <MenuItem.IconImageSource>
@@ -262,17 +263,17 @@
                        Color="Black" />
     </MenuItem.IconImageSource>
   </MenuItem>
-  <MenuItem Text="Help"
+  <MenuItem Text="{xct:Translate Help}"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutItem_Help.png"
             Command="{Binding GoToHelpPageCommand}">
   </MenuItem>
-  <MenuItem Text="Logout"
+  <MenuItem Text="{xct:Translate Logout}"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutMenuItem_Logout.png"
             Command="{Binding LogginOutCommand}">
   </MenuItem>
-  <MenuItem Text="Remove account from device"
+  <MenuItem Text="{xct:Translate RemoveAccountFromDevice}"
             StyleClass="MenuItemLayoutStyle"
             Command="{Binding RemoveAccountCommand}">
     <MenuItem.IconImageSource>

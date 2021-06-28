@@ -117,16 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
   <data name="ChangeLanguage" xml:space="preserve">
     <value>Change Language</value>
+    <comment>LanguagePage</comment>
+  </data>
+  <data name="Clinic" xml:space="preserve">
+    <value>Clinic</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>Doctor</value>
+    <comment>/AreaPage</comment>
   </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="Family" xml:space="preserve">
+    <value>Family</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+    <comment>ShellFlyoutItem</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Influencer" xml:space="preserve">
+    <value>Influencer</value>
+  </data>
+  <data name="Insights" xml:space="preserve">
+    <value>Insights</value>
+    <comment>DownTabs</comment>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Masjeed" xml:space="preserve">
+    <value>Masjeed</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Online</value>
+  </data>
   <data name="Pashto" xml:space="preserve">
     <value>Pashto</value>
   </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+    <comment>/DownTabs</comment>
+  </data>
+  <data name="RemoveAccountFromDevice" xml:space="preserve">
+    <value>RemoveAccountFromDevice</value>
+    <comment>/ShellFlyoutItem</comment>
+  </data>
+  <data name="School" xml:space="preserve">
+    <value>School</value>
+    <comment>AreaPage</comment>
+  </data>
   <data name="System" xml:space="preserve">
     <value>System</value>
+    <comment>/LanguagePage</comment>
   </data>
 </root>
