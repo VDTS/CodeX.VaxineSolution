@@ -23,6 +23,7 @@
                   HeightRequest="50" />
         <Label Text="Issue details"></Label>
         <Editor Text="{Binding IssueDetails}"
+                Placeholder="Explain your issue, and add your Device name, Model, Manufacturer, Platform, Version... To know how we are using your information See privacy policy."
               HeightRequest="280" />
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
           <Button Text=""
