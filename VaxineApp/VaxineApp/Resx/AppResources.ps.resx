@@ -117,16 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Area" xml:space="preserve">
+    <value>ساحه</value>
+  </data>
   <data name="ChangeLanguage" xml:space="preserve">
     <value>ژبه بدلول</value>
+    <comment>LanguagePage</comment>
+  </data>
+  <data name="Clinic" xml:space="preserve">
+    <value>کلینیک</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>ډاکټر</value>
+    <comment>/AreaPage</comment>
   </data>
   <data name="English" xml:space="preserve">
     <value>انګلیسي</value>
   </data>
+  <data name="Family" xml:space="preserve">
+    <value>کورنۍ</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>مرسته</value>
+    <comment>ShellFlyoutItems</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>کور</value>
+  </data>
+  <data name="Influencer" xml:space="preserve">
+    <value>مخور</value>
+  </data>
+  <data name="Insights" xml:space="preserve">
+    <value>احصائيه</value>
+    <comment>DownTabs</comment>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>بندول</value>
+  </data>
+  <data name="Masjeed" xml:space="preserve">
+    <value>مسجد شریف</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>ان</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>انلاین</value>
+  </data>
   <data name="Pashto" xml:space="preserve">
     <value>پښتو</value>
   </data>
+  <data name="Profile" xml:space="preserve">
+    <value>پروفایل</value>
+    <comment>/DownTabs</comment>
+  </data>
+  <data name="RemoveAccountFromDevice" xml:space="preserve">
+    <value>د حساب د منځه وړل</value>
+    <comment>/ShellFlyoutItems</comment>
+  </data>
+  <data name="School" xml:space="preserve">
+    <value>ښوونځۍ</value>
+    <comment>AreaPage</comment>
+  </data>
   <data name="System" xml:space="preserve">
     <value>د سیسټم ژبه</value>
+    <comment>/LanguagePage</comment>
   </data>
 </root>
