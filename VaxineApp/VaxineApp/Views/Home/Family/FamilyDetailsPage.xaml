@@ -25,6 +25,10 @@
                  Priority="3"
                  Command="{Binding GoToSubPutPageCommand}" />
     <ToolbarItem Order="Secondary"
+                 Text="Delete Child"
+                 Priority="3"
+                 Command="{Binding SubDeleteCommand}" />
+    <ToolbarItem Order="Secondary"
                  Text="Edit Family"
                  Priority="3"
                  Command="{Binding GoToPutPageCommand}" />
