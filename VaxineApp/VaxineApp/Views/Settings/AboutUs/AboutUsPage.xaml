@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Settings.AboutUs.AboutUsPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AboutUs"
+             xmlns:localFont="clr-namespace:VaxineApp.Font"
              x:Name="AboutUs"
              Shell.TabBarIsVisible="False"
              Title="About us">
@@ -18,10 +19,12 @@
       <StackLayout Grid.Row="0"
                    Orientation="Vertical"
                    Spacing="20">
-        <Label Text="About VDTS" FontSize="Large"></Label>
+        <Label Text="About VDTS"
+               FontSize="Large"></Label>
         <Label FontSize="Default"
                Text="VDTS is a digital immunization software that helps in distributing and tracking vaccinations with a mobile app and web portal. It will help the field vaccinators to register children for tracking their vaccinations. The team offers digital solutions."></Label>
-        <Label Text="Our Team" FontSize="Large"></Label>
+        <Label Text="Our Team"
+               FontSize="Large"></Label>
         <Label Text="VDTS team has expertise in healthcare, public health, immunization, Communications, and digital technology."></Label>
       </StackLayout>
       <RefreshView Grid.Row="1">
@@ -33,25 +36,42 @@
                   <RowDefinition Height="Auto"></RowDefinition>
                   <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                <StackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Vertical" Spacing="10">
-                <Frame CornerRadius="100"
-                       HeightRequest="180"
-                       WidthRequest="180"
-                       HorizontalOptions="Center"
-                       Padding="0"
-                       IsClippedToBounds="True">
-                  <Image Source="{Binding PhotoURL}"
+                <StackLayout Grid.Row="1"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Orientation="Vertical"
+                             Spacing="10">
+                  <Frame CornerRadius="100"
+                         HeightRequest="180"
+                         WidthRequest="180"
                          HorizontalOptions="Center"
-                         VerticalOptions="Center">
-                  </Image>
-                </Frame>
-                <Label FontSize="20" HorizontalOptions="Center"
-                       Text="{Binding FullName}"></Label>
-                <Label Text="{Binding Role}" HorizontalOptions="Center"></Label>
-                  <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="LinkedIn"
-                            Command="{Binding BindingContext.GoToLinkedInCommand, Source={x:Reference AboutUs}}" CommandParameter="{Binding LinkedInURL}"></Button>
-                    <Button Text="Twitter" Command="{Binding BindingContext.GoToTwitterCommand, Source={x:Reference AboutUs}}"
+                         Padding="0"
+                         IsClippedToBounds="True">
+                    <Image Source="{Binding PhotoURL}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
+                    </Image>
+                  </Frame>
+                  <Label FontSize="20"
+                         HorizontalOptions="Center"
+                         Text="{Binding FullName}"></Label>
+                  <Label Text="{Binding Role}"
+                         HorizontalOptions="Center"></Label>
+                  <StackLayout Orientation="Horizontal"
+                               HorizontalOptions="Center">
+                    <Button Text="{x:Static localFont:MaterialDesignIcons.Linkedin}"
+                            FontFamily="MaterialIcons"
+                            FontSize="40"
+                            TextColor="#2196f3"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BindingContext.GoToLinkedInCommand, Source={x:Reference AboutUs}}"
+                            CommandParameter="{Binding LinkedInURL}"></Button>
+                    <Button Text="{x:Static localFont:MaterialDesignIcons.Twitter}"
+                            FontFamily="MaterialIcons"
+                            FontSize="40"
+                            TextColor="#2196f3"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BindingContext.GoToTwitterCommand, Source={x:Reference AboutUs}}"
                             CommandParameter="{Binding TwitterURL}">
                     </Button>
                   </StackLayout>
