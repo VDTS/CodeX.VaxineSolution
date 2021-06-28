@@ -27,10 +27,12 @@
   
   <ItemGroup>
     <None Remove="Fonts\FontAwesome5.otf" />
+    <None Remove="Fonts\materialdesignicons-webfont.ttf" />
     <None Remove="Fonts\segmdl2.ttf" />
   </ItemGroup>
   
   <ItemGroup>
+    <EmbeddedResource Include="Fonts\materialdesignicons-webfont.ttf" />
     <EmbeddedResource Include="Fonts\segmdl2.ttf" />
   </ItemGroup>
 
