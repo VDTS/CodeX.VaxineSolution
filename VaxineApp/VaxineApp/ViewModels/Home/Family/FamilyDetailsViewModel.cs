@@ -92,9 +92,41 @@ namespace VaxineApp.ViewModels.Home.Family
             GoToSubPutPageCommand = new Command(GoToSubPutPage);
             GoToPutPageCommand = new Command(GoToPutPage);
             DialerCommand = new Command<string>(Dialer);
-            //SelectionCommand = new Command();
-            //CancelSelectionCommand = new Command();
             PullRefreshCommand = new Command(Refresh);
+            SubDeleteCommand = new Command(SubDelete);
+        }
+
+        private async void SubDelete(object obj)
+        {
+            if (SelectedChild.FId != null)
+            {
+                var VaccineData = await DataService.Get($"Vaccine/{SelectedChild.Id}");
+                if (VaccineData == "null")
+                {
+                    var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedChild.FullName}?", "Yes", "No");
+                    if (isDeleteAccepted)
+                    {
+                        var data = await DataService.Delete($"Child/{Family.Id}/{SelectedChild.FId}");
+                        if (data == "Deleted")
+                        {
+                            Childs.Remove(SelectedChild);
+                        }
+                        else
+                        {
+                            await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                        }
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    var num = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(VaccineData);
+                    await App.Current.MainPage.DisplayAlert("Not Deleted", $"{SelectedChild.FullName} has {num.Values.Count} vaccines on timeline, delete them before.", "OK");
+                }
+            }
         }
 
         private async void Dialer(string number)
