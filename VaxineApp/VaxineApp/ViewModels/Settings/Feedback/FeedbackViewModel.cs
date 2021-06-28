@@ -1,15 +1,11 @@
 ﻿using Octokit;
-using DataAccessLib;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
-using VaxineApp.Views.Home.Status;
-using Xamarin.Forms;
-using Octokit.Internal;
-using System.Collections.ObjectModel;
 using VaxineApp.Models.Metadata;
 using VaxineApp.MVVMHelper;
+using VaxineApp.Views.Home.Status;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Settings.Feedback
 {
@@ -99,8 +95,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
         {
             try
             {
-                UserMetaData umd = new UserMetaData();
-                var client = new GitHubClient(new ProductHeaderValue("RoadMap"));
+                var client = new GitHubClient(new ProductHeaderValue("VaxineSolution"));
 
                 var tokenAuth = new Credentials(Constants.GithubApiKeyForCreatingIssues);
                 client.Credentials = tokenAuth;
@@ -108,7 +103,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
                 var i = new NewIssue(IssueTitle);
 
 
-                i.Body = $"Issue: {IssueDetails} {Environment.NewLine} Device Manufacturer: {umd.DeviceManufacturer} {Environment.NewLine} Device Model: {umd.DeviceModel}  {Environment.NewLine} Device Name: {umd.DeviceName} {Environment.NewLine} Device Platform: {umd.DevicePlatform} {Environment.NewLine} Device Version: {umd.DeviceVersion} {Environment.NewLine} User Email: {SharedData.Email}";
+                i.Body = $"Issue: {IssueDetails}";
 
                 if(SuggestionRadioButton == false && ProblemRadioButton == true)
                 {
@@ -119,7 +114,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
                     i.Labels.Add("Suggestion");
                 }
 
-                var issue = await client.Issue.Create("VDTS", "RoadMap", i);
+                var issue = await client.Issue.Create("VDTS", "CodeX.VaxineSolution", i);
                 if(issue.State.Value.ToString() == "Open")
                 {
                     await App.Current.MainPage.DisplayAlert("Issue", "Issue submited", "OK");
