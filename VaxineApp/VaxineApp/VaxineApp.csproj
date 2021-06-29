@@ -15,7 +15,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
-    <LangVersion>9.0</LangVersion>
     <UserSecretsId>3e029ffa-6048-4d09-bad8-29ab67ccf971</UserSecretsId>
   </PropertyGroup>
   
