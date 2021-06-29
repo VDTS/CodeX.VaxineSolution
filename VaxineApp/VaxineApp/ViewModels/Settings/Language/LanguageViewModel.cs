@@ -15,7 +15,7 @@ namespace VaxineApp.ViewModels.Settings.Language
 {
     public class LanguageViewModel : ViewModelBase
     {
-        List<(Func<string> name, string value)> languageMapping { get; } = new()
+        List<(Func<string> name, string value)> languageMapping { get; } = new List<(Func<string> name, string value)>()
         {
             (() => AppResources.System, null),
             (() => AppResources.English, "en"),
@@ -31,7 +31,7 @@ namespace VaxineApp.ViewModels.Settings.Language
 
         public LanguageViewModel()
         {
-            CurrentLanguage = new(GetCurrentLanguageName);
+            CurrentLanguage = new LocalizedString(GetCurrentLanguageName);
             //CurrentLanguage = new(() => LocalizationResourceManager.Current.CurrentCulture.DisplayName);
 
             ChangeLanguageCommand = new AsyncCommand(ChangeLanguage);
