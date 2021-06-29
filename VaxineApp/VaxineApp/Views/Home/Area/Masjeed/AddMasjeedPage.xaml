@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Home.Area.Masjeed.AddMasjeedPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
-             xmlns:local="clr-namespace:VaxineApp.Renderers"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="VaxineApp.Views.Home.Area.Masjeed.AddMasjeedPage"
              Shell.TabBarIsVisible="False"
              Title="Add Masjeed">
   <ContentPage.BindingContext>

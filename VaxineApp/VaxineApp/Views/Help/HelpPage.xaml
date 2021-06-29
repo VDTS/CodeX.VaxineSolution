@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.Views.Help.HelpPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Shell.TabBarIsVisible="False"
              Title="Help and Support">
   <ContentPage.Content>

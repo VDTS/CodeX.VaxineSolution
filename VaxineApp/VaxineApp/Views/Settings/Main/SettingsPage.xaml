@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.Main"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="VaxineApp.Views.Settings.Main.SettingsPage"
              Shell.TabBarIsVisible="False"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.Main"
              Title="Settings">
   <ContentPage.BindingContext>
     <ViewModel:SettingsViewModel></ViewModel:SettingsViewModel>
