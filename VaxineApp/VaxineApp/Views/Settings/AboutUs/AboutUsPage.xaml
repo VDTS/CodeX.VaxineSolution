@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Settings.AboutUs.AboutUsPage"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AboutUs"
              xmlns:localFont="clr-namespace:VaxineApp.Font"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AboutUs"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="VaxineApp.Views.Settings.AboutUs.AboutUsPage"
              x:Name="AboutUs"
              Shell.TabBarIsVisible="False"
              Title="About us">

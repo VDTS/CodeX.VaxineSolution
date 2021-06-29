@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Settings.AppUpdates.AppUpdatesPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AppUpdates"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="VaxineApp.Views.Settings.AppUpdates.AppUpdatesPage"
              x:Name="AppUpdates"
              Title="What's New?">
   <ContentPage.BindingContext>
