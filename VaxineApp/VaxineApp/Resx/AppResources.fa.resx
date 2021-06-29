@@ -121,45 +121,45 @@
     <value>ساحه</value>
   </data>
   <data name="ChangeLanguage" xml:space="preserve">
-    <value>ژبه بدلول</value>
+    <value>تغیر زبان</value>
     <comment>LanguagePage</comment>
   </data>
   <data name="Clinic" xml:space="preserve">
-    <value>کلینیک</value>
+    <value>کلینک</value>
   </data>
   <data name="Dari" xml:space="preserve">
     <value>دری</value>
     <comment>AddLanguage</comment>
   </data>
   <data name="Doctor" xml:space="preserve">
-    <value>ډاکټر</value>
+    <value>داکتر</value>
     <comment>/AreaPage</comment>
   </data>
   <data name="English" xml:space="preserve">
-    <value>انګلیسي</value>
+    <value>انګلیش</value>
   </data>
   <data name="Family" xml:space="preserve">
-    <value>کورنۍ</value>
+    <value>خانواده</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>مرسته</value>
-    <comment>ShellFlyoutItems</comment>
+    <value>حمایت</value>
+    <comment>ShellFlyoutItem</comment>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>کور</value>
+    <value>خانه</value>
   </data>
   <data name="Influencer" xml:space="preserve">
-    <value>مخور</value>
+    <value>انلفلوینسر</value>
   </data>
   <data name="Insights" xml:space="preserve">
-    <value>احصائيه</value>
+    <value>انسایت</value>
     <comment>DownTabs</comment>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>بندول</value>
+    <value>لاګ اوټ</value>
   </data>
   <data name="Masjeed" xml:space="preserve">
-    <value>مسجد شریف</value>
+    <value>مساجد</value>
   </data>
   <data name="On" xml:space="preserve">
     <value>ان</value>
@@ -168,22 +168,22 @@
     <value>انلاین</value>
   </data>
   <data name="Pashto" xml:space="preserve">
-    <value>پښتو</value>
+    <value>بشتو</value>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>پروفایل</value>
     <comment>/DownTabs</comment>
   </data>
   <data name="RemoveAccountFromDevice" xml:space="preserve">
-    <value>د حساب د منځه وړل</value>
-    <comment>/ShellFlyoutItems</comment>
+    <value>حذف اکاونت از تلیفون</value>
+    <comment>/ShellFlyoutItem</comment>
   </data>
   <data name="School" xml:space="preserve">
-    <value>ښوونځۍ</value>
+    <value>مکاتب</value>
     <comment>AreaPage</comment>
   </data>
   <data name="System" xml:space="preserve">
-    <value>د سیسټم ژبه</value>
+    <value>سیستم</value>
     <comment>/LanguagePage</comment>
   </data>
 </root>
