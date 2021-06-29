@@ -88,6 +88,15 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dari.
+        /// </summary>
+        internal static string Dari {
+            get {
+                return ResourceManager.GetString("Dari", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Doctor.
         /// </summary>
         internal static string Doctor {

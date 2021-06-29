@@ -20,6 +20,7 @@ namespace VaxineApp.ViewModels.Settings.Language
             (() => AppResources.System, null),
             (() => AppResources.English, "en"),
             (() => AppResources.Pashto, "ps"),
+            (() => AppResources.Dari, "fa"),
         };
 
         public LocalizedString CurrentLanguage { get; }
