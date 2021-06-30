@@ -8,6 +8,7 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.RealCacheLib;
+using VaxineApp.StaticData;
 using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.CommunityToolkit.ObjectModel;
@@ -199,7 +200,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
