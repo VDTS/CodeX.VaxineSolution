@@ -7,18 +7,18 @@
              Title="Edit Clinic">
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
-      <Entry Placeholder="Clinic Name"
+      <Entry Placeholder="{xct:Translate ClinicName}"
              Text="{Binding Clinic.ClinicName}"></Entry>
-      <Entry Placeholder="Fixed"
+      <Entry Placeholder="{xct:Translate Fixed}"
              Text="{Binding Clinic.Fixed}"></Entry>
-      <Entry Placeholder="Outreach"
+      <Entry Placeholder="{xct:Translate OutReach}"
              Text="{Binding Clinic.Outreach}"></Entry>
       <StackLayout Orientation="Horizontal">
-        <Entry Placeholder="Latitude"
+        <Entry Placeholder="{xct:Translate Latitude}"
                IsEnabled="False"
                WidthRequest="140"
                Text="{Binding Clinic.Latitude}"></Entry>
-      <Entry Placeholder="Longitude" IsEnabled="False"
+      <Entry Placeholder="{xct:Translate Longitude}" IsEnabled="False"
              WidthRequest="140"
                Text="{Binding Clinic.Longitude}"></Entry>
         <Button Text="" FontFamily="SegoeMDL2"
@@ -32,7 +32,7 @@
       </StackLayout>
 
       
-      <Button Text="Save"
+      <Button Text="{xct:Translate Save}"
         TranslationY="50"
         WidthRequest="130"
         HeightRequest="50"

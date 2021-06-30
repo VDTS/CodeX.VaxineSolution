@@ -10,18 +10,18 @@
     <StackLayout Padding="40" Spacing="10"
                  x:Name="PageContent">
       <Entry Text="{Binding Child.FullName, Mode=TwoWay}"
-                                 Placeholder="Full Name"></Entry>
-      <Picker Title="Gender"
+                                 Placeholder="{xct:Translate FullName}"></Entry>
+      <Picker Title="{xct:Translate Gender}"
               SelectedItem="{Binding Child.Gender, Mode=OneWayToSource}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
-            <x:String>Male</x:String>
-            <x:String>Female</x:String>
+            <x:String>{xct:Translate Male}</x:String>
+            <x:String>{xct:Translate Female}</x:String>
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
       <Entry Text="{Binding Child.RINo, Mode=OneWayToSource}"
-                                 Placeholder="RI Number"></Entry>
+                                 Placeholder="{xct:Translate RiNumber}"></Entry>
       <DatePicker Date="{Binding Child.DOB, Mode=OneWayToSource}"></DatePicker>
 
       <StackLayout Orientation="Horizontal" Spacing="10">
@@ -29,7 +29,7 @@
         <Label Text="OPV0"></Label>
       </StackLayout>
      
-      <Button Text="Save"
+      <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"

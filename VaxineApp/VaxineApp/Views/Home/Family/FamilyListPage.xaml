@@ -6,19 +6,19 @@
              x:Class="VaxineApp.Views.Home.Family.FamilyListPage"
              Title="Family List">
   <Shell.SearchHandler>
-    <SearchHandler Placeholder="Search Family" />
+    <SearchHandler Placeholder="{xct:Translate SearchFamily}" />
   </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:FamilyListViewModel></ViewModel:FamilyListViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
-                 Text="Add Family"
+                 Text="{xct:Translate AddFamily}"
                  Priority="3"
                  Command="{Binding GoToPostPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
-                 Text="Save as PDF"
+                 Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
   </ContentPage.ToolbarItems>
@@ -42,13 +42,13 @@
             </Grid.RowDefinitions>
             <Label 
                    Grid.Column="0" Grid.Row="0"
-                   Text="House No"></Label>
+                   Text="HouseNo"></Label>
             <Label Grid.Column="1"
                    Grid.Row="0"
-                   Text="Parent Name"></Label>
+                   Text="ParentName"></Label>
             <Label Grid.Column="1"
                    Grid.Row="1"
-                   Text="Phone Number"></Label>
+                   Text="PhoneNo"></Label>
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>

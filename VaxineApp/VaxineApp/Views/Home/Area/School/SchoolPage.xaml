@@ -6,32 +6,32 @@
              x:Class="VaxineApp.Views.Home.Area.School.SchoolPage"
              Title="School">
   <Shell.SearchHandler>
-    <SearchHandler Placeholder="Search" />
+    <SearchHandler Placeholder="{xct:Translate Search}" />
   </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:SchoolViewModel></ViewModel:SchoolViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
-                 Text="Add"
+                 Text="{xct:Translate Add}"
                  Priority="3"
                  Command="{Binding GoToPostPageCommand}" />
     <ToolbarItem Order="Secondary"
-                 Text="Edit"
+                 Text="{xct:Translate Edit}"
                  Command="{Binding GoToPutPageCommand}"
                  Priority="2" />
     <ToolbarItem Order="Secondary"
-                 Text="Delete"
+                 Text="{xct:Translate Delete}"
                  Command="{Binding DeleteCommand}"
                  Priority="2" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Command="{Binding GoToMapCommand}"
-                 Text="Go on map"
+                 Text="{xct:Translate GoOnMap}"
                  Priority="0" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
-                 Text="Save as PDF"
+                 Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
   </ContentPage.ToolbarItems>
@@ -50,9 +50,9 @@
             </Grid.ColumnDefinitions>
             <Label 
                    Grid.Column="0"
-                   Text="School Name"></Label>
+                   Text="{xct:Translate SchoolName}"></Label>
             <Label Grid.Column="1"
-                   Text="Key Influencer"></Label>
+                   Text="{xct:Translate KeyInfluencer}"></Label>
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
