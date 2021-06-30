@@ -8,6 +8,7 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.RealCacheLib;
+using VaxineApp.Routes;
 using VaxineApp.StaticData;
 using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
@@ -214,11 +215,10 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
         }
 
-        public async void GoToPostPage()
+        public void GoToPostPage()
         {
             SelectedClinic = null;
-            var route = $"{nameof(AddClinicPage)}";
-            await Shell.Current.GoToAsync(route);
+            StandardRoutes.GoToAddPage("AddClinicPage");
         }
 
         public async void GoToPutPage()
