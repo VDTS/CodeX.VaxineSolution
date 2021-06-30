@@ -11,16 +11,16 @@
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
-      <Entry Placeholder="School Name"
+      <Entry Placeholder="{xct:Translate SchoolName}"
              Text="{Binding School.SchoolName}"></Entry>
-      <Entry Placeholder="Key Influencer"
+      <Entry Placeholder="{xct:Translate KeyInfluencer}"
              Text="{Binding School.KeyInfluencer}"></Entry>
       <StackLayout Orientation="Horizontal">
-        <Entry Placeholder="Latitude"
+        <Entry Placeholder="{xct:Translate Latitude}"
                IsEnabled="False"
                WidthRequest="140"
                Text="{Binding School.Latitude}"></Entry>
-        <Entry Placeholder="Longitude"
+        <Entry Placeholder="{xct:Translate Longitude}"
                IsEnabled="False"
                WidthRequest="140"
                Text="{Binding School.Longitude}"></Entry>
@@ -35,7 +35,7 @@
                 Command="{Binding AddLocationCommand}"></Button>
       </StackLayout>
 
-      <Button Text="Save"
+      <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"

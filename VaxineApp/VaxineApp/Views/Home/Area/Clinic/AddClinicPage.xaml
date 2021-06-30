@@ -12,18 +12,18 @@
   <ContentPage.Content>
     <StackLayout Padding="40"
                  Spacing="10">
-      <Entry Placeholder="Clinic Name"
+      <Entry Placeholder="{xct:Translate ClinicName}"
              Text="{Binding Clinic.ClinicName}"></Entry>
-      <Entry Placeholder="Fixed"
+      <Entry Placeholder="{xct:Translate Fixed}"
              Text="{Binding Clinic.Fixed}"></Entry>
-      <Entry Placeholder="Outreach"
+      <Entry Placeholder="{xct:Translate Outreach}"
              Text="{Binding Clinic.Outreach}"></Entry>
       <StackLayout Orientation="Horizontal">
-        <Entry Placeholder="Latitude"
+        <Entry Placeholder="{xct:Translate Latitude}"
                IsEnabled="False"
                WidthRequest="140"
                Text="{Binding Clinic.Latitude}"></Entry>
-        <Entry Placeholder="Longitude"
+        <Entry Placeholder="{xct:Translate Longitude}"
                IsEnabled="False"
                WidthRequest="140"
                Text="{Binding Clinic.Longitude}"></Entry>
@@ -38,7 +38,7 @@
                 Command="{Binding AddLocationCommand}"></Button>
       </StackLayout>
 
-      <Button Text="Save"
+      <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"

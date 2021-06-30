@@ -12,7 +12,7 @@
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
-                 Text="Save as PDF"
+                 Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
   </ContentPage.ToolbarItems>
@@ -48,13 +48,13 @@
             <Label Grid.Column="0"
                    Grid.Row="0"
                    FontSize="Medium"
-                   Text="House No"></Label>
+                   Text="{xct:Translate HouseNo}"></Label>
             <Label Grid.Column="0"
                    Grid.Row="1"
-                   Text="Child Name"></Label>
+                   Text="{xct:Translate ChildName}"></Label>
             <Label Grid.Column="1"
                    Grid.Row="1"
-                   Text="Age (months)"></Label>
+                   Text="{xct:Translate AgeInMonths}"></Label>
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>

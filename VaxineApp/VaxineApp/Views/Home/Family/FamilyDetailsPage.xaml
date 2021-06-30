@@ -17,28 +17,28 @@
   </ContentPage.Resources>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
-                 Text="Add Child"
+                 Text="{xct:Translate AddChild}"
                  Priority="3"
                  Command="{Binding GoToSubPostPageCommand}" />
     <ToolbarItem Order="Secondary"
-                 Text="Edit Child"
+                 Text="{xct:Translate EditChild}"
                  Priority="3"
                  Command="{Binding GoToSubPutPageCommand}" />
     <ToolbarItem Order="Secondary"
-                 Text="Delete Child"
+                 Text="{xct:Translate DeleteChild}"
                  Priority="3"
                  Command="{Binding SubDeleteCommand}" />
     <ToolbarItem Order="Secondary"
-                 Text="Delete this Family"
+                 Text="{xct:Translate DeleteThisFamily}"
                  Priority="3"
                  Command="{Binding DeleteCommand}" />
     <ToolbarItem Order="Secondary"
-                 Text="Edit Family"
+                 Text="{xct:Translate EditFamily}"
                  Priority="3"
                  Command="{Binding GoToPutPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
-                 Text="Save as PDF"
+                 Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
   </ContentPage.ToolbarItems>
@@ -80,9 +80,9 @@
                 <ColumnDefinition Width="0.2*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
               <Label Grid.Column="0"
-                     Text="Child Name"></Label>
+                     Text="{xct:Translate ChildName}"></Label>
               <Label Grid.Column="1"
-                     Text="Age in Months"></Label>
+                     Text="{xct:Translate AgeInMonths}"></Label>
             </Grid>
           </CollectionView.Header>
           <CollectionView.ItemTemplate>

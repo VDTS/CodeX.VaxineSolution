@@ -17,15 +17,15 @@
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout Padding="20">
-      <Label Text="Version Name"
+      <Label Text="{xct:Translate VersionName}"
              FontSize="Large"></Label>
       <Label Text="{Binding AppVersion}"></Label>
-      <Label Text="Whats New?"
+      <Label Text="{xct:Translate WhatNew}"
              FontSize="Large"></Label>
       <ScrollView Padding="10">
         <Label Text="{Binding AppNewUpdates}"></Label>
       </ScrollView>
-      <Label Text="No new Updates"
+      <Label Text="{xct:Translate NoNewUpdate}"
              IsVisible="{Binding IsUpdatesAvailable}"></Label>
     </StackLayout>
   </ContentPage.Content>

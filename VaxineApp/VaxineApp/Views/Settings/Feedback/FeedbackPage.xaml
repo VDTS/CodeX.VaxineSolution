@@ -12,19 +12,19 @@
     <ContentPage.Content>
     <ScrollView>
         <StackLayout Padding="10" Spacing="10">
-        <Label Text="Select Category" />
+        <Label Text="{xct:Translate SelectCategory}" />
         <StackLayout Orientation="Horizontal"
                      RadioButtonGroup.GroupName="IssueCategory">
-          <RadioButton Content="Suggestion"
+          <RadioButton Content="{xct:Translate Suggestion}"
                        Value="{Binding SuggestionRadioButton}" IsChecked="{Binding SuggestionRadioButton}" />
-          <RadioButton Value="{Binding ProblemRadioButton}" Content="Problem" IsChecked="{Binding ProblemRadioButton}"/>
+          <RadioButton Value="{Binding ProblemRadioButton}" Content="{xct:Translate Problem}" IsChecked="{Binding ProblemRadioButton}"/>
         </StackLayout>
-        <Label Text="Issue Title"></Label>
+        <Label Text="{xct:Translate IssueTitle}"></Label>
           <Editor Text="{Binding IssueTitle}"
                   HeightRequest="50" />
-        <Label Text="Issue details"></Label>
+        <Label Text="{xct:Translate IssueDetails}"></Label>
         <Editor Text="{Binding IssueDetails}"
-                Placeholder="Explain your issue, and add your Device name, Model, Manufacturer, Platform, Version... To know how we are using your information See privacy policy."
+                Placeholder="FeebackDescription"
               HeightRequest="280" />
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
           <Button Text=""

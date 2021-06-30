@@ -12,19 +12,19 @@
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
 
-      <Entry Placeholder="Name"
+      <Entry Placeholder="{xct:Translate Name}"
              Text="{Binding Influencer.Name}"></Entry>
-      <Entry Placeholder="Contact"
+      <Entry Placeholder="{xct:Translate Contact}"
              Text="{Binding Influencer.Contact}" Keyboard="Telephone"></Entry>
-      <Entry Placeholder="Position"
+      <Entry Placeholder="{xct:Translate Position}"
              Text="{Binding Influencer.Position}">
       </Entry>
       <StackLayout Orientation="Horizontal" Spacing="10">
         <CheckBox IsChecked="{Binding Influencer.DoesHeProvidingSupport}"></CheckBox>
-        <Label Text="Does he providing support?"></Label>
+        <Label Text="{xct:Translate DoesHeProvidingSupport}"></Label>
       </StackLayout>
 
-      <Button Text="Save"
+      <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"

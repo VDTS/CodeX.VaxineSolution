@@ -11,26 +11,26 @@
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
-      <Entry Placeholder="Masjeed Name"
+      <Entry Placeholder="{xct:Translate MasjeedName}"
              Text="{Binding Masjeed.MasjeedName}"></Entry>
-      <Entry Placeholder="Key Influencer"
+      <Entry Placeholder="{xct:Translate KeyInfluencer}"
              Text="{Binding Masjeed.KeyInfluencer}"></Entry>
 
       <StackLayout Orientation="Horizontal" Spacing="10" Padding="0, 10, 0, 0">
         <CheckBox IsChecked="{Binding Masjeed.DoesImamSupportsVaccine}"></CheckBox>
-        <Label Text="Does Imam Supports Vaccine?"></Label>
+        <Label Text="{xct:Translate DoesImamSupportsVaccine}"></Label>
       </StackLayout>
 
       <StackLayout Orientation="Horizontal" Spacing="10">
         <CheckBox IsChecked="{Binding Masjeed.DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
-        <Label Text="Do You Have Permission For Ads In Masjeed?"></Label>
+        <Label Text="{xct:Translate DoYouHavePermissionForAdsInMasjeed}"></Label>
       </StackLayout>
       <StackLayout Orientation="Horizontal">
         <Entry Placeholder="Latitude"
                IsEnabled="False"
                WidthRequest="140"
                Text="{Binding Masjeed.Latitude}"></Entry>
-        <Entry Placeholder="Longitude"
+        <Entry Placeholder="{xct:Translate Longitude}"
                IsEnabled="False"
                WidthRequest="140"
                Text="{Binding Masjeed.Longitude}"></Entry>

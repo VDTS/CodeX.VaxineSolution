@@ -8,15 +8,15 @@
   <ContentPage.Content>
     <ScrollView Padding="40">
       <StackLayout Spacing="10">
-        <Entry Placeholder="Team No."
+        <Entry Placeholder="{xct:Translate TeamNo}"
                                    Text="{Binding Team.TeamNo}"></Entry>
-        <Entry Placeholder="Social Mobilizer Id"
+        <Entry Placeholder="{xct:Translate SocialMobilizerId}
                                    Text="{Binding Team.SocialMobilizerId}"></Entry>
-        <Entry Placeholder="CHW Name"
+        <Entry Placeholder="{xct:Translate ChwName}"
                                    Text="{Binding Team.CHWName}">
         </Entry>
 
-        <Button Text="Update Area" TranslationY="50" WidthRequest="130" HeightRequest="50" HorizontalOptions="Center"
+        <Button Text="{xct:Translate UpdateArea}" TranslationY="50" WidthRequest="130" HeightRequest="50" HorizontalOptions="Center"
                 Command="{Binding PutCommand}"
                 ></Button>
       </StackLayout>

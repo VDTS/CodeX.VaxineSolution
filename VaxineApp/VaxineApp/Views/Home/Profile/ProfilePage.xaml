@@ -33,16 +33,16 @@
                  HorizontalOptions="Center"
                  HeightRequest="30"
                  WidthRequest="200"></BoxView>
-      <Label Text="Name"></Label>
+      <Label Text="{xct:Translate Name}"></Label>
       <Label FontSize="Large" Text="{Binding Profile.FullName}"></Label>
-      <Label Text="Gender"></Label>
+      <Label Text="{xct:Translate Gender}"></Label>
       <Label FontSize="Large" Text="{Binding Profile.Gender}"></Label>
-      <Label Text="Father or Husband Name"></Label>
+      <Label Text="{xct:Translate FatherOrHusbandName}"></Label>
       <Label FontSize="Large" Text="{Binding Profile.FatherOrHusbandName}"></Label>
-      <Label Text="Age"></Label>
+      <Label Text="{xct:Translate Age}"></Label>
       <Label FontSize="Large"
                Text="{Binding Profile.Age}"></Label>
-      <Label Text="Role"></Label>
+      <Label Text="{xct:Translate Role}"></Label>
         <Label FontSize="Large"
                Text="{Binding Profile.Role}"></Label>
       </StackLayout>

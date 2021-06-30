@@ -21,7 +21,7 @@
                    Grid.Row="0">
         <Label FontSize="40"
                TextColor="#2196f3"
-               Text="Settings"></Label>
+               Text="{xct:Translate Settings}"></Label>
       </StackLayout>
       <StackLayout Grid.Row="1"
                    Orientation="Horizontal"
@@ -58,7 +58,7 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="Font">
+                     Text="{xct:Translate Font}">
                 <Label.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding FontPageCommand}"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
@@ -72,7 +72,7 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="Themes">
+                     Text="{xct:Translate Themes}">
                 <Label.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding ThemesPageCommand}"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
@@ -92,7 +92,7 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="Language">
+                     Text="{xct:Translate Language}">
                 <Label.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding LanguagePageCommand}"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
@@ -111,7 +111,7 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="Notifications">
+                     Text="{xct:Translate Notifications}">
                 <Label.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding NotificationPageCommand}"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
@@ -125,7 +125,7 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="Report bug">
+                     Text="ReportBug">
                 <Label.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding FeedbackPageCommand}"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
@@ -144,7 +144,7 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="Privacy Policy">
+                     Text="{xct:Translate PrivacyPolicy}">
                 <Label.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding PrivacyPolicyCommand}"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
@@ -158,7 +158,7 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="About us">
+                     Text="{xct:Translate AboutUs}">
                 <Label.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding GoToAboutUsPageCommand}"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
@@ -172,7 +172,7 @@
                      FontFamily="SegoeMDL2"></Label>
               <Label TextColor="Black"
                      FontSize="20"
-                     Text="App Updates">
+                     Text="{xct:Translate AppUpdates}">
                 <Label.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding AppUpdatesPageCommand}"></TapGestureRecognizer>
                 </Label.GestureRecognizers>
