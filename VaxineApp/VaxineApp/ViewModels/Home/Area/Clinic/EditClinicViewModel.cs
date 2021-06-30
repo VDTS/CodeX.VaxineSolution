@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -47,7 +48,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             var data = await DataService.Put(jsonData, $"Clinic/{Preferences.Get("TeamId", "")}/{Clinic.FId}");
             if (data == "Submit")
             {
-                await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
+                StandardMessagesDisplay.EditDisplaymessage(Clinic.ClinicName);
                 var route = $"//{nameof(ClinicPage)}";
                 await Shell.Current.GoToAsync(route);
             }

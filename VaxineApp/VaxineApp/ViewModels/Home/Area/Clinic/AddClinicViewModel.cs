@@ -3,6 +3,7 @@ using System;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -50,19 +51,19 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 string a = await DataService.Post(data, $"Clinic/{Preferences.Get("TeamId", "")}");
                 if (a == "OK")
                 {
-                    await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+                    StandardMessagesDisplay.AddDisplayMessage(Clinic.ClinicName);
 
                     var route = $"//{nameof(ClinicPage)}";
                     await Shell.Current.GoToAsync(route);
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+                    StandardMessagesDisplay.CanceledDisplayMessage();
                 }
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Empty fields", "Add data to required fields", "OK");
+                StandardMessagesDisplay.InvalidDataDisplayMessage();
             }
         }
     }
