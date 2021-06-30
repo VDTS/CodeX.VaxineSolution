@@ -13,15 +13,15 @@
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
       <Entry Text="{Binding Family.HouseNo, Mode=OneWayToSource}"
-                                 Placeholder="House No."
+                                 Placeholder="{xct:Translate HouseNo}"
                                  Keyboard="Numeric"></Entry>
       <Entry Text="{Binding Family.ParentName}"
-                                 Placeholder="Parent Name"></Entry>
+                                 Placeholder="{xct:Translate ParentName}"></Entry>
       <Entry Text="{Binding Family.PhoneNumber}"
-                                 Placeholder="Parent Number"
+                                 Placeholder="{xct:Translate ParentNumber}"
                                   Keyboard="Telephone"
              ></Entry>
-      <Button Text="Save"
+      <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"

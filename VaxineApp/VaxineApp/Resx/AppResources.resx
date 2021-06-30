@@ -117,29 +117,160 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AboutVdts" xml:space="preserve">
+    <value>About VDTs</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>/AddVaccinePage</comment>
+  </data>
+  <data name="AddChild" xml:space="preserve">
+    <value>Add Child</value>
+  </data>
+  <data name="AddFamily" xml:space="preserve">
+    <value>Add Family</value>
+  </data>
+  <data name="AddVaccine" xml:space="preserve">
+    <value>Add Vaccine</value>
+    <comment>ChildVaccinePage</comment>
+  </data>
+  <data name="Ads" xml:space="preserve">
+    <value>Ads</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="AgeInMonths" xml:space="preserve">
+    <value>Age (Months)</value>
+    <comment>/StatusPage</comment>
+  </data>
+  <data name="AppUpdates" xml:space="preserve">
+    <value>App Updates</value>
+  </data>
   <data name="Area" xml:space="preserve">
     <value>Area</value>
+  </data>
+  <data name="ChangeEmail" xml:space="preserve">
+    <value>Change Email</value>
   </data>
   <data name="ChangeLanguage" xml:space="preserve">
     <value>Change Language</value>
     <comment>LanguagePage</comment>
   </data>
+  <data name="ChildInfo" xml:space="preserve">
+    <value>Child Info</value>
+  </data>
+  <data name="ChildName" xml:space="preserve">
+    <value>Child Name</value>
+  </data>
+  <data name="ChwName" xml:space="preserve">
+    <value>CHW Name</value>
+  </data>
   <data name="Clinic" xml:space="preserve">
     <value>Clinic</value>
+  </data>
+  <data name="ClinicName" xml:space="preserve">
+    <value>Clinic Name</value>
+  </data>
+  <data name="ConfirmEmail" xml:space="preserve">
+    <value>Confirm Email</value>
+    <comment>/EditProfile</comment>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="CurrentEmail" xml:space="preserve">
+    <value>Current Email</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="CurrentVaccine" xml:space="preserve">
+    <value>Current Vaccine</value>
   </data>
   <data name="Dari" xml:space="preserve">
     <value>Dari</value>
     <comment>AddLanguage</comment>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteChild" xml:space="preserve">
+    <value>Delete Child</value>
+    <comment>/FamilyDetailsPage</comment>
+  </data>
+  <data name="DeleteCurrentVaccine" xml:space="preserve">
+    <value>Delete Current Vaccine</value>
+  </data>
+  <data name="DeleteThisFamily" xml:space="preserve">
+    <value>Delete this Family</value>
+  </data>
   <data name="Doctor" xml:space="preserve">
     <value>Doctor</value>
     <comment>/AreaPage</comment>
+  </data>
+  <data name="DoctorName" xml:space="preserve">
+    <value>Doctor Name</value>
+  </data>
+  <data name="DoesHeProvidingSupport" xml:space="preserve">
+    <value>Does he providing support?</value>
+  </data>
+  <data name="DoesImamSupportsVaccine" xml:space="preserve">
+    <value>Does Imam support vaccine?</value>
+  </data>
+  <data name="DoYouHavePermissionForAdsInMasjeed" xml:space="preserve">
+    <value>Do you have permission for ads in Masjeed?</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Area</comment>
+  </data>
+  <data name="EditChild" xml:space="preserve">
+    <value>Edit Child</value>
+  </data>
+  <data name="EditCurrentVaccine" xml:space="preserve">
+    <value>Edit Current Vaccine</value>
+  </data>
+  <data name="EditFamily" xml:space="preserve">
+    <value>Edit Family</value>
+    <comment>FamilyDetailsPage</comment>
   </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="Family" xml:space="preserve">
     <value>Family</value>
+  </data>
+  <data name="FatherOrHusbandName" xml:space="preserve">
+    <value>Father or Husband Name</value>
+  </data>
+  <data name="FeebackDescription" xml:space="preserve">
+    <value>Explain your issue, and add your Device name, Model, Manufacturer, Platform, Version... To know how we are using your information See privacy policy.</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>Fixed</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full Name</value>
+    <comment>AddChildPage</comment>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="GoOnMap" xml:space="preserve">
+    <value>Go On Map</value>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Help</value>
@@ -148,6 +279,13 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="HouseNo" xml:space="preserve">
+    <value>House No</value>
+    <comment>StatusPage</comment>
+  </data>
+  <data name="ImamSupport" xml:space="preserve">
+    <value>Imam Support</value>
+  </data>
   <data name="Influencer" xml:space="preserve">
     <value>Influencer</value>
   </data>
@@ -155,11 +293,58 @@
     <value>Insights</value>
     <comment>DownTabs</comment>
   </data>
+  <data name="IsHeProvindingSupportForSIAAndVaccination" xml:space="preserve">
+    <value>Is he provinding support for SIA and vaccination</value>
+  </data>
+  <data name="IssueDetails" xml:space="preserve">
+    <value>Issue Details</value>
+  </data>
+  <data name="IssueTitle" xml:space="preserve">
+    <value>Issue Title</value>
+  </data>
+  <data name="KeyInfluencer" xml:space="preserve">
+    <value>Key Influencer</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
   <data name="Logout" xml:space="preserve">
     <value>Logout</value>
   </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Longtitude</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="MaleVsFemale" xml:space="preserve">
+    <value>Male VS Female</value>
+    <comment>/InsightsPage</comment>
+  </data>
   <data name="Masjeed" xml:space="preserve">
     <value>Masjeed</value>
+  </data>
+  <data name="MasjeedName" xml:space="preserve">
+    <value>Masjeed Name</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>EditProfile</comment>
+  </data>
+  <data name="NewEmail" xml:space="preserve">
+    <value>New Email</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NoNewUpdate" xml:space="preserve">
+    <value>No New Update</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
   </data>
   <data name="On" xml:space="preserve">
     <value>On</value>
@@ -167,8 +352,35 @@
   <data name="Online" xml:space="preserve">
     <value>Online</value>
   </data>
+  <data name="OurTeam" xml:space="preserve">
+    <value>Our Team</value>
+  </data>
+  <data name="Outreach" xml:space="preserve">
+    <value>Outreach</value>
+  </data>
+  <data name="ParentName" xml:space="preserve">
+    <value>Parent Name</value>
+    <comment>AddFamilyPage</comment>
+  </data>
+  <data name="ParentNumber" xml:space="preserve">
+    <value>Parent Number</value>
+    <comment>/AddFamilyPage</comment>
+  </data>
   <data name="Pashto" xml:space="preserve">
     <value>Pashto</value>
+  </data>
+  <data name="PhoneNo" xml:space="preserve">
+    <value>Phone Number</value>
+    <comment>/FamilyListPage</comment>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="Problem" xml:space="preserve">
+    <value>Problem</value>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Profile</value>
@@ -178,12 +390,111 @@
     <value>RemoveAccountFromDevice</value>
     <comment>/ShellFlyoutItem</comment>
   </data>
+  <data name="ReportBug" xml:space="preserve">
+    <value>Report Bug</value>
+  </data>
+  <data name="RiNumber" xml:space="preserve">
+    <value>RI Number</value>
+    <comment>/AddChildPage</comment>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+    <comment>/ProfilePage</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveAsPdf" xml:space="preserve">
+    <value>Save as PDF</value>
+  </data>
   <data name="School" xml:space="preserve">
     <value>School</value>
     <comment>AreaPage</comment>
   </data>
+  <data name="SchoolName" xml:space="preserve">
+    <value>School Name</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchFamily" xml:space="preserve">
+    <value>Search Family</value>
+    <comment>FamilyListPage</comment>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SocialMobilizerId" xml:space="preserve">
+    <value>Social Mobilizer Id</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Suggestion" xml:space="preserve">
+    <value>Suggestion</value>
+  </data>
   <data name="System" xml:space="preserve">
     <value>System</value>
     <comment>/LanguagePage</comment>
+  </data>
+  <data name="TeamDescription" xml:space="preserve">
+    <value>VDTS team has experties in healthcare, public health, immunization, communications and digital technology.</value>
+  </data>
+  <data name="TeamNo" xml:space="preserve">
+    <value>Team No</value>
+  </data>
+  <data name="Themes" xml:space="preserve">
+    <value>Themes</value>
+  </data>
+  <data name="TotalChilds" xml:space="preserve">
+    <value>Total Childs</value>
+  </data>
+  <data name="TotalClinics" xml:space="preserve">
+    <value>Total Clinics</value>
+  </data>
+  <data name="TotalDoctors" xml:space="preserve">
+    <value>Total Doctors</value>
+    <comment>/Area</comment>
+  </data>
+  <data name="TotalHouseholds" xml:space="preserve">
+    <value>Total Households</value>
+  </data>
+  <data name="TotalInfluencers" xml:space="preserve">
+    <value>Total Influencers</value>
+  </data>
+  <data name="TotalMasjeeds" xml:space="preserve">
+    <value>Total Masjeeds</value>
+  </data>
+  <data name="TotalSchools" xml:space="preserve">
+    <value>Total School</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+    <comment>/EditVaccinePage</comment>
+  </data>
+  <data name="UpdateArea" xml:space="preserve">
+    <value>Update Area</value>
+  </data>
+  <data name="VaccineMark" xml:space="preserve">
+    <value>VaccineMark</value>
+  </data>
+  <data name="VaccinePeriod" xml:space="preserve">
+    <value>Vaccine Period</value>
+    <comment>/ChildVaccinePage</comment>
+  </data>
+  <data name="VdtsDescription" xml:space="preserve">
+    <value>VDTS is a digital immunization software that helps in distributing and tracking vaccinations with a mobile app and web portal. It will help the field vaccinators to register children for tracking their vaccinations. The team offers digital solutions.</value>
+  </data>
+  <data name="VersionName" xml:space="preserve">
+    <value>Version Name</value>
+  </data>
+  <data name="WhatNew" xml:space="preserve">
+    <value>What is New?</value>
   </data>
 </root>

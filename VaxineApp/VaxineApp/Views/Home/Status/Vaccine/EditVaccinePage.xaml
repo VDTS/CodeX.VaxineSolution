@@ -32,7 +32,7 @@
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
-      <Button Text="Update"
+      <Button Text="{xct:Translate Update}"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"

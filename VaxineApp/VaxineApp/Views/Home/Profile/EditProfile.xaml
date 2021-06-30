@@ -41,24 +41,24 @@
       </AbsoluteLayout>
       <StackLayout Grid.Row="1"
                    Padding="40">
-        <Label Text="Profile"
+        <Label Text="{xct:Translate Profile}"
                FontSize="Large"></Label>
         <Entry Text="{Binding Profile.FullName}"
-               Placeholder="Name"></Entry>
-        <Picker Title="Gender"
+               Placeholder="{xct:Translate Name}"></Entry>
+        <Picker Title="{xct:Translate Gender}"
                 SelectedItem="{Binding Profile.Gender}">
           <Picker.ItemsSource>
             <x:Array Type="{x:Type x:String}">
-              <x:String>Male</x:String>
-              <x:String>Female</x:String>
+              <x:String>{xct:Translate Male}</x:String>
+              <x:String>{xct:Translate Female}</x:String>
             </x:Array>
           </Picker.ItemsSource>
         </Picker>
         <Entry Text="{Binding Profile.FatherOrHusbandName}"
-               Placeholder="Father or Husband Name"></Entry>
+               Placeholder="{xct:Translate FatherOrHusbandName}"></Entry>
         <Entry Text="{Binding Profile.Age}"
-               Placeholder="Age"></Entry>
-        <Button Text="Save"
+               Placeholder="{xct:Translate Age}"></Entry>
+        <Button Text="{xct:Translate Save}"
                 TranslationY="20"
                 TranslationX="95"
                 WidthRequest="80"
@@ -69,18 +69,18 @@
       </StackLayout>
       <StackLayout Grid.Row="2"
                    Padding="40">
-        <Label Text="Security"
+        <Label Text="{xct:Translate Security}"
                FontSize="Large"></Label>
         <Entry IsPassword="True"
-               Placeholder="Current Password"
+               Placeholder="{xct:Translate CurrentPassword}"
                Text="{Binding CurrentPassword}"></Entry>
         <Entry IsPassword="True"
-               Placeholder="New Password"
+               Placeholder="{xct:Translate NewPassword}"
                Text="{Binding NewPassword}"></Entry>
         <Entry IsPassword="True"
-               Placeholder="Confirm Password"
+               Placeholder="{xct:Translate ConfirmPassword}"
                Text="{Binding ConfirmPassword}"></Entry>
-        <Button Text="Save"
+        <Button Text="{xct:Translate Save}"
                 TranslationY="20"
                 TranslationX="95"
                 WidthRequest="80"
@@ -91,15 +91,15 @@
       </StackLayout>
       <StackLayout Grid.Row="3"
                    Padding="40">
-        <Label Text="Change Email"
+        <Label Text="{xct:Translate ChangeEmail}"
                FontSize="Large"></Label>
-        <Entry Placeholder="Current Email"
+        <Entry Placeholder="{xct:Translate CurrentEmail}"
                Text="{Binding CurrentEmail}"></Entry>
-        <Entry Placeholder="New Email"
+        <Entry Placeholder="{xct:Translate NewEmail}"
                Text="{Binding NewEmail}"></Entry>
-        <Entry Placeholder="Confirm Email"
+        <Entry Placeholder="{xct:Translate ConfirmEmail}"
                Text="{Binding ConfirmEmail}"></Entry>
-        <Button Text="Save"
+        <Button Text="{xct:Translate Save}"
                 TranslationY="20"
                 TranslationX="95"
                 WidthRequest="80"

@@ -12,14 +12,14 @@
   <ContentPage.Content>
     <StackLayout Padding="40" Spacing="10">
 
-      <Entry Placeholder="Name"
+      <Entry Placeholder="{xct:Translate Name}"
              Text="{Binding Doctor.Name}"></Entry>
       <StackLayout Orientation="Horizontal">
         <CheckBox
                 IsChecked="{Binding Doctor.IsHeProvindingSupportForSIAAndVaccination, Mode=TwoWay}" />
-        <Label  Text="Is he provinding support forSIA and vaccination"></Label>
+        <Label  Text="{xct:Translate IsHeProvindingSupportForSIAAndVaccination}"></Label>
         </StackLayout>
-      <Button Text="Save"
+      <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"
               HeightRequest="50"

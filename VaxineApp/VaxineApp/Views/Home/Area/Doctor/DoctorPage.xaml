@@ -6,27 +6,27 @@
              x:Class="VaxineApp.Views.Home.Area.Doctor.DoctorPage"
              Title="Doctor">
   <Shell.SearchHandler>
-    <SearchHandler Placeholder="Search" />
+    <SearchHandler Placeholder="{xct:Translate Search}" />
   </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:DoctorViewModel></ViewModel:DoctorViewModel>
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
-                 Text="Add"
+                 Text="{xct:Translate Add}"
                  Priority="3"
                  Command="{Binding GoToPostPageCommand}" />
     <ToolbarItem Order="Secondary"
-                 Text="Edit"
+                 Text="{xct:Translate Edit}"
                  Command="{Binding GoToPutPageCommand}"
                  Priority="2" />
     <ToolbarItem Order="Secondary"
-                 Text="Delete"
+                 Text="{xct:Translate Delete}"
                  Command="{Binding DeleteCommand}"
                  Priority="2" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
-                 Text="Save as PDF"
+                 Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
   </ContentPage.ToolbarItems>
@@ -48,7 +48,7 @@
                    Text="Support"></Label>
             <Label Grid.Column="1"
                   
-                   Text="Doctor Name"></Label>
+                   Text="{xct:Translate DoctorName}"></Label>
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
