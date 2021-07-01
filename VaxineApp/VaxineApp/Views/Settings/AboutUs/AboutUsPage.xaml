@@ -22,11 +22,11 @@
                    Spacing="20">
         <Label Text="{xct:Translate AboutVdts}"
                FontSize="Large"></Label>
-        <Label FontSize="Default}"
-               Text="VdtsDescription"></Label>
+        <Label FontSize="Default"
+               Text="{xct:Translate VdtsDescription}"></Label>
         <Label Text="{xct:Translate OurTeam}"
                FontSize="Large"></Label>
-        <Label Text="TeamDescription"></Label>
+        <Label Text="{xct:Translate TeamDescription}"></Label>
       </StackLayout>
       <RefreshView Grid.Row="1">
         <CollectionView ItemsSource="{Binding Persons}">

@@ -10,7 +10,7 @@
       <StackLayout Spacing="10">
         <Entry Placeholder="{xct:Translate TeamNo}"
                                    Text="{Binding Team.TeamNo}"></Entry>
-        <Entry Placeholder="{xct:Translate SocialMobilizerId}
+        <Entry Placeholder="{xct:Translate SocialMobilizerId}"
                                    Text="{Binding Team.SocialMobilizerId}"></Entry>
         <Entry Placeholder="{xct:Translate ChwName}"
                                    Text="{Binding Team.CHWName}">
