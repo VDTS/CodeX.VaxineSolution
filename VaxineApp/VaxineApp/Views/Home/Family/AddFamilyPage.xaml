@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Behaviors="clr-namespace:VaxineApp.Behaviors"
              x:Class="VaxineApp.Views.Home.Family.AddFamilyPage"
              Shell.TabBarIsVisible="False"
              Shell.PresentationMode="Modal"
@@ -11,16 +12,20 @@
     <ViewModel:AddFamilyViewModel></ViewModel:AddFamilyViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
-    <StackLayout Padding="40" Spacing="10">
+    <StackLayout Padding="40"
+                 Spacing="10">
       <Entry Text="{Binding Family.HouseNo, Mode=OneWayToSource}"
-                                 Placeholder="{xct:Translate HouseNo}"
-                                 Keyboard="Numeric"></Entry>
+             Placeholder="{xct:Translate HouseNo}"
+             Keyboard="Numeric"></Entry>
       <Entry Text="{Binding Family.ParentName}"
-                                 Placeholder="{xct:Translate ParentName}"></Entry>
+             Placeholder="{xct:Translate ParentName}"></Entry>
       <Entry Text="{Binding Family.PhoneNumber}"
-                                 Placeholder="{xct:Translate ParentNumber}"
-                                  Keyboard="Telephone"
-             ></Entry>
+             Placeholder="{xct:Translate ParentNumber}"
+             Keyboard="Telephone">
+        <Entry.Behaviors>
+          <Behaviors:FamilyPhoneNumberValidation></Behaviors:FamilyPhoneNumberValidation>
+        </Entry.Behaviors>
+      </Entry>
       <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"
