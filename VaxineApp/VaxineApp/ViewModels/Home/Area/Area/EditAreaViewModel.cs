@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Area;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -35,13 +36,13 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             var data = await DataService.Put(jsonData, $"Team/{Preferences.Get("ClusterId", "")}/{Team.FId}");
             if (data == "Submit")
             {
-                await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
+                StandardMessagesDisplay.EditDisplaymessage(Team.CHWName);
                 var route = $"//{nameof(AreaPage)}";
                 await Shell.Current.GoToAsync(route);
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+                StandardMessagesDisplay.CanceledDisplayMessage();
             }
         }
     }
