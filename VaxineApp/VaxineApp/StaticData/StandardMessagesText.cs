@@ -72,6 +72,9 @@ namespace VaxineApp.StaticData
             return $"{input1}'s Family has {input2} childs, delete them before to proceed.";
         }
 
+        public static string InvalidPhoneNumberTitle { get; set; } = "Invalid Phone number";
+        public static string InvalidPhoneNumberBody { get; set; } = "Number must start with +93, 0093 or 0.";
+
         // Account Management
         public static string EmailChangedTitle { get; set; } = "Email Updated";
         public static string EmailChangedBody(string input)
@@ -96,5 +99,6 @@ namespace VaxineApp.StaticData
 
         public static string PasswordChangedTitle { get; set; } = "Succeed";
         public static string PasswordChangedBody { get; set; } = "Password changed";
+
     }
 }

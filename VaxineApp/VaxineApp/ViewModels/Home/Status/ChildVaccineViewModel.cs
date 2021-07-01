@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Status;
 using VaxineApp.Views.Home.Status.Vaccine;
 using Xamarin.Forms;
@@ -118,7 +119,7 @@ namespace VaxineApp.ViewModels.Home.Status
         {
             if (CurrentVaccine.FId != null)
             {
-                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete vaccine: {CurrentVaccine.VaccineStatus}?", "Yes", "No");
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(CurrentVaccine.VaccineStatus);
                 if (isDeleteAccepted)
                 {
                     var data = await DataService.Delete($"Vaccine/{Child.Id}/{CurrentVaccine.FId}");
@@ -129,7 +130,7 @@ namespace VaxineApp.ViewModels.Home.Status
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
@@ -140,7 +141,7 @@ namespace VaxineApp.ViewModels.Home.Status
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No vaccine available", "Vaccine list is empty, can't delete anything", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
@@ -167,7 +168,7 @@ namespace VaxineApp.ViewModels.Home.Status
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
@@ -198,7 +199,7 @@ namespace VaxineApp.ViewModels.Home.Status
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No vaccine", "Add vaccine first", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

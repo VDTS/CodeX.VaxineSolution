@@ -86,7 +86,7 @@ namespace VaxineApp.ViewModels.Home.Family
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("wr", "wr", "OK");
+                    StandardMessagesDisplay.InvalidPhoneNumber();
                 }
             }
             else
