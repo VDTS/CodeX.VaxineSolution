@@ -61,11 +61,110 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        internal static string AboutUs {
+            get {
+                return ResourceManager.GetString("AboutUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About VDTs.
+        /// </summary>
+        internal static string AboutVdts {
+            get {
+                return ResourceManager.GetString("AboutVdts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        internal static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Child.
+        /// </summary>
+        internal static string AddChild {
+            get {
+                return ResourceManager.GetString("AddChild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Family.
+        /// </summary>
+        internal static string AddFamily {
+            get {
+                return ResourceManager.GetString("AddFamily", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Vaccine.
+        /// </summary>
+        internal static string AddVaccine {
+            get {
+                return ResourceManager.GetString("AddVaccine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ads.
+        /// </summary>
+        internal static string Ads {
+            get {
+                return ResourceManager.GetString("Ads", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age.
+        /// </summary>
+        internal static string Age {
+            get {
+                return ResourceManager.GetString("Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age (Months).
+        /// </summary>
+        internal static string AgeInMonths {
+            get {
+                return ResourceManager.GetString("AgeInMonths", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to App Updates.
+        /// </summary>
+        internal static string AppUpdates {
+            get {
+                return ResourceManager.GetString("AppUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Area.
         /// </summary>
         internal static string Area {
             get {
                 return ResourceManager.GetString("Area", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Email.
+        /// </summary>
+        internal static string ChangeEmail {
+            get {
+                return ResourceManager.GetString("ChangeEmail", resourceCulture);
             }
         }
         
@@ -79,11 +178,101 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Child Info.
+        /// </summary>
+        internal static string ChildInfo {
+            get {
+                return ResourceManager.GetString("ChildInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Child Name.
+        /// </summary>
+        internal static string ChildName {
+            get {
+                return ResourceManager.GetString("ChildName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CHW Name.
+        /// </summary>
+        internal static string ChwName {
+            get {
+                return ResourceManager.GetString("ChwName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clinic.
         /// </summary>
         internal static string Clinic {
             get {
                 return ResourceManager.GetString("Clinic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clinic Name.
+        /// </summary>
+        internal static string ClinicName {
+            get {
+                return ResourceManager.GetString("ClinicName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Email.
+        /// </summary>
+        internal static string ConfirmEmail {
+            get {
+                return ResourceManager.GetString("ConfirmEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        internal static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact.
+        /// </summary>
+        internal static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Email.
+        /// </summary>
+        internal static string CurrentEmail {
+            get {
+                return ResourceManager.GetString("CurrentEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Password.
+        /// </summary>
+        internal static string CurrentPassword {
+            get {
+                return ResourceManager.GetString("CurrentPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Vaccine.
+        /// </summary>
+        internal static string CurrentVaccine {
+            get {
+                return ResourceManager.GetString("CurrentVaccine", resourceCulture);
             }
         }
         
@@ -97,11 +286,119 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        internal static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Child.
+        /// </summary>
+        internal static string DeleteChild {
+            get {
+                return ResourceManager.GetString("DeleteChild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Current Vaccine.
+        /// </summary>
+        internal static string DeleteCurrentVaccine {
+            get {
+                return ResourceManager.GetString("DeleteCurrentVaccine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete this Family.
+        /// </summary>
+        internal static string DeleteThisFamily {
+            get {
+                return ResourceManager.GetString("DeleteThisFamily", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Doctor.
         /// </summary>
         internal static string Doctor {
             get {
                 return ResourceManager.GetString("Doctor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doctor Name.
+        /// </summary>
+        internal static string DoctorName {
+            get {
+                return ResourceManager.GetString("DoctorName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does he providing support?.
+        /// </summary>
+        internal static string DoesHeProvidingSupport {
+            get {
+                return ResourceManager.GetString("DoesHeProvidingSupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does Imam support vaccine?.
+        /// </summary>
+        internal static string DoesImamSupportsVaccine {
+            get {
+                return ResourceManager.GetString("DoesImamSupportsVaccine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you have permission for ads in Masjeed?.
+        /// </summary>
+        internal static string DoYouHavePermissionForAdsInMasjeed {
+            get {
+                return ResourceManager.GetString("DoYouHavePermissionForAdsInMasjeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        internal static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Child.
+        /// </summary>
+        internal static string EditChild {
+            get {
+                return ResourceManager.GetString("EditChild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Current Vaccine.
+        /// </summary>
+        internal static string EditCurrentVaccine {
+            get {
+                return ResourceManager.GetString("EditCurrentVaccine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Family.
+        /// </summary>
+        internal static string EditFamily {
+            get {
+                return ResourceManager.GetString("EditFamily", resourceCulture);
             }
         }
         
@@ -124,6 +421,78 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Father or Husband Name.
+        /// </summary>
+        internal static string FatherOrHusbandName {
+            get {
+                return ResourceManager.GetString("FatherOrHusbandName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explain your issue, and add your Device name, Model, Manufacturer, Platform, Version... To know how we are using your information See privacy policy..
+        /// </summary>
+        internal static string FeedbackDescription {
+            get {
+                return ResourceManager.GetString("FeedbackDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female.
+        /// </summary>
+        internal static string Female {
+            get {
+                return ResourceManager.GetString("Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fixed.
+        /// </summary>
+        internal static string Fixed {
+            get {
+                return ResourceManager.GetString("Fixed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Font.
+        /// </summary>
+        internal static string Font {
+            get {
+                return ResourceManager.GetString("Font", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Name.
+        /// </summary>
+        internal static string FullName {
+            get {
+                return ResourceManager.GetString("FullName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gender.
+        /// </summary>
+        internal static string Gender {
+            get {
+                return ResourceManager.GetString("Gender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go On Map.
+        /// </summary>
+        internal static string GoOnMap {
+            get {
+                return ResourceManager.GetString("GoOnMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
         internal static string Help {
@@ -138,6 +507,24 @@ namespace VaxineApp.Resx {
         internal static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to House No.
+        /// </summary>
+        internal static string HouseNo {
+            get {
+                return ResourceManager.GetString("HouseNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Imam Support.
+        /// </summary>
+        internal static string ImamSupport {
+            get {
+                return ResourceManager.GetString("ImamSupport", resourceCulture);
             }
         }
         
@@ -160,6 +547,60 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is he provinding support for SIA and vaccination.
+        /// </summary>
+        internal static string IsHeProvindingSupportForSIAAndVaccination {
+            get {
+                return ResourceManager.GetString("IsHeProvindingSupportForSIAAndVaccination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Issue Details.
+        /// </summary>
+        internal static string IssueDetails {
+            get {
+                return ResourceManager.GetString("IssueDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Issue Title.
+        /// </summary>
+        internal static string IssueTitle {
+            get {
+                return ResourceManager.GetString("IssueTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key Influencer.
+        /// </summary>
+        internal static string KeyInfluencer {
+            get {
+                return ResourceManager.GetString("KeyInfluencer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Latitude.
+        /// </summary>
+        internal static string Latitude {
+            get {
+                return ResourceManager.GetString("Latitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Logout.
         /// </summary>
         internal static string Logout {
@@ -169,11 +610,92 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Longtitude.
+        /// </summary>
+        internal static string Longitude {
+            get {
+                return ResourceManager.GetString("Longitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male.
+        /// </summary>
+        internal static string Male {
+            get {
+                return ResourceManager.GetString("Male", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male VS Female.
+        /// </summary>
+        internal static string MaleVsFemale {
+            get {
+                return ResourceManager.GetString("MaleVsFemale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Masjeed.
         /// </summary>
         internal static string Masjeed {
             get {
                 return ResourceManager.GetString("Masjeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Masjeed Name.
+        /// </summary>
+        internal static string MasjeedName {
+            get {
+                return ResourceManager.GetString("MasjeedName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Email.
+        /// </summary>
+        internal static string NewEmail {
+            get {
+                return ResourceManager.GetString("NewEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Password.
+        /// </summary>
+        internal static string NewPassword {
+            get {
+                return ResourceManager.GetString("NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No New Update.
+        /// </summary>
+        internal static string NoNewUpdate {
+            get {
+                return ResourceManager.GetString("NoNewUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notifications.
+        /// </summary>
+        internal static string Notifications {
+            get {
+                return ResourceManager.GetString("Notifications", resourceCulture);
             }
         }
         
@@ -196,11 +718,83 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Our Team.
+        /// </summary>
+        internal static string OurTeam {
+            get {
+                return ResourceManager.GetString("OurTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outreach.
+        /// </summary>
+        internal static string Outreach {
+            get {
+                return ResourceManager.GetString("Outreach", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parent Name.
+        /// </summary>
+        internal static string ParentName {
+            get {
+                return ResourceManager.GetString("ParentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parent Number.
+        /// </summary>
+        internal static string ParentNumber {
+            get {
+                return ResourceManager.GetString("ParentNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pashto.
         /// </summary>
         internal static string Pashto {
             get {
                 return ResourceManager.GetString("Pashto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number.
+        /// </summary>
+        internal static string PhoneNo {
+            get {
+                return ResourceManager.GetString("PhoneNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        internal static string Position {
+            get {
+                return ResourceManager.GetString("Position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Policy.
+        /// </summary>
+        internal static string PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Problem.
+        /// </summary>
+        internal static string Problem {
+            get {
+                return ResourceManager.GetString("Problem", resourceCulture);
             }
         }
         
@@ -223,6 +817,51 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Report Bug.
+        /// </summary>
+        internal static string ReportBug {
+            get {
+                return ResourceManager.GetString("ReportBug", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RI Number.
+        /// </summary>
+        internal static string RiNumber {
+            get {
+                return ResourceManager.GetString("RiNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Role.
+        /// </summary>
+        internal static string Role {
+            get {
+                return ResourceManager.GetString("Role", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save as PDF.
+        /// </summary>
+        internal static string SaveAsPdf {
+            get {
+                return ResourceManager.GetString("SaveAsPdf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to School.
         /// </summary>
         internal static string School {
@@ -232,11 +871,245 @@ namespace VaxineApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to School Name.
+        /// </summary>
+        internal static string SchoolName {
+            get {
+                return ResourceManager.GetString("SchoolName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search Family.
+        /// </summary>
+        internal static string SearchFamily {
+            get {
+                return ResourceManager.GetString("SearchFamily", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Security.
+        /// </summary>
+        internal static string Security {
+            get {
+                return ResourceManager.GetString("Security", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Category.
+        /// </summary>
+        internal static string SelectCategory {
+            get {
+                return ResourceManager.GetString("SelectCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Social Mobilizer Id.
+        /// </summary>
+        internal static string SocialMobilizerId {
+            get {
+                return ResourceManager.GetString("SocialMobilizerId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Suggestion.
+        /// </summary>
+        internal static string Suggestion {
+            get {
+                return ResourceManager.GetString("Suggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to System.
         /// </summary>
         internal static string System {
             get {
                 return ResourceManager.GetString("System", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VDTS team has experties in healthcare, public health, immunization, communications and digital technology..
+        /// </summary>
+        internal static string TeamDescription {
+            get {
+                return ResourceManager.GetString("TeamDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Team No.
+        /// </summary>
+        internal static string TeamNo {
+            get {
+                return ResourceManager.GetString("TeamNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Themes.
+        /// </summary>
+        internal static string Themes {
+            get {
+                return ResourceManager.GetString("Themes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Childs.
+        /// </summary>
+        internal static string TotalChilds {
+            get {
+                return ResourceManager.GetString("TotalChilds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Clinics.
+        /// </summary>
+        internal static string TotalClinics {
+            get {
+                return ResourceManager.GetString("TotalClinics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Doctors.
+        /// </summary>
+        internal static string TotalDoctors {
+            get {
+                return ResourceManager.GetString("TotalDoctors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Households.
+        /// </summary>
+        internal static string TotalHouseholds {
+            get {
+                return ResourceManager.GetString("TotalHouseholds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Influencers.
+        /// </summary>
+        internal static string TotalInfluencers {
+            get {
+                return ResourceManager.GetString("TotalInfluencers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Masjeeds.
+        /// </summary>
+        internal static string TotalMasjeeds {
+            get {
+                return ResourceManager.GetString("TotalMasjeeds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total School.
+        /// </summary>
+        internal static string TotalSchools {
+            get {
+                return ResourceManager.GetString("TotalSchools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        internal static string Update {
+            get {
+                return ResourceManager.GetString("Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Area.
+        /// </summary>
+        internal static string UpdateArea {
+            get {
+                return ResourceManager.GetString("UpdateArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VaccineMark.
+        /// </summary>
+        internal static string VaccineMark {
+            get {
+                return ResourceManager.GetString("VaccineMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vaccine Period.
+        /// </summary>
+        internal static string VaccinePeriod {
+            get {
+                return ResourceManager.GetString("VaccinePeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VDTS is a digital immunization software that helps in distributing and tracking vaccinations with a mobile app and web portal. It will help the field vaccinators to register children for tracking their vaccinations. The team offers digital solutions..
+        /// </summary>
+        internal static string VdtsDescription {
+            get {
+                return ResourceManager.GetString("VdtsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version Name.
+        /// </summary>
+        internal static string VersionName {
+            get {
+                return ResourceManager.GetString("VersionName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is New?.
+        /// </summary>
+        internal static string WhatNew {
+            get {
+                return ResourceManager.GetString("WhatNew", resourceCulture);
             }
         }
     }
