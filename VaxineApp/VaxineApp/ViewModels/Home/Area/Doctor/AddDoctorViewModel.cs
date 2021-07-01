@@ -3,6 +3,7 @@ using System;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Doctor;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -48,11 +49,11 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             string a = await DataService.Post(data, $"Doctor/{Preferences.Get("TeamId", "")}");
             if (a == "OK")
             {
-                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+                StandardMessagesDisplay.AddDisplayMessage(Doctor.Name);
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+                StandardMessagesDisplay.CanceledDisplayMessage();
             }
             var route = $"//{nameof(DoctorPage)}";
             await Shell.Current.GoToAsync(route);

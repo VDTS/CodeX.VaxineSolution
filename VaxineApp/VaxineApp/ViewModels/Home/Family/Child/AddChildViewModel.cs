@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 
 namespace VaxineApp.ViewModels.Home.Family.Child
 {
@@ -60,11 +61,11 @@ namespace VaxineApp.ViewModels.Home.Family.Child
                 string a = await DataService.Post(data, $"Child/{Family.Id}");
                 if (a == "OK")
                 {
-                    await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+                    StandardMessagesDisplay.EditDisplaymessage(Child.FullName);
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+                    StandardMessagesDisplay.CanceledDisplayMessage();
                 }
                 var route = $"//{nameof(FamilyListPage)}";
                 await Shell.Current.GoToAsync(route);
