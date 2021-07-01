@@ -4,6 +4,7 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
+using VaxineApp.Validations;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -57,28 +58,35 @@ namespace VaxineApp.ViewModels.Home.Family
         {
             if (Family.HouseNo != 0)
             {
-                if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
+                if (PhoneNumberValidator.IsPhoneNumberValid(Family.PhoneNumber))
                 {
-                    Family.Id = Guid.NewGuid();
-                    Family.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
-
-                    var data = JsonConvert.SerializeObject(Family);
-                    string a = await DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
-                    if (a == "OK")
+                    if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
                     {
-                        StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
+                        Family.Id = Guid.NewGuid();
+                        Family.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
 
-                        var route = $"//{nameof(FamilyListPage)}";
-                        await Shell.Current.GoToAsync(route);
+                        var data = JsonConvert.SerializeObject(Family);
+                        string a = await DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
+                        if (a == "OK")
+                        {
+                            StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
+
+                            var route = $"//{nameof(FamilyListPage)}";
+                            await Shell.Current.GoToAsync(route);
+                        }
+                        else
+                        {
+                            StandardMessagesDisplay.CanceledDisplayMessage();
+                        }
                     }
                     else
                     {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
+                        StandardMessagesDisplay.FamilyDuplicateValidator(Family.HouseNo);
                     }
                 }
                 else
                 {
-                    StandardMessagesDisplay.FamilyDuplicateValidator(Family.HouseNo);
+                    await App.Current.MainPage.DisplayAlert("wr", "wr", "OK");
                 }
             }
             else
