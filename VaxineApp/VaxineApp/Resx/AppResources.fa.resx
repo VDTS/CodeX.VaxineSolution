@@ -117,4 +117,380 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>درباره ما</value>
+  </data>
+  <data name="AboutVdts" xml:space="preserve">
+    <value>VDTS درباره</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>افزودن</value>
+    <comment>/AddVaccinePage</comment>
+  </data>
+  <data name="AddChild" xml:space="preserve">
+    <value>افزودن طفل</value>
+  </data>
+  <data name="AddFamily" xml:space="preserve">
+    <value>افزودن خانواده</value>
+  </data>
+  <data name="AddVaccine" xml:space="preserve">
+    <value>افزودن واکسین</value>
+    <comment>ChildVaccinePage</comment>
+  </data>
+  <data name="Ads" xml:space="preserve">
+    <value>اعلانات</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>عمر</value>
+  </data>
+  <data name="AgeInMonths" xml:space="preserve">
+    <value>عمر (ماهانه)</value>
+    <comment>/StatusPage</comment>
+  </data>
+  <data name="AppUpdates" xml:space="preserve">
+    <value>به روزرسانی های برنامه</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>ساحه</value>
+  </data>
+  <data name="ChangeEmail" xml:space="preserve">
+    <value>تغیر ایمیل</value>
+  </data>
+  <data name="ChangeLanguage" xml:space="preserve">
+    <value>تبدیل زبان</value>
+    <comment>LanguagePage</comment>
+  </data>
+  <data name="ChildInfo" xml:space="preserve">
+    <value>معلومات طفل</value>
+  </data>
+  <data name="ChildName" xml:space="preserve">
+    <value>اسم طفل</value>
+  </data>
+  <data name="ChwName" xml:space="preserve">
+    <value>اسم کارمند صحی ساحوی</value>
+  </data>
+  <data name="Clinic" xml:space="preserve">
+    <value>کلینیک</value>
+  </data>
+  <data name="ClinicName" xml:space="preserve">
+    <value>اسم کلینیک</value>
+  </data>
+  <data name="ConfirmEmail" xml:space="preserve">
+    <value>تایید ایمیل</value>
+    <comment>/EditProfile</comment>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>تایید پاسورد</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>شماره تیلفون</value>
+  </data>
+  <data name="CurrentEmail" xml:space="preserve">
+    <value>ایمیل فعلی</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>پاسورد فعلی</value>
+  </data>
+  <data name="CurrentVaccine" xml:space="preserve">
+    <value>واکسین فعلی</value>
+  </data>
+  <data name="Dari" xml:space="preserve">
+    <value>دري</value>
+    <comment>AddLanguage</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف نمودن</value>
+  </data>
+  <data name="DeleteChild" xml:space="preserve">
+    <value>حذف معلومات طفل</value>
+    <comment>/FamilyDetailsPage</comment>
+  </data>
+  <data name="DeleteCurrentVaccine" xml:space="preserve">
+    <value>حذف واکسین فعلی</value>
+  </data>
+  <data name="DeleteThisFamily" xml:space="preserve">
+    <value>حذف خانواده</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>داکتر</value>
+    <comment>/AreaPage</comment>
+  </data>
+  <data name="DoctorName" xml:space="preserve">
+    <value>اسم داکتر</value>
+  </data>
+  <data name="DoesHeProvidingSupport" xml:space="preserve">
+    <value>آيا از واکسین حمایت میکند؟</value>
+  </data>
+  <data name="DoesImamSupportsVaccine" xml:space="preserve">
+    <value>آیا امام حمایت از واکسین میکند؟</value>
+  </data>
+  <data name="DoYouHavePermissionForAdsInMasjeed" xml:space="preserve">
+    <value>آیا شما اجازه اعلانات در مسجد را دارید؟</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>ویرایش</value>
+    <comment>Area</comment>
+  </data>
+  <data name="EditChild" xml:space="preserve">
+    <value>ویرایش معلومات طفل</value>
+  </data>
+  <data name="EditCurrentVaccine" xml:space="preserve">
+    <value>ویرایش واکسین فعلی</value>
+  </data>
+  <data name="EditFamily" xml:space="preserve">
+    <value>ویرایش خانواده</value>
+    <comment>FamilyDetailsPage</comment>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>انگلیسی</value>
+  </data>
+  <data name="Family" xml:space="preserve">
+    <value>خانواده</value>
+  </data>
+  <data name="FatherOrHusbandName" xml:space="preserve">
+    <value>اسم پدر و یا شوهر</value>
+  </data>
+  <data name="FeedbackDescription" xml:space="preserve">
+    <value>مشکل تان را واضح مشخص سازید.اسم دیوایس،مودل، کمپنی و ورژن سیستم عامل تان را بنویسید. اگر میخواهید بفهمید که ما چطور معلومات شما را استفاده مینماییم لطفا بخش پرایوسی پالیسی را بررسی نمایید</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>زن</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>ثابت داخل ساحه</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>فونت</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>اسم مکمل</value>
+    <comment>AddChildPage</comment>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>جنسیت</value>
+  </data>
+  <data name="GoOnMap" xml:space="preserve">
+    <value>تعقیب از طریق نقشه</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>کومک</value>
+    <comment>ShellFlyoutItems</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>خانه</value>
+  </data>
+  <data name="HouseNo" xml:space="preserve">
+    <value>شماره خانه</value>
+    <comment>StatusPage</comment>
+  </data>
+  <data name="ImamSupport" xml:space="preserve">
+    <value>حمایت امام</value>
+  </data>
+  <data name="Influencer" xml:space="preserve">
+    <value>تاثیر گذار</value>
+  </data>
+  <data name="Insights" xml:space="preserve">
+    <value>احصائيه</value>
+    <comment>DownTabs</comment>
+  </data>
+  <data name="IsHeProvindingSupportForSIAAndVaccination" xml:space="preserve">
+    <value>آیا حمایت از واکسین اس آی ای میکند؟  </value>
+  </data>
+  <data name="IssueDetails" xml:space="preserve">
+    <value>جزئیات موضوع</value>
+  </data>
+  <data name="IssueTitle" xml:space="preserve">
+    <value>عنوان موضوع</value>
+  </data>
+  <data name="KeyInfluencer" xml:space="preserve">
+    <value>تاثیر گذار کلیدی</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>عرض البلد</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>طول البلد</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>مرد</value>
+  </data>
+  <data name="MaleVsFemale" xml:space="preserve">
+    <value>زن VS مرد</value>
+    <comment>/InsightsPage</comment>
+  </data>
+  <data name="Masjeed" xml:space="preserve">
+    <value>مسجد شریف</value>
+  </data>
+  <data name="MasjeedName" xml:space="preserve">
+    <value>اسم مسجد</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>اسم</value>
+    <comment>EditProfile</comment>
+  </data>
+  <data name="NewEmail" xml:space="preserve">
+    <value>ایمیل جدید</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>پاسورد جدید</value>
+  </data>
+  <data name="NoNewUpdate" xml:space="preserve">
+    <value>اپدیت جدید موجود نیست</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>اطلاعیه</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>ان</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>انلاین</value>
+  </data>
+  <data name="OurTeam" xml:space="preserve">
+    <value>تیم ما</value>
+  </data>
+  <data name="Outreach" xml:space="preserve">
+    <value>بیرون از ساحه</value>
+  </data>
+  <data name="ParentName" xml:space="preserve">
+    <value>اسم والدین</value>
+    <comment>AddFamilyPage</comment>
+  </data>
+  <data name="ParentNumber" xml:space="preserve">
+    <value>شماره تماس والدین</value>
+    <comment>/AddFamilyPage</comment>
+  </data>
+  <data name="Pashto" xml:space="preserve">
+    <value>پشتو</value>
+  </data>
+  <data name="PhoneNo" xml:space="preserve">
+    <value>شماره تماس</value>
+    <comment>/FamilyListPage</comment>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>مقام</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>پرایوسی پالیسی</value>
+  </data>
+  <data name="Problem" xml:space="preserve">
+    <value>مشکل</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>پروفایل</value>
+    <comment>/DownTabs</comment>
+  </data>
+  <data name="RemoveAccountFromDevice" xml:space="preserve">
+    <value>حذف اکاونت از دیوایس</value>
+    <comment>/ShellFlyoutItems</comment>
+  </data>
+  <data name="ReportBug" xml:space="preserve">
+    <value>گزارش اشکال</value>
+  </data>
+  <data name="RiNumber" xml:space="preserve">
+    <value>آر آی نمبر</value>
+    <comment>/AddChildPage</comment>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>نقش</value>
+    <comment>/ProfilePage</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ کردن</value>
+  </data>
+  <data name="SaveAsPdf" xml:space="preserve">
+    <value>حفظ کردن  PDF به شکل</value>
+  </data>
+  <data name="School" xml:space="preserve">
+    <value>مکتب</value>
+    <comment>AreaPage</comment>
+  </data>
+  <data name="SchoolName" xml:space="preserve">
+    <value>اسم مکتب</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>جستجو</value>
+  </data>
+  <data name="SearchFamily" xml:space="preserve">
+    <value>جستجو خانواده</value>
+    <comment>FamilyListPage</comment>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>امنیت</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>انتخاب کتگوری</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>تنظيمات</value>
+  </data>
+  <data name="SocialMobilizerId" xml:space="preserve">
+    <value>ای دی نمبر بسیج اجتماعی</value>
+  </data>
+  <data name="Suggestion" xml:space="preserve">
+    <value>پیشنهاد</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>سیستم</value>
+    <comment>/LanguagePage</comment>
+  </data>
+  <data name="TeamDescription" xml:space="preserve">
+    <value>تیم ما اشخاص مسکلی در بخش صحت، معافیت، فن اوری ارتباطات و تکنالوژی دارد. که معلومات مربوطه مورد هر یک شان تحت ذیل قرار دارد</value>
+  </data>
+  <data name="TeamNo" xml:space="preserve">
+    <value>شماره تیم</value>
+  </data>
+  <data name="Themes" xml:space="preserve">
+    <value>دیمز</value>
+  </data>
+  <data name="TotalChilds" xml:space="preserve">
+    <value>جمع اطفال</value>
+  </data>
+  <data name="TotalClinics" xml:space="preserve">
+    <value>جمع کلینیک ها</value>
+  </data>
+  <data name="TotalDoctors" xml:space="preserve">
+    <value>جمع داکترها</value>
+  </data>
+  <data name="TotalHouseholds" xml:space="preserve">
+    <value>جمع خانواده ها</value>
+  </data>
+  <data name="TotalInfluencers" xml:space="preserve">
+    <value>جمع تاثیر گذار ها</value>
+  </data>
+  <data name="TotalMasjeeds" xml:space="preserve">
+    <value>جمع مساجد</value>
+  </data>
+  <data name="TotalSchools" xml:space="preserve">
+    <value>جمع مکتب ها</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>اپدیت</value>
+    <comment>/EditVaccinePage</comment>
+  </data>
+  <data name="UpdateArea" xml:space="preserve">
+    <value>اپدیت ساحه</value>
+  </data>
+  <data name="VaccineMark" xml:space="preserve">
+    <value>مارک واکسین</value>
+  </data>
+  <data name="VaccinePeriod" xml:space="preserve">
+    <value>دوره واکسین</value>
+    <comment>/ChildVaccinePage</comment>
+  </data>
+  <data name="VdtsDescription" xml:space="preserve">
+    <value>   وی دی تی اس یک دیجیتل سافتویر معافیتی هست که با موبایل اپلیکیشن و ویب در توزیع و ردیابی واکسین کومک میکند و همچنان با واکسیناتورها کومک مینماید تا در ساحه اطفال را برای ردیابی واکسین شان ثبت نماید.تیم ما راه حل دیجیتالی ارائه میدهد</value>
+  </data>
+  <data name="VersionName" xml:space="preserve">
+    <value>اسم ورژن</value>
+  </data>
+  <data name="WhatNew" xml:space="preserve">
+    <value>جدید چه هست</value>
+  </data>
 </root>
