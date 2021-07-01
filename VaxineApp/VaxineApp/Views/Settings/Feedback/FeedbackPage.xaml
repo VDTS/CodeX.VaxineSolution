@@ -24,7 +24,7 @@
                   HeightRequest="50" />
         <Label Text="{xct:Translate IssueDetails}"></Label>
         <Editor Text="{Binding IssueDetails}"
-                Placeholder="FeebackDescription"
+                Placeholder="{xct:Translate FeedbackDescription}"
               HeightRequest="280" />
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
           <Button Text=""

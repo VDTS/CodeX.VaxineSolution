@@ -250,8 +250,8 @@
   <data name="FatherOrHusbandName" xml:space="preserve">
     <value>د پلار يا خاوند نوم</value>
   </data>
-  <data name="FeebackDescription" xml:space="preserve">
-    <value>Explain your issue, and add your Device name, Model, Manufacturer, Platform, Version... To know how we are using your information See privacy policy.</value>
+  <data name="FeedbackDescription" xml:space="preserve">
+    <value>مشکل مو ښه واضح تشریح کړئ. د ډیوایس نوم، موډل، کمپنۍ، د او ایس ويرژن ورسره وليکئ. که غواړئ پوه سی چي موږ ستاسي معلومات څنګه استعمالوو، زموږ پرایویسي پاليسي وګورئ.</value>
   </data>
   <data name="Female" xml:space="preserve">
     <value>ښځینه</value>

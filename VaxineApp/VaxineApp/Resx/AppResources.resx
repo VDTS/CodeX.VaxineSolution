@@ -250,7 +250,7 @@
   <data name="FatherOrHusbandName" xml:space="preserve">
     <value>Father or Husband Name</value>
   </data>
-  <data name="FeebackDescription" xml:space="preserve">
+  <data name="FeedbackDescription" xml:space="preserve">
     <value>Explain your issue, and add your Device name, Model, Manufacturer, Platform, Version... To know how we are using your information See privacy policy.</value>
   </data>
   <data name="Female" xml:space="preserve">
