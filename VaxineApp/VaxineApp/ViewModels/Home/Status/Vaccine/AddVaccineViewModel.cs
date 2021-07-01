@@ -9,6 +9,7 @@ using VaxineApp.Views.Home.Family;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 
 namespace VaxineApp.ViewModels.Home.Status.Vaccine
 {
@@ -55,11 +56,11 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
             string a = await DataService.Post(data, $"Vaccine/{Child.Id}");
             if (a == "OK")
             {
-                await App.Current.MainPage.DisplayAlert(a, "Successfully posted", "OK");
+                StandardMessagesDisplay.AddDisplayMessage(Vaccine.VaccineStatus);
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+                StandardMessagesDisplay.CanceledDisplayMessage();
             }
             var route = $"//{nameof(StatusPage)}";
             await Shell.Current.GoToAsync(route);

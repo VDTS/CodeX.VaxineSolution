@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
@@ -118,7 +119,7 @@ namespace VaxineApp.ViewModels.Home.Status
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
@@ -147,9 +148,9 @@ namespace VaxineApp.ViewModels.Home.Status
             throw new NotImplementedException();
         }
 
-        public async void SaveAsPDF()
+        public void SaveAsPDF()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         public async void Refresh()

@@ -3,6 +3,7 @@ using System;
 using System.Windows.Input;
 using VaxineApp.Models.Metadata;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -79,9 +80,9 @@ namespace VaxineApp.ViewModels.Settings.Feedback
             AttachScreenshotOnGithubIssueCommand = new Command(AttachScreenshotOnGithubIssue);
         }
 
-        private async void AttachScreenshotOnGithubIssue(object obj)
+        private void AttachScreenshotOnGithubIssue(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         private async void SubmitIssueOnGithub()
@@ -117,12 +118,12 @@ namespace VaxineApp.ViewModels.Settings.Feedback
                 var issue = await client.Issue.Create("VDTS", "CodeX.VaxineSolution", i);
                 if(issue.State.Value.ToString() == "Open")
                 {
-                    await App.Current.MainPage.DisplayAlert("Issue", "Issue submited", "OK");
+                    StandardMessagesDisplay.CanceledDisplayMessage();
                 }
             }
             catch (Exception)
             {
-                await App.Current.MainPage.DisplayAlert("Issue not submitted", "try again!", "OK");
+                StandardMessagesDisplay.CanceledDisplayMessage();
             }
         }
     }
