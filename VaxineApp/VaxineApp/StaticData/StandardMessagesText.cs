@@ -46,5 +46,43 @@ namespace VaxineApp.StaticData
         // No item Selected
         public static string NoItemSelectedTitle { get; set; } = null;
         public static string NoItemSelectedBody { get; set; } = "Select an item, and come back to operate";
+
+        // Validators
+        public static string ChildAgeValidatorTitle { get; set; } = "Greater than 5 yr";
+        public static string ChildAgeValidatorBody(string input)
+        {
+            return $"{input} is greater than 5 years, and can't be added to vaccine process. See who are eligible for vaccine.";
+        }
+
+        public static string FamilyDuplicateValidatorTitle { get; set; } = "Already Exists";
+        public static string FamilyDuplicateValidatorBody(int input)
+        {
+            return $"{input} already exists, you can add new family by deleting old one or you can edit the old one.";
+        }
+
+        public static string ChildRecursiveDeletionNotAllowedTitle { get; set; } = "Canceled";
+        public static string ChildRecursiveDeletionNotAllowedBody(string input1, int input2)
+        {
+            return $"{input1} has {input2} vaccines on timeline, delete them before to proceed.";
+        }
+
+        public static string FamilyRecursiveDeletionNotAllowedTitle { get; set; } = "Canceled";
+        public static string FamilyRecursiveDeletionNotAllowedBody(string input1, int input2)
+        {
+            return $"{input1}'s Family has {input2} childs, delete them before to proceed.";
+        }
+
+        // Account Management
+        public static string EmailChangedTitle { get; set; } = "Email Updated";
+        public static string EmailChangedBody(string input)
+        {
+            return $"Email changed to {input}.";
+        }
+
+        public static string EmailVerificationSendTitle { get; set; } = "Email Verification Send";
+        public static string EmailVerificationSendBody(string input)
+        {
+            return $"An verification email to {input} send, confirm it.";
+        }
     }
 }

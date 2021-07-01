@@ -73,7 +73,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Older than 5 yrs", "Children older than 5 years not allowed", "OK");
+                StandardMessagesDisplay.ChildAgeValidator(Child.FullName);
             }
         }
     }

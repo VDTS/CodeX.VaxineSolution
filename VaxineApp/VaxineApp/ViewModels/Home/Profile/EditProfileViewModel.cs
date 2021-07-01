@@ -15,6 +15,7 @@ using DataAccessLib.Account;
 using VaxineApp.AccessShellDir.Views.Login;
 using System.Text.RegularExpressions;
 using VaxineApp.Models;
+using VaxineApp.StaticData;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
@@ -147,13 +148,13 @@ namespace VaxineApp.ViewModels.Home.Profile
                             var message = await Account.ChangeEmail(NewEmail, Token);
                             if (message == "OK")
                             {
-                                await App.Current.MainPage.DisplayAlert("", "Email Changed!", "OK");
+                                StandardMessagesDisplay.EmailChanged(NewEmail);
                                 await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
 
                                 string s1 = await Account.VerifyEmail(Token);
                                 if(s1 == "OK")
                                 {
-                                    await App.Current.MainPage.DisplayAlert("Email Verification send", "Go to your email, and confirm verification", "OK");
+                                    StandardMessagesDisplay.EmailVerificationSend(NewEmail);
                                 }
 
                                 // Change Email in profile
@@ -163,7 +164,7 @@ namespace VaxineApp.ViewModels.Home.Profile
                             }
                             else
                             {
-                                await App.Current.MainPage.DisplayAlert("Error!", "Try again!", "OK");
+                                StandardMessagesDisplay.CanceledDisplayMessage();
                             }
                         }
                         else

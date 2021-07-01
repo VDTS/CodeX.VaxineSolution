@@ -66,24 +66,24 @@ namespace VaxineApp.ViewModels.Home.Family
                     string a = await DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
                     if (a == "OK")
                     {
-                        await App.Current.MainPage.DisplayAlert("Data submited", "Successfully posted", "OK");
+                        StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
 
                         var route = $"//{nameof(FamilyListPage)}";
                         await Shell.Current.GoToAsync(route);
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert(a, "Try again", "OK");
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("Duplicate data", $"{Family.HouseNo} Family already exist.", "OK");
+                    StandardMessagesDisplay.FamilyDuplicateValidator(Family.HouseNo);
                 }
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Empty Field", "Add data to required fields", "OK");
+                StandardMessagesDisplay.InvalidDataDisplayMessage();
             }
         }
 
