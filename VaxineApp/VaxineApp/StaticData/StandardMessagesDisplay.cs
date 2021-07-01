@@ -39,5 +39,36 @@ namespace VaxineApp.StaticData
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.NoItemSelectedTitle, StandardMessagesText.NoItemSelectedBody, "OK");
         }
+
+
+        // Validators
+        public async static void ChildAgeValidator(string input)
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.ChildAgeValidatorTitle, StandardMessagesText.ChildAgeValidatorBody(input), "OK");
+        }
+
+        public async static void FamilyDuplicateValidator(int input)
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.FamilyDuplicateValidatorTitle, StandardMessagesText.FamilyDuplicateValidatorBody(input), "OK");
+        }
+        public async static void ChildRecursiveDeletionNotAllowed(string child, int vaccineCount)
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.ChildRecursiveDeletionNotAllowedTitle, StandardMessagesText.ChildRecursiveDeletionNotAllowedBody(child, vaccineCount), "OK");
+        }
+        public async static void FamilyRecursiveDeletionNotAllowed(string family, int childCount)
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.ChildRecursiveDeletionNotAllowedTitle, StandardMessagesText.ChildRecursiveDeletionNotAllowedBody(family, childCount), "OK");
+        }
+
+        // Account Management
+        public async static void EmailChanged(string email)
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.EmailChangedTitle, StandardMessagesText.EmailChangedBody(email), "OK");
+        }
+
+        public async static void EmailVerificationSend(string email)
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.EmailVerificationSendTitle, StandardMessagesText.EmailVerificationSendBody(email), "OK");
+        }
     }
 }

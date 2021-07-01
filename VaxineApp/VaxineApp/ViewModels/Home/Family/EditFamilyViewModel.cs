@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -46,13 +47,13 @@ namespace VaxineApp.ViewModels.Home.Family
             var data = await DataService.Put(jsonData, $"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
             if (data == "Submit")
             {
-                await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
+                StandardMessagesDisplay.EditDisplaymessage($"{Family.ParentName}'s Family ");
                 var route = $"//{nameof(FamilyListPage)}";
                 await Shell.Current.GoToAsync(route);
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+                StandardMessagesDisplay.CanceledDisplayMessage();
             }
         }
     }

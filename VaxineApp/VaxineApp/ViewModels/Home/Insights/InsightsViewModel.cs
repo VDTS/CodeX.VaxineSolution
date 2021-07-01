@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Entry = Microcharts.ChartEntry;
@@ -106,7 +107,7 @@ namespace VaxineApp.ViewModels.Home.Insights
 
         private async void SaveAsPDF(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         private async void Get()
@@ -139,7 +140,7 @@ namespace VaxineApp.ViewModels.Home.Insights
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
             FemaleVsMaleData.Add(
                     new FemaleVsMaleChildModel

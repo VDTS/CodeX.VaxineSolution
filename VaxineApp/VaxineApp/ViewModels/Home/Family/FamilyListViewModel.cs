@@ -105,7 +105,7 @@ namespace VaxineApp.ViewModels.Home.Family
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
@@ -134,9 +134,9 @@ namespace VaxineApp.ViewModels.Home.Family
             throw new NotImplementedException();
         }
 
-        public async void SaveAsPDF()
+        public void SaveAsPDF()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         public async void Refresh()

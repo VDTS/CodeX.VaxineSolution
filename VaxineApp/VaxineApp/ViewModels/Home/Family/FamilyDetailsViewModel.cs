@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Family;
 using VaxineApp.Views.Home.Family.Child;
 using Xamarin.Essentials;
@@ -104,7 +105,7 @@ namespace VaxineApp.ViewModels.Home.Family
                 var VaccineData = await DataService.Get($"Vaccine/{SelectedChild.Id}");
                 if (VaccineData == "null")
                 {
-                    var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedChild.FullName}?", "Yes", "No");
+                    var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedChild.FullName);
                     if (isDeleteAccepted)
                     {
                         var data = await DataService.Delete($"Child/{Family.Id}/{SelectedChild.FId}");
@@ -114,7 +115,7 @@ namespace VaxineApp.ViewModels.Home.Family
                         }
                         else
                         {
-                            await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                            StandardMessagesDisplay.CanceledDisplayMessage();
                         }
                     }
                     else
@@ -125,7 +126,7 @@ namespace VaxineApp.ViewModels.Home.Family
                 else
                 {
                     var num = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(VaccineData);
-                    await App.Current.MainPage.DisplayAlert("Not Deleted", $"{SelectedChild.FullName} has {num.Values.Count} vaccines on timeline, delete them before.", "OK");
+                    StandardMessagesDisplay.ChildRecursiveDeletionNotAllowed(SelectedChild.FullName, num.Values.Count);
                 }
             }
         }
@@ -161,7 +162,7 @@ namespace VaxineApp.ViewModels.Home.Family
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No Child", "Select a child", "OK");
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 
@@ -185,7 +186,7 @@ namespace VaxineApp.ViewModels.Home.Family
         {
             if (Childs.Count == 0)
             {
-                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {Family.ParentName}'s Family?", "Yes", "No");
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage($"{Family.ParentName}'s Family ");
                 if (isDeleteAccepted)
                 {
                     var data = await DataService.Delete($"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
@@ -196,7 +197,7 @@ namespace VaxineApp.ViewModels.Home.Family
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
@@ -206,7 +207,7 @@ namespace VaxineApp.ViewModels.Home.Family
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Not Deleted", $"{Family.ParentName}'s family has {Childs.Count} childs, delete them before.", "OK");
+                StandardMessagesDisplay.ChildRecursiveDeletionNotAllowed(Family.ParentName, Childs.Count);
             }
         }
 
@@ -234,7 +235,7 @@ namespace VaxineApp.ViewModels.Home.Family
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
