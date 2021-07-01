@@ -4,6 +4,16 @@ using System.Text;
 
 namespace VaxineApp.Models
 {
+    public class ClusterModel
+    {
+        public Guid Id { get; set; }
+        public string ClusterName { get; set; }
+        public string CurrentVaccinePeriodId { get; set; }
+        public ClusterModel()
+        {
+            Id = new Guid();
+        }
+    }
     public class TeamModel
     {
         public string FId { get; set; }
