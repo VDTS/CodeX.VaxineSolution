@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 
 namespace VaxineApp.ViewModels.Home.Area.Area
 {
@@ -189,13 +190,13 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No Clinic", "Select a clinic", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
-        private async void SaveAsPDF(object obj)
+        private void SaveAsPDF(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         private async void GetStat()
@@ -224,7 +225,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
 
 
@@ -290,7 +291,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

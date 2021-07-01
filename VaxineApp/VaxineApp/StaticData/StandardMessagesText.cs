@@ -38,5 +38,9 @@ namespace VaxineApp.StaticData
         // Invalid Data
         public static string InvalidDataTitle { get; set; } = "Invalid Data";
         public static string InvalidDataBody { get; set; } = "Add valid data to required Fields";
+
+        // Features under construction
+        public static string FeatureUnderConstructionTitle = "Feature not found";
+        public static string FeatureUnderConstructionBody = "This features is under implementation and will be available in future releases. Follow App updates page for more info...";
     }
 }

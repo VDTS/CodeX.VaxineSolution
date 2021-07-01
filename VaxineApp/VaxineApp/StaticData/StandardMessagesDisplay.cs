@@ -26,5 +26,9 @@ namespace VaxineApp.StaticData
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.InvalidDataTitle, StandardMessagesText.InvalidDataBody, "OK");
         }
+        public async static void FeatureUnderConstructionTitleDisplayMessage()
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.FeatureUnderConstructionTitle, StandardMessagesText.FeatureUnderConstructionBody, "OK");
+        }
     }
 }
