@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.School;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
@@ -97,14 +98,14 @@ namespace VaxineApp.ViewModels.Home.Area.School
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No school", "Select a school", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
         private async void Delete(object obj)
         {
             if (SelectedSchool.FId != null)
             {
-                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedSchool.SchoolName}?", "Yes", "No");
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedSchool.SchoolName);
                 if (isDeleteAccepted)
                 {
                     var data = await DataService.Delete($"School/{Preferences.Get("TeamId", "")}/{SelectedSchool.FId}");
@@ -114,7 +115,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
@@ -125,18 +126,18 @@ namespace VaxineApp.ViewModels.Home.Area.School
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No item selected", "Select an item to delete", "OK");
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 
         private async void GoToMap(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         private async void SaveAsPDF(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
 
@@ -163,7 +164,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

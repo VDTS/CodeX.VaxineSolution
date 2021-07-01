@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Influencer;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
@@ -97,15 +98,15 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No influencer", "Select an influencer", "OK");
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 
         public async void Delete()
         {
-            if (SelectedInfluencer.Id != null)
+            if (SelectedInfluencer.Name != null)
             {
-                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedInfluencer.FId}?", "Yes", "No");
+                var isDeleteAccepted =  await StandardMessagesDisplay.DeleteDisplayMessage(SelectedInfluencer.Name);
                 if (isDeleteAccepted)
                 {
                     var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedInfluencer.FId}");
@@ -115,7 +116,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
@@ -126,13 +127,13 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No item selected", "Select an item to delete", "OK");
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 
         private async void SaveAsPDF(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         public async void Get()
@@ -158,7 +159,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

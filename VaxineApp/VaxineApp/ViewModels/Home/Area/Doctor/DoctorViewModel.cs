@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Doctor;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
@@ -108,7 +109,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
@@ -126,7 +127,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         {
             if (SelectedDoctor.FId != null)
             {
-                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedDoctor.Name}?", "Yes", "No");
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedDoctor.Name);
                 if (isDeleteAccepted)
                 {
                     var data = await DataService.Delete($"Doctor/{Preferences.Get("TeamId", "")}/{SelectedDoctor.FId}");
@@ -136,7 +137,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
@@ -163,9 +164,9 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             }
         }
 
-        public async void SaveAsPDF()
+        public void SaveAsPDF()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         public async void Refresh()
@@ -196,7 +197,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No Doctor", "Select a doctor", "OK");
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 

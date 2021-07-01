@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Masjeed;
 using VaxineApp.Views.Shared;
 using Xamarin.CommunityToolkit.ObjectModel;
@@ -101,7 +102,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No Masjeed", "Select a Masjeed", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
@@ -110,7 +111,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
             if (SelectedMasjeed.FId != null)
             {
-                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedMasjeed.MasjeedName}?", "Yes", "No");
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedMasjeed.MasjeedName);
                 if (isDeleteAccepted)
                 {
                     var data = await DataService.Delete($"Masjeed/{Preferences.Get("TeamId", "")}/{SelectedMasjeed.FId}");
@@ -120,7 +121,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
@@ -131,13 +132,13 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No item selected", "Select an item to delete", "OK");
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 
         private async void SaveAsPDF(object obj)
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         private async void GoToMap(object obj)
@@ -171,7 +172,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No data found!", "Add some data to show here", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
