@@ -12,6 +12,7 @@ using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
+using VaxineApp.Validations;
 
 namespace VaxineApp.ViewModels.Home.Family.Child
 {
@@ -50,7 +51,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
 
         private async void Put()
         {
-            if (DateTime.UtcNow.Year - Child.DOB.Year <= 5)
+            if (ChildValidator.IsChildUnder5(Child.DOB))
             {
                 Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
                 Child.Id = Guid.NewGuid();
