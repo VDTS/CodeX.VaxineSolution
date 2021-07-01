@@ -70,5 +70,22 @@ namespace VaxineApp.StaticData
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.EmailVerificationSendTitle, StandardMessagesText.EmailVerificationSendBody(email), "OK");
         }
+        public async static void PasswordValidator()
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.PasswordValidatorTitle, StandardMessagesText.PasswordValidatorBody, "OK");
+        }
+
+        public async static void EmailValidator()
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.EmailValidatorTitle, StandardMessagesText.EmailValidatorBody, "OK");
+        }
+        public async static void EmailMatchValidator()
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.EmailMatchValidatorTitle, StandardMessagesText.EmailMatchValidatorBody, "OK");
+        }
+        public async static void PasswordChagned()
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.PasswordChangedTitle, StandardMessagesText.PasswordChangedBody, "OK");
+        }
     }
 }

@@ -84,5 +84,17 @@ namespace VaxineApp.StaticData
         {
             return $"An verification email to {input} send, confirm it.";
         }
+
+        public static string PasswordValidatorTitle { get; set; } = "Password Error";
+        public static string PasswordValidatorBody { get; set; } = "Password violates password rules";
+
+        public static string EmailValidatorTitle { get; set; } = "Email error";
+        public static string EmailValidatorBody { get; set; } = "Email is baddly formatted";
+
+        public static string EmailMatchValidatorTitle { get; set; } = null;
+        public static string EmailMatchValidatorBody { get; set; } = "Emails are not the same";
+
+        public static string PasswordChangedTitle { get; set; } = "Succeed";
+        public static string PasswordChangedBody { get; set; } = "Password changed";
     }
 }

@@ -169,22 +169,22 @@ namespace VaxineApp.ViewModels.Home.Profile
                         }
                         else
                         {
-                            await App.Current.MainPage.DisplayAlert("Password Error", "Make sure you typed password correctly!", "OK");
+                            StandardMessagesDisplay.PasswordValidator();
                         }
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("New Email Error", "Email is baddly formatted", "OK");
+                        StandardMessagesDisplay.EmailValidator();
                     }
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("", "Emails are not the same", "OK");
+                    StandardMessagesDisplay.EmailMatchValidator();
                 }
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Fill in required fields", "Current, new and Confirm Emails are required", "OK");
+                StandardMessagesDisplay.CanceledDisplayMessage();
             }
         }
 
@@ -202,14 +202,14 @@ namespace VaxineApp.ViewModels.Home.Profile
                             var message = await Account.ChangeAccountPassword(Token, NewPassword);
                             if (message == "OK")
                             {
-                                await App.Current.MainPage.DisplayAlert("", "Password Changed!", "OK");
+                                StandardMessagesDisplay.PasswordChagned();
                                 await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
                                 Application.Current.MainPage = new AccessShell();
                                 await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
                             }
                             else
                             {
-                                await App.Current.MainPage.DisplayAlert("Error!", "Try again!", "OK");
+                                StandardMessagesDisplay.CanceledDisplayMessage();
                             }
                         }
                         else
