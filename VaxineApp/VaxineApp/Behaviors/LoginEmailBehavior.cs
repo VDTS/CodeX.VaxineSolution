@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using VaxineApp.Validations;
 using Xamarin.Forms;
 
 namespace VaxineApp.Behaviors
@@ -17,18 +18,13 @@ namespace VaxineApp.Behaviors
         private void EmailEntryChanged(object sender, TextChangedEventArgs e)
         {
             Entry entry = (Entry) sender;
-            if (!string.IsNullOrEmpty(entry.Text))
+            if (EmailValidators.IsEmailValid(entry.Text))
             {
-                string emailRegex = @"^([\w\. \-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-                bool isMatched = Regex.IsMatch(entry.Text, emailRegex);
-                if (isMatched)
-                {
-                    entry.TextColor = Color.Black;
-                }
-                else
-                {
-                    entry.TextColor = Color.Red;
-                }
+                entry.TextColor = Color.Black;
+            }
+            else
+            {
+                entry.TextColor = Color.Red;
             }
         }
 

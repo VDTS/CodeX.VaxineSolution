@@ -16,6 +16,7 @@ using VaxineApp.AccessShellDir.Views.Login;
 using System.Text.RegularExpressions;
 using VaxineApp.Models;
 using VaxineApp.StaticData;
+using VaxineApp.Validations;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
@@ -137,9 +138,7 @@ namespace VaxineApp.ViewModels.Home.Profile
             {
                 if (NewEmail == ConfirmEmail)
                 {
-                    string emailRegex = @"^([\w\. \-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-                    bool isMatched = Regex.IsMatch(NewEmail, emailRegex);
-                    if (isMatched)
+                    if (EmailValidators.IsEmailValid(NewEmail))
                     {
                         string result = await App.Current.MainPage.DisplayPromptAsync("Enter your Password", "You are entering sudo mode.");
                         string Token = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), result);
