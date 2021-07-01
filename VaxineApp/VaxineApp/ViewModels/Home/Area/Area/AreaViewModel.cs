@@ -60,7 +60,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             }
         }
 
-        
+
         private int totalHouseholds;
         public int TotalHouseholds
         {
@@ -279,14 +279,17 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(data);
                 foreach (KeyValuePair<string, TeamModel> item in clinic)
                 {
-                    Team = new TeamModel
+                    if (item.Value.Id.ToString() == Preferences.Get("TeamId", "").ToString())
                     {
-                        Id = item.Value.Id,
-                        FId = item.Key.ToString(),
-                        CHWName = item.Value.CHWName,
-                        SocialMobilizerId = item.Value.SocialMobilizerId,
-                        TeamNo = item.Value.TeamNo
-                    };
+                        Team = new TeamModel
+                        {
+                            Id = item.Value.Id,
+                            FId = item.Key.ToString(),
+                            CHWName = item.Value.CHWName,
+                            SocialMobilizerId = item.Value.SocialMobilizerId,
+                            TeamNo = item.Value.TeamNo
+                        };
+                    }
                 }
             }
             else
