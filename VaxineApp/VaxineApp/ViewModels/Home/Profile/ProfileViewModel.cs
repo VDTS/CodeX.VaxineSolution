@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Profile;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -85,7 +86,7 @@ namespace VaxineApp.ViewModels.Home.Profile
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Error!", "Profile Not found", "OK");
+                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
     }
