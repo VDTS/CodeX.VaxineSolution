@@ -14,10 +14,10 @@ namespace VaxineApp.StaticData
         }
 
         // Delete
-        public static string DeleteTitle { get; set; } = "Deleted";
+        public static string DeleteTitle { get; set; } = null;
         public static string DeleteBody(string input)
         {
-            return $"{input} has been removed";
+            return $"Do you want to remove {input}";
         }
 
         // Edit
@@ -42,5 +42,9 @@ namespace VaxineApp.StaticData
         // Features under construction
         public static string FeatureUnderConstructionTitle = "Feature not found";
         public static string FeatureUnderConstructionBody = "This features is under implementation and will be available in future releases. Follow App updates page for more info...";
+
+        // No item Selected
+        public static string NoItemSelectedTitle { get; set; } = null;
+        public static string NoItemSelectedBody { get; set; } = "Select an item, and come back to operate";
     }
 }
