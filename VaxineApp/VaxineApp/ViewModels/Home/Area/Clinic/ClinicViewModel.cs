@@ -144,6 +144,8 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             GoToPostPageCommand = new Command(GoToPostPage);
             CancelSelectionCommand = new Command(CancelSelection);
             GoToPutPageCommand = new Command(GoToPutPage);
+            SaveAsPDFCommand = new Command(SaveAsPDF);
+            GoToMapPageCommand = new Command(GoToMapPage);
         }
 
         public void Clear()
@@ -153,9 +155,9 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 
         public async void Delete()
         {
-            if (SelectedClinic.Id != null)
+            if (SelectedClinic.ClinicName != null)
             {
-                var isDeleteAccepted = await App.Current.MainPage.DisplayAlert("", $"Do you want to delete {SelectedClinic.ClinicName}?", "Yes", "No");
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedClinic.ClinicName);
                 if (isDeleteAccepted)
                 {
                     var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
@@ -165,7 +167,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Not Deleted", "Try again", "OK");
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
@@ -176,7 +178,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No item selected", "Select an item to delete", "OK");
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 
@@ -210,9 +212,9 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             throw new NotImplementedException();
         }
 
-        public async void GoToMapPage()
+        public void GoToMapPage()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         public void GoToPostPage()
@@ -231,7 +233,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("No Clinic", "Select a clinic", "OK");
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 
@@ -256,9 +258,9 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             IsBusy = false;
         }
 
-        public async void SaveAsPDF()
+        public void SaveAsPDF()
         {
-            await App.Current.MainPage.DisplayAlert("Not submitted!", "This functionality is under construction", "OK");
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         public void CancelSelection()

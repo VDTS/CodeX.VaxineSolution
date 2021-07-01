@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace VaxineApp.StaticData
 {
@@ -29,6 +30,14 @@ namespace VaxineApp.StaticData
         public async static void FeatureUnderConstructionTitleDisplayMessage()
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.FeatureUnderConstructionTitle, StandardMessagesText.FeatureUnderConstructionBody, "OK");
+        }
+        public async static Task<bool> DeleteDisplayMessage(string input)
+        {
+            return await App.Current.MainPage.DisplayAlert(StandardMessagesText.DeleteTitle, StandardMessagesText.DeleteBody(input), "Yes", "No");
+        }
+        public async static void NoItemSelectedDisplayMessage()
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.NoItemSelectedTitle, StandardMessagesText.NoItemSelectedBody, "OK");
         }
     }
 }
