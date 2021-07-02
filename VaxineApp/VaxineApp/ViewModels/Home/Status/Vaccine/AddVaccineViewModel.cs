@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
+using VaxineApp.Validations;
 
 namespace VaxineApp.ViewModels.Home.Status.Vaccine
 {
@@ -48,22 +49,30 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
 
         private async void Post(object obj)
         {
-            Vaccine.Id = Guid.NewGuid();
-            Vaccine.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
-
-            var data = JsonConvert.SerializeObject(Vaccine);
-
-            string a = await DataService.Post(data, $"Vaccine/{Child.Id}");
-            if (a == "OK")
+            if (VaccinePeriodValidator.IsPeriodAvailable(Vaccine.VaccinePeriod))
             {
-                StandardMessagesDisplay.AddDisplayMessage(Vaccine.VaccineStatus);
+                // if condition to validate that child haven't eat vaccine
+                Vaccine.Id = Guid.NewGuid();
+                Vaccine.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+
+                var data = JsonConvert.SerializeObject(Vaccine);
+
+                string a = await DataService.Post(data, $"Vaccine/{Child.Id}");
+                if (a == "OK")
+                {
+                    StandardMessagesDisplay.AddDisplayMessage(Vaccine.VaccineStatus);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
+                var route = $"//{nameof(StatusPage)}";
+                await Shell.Current.GoToAsync(route);
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.PeriodNotAvailable();
             }
-            var route = $"//{nameof(StatusPage)}";
-            await Shell.Current.GoToAsync(route);
         }
     }
 }

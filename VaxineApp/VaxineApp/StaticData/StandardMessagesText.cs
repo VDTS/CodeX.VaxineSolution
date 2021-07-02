@@ -75,6 +75,9 @@ namespace VaxineApp.StaticData
         public static string InvalidPhoneNumberTitle { get; set; } = "Invalid Phone number";
         public static string InvalidPhoneNumberBody { get; set; } = "Number must start with +93, 0093 or 0.";
 
+        public static string PeriodNotAvailableTitle { get; set; } = "Period not available";
+        public static string PeriodNotAvailableBody { get; set; } = "You can't add vaccine now, wait for starting the period, and follow REMT message centre.";
+
         // Account Management
         public static string EmailChangedTitle { get; set; } = "Email Updated";
         public static string EmailChangedBody(string input)
