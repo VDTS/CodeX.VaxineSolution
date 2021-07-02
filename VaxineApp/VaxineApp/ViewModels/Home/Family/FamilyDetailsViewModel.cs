@@ -137,15 +137,15 @@ namespace VaxineApp.ViewModels.Home.Family
             {
                 PhoneDialer.Open(number);
             }
-            catch (ArgumentNullException anEx)
+            catch (ArgumentNullException)
             {
                 await App.Current.MainPage.DisplayAlert("Error!", "Null number", "OK");
             }
-            catch (FeatureNotSupportedException ex)
+            catch (FeatureNotSupportedException)
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Not supported on this device", "OK");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Can't dail the number", "OK");
             }

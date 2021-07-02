@@ -136,7 +136,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             }
         }
 
-        private async void SaveAsPDF(object obj)
+        private void SaveAsPDF(object obj)
         {
             StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }

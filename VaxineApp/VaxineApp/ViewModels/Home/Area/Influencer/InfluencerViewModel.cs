@@ -131,7 +131,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
             }
         }
 
-        private async void SaveAsPDF(object obj)
+        private void SaveAsPDF(object obj)
         {
             StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }

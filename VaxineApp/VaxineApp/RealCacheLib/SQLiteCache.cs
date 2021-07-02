@@ -20,7 +20,7 @@ namespace RealCacheLib
             }
             _database.CreateTable<Data>();
         }
-        public async void InsertData(Data data)
+        public void InsertData(Data data)
         {
             _database.Insert(data);
         }
