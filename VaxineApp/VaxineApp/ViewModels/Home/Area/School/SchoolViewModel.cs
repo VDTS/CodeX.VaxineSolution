@@ -130,12 +130,12 @@ namespace VaxineApp.ViewModels.Home.Area.School
             }
         }
 
-        private async void GoToMap(object obj)
+        private void GoToMap(object obj)
         {
             StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
-        private async void SaveAsPDF(object obj)
+        private void SaveAsPDF(object obj)
         {
             StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }

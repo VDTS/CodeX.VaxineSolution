@@ -287,11 +287,11 @@ namespace VaxineApp.ViewModels.Home.Profile
 
                 //Console.WriteLine($"CapturePhotoAsync COMPLETED: {PhotoPath}");
             }
-            catch (FeatureNotSupportedException fnsEx)
+            catch (FeatureNotSupportedException)
             {
                 // Feature is now supported on the device
             }
-            catch (PermissionException pEx)
+            catch (PermissionException)
             {
                 // Permissions not granted
             }
