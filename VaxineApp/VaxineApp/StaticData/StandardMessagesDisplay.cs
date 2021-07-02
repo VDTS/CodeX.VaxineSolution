@@ -64,6 +64,10 @@ namespace VaxineApp.StaticData
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.InvalidPhoneNumberTitle, StandardMessagesText.InvalidPhoneNumberBody, "OK");
         }
+        public async static void PeriodNotAvailable()
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.PeriodNotAvailableTitle, StandardMessagesText.PeriodNotAvailableBody, "OK");
+        }
         // Account Management
         public async static void EmailChanged(string email)
         {

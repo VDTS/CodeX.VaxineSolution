@@ -151,6 +151,34 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                 {
                     await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "1");
                 }
+
+                var clusterData = await DataService.Get($"Cluster");
+                if (data != "Error" && data != "null")
+                {
+                    var cluster = JsonConvert.DeserializeObject<Dictionary<string, ClusterModel>>(clusterData);
+                    foreach (KeyValuePair<string, ClusterModel> item in cluster)
+                    {
+                        if (item.Value.Id.ToString() == Preferences.Get("ClusterId", ""))
+                        {
+                            Preferences.Set("VaccinePeriodId", item.Value.CurrentVaccinePeriodId.ToString());
+                        }
+                    }
+                }
+
+                var VaccinePeriod = await DataService.Get("VaccinePeriods");
+                if (data != "Error" && data != "null")
+                {
+                    var vaccine = JsonConvert.DeserializeObject<Dictionary<string, VaccinePeriods>>(VaccinePeriod);
+                    foreach (KeyValuePair<string, VaccinePeriods> item in vaccine)
+                    {
+                        if (item.Value.Id.ToString() == Preferences.Get("VaccinePeriodId", "").ToString())
+                        {
+                            Preferences.Set("PeriodStartDate", item.Value.StartDate);
+                            Preferences.Set("PeriodEndDate", item.Value.EndDate);
+                        }
+                    }
+                }
+
                 Application.Current.MainPage = new AppShell();
                 await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
             }
