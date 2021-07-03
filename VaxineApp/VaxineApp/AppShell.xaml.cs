@@ -24,6 +24,7 @@ using VaxineApp.Views.Settings.Language;
 using VaxineApp.Views.Settings.Notifications;
 using VaxineApp.Views.Home.Family.Child;
 using VaxineApp.Views.Home.Status.Vaccine;
+using VaxineApp.Views.Home.Status.Anonymous;
 
 namespace VaxineApp
 {
@@ -34,6 +35,9 @@ namespace VaxineApp
             InitializeComponent();
             Routing.RegisterRoute(nameof(StatusPage), typeof(StatusPage));
             Routing.RegisterRoute(nameof(ChildVaccinePage), typeof(ChildVaccinePage));
+            Routing.RegisterRoute(nameof(AnonymousChildPage), typeof(AnonymousChildPage));
+            Routing.RegisterRoute(nameof(AddAnonymousChildPage), typeof(AddAnonymousChildPage));
+            Routing.RegisterRoute(nameof(EditAnonymousChildPage), typeof(EditAnonymousChildPage));
 
             Routing.RegisterRoute(nameof(AddVaccinePage), typeof(AddVaccinePage));
             Routing.RegisterRoute(nameof(EditVaccinePage), typeof(EditVaccinePage));
