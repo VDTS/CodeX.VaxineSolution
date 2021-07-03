@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.MVVMHelper;
+using VaxineApp.Views.Announcements;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Settings.Main;
@@ -48,7 +49,8 @@ namespace VaxineApp.ViewModels
         public ICommand GoToHelpPageCommand { private set; get; }
         public ICommand RemoveAccountCommand { private set; get; }
         public ICommand GoToThemesPageCommand { private set; get; }
-       
+        public ICommand GoToAnnouncementsCentrePageCommand { private set; get; }
+
         // ctor
         public AppShellViewModel()
         {
@@ -68,6 +70,14 @@ namespace VaxineApp.ViewModels
             GoToHelpPageCommand = new Command(GoToHelpPage);
             RemoveAccountCommand = new Command(RemoveAccount);
             GoToThemesPageCommand = new Command(GoToThemesPage);
+            GoToAnnouncementsCentrePageCommand = new Command(GoToAnnouncementsCentrePage);
+        }
+
+        private async void GoToAnnouncementsCentrePage(object obj)
+        {
+            var route = $"{nameof(AnnouncementsCentrePage)}";
+            await Shell.Current.GoToAsync(route);
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private async void GoToThemesPage()
