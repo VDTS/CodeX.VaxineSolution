@@ -62,6 +62,12 @@
     <Compile Update="ParentAppShell.xaml.cs">
       <DependentUpon>ParentAppShell.xaml</DependentUpon>
     </Compile>
+    <Compile Update="ParentShellDir\Views\Home\ChildVaccinePage.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="ParentShellDir\Views\Home\FamilyPage.xaml.cs">
+      <DependentUpon>FamilyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Resx\AppResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

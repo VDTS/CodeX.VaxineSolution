@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
+using VaxineApp.ParentShellDir.Views.Home;
 using VaxineApp.RealCacheLib;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Essentials;
@@ -178,9 +180,27 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                         }
                     }
                 }
-
-                Application.Current.MainPage = new AppShell();
-                await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+                var role = await Xamarin.Essentials.SecureStorage.GetAsync("Role");
+                if (role == "Mobilizer")
+                {
+                    Application.Current.MainPage = new AppShell();
+                    await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+                }
+                else if (role == "Supervisor")
+                {
+                    Application.Current.MainPage = new SupAppShell();
+                    await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+                }
+                else if (role == "Parent")
+                {
+                    Application.Current.MainPage = new ParentAppShell();
+                    await Shell.Current.GoToAsync($"//{nameof(FamilyPage)}");
+                }
+                else
+                {
+                    Application.Current.MainPage = new AccessShell();
+                    await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                }
             }
             else
             {
