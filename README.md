@@ -29,6 +29,3 @@ for getting more information about the VDTS app plans and release schedule pleas
 ### Privacy
 Please check the App [privacy policy](https://github.com/VDTS/docs/blob/main/PrivacyPolicy.md).
 
-### License
-Copyright(c) Microsoft Corporation. All rights reserved.
-
