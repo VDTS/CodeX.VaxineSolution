@@ -115,6 +115,21 @@ namespace VaxineApp.ViewModels.Settings.Feedback
                     i.Labels.Add("Suggestion");
                 }
 
+                var role = await Xamarin.Essentials.SecureStorage.GetAsync("Role");
+
+                if (role == "Mobilizer")
+                {
+                    i.Labels.Add("mobilizer app");
+                }
+                else if (role == "Supervisor")
+                {
+                    i.Labels.Add("supervisor app");
+                }
+                else if (role == "Parent")
+                {
+                    i.Labels.Add("parent app");
+                }
+
                 var issue = await client.Issue.Create("VDTS", "CodeX.VaxineSolution", i);
                 if(issue.State.Value.ToString() == "Open")
                 {
