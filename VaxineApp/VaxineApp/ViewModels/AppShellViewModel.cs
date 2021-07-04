@@ -7,6 +7,7 @@ using VaxineApp.Views.Help;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Settings.Main;
 using VaxineApp.Views.Settings.Themes;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels
@@ -104,6 +105,7 @@ namespace VaxineApp.ViewModels
         private async void LogginOut(object obj)
         {
             await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
+            Preferences.Clear();
             Application.Current.MainPage = new AccessShell();
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
@@ -112,6 +114,7 @@ namespace VaxineApp.ViewModels
             var isDeleteAccount = await App.Current.MainPage.DisplayAlert("Do you want to remove cache", "This will cause deleting data that ain't synced with database", "Yes", "No");
             if (isDeleteAccount)
             {
+                Preferences.Clear();
                 await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
                 await Xamarin.Essentials.SecureStorage.SetAsync("role", "0");
                 Application.Current.MainPage = new AccessShell();
