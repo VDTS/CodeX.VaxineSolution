@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace VaxineApp.Behaviors
 {
-    public class LoginEmailBehavior : Behavior<Entry>
+    public class LoginEmailOrPhoneBehavior : Behavior<Entry>
     {
         protected override void OnAttachedTo(Entry emailEntry)
         {
@@ -18,7 +18,7 @@ namespace VaxineApp.Behaviors
         private void EmailEntryChanged(object sender, TextChangedEventArgs e)
         {
             Entry entry = (Entry) sender;
-            if (EmailValidators.IsEmailValid(entry.Text))
+            if (EmailValidators.IsEmailValid(entry.Text) || PhoneNumberValidator.IsPhoneNumberValid(entry.Text))
             {
                 entry.TextColor = Color.Black;
             }
