@@ -119,9 +119,28 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
             StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
-        private void Delete(object obj)
+        private async void Delete(object obj)
         {
-            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
+            if (SelectedAnonymousChild.FId != null)
+            {
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedAnonymousChild.FullName);
+                if (isDeleteAccepted)
+                {
+                    var data = await DataService.Delete($"AnonymousChild/{Preferences.Get("TeamId", "")}/{SelectedAnonymousChild.FId}");
+                    if (data == "Deleted")
+                    {
+                        AnonymousChild.Remove(SelectedAnonymousChild);
+                    }
+                    else
+                    {
+                        StandardMessagesDisplay.CanceledDisplayMessage();
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
         }
 
         private async void GoToPutPage(object obj)
