@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:converters="clr-namespace:VaxineApp.Converters"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ParentShellDir.ViewModel.Home"
+             x:Class="VaxineApp.ParentShellDir.Views.Home.FamilyPage"
+             Title="Family">
+  <ContentPage.BindingContext>
+    <ViewModel:FamilyViewModel></ViewModel:FamilyViewModel>
+  </ContentPage.BindingContext>
+  <Shell.SearchHandler>
+    <SearchHandler IsSearchEnabled="True"
+                   Placeholder="Search" />
+  </Shell.SearchHandler>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:BornDateToAgeInMonthsConverter x:Key="BornDateToAgeInMonthsConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ContentPage.Content>
+    <Grid Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.1*"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0"
+                   x:Name="PageContent"
+                   Orientation="Horizontal"
+                   Spacing="40">
+        <Label FontSize="Default"
+               Grid.Column="0"
+               Text="{Binding Family.HouseNo}"></Label>
+        <Label FontSize="Large"
+               Text="{Binding Family.ParentName}">
+        </Label>
+        <Label FontSize="Medium"
+               Text="{Binding Family.PhoneNumber}">
+        </Label>
+      </StackLayout>
+      <RefreshView Grid.Row="1"
+                   IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                   RefreshColor="#2196f3"
+                   Command="{Binding PullRefreshCommand}">
+        <CollectionView SelectionMode="Single"
+                        ItemsSource="{Binding Childs}"
+                        SelectionChangedCommand="{Binding GoToDetailsPageCommand}"
+                        SelectedItem="{Binding SelectedChild}">
+          <CollectionView.Header>
+            <Grid Padding="10">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Label Grid.Column="0"
+                     Text="{xct:Translate ChildName}"></Label>
+              <Label Grid.Column="1"
+                     Text="{xct:Translate AgeInMonths}"></Label>
+            </Grid>
+          </CollectionView.Header>
+          <CollectionView.ItemTemplate>
+            <DataTemplate>
+              <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                  <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"
+                       FontSize="20"
+                       Text="{Binding FullName}"></Label>
+                <Label Grid.Column="1"
+                       Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
+              </Grid>
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
+      </RefreshView>
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
