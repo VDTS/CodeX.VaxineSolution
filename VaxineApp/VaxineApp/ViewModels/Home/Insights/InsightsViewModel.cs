@@ -179,9 +179,9 @@ namespace VaxineApp.ViewModels.Home.Insights
         {
             IsBusy = true;
 
+            await Task.Delay(2000);
             Clear();
             Get();
-            await Task.Delay(2000);
 
             IsBusy = false;
         }
