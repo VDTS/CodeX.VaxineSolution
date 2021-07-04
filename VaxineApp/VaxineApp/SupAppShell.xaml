@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:HomeStatus="clr-namespace:VaxineApp.Views.Home.Status"
-       xmlns:HomeInsights="clr-namespace:VaxineApp.Views.Home.Insights"
-       xmlns:HomeFamily="clr-namespace:VaxineApp.Views.Home.Family"
-       xmlns:HomeArea="clr-namespace:VaxineApp.Views.Home.Area.Area"
-       xmlns:HomeAreaClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
-       xmlns:HomeAreaDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
-       xmlns:HomeAreaInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
-       xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
-       xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
-       xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
+       xmlns:ViewModel="clr-namespace:VaxineApp.SupervisorShellDir.ViewModel"
        Title="VaxineApp"
        x:Class="VaxineApp.SupAppShell">
   <Shell.BindingContext>
-    <ViewModel:AppShellViewModel></ViewModel:AppShellViewModel>
+    <ViewModel:SupAppShellViewModel></ViewModel:SupAppShellViewModel>
   </Shell.BindingContext>
   <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -196,55 +187,6 @@
   </Shell.FlyoutFooterTemplate>
 
   <FlyoutItem Title="Home">
-    <FlyoutItem.Icon>
-      <FontImageSource FontFamily="SegoeMDL2"
-                       Glyph="&#xE80F;"
-                       Color="Black" />
-    </FlyoutItem.Icon>
-    <Tab Title="Home">
-      <Tab.Icon>
-        <FontImageSource Glyph="&#xE10F;"
-                         FontFamily="SegoeMDL2"
-                         Size="24" />
-      </Tab.Icon>
-      <ShellContent Route="StatusPage"
-                    ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
-    </Tab>
-    <Tab Icon="Home_Insights.png"
-         Title="Insights">
-      <ShellContent Route="InsightsPage"
-                    ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
-    </Tab>
-    <Tab Title="Family">
-      <Tab.Icon>
-        <FontImageSource Glyph="&#xECC8;"
-                         FontFamily="SegoeMDL2"
-                         Size="24" />
-      </Tab.Icon>
-      <ShellContent Route="FamilyListPage"
-                    ContentTemplate="{DataTemplate HomeFamily:FamilyListPage}" />
-    </Tab>
-    <Tab Icon="Home_Area.png"
-         Title="Area">
-      <ShellContent Title="Area"
-                    Route="AreaPage"
-                    ContentTemplate="{DataTemplate HomeArea:AreaPage}" />
-      <ShellContent Title="Masjeed"
-                    Route="MasjeedPage"
-                    ContentTemplate="{DataTemplate HomeAreaMasjeed:MasjeedPage}" />
-      <ShellContent Title="School"
-                    Route="SchoolPage"
-                    ContentTemplate="{DataTemplate HomeAreaSchool:SchoolPage}" />
-      <ShellContent Title="Influencer"
-                    Route="InfluencerPage"
-                    ContentTemplate="{DataTemplate HomeAreaInfluencer:InfluencerPage}" />
-      <ShellContent Title="Clinic"
-                    Route="ClinicPage"
-                    ContentTemplate="{DataTemplate HomeAreaClinic:ClinicPage}" />
-      <ShellContent Title="Doctor"
-                    Route="DoctorPage"
-                    ContentTemplate="{DataTemplate HomeAreaDoctor:DoctorPage}" />
-    </Tab>
     <Tab Icon="Home_Profile.png"
          Title="Profile">
       <ShellContent Route="ProfilePage"

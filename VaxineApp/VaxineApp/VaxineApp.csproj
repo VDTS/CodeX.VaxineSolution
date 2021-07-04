@@ -267,4 +267,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="SupervisorShellDir\Views\" />
+  </ItemGroup>
 </Project>

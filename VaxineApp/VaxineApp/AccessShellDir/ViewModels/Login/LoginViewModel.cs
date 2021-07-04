@@ -10,6 +10,7 @@ using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
 using VaxineApp.RealCacheLib;
+using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -189,7 +190,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                 else if (role == "Supervisor")
                 {
                     Application.Current.MainPage = new SupAppShell();
-                    await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
+                    await Shell.Current.GoToAsync($"//{nameof(ProfilePage)}");
                 }
                 else if (role == "Parent")
                 {
