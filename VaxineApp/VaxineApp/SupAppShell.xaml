@@ -3,6 +3,7 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
        xmlns:ViewModel="clr-namespace:VaxineApp.SupervisorShellDir.ViewModel"
+       xmlns:localFont="clr-namespace:VaxineApp.Font"
        Title="VaxineApp"
        x:Class="VaxineApp.SupAppShell">
   <Shell.BindingContext>
@@ -208,6 +209,15 @@
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutItem_Help.png"
             Command="{Binding GoToHelpPageCommand}">
+  </MenuItem>
+  <MenuItem Text="Announcements Centre"
+            StyleClass="MenuItemLayoutStyle"
+            Command="{Binding GoToAnnouncementsCentrePageCommand}">
+    <MenuItem.IconImageSource>
+      <FontImageSource FontFamily="MaterialIcons"
+                       Glyph="{x:Static localFont:MaterialDesignIcons.InformationVariant}"
+                       Color="Black" />
+    </MenuItem.IconImageSource>
   </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"
