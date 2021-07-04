@@ -3,7 +3,9 @@ using System;
 using System.Windows.Input;
 using VaxineApp.Models.Metadata;
 using VaxineApp.MVVMHelper;
+using VaxineApp.ParentShellDir.Views.Home;
 using VaxineApp.StaticData;
+using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -88,8 +90,23 @@ namespace VaxineApp.ViewModels.Settings.Feedback
         private async void SubmitIssueOnGithub()
         {
             SubmitIssue();
-            var route = $"//{nameof(StatusPage)}";
-            await Shell.Current.GoToAsync(route);
+            var role = await Xamarin.Essentials.SecureStorage.GetAsync("Role");
+
+            if (role == "Mobilizer")
+            {
+                var route = $"//{nameof(StatusPage)}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else if (role == "Supervisor")
+            {
+                var route = $"//{nameof(ProfilePage)}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else if (role == "Parent")
+            {
+                var route = $"//{nameof(FamilyPage)}";
+                await Shell.Current.GoToAsync(route);
+            }
         }
 
         private async void SubmitIssue()
@@ -133,7 +150,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
                 var issue = await client.Issue.Create("VDTS", "CodeX.VaxineSolution", i);
                 if(issue.State.Value.ToString() == "Open")
                 {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
+                    StandardMessagesDisplay.AddDisplayMessage("Issue");
                 }
             }
             catch (Exception)
