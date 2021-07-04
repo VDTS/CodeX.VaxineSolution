@@ -40,7 +40,7 @@
         <Entry Text="{Binding InputUserEmail}"
                Placeholder="Email or Phone">
           <Entry.Behaviors>
-            <Behaviors:LoginEmailBehavior></Behaviors:LoginEmailBehavior>
+            <Behaviors:LoginEmailOrPhoneBehavior></Behaviors:LoginEmailOrPhoneBehavior>
           </Entry.Behaviors>
         </Entry>
         <Entry IsPassword="True"
