@@ -13,15 +13,45 @@ namespace DataAccessLib.Account
 {
     public class AccountManagement : IAccountManagement
     {
-        // Property
-        readonly string ApiKey = Constants.FirebaseApiKey;
-        readonly string BaseUrl = $"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=";
-        private string Url;
+        // Endpoints
+        private readonly string ChangeAccountPasswordRequestEndpoint;
+        private readonly string ChangeEmailRequestEndpoint;
+        private readonly string SignInRequestEndpoint;
+        private readonly string VerifyEmailRequestEndpoint;
+        private readonly string SendPasswordResetCodeRequestEndpoint;
+        private readonly string VerifyPasswordResetCodeRequestEndpoint;
+        private readonly string ConfirmPasswordResetRequestEndpoint;
+
+        // RequestUri
+        private readonly string ChangeAccountPasswordRequestUri;
+        private readonly string ChangeEmailRequestUri;
+        private readonly string SignInRequestUri;
+        private readonly string VerifyEmailRequestUri;
+        private readonly string SendPasswordResetCodeRequestUri;
+        private readonly string VerifyPasswordResetCodeRequestUri;
+        private readonly string ConfirmPasswordResetRequestUri;
 
         // ctor
         public AccountManagement()
         {
-            Url = string.Concat(BaseUrl, ApiKey);
+            // Endpoints
+            ChangeAccountPasswordRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:update?key=";
+            ChangeEmailRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:update?key=";
+            SignInRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=";
+            VerifyEmailRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=";
+            SendPasswordResetCodeRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=";
+            VerifyPasswordResetCodeRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=";
+            ConfirmPasswordResetRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=";
+
+
+            // RequestUri
+            ChangeAccountPasswordRequestUri = string.Concat(ChangeAccountPasswordRequestEndpoint, Constants.FirebaseApiKey);
+            ChangeEmailRequestUri = string.Concat(ChangeEmailRequestEndpoint, Constants.FirebaseApiKey);
+            SignInRequestUri = string.Concat(SignInRequestEndpoint, Constants.FirebaseApiKey);
+            VerifyEmailRequestUri = string.Concat(VerifyEmailRequestEndpoint, Constants.FirebaseApiKey);
+            SendPasswordResetCodeRequestUri = string.Concat(SendPasswordResetCodeRequestEndpoint, Constants.FirebaseApiKey);
+            VerifyPasswordResetCodeRequestUri = string.Concat(VerifyPasswordResetCodeRequestEndpoint, Constants.FirebaseApiKey);
+            ConfirmPasswordResetRequestUri = string.Concat(ConfirmPasswordResetRequestEndpoint, Constants.FirebaseApiKey);
         }
 
 
@@ -30,7 +60,7 @@ namespace DataAccessLib.Account
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), ChangeAccountPasswordRequestUri))
                 {
                     var r = new Root() { idToken = token, password = password, returnSecureToken = true };
                     string s1 = JsonConvert.SerializeObject(r);
@@ -53,7 +83,7 @@ namespace DataAccessLib.Account
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), ChangeEmailRequestUri))
                 {
                     var r = new EmailRoot() { idToken = token, email = email, returnSecureToken = true };
                     string s1 = JsonConvert.SerializeObject(r);
@@ -77,7 +107,7 @@ namespace DataAccessLib.Account
             var identityModel = new SignInModel() { email = email, password = password, returnSecureToken = true };
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), Url))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), SignInRequestUri))
                 {
                     request.Content = new StringContent(JsonConvert.SerializeObject(identityModel));
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
@@ -101,7 +131,7 @@ namespace DataAccessLib.Account
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), VerifyEmailRequestUri))
                 {
                     VerifyEmailModel verifyEmailModel = new VerifyEmailModel() { idToken = Token, requestType = "VERIFY_EMAIL" };
                     string s1 = JsonConvert.SerializeObject(verifyEmailModel);
@@ -126,7 +156,7 @@ namespace DataAccessLib.Account
             {
                 ResetCodeRoot resetCodeRoot = new ResetCodeRoot() { email = email, requestType = "PASSWORD_RESET" };
                 var resetCodeRootJson = JsonConvert.SerializeObject(resetCodeRoot);
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), SendPasswordResetCodeRequestUri))
                 {
                     request.Content = new StringContent(resetCodeRootJson);
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
@@ -149,7 +179,7 @@ namespace DataAccessLib.Account
             var JsonData = JsonConvert.SerializeObject(resetCodeRoot);
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), VerifyPasswordResetCodeRequestUri))
                 {
                     request.Content = new StringContent(JsonData);
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
@@ -172,7 +202,7 @@ namespace DataAccessLib.Account
             var jsonData = JsonConvert.SerializeObject(confirmPasswordRoot);
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=AIzaSyCmnKWt1n88-OrBDUX9hdFTUujHUhowjp8"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), ConfirmPasswordResetRequestUri))
                 {
                     request.Content = new StringContent(jsonData);
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
