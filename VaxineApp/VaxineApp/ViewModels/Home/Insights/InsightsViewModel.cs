@@ -107,11 +107,7 @@ namespace VaxineApp.ViewModels.Home.Insights
 
         private async void SaveAsPDF(object obj)
         {
-            // Checking app center Environment variables
-            await App.Current.MainPage.DisplayAlert("Firebase Api Key", Constants.FirebaseApiKey, "OK");
-            await App.Current.MainPage.DisplayAlert("Firebase Api Key", Constants.GithubApiKeyForCreatingIssues, "OK");
-
-            //StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         private async void Get()
