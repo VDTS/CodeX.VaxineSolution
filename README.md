@@ -19,7 +19,7 @@
 * cross platform (support both **IOS** and **Android**)
 
 ### App updates
-VDTS ships regularly with new features and bug fixes. You can get the latest updates in the [Microsoft store](https://www.microsoft.com/en-us/store/apps/windows)
+VDTS ships regularly with new features and bug fixes. You can get the latest updates in the Google Play store
 ### Contributing
 The team encourages community feedback and contribution. If VDTS is not working properly, please submit a report in the app feedback section or you can [submit issues on github](https://github.com/VDTS/CodeX.VaxineSolution/issues).
 
