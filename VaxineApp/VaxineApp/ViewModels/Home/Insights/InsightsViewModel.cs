@@ -105,9 +105,13 @@ namespace VaxineApp.ViewModels.Home.Insights
             PullRefreshCommand = new Command(Refresh);
         }
 
-        private void SaveAsPDF(object obj)
+        private async void SaveAsPDF(object obj)
         {
-            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
+            // Checking app center Environment variables
+            await App.Current.MainPage.DisplayAlert("Firebase Api Key", Constants.FirebaseApiKey, "OK");
+            await App.Current.MainPage.DisplayAlert("Firebase Api Key", Constants.GithubApiKeyForCreatingIssues, "OK");
+
+            //StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
         private async void Get()
