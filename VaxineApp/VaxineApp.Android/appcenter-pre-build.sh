@@ -11,4 +11,4 @@ fi
 sed -i '' "s/\[GITHUB_API_KEY]/$VSAC_GITHUB_API_KEY/g" ../VaxineApp/Constants.cs
 
 # Changing the variables in DataAccessLib
-sed -i '' "s/\[FB_API_KEY]/$VSAC_FB_API_KEY/g; s/\[FB_URL]/$VSAC_FB_URL/g" ../../DataAccessLib/Constants.cs
+sed -i '' 's/\[FB_API_KEY]/$VSAC_FB_API_KEY/g; s/\[FB_URL]/$VSAC_FB_URL/g' ../../DataAccessLib/Constants.cs
