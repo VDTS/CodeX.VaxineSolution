@@ -8,4 +8,4 @@ then
 fi
 
 # Changing the variables in VaxineApp
-sed -i -e "s/\[GITHUB_API_KEY]/$VSAC_GITHUB_API_KEY/g" ../VaxineApp/Constants.cs -e "s/\[FB_API_KEY]/$VSAC_FB_API_KEY/g; s/\[FB_URL]/$VSAC_FB_URL/g" ../../DataAccessLib/Constants.cs
+sed -i -e "s/\[GITHUB_API_KEY]/$VSAC_GITHUB_API_KEY/g" -e "s/\[FB_API_KEY]/$VSAC_FB_API_KEY/g; s/\[FB_URL]/$VSAC_FB_URL/g" ../VaxineApp/Constants.cs ../../DataAccessLib/Constants.cs
