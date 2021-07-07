@@ -11,15 +11,11 @@ namespace VaxineApp.Validations
         {
             if (!string.IsNullOrEmpty(phoneNumber))
             {
-                string phoneNumberWithInternationalCode = @"^[\+][9][3][0-9]{9}$";
-                string phoneNumberWithLocalCode = @"^[0][7][0-9]{8}$";
-                string phoneNumberWithCode = @"^[0]{2}[9][3][7][0-9]{8}$";
+                string phoneNumberPattern = @"((0093)|(\+93)|(0))[7]\d{8}";
 
-                bool isphoneNumberWithInternationalCodeMatched = Regex.IsMatch(phoneNumber, phoneNumberWithInternationalCode);
-                bool isphoneNumberWithLocalCode = Regex.IsMatch(phoneNumber, phoneNumberWithLocalCode);
-                bool isphoneNumberWithCode = Regex.IsMatch(phoneNumber, phoneNumberWithCode);
+                bool isPhoneNumber = Regex.IsMatch(phoneNumber, phoneNumberPattern);
 
-                if (isphoneNumberWithInternationalCodeMatched || isphoneNumberWithLocalCode || isphoneNumberWithCode)
+                if (isPhoneNumber)
                 {
                     return true;
                 }
