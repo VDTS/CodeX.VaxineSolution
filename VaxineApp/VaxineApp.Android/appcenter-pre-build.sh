@@ -25,7 +25,7 @@ then
     exit
 fi
 
-APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/Core/AppConstant.cs
+APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/DataAccessLib/Constants.cs
 
 if [ -e "$APP_CONSTANT_FILE" ]
 then
