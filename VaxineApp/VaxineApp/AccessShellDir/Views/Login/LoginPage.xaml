@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.AccessShellDir.Views.Login.LoginPage"
-             xmlns:local="clr-namespace:VaxineApp.Renderers"
              xmlns:ViewModel="clr-namespace:VaxineApp.AccessShellDir.ViewModels.Login"
              xmlns:Behaviors="clr-namespace:VaxineApp.Behaviors"
+             xmlns:localFont="clr-namespace:VaxineApp.Font"
+             x:Class="VaxineApp.AccessShellDir.Views.Login.LoginPage"
              Shell.FlyoutBehavior="Disabled"
              Shell.NavBarIsVisible="False">
   <ContentPage.BindingContext>
@@ -43,11 +43,23 @@
             <Behaviors:LoginEmailOrPhoneBehavior></Behaviors:LoginEmailOrPhoneBehavior>
           </Entry.Behaviors>
         </Entry>
-        <Entry IsPassword="True"
+        <StackLayout Orientation="Horizontal">
+          <Entry x:Name="PasswordField" IsPassword="True"
                ClearButtonVisibility="WhileEditing"
                IsTextPredictionEnabled="false"
                Text="{Binding InputUserPassword}"
+                 WidthRequest="290"
                Placeholder="Password"></Entry>
+          <Label x:Name="ShowHideButton" Text="{x:Static localFont:MaterialDesignIcons.EyeOff}"
+                 FontFamily="MaterialIcons"
+                 FontSize="30"
+                 TextColor="#2196f3"
+                 BackgroundColor="Transparent">
+            <Label.GestureRecognizers>
+              <TapGestureRecognizer Tapped="ShowHidePassword"></TapGestureRecognizer>
+            </Label.GestureRecognizers>
+          </Label>
+        </StackLayout>
         <Button Text="Sign in"
                 Command="{Binding SignInCommand}"></Button>
         <Label TextDecorations="Underline"
