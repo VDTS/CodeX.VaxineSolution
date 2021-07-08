@@ -271,4 +271,12 @@
   <ItemGroup>
     <Folder Include="SupervisorShellDir\Views\" />
   </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="cd $(SolutionDir)BuildScripts&#xD;&#xA;powershell.exe -noexit -file &quot;vaxineapp-github-api-key-pre-build.ps1&quot;&#xD;&#xA;echo &quot;Api keys copied to project&quot;" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cd $(SolutionDir)BuildScripts&#xD;&#xA;powershell.exe -noexit -file &quot;vaxineapp-github-api-key-post-build.ps1&quot;&#xD;&#xA;echo &quot;Api keys removed from project&quot;" />
+  </Target>
 </Project>
