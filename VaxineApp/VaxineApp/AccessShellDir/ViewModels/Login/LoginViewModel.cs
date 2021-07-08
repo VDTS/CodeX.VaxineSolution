@@ -96,9 +96,13 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             CloseAppCommand = new Command(CloseApp);
         }
 
-        private void CloseApp()
+        private async void CloseApp()
         {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            await App.Current.MainPage.DisplayAlert("FBApi", DataAccessLib.Constants.FirebaseApiKey, "OK");
+            await App.Current.MainPage.DisplayAlert("FBUrl", DataAccessLib.Constants.FirebaseBaseUrl, "OK");
+            await App.Current.MainPage.DisplayAlert("FBApi", VaxineApp.Constants.GithubApiKeyForCreatingIssues, "OK");
+
+            //System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
         private async void SignIn()
