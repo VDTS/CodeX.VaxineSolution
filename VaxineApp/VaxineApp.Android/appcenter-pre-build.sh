@@ -7,7 +7,7 @@
 # {
 #     public class AppConstant
 #     {
-#         public const string ApiUrl = "https://CMS_MyApp-Eur01.com/api";
+#         public const string FirebaseApiKey = "https://CMS_MyApp-Eur01.com/api";
 #     }
 # }
 # 
@@ -19,7 +19,7 @@
 #
 # AN IMPORTANT THING: FOR THIS SAMPLE YOU NEED DECLARE API_URL ENVIRONMENT VARIABLE IN APP CENTER BUILD CONFIGURATION.
 
-if [ -z "$API_URL" ]
+if [ -z "$FIREBASE_API_KEY" ]
 then
     echo "You need define the API_URL variable in App Center"
     exit
@@ -29,8 +29,8 @@ APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/DataAccessLib/Constants.cs
 
 if [ -e "$APP_CONSTANT_FILE" ]
 then
-    echo "Updating ApiUrl to $API_URL in AppConstant.cs"
-    sed -i '' 's#ApiUrl = "[-A-Za-z0-9:_./]*"#ApiUrl = "'$API_URL'"#' $APP_CONSTANT_FILE
+    echo "Updating FirebaseApiKey to $FIREBASE_API_KEY in Constants.cs"
+    sed -i '' 's#FirebaseApiKey = "[-A-Za-z0-9:_./]*"#FirebaseApiKey = "'$FIREBASE_API_KEY'"#' $APP_CONSTANT_FILE
 
     echo "File content:"
     cat $APP_CONSTANT_FILE
