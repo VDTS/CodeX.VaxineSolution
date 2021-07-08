@@ -35,3 +35,12 @@ then
     echo "File content:"
     cat $APP_CONSTANT_FILE
 fi
+
+if [ -e "$APP_CONSTANT_FILE" ]
+then
+    echo "Updating FirebaseBaseUrl to $FIREBASE_API_URL in Constants.cs"
+    sed -i '' 's#FirebaseBaseUrl = "[-A-Za-z0-9:_./]*"#FirebaseBaseUrl = "'$FIREBASE_API_URL'"#' $APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $APP_CONSTANT_FILE
+fi
