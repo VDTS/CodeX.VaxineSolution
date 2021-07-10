@@ -105,7 +105,7 @@ namespace VaxineApp.ViewModels.Home.Insights
             PullRefreshCommand = new Command(Refresh);
         }
 
-        private async void SaveAsPDF(object obj)
+        private void SaveAsPDF(object obj)
         {
             StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }

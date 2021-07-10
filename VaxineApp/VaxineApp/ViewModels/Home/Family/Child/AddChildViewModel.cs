@@ -15,8 +15,9 @@ namespace VaxineApp.ViewModels.Home.Family.Child
     {
         // Validator Class
         ChildValidator ChildValidator { get; set; }
+
         // Property
-        GetFamilyModel Family;
+        public GetFamilyModel Family { get; set; }
 
         private ChildModel child;
         public ChildModel Child

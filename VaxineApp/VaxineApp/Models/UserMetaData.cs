@@ -32,7 +32,7 @@ namespace VaxineApp.Models
             GetLocation();
         }
 
-        public async Task GetLocation()
+        public async void GetLocation()
         {
             // https://stackoverflow.com/questions/38137560/get-device-location-in-latitude-longitude-in-xamarin-forms
             var location = await Geolocation.GetLastKnownLocationAsync();

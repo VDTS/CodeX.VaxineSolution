@@ -104,7 +104,7 @@ namespace VaxineApp.ViewModels.Shared
             Position = new Position(30.342, 40.454);
         }
 
-        public async Task GetLocation()
+        public async void GetLocation()
         {
             // https://stackoverflow.com/questions/38137560/get-device-location-in-latitude-longitude-in-xamarin-forms
             var location = await Geolocation.GetLastKnownLocationAsync();
