@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using Newtonsoft.Json;
+using System;
 using System.Windows.Input;
 using VaxineApp.Models;
-using VaxineApp.Views.Home;
-using VaxineApp.Views.Home.Status;
-using Xamarin.Forms;
-using Newtonsoft.Json;
-using VaxineApp.Views.Home.Family;
-using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using VaxineApp.Validations;
+using VaxineApp.Views.Home.Family;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Family.Child
 {
     public class AddChildViewModel : ViewModelBase
     {
+        // Validator Class
+        ChildValidator ChildValidator { get; set; }
         // Property
         GetFamilyModel Family;
 
@@ -41,22 +38,25 @@ namespace VaxineApp.ViewModels.Home.Family.Child
         // ctor
         public AddChildViewModel(GetFamilyModel family)
         {
-            // Property
+            // Objects
+            ChildValidator = new ChildValidator();
             Family = family;
+
+            // Property
             Child = new ChildModel();
 
             // Command
-            PutCommand = new Command(Put);
+            PutCommand = new Command(Post);
         }
 
-        private async void Put()
+        private async void Post()
         {
-            if (ChildValidator.IsChildUnder5(Child.DOB))
+            Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+            Child.Id = Guid.NewGuid();
+            Child.DOB = Child.DOB.ToUniversalTime();
+            var result = ChildValidator.Validate(Child);
+            if (result.IsValid)
             {
-                Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
-                Child.Id = Guid.NewGuid();
-                Child.DOB = Child.DOB.ToUniversalTime();
-
                 var data = JsonConvert.SerializeObject(Child);
 
                 string a = await DataService.Post(data, $"Child/{Family.Id}");
@@ -73,7 +73,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
             }
             else
             {
-                StandardMessagesDisplay.ChildAgeValidator(Child.FullName);
+                await App.Current.MainPage.DisplayAlert("Not valid", result.Errors[0].ErrorMessage, "OK");
             }
         }
     }
