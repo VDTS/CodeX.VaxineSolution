@@ -1,5 +1,7 @@
-﻿using System;
+﻿using FluentValidation;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace VaxineApp.Models
@@ -16,6 +18,44 @@ namespace VaxineApp.Models
         public AnonymousChildModel()
         {
             Id = new Guid();
+        }
+    }
+    public class AnonymousChildValidator : AbstractValidator<AnonymousChildModel>
+    {
+        public AnonymousChildValidator()
+        {
+            RuleFor(c => c.FullName)
+                .Cascade(CascadeMode.Stop)
+                .NotEmpty().WithMessage("{PropertyName} is Empty")
+                .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
+                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+            RuleFor(c => c.Gender).NotEmpty();
+            RuleFor(c => c.RegisteredBy).NotEmpty();
+            RuleFor(c => c.DOB)
+                .Must(BeAValidDateOfBorn)
+                .WithMessage("Child must be under 5");
+            RuleFor(c => c.VaccineStatus)
+                .NotEmpty().WithMessage("Add vaccine mark");
+        }
+
+        protected bool BeAValidName(string name)
+        {
+            name = name.Replace(" ", "");
+            name = name.Replace("-", "");
+            return name.All(Char.IsLetter);
+        }
+
+        protected bool BeAValidDateOfBorn(DateTime DOB)
+        {
+            var ageInMonths = 12 * (DateTime.UtcNow.Year - DOB.Year) + DOB.Month;
+            if (ageInMonths <= 60)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

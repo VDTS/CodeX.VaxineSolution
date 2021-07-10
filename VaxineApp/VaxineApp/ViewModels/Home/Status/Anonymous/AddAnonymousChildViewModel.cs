@@ -15,6 +15,8 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 {
     public class AddAnonymousChildViewModel : ViewModelBase
     {
+        // Validator Class
+        AnonymousChildValidator AnonymousChildValidator { get; set; }
         // Property
         private AnonymousChildModel anonymousChildModel;
         public AnonymousChildModel AnonymousChildModel
@@ -36,6 +38,9 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
         // ctor
         public AddAnonymousChildViewModel()
         {
+            // Validator
+            AnonymousChildValidator = new AnonymousChildValidator();
+
             // Property
             AnonymousChildModel = new AnonymousChildModel();
 
@@ -45,14 +50,15 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 
         private async void Post(object obj)
         {
-            if (ChildValidator.IsChildUnder5(AnonymousChildModel.DOB))
+            var result = AnonymousChildValidator.Validate(AnonymousChildModel);
+
+            AnonymousChildModel.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+            AnonymousChildModel.Id = Guid.NewGuid();
+            AnonymousChildModel.DOB = AnonymousChildModel.DOB.ToUniversalTime();
+
+            if (result.IsValid)
             {
-                AnonymousChildModel.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
-                AnonymousChildModel.Id = Guid.NewGuid();
-                AnonymousChildModel.DOB = AnonymousChildModel.DOB.ToUniversalTime();
-
                 var data = JsonConvert.SerializeObject(AnonymousChildModel);
-
                 string a = await DataService.Post(data, $"AnonymousChild/{Preferences.Get("TeamId", "")}");
                 if (a == "OK")
                 {
@@ -67,7 +73,7 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
             }
             else
             {
-                StandardMessagesDisplay.ChildAgeValidator(AnonymousChildModel.FullName);
+                await App.Current.MainPage.DisplayAlert("Not valid", result.Errors[0].ErrorMessage, "OK");
             }
         }
     }
