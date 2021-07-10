@@ -26,6 +26,7 @@ namespace VaxineApp.Droid.NativeApi
             return info.VersionName;
         }
 
+        [Obsolete]
         public int GetBuild()
         {
             var context = global::Android.App.Application.Context;

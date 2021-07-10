@@ -96,7 +96,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             CloseAppCommand = new Command(CloseApp);
         }
 
-        private async void CloseApp()
+        private void CloseApp()
         {
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
