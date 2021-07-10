@@ -10,9 +10,9 @@ namespace VaxineApp.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var age = DateTime.Now - (DateTime)value;
-            var a = (age.Days) / 30;
-            return a;
+            var age = (DateTime)value;
+            var ageInMonths = 12 * (DateTime.UtcNow.Year - age.Year) + Math.Abs((age.Month) - (DateTime.UtcNow.Month));
+            return ageInMonths;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
