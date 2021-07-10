@@ -48,7 +48,7 @@
                ClearButtonVisibility="WhileEditing"
                IsTextPredictionEnabled="false"
                Text="{Binding InputUserPassword}"
-                 WidthRequest="290"
+                 WidthRequest="240"
                Placeholder="Password"></Entry>
           <Label x:Name="ShowHideButton" Text="{x:Static localFont:MaterialDesignIcons.EyeOff}"
                  FontFamily="MaterialIcons"
