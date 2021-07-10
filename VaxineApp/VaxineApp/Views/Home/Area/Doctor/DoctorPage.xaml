@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Doctor"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
              x:Class="VaxineApp.Views.Home.Area.Doctor.DoctorPage"
+             x:DataType="ViewModel:DoctorViewModel"
              Title="Doctor">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="{xct:Translate Search}" />
@@ -52,7 +54,7 @@
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
-          <DataTemplate>
+          <DataTemplate x:DataType="Model:DoctorModel">
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"></ColumnDefinition>
