@@ -45,12 +45,9 @@
       <ScrollView Grid.Row="2"
                   Padding="25">
         <StackLayout Orientation="Vertical"
-                     Spacing="20">
+                     Spacing="40">
           <StackLayout Spacing="20">
-            <Label FontSize="Body"
-                   TextColor="Black"
-                   Text="Accessibility">
-            </Label>
+
             <StackLayout Orientation="Horizontal"
                          Spacing="30">
               <Label FontSize="30"
@@ -81,10 +78,6 @@
             </StackLayout>
           </StackLayout>
           <StackLayout Spacing="20">
-            <Label  FontSize="Body"
-                    TextColor="Black"
-                    Text="Localization">
-            </Label>
             <StackLayout Orientation="Horizontal"
                          Spacing="30">
               <Label FontSize="30"
@@ -101,9 +94,6 @@
             </StackLayout>
           </StackLayout>
           <StackLayout Spacing="20">
-            <Label  FontSize="Body"
-                    TextColor="Black"
-                    Text="More"></Label>
             <StackLayout Orientation="Horizontal"
                          Spacing="30">
               <Label FontSize="30"
@@ -134,9 +124,6 @@
             </StackLayout>
           </StackLayout>
           <StackLayout Spacing="20">
-            <Label  FontSize="Body"
-                    TextColor="Black"
-                    Text="About"></Label>
             <StackLayout Orientation="Horizontal"
                          Spacing="30">
               <Label FontSize="30"
