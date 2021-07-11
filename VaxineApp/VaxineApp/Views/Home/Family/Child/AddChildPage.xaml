@@ -2,15 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewMode="clr-namespace:VaxineApp.ViewModels.Home.Family.Child"
              x:Class="VaxineApp.Views.Home.Family.Child.AddChildPage"
+             x:DataType="ViewMode:AddChildViewModel"
              Shell.TabBarIsVisible="False"
              Shell.PresentationMode="Modal"
              Title="Add Child">
   <ContentPage.Content>
-    <StackLayout Padding="40" Spacing="10"
+    <StackLayout Padding="40"
+                 Spacing="10"
                  x:Name="PageContent">
       <Entry Text="{Binding Child.FullName, Mode=TwoWay}"
-                                 Placeholder="{xct:Translate FullName}"></Entry>
+             Placeholder="{xct:Translate FullName}"></Entry>
       <Picker Title="{xct:Translate Gender}"
               SelectedItem="{Binding Child.Gender, Mode=OneWayToSource}">
         <Picker.ItemsSource>
@@ -21,14 +24,15 @@
         </Picker.ItemsSource>
       </Picker>
       <Entry Text="{Binding Child.RINo, Mode=OneWayToSource}"
-                                 Placeholder="{xct:Translate RiNumber}"></Entry>
+             Placeholder="{xct:Translate RiNumber}"></Entry>
       <DatePicker Date="{Binding Child.DOB, Mode=OneWayToSource}"></DatePicker>
 
-      <StackLayout Orientation="Horizontal" Spacing="10">
+      <StackLayout Orientation="Horizontal"
+                   Spacing="10">
         <CheckBox IsChecked="{Binding Child.OPV0, Mode=TwoWay}" />
         <Label Text="OPV0"></Label>
       </StackLayout>
-     
+
       <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"

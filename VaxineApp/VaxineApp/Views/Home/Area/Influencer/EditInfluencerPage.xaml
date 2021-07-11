@@ -2,20 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Influencer"
              x:Class="VaxineApp.Views.Home.Area.Influencer.EditInfluencerPage"
+             x:DataType="ViewModel:EditInfluecerViewModel"
              Shell.TabBarIsVisible="False"
              Title="Edit Influencer">
   <ContentPage.Content>
-    <StackLayout Padding="40" Spacing="10">
+    <StackLayout Padding="40"
+                 Spacing="10">
 
       <Entry Placeholder="{xct:Translate Name}"
              Text="{Binding Influencer.Name}"></Entry>
       <Entry Placeholder="{xct:Translate Contact}"
-             Text="{Binding Influencer.Contact}" Keyboard="Telephone"></Entry>
+             Text="{Binding Influencer.Contact}"
+             Keyboard="Telephone"></Entry>
       <Entry Placeholder="{xct:Translate Position}"
              Text="{Binding Influencer.Position}">
       </Entry>
-      <StackLayout Orientation="Horizontal" Spacing="10">
+      <StackLayout Orientation="Horizontal"
+                   Spacing="10">
         <CheckBox IsChecked="{Binding Influencer.DoesHeProvidingSupport}"></CheckBox>
         <Label Text="{xct:Translate DoesHeProvidingSupport}"></Label>
       </StackLayout>

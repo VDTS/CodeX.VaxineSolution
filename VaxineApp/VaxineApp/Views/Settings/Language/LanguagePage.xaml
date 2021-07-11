@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.Language"
+             x:DataType="ViewModel:LanguageViewModel"
              x:Class="VaxineApp.Views.Settings.Language.LanguagePage"
              Title="Change Language">
   <ContentPage.BindingContext>
@@ -20,7 +21,7 @@
       </Frame>
       <StackLayout Padding="40">
         <Button Text="{xct:Translate ChangeLanguage}"
-                Command="{Binding ChangeLanguageCommand}"/>
+                Command="{Binding ChangeLanguageCommand}" />
       </StackLayout>
     </StackLayout>
   </ContentPage.Content>

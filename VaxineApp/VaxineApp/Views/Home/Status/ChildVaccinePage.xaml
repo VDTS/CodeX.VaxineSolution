@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status"
+             x:DataType="ViewModel:ChildVaccineViewModel"
              x:Class="VaxineApp.Views.Home.Status.ChildVaccinePage"
              Title="Child Details">
   <Shell.SearchHandler>
@@ -49,14 +52,16 @@
       <StackLayout Grid.Row="1">
         <Label FontSize="Large"
                Text="{xct:Translate CurrentVaccine}"></Label>
-        <StackLayout Orientation="Horizontal" Spacing="40">
+        <StackLayout Orientation="Horizontal"
+                     Spacing="40">
           <Label Text="{Binding CurrentVaccine.VaccineStatus}"></Label>
           <Label Text="{Binding CurrentVaccine.VaccinePeriod, Mode=TwoWay}"></Label>
         </StackLayout>
       </StackLayout>
-      <RefreshView Grid.Row="2" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                    RefreshColor="#2196f3"
-                    Command="{Binding PullRefreshCommand}">
+      <RefreshView Grid.Row="2"
+                   IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                   RefreshColor="#2196f3"
+                   Command="{Binding PullRefreshCommand}">
         <ScrollView>
           <CollectionView ItemsSource="{Binding VaccineList}">
             <CollectionView.Header>
@@ -72,7 +77,7 @@
               </Grid>
             </CollectionView.Header>
             <CollectionView.ItemTemplate>
-              <DataTemplate>
+              <DataTemplate x:DataType="Model:VaccineModel">
                 <Grid>
                   <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.4*"></ColumnDefinition>

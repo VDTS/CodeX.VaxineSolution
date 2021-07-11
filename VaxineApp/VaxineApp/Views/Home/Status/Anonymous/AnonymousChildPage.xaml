@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Home.Status.Anonymous.AnonymousChildPage"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status.Anonymous"
+             x:Class="VaxineApp.Views.Home.Status.Anonymous.AnonymousChildPage"
+             x:DataType="ViewModel:AnonymousChildViewModel"
              Title="Anonymous Child">
   <ContentPage.BindingContext>
     <ViewModel:AnonymousChildViewModel></ViewModel:AnonymousChildViewModel>
@@ -48,7 +50,7 @@
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
-          <DataTemplate>
+          <DataTemplate x:DataType="Model:AnonymousChildModel">
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>

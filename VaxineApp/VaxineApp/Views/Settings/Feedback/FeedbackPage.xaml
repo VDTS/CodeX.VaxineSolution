@@ -1,38 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.Feedback"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.Feedback"
+             x:DataType="ViewModel:FeedbackViewModel"
              x:Class="VaxineApp.Views.Settings.Feedback.FeedbackPage"
              Shell.TabBarIsVisible="False"
              Title="Feedback">
   <ContentPage.BindingContext>
     <ViewModel:FeedbackViewModel></ViewModel:FeedbackViewModel>
   </ContentPage.BindingContext>
-    <ContentPage.Content>
+  <ContentPage.Content>
     <ScrollView>
-        <StackLayout Padding="10" Spacing="10">
+      <StackLayout Padding="10"
+                   Spacing="10">
         <Label Text="{xct:Translate SelectCategory}" />
         <StackLayout Orientation="Horizontal"
                      RadioButtonGroup.GroupName="IssueCategory">
           <RadioButton Content="{xct:Translate Suggestion}"
-                       Value="{Binding SuggestionRadioButton}" IsChecked="{Binding SuggestionRadioButton}" />
-          <RadioButton Value="{Binding ProblemRadioButton}" Content="{xct:Translate Problem}" IsChecked="{Binding ProblemRadioButton}"/>
+                       Value="{Binding SuggestionRadioButton}"
+                       IsChecked="{Binding SuggestionRadioButton}" />
+          <RadioButton Value="{Binding ProblemRadioButton}"
+                       Content="{xct:Translate Problem}"
+                       IsChecked="{Binding ProblemRadioButton}" />
         </StackLayout>
         <Label Text="{xct:Translate IssueTitle}"></Label>
-          <Editor Text="{Binding IssueTitle}"
-                  HeightRequest="50" />
+        <Editor Text="{Binding IssueTitle}"
+                HeightRequest="50" />
         <Label Text="{xct:Translate IssueDetails}"></Label>
         <Editor Text="{Binding IssueDetails}"
                 Placeholder="{xct:Translate FeedbackDescription}"
-              HeightRequest="280" />
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                HeightRequest="280" />
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Spacing="20">
           <Button Text=""
                   FontFamily="SegoeMDL2"
-                  WidthRequest="60" Command="{Binding AttachScreenshotOnGithubIssueCommand}"></Button>
-          <Button Text="" FontFamily="SegoeMDL2" WidthRequest="60" HorizontalOptions="End" Command="{Binding SubmitIssueOnGithubCommand}"></Button>
+                  WidthRequest="60"
+                  Command="{Binding AttachScreenshotOnGithubIssueCommand}"></Button>
+          <Button Text=""
+                  FontFamily="SegoeMDL2"
+                  WidthRequest="60"
+                  HorizontalOptions="End"
+                  Command="{Binding SubmitIssueOnGithubCommand}"></Button>
         </StackLayout>
-        </StackLayout>
+      </StackLayout>
     </ScrollView>
   </ContentPage.Content>
 </ContentPage>

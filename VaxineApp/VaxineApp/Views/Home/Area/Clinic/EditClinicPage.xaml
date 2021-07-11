@@ -2,11 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Clinic"
              x:Class="VaxineApp.Views.Home.Area.Clinic.EditClinicPage"
+             x:DataType="ViewModel:EditClinicViewModel"
              Shell.TabBarIsVisible="False"
              Title="Edit Clinic">
   <ContentPage.Content>
-    <StackLayout Padding="40" Spacing="10">
+    <StackLayout Padding="40"
+                 Spacing="10">
       <Entry Placeholder="{xct:Translate ClinicName}"
              Text="{Binding Clinic.ClinicName}"></Entry>
       <Entry Placeholder="{xct:Translate Fixed}"
@@ -18,10 +21,12 @@
                IsEnabled="False"
                WidthRequest="140"
                Text="{Binding Clinic.Latitude}"></Entry>
-      <Entry Placeholder="{xct:Translate Longitude}" IsEnabled="False"
-             WidthRequest="140"
+        <Entry Placeholder="{xct:Translate Longitude}"
+               IsEnabled="False"
+               WidthRequest="140"
                Text="{Binding Clinic.Longitude}"></Entry>
-        <Button Text="" FontFamily="SegoeMDL2"
+        <Button Text=""
+                FontFamily="SegoeMDL2"
                 WidthRequest="50"
                 HeightRequest="50"
                 FontSize="25"
@@ -31,12 +36,11 @@
                 Command="{Binding AddLocationCommand}"></Button>
       </StackLayout>
 
-      
       <Button Text="{xct:Translate Save}"
-        TranslationY="50"
-        WidthRequest="130"
-        HeightRequest="50"
-        HorizontalOptions="Center"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
               Command="{Binding PutCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>

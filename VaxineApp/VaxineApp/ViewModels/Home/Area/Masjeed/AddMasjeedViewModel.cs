@@ -29,6 +29,9 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
         // Command
         public ICommand PostCommand { private set; get; }
+        public ICommand AddLocationCommand { private set; get; }
+
+        // ctor
         public AddMasjeedViewModel()
         {
             // Property
