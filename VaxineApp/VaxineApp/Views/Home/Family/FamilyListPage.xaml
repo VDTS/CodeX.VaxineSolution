@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
              x:Class="VaxineApp.Views.Home.Family.FamilyListPage"
+             x:DataType="ViewModel:FamilyListViewModel"
              Title="Family List">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="{xct:Translate SearchFamily}" />
@@ -23,7 +25,8 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView Padding="10"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
@@ -40,8 +43,8 @@
               <RowDefinition Height="Auto"></RowDefinition>
               <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <Label 
-                   Grid.Column="0" Grid.Row="0"
+            <Label Grid.Column="0"
+                   Grid.Row="0"
                    Text="HouseNo"></Label>
             <Label Grid.Column="1"
                    Grid.Row="0"
@@ -52,7 +55,7 @@
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
-          <DataTemplate>
+          <DataTemplate x:DataType="Model:GetFamilyModel">
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"></ColumnDefinition>
@@ -62,8 +65,8 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
               </Grid.RowDefinitions>
-              <Label
-                     Grid.Column="0" Grid.Row="0"
+              <Label Grid.Column="0"
+                     Grid.Row="0"
                      Text="{Binding HouseNo}"></Label>
               <Label Grid.Column="1"
                      Grid.Row="0"

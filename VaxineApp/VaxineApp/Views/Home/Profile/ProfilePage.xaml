@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Profile"
              x:Class="VaxineApp.Views.Home.Profile.ProfilePage"
+             x:DataType="ViewModel:ProfileViewModel"
              Title="Profile">
   <ContentPage.BindingContext>
     <ViewModel:ProfileViewModel></ViewModel:ProfileViewModel>
@@ -12,12 +13,12 @@
     <ToolbarItem Command="{Binding GoToPutPageCommand}"
                  Priority="0"
                  Text="Edit"
-                 Order="Secondary"
-                 />
+                 Order="Secondary" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <ScrollView>
-    <StackLayout Padding="40" Spacing="10">
+      <StackLayout Padding="40"
+                   Spacing="10">
         <Frame CornerRadius="100"
                HeightRequest="180"
                WidthRequest="180"
@@ -30,19 +31,22 @@
           </Image>
         </Frame>
         <BoxView   VerticalOptions="Center"
-                 HorizontalOptions="Center"
-                 HeightRequest="30"
-                 WidthRequest="200"></BoxView>
-      <Label Text="{xct:Translate Name}"></Label>
-      <Label FontSize="Large" Text="{Binding Profile.FullName}"></Label>
-      <Label Text="{xct:Translate Gender}"></Label>
-      <Label FontSize="Large" Text="{Binding Profile.Gender}"></Label>
-      <Label Text="{xct:Translate FatherOrHusbandName}"></Label>
-      <Label FontSize="Large" Text="{Binding Profile.FatherOrHusbandName}"></Label>
-      <Label Text="{xct:Translate Age}"></Label>
-      <Label FontSize="Large"
+                   HorizontalOptions="Center"
+                   HeightRequest="30"
+                   WidthRequest="200"></BoxView>
+        <Label Text="{xct:Translate Name}"></Label>
+        <Label FontSize="Large"
+               Text="{Binding Profile.FullName}"></Label>
+        <Label Text="{xct:Translate Gender}"></Label>
+        <Label FontSize="Large"
+               Text="{Binding Profile.Gender}"></Label>
+        <Label Text="{xct:Translate FatherOrHusbandName}"></Label>
+        <Label FontSize="Large"
+               Text="{Binding Profile.FatherOrHusbandName}"></Label>
+        <Label Text="{xct:Translate Age}"></Label>
+        <Label FontSize="Large"
                Text="{Binding Profile.Age}"></Label>
-      <Label Text="{xct:Translate Role}"></Label>
+        <Label Text="{xct:Translate Role}"></Label>
         <Label FontSize="Large"
                Text="{Binding Profile.Role}"></Label>
       </StackLayout>

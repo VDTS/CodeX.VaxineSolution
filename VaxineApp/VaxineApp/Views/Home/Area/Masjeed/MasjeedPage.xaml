@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
+             x:DataType="ViewModel:MasjeedViewModel"
              x:Class="VaxineApp.Views.Home.Area.Masjeed.MasjeedPage"
              Title="Masjeed">
   <Shell.SearchHandler>
@@ -36,7 +38,8 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView Padding="10"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
@@ -71,7 +74,7 @@
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
-          <DataTemplate>
+          <DataTemplate x:DataType="Model:MasjeedModel">
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"></ColumnDefinition>
@@ -83,9 +86,14 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
               </Grid.RowDefinitions>
-              <CheckBox IsEnabled="False" Grid.Row="0" Grid.Column="0"
+              <CheckBox IsEnabled="False"
+                        Grid.Row="0"
+                        Grid.Column="0"
                         IsChecked="{Binding DoesImamSupportsVaccine}"></CheckBox>
-              <CheckBox Grid.Row="1" Grid.Column="0" IsEnabled="False" IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
+              <CheckBox Grid.Row="1"
+                        Grid.Column="0"
+                        IsEnabled="False"
+                        IsChecked="{Binding DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
               <Label WidthRequest="40"
                      HeightRequest="40"
                      Grid.Column="2"

@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.School"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.School"
              x:Class="VaxineApp.Views.Home.Area.School.SchoolPage"
+             x:DataType="ViewModel:SchoolViewModel"
              Title="School">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="{xct:Translate Search}" />
@@ -36,7 +38,8 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView Padding="10" IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView Padding="10"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
@@ -48,22 +51,20 @@
               <ColumnDefinition Width="0.5*"></ColumnDefinition>
               <ColumnDefinition Width="0.5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label 
-                   Grid.Column="0"
+            <Label Grid.Column="0"
                    Text="{xct:Translate SchoolName}"></Label>
             <Label Grid.Column="1"
                    Text="{xct:Translate KeyInfluencer}"></Label>
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
-          <DataTemplate>
+          <DataTemplate x:DataType="Model:SchoolModel">
             <Grid Padding="10">
               <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
-              <Label 
-                     Grid.Column="0"
+              <Label Grid.Column="0"
                      Text="{Binding SchoolName}"></Label>
               <Label Grid.Column="1"
                      Text="{Binding KeyInfluencer}"></Label>

@@ -1,24 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.Views.Home.Area.Area.EditAreaPage"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:area="clr-namespace:VaxineApp.ViewModels.Home.Area.Area"
+             x:Class="VaxineApp.Views.Home.Area.Area.EditAreaPage"
+             x:DataType="area:EditAreaViewModel"
              Shell.TabBarIsVisible="False"
              Title="Add Area">
   <ContentPage.Content>
     <ScrollView Padding="40">
       <StackLayout Spacing="10">
         <Entry Placeholder="{xct:Translate TeamNo}"
-                                   Text="{Binding Team.TeamNo}"></Entry>
+               Text="{Binding Team.TeamNo}"></Entry>
         <Entry Placeholder="{xct:Translate SocialMobilizerId}"
-                                   Text="{Binding Team.SocialMobilizerId}"></Entry>
+               Text="{Binding Team.SocialMobilizerId}"></Entry>
         <Entry Placeholder="{xct:Translate ChwName}"
-                                   Text="{Binding Team.CHWName}">
+               Text="{Binding Team.CHWName}">
         </Entry>
-
-        <Button Text="{xct:Translate UpdateArea}" TranslationY="50" WidthRequest="130" HeightRequest="50" HorizontalOptions="Center"
-                Command="{Binding PutCommand}"
-                ></Button>
+        <Button Text="{xct:Translate UpdateArea}"
+                TranslationY="50"
+                WidthRequest="130"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Command="{Binding PutCommand}"></Button>
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>

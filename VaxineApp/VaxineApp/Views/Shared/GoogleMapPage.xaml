@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Shared"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:DataType="ViewModel:GoogleMapViewModel"
              x:Class="VaxineApp.Views.Shared.GoogleMapPage"
              Title="{Binding PageName}">
   <ContentPage.BindingContext>
@@ -14,7 +14,8 @@
       <maps:Map MapType="Street">
         <maps:Map.ItemTemplate>
           <DataTemplate>
-            <maps:Pin Type="Place" Position="{Binding Position}"
+            <maps:Pin Type="Place"
+                      Position="{Binding Position}"
                       Address="{Binding Address}"
                       Label="{Binding Label}" />
           </DataTemplate>

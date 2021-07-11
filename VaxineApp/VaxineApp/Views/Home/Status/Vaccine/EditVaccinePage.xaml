@@ -2,12 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status.Vaccine"
              x:Class="VaxineApp.Views.Home.Status.Vaccine.EditVaccinePage"
+             x:DataType="ViewModel:EditVaccineViewModel"
              Shell.TabBarIsVisible="False"
              Shell.PresentationMode="Modal"
              Title="Add Vaccine">
   <ContentPage.Content>
-    <StackLayout Padding="40" Spacing="10">
+    <StackLayout Padding="40"
+                 Spacing="10">
       <DatePicker Date="{Binding Vaccine.VaccinePeriod, Mode=TwoWay}"></DatePicker>
       <Picker Title="Vaccine Status"
               SelectedItem="{Binding Vaccine.VaccineStatus, Mode=TwoWay}">

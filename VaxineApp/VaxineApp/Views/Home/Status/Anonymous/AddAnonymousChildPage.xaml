@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             x:Class="VaxineApp.Views.Home.Status.Anonymous.AddAnonymousChildPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status.Anonymous"
+             x:Class="VaxineApp.Views.Home.Status.Anonymous.AddAnonymousChildPage"
+             x:DataType="ViewModel:AddAnonymousChildViewModel"
              Shell.TabBarIsVisible="False"
              Title="Add Anonymous Child">
   <ContentPage.BindingContext>
     <ViewModel:AddAnonymousChildViewModel></ViewModel:AddAnonymousChildViewModel>
   </ContentPage.BindingContext>
-    <ContentPage.Content>
+  <ContentPage.Content>
     <StackLayout Padding="40"
                  Spacing="10"
                  x:Name="PageContent">

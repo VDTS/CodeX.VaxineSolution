@@ -30,6 +30,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
 
         // Command
         public ICommand PostCommand { private set; get; }
+        public ICommand AddLocationCommand { private set; get; }
 
         // ctor
         public AddSchoolViewModel()

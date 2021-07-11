@@ -18,6 +18,19 @@ namespace VaxineApp.ViewModels.Home.Family
     public class FamilyDetailsViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
         // Property
+        private SearchBoxVisibility isSearchVisible;
+        public SearchBoxVisibility IsSearchVisible
+        {
+            get
+            {
+                return isSearchVisible;
+            }
+            set
+            {
+                isSearchVisible = value;
+                OnPropertyChanged();
+            }
+        }
         private ObservableCollection<ChildModel> childs;
         public ObservableCollection<ChildModel> Childs
         {
@@ -76,6 +89,7 @@ namespace VaxineApp.ViewModels.Home.Family
         public ICommand CancelSelectionCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
         public ICommand GoToPutPageCommand { private set; get; }
+        public ICommand SaveAsPDFCommand { private set; get; }
 
         // ctor
         public FamilyDetailsViewModel(GetFamilyModel family)
@@ -84,6 +98,7 @@ namespace VaxineApp.ViewModels.Home.Family
             Family = family;
             SelectedChild = new ChildModel();
             Childs = new ObservableCollection<ChildModel>();
+            IsSearchVisible = SearchBoxVisibility.Expanded;
 
             // Get
             Get();
