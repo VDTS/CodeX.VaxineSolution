@@ -26,6 +26,7 @@
       <Entry Text="{Binding Child.RINo}"
              Keyboard="Numeric"
              Placeholder="{xct:Translate RiNumber}"></Entry>
+      <Label Text="Date of Birth"></Label>
       <DatePicker Date="{Binding Child.DOB, Mode=OneWayToSource}"></DatePicker>
 
       <StackLayout Orientation="Horizontal"
