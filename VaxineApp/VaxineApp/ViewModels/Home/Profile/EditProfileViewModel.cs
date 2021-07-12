@@ -1,27 +1,26 @@
-﻿using Newtonsoft.Json;
+﻿using DataAccessLib.Account;
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Windows.Input;
-using VaxineApp.AndroidNativeApi;
-using VaxineApp.Views.Home.Profile;
-using Xamarin.Forms;
-using Xamarin.Essentials;
 using System.Diagnostics;
+using System.IO;
 using System.Threading.Tasks;
-using VaxineApp.MVVMHelper;
-using DataAccessLib.Account;
+using System.Windows.Input;
 using VaxineApp.AccessShellDir.Views.Login;
-using System.Text.RegularExpressions;
+using VaxineApp.AndroidNativeApi;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using VaxineApp.Validations;
+using VaxineApp.Views.Home.Profile;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Profile
 {
     public class EditProfileViewModel : ViewModelBase
     {
+        // Validator
+        ProfileValidator ValidationRules { get; set; }
         // Property
         public ProfileModel Profile { get; set; }
 
@@ -124,6 +123,7 @@ namespace VaxineApp.ViewModels.Home.Profile
             // Property
             Profile = _profile;
             Account = new AccountManagement();
+            ValidationRules = new ProfileValidator();
 
             // Command
             PutCommand = new Command(Put);
@@ -151,7 +151,7 @@ namespace VaxineApp.ViewModels.Home.Profile
                                 await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
 
                                 string s1 = await Account.VerifyEmail(Token);
-                                if(s1 == "OK")
+                                if (s1 == "OK")
                                 {
                                     StandardMessagesDisplay.EmailVerificationSend(NewEmail);
                                 }
@@ -234,19 +234,26 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         async void Put(object obj)
         {
-            var jsonData = JsonConvert.SerializeObject(Profile);
-            var data = await DataService.Put(jsonData, $"Profile/{Profile.FId}");
-            if (data == "Submit")
+            var result = ValidationRules.Validate(Profile);
+            if (result.IsValid)
             {
-                await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
-                var route = $"//{nameof(ProfilePage)}";
-                await Shell.Current.GoToAsync(route);
+                var jsonData = JsonConvert.SerializeObject(Profile);
+                var data = await DataService.Put(jsonData, $"Profile/{Profile.FId}");
+                if (data == "Submit")
+                {
+                    await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
+                    var route = $"//{nameof(ProfilePage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+                }
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
-
         }
         async void BrowsePhoto(object sender)
         {
