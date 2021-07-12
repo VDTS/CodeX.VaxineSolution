@@ -14,6 +14,8 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 {
     public class EditAnonymousChildViewModel : ViewModelBase
     {
+        // Validator Class
+        AnonymousChildValidator AnonymousChildValidator { get; set; }
         // Property
         private AnonymousChildModel anonymousChild;
         public AnonymousChildModel AnonymousChild
@@ -33,6 +35,9 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
         public ICommand PutCommand { private set; get; }
         public EditAnonymousChildViewModel(AnonymousChildModel anonymousChild)
         {
+            // Validator
+            AnonymousChildValidator = new AnonymousChildValidator();
+
             // Property
             AnonymousChild = anonymousChild;
 
@@ -42,17 +47,26 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 
         private async void Put(object obj)
         {
-            var jsonData = JsonConvert.SerializeObject(AnonymousChild);
-            var data = await DataService.Put(jsonData, $"AnonymousChild/{Preferences.Get("TeamId", "")}/{AnonymousChild.FId}");
-            if (data == "Submit")
+            var result = AnonymousChildValidator.Validate(AnonymousChild);
+
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.EditDisplaymessage($"{AnonymousChild.FullName}'s Family ");
-                var route = $"//{nameof(AnonymousChildPage)}";
-                await Shell.Current.GoToAsync(route);
+                var jsonData = JsonConvert.SerializeObject(AnonymousChild);
+                var data = await DataService.Put(jsonData, $"AnonymousChild/{Preferences.Get("TeamId", "")}/{AnonymousChild.FId}");
+                if (data == "Submit")
+                {
+                    StandardMessagesDisplay.EditDisplaymessage($"{AnonymousChild.FullName}'s Family ");
+                    var route = $"//{nameof(AnonymousChildPage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }
