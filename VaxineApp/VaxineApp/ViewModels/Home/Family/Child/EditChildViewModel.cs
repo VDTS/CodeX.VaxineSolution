@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using Newtonsoft.Json;
+using System;
 using System.Windows.Input;
 using VaxineApp.Models;
-using VaxineApp.Views.Home;
-using VaxineApp.Views.Home.Status;
-using Xamarin.Forms;
-using Newtonsoft.Json;
-using VaxineApp.Views.Home.Family;
-using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
+using VaxineApp.Views.Home.Status;
+using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Family.Child
 {
     public class EditChildViewModel : ViewModelBase
     {
+        // Validator Class
+        ChildValidator ChildValidator { get; set; }
         // Property
         private ChildModel child;
         public ChildModel Child
@@ -38,24 +34,38 @@ namespace VaxineApp.ViewModels.Home.Family.Child
 
         public EditChildViewModel(ChildModel child, Guid familyId)
         {
+            // Objects
+            ChildValidator = new ChildValidator();
+
+            // Property
             FamilyId = familyId;
             Child = child;
+
+            // Command
             PutCommand = new Command(Put);
         }
 
         private async void Put()
         {
-            var jsonData = JsonConvert.SerializeObject(Child);
-            var data = await DataService.Put(jsonData, $"Child/{FamilyId}/{Child.FId}");
-            if (data == "Submit")
+            var result = ChildValidator.Validate(Child);
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.EditDisplaymessage(child.FullName);
-                var route = $"//{nameof(StatusPage)}";
-                await Shell.Current.GoToAsync(route);
+                var jsonData = JsonConvert.SerializeObject(Child);
+                var data = await DataService.Put(jsonData, $"Child/{FamilyId}/{Child.FId}");
+                if (data == "Submit")
+                {
+                    StandardMessagesDisplay.EditDisplaymessage(child.FullName);
+                    var route = $"//{nameof(StatusPage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

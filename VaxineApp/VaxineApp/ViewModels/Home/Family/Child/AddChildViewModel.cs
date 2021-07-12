@@ -4,7 +4,6 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
-using VaxineApp.Validations;
 using VaxineApp.Views.Home.Family;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -55,6 +54,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
             Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
             Child.Id = Guid.NewGuid();
             Child.DOB = Child.DOB.ToUniversalTime();
+
             var result = ChildValidator.Validate(Child);
             if (result.IsValid)
             {
@@ -74,7 +74,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Not valid", result.Errors[0].ErrorMessage, "OK");
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

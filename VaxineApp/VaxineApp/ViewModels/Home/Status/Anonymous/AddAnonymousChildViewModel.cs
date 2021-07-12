@@ -50,11 +50,12 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 
         private async void Post(object obj)
         {
-            var result = AnonymousChildValidator.Validate(AnonymousChildModel);
 
             AnonymousChildModel.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
             AnonymousChildModel.Id = Guid.NewGuid();
             AnonymousChildModel.DOB = AnonymousChildModel.DOB.ToUniversalTime();
+
+            var result = AnonymousChildValidator.Validate(AnonymousChildModel);
 
             if (result.IsValid)
             {
@@ -73,7 +74,7 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Not valid", result.Errors[0].ErrorMessage, "OK");
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }
