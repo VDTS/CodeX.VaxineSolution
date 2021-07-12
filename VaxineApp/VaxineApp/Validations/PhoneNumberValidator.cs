@@ -24,6 +24,10 @@ namespace VaxineApp.Validations
                     return false;
                 }
             }
+            else if (string.IsNullOrEmpty(phoneNumber))
+            {
+                return true;
+            }
             else
             {
                 return false;

@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
@@ -14,6 +11,8 @@ namespace VaxineApp.ViewModels.Home.Family
 {
     public class EditFamilyViewModel : ViewModelBase
     {
+        // Validator
+        FamilyValidator ValidationRules { get; set; }
         // Property
         private GetFamilyModel family;
         public GetFamilyModel Family
@@ -37,23 +36,39 @@ namespace VaxineApp.ViewModels.Home.Family
         {
             // Property
             Family = family;
+            ValidationRules = new FamilyValidator();
 
             // Command
             PutCommand = new Command(Put);
         }
         private async void Put()
         {
-            var jsonData = JsonConvert.SerializeObject(Family);
-            var data = await DataService.Put(jsonData, $"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
-            if (data == "Submit")
+            var result = ValidationRules.Validate(Family);
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.EditDisplaymessage($"{Family.ParentName}'s Family ");
-                var route = $"//{nameof(FamilyListPage)}";
-                await Shell.Current.GoToAsync(route);
+                if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
+                {
+                    var jsonData = JsonConvert.SerializeObject(Family);
+                    var data = await DataService.Put(jsonData, $"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
+                    if (data == "Submit")
+                    {
+                        StandardMessagesDisplay.EditDisplaymessage($"{Family.ParentName}'s Family ");
+                        var route = $"//{nameof(FamilyListPage)}";
+                        await Shell.Current.GoToAsync(route);
+                    }
+                    else
+                    {
+                        StandardMessagesDisplay.CanceledDisplayMessage();
+                    }
+                }
+                else
+                {
+                    StandardMessagesDisplay.FamilyDuplicateValidator(Family.HouseNo);
+                }
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

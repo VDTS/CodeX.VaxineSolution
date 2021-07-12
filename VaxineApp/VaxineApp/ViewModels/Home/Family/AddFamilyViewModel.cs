@@ -13,6 +13,8 @@ namespace VaxineApp.ViewModels.Home.Family
 {
     public class AddFamilyViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
+        // Validator
+        FamilyValidator ValidationRules { get; set; }
         // Property
 
         private GetFamilyModel family;
@@ -37,6 +39,7 @@ namespace VaxineApp.ViewModels.Home.Family
         public AddFamilyViewModel()
         {
             // Property
+            ValidationRules = new FamilyValidator();
             Family = new GetFamilyModel();
 
             // Command
@@ -56,43 +59,38 @@ namespace VaxineApp.ViewModels.Home.Family
 
         public async void Post()
         {
-            if (Family.HouseNo != 0)
+            Family.Id = Guid.NewGuid();
+            Family.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+
+            var result = ValidationRules.Validate(Family);
+            if (result.IsValid)
             {
-                if (PhoneNumberValidator.IsPhoneNumberValid(Family.PhoneNumber))
+                if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
                 {
-                    if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
+                    var data = JsonConvert.SerializeObject(Family);
+                    string a = await DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
+                    if (a == "OK")
                     {
-                        Family.Id = Guid.NewGuid();
-                        Family.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+                        StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
 
-                        var data = JsonConvert.SerializeObject(Family);
-                        string a = await DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
-                        if (a == "OK")
-                        {
-                            StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
-
-                            var route = $"//{nameof(FamilyListPage)}";
-                            await Shell.Current.GoToAsync(route);
-                        }
-                        else
-                        {
-                            StandardMessagesDisplay.CanceledDisplayMessage();
-                        }
+                        var route = $"//{nameof(FamilyListPage)}";
+                        await Shell.Current.GoToAsync(route);
                     }
                     else
                     {
-                        StandardMessagesDisplay.FamilyDuplicateValidator(Family.HouseNo);
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
                 {
-                    StandardMessagesDisplay.InvalidPhoneNumber();
+                    StandardMessagesDisplay.FamilyDuplicateValidator(Family.HouseNo);
                 }
             }
             else
             {
-                StandardMessagesDisplay.InvalidDataDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
+
         }
 
         public void Delete()
