@@ -12,7 +12,8 @@ namespace VaxineApp.ViewModels.Home.Area.School
 {
     public class AddSchoolViewModel : ViewModelBase
     {
-
+        // Validator
+        SchoolValidator ValidationRules { get; set; }
         // Property
         private SchoolModel school;
         public SchoolModel School
@@ -37,6 +38,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
         {
             // Property
             School = new SchoolModel();
+            ValidationRules = new SchoolValidator();
 
             // Command
             PostCommand = new Command(Post);
@@ -46,19 +48,27 @@ namespace VaxineApp.ViewModels.Home.Area.School
         {
             School.Id = Guid.NewGuid();
 
-            var data = JsonConvert.SerializeObject(School);
-
-            string a = await DataService.Post(data, $"School/{Preferences.Get("TeamId", "")}");
-            if (a == "OK")
+            var result = ValidationRules.Validate(School);
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.AddDisplayMessage(School.SchoolName);
+                var data = JsonConvert.SerializeObject(School);
+
+                string a = await DataService.Post(data, $"School/{Preferences.Get("TeamId", "")}");
+                if (a == "OK")
+                {
+                    StandardMessagesDisplay.AddDisplayMessage(School.SchoolName);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
+                var route = $"//{nameof(SchoolPage)}";
+                await Shell.Current.GoToAsync(route);
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
-            var route = $"//{nameof(SchoolPage)}";
-            await Shell.Current.GoToAsync(route);
         }
     }
 }

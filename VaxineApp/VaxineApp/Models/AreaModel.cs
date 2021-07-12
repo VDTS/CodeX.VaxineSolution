@@ -1,5 +1,7 @@
-﻿using System;
+﻿using FluentValidation;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace VaxineApp.Models
@@ -14,6 +16,17 @@ namespace VaxineApp.Models
             Id = new Guid();
         }
     }
+
+    public class ClusterValidator : AbstractValidator<ClusterModel>
+    {
+        public ClusterValidator()
+        {
+            RuleFor(c => c.ClusterName)
+                .Cascade(CascadeMode.Stop)
+                .NotEmpty().WithMessage("{PropertyName} is Empty");
+        }
+    }
+
     public class TeamModel
     {
         public string FId { get; set; }
@@ -24,6 +37,25 @@ namespace VaxineApp.Models
         public TeamModel()
         {
             Id = new Guid();
+        }
+    }
+    public class TeamValidator : AbstractValidator<TeamModel>
+    {
+        public TeamValidator()
+        {
+            RuleFor(t => t.TeamNo).NotEmpty();
+            RuleFor(t => t.SocialMobilizerId).NotEmpty();
+            RuleFor(t => t.CHWName)
+                .Cascade(CascadeMode.Stop)
+                .NotEmpty().WithMessage("{PropertyName} is Empty")
+                .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
+                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+        }
+        protected bool BeAValidName(string name)
+        {
+            name = name.Replace(" ", "");
+            name = name.Replace("-", "");
+            return name.All(Char.IsLetter);
         }
     }
     public class ClinicModel
@@ -40,6 +72,23 @@ namespace VaxineApp.Models
             Id = new Guid();
         }
     }
+    public class ClinicValidator : AbstractValidator<ClinicModel>
+    {
+        public ClinicValidator()
+        {
+            RuleFor(c => c.ClinicName)
+                .Cascade(CascadeMode.Stop)
+                .NotEmpty().WithMessage("{PropertyName} is Empty")
+                .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
+                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+        }
+        protected bool BeAValidName(string name)
+        {
+            name = name.Replace(" ", "");
+            name = name.Replace("-", "");
+            return name.All(Char.IsLetter);
+        }
+    }
     public class DoctorModel
     {
         public string FId { get; set; }
@@ -49,6 +98,22 @@ namespace VaxineApp.Models
         public DoctorModel()
         {
             Id = new Guid();
+        }
+    }
+    public class DoctorValidator : AbstractValidator<DoctorModel>
+    {
+        public DoctorValidator()
+        {
+            RuleFor(d => d.Name)
+                .NotEmpty().WithMessage("{PropertyName} is Empty")
+                .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
+                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+        }
+        protected bool BeAValidName(string name)
+        {
+            name = name.Replace(" ", "");
+            name = name.Replace("-", "");
+            return name.All(Char.IsLetter);
         }
     }
     public class InfluencerModel
@@ -62,6 +127,22 @@ namespace VaxineApp.Models
         public InfluencerModel()
         {
             Id = new Guid();
+        }
+    }
+    public class InfluencerValidator : AbstractValidator<InfluencerModel>
+    {
+        public InfluencerValidator()
+        {
+            RuleFor(i => i.Name)
+                .NotEmpty().WithMessage("{PropertyName} is Empty")
+                .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
+                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+        }
+        protected bool BeAValidName(string name)
+        {
+            name = name.Replace(" ", "");
+            name = name.Replace("-", "");
+            return name.All(Char.IsLetter);
         }
     }
     public class MasjeedModel
@@ -79,6 +160,23 @@ namespace VaxineApp.Models
             Id = new Guid();
         }
     }
+    public class MasjeedValidator : AbstractValidator<MasjeedModel>
+    {
+        public MasjeedValidator()
+        {
+            RuleFor(m => m.MasjeedName)
+                .NotEmpty().WithMessage("{PropertyName} is Empty")
+                .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
+                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+
+        }
+        protected bool BeAValidName(string name)
+        {
+            name = name.Replace(" ", "");
+            name = name.Replace("-", "");
+            return name.All(Char.IsLetter);
+        }
+    }
     public class SchoolModel
     {
         public string FId { get; set; }
@@ -90,6 +188,22 @@ namespace VaxineApp.Models
         public SchoolModel()
         {
             Id = new Guid();
+        }
+    }
+    public class SchoolValidator : AbstractValidator<SchoolModel>
+    {
+        public SchoolValidator()
+        {
+            RuleFor(s => s.SchoolName)
+                .NotEmpty().WithMessage("{PropertyName} is Empty")
+                .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
+                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+        }
+        protected bool BeAValidName(string name)
+        {
+            name = name.Replace(" ", "");
+            name = name.Replace("-", "");
+            return name.All(Char.IsLetter);
         }
     }
 }

@@ -12,6 +12,8 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 {
     public class AddDoctorViewModel : ViewModelBase
     {
+        // Validator
+        DoctorValidator ValidationRules { get; set; }
         // Property
         private DoctorModel doctor;
         public DoctorModel Doctor
@@ -36,6 +38,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         {
             // Property
             Doctor = new DoctorModel();
+            ValidationRules = new DoctorValidator();
 
             // Command
             PostCommand = new Command(Post);
@@ -44,19 +47,28 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
         private async void Post()
         {
             Doctor.Id = Guid.NewGuid();
-            var data = JsonConvert.SerializeObject(Doctor);
 
-            string a = await DataService.Post(data, $"Doctor/{Preferences.Get("TeamId", "")}");
-            if (a == "OK")
+            var result = ValidationRules.Validate(Doctor);
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.AddDisplayMessage(Doctor.Name);
+                var data = JsonConvert.SerializeObject(Doctor);
+
+                string a = await DataService.Post(data, $"Doctor/{Preferences.Get("TeamId", "")}");
+                if (a == "OK")
+                {
+                    StandardMessagesDisplay.AddDisplayMessage(Doctor.Name);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
+                var route = $"//{nameof(DoctorPage)}";
+                await Shell.Current.GoToAsync(route);
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
-            var route = $"//{nameof(DoctorPage)}";
-            await Shell.Current.GoToAsync(route);
         }
     }
 }

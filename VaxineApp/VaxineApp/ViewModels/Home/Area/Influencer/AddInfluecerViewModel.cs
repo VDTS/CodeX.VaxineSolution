@@ -12,6 +12,8 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 {
     public class AddInfluecerViewModel : ViewModelBase
     {
+        // Validator
+        InfluencerValidator ValidationRules { get; set; }
         // Property
         private InfluencerModel influencer;
         public InfluencerModel Influencer
@@ -35,6 +37,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         {
             // Property
             Influencer = new InfluencerModel();
+            ValidationRules = new InfluencerValidator();
 
             // Command
             PostCommand = new Command(Post);
@@ -44,19 +47,27 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         {
             Influencer.Id = Guid.NewGuid();
 
-            var data = JsonConvert.SerializeObject(Influencer);
-
-            string a = await DataService.Post(data, $"Influencer/{Preferences.Get("TeamId", "")}");
-            if (a == "OK")
+            var result = ValidationRules.Validate(Influencer);
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.AddDisplayMessage(Influencer.Name);
+                var data = JsonConvert.SerializeObject(Influencer);
+
+                string a = await DataService.Post(data, $"Influencer/{Preferences.Get("TeamId", "")}");
+                if (a == "OK")
+                {
+                    StandardMessagesDisplay.AddDisplayMessage(Influencer.Name);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
+                var route = $"//{nameof(InfluencerPage)}";
+                await Shell.Current.GoToAsync(route);
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
-            var route = $"//{nameof(InfluencerPage)}";
-            await Shell.Current.GoToAsync(route);
         }
     }
 }

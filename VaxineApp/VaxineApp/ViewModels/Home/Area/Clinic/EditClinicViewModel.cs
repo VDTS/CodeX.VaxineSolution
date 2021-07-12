@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
@@ -14,6 +11,8 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 {
     public class EditClinicViewModel : ViewModelBase
     {
+        // Validator
+        ClinicValidator ValidationRules { get; set; }
         // Property
         private ClinicModel clinic;
         public ClinicModel Clinic
@@ -37,6 +36,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         {
             // Property
             Clinic = clinic;
+            ValidationRules = new ClinicValidator();
 
 
             // Command
@@ -45,17 +45,25 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 
         public async void Put()
         {
-            var jsonData = JsonConvert.SerializeObject(Clinic);
-            var data = await DataService.Put(jsonData, $"Clinic/{Preferences.Get("TeamId", "")}/{Clinic.FId}");
-            if (data == "Submit")
+            var result = ValidationRules.Validate(Clinic);
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.EditDisplaymessage(Clinic.ClinicName);
-                var route = $"//{nameof(ClinicPage)}";
-                await Shell.Current.GoToAsync(route);
+                var jsonData = JsonConvert.SerializeObject(Clinic);
+                var data = await DataService.Put(jsonData, $"Clinic/{Preferences.Get("TeamId", "")}/{Clinic.FId}");
+                if (data == "Submit")
+                {
+                    StandardMessagesDisplay.EditDisplaymessage(Clinic.ClinicName);
+                    var route = $"//{nameof(ClinicPage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+                }
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }
