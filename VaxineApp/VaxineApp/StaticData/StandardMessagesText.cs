@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace VaxineApp.StaticData
+﻿namespace VaxineApp.StaticData
 {
     public static class StandardMessagesText
     {
@@ -78,6 +74,14 @@ namespace VaxineApp.StaticData
         public static string PeriodNotAvailableTitle { get; set; } = "Period not available";
         public static string PeriodNotAvailableBody { get; set; } = "You can't add vaccine now, wait for starting the period, and follow REMT message centre.";
 
+        public static string ValidationRulesViolationTitle(string input)
+        {
+            return $"Invalid {input}";
+        }
+        public static string ValidationRulesViolationBody(string body)
+        {
+            return body;
+        }
         // Account Management
         public static string EmailChangedTitle { get; set; } = "Email Updated";
         public static string EmailChangedBody(string input)
