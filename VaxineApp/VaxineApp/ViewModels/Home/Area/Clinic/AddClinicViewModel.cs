@@ -12,6 +12,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 {
     public class AddClinicViewModel : ViewModelBase
     {
+        ClinicValidator ValidationRules { get; set; }
         // Property
         private ClinicModel clinic;
         public ClinicModel Clinic
@@ -35,6 +36,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         {
             // Property
             Clinic = new ClinicModel();
+            ValidationRules = new ClinicValidator();
 
             // Command
             PostCommand = new Command(Post);
@@ -42,10 +44,11 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 
         public async void Post()
         {
-            // Validate clinic
-            if (Clinic.ClinicName != null)
+            var result = ValidationRules.Validate(Clinic);
+            Clinic.Id = new Guid();
+            
+            if (result.IsValid)
             {
-                Clinic.Id = new Guid();
                 var data = JsonConvert.SerializeObject(Clinic);
 
                 string a = await DataService.Post(data, $"Clinic/{Preferences.Get("TeamId", "")}");
@@ -63,7 +66,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
             else
             {
-                StandardMessagesDisplay.InvalidDataDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

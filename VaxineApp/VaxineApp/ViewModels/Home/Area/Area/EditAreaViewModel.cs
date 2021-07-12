@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
@@ -14,6 +11,9 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 {
     public class EditAreaViewModel : ViewModelBase
     {
+        // Validator
+        TeamValidator ValidationRules { get; set; }
+
         // Property
         public TeamModel Team { get; set; }
 
@@ -25,6 +25,8 @@ namespace VaxineApp.ViewModels.Home.Area.Area
         {
             // Property
             Team = team;
+            ValidationRules = new TeamValidator();
+
 
             // Command
             PutCommand = new Command(Put);
@@ -32,17 +34,25 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
         private async void Put(object obj)
         {
-            var jsonData = JsonConvert.SerializeObject(Team);
-            var data = await DataService.Put(jsonData, $"Team/{Preferences.Get("ClusterId", "")}/{Team.FId}");
-            if (data == "Submit")
+            var result = ValidationRules.Validate(Team);
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.EditDisplaymessage(Team.CHWName);
-                var route = $"//{nameof(AreaPage)}";
-                await Shell.Current.GoToAsync(route);
+                var jsonData = JsonConvert.SerializeObject(Team);
+                var data = await DataService.Put(jsonData, $"Team/{Preferences.Get("ClusterId", "")}/{Team.FId}");
+                if (data == "Submit")
+                {
+                    StandardMessagesDisplay.EditDisplaymessage(Team.CHWName);
+                    var route = $"//{nameof(AreaPage)}";
+                    await Shell.Current.GoToAsync(route);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

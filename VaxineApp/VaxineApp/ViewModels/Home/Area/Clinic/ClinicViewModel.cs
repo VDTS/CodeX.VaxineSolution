@@ -2,17 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
-using VaxineApp.RealCacheLib;
 using VaxineApp.Routes;
 using VaxineApp.StaticData;
-using VaxineApp.ViewModels.Home.Area.Area;
 using VaxineApp.Views.Home.Area.Clinic;
-using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

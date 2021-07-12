@@ -12,6 +12,8 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 {
     public class AddMasjeedViewModel : ViewModelBase
     {
+        // Validator
+        MasjeedValidator ValidationRules { get; set; }
         // Property
         private MasjeedModel masjeed;
         public MasjeedModel Masjeed
@@ -36,6 +38,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         {
             // Property
             Masjeed = new MasjeedModel();
+            ValidationRules = new MasjeedValidator();
 
             // Command
             PostCommand = new Command(Post);
@@ -44,20 +47,27 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         private async void Post()
         {
             Masjeed.Id = Guid.NewGuid();
-
-            var data = JsonConvert.SerializeObject(Masjeed);
-
-            string a = await DataService.Post(data, $"Masjeed/{Preferences.Get("TeamId", "")}");
-            if (a == "OK")
+            var result = ValidationRules.Validate(Masjeed);
+            if (result.IsValid)
             {
-                StandardMessagesDisplay.AddDisplayMessage(Masjeed.MasjeedName);
+                var data = JsonConvert.SerializeObject(Masjeed);
+
+                string a = await DataService.Post(data, $"Masjeed/{Preferences.Get("TeamId", "")}");
+                if (a == "OK")
+                {
+                    StandardMessagesDisplay.AddDisplayMessage(Masjeed.MasjeedName);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
+                var route = $"//{nameof(MasjeedPage)}";
+                await Shell.Current.GoToAsync(route);
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
-            var route = $"//{nameof(MasjeedPage)}";
-            await Shell.Current.GoToAsync(route);
         }
     }
 }
