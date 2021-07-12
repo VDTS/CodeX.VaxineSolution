@@ -62,7 +62,7 @@ namespace DataAccessLib.Account
             {
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), ChangeAccountPasswordRequestUri))
                 {
-                    var r = new Root() { idToken = token, password = password, returnSecureToken = true };
+                    var r = new ChangeAccountPasswordModel() { idToken = token, password = password, returnSecureToken = true };
                     string s1 = JsonConvert.SerializeObject(r);
                     request.Content = new StringContent(s1);
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
@@ -85,7 +85,7 @@ namespace DataAccessLib.Account
             {
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), ChangeEmailRequestUri))
                 {
-                    var r = new EmailRoot() { idToken = token, email = email, returnSecureToken = true };
+                    var r = new ChangeEmailModel() { idToken = token, email = email, returnSecureToken = true };
                     string s1 = JsonConvert.SerializeObject(r);
                     request.Content = new StringContent(s1);
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
@@ -104,7 +104,7 @@ namespace DataAccessLib.Account
         }
         public async Task<string> SignIn(string email, string password)
         {
-            var identityModel = new SignInModel() { email = email, password = password, returnSecureToken = true };
+            var identityModel = new AccountModels() { email = email, password = password, returnSecureToken = true };
             using (var httpClient = new HttpClient())
             {
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), SignInRequestUri))
@@ -154,7 +154,7 @@ namespace DataAccessLib.Account
         {
             using (var httpClient = new HttpClient())
             {
-                ResetCodeRoot resetCodeRoot = new ResetCodeRoot() { email = email, requestType = "PASSWORD_RESET" };
+                SendPasswordResetCodeModel resetCodeRoot = new SendPasswordResetCodeModel() { email = email, requestType = "PASSWORD_RESET" };
                 var resetCodeRootJson = JsonConvert.SerializeObject(resetCodeRoot);
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), SendPasswordResetCodeRequestUri))
                 {
@@ -175,7 +175,7 @@ namespace DataAccessLib.Account
         }
         public async Task<string> VerifyPasswordResetCode(string resetCode)
         {
-            ResetCodeReturnRoot resetCodeRoot = new ResetCodeReturnRoot() { oobCode = resetCode };
+            VerifyPasswordResetCodeModel resetCodeRoot = new VerifyPasswordResetCodeModel() { oobCode = resetCode };
             var JsonData = JsonConvert.SerializeObject(resetCodeRoot);
             using (var httpClient = new HttpClient())
             {
@@ -198,7 +198,7 @@ namespace DataAccessLib.Account
         }
         public async Task<string> ConfirmPasswordReset(string resetCode, string NewPassword)
         {
-            ConfirmPasswordRoot confirmPasswordRoot = new ConfirmPasswordRoot() { oobCode = resetCode, newPassword = NewPassword };
+            ConfirmPasswordResetModel confirmPasswordRoot = new ConfirmPasswordResetModel() { oobCode = resetCode, newPassword = NewPassword };
             var jsonData = JsonConvert.SerializeObject(confirmPasswordRoot);
             using (var httpClient = new HttpClient())
             {
