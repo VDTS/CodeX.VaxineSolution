@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace VaxineApp.StaticData
 {
@@ -94,6 +91,10 @@ namespace VaxineApp.StaticData
         public async static void PasswordChagned()
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.PasswordChangedTitle, StandardMessagesText.PasswordChangedBody, "OK");
+        }
+        public async static void ValidationRulesViolation(string title, string body)
+        {
+            await App.Current.MainPage.DisplayAlert(StandardMessagesText.ValidationRulesViolationTitle(title), StandardMessagesText.ValidationRulesViolationBody(body), "OK");
         }
     }
 }
