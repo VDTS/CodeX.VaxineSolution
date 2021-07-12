@@ -25,27 +25,14 @@
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
+      <Label Text="Date of Birth"></Label>
       <DatePicker Date="{Binding AnonymousChildModel.DOB, Mode=OneWayToSource}"></DatePicker>
       <Picker Title="Vaccine Status"
               SelectedItem="{Binding AnonymousChildModel.VaccineStatus, Mode=TwoWay}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
             <x:String>Pluse</x:String>
-            <x:String>CirclePlus</x:String>
-            <x:String>V</x:String>
-            <x:String>CircleV</x:String>
-            <x:String>O</x:String>
-            <x:String>Blank</x:String>
-            <x:String>NSS</x:String>
-            <x:String>NSSPlus</x:String>
-            <x:String>NSSV</x:String>
-            <x:String>FMPlus</x:String>
-            <x:String>FMV</x:String>
-            <x:String>RRCPlus</x:String>
-            <x:String>RRCV</x:String>
-            <x:String>MRCPlus</x:String>
-            <x:String>MRCV</x:String>
-            <x:String>RightVector</x:String>
+            <x:String>This list needs fix</x:String>
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
