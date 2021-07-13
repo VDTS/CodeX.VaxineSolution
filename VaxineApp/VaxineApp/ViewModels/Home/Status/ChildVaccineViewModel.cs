@@ -127,7 +127,7 @@ namespace VaxineApp.ViewModels.Home.Status
                     if (data == "Deleted")
                     {
                         VaccineList.Remove(CurrentVaccine);
-                        CurrentVaccine = null;
+                        CurrentVaccine = new VaccineModel();
                     }
                     else
                     {
@@ -197,7 +197,7 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void GoToPutPage()
         {
-            if (CurrentVaccine.FId != null)
+            if (CurrentVaccine.FId != null && CurrentVaccine.VaccinePeriod != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(CurrentVaccine);
                 var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}&ChildId={Child.Id}";
