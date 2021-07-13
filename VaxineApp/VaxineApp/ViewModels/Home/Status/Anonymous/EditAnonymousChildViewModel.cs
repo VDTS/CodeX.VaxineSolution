@@ -51,6 +51,11 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 
             if (result.IsValid)
             {
+                var time = DateTime.Now;
+                DateTime dateTime = new DateTime(AnonymousChild.DOB.Year, AnonymousChild.DOB.Month, AnonymousChild.DOB.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+                AnonymousChild.DOB = dateTime;
+
                 var jsonData = JsonConvert.SerializeObject(AnonymousChild);
                 var data = await DataService.Put(jsonData, $"AnonymousChild/{Preferences.Get("TeamId", "")}/{AnonymousChild.FId}");
                 if (data == "Submit")

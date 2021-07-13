@@ -53,7 +53,11 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 
             AnonymousChildModel.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
             AnonymousChildModel.Id = Guid.NewGuid();
-            AnonymousChildModel.DOB = AnonymousChildModel.DOB.ToUniversalTime();
+
+            var time = DateTime.Now;
+            DateTime dateTime = new DateTime(AnonymousChildModel.DOB.Year, AnonymousChildModel.DOB.Month, AnonymousChildModel.DOB.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+            AnonymousChildModel.DOB = dateTime;
 
             var result = AnonymousChildValidator.Validate(AnonymousChildModel);
 
