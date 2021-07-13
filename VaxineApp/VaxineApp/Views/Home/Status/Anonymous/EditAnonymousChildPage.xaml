@@ -23,7 +23,7 @@
         </Picker.ItemsSource>
       </Picker>
       <Label Text="Date of Birth"></Label>
-      <DatePicker Date="{Binding AnonymousChild.DOB, Mode=OneWayToSource}"></DatePicker>
+      <DatePicker Date="{Binding AnonymousChild.DOB}"></DatePicker>
       <Picker Title="Vaccine Status"
               SelectedItem="{Binding AnonymousChild.VaccineStatus, Mode=TwoWay}">
         <Picker.ItemsSource>
