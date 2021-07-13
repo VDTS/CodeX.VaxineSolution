@@ -20,8 +20,8 @@
               SelectedItem="{Binding AnonymousChildModel.Gender, Mode=OneWayToSource}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
-            <x:String>{xct:Translate Male}</x:String>
-            <x:String>{xct:Translate Female}</x:String>
+            <x:String>Male</x:String>
+            <x:String>Female</x:String>
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
