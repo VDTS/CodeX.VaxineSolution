@@ -145,6 +145,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                     Preferences.Set("ClusterId", clinic.ClusterId);
                     Preferences.Set("TeamId", clinic.TeamId);
                     Preferences.Set("UserId", clinic.Id.ToString());
+                    Preferences.Set("UserName", clinic.FullName);
+                    Preferences.Set("UserRole", clinic.Role);
                     await Xamarin.Essentials.SecureStorage.SetAsync("Role", clinic.Role);
                 }
                 if (RememberMe == true)
