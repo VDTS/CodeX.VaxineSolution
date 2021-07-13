@@ -238,7 +238,7 @@ namespace VaxineApp.ViewModels.Home.Profile
             if (result.IsValid)
             {
                 var jsonData = JsonConvert.SerializeObject(Profile);
-                var data = await DataService.Put(jsonData, $"Profile/{Profile.FId}");
+                var data = await DataService.Put(jsonData, $"Profile/{Preferences.Get("UserLocalId", "")}");
                 if (data == "Submit")
                 {
                     await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");

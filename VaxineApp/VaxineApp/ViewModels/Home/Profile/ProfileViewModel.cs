@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
@@ -31,9 +32,24 @@ namespace VaxineApp.ViewModels.Home.Profile
                 OnPropertyChanged();
             }
         }
+        private bool isBusy;
+        public bool IsBusy
+        {
+
+            get
+            {
+                return isBusy;
+            }
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
 
 
         // Command
+        public ICommand PullRefreshCommand { private set; get; }
         public ICommand GoToPutPageCommand { private set; get; }
 
 
@@ -49,6 +65,7 @@ namespace VaxineApp.ViewModels.Home.Profile
 
             // Command
             GoToPutPageCommand = new Command(GoToPutPage);
+            PullRefreshCommand = new Command(Refresh);
         }
 
         private async void GoToPutPage()
@@ -60,34 +77,47 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public async void Get()
         {
-            var data = await DataService.Get($"Profile");
+            var data = await DataService.Get($"Profile/{Preferences.Get("UserLocalId", "")}");
+
             if (data != "null" && data != "Error")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
-                foreach (KeyValuePair<string, ProfileModel> item in clinic)
+                var clinic = JsonConvert.DeserializeObject<ProfileModel>(data);
+
+                if (Preferences.Get("UserLocalId", "") == clinic.LocalId)
                 {
-                    if (item.Value.LocalId == Preferences.Get("UserLocalId", ""))
+                    Profile = new ProfileModel
                     {
-                        Profile = new ProfileModel
-                        {
-                            FId = item.Key.ToString(),
-                            ClusterId = item.Value.ClusterId,
-                            LocalId = item.Value.LocalId,
-                            Role = item.Value.Role, 
-                            TeamId = item.Value.TeamId,
-                            Id = item.Value.Id, 
-                            FullName = item.Value.FullName,
-                            Age = item.Value.Age,
-                            FatherOrHusbandName = item.Value.FatherOrHusbandName,
-                            Gender = item.Value.Gender
-                        };
-                    }
+                        ClusterId = clinic.ClusterId,
+                        LocalId = clinic.LocalId,
+                        Role = clinic.Role,
+                        TeamId = clinic.TeamId,
+                        Id = clinic.Id,
+                        FullName = clinic.FullName,
+                        Age = clinic.Age,
+                        FatherOrHusbandName = clinic.FatherOrHusbandName,
+                        Gender = clinic.Gender
+                    };
                 }
             }
             else
             {
                 StandardMessagesDisplay.NoDataDisplayMessage();
             }
+        }
+
+        public async void Refresh()
+        {
+            IsBusy = true;
+
+            await Task.Delay(2000);
+            Clear();
+            Get();
+
+            IsBusy = false;
+        }
+        public void Clear()
+        {
+            Profile = new ProfileModel();
         }
     }
 }
