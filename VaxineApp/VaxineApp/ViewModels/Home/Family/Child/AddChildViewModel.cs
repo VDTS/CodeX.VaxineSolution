@@ -53,7 +53,11 @@ namespace VaxineApp.ViewModels.Home.Family.Child
         {
             Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
             Child.Id = Guid.NewGuid();
-            Child.DOB = Child.DOB.ToUniversalTime();
+
+            var time = DateTime.Now;
+            DateTime dateTime = new DateTime(Child.DOB.Year, Child.DOB.Month, Child.DOB.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+            Child.DOB = dateTime;
 
             var result = ChildValidator.Validate(Child);
             if (result.IsValid)
