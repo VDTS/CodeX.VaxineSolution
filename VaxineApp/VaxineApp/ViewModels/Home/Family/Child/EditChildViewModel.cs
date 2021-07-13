@@ -50,6 +50,11 @@ namespace VaxineApp.ViewModels.Home.Family.Child
             var result = ChildValidator.Validate(Child);
             if (result.IsValid)
             {
+                var time = DateTime.Now;
+                DateTime dateTime = new DateTime(Child.DOB.Year, Child.DOB.Month, Child.DOB.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+                Child.DOB = dateTime;
+
                 var jsonData = JsonConvert.SerializeObject(Child);
                 var data = await DataService.Put(jsonData, $"Child/{FamilyId}/{Child.FId}");
                 if (data == "Submit")
