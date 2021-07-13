@@ -9,6 +9,7 @@ using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
+using VaxineApp.Validations;
 using VaxineApp.Views.Home.Status;
 using VaxineApp.Views.Home.Status.Vaccine;
 using Xamarin.Forms;
@@ -117,7 +118,7 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void Delete()
         {
-            if (CurrentVaccine.FId != null)
+            if (CurrentVaccine.FId != null && CurrentVaccine.VaccinePeriod != null)
             {
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(CurrentVaccine.VaccineStatus);
                 if (isDeleteAccepted)
@@ -126,7 +127,7 @@ namespace VaxineApp.ViewModels.Home.Status
                     if (data == "Deleted")
                     {
                         VaccineList.Remove(CurrentVaccine);
-                        CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+                        CurrentVaccine = null;
                     }
                     else
                     {
@@ -164,7 +165,12 @@ namespace VaxineApp.ViewModels.Home.Status
                         }
                         );
                 }
-                CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+                DateTime VaccinePeriod = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault().VaccinePeriod;
+
+                if (VaccinePeriodValidator.IsPeriodAvailable(VaccinePeriod))
+                {
+                    CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+                }
             }
             else
             {
