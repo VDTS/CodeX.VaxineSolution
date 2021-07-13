@@ -114,7 +114,9 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                     string Token = await Account.SignIn(InputUserEmail, InputUserPassword);
                     if (Token != "Error" && Token != "null")
                     {
-                        LoadProfile(InputUserEmail.ToLower()); ;
+                        Preferences.Set("ProfileEmail", InputUserEmail.ToLower());
+
+                        LoadProfile(Preferences.Get("UserLocalId", ""));
                     }
                     else
                     {
@@ -130,25 +132,20 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
         }
 
-        private async void LoadProfile(string email)
+        private async void LoadProfile(string localId)
         {
-            Preferences.Set("ProfileEmail", email);
 
-            sqliteDataCache.Initialize(email);
-            var data = await DataService.Get($"Profile");
+            var data = await DataService.Get($"Profile/{localId}");
             if (data != "Error" && data != "null")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ProfileModel>>(data);
-                foreach (KeyValuePair<string, ProfileModel> item in clinic)
+                var clinic = JsonConvert.DeserializeObject<ProfileModel>(data);
+
+                if (clinic.LocalId == Preferences.Get("UserLocalId", ""))
                 {
-                    if (item.Value.LocalId == Preferences.Get("UserLocalId", ""))
-                    {
-                        sqliteDataCache.InsertData(new Data { Key = "Profile", Value = JsonConvert.SerializeObject(item.Value) });
-                        Preferences.Set("ClusterId", item.Value.ClusterId);
-                        Preferences.Set("TeamId", item.Value.TeamId);
-                        Preferences.Set("UserId", item.Value.Id.ToString());
-                        await Xamarin.Essentials.SecureStorage.SetAsync("Role", item.Value.Role);
-                    }
+                    Preferences.Set("ClusterId", clinic.ClusterId);
+                    Preferences.Set("TeamId", clinic.TeamId);
+                    Preferences.Set("UserId", clinic.Id.ToString());
+                    await Xamarin.Essentials.SecureStorage.SetAsync("Role", clinic.Role);
                 }
                 if (RememberMe == true)
                 {
