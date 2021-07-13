@@ -55,6 +55,11 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
                 Vaccine.Id = Guid.NewGuid();
                 Vaccine.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
 
+                var time = DateTime.Now;
+                DateTime dateTime = new DateTime(Vaccine.VaccinePeriod.Year, Vaccine.VaccinePeriod.Month, Vaccine.VaccinePeriod.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+                Vaccine.VaccinePeriod = dateTime;
+
                 var data = JsonConvert.SerializeObject(Vaccine);
 
                 string a = await DataService.Post(data, $"Vaccine/{Child.Id}");

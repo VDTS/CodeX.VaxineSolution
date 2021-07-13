@@ -51,7 +51,11 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
         private async void Put()
         {
             // Changing date to UTC time
-            Vaccine.VaccinePeriod.ToFileTimeUtc();
+            var time = DateTime.Now;
+            DateTime dateTime = new DateTime(Vaccine.VaccinePeriod.Year, Vaccine.VaccinePeriod.Month, Vaccine.VaccinePeriod.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+            Vaccine.VaccinePeriod = dateTime;
+
             var jsonData = JsonConvert.SerializeObject(Vaccine);
             var data = await DataService.Put(jsonData, $"Vaccine/{ChildId}/{Vaccine.FId}");
             if (data == "Submit")
