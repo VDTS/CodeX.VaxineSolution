@@ -57,10 +57,10 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                 AnonymousChild.DOB = dateTime;
 
                 var jsonData = JsonConvert.SerializeObject(AnonymousChild);
-                var data = await DataService.Put(jsonData, $"AnonymousChild/{Preferences.Get("TeamId", "")}/{AnonymousChild.FId}");
+                var data = await DataService.Put(jsonData, $"AnonymousChild/{Preferences.Get("TeamId", "")}/{AnonymousChild.Type}/{AnonymousChild.FId}");
                 if (data == "Submit")
                 {
-                    StandardMessagesDisplay.EditDisplaymessage($"{AnonymousChild.FullName}'s Family ");
+                    StandardMessagesDisplay.EditDisplaymessage($"{AnonymousChild.FullName}");
                     var route = $"//{nameof(AnonymousChildPage)}";
                     await Shell.Current.GoToAsync(route);
                 }

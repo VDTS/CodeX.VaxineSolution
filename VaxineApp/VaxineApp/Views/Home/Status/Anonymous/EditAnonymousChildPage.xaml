@@ -24,15 +24,12 @@
       </Picker>
       <Label Text="Date of Birth"></Label>
       <DatePicker Date="{Binding AnonymousChild.DOB}"></DatePicker>
-      <Picker Title="Vaccine Status"
-              SelectedItem="{Binding AnonymousChild.VaccineStatus, Mode=TwoWay}">
-        <Picker.ItemsSource>
-          <x:Array Type="{x:Type x:String}">
-            <x:String>Pluse</x:String>
-            <x:String>This list needs fix</x:String>
-          </x:Array>
-        </Picker.ItemsSource>
-      </Picker>
+
+      <StackLayout Orientation="Horizontal">
+        <CheckBox IsChecked="{Binding AnonymousChild.IsVaccined, Mode=TwoWay}"
+                  IsEnabled="False" />
+        <Label Text="Vaccine Status"></Label>
+      </StackLayout>
       <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"

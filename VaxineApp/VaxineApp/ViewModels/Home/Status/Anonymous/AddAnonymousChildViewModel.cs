@@ -64,7 +64,7 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
             if (result.IsValid)
             {
                 var data = JsonConvert.SerializeObject(AnonymousChildModel);
-                string a = await DataService.Post(data, $"AnonymousChild/{Preferences.Get("TeamId", "")}");
+                string a = await DataService.Post(data, $"AnonymousChild/{Preferences.Get("TeamId", "")}/{AnonymousChildModel.Type}");
                 if (a == "OK")
                 {
                     StandardMessagesDisplay.AddDisplayMessage(AnonymousChildModel.FullName);

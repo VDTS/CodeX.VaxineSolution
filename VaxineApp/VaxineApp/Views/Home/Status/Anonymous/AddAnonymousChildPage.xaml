@@ -27,15 +27,22 @@
       </Picker>
       <Label Text="Date of Birth"></Label>
       <DatePicker Date="{Binding AnonymousChildModel.DOB, Mode=OneWayToSource}"></DatePicker>
-      <Picker Title="Vaccine Status"
-              SelectedItem="{Binding AnonymousChildModel.VaccineStatus, Mode=TwoWay}">
+      <Picker Title="Type"
+              SelectedItem="{Binding AnonymousChildModel.Type, Mode=OneWayToSource}">
         <Picker.ItemsSource>
           <x:Array Type="{x:Type x:String}">
-            <x:String>Pluse</x:String>
-            <x:String>This list needs fix</x:String>
+            <x:String>Guest</x:String>
+            <x:String>IDP</x:String>
+            <x:String>Refugee</x:String>
+            <x:String>Return</x:String>
           </x:Array>
         </Picker.ItemsSource>
       </Picker>
+      <StackLayout Orientation="Horizontal">
+        <CheckBox IsChecked="{Binding AnonymousChildModel.IsVaccined, Mode=TwoWay}"
+                  IsEnabled="False" />
+        <Label Text="Vaccine Status"></Label>
+      </StackLayout>
       <Button Text="{xct:Translate Save}"
               TranslationY="50"
               WidthRequest="130"
