@@ -46,7 +46,7 @@
             <Label Grid.Column="0"
                    Text="{xct:Translate ChildName}"></Label>
             <Label Grid.Column="1"
-                   Text="{xct:Translate VaccineMark}"></Label>
+                   Text="Type"></Label>
           </Grid>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
@@ -59,7 +59,7 @@
               <Label Grid.Column="0"
                      Text="{Binding FullName}"></Label>
               <Label Grid.Column="1"
-                     Text="{Binding VaccineStatus}"></Label>
+                     Text="{Binding Type}"></Label>
             </Grid>
           </DataTemplate>
         </CollectionView.ItemTemplate>

@@ -13,11 +13,13 @@ namespace VaxineApp.Models
         public string FullName { get; set; }
         public DateTime DOB { get; set; }
         public string Gender { get; set; }
-        public string VaccineStatus { get; set; }
+        public string Type { get; set; }
+        public bool IsVaccined { get; set; }
         public Guid RegisteredBy { get; set; }
         public AnonymousChildModel()
         {
             Id = new Guid();
+            IsVaccined = true;
         }
     }
     public class AnonymousChildValidator : AbstractValidator<AnonymousChildModel>
@@ -30,12 +32,13 @@ namespace VaxineApp.Models
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
                 .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
             RuleFor(c => c.Gender).NotEmpty();
+            RuleFor(c => c.Type).NotEmpty();
             RuleFor(c => c.RegisteredBy).NotEmpty();
             RuleFor(c => c.DOB)
                 .Must(BeAValidDateOfBorn)
                 .WithMessage("Child must be under 5");
-            RuleFor(c => c.VaccineStatus)
-                .NotEmpty().WithMessage("Add vaccine mark");
+            RuleFor(c => c.IsVaccined)
+                .NotEmpty().WithMessage("Can't add without adding vaccine");
         }
 
         protected bool BeAValidName(string name)
