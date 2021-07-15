@@ -24,67 +24,278 @@
     <RefreshView  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                   RefreshColor="#2196f3"
                   Command="{Binding PullRefreshCommand}">
-      <ScrollView Padding="20">
-        <Grid>
+      <ScrollView Padding="5">
+        <Grid Padding="5">
           <Grid.RowDefinitions>
-            <RowDefinition Height="0.07*"></RowDefinition>
             <RowDefinition Height="0.2*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
           </Grid.RowDefinitions>
-          <StackLayout Grid.Row="0"
-                       Orientation="Horizontal"
-                       Spacing="30">
-            <Label Text="{xct:Translate TeamNo}"></Label>
-            <Label Text="{xct:Translate SocialMobilizerId}"></Label>
-            <Label Text="{xct:Translate ChwName}"></Label>
-          </StackLayout>
-          <StackLayout Grid.Row="1"
-                       Orientation="Horizontal"
-                       Spacing="70">
-            <Label FontSize="Large"
-                   Text="{Binding Team.TeamNo}"></Label>
-            <Label FontSize="Large"
-                   Text="{Binding Team.SocialMobilizerId}"></Label>
-            <Label FontSize="Large"
-                   Text="{Binding Team.CHWName}"></Label>
-          </StackLayout>
-          <StackLayout Grid.Row="2">
-            <StackLayout>
-              <Label Text="{xct:Translate TotalHouseholds}"></Label>
-              <Label FontSize="Large"
-                     Text="{Binding TotalHouseholds}"></Label>
+
+          <Frame Grid.Row="0"
+                 Padding="15,15,15,15"
+                 WidthRequest="50"
+                 HeightRequest="50"
+                 BackgroundColor="{StaticResource CardHeader}"
+                 HasShadow="True"
+                 CornerRadius="10"
+                 xct:TouchEffect.AnimationDuration="250"
+                 xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                 xct:TouchEffect.PressedScale="0.8"
+                 xct:TouchEffect.PressedOpacity="0.6">
+            <Frame.Content>
+              <Grid>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="0.5*"></RowDefinition>
+                  <RowDefinition Height="0.5*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Orientation="Horizontal" Spacing="30">
+                  <Label  FontSize="Micro"
+                          Grid.Row="0"
+                          TextColor="White"
+                          Text="{xct:Translate TeamNo}"></Label>
+                  <Label  FontSize="Micro"
+                          Grid.Row="0"
+                          TextColor="White"
+                          Text="SM ID"></Label>
+                  <Label  FontSize="Micro"
+                          Grid.Row="0"
+                          TextColor="White"
+                          Text="{xct:Translate ChwName}"></Label>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="65">
+                <Label Grid.Row="1" TextColor="White"
+                       Text="{Binding Team.TeamNo}"></Label>
+
+                  <Label  Grid.Row="1"
+                          TextColor="White"
+                          Text="{Binding Team.SocialMobilizerId}"></Label>
+
+                  <Label Grid.Row="1"
+                         Margin="-25, 0, 0, 0"
+                         TextColor="White"
+                         Text="{Binding Team.CHWName}"></Label>
+                </StackLayout>
+              </Grid>
+            </Frame.Content>
+          </Frame>
+          
+          <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.5*"></ColumnDefinition>
+              <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0">
+              <Frame Grid.Column="0"
+                Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label FontSize="Micro" Text="{xct:Translate TotalHouseholds}"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalHouseholds}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.SpringIn}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label  FontSize="Micro"
+                            Text="{xct:Translate TotalChilds}"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalChildren}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+              <Frame Grid.Column="0"
+                       Padding="15,15,15,15"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                     BackgroundColor="{StaticResource Card}"
+                       HasShadow="True"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                  <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label  FontSize="Micro"
+                            Text="TotalMasjeeds"></Label>
+                    <Label FontSize="Large"
+                             Text="{Binding TotalMasjeeds}"></Label>
+                    </StackLayout>
+                  </Frame.Content>
+                </Frame>
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label FontSize="Micro" Text="{xct:Translate TotalSchools}"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalSchools}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     HasShadow="True"
+                     BackgroundColor="{StaticResource Card}"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+              
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label  FontSize="Micro" Text="{xct:Translate TotalInfluencers}"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalInfluencers}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
             </StackLayout>
-            <StackLayout>
-              <Label Text="{xct:Translate TotalChilds}"></Label>
-              <Label FontSize="Large"
-                     Text="{Binding TotalChildren}"></Label>
+
+            <StackLayout Grid.Column="1">
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label  FontSize="Micro" Text="{xct:Translate TotalClinics}"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalClinics}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+               
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label  FontSize="Micro" Text="{xct:Translate TotalDoctors}"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalDoctors}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     HasShadow="True"
+                     BackgroundColor="{StaticResource Card}"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+               
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label  FontSize="Micro" Text="Refugee Childs"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalClinics}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label  FontSize="Micro" Text="Return Childs"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalDoctors}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="10"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label  FontSize="Micro" Text="IDP Childs"></Label>
+                    <Label FontSize="Large"
+                           Text="{Binding TotalDoctors}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
             </StackLayout>
-            <StackLayout>
-              <Label Text="TotalMasjeeds"></Label>
-              <Label FontSize="Large"
-                     Text="{Binding TotalMasjeeds}"></Label>
-            </StackLayout>
-            <StackLayout>
-              <Label Text="{xct:Translate TotalSchools}"></Label>
-              <Label FontSize="Large"
-                     Text="{Binding TotalSchools}"></Label>
-            </StackLayout>
-            <StackLayout>
-              <Label Text="{xct:Translate TotalInfluencers}"></Label>
-              <Label FontSize="Large"
-                     Text="{Binding TotalInfluencers}"></Label>
-            </StackLayout>
-            <StackLayout>
-              <Label Text="{xct:Translate TotalClinics}"></Label>
-              <Label FontSize="Large"
-                     Text="{Binding TotalClinics}"></Label>
-            </StackLayout>
-            <StackLayout>
-              <Label Text="{xct:Translate TotalDoctors}"></Label>
-              <Label FontSize="Large"
-                     Text="{Binding TotalDoctors}"></Label>
-            </StackLayout>
-          </StackLayout>
+          </Grid>
         </Grid>
       </ScrollView>
     </RefreshView>
