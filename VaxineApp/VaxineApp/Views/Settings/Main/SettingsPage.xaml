@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:localFont="clr-namespace:VaxineApp.Font"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.Main"
              x:DataType="ViewModel:SettingsViewModel"
              x:Class="VaxineApp.Views.Settings.Main.SettingsPage"
@@ -30,143 +31,198 @@
                    Spacing="20"
                    Padding="0, 0, 20, 0">
         <Label TextColor="#2196f3"
-               Text=""
-               FontSize="25"
-               FontFamily="SegoeMDL2"></Label>
+               Text="{x:Static localFont:MaterialDesignIcons.TextBoxSearch}"
+               FontFamily="MaterialIcons"
+               FontSize="25"></Label>
         <Label TextColor="#2196f3"
-               Text=""
-               FontSize="25"
-               FontFamily="SegoeMDL2">
+               Text="{x:Static localFont:MaterialDesignIcons.AccountCircle}"
+               FontFamily="MaterialIcons"
+               FontSize="25">
           <Label.GestureRecognizers>
             <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}"></TapGestureRecognizer>
           </Label.GestureRecognizers>
         </Label>
       </StackLayout>
-      <ScrollView Grid.Row="2"
-                  Padding="25">
+      
+      <ScrollView Grid.Row="2">
         <StackLayout Orientation="Vertical"
-                     Spacing="40">
-          <StackLayout Spacing="20">
+                     Spacing="10" Padding="10">
 
-            <StackLayout Orientation="Horizontal"
-                         Spacing="30">
-              <Label FontSize="30"
-                     Text=""
-                     TextColor="#2196f3"
-                     FontFamily="SegoeMDL2"></Label>
-              <Label TextColor="Black"
-                     FontSize="20"
-                     Text="{xct:Translate Font}">
-                <Label.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding FontPageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-              </Label>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal"
-                         Spacing="30">
-              <Label FontSize="30"
-                     Text=""
-                     TextColor="#2196f3"
-                     FontFamily="SegoeMDL2"></Label>
-              <Label TextColor="Black"
-                     FontSize="20"
-                     Text="{xct:Translate Themes}">
-                <Label.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding ThemesPageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-              </Label>
-            </StackLayout>
+          <StackLayout Padding="0,2,0,0">
+            <Frame
+                   Padding="15,15,15,15"
+                   HeightRequest="80"
+                   BackgroundColor="{StaticResource Card}"
+                   HasShadow="True"
+                   CornerRadius="15"
+              >
+              <Frame.Content>
+                <StackLayout Spacing="20">
+
+                  <StackLayout Orientation="Horizontal"
+                               Spacing="30">
+                    <Label FontSize="30"
+                           Text=""
+                           TextColor="#2196f3"
+                           FontFamily="SegoeMDL2"></Label>
+                    <Label TextColor="Black"
+                           FontSize="20"
+                           Text="{xct:Translate Font}">
+                    </Label>
+                    <StackLayout.GestureRecognizers>
+                      <TapGestureRecognizer Command="{Binding FontPageCommand}"></TapGestureRecognizer>
+
+                    </StackLayout.GestureRecognizers>
+                  </StackLayout>
+                  <StackLayout Orientation="Horizontal"
+                               Spacing="30">
+                    <Label FontSize="30"
+                           Text=""
+                           TextColor="#2196f3"
+                           FontFamily="SegoeMDL2"></Label>
+                    <Label TextColor="Black"
+                           FontSize="20"
+                           Text="{xct:Translate Themes}">
+                      <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ThemesPageCommand}"></TapGestureRecognizer>
+                      </Label.GestureRecognizers>
+                    </Label>
+                  </StackLayout>
+                  
+                </StackLayout>
+              </Frame.Content>
+            </Frame>
           </StackLayout>
-          <StackLayout Spacing="20">
-            <StackLayout Orientation="Horizontal"
-                         Spacing="30">
-              <Label FontSize="30"
-                     Text=""
-                     TextColor="#2196f3"
-                     FontFamily="SegoeMDL2"></Label>
-              <Label TextColor="Black"
-                     FontSize="20"
-                     Text="{xct:Translate Language}">
-                <Label.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding LanguagePageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-              </Label>
-            </StackLayout>
+          
+          <StackLayout Padding="0,2,0,0">
+            <Frame Grid.Column="0"
+                   Padding="15,15,15,15"
+                   HeightRequest="40"
+                   BackgroundColor="{StaticResource Card}"
+                   HasShadow="True"
+                   CornerRadius="15"
+                  >
+              <Frame.Content>
+                <StackLayout Spacing="20">
+                  <StackLayout Orientation="Horizontal"
+                               Spacing="30">
+                    <Label FontSize="30"
+                           Text=""
+                           TextColor="#2196f3"
+                           FontFamily="SegoeMDL2"></Label>
+                    <Label TextColor="Black"
+                           FontSize="20"
+                           Text="{xct:Translate Language}">
+                      <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LanguagePageCommand}"></TapGestureRecognizer>
+                      </Label.GestureRecognizers>
+                    </Label>
+                  </StackLayout>
+                </StackLayout>
+              </Frame.Content>
+            </Frame>
           </StackLayout>
-          <StackLayout Spacing="20">
-            <StackLayout Orientation="Horizontal"
-                         Spacing="30">
-              <Label FontSize="30"
-                     Text=""
-                     TextColor="#2196f3"
-                     FontFamily="SegoeMDL2"></Label>
-              <Label TextColor="Black"
-                     FontSize="20"
-                     Text="{xct:Translate Notifications}">
-                <Label.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding NotificationPageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-              </Label>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal"
-                         Spacing="30">
-              <Label FontSize="30"
-                     Text=""
-                     TextColor="#2196f3"
-                     FontFamily="SegoeMDL2"></Label>
-              <Label TextColor="Black"
-                     FontSize="20"
-                     Text="ReportBug">
-                <Label.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding FeedbackPageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-              </Label>
-            </StackLayout>
+          
+          <StackLayout Padding="0,2,0,0">
+            <Frame Grid.Column="0"
+                   Padding="15,15,15,15"
+                   HeightRequest="80"
+                   BackgroundColor="{StaticResource Card}"
+                   HasShadow="True"
+                   CornerRadius="15"
+                  >
+              <Frame.Content>
+                <StackLayout Spacing="20">
+                  <StackLayout Orientation="Horizontal"
+                               Spacing="30">
+                    <Label FontSize="30"
+                           Text=""
+                           TextColor="#2196f3"
+                           FontFamily="SegoeMDL2"></Label>
+                    <Label TextColor="Black"
+                           FontSize="20"
+                           Text="{xct:Translate Notifications}">
+                      <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NotificationPageCommand}"></TapGestureRecognizer>
+                      </Label.GestureRecognizers>
+                    </Label>
+                  </StackLayout>
+                  <StackLayout Orientation="Horizontal"
+                               Spacing="30">
+                    <Label FontSize="30"
+                           Text=""
+                           TextColor="#2196f3"
+                           FontFamily="SegoeMDL2"></Label>
+                    <Label TextColor="Black"
+                           FontSize="20"
+                           Text="ReportBug">
+                      <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding FeedbackPageCommand}"></TapGestureRecognizer>
+                      </Label.GestureRecognizers>
+                    </Label>
+                  </StackLayout>
+                </StackLayout>
+              </Frame.Content>
+            </Frame>
           </StackLayout>
-          <StackLayout Spacing="20">
-            <StackLayout Orientation="Horizontal"
-                         Spacing="30">
-              <Label FontSize="30"
-                     Text=""
-                     TextColor="#2196f3"
-                     FontFamily="SegoeMDL2"></Label>
-              <Label TextColor="Black"
-                     FontSize="20"
-                     Text="{xct:Translate PrivacyPolicy}">
-                <Label.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding PrivacyPolicyCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-              </Label>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal"
-                         Spacing="30">
-              <Label FontSize="30"
-                     Text=""
-                     TextColor="#2196f3"
-                     FontFamily="SegoeMDL2"></Label>
-              <Label TextColor="Black"
-                     FontSize="20"
-                     Text="{xct:Translate AboutUs}">
-                <Label.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding GoToAboutUsPageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-              </Label>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal"
-                         Spacing="30">
-              <Label FontSize="30"
-                     Text=""
-                     TextColor="#2196f3"
-                     FontFamily="SegoeMDL2"></Label>
-              <Label TextColor="Black"
-                     FontSize="20"
-                     Text="{xct:Translate AppUpdates}">
-                <Label.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding AppUpdatesPageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-              </Label>
-            </StackLayout>
+          
+          <StackLayout Padding="0,2,0,0">
+            <Frame Grid.Column="0"
+                   Padding="15,15,15,15"
+                   HeightRequest="120"
+                   BackgroundColor="{StaticResource Card}"
+                   HasShadow="True"
+                   CornerRadius="15"
+                  >
+              <Frame.Content>
+                <StackLayout Spacing="20">
+                  <StackLayout Orientation="Horizontal"
+                               Spacing="30">
+                    <Label FontSize="30"
+                           Text=""
+                           TextColor="#2196f3"
+                           FontFamily="SegoeMDL2"></Label>
+                    <Label TextColor="Black"
+                           FontSize="20"
+                           Text="{xct:Translate PrivacyPolicy}">
+                      <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PrivacyPolicyCommand}"></TapGestureRecognizer>
+                      </Label.GestureRecognizers>
+                    </Label>
+                  </StackLayout>
+                  <StackLayout Orientation="Horizontal"
+                               Spacing="30">
+                    <Label FontSize="30"
+                           Text=""
+                           TextColor="#2196f3"
+                           FontFamily="SegoeMDL2"></Label>
+                    <Label TextColor="Black"
+                           FontSize="20"
+                           Text="{xct:Translate AboutUs}">
+                      <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToAboutUsPageCommand}"></TapGestureRecognizer>
+                      </Label.GestureRecognizers>
+                    </Label>
+                  </StackLayout>
+                  <StackLayout Orientation="Horizontal"
+                               Spacing="30">
+                    <Label FontSize="30"
+                           Text=""
+                           TextColor="#2196f3"
+                           FontFamily="SegoeMDL2"></Label>
+                    <Label TextColor="Black"
+                           FontSize="20"
+                           Text="{xct:Translate AppUpdates}">
+                      <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding AppUpdatesPageCommand}"></TapGestureRecognizer>
+                      </Label.GestureRecognizers>
+                    </Label>
+                  </StackLayout>
+                </StackLayout>
+              </Frame.Content>
+            </Frame>
           </StackLayout>
+          
         </StackLayout>
       </ScrollView>
     </Grid>
