@@ -48,6 +48,2648 @@ namespace VaxineApp.Droid
 			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_message = global::VaxineApp.Droid.Resource.String.appcenter_distribute_update_failed_dialog_message;
 			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_reinstall = global::VaxineApp.Droid.Resource.String.appcenter_distribute_update_failed_dialog_reinstall;
 			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_title = global::VaxineApp.Droid.Resource.String.appcenter_distribute_update_failed_dialog_title;
+			global::Plugin.InputKit.Resource.Animation.abc_fade_in = global::VaxineApp.Droid.Resource.Animation.abc_fade_in;
+			global::Plugin.InputKit.Resource.Animation.abc_fade_out = global::VaxineApp.Droid.Resource.Animation.abc_fade_out;
+			global::Plugin.InputKit.Resource.Animation.abc_grow_fade_in_from_bottom = global::VaxineApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Plugin.InputKit.Resource.Animation.abc_popup_enter = global::VaxineApp.Droid.Resource.Animation.abc_popup_enter;
+			global::Plugin.InputKit.Resource.Animation.abc_popup_exit = global::VaxineApp.Droid.Resource.Animation.abc_popup_exit;
+			global::Plugin.InputKit.Resource.Animation.abc_shrink_fade_out_from_bottom = global::VaxineApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Plugin.InputKit.Resource.Animation.abc_slide_in_bottom = global::VaxineApp.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Plugin.InputKit.Resource.Animation.abc_slide_in_top = global::VaxineApp.Droid.Resource.Animation.abc_slide_in_top;
+			global::Plugin.InputKit.Resource.Animation.abc_slide_out_bottom = global::VaxineApp.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Plugin.InputKit.Resource.Animation.abc_slide_out_top = global::VaxineApp.Droid.Resource.Animation.abc_slide_out_top;
+			global::Plugin.InputKit.Resource.Animation.abc_tooltip_enter = global::VaxineApp.Droid.Resource.Animation.abc_tooltip_enter;
+			global::Plugin.InputKit.Resource.Animation.abc_tooltip_exit = global::VaxineApp.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Plugin.InputKit.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Plugin.InputKit.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
+			global::Plugin.InputKit.Resource.Animation.design_bottom_sheet_slide_in = global::VaxineApp.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Plugin.InputKit.Resource.Animation.design_bottom_sheet_slide_out = global::VaxineApp.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Plugin.InputKit.Resource.Animation.design_snackbar_in = global::VaxineApp.Droid.Resource.Animation.design_snackbar_in;
+			global::Plugin.InputKit.Resource.Animation.design_snackbar_out = global::VaxineApp.Droid.Resource.Animation.design_snackbar_out;
+			global::Plugin.InputKit.Resource.Animation.EnterFromLeft = global::VaxineApp.Droid.Resource.Animation.EnterFromLeft;
+			global::Plugin.InputKit.Resource.Animation.EnterFromRight = global::VaxineApp.Droid.Resource.Animation.EnterFromRight;
+			global::Plugin.InputKit.Resource.Animation.ExitToLeft = global::VaxineApp.Droid.Resource.Animation.ExitToLeft;
+			global::Plugin.InputKit.Resource.Animation.ExitToRight = global::VaxineApp.Droid.Resource.Animation.ExitToRight;
+			global::Plugin.InputKit.Resource.Animator.design_appbar_state_list_animator = global::VaxineApp.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Plugin.InputKit.Resource.Animator.design_fab_hide_motion_spec = global::VaxineApp.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::Plugin.InputKit.Resource.Animator.design_fab_show_motion_spec = global::VaxineApp.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::Plugin.InputKit.Resource.Animator.mtrl_btn_state_list_anim = global::VaxineApp.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Plugin.InputKit.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::VaxineApp.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Plugin.InputKit.Resource.Animator.mtrl_chip_state_list_anim = global::VaxineApp.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Plugin.InputKit.Resource.Animator.mtrl_fab_hide_motion_spec = global::VaxineApp.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Plugin.InputKit.Resource.Animator.mtrl_fab_show_motion_spec = global::VaxineApp.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Plugin.InputKit.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::VaxineApp.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Plugin.InputKit.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::VaxineApp.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::Plugin.InputKit.Resource.Attribute.actionBarDivider = global::VaxineApp.Droid.Resource.Attribute.actionBarDivider;
+			global::Plugin.InputKit.Resource.Attribute.actionBarItemBackground = global::VaxineApp.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Plugin.InputKit.Resource.Attribute.actionBarPopupTheme = global::VaxineApp.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Plugin.InputKit.Resource.Attribute.actionBarSize = global::VaxineApp.Droid.Resource.Attribute.actionBarSize;
+			global::Plugin.InputKit.Resource.Attribute.actionBarSplitStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionBarStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionBarTabBarStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionBarTabStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionBarTabTextStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionBarTheme = global::VaxineApp.Droid.Resource.Attribute.actionBarTheme;
+			global::Plugin.InputKit.Resource.Attribute.actionBarWidgetTheme = global::VaxineApp.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Plugin.InputKit.Resource.Attribute.actionButtonStyle = global::VaxineApp.Droid.Resource.Attribute.actionButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionDropDownStyle = global::VaxineApp.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionLayout = global::VaxineApp.Droid.Resource.Attribute.actionLayout;
+			global::Plugin.InputKit.Resource.Attribute.actionMenuTextAppearance = global::VaxineApp.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.actionMenuTextColor = global::VaxineApp.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Plugin.InputKit.Resource.Attribute.actionModeBackground = global::VaxineApp.Droid.Resource.Attribute.actionModeBackground;
+			global::Plugin.InputKit.Resource.Attribute.actionModeCloseButtonStyle = global::VaxineApp.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionModeCloseDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Plugin.InputKit.Resource.Attribute.actionModeCopyDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Plugin.InputKit.Resource.Attribute.actionModeCutDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Plugin.InputKit.Resource.Attribute.actionModeFindDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Plugin.InputKit.Resource.Attribute.actionModePasteDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Plugin.InputKit.Resource.Attribute.actionModePopupWindowStyle = global::VaxineApp.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionModeSelectAllDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Plugin.InputKit.Resource.Attribute.actionModeShareDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Plugin.InputKit.Resource.Attribute.actionModeSplitBackground = global::VaxineApp.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Plugin.InputKit.Resource.Attribute.actionModeStyle = global::VaxineApp.Droid.Resource.Attribute.actionModeStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionModeWebSearchDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Plugin.InputKit.Resource.Attribute.actionOverflowButtonStyle = global::VaxineApp.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionOverflowMenuStyle = global::VaxineApp.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Plugin.InputKit.Resource.Attribute.actionProviderClass = global::VaxineApp.Droid.Resource.Attribute.actionProviderClass;
+			global::Plugin.InputKit.Resource.Attribute.actionViewClass = global::VaxineApp.Droid.Resource.Attribute.actionViewClass;
+			global::Plugin.InputKit.Resource.Attribute.activityChooserViewStyle = global::VaxineApp.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.alertDialogButtonGroupStyle = global::VaxineApp.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Plugin.InputKit.Resource.Attribute.alertDialogCenterButtons = global::VaxineApp.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Plugin.InputKit.Resource.Attribute.alertDialogStyle = global::VaxineApp.Droid.Resource.Attribute.alertDialogStyle;
+			global::Plugin.InputKit.Resource.Attribute.alertDialogTheme = global::VaxineApp.Droid.Resource.Attribute.alertDialogTheme;
+			global::Plugin.InputKit.Resource.Attribute.allowStacking = global::VaxineApp.Droid.Resource.Attribute.allowStacking;
+			global::Plugin.InputKit.Resource.Attribute.alpha = global::VaxineApp.Droid.Resource.Attribute.alpha;
+			global::Plugin.InputKit.Resource.Attribute.alphabeticModifiers = global::VaxineApp.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Plugin.InputKit.Resource.Attribute.arrowHeadLength = global::VaxineApp.Droid.Resource.Attribute.arrowHeadLength;
+			global::Plugin.InputKit.Resource.Attribute.arrowShaftLength = global::VaxineApp.Droid.Resource.Attribute.arrowShaftLength;
+			global::Plugin.InputKit.Resource.Attribute.autoCompleteTextViewStyle = global::VaxineApp.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.autoSizeMaxTextSize = global::VaxineApp.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Plugin.InputKit.Resource.Attribute.autoSizeMinTextSize = global::VaxineApp.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Plugin.InputKit.Resource.Attribute.autoSizePresetSizes = global::VaxineApp.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Plugin.InputKit.Resource.Attribute.autoSizeStepGranularity = global::VaxineApp.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Plugin.InputKit.Resource.Attribute.autoSizeTextType = global::VaxineApp.Droid.Resource.Attribute.autoSizeTextType;
+			global::Plugin.InputKit.Resource.Attribute.background = global::VaxineApp.Droid.Resource.Attribute.background;
+			global::Plugin.InputKit.Resource.Attribute.backgroundSplit = global::VaxineApp.Droid.Resource.Attribute.backgroundSplit;
+			global::Plugin.InputKit.Resource.Attribute.backgroundStacked = global::VaxineApp.Droid.Resource.Attribute.backgroundStacked;
+			global::Plugin.InputKit.Resource.Attribute.backgroundTint = global::VaxineApp.Droid.Resource.Attribute.backgroundTint;
+			global::Plugin.InputKit.Resource.Attribute.backgroundTintMode = global::VaxineApp.Droid.Resource.Attribute.backgroundTintMode;
+			global::Plugin.InputKit.Resource.Attribute.barLength = global::VaxineApp.Droid.Resource.Attribute.barLength;
+			global::Plugin.InputKit.Resource.Attribute.behavior_autoHide = global::VaxineApp.Droid.Resource.Attribute.behavior_autoHide;
+			global::Plugin.InputKit.Resource.Attribute.behavior_fitToContents = global::VaxineApp.Droid.Resource.Attribute.behavior_fitToContents;
+			global::Plugin.InputKit.Resource.Attribute.behavior_hideable = global::VaxineApp.Droid.Resource.Attribute.behavior_hideable;
+			global::Plugin.InputKit.Resource.Attribute.behavior_overlapTop = global::VaxineApp.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Plugin.InputKit.Resource.Attribute.behavior_peekHeight = global::VaxineApp.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Plugin.InputKit.Resource.Attribute.behavior_skipCollapsed = global::VaxineApp.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Plugin.InputKit.Resource.Attribute.borderlessButtonStyle = global::VaxineApp.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.borderWidth = global::VaxineApp.Droid.Resource.Attribute.borderWidth;
+			global::Plugin.InputKit.Resource.Attribute.bottomAppBarStyle = global::VaxineApp.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::Plugin.InputKit.Resource.Attribute.bottomNavigationStyle = global::VaxineApp.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::Plugin.InputKit.Resource.Attribute.bottomSheetDialogTheme = global::VaxineApp.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Plugin.InputKit.Resource.Attribute.bottomSheetStyle = global::VaxineApp.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Plugin.InputKit.Resource.Attribute.boxBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.boxBackgroundColor;
+			global::Plugin.InputKit.Resource.Attribute.boxBackgroundMode = global::VaxineApp.Droid.Resource.Attribute.boxBackgroundMode;
+			global::Plugin.InputKit.Resource.Attribute.boxCollapsedPaddingTop = global::VaxineApp.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Plugin.InputKit.Resource.Attribute.boxCornerRadiusBottomEnd = global::VaxineApp.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Plugin.InputKit.Resource.Attribute.boxCornerRadiusBottomStart = global::VaxineApp.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Plugin.InputKit.Resource.Attribute.boxCornerRadiusTopEnd = global::VaxineApp.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Plugin.InputKit.Resource.Attribute.boxCornerRadiusTopStart = global::VaxineApp.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Plugin.InputKit.Resource.Attribute.boxStrokeColor = global::VaxineApp.Droid.Resource.Attribute.boxStrokeColor;
+			global::Plugin.InputKit.Resource.Attribute.boxStrokeWidth = global::VaxineApp.Droid.Resource.Attribute.boxStrokeWidth;
+			global::Plugin.InputKit.Resource.Attribute.buttonBarButtonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.buttonBarNegativeButtonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.buttonBarNeutralButtonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.buttonBarPositiveButtonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.buttonBarStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarStyle;
+			global::Plugin.InputKit.Resource.Attribute.buttonCompat = global::VaxineApp.Droid.Resource.Attribute.buttonCompat;
+			global::Plugin.InputKit.Resource.Attribute.buttonGravity = global::VaxineApp.Droid.Resource.Attribute.buttonGravity;
+			global::Plugin.InputKit.Resource.Attribute.buttonIconDimen = global::VaxineApp.Droid.Resource.Attribute.buttonIconDimen;
+			global::Plugin.InputKit.Resource.Attribute.buttonPanelSideLayout = global::VaxineApp.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Plugin.InputKit.Resource.Attribute.buttonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonStyle;
+			global::Plugin.InputKit.Resource.Attribute.buttonStyleSmall = global::VaxineApp.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Plugin.InputKit.Resource.Attribute.buttonTint = global::VaxineApp.Droid.Resource.Attribute.buttonTint;
+			global::Plugin.InputKit.Resource.Attribute.buttonTintMode = global::VaxineApp.Droid.Resource.Attribute.buttonTintMode;
+			global::Plugin.InputKit.Resource.Attribute.cardBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Plugin.InputKit.Resource.Attribute.cardCornerRadius = global::VaxineApp.Droid.Resource.Attribute.cardCornerRadius;
+			global::Plugin.InputKit.Resource.Attribute.cardElevation = global::VaxineApp.Droid.Resource.Attribute.cardElevation;
+			global::Plugin.InputKit.Resource.Attribute.cardMaxElevation = global::VaxineApp.Droid.Resource.Attribute.cardMaxElevation;
+			global::Plugin.InputKit.Resource.Attribute.cardPreventCornerOverlap = global::VaxineApp.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Plugin.InputKit.Resource.Attribute.cardUseCompatPadding = global::VaxineApp.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Plugin.InputKit.Resource.Attribute.cardViewStyle = global::VaxineApp.Droid.Resource.Attribute.cardViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.checkboxStyle = global::VaxineApp.Droid.Resource.Attribute.checkboxStyle;
+			global::Plugin.InputKit.Resource.Attribute.checkedChip = global::VaxineApp.Droid.Resource.Attribute.checkedChip;
+			global::Plugin.InputKit.Resource.Attribute.checkedIcon = global::VaxineApp.Droid.Resource.Attribute.checkedIcon;
+			global::Plugin.InputKit.Resource.Attribute.checkedIconEnabled = global::VaxineApp.Droid.Resource.Attribute.checkedIconEnabled;
+			global::Plugin.InputKit.Resource.Attribute.checkedIconVisible = global::VaxineApp.Droid.Resource.Attribute.checkedIconVisible;
+			global::Plugin.InputKit.Resource.Attribute.checkedTextViewStyle = global::VaxineApp.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.chipBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.chipBackgroundColor;
+			global::Plugin.InputKit.Resource.Attribute.chipCornerRadius = global::VaxineApp.Droid.Resource.Attribute.chipCornerRadius;
+			global::Plugin.InputKit.Resource.Attribute.chipEndPadding = global::VaxineApp.Droid.Resource.Attribute.chipEndPadding;
+			global::Plugin.InputKit.Resource.Attribute.chipGroupStyle = global::VaxineApp.Droid.Resource.Attribute.chipGroupStyle;
+			global::Plugin.InputKit.Resource.Attribute.chipIcon = global::VaxineApp.Droid.Resource.Attribute.chipIcon;
+			global::Plugin.InputKit.Resource.Attribute.chipIconEnabled = global::VaxineApp.Droid.Resource.Attribute.chipIconEnabled;
+			global::Plugin.InputKit.Resource.Attribute.chipIconSize = global::VaxineApp.Droid.Resource.Attribute.chipIconSize;
+			global::Plugin.InputKit.Resource.Attribute.chipIconTint = global::VaxineApp.Droid.Resource.Attribute.chipIconTint;
+			global::Plugin.InputKit.Resource.Attribute.chipIconVisible = global::VaxineApp.Droid.Resource.Attribute.chipIconVisible;
+			global::Plugin.InputKit.Resource.Attribute.chipMinHeight = global::VaxineApp.Droid.Resource.Attribute.chipMinHeight;
+			global::Plugin.InputKit.Resource.Attribute.chipSpacing = global::VaxineApp.Droid.Resource.Attribute.chipSpacing;
+			global::Plugin.InputKit.Resource.Attribute.chipSpacingHorizontal = global::VaxineApp.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::Plugin.InputKit.Resource.Attribute.chipSpacingVertical = global::VaxineApp.Droid.Resource.Attribute.chipSpacingVertical;
+			global::Plugin.InputKit.Resource.Attribute.chipStandaloneStyle = global::VaxineApp.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::Plugin.InputKit.Resource.Attribute.chipStartPadding = global::VaxineApp.Droid.Resource.Attribute.chipStartPadding;
+			global::Plugin.InputKit.Resource.Attribute.chipStrokeColor = global::VaxineApp.Droid.Resource.Attribute.chipStrokeColor;
+			global::Plugin.InputKit.Resource.Attribute.chipStrokeWidth = global::VaxineApp.Droid.Resource.Attribute.chipStrokeWidth;
+			global::Plugin.InputKit.Resource.Attribute.chipStyle = global::VaxineApp.Droid.Resource.Attribute.chipStyle;
+			global::Plugin.InputKit.Resource.Attribute.closeIcon = global::VaxineApp.Droid.Resource.Attribute.closeIcon;
+			global::Plugin.InputKit.Resource.Attribute.closeIconEnabled = global::VaxineApp.Droid.Resource.Attribute.closeIconEnabled;
+			global::Plugin.InputKit.Resource.Attribute.closeIconEndPadding = global::VaxineApp.Droid.Resource.Attribute.closeIconEndPadding;
+			global::Plugin.InputKit.Resource.Attribute.closeIconSize = global::VaxineApp.Droid.Resource.Attribute.closeIconSize;
+			global::Plugin.InputKit.Resource.Attribute.closeIconStartPadding = global::VaxineApp.Droid.Resource.Attribute.closeIconStartPadding;
+			global::Plugin.InputKit.Resource.Attribute.closeIconTint = global::VaxineApp.Droid.Resource.Attribute.closeIconTint;
+			global::Plugin.InputKit.Resource.Attribute.closeIconVisible = global::VaxineApp.Droid.Resource.Attribute.closeIconVisible;
+			global::Plugin.InputKit.Resource.Attribute.closeItemLayout = global::VaxineApp.Droid.Resource.Attribute.closeItemLayout;
+			global::Plugin.InputKit.Resource.Attribute.collapseContentDescription = global::VaxineApp.Droid.Resource.Attribute.collapseContentDescription;
+			global::Plugin.InputKit.Resource.Attribute.collapsedTitleGravity = global::VaxineApp.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Plugin.InputKit.Resource.Attribute.collapsedTitleTextAppearance = global::VaxineApp.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.collapseIcon = global::VaxineApp.Droid.Resource.Attribute.collapseIcon;
+			global::Plugin.InputKit.Resource.Attribute.collectionViewStyle = global::VaxineApp.Droid.Resource.Attribute.collectionViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.color = global::VaxineApp.Droid.Resource.Attribute.color;
+			global::Plugin.InputKit.Resource.Attribute.colorAccent = global::VaxineApp.Droid.Resource.Attribute.colorAccent;
+			global::Plugin.InputKit.Resource.Attribute.colorBackgroundFloating = global::VaxineApp.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Plugin.InputKit.Resource.Attribute.colorButtonNormal = global::VaxineApp.Droid.Resource.Attribute.colorButtonNormal;
+			global::Plugin.InputKit.Resource.Attribute.colorControlActivated = global::VaxineApp.Droid.Resource.Attribute.colorControlActivated;
+			global::Plugin.InputKit.Resource.Attribute.colorControlHighlight = global::VaxineApp.Droid.Resource.Attribute.colorControlHighlight;
+			global::Plugin.InputKit.Resource.Attribute.colorControlNormal = global::VaxineApp.Droid.Resource.Attribute.colorControlNormal;
+			global::Plugin.InputKit.Resource.Attribute.colorError = global::VaxineApp.Droid.Resource.Attribute.colorError;
+			global::Plugin.InputKit.Resource.Attribute.colorPrimary = global::VaxineApp.Droid.Resource.Attribute.colorPrimary;
+			global::Plugin.InputKit.Resource.Attribute.colorPrimaryDark = global::VaxineApp.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Plugin.InputKit.Resource.Attribute.colorSecondary = global::VaxineApp.Droid.Resource.Attribute.colorSecondary;
+			global::Plugin.InputKit.Resource.Attribute.colorSwitchThumbNormal = global::VaxineApp.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Plugin.InputKit.Resource.Attribute.commitIcon = global::VaxineApp.Droid.Resource.Attribute.commitIcon;
+			global::Plugin.InputKit.Resource.Attribute.contentDescription = global::VaxineApp.Droid.Resource.Attribute.contentDescription;
+			global::Plugin.InputKit.Resource.Attribute.contentInsetEnd = global::VaxineApp.Droid.Resource.Attribute.contentInsetEnd;
+			global::Plugin.InputKit.Resource.Attribute.contentInsetEndWithActions = global::VaxineApp.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Plugin.InputKit.Resource.Attribute.contentInsetLeft = global::VaxineApp.Droid.Resource.Attribute.contentInsetLeft;
+			global::Plugin.InputKit.Resource.Attribute.contentInsetRight = global::VaxineApp.Droid.Resource.Attribute.contentInsetRight;
+			global::Plugin.InputKit.Resource.Attribute.contentInsetStart = global::VaxineApp.Droid.Resource.Attribute.contentInsetStart;
+			global::Plugin.InputKit.Resource.Attribute.contentInsetStartWithNavigation = global::VaxineApp.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Plugin.InputKit.Resource.Attribute.contentPadding = global::VaxineApp.Droid.Resource.Attribute.contentPadding;
+			global::Plugin.InputKit.Resource.Attribute.contentPaddingBottom = global::VaxineApp.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Plugin.InputKit.Resource.Attribute.contentPaddingLeft = global::VaxineApp.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Plugin.InputKit.Resource.Attribute.contentPaddingRight = global::VaxineApp.Droid.Resource.Attribute.contentPaddingRight;
+			global::Plugin.InputKit.Resource.Attribute.contentPaddingTop = global::VaxineApp.Droid.Resource.Attribute.contentPaddingTop;
+			global::Plugin.InputKit.Resource.Attribute.contentScrim = global::VaxineApp.Droid.Resource.Attribute.contentScrim;
+			global::Plugin.InputKit.Resource.Attribute.controlBackground = global::VaxineApp.Droid.Resource.Attribute.controlBackground;
+			global::Plugin.InputKit.Resource.Attribute.coordinatorLayoutStyle = global::VaxineApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.InputKit.Resource.Attribute.cornerRadius = global::VaxineApp.Droid.Resource.Attribute.cornerRadius;
+			global::Plugin.InputKit.Resource.Attribute.counterEnabled = global::VaxineApp.Droid.Resource.Attribute.counterEnabled;
+			global::Plugin.InputKit.Resource.Attribute.counterMaxLength = global::VaxineApp.Droid.Resource.Attribute.counterMaxLength;
+			global::Plugin.InputKit.Resource.Attribute.counterOverflowTextAppearance = global::VaxineApp.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.counterTextAppearance = global::VaxineApp.Droid.Resource.Attribute.counterTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.customNavigationLayout = global::VaxineApp.Droid.Resource.Attribute.customNavigationLayout;
+			global::Plugin.InputKit.Resource.Attribute.defaultQueryHint = global::VaxineApp.Droid.Resource.Attribute.defaultQueryHint;
+			global::Plugin.InputKit.Resource.Attribute.dialogCornerRadius = global::VaxineApp.Droid.Resource.Attribute.dialogCornerRadius;
+			global::Plugin.InputKit.Resource.Attribute.dialogPreferredPadding = global::VaxineApp.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Plugin.InputKit.Resource.Attribute.dialogTheme = global::VaxineApp.Droid.Resource.Attribute.dialogTheme;
+			global::Plugin.InputKit.Resource.Attribute.displayOptions = global::VaxineApp.Droid.Resource.Attribute.displayOptions;
+			global::Plugin.InputKit.Resource.Attribute.divider = global::VaxineApp.Droid.Resource.Attribute.divider;
+			global::Plugin.InputKit.Resource.Attribute.dividerHorizontal = global::VaxineApp.Droid.Resource.Attribute.dividerHorizontal;
+			global::Plugin.InputKit.Resource.Attribute.dividerPadding = global::VaxineApp.Droid.Resource.Attribute.dividerPadding;
+			global::Plugin.InputKit.Resource.Attribute.dividerVertical = global::VaxineApp.Droid.Resource.Attribute.dividerVertical;
+			global::Plugin.InputKit.Resource.Attribute.drawableBottomCompat = global::VaxineApp.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Plugin.InputKit.Resource.Attribute.drawableEndCompat = global::VaxineApp.Droid.Resource.Attribute.drawableEndCompat;
+			global::Plugin.InputKit.Resource.Attribute.drawableLeftCompat = global::VaxineApp.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Plugin.InputKit.Resource.Attribute.drawableRightCompat = global::VaxineApp.Droid.Resource.Attribute.drawableRightCompat;
+			global::Plugin.InputKit.Resource.Attribute.drawableSize = global::VaxineApp.Droid.Resource.Attribute.drawableSize;
+			global::Plugin.InputKit.Resource.Attribute.drawableStartCompat = global::VaxineApp.Droid.Resource.Attribute.drawableStartCompat;
+			global::Plugin.InputKit.Resource.Attribute.drawableTint = global::VaxineApp.Droid.Resource.Attribute.drawableTint;
+			global::Plugin.InputKit.Resource.Attribute.drawableTintMode = global::VaxineApp.Droid.Resource.Attribute.drawableTintMode;
+			global::Plugin.InputKit.Resource.Attribute.drawableTopCompat = global::VaxineApp.Droid.Resource.Attribute.drawableTopCompat;
+			global::Plugin.InputKit.Resource.Attribute.drawerArrowStyle = global::VaxineApp.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Plugin.InputKit.Resource.Attribute.dropdownListPreferredItemHeight = global::VaxineApp.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Plugin.InputKit.Resource.Attribute.dropDownListViewStyle = global::VaxineApp.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.editTextBackground = global::VaxineApp.Droid.Resource.Attribute.editTextBackground;
+			global::Plugin.InputKit.Resource.Attribute.editTextColor = global::VaxineApp.Droid.Resource.Attribute.editTextColor;
+			global::Plugin.InputKit.Resource.Attribute.editTextStyle = global::VaxineApp.Droid.Resource.Attribute.editTextStyle;
+			global::Plugin.InputKit.Resource.Attribute.elevation = global::VaxineApp.Droid.Resource.Attribute.elevation;
+			global::Plugin.InputKit.Resource.Attribute.enforceMaterialTheme = global::VaxineApp.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::Plugin.InputKit.Resource.Attribute.enforceTextAppearance = global::VaxineApp.Droid.Resource.Attribute.enforceTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.errorEnabled = global::VaxineApp.Droid.Resource.Attribute.errorEnabled;
+			global::Plugin.InputKit.Resource.Attribute.errorTextAppearance = global::VaxineApp.Droid.Resource.Attribute.errorTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.expandActivityOverflowButtonDrawable = global::VaxineApp.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Plugin.InputKit.Resource.Attribute.expanded = global::VaxineApp.Droid.Resource.Attribute.expanded;
+			global::Plugin.InputKit.Resource.Attribute.expandedTitleGravity = global::VaxineApp.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Plugin.InputKit.Resource.Attribute.expandedTitleMargin = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Plugin.InputKit.Resource.Attribute.expandedTitleMarginBottom = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Plugin.InputKit.Resource.Attribute.expandedTitleMarginEnd = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Plugin.InputKit.Resource.Attribute.expandedTitleMarginStart = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Plugin.InputKit.Resource.Attribute.expandedTitleMarginTop = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Plugin.InputKit.Resource.Attribute.expandedTitleTextAppearance = global::VaxineApp.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.fabAlignmentMode = global::VaxineApp.Droid.Resource.Attribute.fabAlignmentMode;
+			global::Plugin.InputKit.Resource.Attribute.fabCradleMargin = global::VaxineApp.Droid.Resource.Attribute.fabCradleMargin;
+			global::Plugin.InputKit.Resource.Attribute.fabCradleRoundedCornerRadius = global::VaxineApp.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Plugin.InputKit.Resource.Attribute.fabCradleVerticalOffset = global::VaxineApp.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::Plugin.InputKit.Resource.Attribute.fabCustomSize = global::VaxineApp.Droid.Resource.Attribute.fabCustomSize;
+			global::Plugin.InputKit.Resource.Attribute.fabSize = global::VaxineApp.Droid.Resource.Attribute.fabSize;
+			global::Plugin.InputKit.Resource.Attribute.fastScrollEnabled = global::VaxineApp.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Plugin.InputKit.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::VaxineApp.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Plugin.InputKit.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::VaxineApp.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Plugin.InputKit.Resource.Attribute.fastScrollVerticalThumbDrawable = global::VaxineApp.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Plugin.InputKit.Resource.Attribute.fastScrollVerticalTrackDrawable = global::VaxineApp.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Plugin.InputKit.Resource.Attribute.firstBaselineToTopHeight = global::VaxineApp.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::Plugin.InputKit.Resource.Attribute.floatingActionButtonStyle = global::VaxineApp.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.font = global::VaxineApp.Droid.Resource.Attribute.font;
+			global::Plugin.InputKit.Resource.Attribute.fontFamily = global::VaxineApp.Droid.Resource.Attribute.fontFamily;
+			global::Plugin.InputKit.Resource.Attribute.fontProviderAuthority = global::VaxineApp.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.InputKit.Resource.Attribute.fontProviderCerts = global::VaxineApp.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.InputKit.Resource.Attribute.fontProviderFetchStrategy = global::VaxineApp.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.InputKit.Resource.Attribute.fontProviderFetchTimeout = global::VaxineApp.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.InputKit.Resource.Attribute.fontProviderPackage = global::VaxineApp.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.InputKit.Resource.Attribute.fontProviderQuery = global::VaxineApp.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.InputKit.Resource.Attribute.fontStyle = global::VaxineApp.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.InputKit.Resource.Attribute.fontVariationSettings = global::VaxineApp.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.InputKit.Resource.Attribute.fontWeight = global::VaxineApp.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.InputKit.Resource.Attribute.foregroundInsidePadding = global::VaxineApp.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Plugin.InputKit.Resource.Attribute.gapBetweenBars = global::VaxineApp.Droid.Resource.Attribute.gapBetweenBars;
+			global::Plugin.InputKit.Resource.Attribute.goIcon = global::VaxineApp.Droid.Resource.Attribute.goIcon;
+			global::Plugin.InputKit.Resource.Attribute.headerLayout = global::VaxineApp.Droid.Resource.Attribute.headerLayout;
+			global::Plugin.InputKit.Resource.Attribute.height = global::VaxineApp.Droid.Resource.Attribute.height;
+			global::Plugin.InputKit.Resource.Attribute.helperText = global::VaxineApp.Droid.Resource.Attribute.helperText;
+			global::Plugin.InputKit.Resource.Attribute.helperTextEnabled = global::VaxineApp.Droid.Resource.Attribute.helperTextEnabled;
+			global::Plugin.InputKit.Resource.Attribute.helperTextTextAppearance = global::VaxineApp.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.hideMotionSpec = global::VaxineApp.Droid.Resource.Attribute.hideMotionSpec;
+			global::Plugin.InputKit.Resource.Attribute.hideOnContentScroll = global::VaxineApp.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Plugin.InputKit.Resource.Attribute.hideOnScroll = global::VaxineApp.Droid.Resource.Attribute.hideOnScroll;
+			global::Plugin.InputKit.Resource.Attribute.hintAnimationEnabled = global::VaxineApp.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Plugin.InputKit.Resource.Attribute.hintEnabled = global::VaxineApp.Droid.Resource.Attribute.hintEnabled;
+			global::Plugin.InputKit.Resource.Attribute.hintTextAppearance = global::VaxineApp.Droid.Resource.Attribute.hintTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.homeAsUpIndicator = global::VaxineApp.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Plugin.InputKit.Resource.Attribute.homeLayout = global::VaxineApp.Droid.Resource.Attribute.homeLayout;
+			global::Plugin.InputKit.Resource.Attribute.hoveredFocusedTranslationZ = global::VaxineApp.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::Plugin.InputKit.Resource.Attribute.icon = global::VaxineApp.Droid.Resource.Attribute.icon;
+			global::Plugin.InputKit.Resource.Attribute.iconEndPadding = global::VaxineApp.Droid.Resource.Attribute.iconEndPadding;
+			global::Plugin.InputKit.Resource.Attribute.iconGravity = global::VaxineApp.Droid.Resource.Attribute.iconGravity;
+			global::Plugin.InputKit.Resource.Attribute.iconifiedByDefault = global::VaxineApp.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Plugin.InputKit.Resource.Attribute.iconPadding = global::VaxineApp.Droid.Resource.Attribute.iconPadding;
+			global::Plugin.InputKit.Resource.Attribute.iconSize = global::VaxineApp.Droid.Resource.Attribute.iconSize;
+			global::Plugin.InputKit.Resource.Attribute.iconStartPadding = global::VaxineApp.Droid.Resource.Attribute.iconStartPadding;
+			global::Plugin.InputKit.Resource.Attribute.iconTint = global::VaxineApp.Droid.Resource.Attribute.iconTint;
+			global::Plugin.InputKit.Resource.Attribute.iconTintMode = global::VaxineApp.Droid.Resource.Attribute.iconTintMode;
+			global::Plugin.InputKit.Resource.Attribute.imageButtonStyle = global::VaxineApp.Droid.Resource.Attribute.imageButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.indeterminateProgressStyle = global::VaxineApp.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Plugin.InputKit.Resource.Attribute.initialActivityCount = global::VaxineApp.Droid.Resource.Attribute.initialActivityCount;
+			global::Plugin.InputKit.Resource.Attribute.insetForeground = global::VaxineApp.Droid.Resource.Attribute.insetForeground;
+			global::Plugin.InputKit.Resource.Attribute.isLightTheme = global::VaxineApp.Droid.Resource.Attribute.isLightTheme;
+			global::Plugin.InputKit.Resource.Attribute.itemBackground = global::VaxineApp.Droid.Resource.Attribute.itemBackground;
+			global::Plugin.InputKit.Resource.Attribute.itemHorizontalPadding = global::VaxineApp.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::Plugin.InputKit.Resource.Attribute.itemHorizontalTranslationEnabled = global::VaxineApp.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Plugin.InputKit.Resource.Attribute.itemIconPadding = global::VaxineApp.Droid.Resource.Attribute.itemIconPadding;
+			global::Plugin.InputKit.Resource.Attribute.itemIconSize = global::VaxineApp.Droid.Resource.Attribute.itemIconSize;
+			global::Plugin.InputKit.Resource.Attribute.itemIconTint = global::VaxineApp.Droid.Resource.Attribute.itemIconTint;
+			global::Plugin.InputKit.Resource.Attribute.itemPadding = global::VaxineApp.Droid.Resource.Attribute.itemPadding;
+			global::Plugin.InputKit.Resource.Attribute.itemSpacing = global::VaxineApp.Droid.Resource.Attribute.itemSpacing;
+			global::Plugin.InputKit.Resource.Attribute.itemTextAppearance = global::VaxineApp.Droid.Resource.Attribute.itemTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.itemTextAppearanceActive = global::VaxineApp.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::Plugin.InputKit.Resource.Attribute.itemTextAppearanceInactive = global::VaxineApp.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::Plugin.InputKit.Resource.Attribute.itemTextColor = global::VaxineApp.Droid.Resource.Attribute.itemTextColor;
+			global::Plugin.InputKit.Resource.Attribute.keylines = global::VaxineApp.Droid.Resource.Attribute.keylines;
+			global::Plugin.InputKit.Resource.Attribute.labelVisibilityMode = global::VaxineApp.Droid.Resource.Attribute.labelVisibilityMode;
+			global::Plugin.InputKit.Resource.Attribute.lastBaselineToBottomHeight = global::VaxineApp.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::Plugin.InputKit.Resource.Attribute.layout = global::VaxineApp.Droid.Resource.Attribute.layout;
+			global::Plugin.InputKit.Resource.Attribute.layoutManager = global::VaxineApp.Droid.Resource.Attribute.layoutManager;
+			global::Plugin.InputKit.Resource.Attribute.layout_anchor = global::VaxineApp.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.InputKit.Resource.Attribute.layout_anchorGravity = global::VaxineApp.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.InputKit.Resource.Attribute.layout_behavior = global::VaxineApp.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.InputKit.Resource.Attribute.layout_collapseMode = global::VaxineApp.Droid.Resource.Attribute.layout_collapseMode;
+			global::Plugin.InputKit.Resource.Attribute.layout_collapseParallaxMultiplier = global::VaxineApp.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Plugin.InputKit.Resource.Attribute.layout_dodgeInsetEdges = global::VaxineApp.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.InputKit.Resource.Attribute.layout_insetEdge = global::VaxineApp.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.InputKit.Resource.Attribute.layout_keyline = global::VaxineApp.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.InputKit.Resource.Attribute.layout_scrollFlags = global::VaxineApp.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Plugin.InputKit.Resource.Attribute.layout_scrollInterpolator = global::VaxineApp.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Plugin.InputKit.Resource.Attribute.liftOnScroll = global::VaxineApp.Droid.Resource.Attribute.liftOnScroll;
+			global::Plugin.InputKit.Resource.Attribute.lineHeight = global::VaxineApp.Droid.Resource.Attribute.lineHeight;
+			global::Plugin.InputKit.Resource.Attribute.lineSpacing = global::VaxineApp.Droid.Resource.Attribute.lineSpacing;
+			global::Plugin.InputKit.Resource.Attribute.listChoiceBackgroundIndicator = global::VaxineApp.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Plugin.InputKit.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::VaxineApp.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Plugin.InputKit.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::VaxineApp.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
+			global::Plugin.InputKit.Resource.Attribute.listDividerAlertDialog = global::VaxineApp.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Plugin.InputKit.Resource.Attribute.listItemLayout = global::VaxineApp.Droid.Resource.Attribute.listItemLayout;
+			global::Plugin.InputKit.Resource.Attribute.listLayout = global::VaxineApp.Droid.Resource.Attribute.listLayout;
+			global::Plugin.InputKit.Resource.Attribute.listMenuViewStyle = global::VaxineApp.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.listPopupWindowStyle = global::VaxineApp.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Plugin.InputKit.Resource.Attribute.listPreferredItemHeight = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Plugin.InputKit.Resource.Attribute.listPreferredItemHeightLarge = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Plugin.InputKit.Resource.Attribute.listPreferredItemHeightSmall = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Plugin.InputKit.Resource.Attribute.listPreferredItemPaddingEnd = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
+			global::Plugin.InputKit.Resource.Attribute.listPreferredItemPaddingLeft = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Plugin.InputKit.Resource.Attribute.listPreferredItemPaddingRight = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Plugin.InputKit.Resource.Attribute.listPreferredItemPaddingStart = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemPaddingStart;
+			global::Plugin.InputKit.Resource.Attribute.logo = global::VaxineApp.Droid.Resource.Attribute.logo;
+			global::Plugin.InputKit.Resource.Attribute.logoDescription = global::VaxineApp.Droid.Resource.Attribute.logoDescription;
+			global::Plugin.InputKit.Resource.Attribute.materialButtonStyle = global::VaxineApp.Droid.Resource.Attribute.materialButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.materialCardViewStyle = global::VaxineApp.Droid.Resource.Attribute.materialCardViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.maxActionInlineWidth = global::VaxineApp.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Plugin.InputKit.Resource.Attribute.maxButtonHeight = global::VaxineApp.Droid.Resource.Attribute.maxButtonHeight;
+			global::Plugin.InputKit.Resource.Attribute.maxImageSize = global::VaxineApp.Droid.Resource.Attribute.maxImageSize;
+			global::Plugin.InputKit.Resource.Attribute.measureWithLargestChild = global::VaxineApp.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Plugin.InputKit.Resource.Attribute.menu = global::VaxineApp.Droid.Resource.Attribute.menu;
+			global::Plugin.InputKit.Resource.Attribute.multiChoiceItemLayout = global::VaxineApp.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Plugin.InputKit.Resource.Attribute.navigationContentDescription = global::VaxineApp.Droid.Resource.Attribute.navigationContentDescription;
+			global::Plugin.InputKit.Resource.Attribute.navigationIcon = global::VaxineApp.Droid.Resource.Attribute.navigationIcon;
+			global::Plugin.InputKit.Resource.Attribute.navigationMode = global::VaxineApp.Droid.Resource.Attribute.navigationMode;
+			global::Plugin.InputKit.Resource.Attribute.navigationViewStyle = global::VaxineApp.Droid.Resource.Attribute.navigationViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.numericModifiers = global::VaxineApp.Droid.Resource.Attribute.numericModifiers;
+			global::Plugin.InputKit.Resource.Attribute.overlapAnchor = global::VaxineApp.Droid.Resource.Attribute.overlapAnchor;
+			global::Plugin.InputKit.Resource.Attribute.paddingBottomNoButtons = global::VaxineApp.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Plugin.InputKit.Resource.Attribute.paddingEnd = global::VaxineApp.Droid.Resource.Attribute.paddingEnd;
+			global::Plugin.InputKit.Resource.Attribute.paddingStart = global::VaxineApp.Droid.Resource.Attribute.paddingStart;
+			global::Plugin.InputKit.Resource.Attribute.paddingTopNoTitle = global::VaxineApp.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Plugin.InputKit.Resource.Attribute.panelBackground = global::VaxineApp.Droid.Resource.Attribute.panelBackground;
+			global::Plugin.InputKit.Resource.Attribute.panelMenuListTheme = global::VaxineApp.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Plugin.InputKit.Resource.Attribute.panelMenuListWidth = global::VaxineApp.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Plugin.InputKit.Resource.Attribute.passwordToggleContentDescription = global::VaxineApp.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Plugin.InputKit.Resource.Attribute.passwordToggleDrawable = global::VaxineApp.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Plugin.InputKit.Resource.Attribute.passwordToggleEnabled = global::VaxineApp.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Plugin.InputKit.Resource.Attribute.passwordToggleTint = global::VaxineApp.Droid.Resource.Attribute.passwordToggleTint;
+			global::Plugin.InputKit.Resource.Attribute.passwordToggleTintMode = global::VaxineApp.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Plugin.InputKit.Resource.Attribute.popupMenuStyle = global::VaxineApp.Droid.Resource.Attribute.popupMenuStyle;
+			global::Plugin.InputKit.Resource.Attribute.popupTheme = global::VaxineApp.Droid.Resource.Attribute.popupTheme;
+			global::Plugin.InputKit.Resource.Attribute.popupWindowStyle = global::VaxineApp.Droid.Resource.Attribute.popupWindowStyle;
+			global::Plugin.InputKit.Resource.Attribute.preserveIconSpacing = global::VaxineApp.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Plugin.InputKit.Resource.Attribute.pressedTranslationZ = global::VaxineApp.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Plugin.InputKit.Resource.Attribute.progressBarPadding = global::VaxineApp.Droid.Resource.Attribute.progressBarPadding;
+			global::Plugin.InputKit.Resource.Attribute.progressBarStyle = global::VaxineApp.Droid.Resource.Attribute.progressBarStyle;
+			global::Plugin.InputKit.Resource.Attribute.queryBackground = global::VaxineApp.Droid.Resource.Attribute.queryBackground;
+			global::Plugin.InputKit.Resource.Attribute.queryHint = global::VaxineApp.Droid.Resource.Attribute.queryHint;
+			global::Plugin.InputKit.Resource.Attribute.radioButtonStyle = global::VaxineApp.Droid.Resource.Attribute.radioButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.ratingBarStyle = global::VaxineApp.Droid.Resource.Attribute.ratingBarStyle;
+			global::Plugin.InputKit.Resource.Attribute.ratingBarStyleIndicator = global::VaxineApp.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Plugin.InputKit.Resource.Attribute.ratingBarStyleSmall = global::VaxineApp.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Plugin.InputKit.Resource.Attribute.recyclerViewStyle = global::VaxineApp.Droid.Resource.Attribute.recyclerViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.reverseLayout = global::VaxineApp.Droid.Resource.Attribute.reverseLayout;
+			global::Plugin.InputKit.Resource.Attribute.rippleColor = global::VaxineApp.Droid.Resource.Attribute.rippleColor;
+			global::Plugin.InputKit.Resource.Attribute.scrimAnimationDuration = global::VaxineApp.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Plugin.InputKit.Resource.Attribute.scrimBackground = global::VaxineApp.Droid.Resource.Attribute.scrimBackground;
+			global::Plugin.InputKit.Resource.Attribute.scrimVisibleHeightTrigger = global::VaxineApp.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Plugin.InputKit.Resource.Attribute.searchHintIcon = global::VaxineApp.Droid.Resource.Attribute.searchHintIcon;
+			global::Plugin.InputKit.Resource.Attribute.searchIcon = global::VaxineApp.Droid.Resource.Attribute.searchIcon;
+			global::Plugin.InputKit.Resource.Attribute.searchViewStyle = global::VaxineApp.Droid.Resource.Attribute.searchViewStyle;
+			global::Plugin.InputKit.Resource.Attribute.seekBarStyle = global::VaxineApp.Droid.Resource.Attribute.seekBarStyle;
+			global::Plugin.InputKit.Resource.Attribute.selectableItemBackground = global::VaxineApp.Droid.Resource.Attribute.selectableItemBackground;
+			global::Plugin.InputKit.Resource.Attribute.selectableItemBackgroundBorderless = global::VaxineApp.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Plugin.InputKit.Resource.Attribute.showAsAction = global::VaxineApp.Droid.Resource.Attribute.showAsAction;
+			global::Plugin.InputKit.Resource.Attribute.showDividers = global::VaxineApp.Droid.Resource.Attribute.showDividers;
+			global::Plugin.InputKit.Resource.Attribute.showMotionSpec = global::VaxineApp.Droid.Resource.Attribute.showMotionSpec;
+			global::Plugin.InputKit.Resource.Attribute.showText = global::VaxineApp.Droid.Resource.Attribute.showText;
+			global::Plugin.InputKit.Resource.Attribute.showTitle = global::VaxineApp.Droid.Resource.Attribute.showTitle;
+			global::Plugin.InputKit.Resource.Attribute.singleChoiceItemLayout = global::VaxineApp.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Plugin.InputKit.Resource.Attribute.singleLine = global::VaxineApp.Droid.Resource.Attribute.singleLine;
+			global::Plugin.InputKit.Resource.Attribute.singleSelection = global::VaxineApp.Droid.Resource.Attribute.singleSelection;
+			global::Plugin.InputKit.Resource.Attribute.snackbarButtonStyle = global::VaxineApp.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.snackbarStyle = global::VaxineApp.Droid.Resource.Attribute.snackbarStyle;
+			global::Plugin.InputKit.Resource.Attribute.spanCount = global::VaxineApp.Droid.Resource.Attribute.spanCount;
+			global::Plugin.InputKit.Resource.Attribute.spinBars = global::VaxineApp.Droid.Resource.Attribute.spinBars;
+			global::Plugin.InputKit.Resource.Attribute.spinnerDropDownItemStyle = global::VaxineApp.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Plugin.InputKit.Resource.Attribute.spinnerStyle = global::VaxineApp.Droid.Resource.Attribute.spinnerStyle;
+			global::Plugin.InputKit.Resource.Attribute.splitTrack = global::VaxineApp.Droid.Resource.Attribute.splitTrack;
+			global::Plugin.InputKit.Resource.Attribute.srcCompat = global::VaxineApp.Droid.Resource.Attribute.srcCompat;
+			global::Plugin.InputKit.Resource.Attribute.stackFromEnd = global::VaxineApp.Droid.Resource.Attribute.stackFromEnd;
+			global::Plugin.InputKit.Resource.Attribute.state_above_anchor = global::VaxineApp.Droid.Resource.Attribute.state_above_anchor;
+			global::Plugin.InputKit.Resource.Attribute.state_collapsed = global::VaxineApp.Droid.Resource.Attribute.state_collapsed;
+			global::Plugin.InputKit.Resource.Attribute.state_collapsible = global::VaxineApp.Droid.Resource.Attribute.state_collapsible;
+			global::Plugin.InputKit.Resource.Attribute.state_liftable = global::VaxineApp.Droid.Resource.Attribute.state_liftable;
+			global::Plugin.InputKit.Resource.Attribute.state_lifted = global::VaxineApp.Droid.Resource.Attribute.state_lifted;
+			global::Plugin.InputKit.Resource.Attribute.statusBarBackground = global::VaxineApp.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.InputKit.Resource.Attribute.statusBarScrim = global::VaxineApp.Droid.Resource.Attribute.statusBarScrim;
+			global::Plugin.InputKit.Resource.Attribute.strokeColor = global::VaxineApp.Droid.Resource.Attribute.strokeColor;
+			global::Plugin.InputKit.Resource.Attribute.strokeWidth = global::VaxineApp.Droid.Resource.Attribute.strokeWidth;
+			global::Plugin.InputKit.Resource.Attribute.subMenuArrow = global::VaxineApp.Droid.Resource.Attribute.subMenuArrow;
+			global::Plugin.InputKit.Resource.Attribute.submitBackground = global::VaxineApp.Droid.Resource.Attribute.submitBackground;
+			global::Plugin.InputKit.Resource.Attribute.subtitle = global::VaxineApp.Droid.Resource.Attribute.subtitle;
+			global::Plugin.InputKit.Resource.Attribute.subtitleTextAppearance = global::VaxineApp.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.subtitleTextColor = global::VaxineApp.Droid.Resource.Attribute.subtitleTextColor;
+			global::Plugin.InputKit.Resource.Attribute.subtitleTextStyle = global::VaxineApp.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Plugin.InputKit.Resource.Attribute.suggestionRowLayout = global::VaxineApp.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Plugin.InputKit.Resource.Attribute.switchMinWidth = global::VaxineApp.Droid.Resource.Attribute.switchMinWidth;
+			global::Plugin.InputKit.Resource.Attribute.switchPadding = global::VaxineApp.Droid.Resource.Attribute.switchPadding;
+			global::Plugin.InputKit.Resource.Attribute.switchStyle = global::VaxineApp.Droid.Resource.Attribute.switchStyle;
+			global::Plugin.InputKit.Resource.Attribute.switchTextAppearance = global::VaxineApp.Droid.Resource.Attribute.switchTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.tabBackground = global::VaxineApp.Droid.Resource.Attribute.tabBackground;
+			global::Plugin.InputKit.Resource.Attribute.tabContentStart = global::VaxineApp.Droid.Resource.Attribute.tabContentStart;
+			global::Plugin.InputKit.Resource.Attribute.tabGravity = global::VaxineApp.Droid.Resource.Attribute.tabGravity;
+			global::Plugin.InputKit.Resource.Attribute.tabIconTint = global::VaxineApp.Droid.Resource.Attribute.tabIconTint;
+			global::Plugin.InputKit.Resource.Attribute.tabIconTintMode = global::VaxineApp.Droid.Resource.Attribute.tabIconTintMode;
+			global::Plugin.InputKit.Resource.Attribute.tabIndicator = global::VaxineApp.Droid.Resource.Attribute.tabIndicator;
+			global::Plugin.InputKit.Resource.Attribute.tabIndicatorAnimationDuration = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Plugin.InputKit.Resource.Attribute.tabIndicatorColor = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Plugin.InputKit.Resource.Attribute.tabIndicatorFullWidth = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::Plugin.InputKit.Resource.Attribute.tabIndicatorGravity = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::Plugin.InputKit.Resource.Attribute.tabIndicatorHeight = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Plugin.InputKit.Resource.Attribute.tabInlineLabel = global::VaxineApp.Droid.Resource.Attribute.tabInlineLabel;
+			global::Plugin.InputKit.Resource.Attribute.tabMaxWidth = global::VaxineApp.Droid.Resource.Attribute.tabMaxWidth;
+			global::Plugin.InputKit.Resource.Attribute.tabMinWidth = global::VaxineApp.Droid.Resource.Attribute.tabMinWidth;
+			global::Plugin.InputKit.Resource.Attribute.tabMode = global::VaxineApp.Droid.Resource.Attribute.tabMode;
+			global::Plugin.InputKit.Resource.Attribute.tabPadding = global::VaxineApp.Droid.Resource.Attribute.tabPadding;
+			global::Plugin.InputKit.Resource.Attribute.tabPaddingBottom = global::VaxineApp.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Plugin.InputKit.Resource.Attribute.tabPaddingEnd = global::VaxineApp.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Plugin.InputKit.Resource.Attribute.tabPaddingStart = global::VaxineApp.Droid.Resource.Attribute.tabPaddingStart;
+			global::Plugin.InputKit.Resource.Attribute.tabPaddingTop = global::VaxineApp.Droid.Resource.Attribute.tabPaddingTop;
+			global::Plugin.InputKit.Resource.Attribute.tabRippleColor = global::VaxineApp.Droid.Resource.Attribute.tabRippleColor;
+			global::Plugin.InputKit.Resource.Attribute.tabSelectedTextColor = global::VaxineApp.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Plugin.InputKit.Resource.Attribute.tabStyle = global::VaxineApp.Droid.Resource.Attribute.tabStyle;
+			global::Plugin.InputKit.Resource.Attribute.tabTextAppearance = global::VaxineApp.Droid.Resource.Attribute.tabTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.tabTextColor = global::VaxineApp.Droid.Resource.Attribute.tabTextColor;
+			global::Plugin.InputKit.Resource.Attribute.tabUnboundedRipple = global::VaxineApp.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::Plugin.InputKit.Resource.Attribute.textAllCaps = global::VaxineApp.Droid.Resource.Attribute.textAllCaps;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceBody1 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceBody1;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceBody2 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceBody2;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceButton = global::VaxineApp.Droid.Resource.Attribute.textAppearanceButton;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceCaption = global::VaxineApp.Droid.Resource.Attribute.textAppearanceCaption;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceHeadline1 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceHeadline2 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceHeadline3 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceHeadline4 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceHeadline5 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceHeadline6 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceLargePopupMenu = global::VaxineApp.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceListItem = global::VaxineApp.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceListItemSecondary = global::VaxineApp.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceListItemSmall = global::VaxineApp.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceOverline = global::VaxineApp.Droid.Resource.Attribute.textAppearanceOverline;
+			global::Plugin.InputKit.Resource.Attribute.textAppearancePopupMenuHeader = global::VaxineApp.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceSearchResultSubtitle = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceSearchResultTitle = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceSmallPopupMenu = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceSubtitle1 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::Plugin.InputKit.Resource.Attribute.textAppearanceSubtitle2 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::Plugin.InputKit.Resource.Attribute.textColorAlertDialogListItem = global::VaxineApp.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Plugin.InputKit.Resource.Attribute.textColorSearchUrl = global::VaxineApp.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Plugin.InputKit.Resource.Attribute.textEndPadding = global::VaxineApp.Droid.Resource.Attribute.textEndPadding;
+			global::Plugin.InputKit.Resource.Attribute.textInputStyle = global::VaxineApp.Droid.Resource.Attribute.textInputStyle;
+			global::Plugin.InputKit.Resource.Attribute.textLocale = global::VaxineApp.Droid.Resource.Attribute.textLocale;
+			global::Plugin.InputKit.Resource.Attribute.textStartPadding = global::VaxineApp.Droid.Resource.Attribute.textStartPadding;
+			global::Plugin.InputKit.Resource.Attribute.theme = global::VaxineApp.Droid.Resource.Attribute.theme;
+			global::Plugin.InputKit.Resource.Attribute.thickness = global::VaxineApp.Droid.Resource.Attribute.thickness;
+			global::Plugin.InputKit.Resource.Attribute.thumbTextPadding = global::VaxineApp.Droid.Resource.Attribute.thumbTextPadding;
+			global::Plugin.InputKit.Resource.Attribute.thumbTint = global::VaxineApp.Droid.Resource.Attribute.thumbTint;
+			global::Plugin.InputKit.Resource.Attribute.thumbTintMode = global::VaxineApp.Droid.Resource.Attribute.thumbTintMode;
+			global::Plugin.InputKit.Resource.Attribute.tickMark = global::VaxineApp.Droid.Resource.Attribute.tickMark;
+			global::Plugin.InputKit.Resource.Attribute.tickMarkTint = global::VaxineApp.Droid.Resource.Attribute.tickMarkTint;
+			global::Plugin.InputKit.Resource.Attribute.tickMarkTintMode = global::VaxineApp.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Plugin.InputKit.Resource.Attribute.tint = global::VaxineApp.Droid.Resource.Attribute.tint;
+			global::Plugin.InputKit.Resource.Attribute.tintMode = global::VaxineApp.Droid.Resource.Attribute.tintMode;
+			global::Plugin.InputKit.Resource.Attribute.title = global::VaxineApp.Droid.Resource.Attribute.title;
+			global::Plugin.InputKit.Resource.Attribute.titleEnabled = global::VaxineApp.Droid.Resource.Attribute.titleEnabled;
+			global::Plugin.InputKit.Resource.Attribute.titleMargin = global::VaxineApp.Droid.Resource.Attribute.titleMargin;
+			global::Plugin.InputKit.Resource.Attribute.titleMarginBottom = global::VaxineApp.Droid.Resource.Attribute.titleMarginBottom;
+			global::Plugin.InputKit.Resource.Attribute.titleMarginEnd = global::VaxineApp.Droid.Resource.Attribute.titleMarginEnd;
+			global::Plugin.InputKit.Resource.Attribute.titleMargins = global::VaxineApp.Droid.Resource.Attribute.titleMargins;
+			global::Plugin.InputKit.Resource.Attribute.titleMarginStart = global::VaxineApp.Droid.Resource.Attribute.titleMarginStart;
+			global::Plugin.InputKit.Resource.Attribute.titleMarginTop = global::VaxineApp.Droid.Resource.Attribute.titleMarginTop;
+			global::Plugin.InputKit.Resource.Attribute.titleTextAppearance = global::VaxineApp.Droid.Resource.Attribute.titleTextAppearance;
+			global::Plugin.InputKit.Resource.Attribute.titleTextColor = global::VaxineApp.Droid.Resource.Attribute.titleTextColor;
+			global::Plugin.InputKit.Resource.Attribute.titleTextStyle = global::VaxineApp.Droid.Resource.Attribute.titleTextStyle;
+			global::Plugin.InputKit.Resource.Attribute.toolbarId = global::VaxineApp.Droid.Resource.Attribute.toolbarId;
+			global::Plugin.InputKit.Resource.Attribute.toolbarNavigationButtonStyle = global::VaxineApp.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Plugin.InputKit.Resource.Attribute.toolbarStyle = global::VaxineApp.Droid.Resource.Attribute.toolbarStyle;
+			global::Plugin.InputKit.Resource.Attribute.tooltipForegroundColor = global::VaxineApp.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Plugin.InputKit.Resource.Attribute.tooltipFrameBackground = global::VaxineApp.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Plugin.InputKit.Resource.Attribute.tooltipText = global::VaxineApp.Droid.Resource.Attribute.tooltipText;
+			global::Plugin.InputKit.Resource.Attribute.track = global::VaxineApp.Droid.Resource.Attribute.track;
+			global::Plugin.InputKit.Resource.Attribute.trackTint = global::VaxineApp.Droid.Resource.Attribute.trackTint;
+			global::Plugin.InputKit.Resource.Attribute.trackTintMode = global::VaxineApp.Droid.Resource.Attribute.trackTintMode;
+			global::Plugin.InputKit.Resource.Attribute.ttcIndex = global::VaxineApp.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.InputKit.Resource.Attribute.useCompatPadding = global::VaxineApp.Droid.Resource.Attribute.useCompatPadding;
+			global::Plugin.InputKit.Resource.Attribute.viewInflaterClass = global::VaxineApp.Droid.Resource.Attribute.viewInflaterClass;
+			global::Plugin.InputKit.Resource.Attribute.voiceIcon = global::VaxineApp.Droid.Resource.Attribute.voiceIcon;
+			global::Plugin.InputKit.Resource.Attribute.windowActionBar = global::VaxineApp.Droid.Resource.Attribute.windowActionBar;
+			global::Plugin.InputKit.Resource.Attribute.windowActionBarOverlay = global::VaxineApp.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Plugin.InputKit.Resource.Attribute.windowActionModeOverlay = global::VaxineApp.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Plugin.InputKit.Resource.Attribute.windowFixedHeightMajor = global::VaxineApp.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Plugin.InputKit.Resource.Attribute.windowFixedHeightMinor = global::VaxineApp.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Plugin.InputKit.Resource.Attribute.windowFixedWidthMajor = global::VaxineApp.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Plugin.InputKit.Resource.Attribute.windowFixedWidthMinor = global::VaxineApp.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Plugin.InputKit.Resource.Attribute.windowMinWidthMajor = global::VaxineApp.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Plugin.InputKit.Resource.Attribute.windowMinWidthMinor = global::VaxineApp.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Plugin.InputKit.Resource.Attribute.windowNoTitle = global::VaxineApp.Droid.Resource.Attribute.windowNoTitle;
+			global::Plugin.InputKit.Resource.Boolean.abc_action_bar_embed_tabs = global::VaxineApp.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Plugin.InputKit.Resource.Boolean.abc_allow_stacked_button_bar = global::VaxineApp.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Plugin.InputKit.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::VaxineApp.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Plugin.InputKit.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::VaxineApp.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::Plugin.InputKit.Resource.Color.abc_background_cache_hint_selector_material_dark = global::VaxineApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Plugin.InputKit.Resource.Color.abc_background_cache_hint_selector_material_light = global::VaxineApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Plugin.InputKit.Resource.Color.abc_btn_colored_borderless_text_material = global::VaxineApp.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Plugin.InputKit.Resource.Color.abc_btn_colored_text_material = global::VaxineApp.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Plugin.InputKit.Resource.Color.abc_color_highlight_material = global::VaxineApp.Droid.Resource.Color.abc_color_highlight_material;
+			global::Plugin.InputKit.Resource.Color.abc_hint_foreground_material_dark = global::VaxineApp.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Plugin.InputKit.Resource.Color.abc_hint_foreground_material_light = global::VaxineApp.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Plugin.InputKit.Resource.Color.abc_primary_text_disable_only_material_dark = global::VaxineApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Plugin.InputKit.Resource.Color.abc_primary_text_disable_only_material_light = global::VaxineApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Plugin.InputKit.Resource.Color.abc_primary_text_material_dark = global::VaxineApp.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Plugin.InputKit.Resource.Color.abc_primary_text_material_light = global::VaxineApp.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Plugin.InputKit.Resource.Color.abc_search_url_text = global::VaxineApp.Droid.Resource.Color.abc_search_url_text;
+			global::Plugin.InputKit.Resource.Color.abc_search_url_text_normal = global::VaxineApp.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Plugin.InputKit.Resource.Color.abc_search_url_text_pressed = global::VaxineApp.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Plugin.InputKit.Resource.Color.abc_search_url_text_selected = global::VaxineApp.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Plugin.InputKit.Resource.Color.abc_secondary_text_material_dark = global::VaxineApp.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Plugin.InputKit.Resource.Color.abc_secondary_text_material_light = global::VaxineApp.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Plugin.InputKit.Resource.Color.abc_tint_btn_checkable = global::VaxineApp.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Plugin.InputKit.Resource.Color.abc_tint_default = global::VaxineApp.Droid.Resource.Color.abc_tint_default;
+			global::Plugin.InputKit.Resource.Color.abc_tint_edittext = global::VaxineApp.Droid.Resource.Color.abc_tint_edittext;
+			global::Plugin.InputKit.Resource.Color.abc_tint_seek_thumb = global::VaxineApp.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Plugin.InputKit.Resource.Color.abc_tint_spinner = global::VaxineApp.Droid.Resource.Color.abc_tint_spinner;
+			global::Plugin.InputKit.Resource.Color.abc_tint_switch_track = global::VaxineApp.Droid.Resource.Color.abc_tint_switch_track;
+			global::Plugin.InputKit.Resource.Color.accent_material_dark = global::VaxineApp.Droid.Resource.Color.accent_material_dark;
+			global::Plugin.InputKit.Resource.Color.accent_material_light = global::VaxineApp.Droid.Resource.Color.accent_material_light;
+			global::Plugin.InputKit.Resource.Color.background_floating_material_dark = global::VaxineApp.Droid.Resource.Color.background_floating_material_dark;
+			global::Plugin.InputKit.Resource.Color.background_floating_material_light = global::VaxineApp.Droid.Resource.Color.background_floating_material_light;
+			global::Plugin.InputKit.Resource.Color.background_material_dark = global::VaxineApp.Droid.Resource.Color.background_material_dark;
+			global::Plugin.InputKit.Resource.Color.background_material_light = global::VaxineApp.Droid.Resource.Color.background_material_light;
+			global::Plugin.InputKit.Resource.Color.bright_foreground_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Plugin.InputKit.Resource.Color.bright_foreground_disabled_material_light = global::VaxineApp.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Plugin.InputKit.Resource.Color.bright_foreground_inverse_material_dark = global::VaxineApp.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Plugin.InputKit.Resource.Color.bright_foreground_inverse_material_light = global::VaxineApp.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Plugin.InputKit.Resource.Color.bright_foreground_material_dark = global::VaxineApp.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Plugin.InputKit.Resource.Color.bright_foreground_material_light = global::VaxineApp.Droid.Resource.Color.bright_foreground_material_light;
+			global::Plugin.InputKit.Resource.Color.browser_actions_bg_grey = global::VaxineApp.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.InputKit.Resource.Color.browser_actions_divider_color = global::VaxineApp.Droid.Resource.Color.browser_actions_divider_color;
+			global::Plugin.InputKit.Resource.Color.browser_actions_text_color = global::VaxineApp.Droid.Resource.Color.browser_actions_text_color;
+			global::Plugin.InputKit.Resource.Color.browser_actions_title_color = global::VaxineApp.Droid.Resource.Color.browser_actions_title_color;
+			global::Plugin.InputKit.Resource.Color.button_material_dark = global::VaxineApp.Droid.Resource.Color.button_material_dark;
+			global::Plugin.InputKit.Resource.Color.button_material_light = global::VaxineApp.Droid.Resource.Color.button_material_light;
+			global::Plugin.InputKit.Resource.Color.cardview_dark_background = global::VaxineApp.Droid.Resource.Color.cardview_dark_background;
+			global::Plugin.InputKit.Resource.Color.cardview_light_background = global::VaxineApp.Droid.Resource.Color.cardview_light_background;
+			global::Plugin.InputKit.Resource.Color.cardview_shadow_end_color = global::VaxineApp.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Plugin.InputKit.Resource.Color.cardview_shadow_start_color = global::VaxineApp.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Plugin.InputKit.Resource.Color.design_bottom_navigation_shadow_color = global::VaxineApp.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Plugin.InputKit.Resource.Color.design_default_color_primary = global::VaxineApp.Droid.Resource.Color.design_default_color_primary;
+			global::Plugin.InputKit.Resource.Color.design_default_color_primary_dark = global::VaxineApp.Droid.Resource.Color.design_default_color_primary_dark;
+			global::Plugin.InputKit.Resource.Color.design_error = global::VaxineApp.Droid.Resource.Color.design_error;
+			global::Plugin.InputKit.Resource.Color.design_fab_shadow_end_color = global::VaxineApp.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Plugin.InputKit.Resource.Color.design_fab_shadow_mid_color = global::VaxineApp.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Plugin.InputKit.Resource.Color.design_fab_shadow_start_color = global::VaxineApp.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Plugin.InputKit.Resource.Color.design_fab_stroke_end_inner_color = global::VaxineApp.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Plugin.InputKit.Resource.Color.design_fab_stroke_end_outer_color = global::VaxineApp.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Plugin.InputKit.Resource.Color.design_fab_stroke_top_inner_color = global::VaxineApp.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Plugin.InputKit.Resource.Color.design_fab_stroke_top_outer_color = global::VaxineApp.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Plugin.InputKit.Resource.Color.design_snackbar_background_color = global::VaxineApp.Droid.Resource.Color.design_snackbar_background_color;
+			global::Plugin.InputKit.Resource.Color.dim_foreground_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Plugin.InputKit.Resource.Color.dim_foreground_disabled_material_light = global::VaxineApp.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Plugin.InputKit.Resource.Color.dim_foreground_material_dark = global::VaxineApp.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Plugin.InputKit.Resource.Color.dim_foreground_material_light = global::VaxineApp.Droid.Resource.Color.dim_foreground_material_light;
+			global::Plugin.InputKit.Resource.Color.error_color_material_dark = global::VaxineApp.Droid.Resource.Color.error_color_material_dark;
+			global::Plugin.InputKit.Resource.Color.error_color_material_light = global::VaxineApp.Droid.Resource.Color.error_color_material_light;
+			global::Plugin.InputKit.Resource.Color.foreground_material_dark = global::VaxineApp.Droid.Resource.Color.foreground_material_dark;
+			global::Plugin.InputKit.Resource.Color.foreground_material_light = global::VaxineApp.Droid.Resource.Color.foreground_material_light;
+			global::Plugin.InputKit.Resource.Color.highlighted_text_material_dark = global::VaxineApp.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Plugin.InputKit.Resource.Color.highlighted_text_material_light = global::VaxineApp.Droid.Resource.Color.highlighted_text_material_light;
+			global::Plugin.InputKit.Resource.Color.material_blue_grey_800 = global::VaxineApp.Droid.Resource.Color.material_blue_grey_800;
+			global::Plugin.InputKit.Resource.Color.material_blue_grey_900 = global::VaxineApp.Droid.Resource.Color.material_blue_grey_900;
+			global::Plugin.InputKit.Resource.Color.material_blue_grey_950 = global::VaxineApp.Droid.Resource.Color.material_blue_grey_950;
+			global::Plugin.InputKit.Resource.Color.material_deep_teal_200 = global::VaxineApp.Droid.Resource.Color.material_deep_teal_200;
+			global::Plugin.InputKit.Resource.Color.material_deep_teal_500 = global::VaxineApp.Droid.Resource.Color.material_deep_teal_500;
+			global::Plugin.InputKit.Resource.Color.material_grey_100 = global::VaxineApp.Droid.Resource.Color.material_grey_100;
+			global::Plugin.InputKit.Resource.Color.material_grey_300 = global::VaxineApp.Droid.Resource.Color.material_grey_300;
+			global::Plugin.InputKit.Resource.Color.material_grey_50 = global::VaxineApp.Droid.Resource.Color.material_grey_50;
+			global::Plugin.InputKit.Resource.Color.material_grey_600 = global::VaxineApp.Droid.Resource.Color.material_grey_600;
+			global::Plugin.InputKit.Resource.Color.material_grey_800 = global::VaxineApp.Droid.Resource.Color.material_grey_800;
+			global::Plugin.InputKit.Resource.Color.material_grey_850 = global::VaxineApp.Droid.Resource.Color.material_grey_850;
+			global::Plugin.InputKit.Resource.Color.material_grey_900 = global::VaxineApp.Droid.Resource.Color.material_grey_900;
+			global::Plugin.InputKit.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::VaxineApp.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::Plugin.InputKit.Resource.Color.mtrl_bottom_nav_item_tint = global::VaxineApp.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::Plugin.InputKit.Resource.Color.mtrl_btn_bg_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Plugin.InputKit.Resource.Color.mtrl_btn_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_btn_stroke_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Plugin.InputKit.Resource.Color.mtrl_btn_text_btn_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_btn_text_color_disabled = global::VaxineApp.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Plugin.InputKit.Resource.Color.mtrl_btn_text_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::Plugin.InputKit.Resource.Color.mtrl_btn_transparent_bg_color = global::VaxineApp.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_chip_background_color = global::VaxineApp.Droid.Resource.Color.mtrl_chip_background_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_chip_close_icon_tint = global::VaxineApp.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Plugin.InputKit.Resource.Color.mtrl_chip_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_chip_text_color = global::VaxineApp.Droid.Resource.Color.mtrl_chip_text_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_fab_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_scrim_color = global::VaxineApp.Droid.Resource.Color.mtrl_scrim_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_tabs_colored_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_tabs_icon_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Plugin.InputKit.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Plugin.InputKit.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Plugin.InputKit.Resource.Color.mtrl_tabs_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_textinput_default_box_stroke_color = global::VaxineApp.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_textinput_disabled_color = global::VaxineApp.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::VaxineApp.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::VaxineApp.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Plugin.InputKit.Resource.Color.mtrl_text_btn_text_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::Plugin.InputKit.Resource.Color.notification_action_color_filter = global::VaxineApp.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.InputKit.Resource.Color.notification_icon_bg_color = global::VaxineApp.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.InputKit.Resource.Color.notification_material_background_media_default_color = global::VaxineApp.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Plugin.InputKit.Resource.Color.primary_dark_material_dark = global::VaxineApp.Droid.Resource.Color.primary_dark_material_dark;
+			global::Plugin.InputKit.Resource.Color.primary_dark_material_light = global::VaxineApp.Droid.Resource.Color.primary_dark_material_light;
+			global::Plugin.InputKit.Resource.Color.primary_material_dark = global::VaxineApp.Droid.Resource.Color.primary_material_dark;
+			global::Plugin.InputKit.Resource.Color.primary_material_light = global::VaxineApp.Droid.Resource.Color.primary_material_light;
+			global::Plugin.InputKit.Resource.Color.primary_text_default_material_dark = global::VaxineApp.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Plugin.InputKit.Resource.Color.primary_text_default_material_light = global::VaxineApp.Droid.Resource.Color.primary_text_default_material_light;
+			global::Plugin.InputKit.Resource.Color.primary_text_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Plugin.InputKit.Resource.Color.primary_text_disabled_material_light = global::VaxineApp.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Plugin.InputKit.Resource.Color.ripple_material_dark = global::VaxineApp.Droid.Resource.Color.ripple_material_dark;
+			global::Plugin.InputKit.Resource.Color.ripple_material_light = global::VaxineApp.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.InputKit.Resource.Color.secondary_text_default_material_dark = global::VaxineApp.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Plugin.InputKit.Resource.Color.secondary_text_default_material_light = global::VaxineApp.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.InputKit.Resource.Color.secondary_text_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Plugin.InputKit.Resource.Color.secondary_text_disabled_material_light = global::VaxineApp.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Plugin.InputKit.Resource.Color.switch_thumb_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Plugin.InputKit.Resource.Color.switch_thumb_disabled_material_light = global::VaxineApp.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Plugin.InputKit.Resource.Color.switch_thumb_material_dark = global::VaxineApp.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Plugin.InputKit.Resource.Color.switch_thumb_material_light = global::VaxineApp.Droid.Resource.Color.switch_thumb_material_light;
+			global::Plugin.InputKit.Resource.Color.switch_thumb_normal_material_dark = global::VaxineApp.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Plugin.InputKit.Resource.Color.switch_thumb_normal_material_light = global::VaxineApp.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Plugin.InputKit.Resource.Color.tooltip_background_dark = global::VaxineApp.Droid.Resource.Color.tooltip_background_dark;
+			global::Plugin.InputKit.Resource.Color.tooltip_background_light = global::VaxineApp.Droid.Resource.Color.tooltip_background_light;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_content_inset_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_default_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_default_padding_end_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_default_padding_start_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_elevation_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_stacked_max_height = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_button_min_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_button_min_width_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_action_button_min_width_overflow_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_alert_dialog_button_bar_height = global::VaxineApp.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Plugin.InputKit.Resource.Dimension.abc_alert_dialog_button_dimen = global::VaxineApp.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::Plugin.InputKit.Resource.Dimension.abc_button_inset_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_button_inset_vertical_material = global::VaxineApp.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_button_padding_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_button_padding_vertical_material = global::VaxineApp.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::VaxineApp.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Plugin.InputKit.Resource.Dimension.abc_config_prefDialogWidth = global::VaxineApp.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Plugin.InputKit.Resource.Dimension.abc_control_corner_material = global::VaxineApp.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_control_inset_material = global::VaxineApp.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_control_padding_material = global::VaxineApp.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_corner_radius_material = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_fixed_height_major = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_fixed_height_minor = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_fixed_width_major = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_fixed_width_minor = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_min_width_major = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_min_width_minor = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_padding_material = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_padding_top_material = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_dialog_title_divider_material = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_disabled_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Plugin.InputKit.Resource.Dimension.abc_disabled_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Plugin.InputKit.Resource.Dimension.abc_dropdownitem_icon_width = global::VaxineApp.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Plugin.InputKit.Resource.Dimension.abc_dropdownitem_text_padding_left = global::VaxineApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Plugin.InputKit.Resource.Dimension.abc_dropdownitem_text_padding_right = global::VaxineApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Plugin.InputKit.Resource.Dimension.abc_edit_text_inset_bottom_material = global::VaxineApp.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_edit_text_inset_top_material = global::VaxineApp.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_floating_window_z = global::VaxineApp.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Plugin.InputKit.Resource.Dimension.abc_list_item_height_large_material = global::VaxineApp.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_list_item_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_list_item_height_small_material = global::VaxineApp.Droid.Resource.Dimension.abc_list_item_height_small_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_list_item_padding_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_panel_menu_list_width = global::VaxineApp.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Plugin.InputKit.Resource.Dimension.abc_progress_bar_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_search_view_preferred_height = global::VaxineApp.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Plugin.InputKit.Resource.Dimension.abc_search_view_preferred_width = global::VaxineApp.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Plugin.InputKit.Resource.Dimension.abc_seekbar_track_background_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_seekbar_track_progress_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_select_dialog_padding_start_material = global::VaxineApp.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_switch_padding = global::VaxineApp.Droid.Resource.Dimension.abc_switch_padding;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_body_1_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_body_2_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_button_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_caption_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_display_1_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_display_2_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_display_3_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_display_4_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_headline_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_large_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_medium_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_menu_header_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_menu_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_small_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_subhead_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_title_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Plugin.InputKit.Resource.Dimension.abc_text_size_title_material_toolbar = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Plugin.InputKit.Resource.Dimension.browser_actions_context_menu_max_width = global::VaxineApp.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.InputKit.Resource.Dimension.browser_actions_context_menu_min_padding = global::VaxineApp.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.InputKit.Resource.Dimension.cardview_compat_inset_shadow = global::VaxineApp.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Plugin.InputKit.Resource.Dimension.cardview_default_elevation = global::VaxineApp.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Plugin.InputKit.Resource.Dimension.cardview_default_radius = global::VaxineApp.Droid.Resource.Dimension.cardview_default_radius;
+			global::Plugin.InputKit.Resource.Dimension.compat_button_inset_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.InputKit.Resource.Dimension.compat_button_inset_vertical_material = global::VaxineApp.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.InputKit.Resource.Dimension.compat_button_padding_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.InputKit.Resource.Dimension.compat_button_padding_vertical_material = global::VaxineApp.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.InputKit.Resource.Dimension.compat_control_corner_material = global::VaxineApp.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.InputKit.Resource.Dimension.compat_notification_large_icon_max_height = global::VaxineApp.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.InputKit.Resource.Dimension.compat_notification_large_icon_max_width = global::VaxineApp.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.InputKit.Resource.Dimension.design_appbar_elevation = global::VaxineApp.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_active_text_size = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_elevation = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_height = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_icon_size = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_item_max_width = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_item_min_width = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_margin = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_shadow_height = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_navigation_text_size = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_sheet_modal_elevation = global::VaxineApp.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Plugin.InputKit.Resource.Dimension.design_bottom_sheet_peek_height_min = global::VaxineApp.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Plugin.InputKit.Resource.Dimension.design_fab_border_width = global::VaxineApp.Droid.Resource.Dimension.design_fab_border_width;
+			global::Plugin.InputKit.Resource.Dimension.design_fab_elevation = global::VaxineApp.Droid.Resource.Dimension.design_fab_elevation;
+			global::Plugin.InputKit.Resource.Dimension.design_fab_image_size = global::VaxineApp.Droid.Resource.Dimension.design_fab_image_size;
+			global::Plugin.InputKit.Resource.Dimension.design_fab_size_mini = global::VaxineApp.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Plugin.InputKit.Resource.Dimension.design_fab_size_normal = global::VaxineApp.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Plugin.InputKit.Resource.Dimension.design_fab_translation_z_hovered_focused = global::VaxineApp.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Plugin.InputKit.Resource.Dimension.design_fab_translation_z_pressed = global::VaxineApp.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Plugin.InputKit.Resource.Dimension.design_navigation_elevation = global::VaxineApp.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Plugin.InputKit.Resource.Dimension.design_navigation_icon_padding = global::VaxineApp.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Plugin.InputKit.Resource.Dimension.design_navigation_icon_size = global::VaxineApp.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Plugin.InputKit.Resource.Dimension.design_navigation_item_horizontal_padding = global::VaxineApp.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Plugin.InputKit.Resource.Dimension.design_navigation_item_icon_padding = global::VaxineApp.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Plugin.InputKit.Resource.Dimension.design_navigation_max_width = global::VaxineApp.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Plugin.InputKit.Resource.Dimension.design_navigation_padding_bottom = global::VaxineApp.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Plugin.InputKit.Resource.Dimension.design_navigation_separator_vertical_padding = global::VaxineApp.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_action_inline_max_width = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_background_corner_radius = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_elevation = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_max_width = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_min_width = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_padding_horizontal = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_padding_vertical = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Plugin.InputKit.Resource.Dimension.design_snackbar_text_size = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Plugin.InputKit.Resource.Dimension.design_tab_max_width = global::VaxineApp.Droid.Resource.Dimension.design_tab_max_width;
+			global::Plugin.InputKit.Resource.Dimension.design_tab_scrollable_min_width = global::VaxineApp.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Plugin.InputKit.Resource.Dimension.design_tab_text_size = global::VaxineApp.Droid.Resource.Dimension.design_tab_text_size;
+			global::Plugin.InputKit.Resource.Dimension.design_tab_text_size_2line = global::VaxineApp.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Plugin.InputKit.Resource.Dimension.design_textinput_caption_translate_y = global::VaxineApp.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::Plugin.InputKit.Resource.Dimension.disabled_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Plugin.InputKit.Resource.Dimension.disabled_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Plugin.InputKit.Resource.Dimension.fastscroll_default_thickness = global::VaxineApp.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Plugin.InputKit.Resource.Dimension.fastscroll_margin = global::VaxineApp.Droid.Resource.Dimension.fastscroll_margin;
+			global::Plugin.InputKit.Resource.Dimension.fastscroll_minimum_range = global::VaxineApp.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Plugin.InputKit.Resource.Dimension.highlight_alpha_material_colored = global::VaxineApp.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Plugin.InputKit.Resource.Dimension.highlight_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Plugin.InputKit.Resource.Dimension.highlight_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Plugin.InputKit.Resource.Dimension.hint_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Plugin.InputKit.Resource.Dimension.hint_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Plugin.InputKit.Resource.Dimension.hint_pressed_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Plugin.InputKit.Resource.Dimension.hint_pressed_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Plugin.InputKit.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::VaxineApp.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Plugin.InputKit.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::VaxineApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Plugin.InputKit.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::VaxineApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_bottomappbar_height = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_corner_radius = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_disabled_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_disabled_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_focused_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_hovered_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_icon_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_inset = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_letter_spacing = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_padding_bottom = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_padding_left = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_padding_right = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_padding_top = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_pressed_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_stroke_size = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_text_size = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_btn_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_z;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_card_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_card_spacing = global::VaxineApp.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_chip_pressed_translation_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_chip_text_size = global::VaxineApp.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_fab_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::VaxineApp.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_fab_translation_z_pressed = global::VaxineApp.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_navigation_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_navigation_item_icon_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::VaxineApp.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_snackbar_margin = global::VaxineApp.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Plugin.InputKit.Resource.Dimension.mtrl_toolbar_default_height = global::VaxineApp.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Plugin.InputKit.Resource.Dimension.notification_action_icon_size = global::VaxineApp.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.InputKit.Resource.Dimension.notification_action_text_size = global::VaxineApp.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.InputKit.Resource.Dimension.notification_big_circle_margin = global::VaxineApp.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.InputKit.Resource.Dimension.notification_content_margin_start = global::VaxineApp.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.InputKit.Resource.Dimension.notification_large_icon_height = global::VaxineApp.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.InputKit.Resource.Dimension.notification_large_icon_width = global::VaxineApp.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.InputKit.Resource.Dimension.notification_main_column_padding_top = global::VaxineApp.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.InputKit.Resource.Dimension.notification_media_narrow_margin = global::VaxineApp.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.InputKit.Resource.Dimension.notification_right_icon_size = global::VaxineApp.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.InputKit.Resource.Dimension.notification_right_side_padding_top = global::VaxineApp.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.InputKit.Resource.Dimension.notification_small_icon_background_padding = global::VaxineApp.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.InputKit.Resource.Dimension.notification_small_icon_size_as_large = global::VaxineApp.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.InputKit.Resource.Dimension.notification_subtext_size = global::VaxineApp.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.InputKit.Resource.Dimension.notification_top_pad = global::VaxineApp.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.InputKit.Resource.Dimension.notification_top_pad_large_text = global::VaxineApp.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.InputKit.Resource.Dimension.tooltip_corner_radius = global::VaxineApp.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Plugin.InputKit.Resource.Dimension.tooltip_horizontal_padding = global::VaxineApp.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Plugin.InputKit.Resource.Dimension.tooltip_margin = global::VaxineApp.Droid.Resource.Dimension.tooltip_margin;
+			global::Plugin.InputKit.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::VaxineApp.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Plugin.InputKit.Resource.Dimension.tooltip_precise_anchor_threshold = global::VaxineApp.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Plugin.InputKit.Resource.Dimension.tooltip_vertical_padding = global::VaxineApp.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Plugin.InputKit.Resource.Dimension.tooltip_y_offset_non_touch = global::VaxineApp.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Plugin.InputKit.Resource.Dimension.tooltip_y_offset_touch = global::VaxineApp.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Plugin.InputKit.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_action_bar_item_background_material = global::VaxineApp.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_borderless_material = global::VaxineApp.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_check_material = global::VaxineApp.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_check_material_anim = global::VaxineApp.Droid.Resource.Drawable.abc_btn_check_material_anim;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_colored_material = global::VaxineApp.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_default_mtrl_shape = global::VaxineApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_radio_material = global::VaxineApp.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_radio_material_anim = global::VaxineApp.Droid.Resource.Drawable.abc_btn_radio_material_anim;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Plugin.InputKit.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Plugin.InputKit.Resource.Drawable.abc_cab_background_internal_bg = global::VaxineApp.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Plugin.InputKit.Resource.Drawable.abc_cab_background_top_material = global::VaxineApp.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_control_background_material = global::VaxineApp.Droid.Resource.Drawable.abc_control_background_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_dialog_material_background = global::VaxineApp.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Plugin.InputKit.Resource.Drawable.abc_edit_text_material = global::VaxineApp.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_ab_back_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_clear_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_go_search_api_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_menu_overflow_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_search_api_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_star_black_16dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_star_black_36dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_star_black_48dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_star_half_black_16dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_star_half_black_36dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_star_half_black_48dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Plugin.InputKit.Resource.Drawable.abc_ic_voice_search_api_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_item_background_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Plugin.InputKit.Resource.Drawable.abc_item_background_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_divider_material = global::VaxineApp.Droid.Resource.Drawable.abc_list_divider_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_divider_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_focused_holo = global::VaxineApp.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_longpressed_holo = global::VaxineApp.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_pressed_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_pressed_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_selector_disabled_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_selector_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Plugin.InputKit.Resource.Drawable.abc_list_selector_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Plugin.InputKit.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::VaxineApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Plugin.InputKit.Resource.Drawable.abc_popup_background_mtrl_mult = global::VaxineApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Plugin.InputKit.Resource.Drawable.abc_ratingbar_indicator_material = global::VaxineApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_ratingbar_material = global::VaxineApp.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_ratingbar_small_material = global::VaxineApp.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Plugin.InputKit.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Plugin.InputKit.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_seekbar_thumb_material = global::VaxineApp.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_seekbar_tick_mark_material = global::VaxineApp.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_seekbar_track_material = global::VaxineApp.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_spinner_textfield_background_material = global::VaxineApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_switch_thumb_material = global::VaxineApp.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_switch_track_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_tab_indicator_material = global::VaxineApp.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Plugin.InputKit.Resource.Drawable.abc_textfield_search_material = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_text_cursor_material = global::VaxineApp.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Plugin.InputKit.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Plugin.InputKit.Resource.Drawable.abc_vector_test = global::VaxineApp.Droid.Resource.Drawable.abc_vector_test;
+			global::Plugin.InputKit.Resource.Drawable.avd_hide_password = global::VaxineApp.Droid.Resource.Drawable.avd_hide_password;
+			global::Plugin.InputKit.Resource.Drawable.avd_show_password = global::VaxineApp.Droid.Resource.Drawable.avd_show_password;
+			global::Plugin.InputKit.Resource.Drawable.btn_checkbox_checked_mtrl = global::VaxineApp.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Plugin.InputKit.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::VaxineApp.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Plugin.InputKit.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::VaxineApp.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Plugin.InputKit.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::VaxineApp.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Plugin.InputKit.Resource.Drawable.btn_radio_off_mtrl = global::VaxineApp.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Plugin.InputKit.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::VaxineApp.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Plugin.InputKit.Resource.Drawable.btn_radio_on_mtrl = global::VaxineApp.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Plugin.InputKit.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::VaxineApp.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::Plugin.InputKit.Resource.Drawable.design_bottom_navigation_item_background = global::VaxineApp.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Plugin.InputKit.Resource.Drawable.design_fab_background = global::VaxineApp.Droid.Resource.Drawable.design_fab_background;
+			global::Plugin.InputKit.Resource.Drawable.design_ic_visibility = global::VaxineApp.Droid.Resource.Drawable.design_ic_visibility;
+			global::Plugin.InputKit.Resource.Drawable.design_ic_visibility_off = global::VaxineApp.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Plugin.InputKit.Resource.Drawable.design_password_eye = global::VaxineApp.Droid.Resource.Drawable.design_password_eye;
+			global::Plugin.InputKit.Resource.Drawable.design_snackbar_background = global::VaxineApp.Droid.Resource.Drawable.design_snackbar_background;
+			global::Plugin.InputKit.Resource.Drawable.ic_mtrl_chip_checked_black = global::VaxineApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Plugin.InputKit.Resource.Drawable.ic_mtrl_chip_checked_circle = global::VaxineApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Plugin.InputKit.Resource.Drawable.ic_mtrl_chip_close_circle = global::VaxineApp.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Plugin.InputKit.Resource.Drawable.mtrl_tabs_default_indicator = global::VaxineApp.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Plugin.InputKit.Resource.Drawable.navigation_empty_icon = global::VaxineApp.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Plugin.InputKit.Resource.Drawable.notification_action_background = global::VaxineApp.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.InputKit.Resource.Drawable.notification_bg = global::VaxineApp.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.InputKit.Resource.Drawable.notification_bg_low = global::VaxineApp.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.InputKit.Resource.Drawable.notification_bg_low_normal = global::VaxineApp.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.InputKit.Resource.Drawable.notification_bg_low_pressed = global::VaxineApp.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.InputKit.Resource.Drawable.notification_bg_normal = global::VaxineApp.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.InputKit.Resource.Drawable.notification_bg_normal_pressed = global::VaxineApp.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.InputKit.Resource.Drawable.notification_icon_background = global::VaxineApp.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.InputKit.Resource.Drawable.notification_template_icon_bg = global::VaxineApp.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.InputKit.Resource.Drawable.notification_template_icon_low_bg = global::VaxineApp.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.InputKit.Resource.Drawable.notification_tile_bg = global::VaxineApp.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.InputKit.Resource.Drawable.notify_panel_notification_icon_bg = global::VaxineApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.InputKit.Resource.Drawable.tooltip_frame_dark = global::VaxineApp.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Plugin.InputKit.Resource.Drawable.tooltip_frame_light = global::VaxineApp.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Plugin.InputKit.Resource.Id.accessibility_action_clickable_span = global::VaxineApp.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_0 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_1 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_10 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_11 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_12 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_13 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_14 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_15 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_16 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_17 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_18 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_19 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_2 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_20 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_21 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_22 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_23 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_24 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_25 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_26 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_27 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_28 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_29 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_3 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_30 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_31 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_4 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_5 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_6 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_7 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_8 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Plugin.InputKit.Resource.Id.accessibility_custom_action_9 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_9;
+			global::Plugin.InputKit.Resource.Id.action0 = global::VaxineApp.Droid.Resource.Id.action0;
+			global::Plugin.InputKit.Resource.Id.actions = global::VaxineApp.Droid.Resource.Id.actions;
+			global::Plugin.InputKit.Resource.Id.action_bar = global::VaxineApp.Droid.Resource.Id.action_bar;
+			global::Plugin.InputKit.Resource.Id.action_bar_activity_content = global::VaxineApp.Droid.Resource.Id.action_bar_activity_content;
+			global::Plugin.InputKit.Resource.Id.action_bar_container = global::VaxineApp.Droid.Resource.Id.action_bar_container;
+			global::Plugin.InputKit.Resource.Id.action_bar_root = global::VaxineApp.Droid.Resource.Id.action_bar_root;
+			global::Plugin.InputKit.Resource.Id.action_bar_spinner = global::VaxineApp.Droid.Resource.Id.action_bar_spinner;
+			global::Plugin.InputKit.Resource.Id.action_bar_subtitle = global::VaxineApp.Droid.Resource.Id.action_bar_subtitle;
+			global::Plugin.InputKit.Resource.Id.action_bar_title = global::VaxineApp.Droid.Resource.Id.action_bar_title;
+			global::Plugin.InputKit.Resource.Id.action_container = global::VaxineApp.Droid.Resource.Id.action_container;
+			global::Plugin.InputKit.Resource.Id.action_context_bar = global::VaxineApp.Droid.Resource.Id.action_context_bar;
+			global::Plugin.InputKit.Resource.Id.action_divider = global::VaxineApp.Droid.Resource.Id.action_divider;
+			global::Plugin.InputKit.Resource.Id.action_image = global::VaxineApp.Droid.Resource.Id.action_image;
+			global::Plugin.InputKit.Resource.Id.action_menu_divider = global::VaxineApp.Droid.Resource.Id.action_menu_divider;
+			global::Plugin.InputKit.Resource.Id.action_menu_presenter = global::VaxineApp.Droid.Resource.Id.action_menu_presenter;
+			global::Plugin.InputKit.Resource.Id.action_mode_bar = global::VaxineApp.Droid.Resource.Id.action_mode_bar;
+			global::Plugin.InputKit.Resource.Id.action_mode_bar_stub = global::VaxineApp.Droid.Resource.Id.action_mode_bar_stub;
+			global::Plugin.InputKit.Resource.Id.action_mode_close_button = global::VaxineApp.Droid.Resource.Id.action_mode_close_button;
+			global::Plugin.InputKit.Resource.Id.action_text = global::VaxineApp.Droid.Resource.Id.action_text;
+			global::Plugin.InputKit.Resource.Id.activity_chooser_view_content = global::VaxineApp.Droid.Resource.Id.activity_chooser_view_content;
+			global::Plugin.InputKit.Resource.Id.add = global::VaxineApp.Droid.Resource.Id.add;
+			global::Plugin.InputKit.Resource.Id.alertTitle = global::VaxineApp.Droid.Resource.Id.alertTitle;
+			global::Plugin.InputKit.Resource.Id.all = global::VaxineApp.Droid.Resource.Id.all;
+			global::Plugin.InputKit.Resource.Id.ALT = global::VaxineApp.Droid.Resource.Id.ALT;
+			global::Plugin.InputKit.Resource.Id.always = global::VaxineApp.Droid.Resource.Id.always;
+			global::Plugin.InputKit.Resource.Id.async = global::VaxineApp.Droid.Resource.Id.async;
+			global::Plugin.InputKit.Resource.Id.auto = global::VaxineApp.Droid.Resource.Id.auto;
+			global::Plugin.InputKit.Resource.Id.beginning = global::VaxineApp.Droid.Resource.Id.beginning;
+			global::Plugin.InputKit.Resource.Id.blocking = global::VaxineApp.Droid.Resource.Id.blocking;
+			global::Plugin.InputKit.Resource.Id.bottom = global::VaxineApp.Droid.Resource.Id.bottom;
+			global::Plugin.InputKit.Resource.Id.bottomtab_navarea = global::VaxineApp.Droid.Resource.Id.bottomtab_navarea;
+			global::Plugin.InputKit.Resource.Id.bottomtab_tabbar = global::VaxineApp.Droid.Resource.Id.bottomtab_tabbar;
+			global::Plugin.InputKit.Resource.Id.browser_actions_header_text = global::VaxineApp.Droid.Resource.Id.browser_actions_header_text;
+			global::Plugin.InputKit.Resource.Id.browser_actions_menu_items = global::VaxineApp.Droid.Resource.Id.browser_actions_menu_items;
+			global::Plugin.InputKit.Resource.Id.browser_actions_menu_item_icon = global::VaxineApp.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.InputKit.Resource.Id.browser_actions_menu_item_text = global::VaxineApp.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.InputKit.Resource.Id.browser_actions_menu_view = global::VaxineApp.Droid.Resource.Id.browser_actions_menu_view;
+			global::Plugin.InputKit.Resource.Id.buttonPanel = global::VaxineApp.Droid.Resource.Id.buttonPanel;
+			global::Plugin.InputKit.Resource.Id.cancel_action = global::VaxineApp.Droid.Resource.Id.cancel_action;
+			global::Plugin.InputKit.Resource.Id.center = global::VaxineApp.Droid.Resource.Id.center;
+			global::Plugin.InputKit.Resource.Id.center_horizontal = global::VaxineApp.Droid.Resource.Id.center_horizontal;
+			global::Plugin.InputKit.Resource.Id.center_vertical = global::VaxineApp.Droid.Resource.Id.center_vertical;
+			global::Plugin.InputKit.Resource.Id.checkbox = global::VaxineApp.Droid.Resource.Id.checkbox;
+			global::Plugin.InputKit.Resource.Id.@checked = global::VaxineApp.Droid.Resource.Id.@checked;
+			global::Plugin.InputKit.Resource.Id.chronometer = global::VaxineApp.Droid.Resource.Id.chronometer;
+			global::Plugin.InputKit.Resource.Id.clip_horizontal = global::VaxineApp.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.InputKit.Resource.Id.clip_vertical = global::VaxineApp.Droid.Resource.Id.clip_vertical;
+			global::Plugin.InputKit.Resource.Id.collapseActionView = global::VaxineApp.Droid.Resource.Id.collapseActionView;
+			global::Plugin.InputKit.Resource.Id.container = global::VaxineApp.Droid.Resource.Id.container;
+			global::Plugin.InputKit.Resource.Id.content = global::VaxineApp.Droid.Resource.Id.content;
+			global::Plugin.InputKit.Resource.Id.contentPanel = global::VaxineApp.Droid.Resource.Id.contentPanel;
+			global::Plugin.InputKit.Resource.Id.coordinator = global::VaxineApp.Droid.Resource.Id.coordinator;
+			global::Plugin.InputKit.Resource.Id.CTRL = global::VaxineApp.Droid.Resource.Id.CTRL;
+			global::Plugin.InputKit.Resource.Id.custom = global::VaxineApp.Droid.Resource.Id.custom;
+			global::Plugin.InputKit.Resource.Id.customPanel = global::VaxineApp.Droid.Resource.Id.customPanel;
+			global::Plugin.InputKit.Resource.Id.decor_content_parent = global::VaxineApp.Droid.Resource.Id.decor_content_parent;
+			global::Plugin.InputKit.Resource.Id.default_activity_button = global::VaxineApp.Droid.Resource.Id.default_activity_button;
+			global::Plugin.InputKit.Resource.Id.design_bottom_sheet = global::VaxineApp.Droid.Resource.Id.design_bottom_sheet;
+			global::Plugin.InputKit.Resource.Id.design_menu_item_action_area = global::VaxineApp.Droid.Resource.Id.design_menu_item_action_area;
+			global::Plugin.InputKit.Resource.Id.design_menu_item_action_area_stub = global::VaxineApp.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Plugin.InputKit.Resource.Id.design_menu_item_text = global::VaxineApp.Droid.Resource.Id.design_menu_item_text;
+			global::Plugin.InputKit.Resource.Id.design_navigation_view = global::VaxineApp.Droid.Resource.Id.design_navigation_view;
+			global::Plugin.InputKit.Resource.Id.dialog_button = global::VaxineApp.Droid.Resource.Id.dialog_button;
+			global::Plugin.InputKit.Resource.Id.disableHome = global::VaxineApp.Droid.Resource.Id.disableHome;
+			global::Plugin.InputKit.Resource.Id.edit_query = global::VaxineApp.Droid.Resource.Id.edit_query;
+			global::Plugin.InputKit.Resource.Id.end = global::VaxineApp.Droid.Resource.Id.end;
+			global::Plugin.InputKit.Resource.Id.end_padder = global::VaxineApp.Droid.Resource.Id.end_padder;
+			global::Plugin.InputKit.Resource.Id.enterAlways = global::VaxineApp.Droid.Resource.Id.enterAlways;
+			global::Plugin.InputKit.Resource.Id.enterAlwaysCollapsed = global::VaxineApp.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Plugin.InputKit.Resource.Id.exitUntilCollapsed = global::VaxineApp.Droid.Resource.Id.exitUntilCollapsed;
+			global::Plugin.InputKit.Resource.Id.expanded_menu = global::VaxineApp.Droid.Resource.Id.expanded_menu;
+			global::Plugin.InputKit.Resource.Id.expand_activities_button = global::VaxineApp.Droid.Resource.Id.expand_activities_button;
+			global::Plugin.InputKit.Resource.Id.fill = global::VaxineApp.Droid.Resource.Id.fill;
+			global::Plugin.InputKit.Resource.Id.filled = global::VaxineApp.Droid.Resource.Id.filled;
+			global::Plugin.InputKit.Resource.Id.fill_horizontal = global::VaxineApp.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.InputKit.Resource.Id.fill_vertical = global::VaxineApp.Droid.Resource.Id.fill_vertical;
+			global::Plugin.InputKit.Resource.Id.@fixed = global::VaxineApp.Droid.Resource.Id.@fixed;
+			global::Plugin.InputKit.Resource.Id.flyoutcontent_appbar = global::VaxineApp.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Plugin.InputKit.Resource.Id.forever = global::VaxineApp.Droid.Resource.Id.forever;
+			global::Plugin.InputKit.Resource.Id.FUNCTION = global::VaxineApp.Droid.Resource.Id.FUNCTION;
+			global::Plugin.InputKit.Resource.Id.ghost_view = global::VaxineApp.Droid.Resource.Id.ghost_view;
+			global::Plugin.InputKit.Resource.Id.ghost_view_holder = global::VaxineApp.Droid.Resource.Id.ghost_view_holder;
+			global::Plugin.InputKit.Resource.Id.group_divider = global::VaxineApp.Droid.Resource.Id.group_divider;
+			global::Plugin.InputKit.Resource.Id.home = global::VaxineApp.Droid.Resource.Id.home;
+			global::Plugin.InputKit.Resource.Id.homeAsUp = global::VaxineApp.Droid.Resource.Id.homeAsUp;
+			global::Plugin.InputKit.Resource.Id.icon = global::VaxineApp.Droid.Resource.Id.icon;
+			global::Plugin.InputKit.Resource.Id.icon_group = global::VaxineApp.Droid.Resource.Id.icon_group;
+			global::Plugin.InputKit.Resource.Id.ifRoom = global::VaxineApp.Droid.Resource.Id.ifRoom;
+			global::Plugin.InputKit.Resource.Id.image = global::VaxineApp.Droid.Resource.Id.image;
+			global::Plugin.InputKit.Resource.Id.info = global::VaxineApp.Droid.Resource.Id.info;
+			global::Plugin.InputKit.Resource.Id.italic = global::VaxineApp.Droid.Resource.Id.italic;
+			global::Plugin.InputKit.Resource.Id.item_touch_helper_previous_elevation = global::VaxineApp.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Plugin.InputKit.Resource.Id.labeled = global::VaxineApp.Droid.Resource.Id.labeled;
+			global::Plugin.InputKit.Resource.Id.largeLabel = global::VaxineApp.Droid.Resource.Id.largeLabel;
+			global::Plugin.InputKit.Resource.Id.left = global::VaxineApp.Droid.Resource.Id.left;
+			global::Plugin.InputKit.Resource.Id.line1 = global::VaxineApp.Droid.Resource.Id.line1;
+			global::Plugin.InputKit.Resource.Id.line3 = global::VaxineApp.Droid.Resource.Id.line3;
+			global::Plugin.InputKit.Resource.Id.listMode = global::VaxineApp.Droid.Resource.Id.listMode;
+			global::Plugin.InputKit.Resource.Id.list_item = global::VaxineApp.Droid.Resource.Id.list_item;
+			global::Plugin.InputKit.Resource.Id.main_appbar = global::VaxineApp.Droid.Resource.Id.main_appbar;
+			global::Plugin.InputKit.Resource.Id.main_tablayout = global::VaxineApp.Droid.Resource.Id.main_tablayout;
+			global::Plugin.InputKit.Resource.Id.main_toolbar = global::VaxineApp.Droid.Resource.Id.main_toolbar;
+			global::Plugin.InputKit.Resource.Id.main_viewpager = global::VaxineApp.Droid.Resource.Id.main_viewpager;
+			global::Plugin.InputKit.Resource.Id.masked = global::VaxineApp.Droid.Resource.Id.masked;
+			global::Plugin.InputKit.Resource.Id.media_actions = global::VaxineApp.Droid.Resource.Id.media_actions;
+			global::Plugin.InputKit.Resource.Id.message = global::VaxineApp.Droid.Resource.Id.message;
+			global::Plugin.InputKit.Resource.Id.META = global::VaxineApp.Droid.Resource.Id.META;
+			global::Plugin.InputKit.Resource.Id.middle = global::VaxineApp.Droid.Resource.Id.middle;
+			global::Plugin.InputKit.Resource.Id.mini = global::VaxineApp.Droid.Resource.Id.mini;
+			global::Plugin.InputKit.Resource.Id.mtrl_child_content_container = global::VaxineApp.Droid.Resource.Id.mtrl_child_content_container;
+			global::Plugin.InputKit.Resource.Id.mtrl_internal_children_alpha_tag = global::VaxineApp.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Plugin.InputKit.Resource.Id.multiply = global::VaxineApp.Droid.Resource.Id.multiply;
+			global::Plugin.InputKit.Resource.Id.navigation_header_container = global::VaxineApp.Droid.Resource.Id.navigation_header_container;
+			global::Plugin.InputKit.Resource.Id.never = global::VaxineApp.Droid.Resource.Id.never;
+			global::Plugin.InputKit.Resource.Id.none = global::VaxineApp.Droid.Resource.Id.none;
+			global::Plugin.InputKit.Resource.Id.normal = global::VaxineApp.Droid.Resource.Id.normal;
+			global::Plugin.InputKit.Resource.Id.notification_background = global::VaxineApp.Droid.Resource.Id.notification_background;
+			global::Plugin.InputKit.Resource.Id.notification_main_column = global::VaxineApp.Droid.Resource.Id.notification_main_column;
+			global::Plugin.InputKit.Resource.Id.notification_main_column_container = global::VaxineApp.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.InputKit.Resource.Id.off = global::VaxineApp.Droid.Resource.Id.off;
+			global::Plugin.InputKit.Resource.Id.on = global::VaxineApp.Droid.Resource.Id.on;
+			global::Plugin.InputKit.Resource.Id.outline = global::VaxineApp.Droid.Resource.Id.outline;
+			global::Plugin.InputKit.Resource.Id.parallax = global::VaxineApp.Droid.Resource.Id.parallax;
+			global::Plugin.InputKit.Resource.Id.parentPanel = global::VaxineApp.Droid.Resource.Id.parentPanel;
+			global::Plugin.InputKit.Resource.Id.parent_matrix = global::VaxineApp.Droid.Resource.Id.parent_matrix;
+			global::Plugin.InputKit.Resource.Id.pin = global::VaxineApp.Droid.Resource.Id.pin;
+			global::Plugin.InputKit.Resource.Id.progress_circular = global::VaxineApp.Droid.Resource.Id.progress_circular;
+			global::Plugin.InputKit.Resource.Id.progress_horizontal = global::VaxineApp.Droid.Resource.Id.progress_horizontal;
+			global::Plugin.InputKit.Resource.Id.radio = global::VaxineApp.Droid.Resource.Id.radio;
+			global::Plugin.InputKit.Resource.Id.right = global::VaxineApp.Droid.Resource.Id.right;
+			global::Plugin.InputKit.Resource.Id.right_icon = global::VaxineApp.Droid.Resource.Id.right_icon;
+			global::Plugin.InputKit.Resource.Id.right_side = global::VaxineApp.Droid.Resource.Id.right_side;
+			global::Plugin.InputKit.Resource.Id.save_non_transition_alpha = global::VaxineApp.Droid.Resource.Id.save_non_transition_alpha;
+			global::Plugin.InputKit.Resource.Id.save_overlay_view = global::VaxineApp.Droid.Resource.Id.save_overlay_view;
+			global::Plugin.InputKit.Resource.Id.screen = global::VaxineApp.Droid.Resource.Id.screen;
+			global::Plugin.InputKit.Resource.Id.scroll = global::VaxineApp.Droid.Resource.Id.scroll;
+			global::Plugin.InputKit.Resource.Id.scrollable = global::VaxineApp.Droid.Resource.Id.scrollable;
+			global::Plugin.InputKit.Resource.Id.scrollIndicatorDown = global::VaxineApp.Droid.Resource.Id.scrollIndicatorDown;
+			global::Plugin.InputKit.Resource.Id.scrollIndicatorUp = global::VaxineApp.Droid.Resource.Id.scrollIndicatorUp;
+			global::Plugin.InputKit.Resource.Id.scrollView = global::VaxineApp.Droid.Resource.Id.scrollView;
+			global::Plugin.InputKit.Resource.Id.search_badge = global::VaxineApp.Droid.Resource.Id.search_badge;
+			global::Plugin.InputKit.Resource.Id.search_bar = global::VaxineApp.Droid.Resource.Id.search_bar;
+			global::Plugin.InputKit.Resource.Id.search_button = global::VaxineApp.Droid.Resource.Id.search_button;
+			global::Plugin.InputKit.Resource.Id.search_close_btn = global::VaxineApp.Droid.Resource.Id.search_close_btn;
+			global::Plugin.InputKit.Resource.Id.search_edit_frame = global::VaxineApp.Droid.Resource.Id.search_edit_frame;
+			global::Plugin.InputKit.Resource.Id.search_go_btn = global::VaxineApp.Droid.Resource.Id.search_go_btn;
+			global::Plugin.InputKit.Resource.Id.search_mag_icon = global::VaxineApp.Droid.Resource.Id.search_mag_icon;
+			global::Plugin.InputKit.Resource.Id.search_plate = global::VaxineApp.Droid.Resource.Id.search_plate;
+			global::Plugin.InputKit.Resource.Id.search_src_text = global::VaxineApp.Droid.Resource.Id.search_src_text;
+			global::Plugin.InputKit.Resource.Id.search_voice_btn = global::VaxineApp.Droid.Resource.Id.search_voice_btn;
+			global::Plugin.InputKit.Resource.Id.selected = global::VaxineApp.Droid.Resource.Id.selected;
+			global::Plugin.InputKit.Resource.Id.select_dialog_listview = global::VaxineApp.Droid.Resource.Id.select_dialog_listview;
+			global::Plugin.InputKit.Resource.Id.shellcontent_appbar = global::VaxineApp.Droid.Resource.Id.shellcontent_appbar;
+			global::Plugin.InputKit.Resource.Id.shellcontent_toolbar = global::VaxineApp.Droid.Resource.Id.shellcontent_toolbar;
+			global::Plugin.InputKit.Resource.Id.SHIFT = global::VaxineApp.Droid.Resource.Id.SHIFT;
+			global::Plugin.InputKit.Resource.Id.shortcut = global::VaxineApp.Droid.Resource.Id.shortcut;
+			global::Plugin.InputKit.Resource.Id.showCustom = global::VaxineApp.Droid.Resource.Id.showCustom;
+			global::Plugin.InputKit.Resource.Id.showHome = global::VaxineApp.Droid.Resource.Id.showHome;
+			global::Plugin.InputKit.Resource.Id.showTitle = global::VaxineApp.Droid.Resource.Id.showTitle;
+			global::Plugin.InputKit.Resource.Id.sliding_tabs = global::VaxineApp.Droid.Resource.Id.sliding_tabs;
+			global::Plugin.InputKit.Resource.Id.smallLabel = global::VaxineApp.Droid.Resource.Id.smallLabel;
+			global::Plugin.InputKit.Resource.Id.snackbar_action = global::VaxineApp.Droid.Resource.Id.snackbar_action;
+			global::Plugin.InputKit.Resource.Id.snackbar_text = global::VaxineApp.Droid.Resource.Id.snackbar_text;
+			global::Plugin.InputKit.Resource.Id.snap = global::VaxineApp.Droid.Resource.Id.snap;
+			global::Plugin.InputKit.Resource.Id.snapMargins = global::VaxineApp.Droid.Resource.Id.snapMargins;
+			global::Plugin.InputKit.Resource.Id.spacer = global::VaxineApp.Droid.Resource.Id.spacer;
+			global::Plugin.InputKit.Resource.Id.split_action_bar = global::VaxineApp.Droid.Resource.Id.split_action_bar;
+			global::Plugin.InputKit.Resource.Id.src_atop = global::VaxineApp.Droid.Resource.Id.src_atop;
+			global::Plugin.InputKit.Resource.Id.src_in = global::VaxineApp.Droid.Resource.Id.src_in;
+			global::Plugin.InputKit.Resource.Id.src_over = global::VaxineApp.Droid.Resource.Id.src_over;
+			global::Plugin.InputKit.Resource.Id.start = global::VaxineApp.Droid.Resource.Id.start;
+			global::Plugin.InputKit.Resource.Id.status_bar_latest_event_content = global::VaxineApp.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Plugin.InputKit.Resource.Id.stretch = global::VaxineApp.Droid.Resource.Id.stretch;
+			global::Plugin.InputKit.Resource.Id.submenuarrow = global::VaxineApp.Droid.Resource.Id.submenuarrow;
+			global::Plugin.InputKit.Resource.Id.submit_area = global::VaxineApp.Droid.Resource.Id.submit_area;
+			global::Plugin.InputKit.Resource.Id.SYM = global::VaxineApp.Droid.Resource.Id.SYM;
+			global::Plugin.InputKit.Resource.Id.tabMode = global::VaxineApp.Droid.Resource.Id.tabMode;
+			global::Plugin.InputKit.Resource.Id.tag_accessibility_actions = global::VaxineApp.Droid.Resource.Id.tag_accessibility_actions;
+			global::Plugin.InputKit.Resource.Id.tag_accessibility_clickable_spans = global::VaxineApp.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Plugin.InputKit.Resource.Id.tag_accessibility_heading = global::VaxineApp.Droid.Resource.Id.tag_accessibility_heading;
+			global::Plugin.InputKit.Resource.Id.tag_accessibility_pane_title = global::VaxineApp.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Plugin.InputKit.Resource.Id.tag_screen_reader_focusable = global::VaxineApp.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::Plugin.InputKit.Resource.Id.tag_transition_group = global::VaxineApp.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.InputKit.Resource.Id.tag_unhandled_key_event_manager = global::VaxineApp.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.InputKit.Resource.Id.tag_unhandled_key_listeners = global::VaxineApp.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.InputKit.Resource.Id.text = global::VaxineApp.Droid.Resource.Id.text;
+			global::Plugin.InputKit.Resource.Id.text2 = global::VaxineApp.Droid.Resource.Id.text2;
+			global::Plugin.InputKit.Resource.Id.textinput_counter = global::VaxineApp.Droid.Resource.Id.textinput_counter;
+			global::Plugin.InputKit.Resource.Id.textinput_error = global::VaxineApp.Droid.Resource.Id.textinput_error;
+			global::Plugin.InputKit.Resource.Id.textinput_helper_text = global::VaxineApp.Droid.Resource.Id.textinput_helper_text;
+			global::Plugin.InputKit.Resource.Id.textSpacerNoButtons = global::VaxineApp.Droid.Resource.Id.textSpacerNoButtons;
+			global::Plugin.InputKit.Resource.Id.textSpacerNoTitle = global::VaxineApp.Droid.Resource.Id.textSpacerNoTitle;
+			global::Plugin.InputKit.Resource.Id.textStart = global::VaxineApp.Droid.Resource.Id.textStart;
+			global::Plugin.InputKit.Resource.Id.time = global::VaxineApp.Droid.Resource.Id.time;
+			global::Plugin.InputKit.Resource.Id.title = global::VaxineApp.Droid.Resource.Id.title;
+			global::Plugin.InputKit.Resource.Id.titleDividerNoCustom = global::VaxineApp.Droid.Resource.Id.titleDividerNoCustom;
+			global::Plugin.InputKit.Resource.Id.title_template = global::VaxineApp.Droid.Resource.Id.title_template;
+			global::Plugin.InputKit.Resource.Id.toolbar = global::VaxineApp.Droid.Resource.Id.toolbar;
+			global::Plugin.InputKit.Resource.Id.top = global::VaxineApp.Droid.Resource.Id.top;
+			global::Plugin.InputKit.Resource.Id.topPanel = global::VaxineApp.Droid.Resource.Id.topPanel;
+			global::Plugin.InputKit.Resource.Id.touch_outside = global::VaxineApp.Droid.Resource.Id.touch_outside;
+			global::Plugin.InputKit.Resource.Id.transition_current_scene = global::VaxineApp.Droid.Resource.Id.transition_current_scene;
+			global::Plugin.InputKit.Resource.Id.transition_layout_save = global::VaxineApp.Droid.Resource.Id.transition_layout_save;
+			global::Plugin.InputKit.Resource.Id.transition_position = global::VaxineApp.Droid.Resource.Id.transition_position;
+			global::Plugin.InputKit.Resource.Id.transition_scene_layoutid_cache = global::VaxineApp.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Plugin.InputKit.Resource.Id.transition_transform = global::VaxineApp.Droid.Resource.Id.transition_transform;
+			global::Plugin.InputKit.Resource.Id.@unchecked = global::VaxineApp.Droid.Resource.Id.@unchecked;
+			global::Plugin.InputKit.Resource.Id.uniform = global::VaxineApp.Droid.Resource.Id.uniform;
+			global::Plugin.InputKit.Resource.Id.unlabeled = global::VaxineApp.Droid.Resource.Id.unlabeled;
+			global::Plugin.InputKit.Resource.Id.up = global::VaxineApp.Droid.Resource.Id.up;
+			global::Plugin.InputKit.Resource.Id.useLogo = global::VaxineApp.Droid.Resource.Id.useLogo;
+			global::Plugin.InputKit.Resource.Id.view_offset_helper = global::VaxineApp.Droid.Resource.Id.view_offset_helper;
+			global::Plugin.InputKit.Resource.Id.visible = global::VaxineApp.Droid.Resource.Id.visible;
+			global::Plugin.InputKit.Resource.Id.withText = global::VaxineApp.Droid.Resource.Id.withText;
+			global::Plugin.InputKit.Resource.Id.wrap_content = global::VaxineApp.Droid.Resource.Id.wrap_content;
+			global::Plugin.InputKit.Resource.Integer.abc_config_activityDefaultDur = global::VaxineApp.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Plugin.InputKit.Resource.Integer.abc_config_activityShortDur = global::VaxineApp.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Plugin.InputKit.Resource.Integer.app_bar_elevation_anim_duration = global::VaxineApp.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Plugin.InputKit.Resource.Integer.bottom_sheet_slide_duration = global::VaxineApp.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Plugin.InputKit.Resource.Integer.cancel_button_image_alpha = global::VaxineApp.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Plugin.InputKit.Resource.Integer.config_tooltipAnimTime = global::VaxineApp.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Plugin.InputKit.Resource.Integer.design_snackbar_text_max_lines = global::VaxineApp.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Plugin.InputKit.Resource.Integer.design_tab_indicator_anim_duration_ms = global::VaxineApp.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Plugin.InputKit.Resource.Integer.hide_password_duration = global::VaxineApp.Droid.Resource.Integer.hide_password_duration;
+			global::Plugin.InputKit.Resource.Integer.mtrl_btn_anim_delay_ms = global::VaxineApp.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Plugin.InputKit.Resource.Integer.mtrl_btn_anim_duration_ms = global::VaxineApp.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Plugin.InputKit.Resource.Integer.mtrl_chip_anim_duration = global::VaxineApp.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::Plugin.InputKit.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::VaxineApp.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Plugin.InputKit.Resource.Integer.show_password_duration = global::VaxineApp.Droid.Resource.Integer.show_password_duration;
+			global::Plugin.InputKit.Resource.Integer.status_bar_notification_info_maxnum = global::VaxineApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.InputKit.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::VaxineApp.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Plugin.InputKit.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::VaxineApp.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Plugin.InputKit.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::VaxineApp.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Plugin.InputKit.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::VaxineApp.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Plugin.InputKit.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::VaxineApp.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Plugin.InputKit.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::VaxineApp.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Plugin.InputKit.Resource.Interpolator.fast_out_slow_in = global::VaxineApp.Droid.Resource.Interpolator.fast_out_slow_in;
+			global::Plugin.InputKit.Resource.Interpolator.mtrl_fast_out_linear_in = global::VaxineApp.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Plugin.InputKit.Resource.Interpolator.mtrl_fast_out_slow_in = global::VaxineApp.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Plugin.InputKit.Resource.Interpolator.mtrl_linear = global::VaxineApp.Droid.Resource.Interpolator.mtrl_linear;
+			global::Plugin.InputKit.Resource.Interpolator.mtrl_linear_out_slow_in = global::VaxineApp.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::Plugin.InputKit.Resource.Layout.abc_action_bar_title_item = global::VaxineApp.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Plugin.InputKit.Resource.Layout.abc_action_bar_up_container = global::VaxineApp.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Plugin.InputKit.Resource.Layout.abc_action_menu_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Plugin.InputKit.Resource.Layout.abc_action_menu_layout = global::VaxineApp.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Plugin.InputKit.Resource.Layout.abc_action_mode_bar = global::VaxineApp.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Plugin.InputKit.Resource.Layout.abc_action_mode_close_item_material = global::VaxineApp.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Plugin.InputKit.Resource.Layout.abc_activity_chooser_view = global::VaxineApp.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Plugin.InputKit.Resource.Layout.abc_activity_chooser_view_list_item = global::VaxineApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Plugin.InputKit.Resource.Layout.abc_alert_dialog_button_bar_material = global::VaxineApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Plugin.InputKit.Resource.Layout.abc_alert_dialog_material = global::VaxineApp.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Plugin.InputKit.Resource.Layout.abc_alert_dialog_title_material = global::VaxineApp.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Plugin.InputKit.Resource.Layout.abc_cascading_menu_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::Plugin.InputKit.Resource.Layout.abc_dialog_title_material = global::VaxineApp.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Plugin.InputKit.Resource.Layout.abc_expanded_menu_layout = global::VaxineApp.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Plugin.InputKit.Resource.Layout.abc_list_menu_item_checkbox = global::VaxineApp.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Plugin.InputKit.Resource.Layout.abc_list_menu_item_icon = global::VaxineApp.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Plugin.InputKit.Resource.Layout.abc_list_menu_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Plugin.InputKit.Resource.Layout.abc_list_menu_item_radio = global::VaxineApp.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Plugin.InputKit.Resource.Layout.abc_popup_menu_header_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Plugin.InputKit.Resource.Layout.abc_popup_menu_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Plugin.InputKit.Resource.Layout.abc_screen_content_include = global::VaxineApp.Droid.Resource.Layout.abc_screen_content_include;
+			global::Plugin.InputKit.Resource.Layout.abc_screen_simple = global::VaxineApp.Droid.Resource.Layout.abc_screen_simple;
+			global::Plugin.InputKit.Resource.Layout.abc_screen_simple_overlay_action_mode = global::VaxineApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Plugin.InputKit.Resource.Layout.abc_screen_toolbar = global::VaxineApp.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Plugin.InputKit.Resource.Layout.abc_search_dropdown_item_icons_2line = global::VaxineApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Plugin.InputKit.Resource.Layout.abc_search_view = global::VaxineApp.Droid.Resource.Layout.abc_search_view;
+			global::Plugin.InputKit.Resource.Layout.abc_select_dialog_material = global::VaxineApp.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Plugin.InputKit.Resource.Layout.abc_tooltip = global::VaxineApp.Droid.Resource.Layout.abc_tooltip;
+			global::Plugin.InputKit.Resource.Layout.BottomTabLayout = global::VaxineApp.Droid.Resource.Layout.BottomTabLayout;
+			global::Plugin.InputKit.Resource.Layout.browser_actions_context_menu_page = global::VaxineApp.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.InputKit.Resource.Layout.browser_actions_context_menu_row = global::VaxineApp.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.InputKit.Resource.Layout.custom_dialog = global::VaxineApp.Droid.Resource.Layout.custom_dialog;
+			global::Plugin.InputKit.Resource.Layout.design_bottom_navigation_item = global::VaxineApp.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Plugin.InputKit.Resource.Layout.design_bottom_sheet_dialog = global::VaxineApp.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Plugin.InputKit.Resource.Layout.design_layout_snackbar = global::VaxineApp.Droid.Resource.Layout.design_layout_snackbar;
+			global::Plugin.InputKit.Resource.Layout.design_layout_snackbar_include = global::VaxineApp.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Plugin.InputKit.Resource.Layout.design_layout_tab_icon = global::VaxineApp.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Plugin.InputKit.Resource.Layout.design_layout_tab_text = global::VaxineApp.Droid.Resource.Layout.design_layout_tab_text;
+			global::Plugin.InputKit.Resource.Layout.design_menu_item_action_area = global::VaxineApp.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Plugin.InputKit.Resource.Layout.design_navigation_item = global::VaxineApp.Droid.Resource.Layout.design_navigation_item;
+			global::Plugin.InputKit.Resource.Layout.design_navigation_item_header = global::VaxineApp.Droid.Resource.Layout.design_navigation_item_header;
+			global::Plugin.InputKit.Resource.Layout.design_navigation_item_separator = global::VaxineApp.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Plugin.InputKit.Resource.Layout.design_navigation_item_subheader = global::VaxineApp.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Plugin.InputKit.Resource.Layout.design_navigation_menu = global::VaxineApp.Droid.Resource.Layout.design_navigation_menu;
+			global::Plugin.InputKit.Resource.Layout.design_navigation_menu_item = global::VaxineApp.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Plugin.InputKit.Resource.Layout.FallbackTabbarDoNotUse = global::VaxineApp.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Plugin.InputKit.Resource.Layout.FallbackToolbarDoNotUse = global::VaxineApp.Droid.Resource.Layout.FallbackToolbarDoNotUse;
+			global::Plugin.InputKit.Resource.Layout.FlyoutContent = global::VaxineApp.Droid.Resource.Layout.FlyoutContent;
+			global::Plugin.InputKit.Resource.Layout.mtrl_layout_snackbar = global::VaxineApp.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::Plugin.InputKit.Resource.Layout.mtrl_layout_snackbar_include = global::VaxineApp.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Plugin.InputKit.Resource.Layout.notification_action = global::VaxineApp.Droid.Resource.Layout.notification_action;
+			global::Plugin.InputKit.Resource.Layout.notification_action_tombstone = global::VaxineApp.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.InputKit.Resource.Layout.notification_media_action = global::VaxineApp.Droid.Resource.Layout.notification_media_action;
+			global::Plugin.InputKit.Resource.Layout.notification_media_cancel_action = global::VaxineApp.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Plugin.InputKit.Resource.Layout.notification_template_big_media = global::VaxineApp.Droid.Resource.Layout.notification_template_big_media;
+			global::Plugin.InputKit.Resource.Layout.notification_template_big_media_custom = global::VaxineApp.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Plugin.InputKit.Resource.Layout.notification_template_big_media_narrow = global::VaxineApp.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Plugin.InputKit.Resource.Layout.notification_template_big_media_narrow_custom = global::VaxineApp.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Plugin.InputKit.Resource.Layout.notification_template_custom_big = global::VaxineApp.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.InputKit.Resource.Layout.notification_template_icon_group = global::VaxineApp.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.InputKit.Resource.Layout.notification_template_lines_media = global::VaxineApp.Droid.Resource.Layout.notification_template_lines_media;
+			global::Plugin.InputKit.Resource.Layout.notification_template_media = global::VaxineApp.Droid.Resource.Layout.notification_template_media;
+			global::Plugin.InputKit.Resource.Layout.notification_template_media_custom = global::VaxineApp.Droid.Resource.Layout.notification_template_media_custom;
+			global::Plugin.InputKit.Resource.Layout.notification_template_part_chronometer = global::VaxineApp.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.InputKit.Resource.Layout.notification_template_part_time = global::VaxineApp.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.InputKit.Resource.Layout.RootLayout = global::VaxineApp.Droid.Resource.Layout.RootLayout;
+			global::Plugin.InputKit.Resource.Layout.select_dialog_item_material = global::VaxineApp.Droid.Resource.Layout.select_dialog_item_material;
+			global::Plugin.InputKit.Resource.Layout.select_dialog_multichoice_material = global::VaxineApp.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Plugin.InputKit.Resource.Layout.select_dialog_singlechoice_material = global::VaxineApp.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Plugin.InputKit.Resource.Layout.ShellContent = global::VaxineApp.Droid.Resource.Layout.ShellContent;
+			global::Plugin.InputKit.Resource.Layout.support_simple_spinner_dropdown_item = global::VaxineApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Plugin.InputKit.Resource.Layout.Tabbar = global::VaxineApp.Droid.Resource.Layout.Tabbar;
+			global::Plugin.InputKit.Resource.Layout.Toolbar = global::VaxineApp.Droid.Resource.Layout.Toolbar;
+			global::Plugin.InputKit.Resource.String.abc_action_bar_home_description = global::VaxineApp.Droid.Resource.String.abc_action_bar_home_description;
+			global::Plugin.InputKit.Resource.String.abc_action_bar_up_description = global::VaxineApp.Droid.Resource.String.abc_action_bar_up_description;
+			global::Plugin.InputKit.Resource.String.abc_action_menu_overflow_description = global::VaxineApp.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Plugin.InputKit.Resource.String.abc_action_mode_done = global::VaxineApp.Droid.Resource.String.abc_action_mode_done;
+			global::Plugin.InputKit.Resource.String.abc_activitychooserview_choose_application = global::VaxineApp.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Plugin.InputKit.Resource.String.abc_activity_chooser_view_see_all = global::VaxineApp.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Plugin.InputKit.Resource.String.abc_capital_off = global::VaxineApp.Droid.Resource.String.abc_capital_off;
+			global::Plugin.InputKit.Resource.String.abc_capital_on = global::VaxineApp.Droid.Resource.String.abc_capital_on;
+			global::Plugin.InputKit.Resource.String.abc_menu_alt_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_menu_ctrl_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_menu_delete_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_menu_enter_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_menu_function_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_menu_meta_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_menu_shift_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_menu_space_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_menu_sym_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_prepend_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::Plugin.InputKit.Resource.String.abc_searchview_description_clear = global::VaxineApp.Droid.Resource.String.abc_searchview_description_clear;
+			global::Plugin.InputKit.Resource.String.abc_searchview_description_query = global::VaxineApp.Droid.Resource.String.abc_searchview_description_query;
+			global::Plugin.InputKit.Resource.String.abc_searchview_description_search = global::VaxineApp.Droid.Resource.String.abc_searchview_description_search;
+			global::Plugin.InputKit.Resource.String.abc_searchview_description_submit = global::VaxineApp.Droid.Resource.String.abc_searchview_description_submit;
+			global::Plugin.InputKit.Resource.String.abc_searchview_description_voice = global::VaxineApp.Droid.Resource.String.abc_searchview_description_voice;
+			global::Plugin.InputKit.Resource.String.abc_search_hint = global::VaxineApp.Droid.Resource.String.abc_search_hint;
+			global::Plugin.InputKit.Resource.String.abc_shareactionprovider_share_with = global::VaxineApp.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Plugin.InputKit.Resource.String.abc_shareactionprovider_share_with_application = global::VaxineApp.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Plugin.InputKit.Resource.String.abc_toolbar_collapse_description = global::VaxineApp.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Plugin.InputKit.Resource.String.appbar_scrolling_view_behavior = global::VaxineApp.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Plugin.InputKit.Resource.String.bottom_sheet_behavior = global::VaxineApp.Droid.Resource.String.bottom_sheet_behavior;
+			global::Plugin.InputKit.Resource.String.character_counter_content_description = global::VaxineApp.Droid.Resource.String.character_counter_content_description;
+			global::Plugin.InputKit.Resource.String.character_counter_pattern = global::VaxineApp.Droid.Resource.String.character_counter_pattern;
+			global::Plugin.InputKit.Resource.String.fab_transformation_scrim_behavior = global::VaxineApp.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::Plugin.InputKit.Resource.String.fab_transformation_sheet_behavior = global::VaxineApp.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::Plugin.InputKit.Resource.String.hide_bottom_view_on_scroll_behavior = global::VaxineApp.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Plugin.InputKit.Resource.String.mtrl_chip_close_icon_content_description = global::VaxineApp.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Plugin.InputKit.Resource.String.overflow_tab_title = global::VaxineApp.Droid.Resource.String.overflow_tab_title;
+			global::Plugin.InputKit.Resource.String.password_toggle_content_description = global::VaxineApp.Droid.Resource.String.password_toggle_content_description;
+			global::Plugin.InputKit.Resource.String.path_password_eye = global::VaxineApp.Droid.Resource.String.path_password_eye;
+			global::Plugin.InputKit.Resource.String.path_password_eye_mask_strike_through = global::VaxineApp.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Plugin.InputKit.Resource.String.path_password_eye_mask_visible = global::VaxineApp.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Plugin.InputKit.Resource.String.path_password_strike_through = global::VaxineApp.Droid.Resource.String.path_password_strike_through;
+			global::Plugin.InputKit.Resource.String.search_menu_title = global::VaxineApp.Droid.Resource.String.search_menu_title;
+			global::Plugin.InputKit.Resource.String.status_bar_notification_info_overflow = global::VaxineApp.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.InputKit.Resource.Style.AlertDialog_AppCompat = global::VaxineApp.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Plugin.InputKit.Resource.Style.AlertDialog_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Animation_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Animation_AppCompat_DropDownUp = global::VaxineApp.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Plugin.InputKit.Resource.Style.Animation_AppCompat_Tooltip = global::VaxineApp.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Plugin.InputKit.Resource.Style.Animation_Design_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Plugin.InputKit.Resource.Style.AppCompatDialogStyle = global::VaxineApp.Droid.Resource.Style.AppCompatDialogStyle;
+			global::Plugin.InputKit.Resource.Style.Base_AlertDialog_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_AlertDialog_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_Animation_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::VaxineApp.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Plugin.InputKit.Resource.Style.Base_Animation_AppCompat_Tooltip = global::VaxineApp.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Plugin.InputKit.Resource.Style.Base_CardView = global::VaxineApp.Droid.Resource.Style.Base_CardView;
+			global::Plugin.InputKit.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_DialogWindowTitle_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Button = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Large = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Small = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.InputKit.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Plugin.InputKit.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Base_V14_Theme_MaterialComponents = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Plugin.InputKit.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Plugin.InputKit.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Plugin.InputKit.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Plugin.InputKit.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Plugin.InputKit.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V21_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V21_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V22_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_V22_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_V23_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_V23_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_V26_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_V26_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::VaxineApp.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Plugin.InputKit.Resource.Style.Base_V28_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_V28_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V7_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V7_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::VaxineApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.InputKit.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::VaxineApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Plugin.InputKit.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::VaxineApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionButton = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActionMode = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Button_Small = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_EditText = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ImageButton = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ListView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_RatingBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_SearchView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_SeekBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Spinner = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_TextView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Toolbar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_Design_TabLayout = global::VaxineApp.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_MaterialComponents_Chip = global::VaxineApp.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::VaxineApp.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Plugin.InputKit.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::VaxineApp.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Plugin.InputKit.Resource.Style.CardView = global::VaxineApp.Droid.Resource.Style.CardView;
+			global::Plugin.InputKit.Resource.Style.CardView_Dark = global::VaxineApp.Droid.Resource.Style.CardView_Dark;
+			global::Plugin.InputKit.Resource.Style.CardView_Light = global::VaxineApp.Droid.Resource.Style.CardView_Light;
+			global::Plugin.InputKit.Resource.Style.collectionViewTheme = global::VaxineApp.Droid.Resource.Style.collectionViewTheme;
+			global::Plugin.InputKit.Resource.Style.MainTheme = global::VaxineApp.Droid.Resource.Style.MainTheme;
+			global::Plugin.InputKit.Resource.Style.MainTheme_Base = global::VaxineApp.Droid.Resource.Style.MainTheme_Base;
+			global::Plugin.InputKit.Resource.Style.MyPopupMenu = global::VaxineApp.Droid.Resource.Style.MyPopupMenu;
+			global::Plugin.InputKit.Resource.Style.Platform_AppCompat = global::VaxineApp.Droid.Resource.Style.Platform_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Platform_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Platform_MaterialComponents = global::VaxineApp.Droid.Resource.Style.Platform_MaterialComponents;
+			global::Plugin.InputKit.Resource.Style.Platform_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Plugin.InputKit.Resource.Style.Platform_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::Plugin.InputKit.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Platform_ThemeOverlay_AppCompat = global::VaxineApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::VaxineApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.InputKit.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Platform_V21_AppCompat = global::VaxineApp.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Platform_V21_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Platform_V25_AppCompat = global::VaxineApp.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Platform_V25_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Platform_Widget_AppCompat_Spinner = global::VaxineApp.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::VaxineApp.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Plugin.InputKit.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Plugin.InputKit.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::VaxineApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Plugin.InputKit.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::VaxineApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Body1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Body2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Button = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Caption = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Display1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Display2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Display3 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Display4 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Headline = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Large = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Medium = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Menu = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Small = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Subhead = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Tooltip = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Info = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Time = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Design_Counter = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Design_Counter_Overflow = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Design_Error = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Design_HelperText = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Design_Hint = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Design_Snackbar_Message = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Design_Tab = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Button = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Caption = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Chip = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Overline = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::VaxineApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.InputKit.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dark = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Plugin.InputKit.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_CompactMenu = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_AppCompat_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_Design = global::VaxineApp.Droid.Resource.Style.Theme_Design;
+			global::Plugin.InputKit.Resource.Style.Theme_Design_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Plugin.InputKit.Resource.Style.Theme_Design_Light = global::VaxineApp.Droid.Resource.Style.Theme_Design_Light;
+			global::Plugin.InputKit.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Plugin.InputKit.Resource.Style.Theme_Design_Light_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_Design_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_CompactMenu = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Plugin.InputKit.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionButton = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActionMode = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ActivityChooserView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ButtonBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_Borderless = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_Colored = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Button_Small = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_EditText = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ImageButton = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionButton = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_SearchView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ListMenuView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ListPopupWindow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ListView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ListView_DropDown = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ListView_Menu = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_PopupMenu = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_PopupWindow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ProgressBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_RatingBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_RatingBar_Small = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_SearchView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_SeekBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Spinner = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_TextView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_TextView;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Toolbar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Plugin.InputKit.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.InputKit.Resource.Style.Widget_Compat_NotificationActionContainer = global::VaxineApp.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.InputKit.Resource.Style.Widget_Compat_NotificationActionText = global::VaxineApp.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_AppBarLayout = global::VaxineApp.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_BottomNavigationView = global::VaxineApp.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_BottomSheet_Modal = global::VaxineApp.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_CollapsingToolbar = global::VaxineApp.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_FloatingActionButton = global::VaxineApp.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_NavigationView = global::VaxineApp.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::VaxineApp.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_Snackbar = global::VaxineApp.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_TabLayout = global::VaxineApp.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Plugin.InputKit.Resource.Style.Widget_Design_TextInputLayout = global::VaxineApp.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_CardView = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_ChipGroup = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Chip_Action = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_NavigationView = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Snackbar = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TabLayout = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Plugin.InputKit.Resource.Style.Widget_MaterialComponents_Toolbar = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Plugin.InputKit.Resource.Style.Widget_Support_CoordinatorLayout = global::VaxineApp.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar = global::VaxineApp.Droid.Resource.Styleable.ActionBar;
+			global::Plugin.InputKit.Resource.Styleable.ActionBarLayout = global::VaxineApp.Droid.Resource.Styleable.ActionBarLayout;
+			global::Plugin.InputKit.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::VaxineApp.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_background = global::VaxineApp.Droid.Resource.Styleable.ActionBar_background;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_backgroundSplit = global::VaxineApp.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_backgroundStacked = global::VaxineApp.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_contentInsetEnd = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_contentInsetLeft = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_contentInsetRight = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_contentInsetStart = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_customNavigationLayout = global::VaxineApp.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_displayOptions = global::VaxineApp.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_divider = global::VaxineApp.Droid.Resource.Styleable.ActionBar_divider;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_elevation = global::VaxineApp.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_height = global::VaxineApp.Droid.Resource.Styleable.ActionBar_height;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_hideOnContentScroll = global::VaxineApp.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_homeAsUpIndicator = global::VaxineApp.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_homeLayout = global::VaxineApp.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_icon = global::VaxineApp.Droid.Resource.Styleable.ActionBar_icon;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_itemPadding = global::VaxineApp.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_logo = global::VaxineApp.Droid.Resource.Styleable.ActionBar_logo;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_navigationMode = global::VaxineApp.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_popupTheme = global::VaxineApp.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_progressBarPadding = global::VaxineApp.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_progressBarStyle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_subtitle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_subtitleTextStyle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_title = global::VaxineApp.Droid.Resource.Styleable.ActionBar_title;
+			global::Plugin.InputKit.Resource.Styleable.ActionBar_titleTextStyle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Plugin.InputKit.Resource.Styleable.ActionMenuItemView = global::VaxineApp.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Plugin.InputKit.Resource.Styleable.ActionMenuItemView_android_minWidth = global::VaxineApp.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Plugin.InputKit.Resource.Styleable.ActionMenuView = global::VaxineApp.Droid.Resource.Styleable.ActionMenuView;
+			global::Plugin.InputKit.Resource.Styleable.ActionMode = global::VaxineApp.Droid.Resource.Styleable.ActionMode;
+			global::Plugin.InputKit.Resource.Styleable.ActionMode_background = global::VaxineApp.Droid.Resource.Styleable.ActionMode_background;
+			global::Plugin.InputKit.Resource.Styleable.ActionMode_backgroundSplit = global::VaxineApp.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Plugin.InputKit.Resource.Styleable.ActionMode_closeItemLayout = global::VaxineApp.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Plugin.InputKit.Resource.Styleable.ActionMode_height = global::VaxineApp.Droid.Resource.Styleable.ActionMode_height;
+			global::Plugin.InputKit.Resource.Styleable.ActionMode_subtitleTextStyle = global::VaxineApp.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Plugin.InputKit.Resource.Styleable.ActionMode_titleTextStyle = global::VaxineApp.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Plugin.InputKit.Resource.Styleable.ActivityChooserView = global::VaxineApp.Droid.Resource.Styleable.ActivityChooserView;
+			global::Plugin.InputKit.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::VaxineApp.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Plugin.InputKit.Resource.Styleable.ActivityChooserView_initialActivityCount = global::VaxineApp.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog = global::VaxineApp.Droid.Resource.Styleable.AlertDialog;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog_android_layout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog_buttonIconDimen = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog_listItemLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog_listLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog_showTitle = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Plugin.InputKit.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableCompat = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableItem = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableTransition = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::Plugin.InputKit.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates_state_liftable = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayoutStates_state_lifted = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_android_background = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_elevation = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_expanded = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_Layout = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Plugin.InputKit.Resource.Styleable.AppBarLayout_liftOnScroll = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatImageView = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatImageView_android_src = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatImageView_srcCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatImageView_tint = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatImageView_tintMode = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatSeekBar = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatSeekBar_android_thumb = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatSeekBar_tickMark = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextHelper = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_android_textAppearance = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_drawableTint = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_drawableTintMode = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_fontFamily = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_lineHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_textAllCaps = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTextView_textLocale = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_textLocale;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarDivider = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarSize = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_buttonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_checkboxStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorAccent = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorControlActivated = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorControlNormal = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorError = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorPrimary = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_controlBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dialogTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dividerVertical = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_editTextBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_editTextColor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_editTextStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_panelBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_searchViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_seekBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_spinnerStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_switchStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_toolbarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowActionBar = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Plugin.InputKit.Resource.Styleable.AppCompatTheme_windowNoTitle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Plugin.InputKit.Resource.Styleable.BottomAppBar = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar;
+			global::Plugin.InputKit.Resource.Styleable.BottomAppBar_backgroundTint = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Plugin.InputKit.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Plugin.InputKit.Resource.Styleable.BottomAppBar_fabCradleMargin = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Plugin.InputKit.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Plugin.InputKit.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Plugin.InputKit.Resource.Styleable.BottomAppBar_hideOnScroll = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_elevation = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_itemBackground = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_itemIconSize = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_itemIconTint = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_itemTextColor = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Plugin.InputKit.Resource.Styleable.BottomNavigationView_menu = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Plugin.InputKit.Resource.Styleable.BottomSheetBehavior_Layout = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Plugin.InputKit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Plugin.InputKit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Plugin.InputKit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Plugin.InputKit.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Plugin.InputKit.Resource.Styleable.ButtonBarLayout = global::VaxineApp.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Plugin.InputKit.Resource.Styleable.ButtonBarLayout_allowStacking = global::VaxineApp.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Plugin.InputKit.Resource.Styleable.CardView = global::VaxineApp.Droid.Resource.Styleable.CardView;
+			global::Plugin.InputKit.Resource.Styleable.CardView_android_minHeight = global::VaxineApp.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Plugin.InputKit.Resource.Styleable.CardView_android_minWidth = global::VaxineApp.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Plugin.InputKit.Resource.Styleable.CardView_cardBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Plugin.InputKit.Resource.Styleable.CardView_cardCornerRadius = global::VaxineApp.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Plugin.InputKit.Resource.Styleable.CardView_cardElevation = global::VaxineApp.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Plugin.InputKit.Resource.Styleable.CardView_cardMaxElevation = global::VaxineApp.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Plugin.InputKit.Resource.Styleable.CardView_cardPreventCornerOverlap = global::VaxineApp.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Plugin.InputKit.Resource.Styleable.CardView_cardUseCompatPadding = global::VaxineApp.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Plugin.InputKit.Resource.Styleable.CardView_contentPadding = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Plugin.InputKit.Resource.Styleable.CardView_contentPaddingBottom = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Plugin.InputKit.Resource.Styleable.CardView_contentPaddingLeft = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Plugin.InputKit.Resource.Styleable.CardView_contentPaddingRight = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Plugin.InputKit.Resource.Styleable.CardView_contentPaddingTop = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Plugin.InputKit.Resource.Styleable.Chip = global::VaxineApp.Droid.Resource.Styleable.Chip;
+			global::Plugin.InputKit.Resource.Styleable.ChipGroup = global::VaxineApp.Droid.Resource.Styleable.ChipGroup;
+			global::Plugin.InputKit.Resource.Styleable.ChipGroup_checkedChip = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::Plugin.InputKit.Resource.Styleable.ChipGroup_chipSpacing = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Plugin.InputKit.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Plugin.InputKit.Resource.Styleable.ChipGroup_chipSpacingVertical = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Plugin.InputKit.Resource.Styleable.ChipGroup_singleLine = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::Plugin.InputKit.Resource.Styleable.ChipGroup_singleSelection = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::Plugin.InputKit.Resource.Styleable.Chip_android_checkable = global::VaxineApp.Droid.Resource.Styleable.Chip_android_checkable;
+			global::Plugin.InputKit.Resource.Styleable.Chip_android_ellipsize = global::VaxineApp.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::Plugin.InputKit.Resource.Styleable.Chip_android_maxWidth = global::VaxineApp.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::Plugin.InputKit.Resource.Styleable.Chip_android_text = global::VaxineApp.Droid.Resource.Styleable.Chip_android_text;
+			global::Plugin.InputKit.Resource.Styleable.Chip_android_textAppearance = global::VaxineApp.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::Plugin.InputKit.Resource.Styleable.Chip_checkedIcon = global::VaxineApp.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::Plugin.InputKit.Resource.Styleable.Chip_checkedIconEnabled = global::VaxineApp.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Plugin.InputKit.Resource.Styleable.Chip_checkedIconVisible = global::VaxineApp.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipCornerRadius = global::VaxineApp.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipEndPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipIcon = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIcon;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipIconEnabled = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipIconSize = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipIconTint = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipIconVisible = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipMinHeight = global::VaxineApp.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipStartPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipStrokeColor = global::VaxineApp.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::Plugin.InputKit.Resource.Styleable.Chip_chipStrokeWidth = global::VaxineApp.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Plugin.InputKit.Resource.Styleable.Chip_closeIcon = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIcon;
+			global::Plugin.InputKit.Resource.Styleable.Chip_closeIconEnabled = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::Plugin.InputKit.Resource.Styleable.Chip_closeIconEndPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Plugin.InputKit.Resource.Styleable.Chip_closeIconSize = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::Plugin.InputKit.Resource.Styleable.Chip_closeIconStartPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Plugin.InputKit.Resource.Styleable.Chip_closeIconTint = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::Plugin.InputKit.Resource.Styleable.Chip_closeIconVisible = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::Plugin.InputKit.Resource.Styleable.Chip_hideMotionSpec = global::VaxineApp.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::Plugin.InputKit.Resource.Styleable.Chip_iconEndPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::Plugin.InputKit.Resource.Styleable.Chip_iconStartPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::Plugin.InputKit.Resource.Styleable.Chip_rippleColor = global::VaxineApp.Droid.Resource.Styleable.Chip_rippleColor;
+			global::Plugin.InputKit.Resource.Styleable.Chip_showMotionSpec = global::VaxineApp.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::Plugin.InputKit.Resource.Styleable.Chip_textEndPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::Plugin.InputKit.Resource.Styleable.Chip_textStartPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_title = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Plugin.InputKit.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Plugin.InputKit.Resource.Styleable.ColorStateListItem = global::VaxineApp.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.InputKit.Resource.Styleable.ColorStateListItem_alpha = global::VaxineApp.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.InputKit.Resource.Styleable.ColorStateListItem_android_alpha = global::VaxineApp.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.InputKit.Resource.Styleable.ColorStateListItem_android_color = global::VaxineApp.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.InputKit.Resource.Styleable.CompoundButton = global::VaxineApp.Droid.Resource.Styleable.CompoundButton;
+			global::Plugin.InputKit.Resource.Styleable.CompoundButton_android_button = global::VaxineApp.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Plugin.InputKit.Resource.Styleable.CompoundButton_buttonCompat = global::VaxineApp.Droid.Resource.Styleable.CompoundButton_buttonCompat;
+			global::Plugin.InputKit.Resource.Styleable.CompoundButton_buttonTint = global::VaxineApp.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Plugin.InputKit.Resource.Styleable.CompoundButton_buttonTintMode = global::VaxineApp.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_keylines = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.InputKit.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle_barLength = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle_color = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle_drawableSize = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle_spinBars = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Plugin.InputKit.Resource.Styleable.DrawerArrowToggle_thickness = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_backgroundTint = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_borderWidth = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_elevation = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_fabCustomSize = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_fabSize = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_maxImageSize = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_rippleColor = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_showMotionSpec = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Plugin.InputKit.Resource.Styleable.FloatingActionButton_useCompatPadding = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Plugin.InputKit.Resource.Styleable.FlowLayout = global::VaxineApp.Droid.Resource.Styleable.FlowLayout;
+			global::Plugin.InputKit.Resource.Styleable.FlowLayout_itemSpacing = global::VaxineApp.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Plugin.InputKit.Resource.Styleable.FlowLayout_lineSpacing = global::VaxineApp.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily = global::VaxineApp.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_android_font = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_android_fontStyle = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_android_fontWeight = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_font = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_fontStyle = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_fontWeight = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.InputKit.Resource.Styleable.FontFamilyFont_ttcIndex = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderAuthority = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderCerts = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderPackage = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.InputKit.Resource.Styleable.FontFamily_fontProviderQuery = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.InputKit.Resource.Styleable.ForegroundLinearLayout = global::VaxineApp.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Plugin.InputKit.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::VaxineApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Plugin.InputKit.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::VaxineApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Plugin.InputKit.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::VaxineApp.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor = global::VaxineApp.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.InputKit.Resource.Styleable.GradientColorItem = global::VaxineApp.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.InputKit.Resource.Styleable.GradientColorItem_android_color = global::VaxineApp.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.InputKit.Resource.Styleable.GradientColorItem_android_offset = global::VaxineApp.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_centerColor = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_centerX = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_centerY = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_endColor = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_endX = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_endY = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_gradientRadius = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_startColor = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_startX = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_startY = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_tileMode = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.InputKit.Resource.Styleable.GradientColor_android_type = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.InputKit.Resource.Styleable.ItemsViewRendererTheme = global::VaxineApp.Droid.Resource.Styleable.ItemsViewRendererTheme;
+			global::Plugin.InputKit.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle = global::VaxineApp.Droid.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_android_gravity = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_android_orientation = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_divider = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Plugin.InputKit.Resource.Styleable.LinearLayoutCompat_showDividers = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Plugin.InputKit.Resource.Styleable.ListPopupWindow = global::VaxineApp.Droid.Resource.Styleable.ListPopupWindow;
+			global::Plugin.InputKit.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::VaxineApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Plugin.InputKit.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::VaxineApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton = global::VaxineApp.Droid.Resource.Styleable.MaterialButton;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_android_insetBottom = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_android_insetLeft = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_android_insetRight = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_android_insetTop = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_backgroundTint = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_backgroundTintMode = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_cornerRadius = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_icon = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_icon;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_iconGravity = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_iconPadding = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_iconSize = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_iconTint = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_iconTintMode = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_rippleColor = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_strokeColor = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::Plugin.InputKit.Resource.Styleable.MaterialButton_strokeWidth = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Plugin.InputKit.Resource.Styleable.MaterialCardView = global::VaxineApp.Droid.Resource.Styleable.MaterialCardView;
+			global::Plugin.InputKit.Resource.Styleable.MaterialCardView_strokeColor = global::VaxineApp.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Plugin.InputKit.Resource.Styleable.MaterialCardView_strokeWidth = global::VaxineApp.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Plugin.InputKit.Resource.Styleable.MenuGroup = global::VaxineApp.Droid.Resource.Styleable.MenuGroup;
+			global::Plugin.InputKit.Resource.Styleable.MenuGroup_android_checkableBehavior = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Plugin.InputKit.Resource.Styleable.MenuGroup_android_enabled = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Plugin.InputKit.Resource.Styleable.MenuGroup_android_id = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Plugin.InputKit.Resource.Styleable.MenuGroup_android_menuCategory = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Plugin.InputKit.Resource.Styleable.MenuGroup_android_orderInCategory = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Plugin.InputKit.Resource.Styleable.MenuGroup_android_visible = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem = global::VaxineApp.Droid.Resource.Styleable.MenuItem;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_actionLayout = global::VaxineApp.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_actionProviderClass = global::VaxineApp.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_actionViewClass = global::VaxineApp.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_alphabeticModifiers = global::VaxineApp.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_checkable = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_checked = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_enabled = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_icon = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_id = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_menuCategory = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_numericShortcut = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_onClick = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_orderInCategory = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_title = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_titleCondensed = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_android_visible = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_contentDescription = global::VaxineApp.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_iconTint = global::VaxineApp.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_iconTintMode = global::VaxineApp.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_numericModifiers = global::VaxineApp.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_showAsAction = global::VaxineApp.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Plugin.InputKit.Resource.Styleable.MenuItem_tooltipText = global::VaxineApp.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Plugin.InputKit.Resource.Styleable.MenuView = global::VaxineApp.Droid.Resource.Styleable.MenuView;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_android_headerBackground = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_android_horizontalDivider = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_android_itemBackground = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_android_itemTextAppearance = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_android_verticalDivider = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_android_windowAnimationStyle = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_preserveIconSpacing = global::VaxineApp.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Plugin.InputKit.Resource.Styleable.MenuView_subMenuArrow = global::VaxineApp.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView = global::VaxineApp.Droid.Resource.Styleable.NavigationView;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_android_background = global::VaxineApp.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::VaxineApp.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_android_maxWidth = global::VaxineApp.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_elevation = global::VaxineApp.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_headerLayout = global::VaxineApp.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_itemBackground = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_itemHorizontalPadding = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_itemIconPadding = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_itemIconTint = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_itemTextAppearance = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_itemTextColor = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Plugin.InputKit.Resource.Styleable.NavigationView_menu = global::VaxineApp.Droid.Resource.Styleable.NavigationView_menu;
+			global::Plugin.InputKit.Resource.Styleable.PopupWindow = global::VaxineApp.Droid.Resource.Styleable.PopupWindow;
+			global::Plugin.InputKit.Resource.Styleable.PopupWindowBackgroundState = global::VaxineApp.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Plugin.InputKit.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::VaxineApp.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Plugin.InputKit.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::VaxineApp.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Plugin.InputKit.Resource.Styleable.PopupWindow_android_popupBackground = global::VaxineApp.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Plugin.InputKit.Resource.Styleable.PopupWindow_overlapAnchor = global::VaxineApp.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Plugin.InputKit.Resource.Styleable.RecycleListView = global::VaxineApp.Droid.Resource.Styleable.RecycleListView;
+			global::Plugin.InputKit.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::VaxineApp.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Plugin.InputKit.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::VaxineApp.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView = global::VaxineApp.Droid.Resource.Styleable.RecyclerView;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_android_clipToPadding = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_android_descendantFocusability = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_android_orientation = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_fastScrollEnabled = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_layoutManager = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_reverseLayout = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_spanCount = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Plugin.InputKit.Resource.Styleable.RecyclerView_stackFromEnd = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Plugin.InputKit.Resource.Styleable.ScrimInsetsFrameLayout = global::VaxineApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Plugin.InputKit.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::VaxineApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Plugin.InputKit.Resource.Styleable.ScrollingViewBehavior_Layout = global::VaxineApp.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Plugin.InputKit.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::VaxineApp.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Plugin.InputKit.Resource.Styleable.SearchView = global::VaxineApp.Droid.Resource.Styleable.SearchView;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_android_focusable = global::VaxineApp.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_android_imeOptions = global::VaxineApp.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_android_inputType = global::VaxineApp.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_android_maxWidth = global::VaxineApp.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_closeIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_commitIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_defaultQueryHint = global::VaxineApp.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_goIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_iconifiedByDefault = global::VaxineApp.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_layout = global::VaxineApp.Droid.Resource.Styleable.SearchView_layout;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_queryBackground = global::VaxineApp.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_queryHint = global::VaxineApp.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_searchHintIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_searchIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_submitBackground = global::VaxineApp.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_suggestionRowLayout = global::VaxineApp.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Plugin.InputKit.Resource.Styleable.SearchView_voiceIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Plugin.InputKit.Resource.Styleable.Snackbar = global::VaxineApp.Droid.Resource.Styleable.Snackbar;
+			global::Plugin.InputKit.Resource.Styleable.SnackbarLayout = global::VaxineApp.Droid.Resource.Styleable.SnackbarLayout;
+			global::Plugin.InputKit.Resource.Styleable.SnackbarLayout_android_maxWidth = global::VaxineApp.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Plugin.InputKit.Resource.Styleable.SnackbarLayout_elevation = global::VaxineApp.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Plugin.InputKit.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::VaxineApp.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Plugin.InputKit.Resource.Styleable.Snackbar_snackbarButtonStyle = global::VaxineApp.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Plugin.InputKit.Resource.Styleable.Snackbar_snackbarStyle = global::VaxineApp.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Plugin.InputKit.Resource.Styleable.Spinner = global::VaxineApp.Droid.Resource.Styleable.Spinner;
+			global::Plugin.InputKit.Resource.Styleable.Spinner_android_dropDownWidth = global::VaxineApp.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Plugin.InputKit.Resource.Styleable.Spinner_android_entries = global::VaxineApp.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Plugin.InputKit.Resource.Styleable.Spinner_android_popupBackground = global::VaxineApp.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Plugin.InputKit.Resource.Styleable.Spinner_android_prompt = global::VaxineApp.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Plugin.InputKit.Resource.Styleable.Spinner_popupTheme = global::VaxineApp.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawable = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawableItem = global::VaxineApp.Droid.Resource.Styleable.StateListDrawableItem;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawableItem_android_drawable = global::VaxineApp.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawable_android_constantSize = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawable_android_dither = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawable_android_variablePadding = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::Plugin.InputKit.Resource.Styleable.StateListDrawable_android_visible = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_android_textOff = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_android_textOn = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_android_thumb = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_showText = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_splitTrack = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_switchMinWidth = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_switchPadding = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_switchTextAppearance = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_thumbTextPadding = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_thumbTint = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_thumbTintMode = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_track = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_trackTint = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Plugin.InputKit.Resource.Styleable.SwitchCompat_trackTintMode = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Plugin.InputKit.Resource.Styleable.TabItem = global::VaxineApp.Droid.Resource.Styleable.TabItem;
+			global::Plugin.InputKit.Resource.Styleable.TabItem_android_icon = global::VaxineApp.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Plugin.InputKit.Resource.Styleable.TabItem_android_layout = global::VaxineApp.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Plugin.InputKit.Resource.Styleable.TabItem_android_text = global::VaxineApp.Droid.Resource.Styleable.TabItem_android_text;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout = global::VaxineApp.Droid.Resource.Styleable.TabLayout;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabBackground = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabContentStart = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabGravity = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabIconTint = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabIconTintMode = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabIndicator = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabIndicatorColor = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabIndicatorGravity = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabIndicatorHeight = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabInlineLabel = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabMaxWidth = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabMinWidth = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabMode = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabPadding = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabPaddingBottom = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabPaddingEnd = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabPaddingStart = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabPaddingTop = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabRippleColor = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabSelectedTextColor = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabTextColor = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Plugin.InputKit.Resource.Styleable.TabLayout_tabUnboundedRipple = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_fontFamily = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_shadowColor = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_shadowDx = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_shadowDy = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_shadowRadius = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_textColor = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_textColorHint = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_textColorLink = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_textFontWeight = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_textSize = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_textStyle = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_android_typeface = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_fontFamily = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_fontVariationSettings = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_textAllCaps = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Plugin.InputKit.Resource.Styleable.TextAppearance_textLocale = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_textLocale;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_android_hint = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_android_textColorHint = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxStrokeColor = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_counterEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_counterMaxLength = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_counterTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_errorEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_errorTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_helperText = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_helperTextEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_hintEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_hintTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_passwordToggleTint = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Plugin.InputKit.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Plugin.InputKit.Resource.Styleable.ThemeEnforcement = global::VaxineApp.Droid.Resource.Styleable.ThemeEnforcement;
+			global::Plugin.InputKit.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::VaxineApp.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Plugin.InputKit.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::VaxineApp.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Plugin.InputKit.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::VaxineApp.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar = global::VaxineApp.Droid.Resource.Styleable.Toolbar;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_android_gravity = global::VaxineApp.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_android_minHeight = global::VaxineApp.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_buttonGravity = global::VaxineApp.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_collapseContentDescription = global::VaxineApp.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_collapseIcon = global::VaxineApp.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_contentInsetEnd = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_contentInsetLeft = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_contentInsetRight = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_contentInsetStart = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_logo = global::VaxineApp.Droid.Resource.Styleable.Toolbar_logo;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_logoDescription = global::VaxineApp.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_maxButtonHeight = global::VaxineApp.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_menu = global::VaxineApp.Droid.Resource.Styleable.Toolbar_menu;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_navigationContentDescription = global::VaxineApp.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_navigationIcon = global::VaxineApp.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_popupTheme = global::VaxineApp.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_subtitle = global::VaxineApp.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_subtitleTextAppearance = global::VaxineApp.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_subtitleTextColor = global::VaxineApp.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_title = global::VaxineApp.Droid.Resource.Styleable.Toolbar_title;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMargin = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMarginBottom = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMarginEnd = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMargins = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMarginStart = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleMarginTop = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleTextAppearance = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Plugin.InputKit.Resource.Styleable.Toolbar_titleTextColor = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Plugin.InputKit.Resource.Styleable.View = global::VaxineApp.Droid.Resource.Styleable.View;
+			global::Plugin.InputKit.Resource.Styleable.ViewBackgroundHelper = global::VaxineApp.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Plugin.InputKit.Resource.Styleable.ViewBackgroundHelper_android_background = global::VaxineApp.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Plugin.InputKit.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::VaxineApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Plugin.InputKit.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::VaxineApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Plugin.InputKit.Resource.Styleable.ViewStubCompat = global::VaxineApp.Droid.Resource.Styleable.ViewStubCompat;
+			global::Plugin.InputKit.Resource.Styleable.ViewStubCompat_android_id = global::VaxineApp.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Plugin.InputKit.Resource.Styleable.ViewStubCompat_android_inflatedId = global::VaxineApp.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Plugin.InputKit.Resource.Styleable.ViewStubCompat_android_layout = global::VaxineApp.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Plugin.InputKit.Resource.Styleable.View_android_focusable = global::VaxineApp.Droid.Resource.Styleable.View_android_focusable;
+			global::Plugin.InputKit.Resource.Styleable.View_android_theme = global::VaxineApp.Droid.Resource.Styleable.View_android_theme;
+			global::Plugin.InputKit.Resource.Styleable.View_paddingEnd = global::VaxineApp.Droid.Resource.Styleable.View_paddingEnd;
+			global::Plugin.InputKit.Resource.Styleable.View_paddingStart = global::VaxineApp.Droid.Resource.Styleable.View_paddingStart;
+			global::Plugin.InputKit.Resource.Styleable.View_theme = global::VaxineApp.Droid.Resource.Styleable.View_theme;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_in = global::VaxineApp.Droid.Resource.Animation.abc_fade_in;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_out = global::VaxineApp.Droid.Resource.Animation.abc_fade_out;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_grow_fade_in_from_bottom = global::VaxineApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -24819,8 +27461,8 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0x7F0F00E3
 			public const int CardView_Light = 2131689699;
 			
-			// aapt resource value: 0x7F0F02BF
-			public const int collectionViewTheme = 2131690175;
+			// aapt resource value: 0x7F0F02C0
+			public const int collectionViewTheme = 2131690176;
 			
 			// aapt resource value: 0x7F0F00E4
 			public const int EmptyTheme = 2131689700;
@@ -24862,1396 +27504,1399 @@ namespace VaxineApp.Droid
 			public const int MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked = 2131689712;
 			
 			// aapt resource value: 0x7F0F00F1
-			public const int MyTheme = 2131689713;
+			public const int MyPopupMenu = 2131689713;
 			
 			// aapt resource value: 0x7F0F00F2
-			public const int MyTheme_Base = 2131689714;
+			public const int MyTheme = 2131689714;
 			
 			// aapt resource value: 0x7F0F00F3
-			public const int MyTheme_Splash = 2131689715;
+			public const int MyTheme_Base = 2131689715;
 			
 			// aapt resource value: 0x7F0F00F4
-			public const int Platform_AppCompat = 2131689716;
+			public const int MyTheme_Splash = 2131689716;
 			
 			// aapt resource value: 0x7F0F00F5
-			public const int Platform_AppCompat_Light = 2131689717;
+			public const int Platform_AppCompat = 2131689717;
 			
 			// aapt resource value: 0x7F0F00F6
-			public const int Platform_MaterialComponents = 2131689718;
+			public const int Platform_AppCompat_Light = 2131689718;
 			
 			// aapt resource value: 0x7F0F00F7
-			public const int Platform_MaterialComponents_Dialog = 2131689719;
+			public const int Platform_MaterialComponents = 2131689719;
 			
 			// aapt resource value: 0x7F0F00F8
-			public const int Platform_MaterialComponents_Light = 2131689720;
+			public const int Platform_MaterialComponents_Dialog = 2131689720;
 			
 			// aapt resource value: 0x7F0F00F9
-			public const int Platform_MaterialComponents_Light_Dialog = 2131689721;
+			public const int Platform_MaterialComponents_Light = 2131689721;
 			
 			// aapt resource value: 0x7F0F00FA
-			public const int Platform_ThemeOverlay_AppCompat = 2131689722;
+			public const int Platform_MaterialComponents_Light_Dialog = 2131689722;
 			
 			// aapt resource value: 0x7F0F00FB
-			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131689723;
+			public const int Platform_ThemeOverlay_AppCompat = 2131689723;
 			
 			// aapt resource value: 0x7F0F00FC
-			public const int Platform_ThemeOverlay_AppCompat_Light = 2131689724;
+			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131689724;
 			
 			// aapt resource value: 0x7F0F00FD
-			public const int Platform_V21_AppCompat = 2131689725;
+			public const int Platform_ThemeOverlay_AppCompat_Light = 2131689725;
 			
 			// aapt resource value: 0x7F0F00FE
-			public const int Platform_V21_AppCompat_Light = 2131689726;
+			public const int Platform_V21_AppCompat = 2131689726;
 			
 			// aapt resource value: 0x7F0F00FF
-			public const int Platform_V25_AppCompat = 2131689727;
+			public const int Platform_V21_AppCompat_Light = 2131689727;
 			
 			// aapt resource value: 0x7F0F0100
-			public const int Platform_V25_AppCompat_Light = 2131689728;
+			public const int Platform_V25_AppCompat = 2131689728;
 			
 			// aapt resource value: 0x7F0F0101
-			public const int Platform_Widget_AppCompat_Spinner = 2131689729;
+			public const int Platform_V25_AppCompat_Light = 2131689729;
 			
 			// aapt resource value: 0x7F0F0102
-			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131689730;
+			public const int Platform_Widget_AppCompat_Spinner = 2131689730;
 			
 			// aapt resource value: 0x7F0F0103
-			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131689731;
+			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131689731;
 			
 			// aapt resource value: 0x7F0F0104
-			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131689732;
+			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131689732;
 			
 			// aapt resource value: 0x7F0F0105
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131689733;
+			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131689733;
 			
 			// aapt resource value: 0x7F0F0106
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131689734;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131689734;
 			
 			// aapt resource value: 0x7F0F0107
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = 2131689735;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131689735;
 			
 			// aapt resource value: 0x7F0F0108
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = 2131689736;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = 2131689736;
 			
 			// aapt resource value: 0x7F0F0109
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131689737;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = 2131689737;
 			
 			// aapt resource value: 0x7F0F010A
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131689738;
-			
-			// aapt resource value: 0x7F0F0110
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131689744;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131689738;
 			
 			// aapt resource value: 0x7F0F010B
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131689739;
-			
-			// aapt resource value: 0x7F0F010C
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131689740;
-			
-			// aapt resource value: 0x7F0F010D
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131689741;
-			
-			// aapt resource value: 0x7F0F010E
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131689742;
-			
-			// aapt resource value: 0x7F0F010F
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131689743;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131689739;
 			
 			// aapt resource value: 0x7F0F0111
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131689745;
+			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131689745;
+			
+			// aapt resource value: 0x7F0F010C
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131689740;
+			
+			// aapt resource value: 0x7F0F010D
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131689741;
+			
+			// aapt resource value: 0x7F0F010E
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131689742;
+			
+			// aapt resource value: 0x7F0F010F
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131689743;
+			
+			// aapt resource value: 0x7F0F0110
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131689744;
 			
 			// aapt resource value: 0x7F0F0112
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131689746;
-			
-			// aapt resource value: 0x7F0F02C0
-			public const int scrollViewScrollBars = 2131690176;
-			
-			// aapt resource value: 0x7F0F02C1
-			public const int scrollViewTheme = 2131690177;
-			
-			// aapt resource value: 0x7F0F0119
-			public const int ShapeAppearanceOverlay = 2131689753;
-			
-			// aapt resource value: 0x7F0F011A
-			public const int ShapeAppearanceOverlay_BottomLeftDifferentCornerSize = 2131689754;
-			
-			// aapt resource value: 0x7F0F011B
-			public const int ShapeAppearanceOverlay_BottomRightCut = 2131689755;
-			
-			// aapt resource value: 0x7F0F011C
-			public const int ShapeAppearanceOverlay_Cut = 2131689756;
-			
-			// aapt resource value: 0x7F0F011D
-			public const int ShapeAppearanceOverlay_DifferentCornerSize = 2131689757;
-			
-			// aapt resource value: 0x7F0F011E
-			public const int ShapeAppearanceOverlay_MaterialComponents_BottomSheet = 2131689758;
-			
-			// aapt resource value: 0x7F0F011F
-			public const int ShapeAppearanceOverlay_MaterialComponents_Chip = 2131689759;
-			
-			// aapt resource value: 0x7F0F0120
-			public const int ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton = 2131689760;
-			
-			// aapt resource value: 0x7F0F0121
-			public const int ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton = 2131689761;
-			
-			// aapt resource value: 0x7F0F0122
-			public const int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131689762;
-			
-			// aapt resource value: 0x7F0F0123
-			public const int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen = 2131689763;
-			
-			// aapt resource value: 0x7F0F0124
-			public const int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = 2131689764;
-			
-			// aapt resource value: 0x7F0F0125
-			public const int ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox = 2131689765;
-			
-			// aapt resource value: 0x7F0F0126
-			public const int ShapeAppearanceOverlay_TopLeftCut = 2131689766;
-			
-			// aapt resource value: 0x7F0F0127
-			public const int ShapeAppearanceOverlay_TopRightDifferentCornerSize = 2131689767;
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131689746;
 			
 			// aapt resource value: 0x7F0F0113
-			public const int ShapeAppearance_MaterialComponents = 2131689747;
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131689747;
 			
-			// aapt resource value: 0x7F0F0114
-			public const int ShapeAppearance_MaterialComponents_LargeComponent = 2131689748;
+			// aapt resource value: 0x7F0F02C1
+			public const int scrollViewScrollBars = 2131690177;
 			
-			// aapt resource value: 0x7F0F0115
-			public const int ShapeAppearance_MaterialComponents_MediumComponent = 2131689749;
+			// aapt resource value: 0x7F0F02C2
+			public const int scrollViewTheme = 2131690178;
 			
-			// aapt resource value: 0x7F0F0116
-			public const int ShapeAppearance_MaterialComponents_SmallComponent = 2131689750;
+			// aapt resource value: 0x7F0F011A
+			public const int ShapeAppearanceOverlay = 2131689754;
 			
-			// aapt resource value: 0x7F0F0117
-			public const int ShapeAppearance_MaterialComponents_Test = 2131689751;
+			// aapt resource value: 0x7F0F011B
+			public const int ShapeAppearanceOverlay_BottomLeftDifferentCornerSize = 2131689755;
 			
-			// aapt resource value: 0x7F0F0118
-			public const int ShapeAppearance_MaterialComponents_Tooltip = 2131689752;
+			// aapt resource value: 0x7F0F011C
+			public const int ShapeAppearanceOverlay_BottomRightCut = 2131689756;
 			
-			// aapt resource value: 0x7F0F012D
-			public const int TestStyleWithLineHeight = 2131689773;
+			// aapt resource value: 0x7F0F011D
+			public const int ShapeAppearanceOverlay_Cut = 2131689757;
 			
-			// aapt resource value: 0x7F0F012E
-			public const int TestStyleWithLineHeightAppearance = 2131689774;
+			// aapt resource value: 0x7F0F011E
+			public const int ShapeAppearanceOverlay_DifferentCornerSize = 2131689758;
 			
-			// aapt resource value: 0x7F0F0130
-			public const int TestStyleWithoutLineHeight = 2131689776;
+			// aapt resource value: 0x7F0F011F
+			public const int ShapeAppearanceOverlay_MaterialComponents_BottomSheet = 2131689759;
 			
-			// aapt resource value: 0x7F0F012F
-			public const int TestStyleWithThemeLineHeightAttribute = 2131689775;
+			// aapt resource value: 0x7F0F0120
+			public const int ShapeAppearanceOverlay_MaterialComponents_Chip = 2131689760;
 			
-			// aapt resource value: 0x7F0F0131
-			public const int TestThemeWithLineHeight = 2131689777;
+			// aapt resource value: 0x7F0F0121
+			public const int ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton = 2131689761;
 			
-			// aapt resource value: 0x7F0F0132
-			public const int TestThemeWithLineHeightDisabled = 2131689778;
+			// aapt resource value: 0x7F0F0122
+			public const int ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton = 2131689762;
+			
+			// aapt resource value: 0x7F0F0123
+			public const int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131689763;
+			
+			// aapt resource value: 0x7F0F0124
+			public const int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen = 2131689764;
+			
+			// aapt resource value: 0x7F0F0125
+			public const int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = 2131689765;
+			
+			// aapt resource value: 0x7F0F0126
+			public const int ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox = 2131689766;
+			
+			// aapt resource value: 0x7F0F0127
+			public const int ShapeAppearanceOverlay_TopLeftCut = 2131689767;
 			
 			// aapt resource value: 0x7F0F0128
-			public const int Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131689768;
+			public const int ShapeAppearanceOverlay_TopRightDifferentCornerSize = 2131689768;
 			
-			// aapt resource value: 0x7F0F0129
-			public const int Test_Theme_MaterialComponents_MaterialCalendar = 2131689769;
+			// aapt resource value: 0x7F0F0114
+			public const int ShapeAppearance_MaterialComponents = 2131689748;
 			
-			// aapt resource value: 0x7F0F012A
-			public const int Test_Widget_MaterialComponents_MaterialCalendar = 2131689770;
+			// aapt resource value: 0x7F0F0115
+			public const int ShapeAppearance_MaterialComponents_LargeComponent = 2131689749;
 			
-			// aapt resource value: 0x7F0F012B
-			public const int Test_Widget_MaterialComponents_MaterialCalendar_Day = 2131689771;
+			// aapt resource value: 0x7F0F0116
+			public const int ShapeAppearance_MaterialComponents_MediumComponent = 2131689750;
 			
-			// aapt resource value: 0x7F0F012C
-			public const int Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected = 2131689772;
+			// aapt resource value: 0x7F0F0117
+			public const int ShapeAppearance_MaterialComponents_SmallComponent = 2131689751;
+			
+			// aapt resource value: 0x7F0F0118
+			public const int ShapeAppearance_MaterialComponents_Test = 2131689752;
+			
+			// aapt resource value: 0x7F0F0119
+			public const int ShapeAppearance_MaterialComponents_Tooltip = 2131689753;
+			
+			// aapt resource value: 0x7F0F012E
+			public const int TestStyleWithLineHeight = 2131689774;
+			
+			// aapt resource value: 0x7F0F012F
+			public const int TestStyleWithLineHeightAppearance = 2131689775;
+			
+			// aapt resource value: 0x7F0F0131
+			public const int TestStyleWithoutLineHeight = 2131689777;
+			
+			// aapt resource value: 0x7F0F0130
+			public const int TestStyleWithThemeLineHeightAttribute = 2131689776;
+			
+			// aapt resource value: 0x7F0F0132
+			public const int TestThemeWithLineHeight = 2131689778;
 			
 			// aapt resource value: 0x7F0F0133
-			public const int TextAppearance_AppCompat = 2131689779;
+			public const int TestThemeWithLineHeightDisabled = 2131689779;
+			
+			// aapt resource value: 0x7F0F0129
+			public const int Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131689769;
+			
+			// aapt resource value: 0x7F0F012A
+			public const int Test_Theme_MaterialComponents_MaterialCalendar = 2131689770;
+			
+			// aapt resource value: 0x7F0F012B
+			public const int Test_Widget_MaterialComponents_MaterialCalendar = 2131689771;
+			
+			// aapt resource value: 0x7F0F012C
+			public const int Test_Widget_MaterialComponents_MaterialCalendar_Day = 2131689772;
+			
+			// aapt resource value: 0x7F0F012D
+			public const int Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected = 2131689773;
 			
 			// aapt resource value: 0x7F0F0134
-			public const int TextAppearance_AppCompat_Body1 = 2131689780;
+			public const int TextAppearance_AppCompat = 2131689780;
 			
 			// aapt resource value: 0x7F0F0135
-			public const int TextAppearance_AppCompat_Body2 = 2131689781;
+			public const int TextAppearance_AppCompat_Body1 = 2131689781;
 			
 			// aapt resource value: 0x7F0F0136
-			public const int TextAppearance_AppCompat_Button = 2131689782;
+			public const int TextAppearance_AppCompat_Body2 = 2131689782;
 			
 			// aapt resource value: 0x7F0F0137
-			public const int TextAppearance_AppCompat_Caption = 2131689783;
+			public const int TextAppearance_AppCompat_Button = 2131689783;
 			
 			// aapt resource value: 0x7F0F0138
-			public const int TextAppearance_AppCompat_Display1 = 2131689784;
+			public const int TextAppearance_AppCompat_Caption = 2131689784;
 			
 			// aapt resource value: 0x7F0F0139
-			public const int TextAppearance_AppCompat_Display2 = 2131689785;
+			public const int TextAppearance_AppCompat_Display1 = 2131689785;
 			
 			// aapt resource value: 0x7F0F013A
-			public const int TextAppearance_AppCompat_Display3 = 2131689786;
+			public const int TextAppearance_AppCompat_Display2 = 2131689786;
 			
 			// aapt resource value: 0x7F0F013B
-			public const int TextAppearance_AppCompat_Display4 = 2131689787;
+			public const int TextAppearance_AppCompat_Display3 = 2131689787;
 			
 			// aapt resource value: 0x7F0F013C
-			public const int TextAppearance_AppCompat_Headline = 2131689788;
+			public const int TextAppearance_AppCompat_Display4 = 2131689788;
 			
 			// aapt resource value: 0x7F0F013D
-			public const int TextAppearance_AppCompat_Inverse = 2131689789;
+			public const int TextAppearance_AppCompat_Headline = 2131689789;
 			
 			// aapt resource value: 0x7F0F013E
-			public const int TextAppearance_AppCompat_Large = 2131689790;
+			public const int TextAppearance_AppCompat_Inverse = 2131689790;
 			
 			// aapt resource value: 0x7F0F013F
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131689791;
+			public const int TextAppearance_AppCompat_Large = 2131689791;
 			
 			// aapt resource value: 0x7F0F0140
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131689792;
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131689792;
 			
 			// aapt resource value: 0x7F0F0141
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131689793;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131689793;
 			
 			// aapt resource value: 0x7F0F0142
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131689794;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131689794;
 			
 			// aapt resource value: 0x7F0F0143
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131689795;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131689795;
 			
 			// aapt resource value: 0x7F0F0144
-			public const int TextAppearance_AppCompat_Medium = 2131689796;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131689796;
 			
 			// aapt resource value: 0x7F0F0145
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131689797;
+			public const int TextAppearance_AppCompat_Medium = 2131689797;
 			
 			// aapt resource value: 0x7F0F0146
-			public const int TextAppearance_AppCompat_Menu = 2131689798;
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131689798;
 			
 			// aapt resource value: 0x7F0F0147
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131689799;
+			public const int TextAppearance_AppCompat_Menu = 2131689799;
 			
 			// aapt resource value: 0x7F0F0148
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131689800;
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131689800;
 			
 			// aapt resource value: 0x7F0F0149
-			public const int TextAppearance_AppCompat_Small = 2131689801;
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131689801;
 			
 			// aapt resource value: 0x7F0F014A
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131689802;
+			public const int TextAppearance_AppCompat_Small = 2131689802;
 			
 			// aapt resource value: 0x7F0F014B
-			public const int TextAppearance_AppCompat_Subhead = 2131689803;
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131689803;
 			
 			// aapt resource value: 0x7F0F014C
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131689804;
+			public const int TextAppearance_AppCompat_Subhead = 2131689804;
 			
 			// aapt resource value: 0x7F0F014D
-			public const int TextAppearance_AppCompat_Title = 2131689805;
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131689805;
 			
 			// aapt resource value: 0x7F0F014E
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131689806;
+			public const int TextAppearance_AppCompat_Title = 2131689806;
 			
 			// aapt resource value: 0x7F0F014F
-			public const int TextAppearance_AppCompat_Tooltip = 2131689807;
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131689807;
 			
 			// aapt resource value: 0x7F0F0150
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131689808;
+			public const int TextAppearance_AppCompat_Tooltip = 2131689808;
 			
 			// aapt resource value: 0x7F0F0151
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131689809;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131689809;
 			
 			// aapt resource value: 0x7F0F0152
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131689810;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131689810;
 			
 			// aapt resource value: 0x7F0F0153
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131689811;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131689811;
 			
 			// aapt resource value: 0x7F0F0154
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131689812;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131689812;
 			
 			// aapt resource value: 0x7F0F0155
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131689813;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131689813;
 			
 			// aapt resource value: 0x7F0F0156
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131689814;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131689814;
 			
 			// aapt resource value: 0x7F0F0157
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131689815;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131689815;
 			
 			// aapt resource value: 0x7F0F0158
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131689816;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131689816;
 			
 			// aapt resource value: 0x7F0F0159
-			public const int TextAppearance_AppCompat_Widget_Button = 2131689817;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131689817;
 			
 			// aapt resource value: 0x7F0F015A
-			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131689818;
+			public const int TextAppearance_AppCompat_Widget_Button = 2131689818;
 			
 			// aapt resource value: 0x7F0F015B
-			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131689819;
+			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131689819;
 			
 			// aapt resource value: 0x7F0F015C
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131689820;
+			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131689820;
 			
 			// aapt resource value: 0x7F0F015D
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131689821;
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131689821;
 			
 			// aapt resource value: 0x7F0F015E
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131689822;
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131689822;
 			
 			// aapt resource value: 0x7F0F015F
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131689823;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131689823;
 			
 			// aapt resource value: 0x7F0F0160
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131689824;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131689824;
 			
 			// aapt resource value: 0x7F0F0161
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131689825;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131689825;
 			
 			// aapt resource value: 0x7F0F0162
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131689826;
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131689826;
 			
 			// aapt resource value: 0x7F0F0163
-			public const int TextAppearance_Compat_Notification = 2131689827;
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131689827;
 			
 			// aapt resource value: 0x7F0F0164
-			public const int TextAppearance_Compat_Notification_Info = 2131689828;
+			public const int TextAppearance_Compat_Notification = 2131689828;
 			
 			// aapt resource value: 0x7F0F0165
-			public const int TextAppearance_Compat_Notification_Info_Media = 2131689829;
+			public const int TextAppearance_Compat_Notification_Info = 2131689829;
 			
 			// aapt resource value: 0x7F0F0166
-			public const int TextAppearance_Compat_Notification_Line2 = 2131689830;
+			public const int TextAppearance_Compat_Notification_Info_Media = 2131689830;
 			
 			// aapt resource value: 0x7F0F0167
-			public const int TextAppearance_Compat_Notification_Line2_Media = 2131689831;
+			public const int TextAppearance_Compat_Notification_Line2 = 2131689831;
 			
 			// aapt resource value: 0x7F0F0168
-			public const int TextAppearance_Compat_Notification_Media = 2131689832;
+			public const int TextAppearance_Compat_Notification_Line2_Media = 2131689832;
 			
 			// aapt resource value: 0x7F0F0169
-			public const int TextAppearance_Compat_Notification_Time = 2131689833;
+			public const int TextAppearance_Compat_Notification_Media = 2131689833;
 			
 			// aapt resource value: 0x7F0F016A
-			public const int TextAppearance_Compat_Notification_Time_Media = 2131689834;
+			public const int TextAppearance_Compat_Notification_Time = 2131689834;
 			
 			// aapt resource value: 0x7F0F016B
-			public const int TextAppearance_Compat_Notification_Title = 2131689835;
+			public const int TextAppearance_Compat_Notification_Time_Media = 2131689835;
 			
 			// aapt resource value: 0x7F0F016C
-			public const int TextAppearance_Compat_Notification_Title_Media = 2131689836;
+			public const int TextAppearance_Compat_Notification_Title = 2131689836;
 			
 			// aapt resource value: 0x7F0F016D
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131689837;
+			public const int TextAppearance_Compat_Notification_Title_Media = 2131689837;
 			
 			// aapt resource value: 0x7F0F016E
-			public const int TextAppearance_Design_Counter = 2131689838;
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131689838;
 			
 			// aapt resource value: 0x7F0F016F
-			public const int TextAppearance_Design_Counter_Overflow = 2131689839;
+			public const int TextAppearance_Design_Counter = 2131689839;
 			
 			// aapt resource value: 0x7F0F0170
-			public const int TextAppearance_Design_Error = 2131689840;
+			public const int TextAppearance_Design_Counter_Overflow = 2131689840;
 			
 			// aapt resource value: 0x7F0F0171
-			public const int TextAppearance_Design_HelperText = 2131689841;
+			public const int TextAppearance_Design_Error = 2131689841;
 			
 			// aapt resource value: 0x7F0F0172
-			public const int TextAppearance_Design_Hint = 2131689842;
+			public const int TextAppearance_Design_HelperText = 2131689842;
 			
 			// aapt resource value: 0x7F0F0173
-			public const int TextAppearance_Design_Placeholder = 2131689843;
+			public const int TextAppearance_Design_Hint = 2131689843;
 			
 			// aapt resource value: 0x7F0F0174
-			public const int TextAppearance_Design_Prefix = 2131689844;
+			public const int TextAppearance_Design_Placeholder = 2131689844;
 			
 			// aapt resource value: 0x7F0F0175
-			public const int TextAppearance_Design_Snackbar_Message = 2131689845;
+			public const int TextAppearance_Design_Prefix = 2131689845;
 			
 			// aapt resource value: 0x7F0F0176
-			public const int TextAppearance_Design_Suffix = 2131689846;
+			public const int TextAppearance_Design_Snackbar_Message = 2131689846;
 			
 			// aapt resource value: 0x7F0F0177
-			public const int TextAppearance_Design_Tab = 2131689847;
+			public const int TextAppearance_Design_Suffix = 2131689847;
 			
 			// aapt resource value: 0x7F0F0178
-			public const int TextAppearance_MaterialComponents_Badge = 2131689848;
+			public const int TextAppearance_Design_Tab = 2131689848;
 			
 			// aapt resource value: 0x7F0F0179
-			public const int TextAppearance_MaterialComponents_Body1 = 2131689849;
+			public const int TextAppearance_MaterialComponents_Badge = 2131689849;
 			
 			// aapt resource value: 0x7F0F017A
-			public const int TextAppearance_MaterialComponents_Body2 = 2131689850;
+			public const int TextAppearance_MaterialComponents_Body1 = 2131689850;
 			
 			// aapt resource value: 0x7F0F017B
-			public const int TextAppearance_MaterialComponents_Button = 2131689851;
+			public const int TextAppearance_MaterialComponents_Body2 = 2131689851;
 			
 			// aapt resource value: 0x7F0F017C
-			public const int TextAppearance_MaterialComponents_Caption = 2131689852;
+			public const int TextAppearance_MaterialComponents_Button = 2131689852;
 			
 			// aapt resource value: 0x7F0F017D
-			public const int TextAppearance_MaterialComponents_Chip = 2131689853;
+			public const int TextAppearance_MaterialComponents_Caption = 2131689853;
 			
 			// aapt resource value: 0x7F0F017E
-			public const int TextAppearance_MaterialComponents_Headline1 = 2131689854;
+			public const int TextAppearance_MaterialComponents_Chip = 2131689854;
 			
 			// aapt resource value: 0x7F0F017F
-			public const int TextAppearance_MaterialComponents_Headline2 = 2131689855;
+			public const int TextAppearance_MaterialComponents_Headline1 = 2131689855;
 			
 			// aapt resource value: 0x7F0F0180
-			public const int TextAppearance_MaterialComponents_Headline3 = 2131689856;
+			public const int TextAppearance_MaterialComponents_Headline2 = 2131689856;
 			
 			// aapt resource value: 0x7F0F0181
-			public const int TextAppearance_MaterialComponents_Headline4 = 2131689857;
+			public const int TextAppearance_MaterialComponents_Headline3 = 2131689857;
 			
 			// aapt resource value: 0x7F0F0182
-			public const int TextAppearance_MaterialComponents_Headline5 = 2131689858;
+			public const int TextAppearance_MaterialComponents_Headline4 = 2131689858;
 			
 			// aapt resource value: 0x7F0F0183
-			public const int TextAppearance_MaterialComponents_Headline6 = 2131689859;
+			public const int TextAppearance_MaterialComponents_Headline5 = 2131689859;
 			
 			// aapt resource value: 0x7F0F0184
-			public const int TextAppearance_MaterialComponents_Overline = 2131689860;
+			public const int TextAppearance_MaterialComponents_Headline6 = 2131689860;
 			
 			// aapt resource value: 0x7F0F0185
-			public const int TextAppearance_MaterialComponents_Subtitle1 = 2131689861;
+			public const int TextAppearance_MaterialComponents_Overline = 2131689861;
 			
 			// aapt resource value: 0x7F0F0186
-			public const int TextAppearance_MaterialComponents_Subtitle2 = 2131689862;
+			public const int TextAppearance_MaterialComponents_Subtitle1 = 2131689862;
 			
 			// aapt resource value: 0x7F0F0187
-			public const int TextAppearance_MaterialComponents_Tooltip = 2131689863;
+			public const int TextAppearance_MaterialComponents_Subtitle2 = 2131689863;
 			
 			// aapt resource value: 0x7F0F0188
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131689864;
+			public const int TextAppearance_MaterialComponents_Tooltip = 2131689864;
 			
 			// aapt resource value: 0x7F0F0189
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131689865;
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131689865;
 			
 			// aapt resource value: 0x7F0F018A
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131689866;
-			
-			// aapt resource value: 0x7F0F0207
-			public const int ThemeOverlayColorAccentRed = 2131689991;
-			
-			// aapt resource value: 0x7F0F01D8
-			public const int ThemeOverlay_AppCompat = 2131689944;
-			
-			// aapt resource value: 0x7F0F01D9
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131689945;
-			
-			// aapt resource value: 0x7F0F01DA
-			public const int ThemeOverlay_AppCompat_Dark = 2131689946;
-			
-			// aapt resource value: 0x7F0F01DB
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131689947;
-			
-			// aapt resource value: 0x7F0F01DC
-			public const int ThemeOverlay_AppCompat_DayNight = 2131689948;
-			
-			// aapt resource value: 0x7F0F01DD
-			public const int ThemeOverlay_AppCompat_DayNight_ActionBar = 2131689949;
-			
-			// aapt resource value: 0x7F0F01DE
-			public const int ThemeOverlay_AppCompat_Dialog = 2131689950;
-			
-			// aapt resource value: 0x7F0F01DF
-			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131689951;
-			
-			// aapt resource value: 0x7F0F01E0
-			public const int ThemeOverlay_AppCompat_Light = 2131689952;
-			
-			// aapt resource value: 0x7F0F01E1
-			public const int ThemeOverlay_Design_TextInputEditText = 2131689953;
-			
-			// aapt resource value: 0x7F0F01E2
-			public const int ThemeOverlay_MaterialComponents = 2131689954;
-			
-			// aapt resource value: 0x7F0F01E3
-			public const int ThemeOverlay_MaterialComponents_ActionBar = 2131689955;
-			
-			// aapt resource value: 0x7F0F01E4
-			public const int ThemeOverlay_MaterialComponents_ActionBar_Primary = 2131689956;
-			
-			// aapt resource value: 0x7F0F01E5
-			public const int ThemeOverlay_MaterialComponents_ActionBar_Surface = 2131689957;
-			
-			// aapt resource value: 0x7F0F01E6
-			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView = 2131689958;
-			
-			// aapt resource value: 0x7F0F01E7
-			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = 2131689959;
-			
-			// aapt resource value: 0x7F0F01E8
-			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = 2131689960;
-			
-			// aapt resource value: 0x7F0F01E9
-			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = 2131689961;
-			
-			// aapt resource value: 0x7F0F01EA
-			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = 2131689962;
-			
-			// aapt resource value: 0x7F0F01EB
-			public const int ThemeOverlay_MaterialComponents_BottomAppBar_Primary = 2131689963;
-			
-			// aapt resource value: 0x7F0F01EC
-			public const int ThemeOverlay_MaterialComponents_BottomAppBar_Surface = 2131689964;
-			
-			// aapt resource value: 0x7F0F01ED
-			public const int ThemeOverlay_MaterialComponents_BottomSheetDialog = 2131689965;
-			
-			// aapt resource value: 0x7F0F01EE
-			public const int ThemeOverlay_MaterialComponents_Dark = 2131689966;
-			
-			// aapt resource value: 0x7F0F01EF
-			public const int ThemeOverlay_MaterialComponents_Dark_ActionBar = 2131689967;
-			
-			// aapt resource value: 0x7F0F01F0
-			public const int ThemeOverlay_MaterialComponents_DayNight_BottomSheetDialog = 2131689968;
-			
-			// aapt resource value: 0x7F0F01F1
-			public const int ThemeOverlay_MaterialComponents_Dialog = 2131689969;
-			
-			// aapt resource value: 0x7F0F01F2
-			public const int ThemeOverlay_MaterialComponents_Dialog_Alert = 2131689970;
-			
-			// aapt resource value: 0x7F0F01F3
-			public const int ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = 2131689971;
-			
-			// aapt resource value: 0x7F0F01F4
-			public const int ThemeOverlay_MaterialComponents_Light = 2131689972;
-			
-			// aapt resource value: 0x7F0F01F5
-			public const int ThemeOverlay_MaterialComponents_Light_BottomSheetDialog = 2131689973;
-			
-			// aapt resource value: 0x7F0F01F6
-			public const int ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = 2131689974;
-			
-			// aapt resource value: 0x7F0F01F7
-			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog = 2131689975;
-			
-			// aapt resource value: 0x7F0F01F8
-			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = 2131689976;
-			
-			// aapt resource value: 0x7F0F01F9
-			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = 2131689977;
-			
-			// aapt resource value: 0x7F0F01FA
-			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar = 2131689978;
-			
-			// aapt resource value: 0x7F0F01FB
-			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text = 2131689979;
-			
-			// aapt resource value: 0x7F0F01FC
-			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day = 2131689980;
-			
-			// aapt resource value: 0x7F0F01FD
-			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner = 2131689981;
-			
-			// aapt resource value: 0x7F0F01FE
-			public const int ThemeOverlay_MaterialComponents_MaterialCalendar = 2131689982;
-			
-			// aapt resource value: 0x7F0F01FF
-			public const int ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen = 2131689983;
-			
-			// aapt resource value: 0x7F0F0200
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText = 2131689984;
-			
-			// aapt resource value: 0x7F0F0201
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131689985;
-			
-			// aapt resource value: 0x7F0F0202
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131689986;
-			
-			// aapt resource value: 0x7F0F0203
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131689987;
-			
-			// aapt resource value: 0x7F0F0204
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131689988;
-			
-			// aapt resource value: 0x7F0F0205
-			public const int ThemeOverlay_MaterialComponents_Toolbar_Primary = 2131689989;
-			
-			// aapt resource value: 0x7F0F0206
-			public const int ThemeOverlay_MaterialComponents_Toolbar_Surface = 2131689990;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131689866;
 			
 			// aapt resource value: 0x7F0F018B
-			public const int Theme_AppCompat = 2131689867;
-			
-			// aapt resource value: 0x7F0F018C
-			public const int Theme_AppCompat_CompactMenu = 2131689868;
-			
-			// aapt resource value: 0x7F0F018D
-			public const int Theme_AppCompat_DayNight = 2131689869;
-			
-			// aapt resource value: 0x7F0F018E
-			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131689870;
-			
-			// aapt resource value: 0x7F0F018F
-			public const int Theme_AppCompat_DayNight_Dialog = 2131689871;
-			
-			// aapt resource value: 0x7F0F0192
-			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131689874;
-			
-			// aapt resource value: 0x7F0F0190
-			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131689872;
-			
-			// aapt resource value: 0x7F0F0191
-			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131689873;
-			
-			// aapt resource value: 0x7F0F0193
-			public const int Theme_AppCompat_DayNight_NoActionBar = 2131689875;
-			
-			// aapt resource value: 0x7F0F0194
-			public const int Theme_AppCompat_Dialog = 2131689876;
-			
-			// aapt resource value: 0x7F0F0197
-			public const int Theme_AppCompat_DialogWhenLarge = 2131689879;
-			
-			// aapt resource value: 0x7F0F0195
-			public const int Theme_AppCompat_Dialog_Alert = 2131689877;
-			
-			// aapt resource value: 0x7F0F0196
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131689878;
-			
-			// aapt resource value: 0x7F0F0198
-			public const int Theme_AppCompat_Empty = 2131689880;
-			
-			// aapt resource value: 0x7F0F0199
-			public const int Theme_AppCompat_Light = 2131689881;
-			
-			// aapt resource value: 0x7F0F019A
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131689882;
-			
-			// aapt resource value: 0x7F0F019B
-			public const int Theme_AppCompat_Light_Dialog = 2131689883;
-			
-			// aapt resource value: 0x7F0F019E
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131689886;
-			
-			// aapt resource value: 0x7F0F019C
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131689884;
-			
-			// aapt resource value: 0x7F0F019D
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131689885;
-			
-			// aapt resource value: 0x7F0F019F
-			public const int Theme_AppCompat_Light_NoActionBar = 2131689887;
-			
-			// aapt resource value: 0x7F0F01A0
-			public const int Theme_AppCompat_NoActionBar = 2131689888;
-			
-			// aapt resource value: 0x7F0F01A1
-			public const int Theme_Design = 2131689889;
-			
-			// aapt resource value: 0x7F0F01A2
-			public const int Theme_Design_BottomSheetDialog = 2131689890;
-			
-			// aapt resource value: 0x7F0F01A3
-			public const int Theme_Design_Light = 2131689891;
-			
-			// aapt resource value: 0x7F0F01A4
-			public const int Theme_Design_Light_BottomSheetDialog = 2131689892;
-			
-			// aapt resource value: 0x7F0F01A5
-			public const int Theme_Design_Light_NoActionBar = 2131689893;
-			
-			// aapt resource value: 0x7F0F01A6
-			public const int Theme_Design_NoActionBar = 2131689894;
-			
-			// aapt resource value: 0x7F0F01A7
-			public const int Theme_MaterialComponents = 2131689895;
-			
-			// aapt resource value: 0x7F0F01A8
-			public const int Theme_MaterialComponents_BottomSheetDialog = 2131689896;
-			
-			// aapt resource value: 0x7F0F01A9
-			public const int Theme_MaterialComponents_Bridge = 2131689897;
-			
-			// aapt resource value: 0x7F0F01AA
-			public const int Theme_MaterialComponents_CompactMenu = 2131689898;
-			
-			// aapt resource value: 0x7F0F01AB
-			public const int Theme_MaterialComponents_DayNight = 2131689899;
-			
-			// aapt resource value: 0x7F0F01AC
-			public const int Theme_MaterialComponents_DayNight_BottomSheetDialog = 2131689900;
-			
-			// aapt resource value: 0x7F0F01AD
-			public const int Theme_MaterialComponents_DayNight_Bridge = 2131689901;
-			
-			// aapt resource value: 0x7F0F01AE
-			public const int Theme_MaterialComponents_DayNight_DarkActionBar = 2131689902;
-			
-			// aapt resource value: 0x7F0F01AF
-			public const int Theme_MaterialComponents_DayNight_DarkActionBar_Bridge = 2131689903;
-			
-			// aapt resource value: 0x7F0F01B0
-			public const int Theme_MaterialComponents_DayNight_Dialog = 2131689904;
-			
-			// aapt resource value: 0x7F0F01B8
-			public const int Theme_MaterialComponents_DayNight_DialogWhenLarge = 2131689912;
-			
-			// aapt resource value: 0x7F0F01B1
-			public const int Theme_MaterialComponents_DayNight_Dialog_Alert = 2131689905;
-			
-			// aapt resource value: 0x7F0F01B2
-			public const int Theme_MaterialComponents_DayNight_Dialog_Alert_Bridge = 2131689906;
-			
-			// aapt resource value: 0x7F0F01B3
-			public const int Theme_MaterialComponents_DayNight_Dialog_Bridge = 2131689907;
-			
-			// aapt resource value: 0x7F0F01B4
-			public const int Theme_MaterialComponents_DayNight_Dialog_FixedSize = 2131689908;
-			
-			// aapt resource value: 0x7F0F01B5
-			public const int Theme_MaterialComponents_DayNight_Dialog_FixedSize_Bridge = 2131689909;
-			
-			// aapt resource value: 0x7F0F01B6
-			public const int Theme_MaterialComponents_DayNight_Dialog_MinWidth = 2131689910;
-			
-			// aapt resource value: 0x7F0F01B7
-			public const int Theme_MaterialComponents_DayNight_Dialog_MinWidth_Bridge = 2131689911;
-			
-			// aapt resource value: 0x7F0F01B9
-			public const int Theme_MaterialComponents_DayNight_NoActionBar = 2131689913;
-			
-			// aapt resource value: 0x7F0F01BA
-			public const int Theme_MaterialComponents_DayNight_NoActionBar_Bridge = 2131689914;
-			
-			// aapt resource value: 0x7F0F01BB
-			public const int Theme_MaterialComponents_Dialog = 2131689915;
-			
-			// aapt resource value: 0x7F0F01C3
-			public const int Theme_MaterialComponents_DialogWhenLarge = 2131689923;
-			
-			// aapt resource value: 0x7F0F01BC
-			public const int Theme_MaterialComponents_Dialog_Alert = 2131689916;
-			
-			// aapt resource value: 0x7F0F01BD
-			public const int Theme_MaterialComponents_Dialog_Alert_Bridge = 2131689917;
-			
-			// aapt resource value: 0x7F0F01BE
-			public const int Theme_MaterialComponents_Dialog_Bridge = 2131689918;
-			
-			// aapt resource value: 0x7F0F01BF
-			public const int Theme_MaterialComponents_Dialog_FixedSize = 2131689919;
-			
-			// aapt resource value: 0x7F0F01C0
-			public const int Theme_MaterialComponents_Dialog_FixedSize_Bridge = 2131689920;
-			
-			// aapt resource value: 0x7F0F01C1
-			public const int Theme_MaterialComponents_Dialog_MinWidth = 2131689921;
-			
-			// aapt resource value: 0x7F0F01C2
-			public const int Theme_MaterialComponents_Dialog_MinWidth_Bridge = 2131689922;
-			
-			// aapt resource value: 0x7F0F01C4
-			public const int Theme_MaterialComponents_Light = 2131689924;
-			
-			// aapt resource value: 0x7F0F01C5
-			public const int Theme_MaterialComponents_Light_BarSize = 2131689925;
-			
-			// aapt resource value: 0x7F0F01C6
-			public const int Theme_MaterialComponents_Light_BottomSheetDialog = 2131689926;
-			
-			// aapt resource value: 0x7F0F01C7
-			public const int Theme_MaterialComponents_Light_Bridge = 2131689927;
-			
-			// aapt resource value: 0x7F0F01C8
-			public const int Theme_MaterialComponents_Light_DarkActionBar = 2131689928;
-			
-			// aapt resource value: 0x7F0F01C9
-			public const int Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131689929;
-			
-			// aapt resource value: 0x7F0F01CA
-			public const int Theme_MaterialComponents_Light_Dialog = 2131689930;
-			
-			// aapt resource value: 0x7F0F01D2
-			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131689938;
-			
-			// aapt resource value: 0x7F0F01CB
-			public const int Theme_MaterialComponents_Light_Dialog_Alert = 2131689931;
-			
-			// aapt resource value: 0x7F0F01CC
-			public const int Theme_MaterialComponents_Light_Dialog_Alert_Bridge = 2131689932;
-			
-			// aapt resource value: 0x7F0F01CD
-			public const int Theme_MaterialComponents_Light_Dialog_Bridge = 2131689933;
-			
-			// aapt resource value: 0x7F0F01CE
-			public const int Theme_MaterialComponents_Light_Dialog_FixedSize = 2131689934;
-			
-			// aapt resource value: 0x7F0F01CF
-			public const int Theme_MaterialComponents_Light_Dialog_FixedSize_Bridge = 2131689935;
-			
-			// aapt resource value: 0x7F0F01D0
-			public const int Theme_MaterialComponents_Light_Dialog_MinWidth = 2131689936;
-			
-			// aapt resource value: 0x7F0F01D1
-			public const int Theme_MaterialComponents_Light_Dialog_MinWidth_Bridge = 2131689937;
-			
-			// aapt resource value: 0x7F0F01D3
-			public const int Theme_MaterialComponents_Light_LargeTouch = 2131689939;
-			
-			// aapt resource value: 0x7F0F01D4
-			public const int Theme_MaterialComponents_Light_NoActionBar = 2131689940;
-			
-			// aapt resource value: 0x7F0F01D5
-			public const int Theme_MaterialComponents_Light_NoActionBar_Bridge = 2131689941;
-			
-			// aapt resource value: 0x7F0F01D6
-			public const int Theme_MaterialComponents_NoActionBar = 2131689942;
-			
-			// aapt resource value: 0x7F0F01D7
-			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131689943;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131689867;
 			
 			// aapt resource value: 0x7F0F0208
-			public const int Widget_AppCompat_ActionBar = 2131689992;
+			public const int ThemeOverlayColorAccentRed = 2131689992;
+			
+			// aapt resource value: 0x7F0F01D9
+			public const int ThemeOverlay_AppCompat = 2131689945;
+			
+			// aapt resource value: 0x7F0F01DA
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131689946;
+			
+			// aapt resource value: 0x7F0F01DB
+			public const int ThemeOverlay_AppCompat_Dark = 2131689947;
+			
+			// aapt resource value: 0x7F0F01DC
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131689948;
+			
+			// aapt resource value: 0x7F0F01DD
+			public const int ThemeOverlay_AppCompat_DayNight = 2131689949;
+			
+			// aapt resource value: 0x7F0F01DE
+			public const int ThemeOverlay_AppCompat_DayNight_ActionBar = 2131689950;
+			
+			// aapt resource value: 0x7F0F01DF
+			public const int ThemeOverlay_AppCompat_Dialog = 2131689951;
+			
+			// aapt resource value: 0x7F0F01E0
+			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131689952;
+			
+			// aapt resource value: 0x7F0F01E1
+			public const int ThemeOverlay_AppCompat_Light = 2131689953;
+			
+			// aapt resource value: 0x7F0F01E2
+			public const int ThemeOverlay_Design_TextInputEditText = 2131689954;
+			
+			// aapt resource value: 0x7F0F01E3
+			public const int ThemeOverlay_MaterialComponents = 2131689955;
+			
+			// aapt resource value: 0x7F0F01E4
+			public const int ThemeOverlay_MaterialComponents_ActionBar = 2131689956;
+			
+			// aapt resource value: 0x7F0F01E5
+			public const int ThemeOverlay_MaterialComponents_ActionBar_Primary = 2131689957;
+			
+			// aapt resource value: 0x7F0F01E6
+			public const int ThemeOverlay_MaterialComponents_ActionBar_Surface = 2131689958;
+			
+			// aapt resource value: 0x7F0F01E7
+			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView = 2131689959;
+			
+			// aapt resource value: 0x7F0F01E8
+			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = 2131689960;
+			
+			// aapt resource value: 0x7F0F01E9
+			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = 2131689961;
+			
+			// aapt resource value: 0x7F0F01EA
+			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = 2131689962;
+			
+			// aapt resource value: 0x7F0F01EB
+			public const int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = 2131689963;
+			
+			// aapt resource value: 0x7F0F01EC
+			public const int ThemeOverlay_MaterialComponents_BottomAppBar_Primary = 2131689964;
+			
+			// aapt resource value: 0x7F0F01ED
+			public const int ThemeOverlay_MaterialComponents_BottomAppBar_Surface = 2131689965;
+			
+			// aapt resource value: 0x7F0F01EE
+			public const int ThemeOverlay_MaterialComponents_BottomSheetDialog = 2131689966;
+			
+			// aapt resource value: 0x7F0F01EF
+			public const int ThemeOverlay_MaterialComponents_Dark = 2131689967;
+			
+			// aapt resource value: 0x7F0F01F0
+			public const int ThemeOverlay_MaterialComponents_Dark_ActionBar = 2131689968;
+			
+			// aapt resource value: 0x7F0F01F1
+			public const int ThemeOverlay_MaterialComponents_DayNight_BottomSheetDialog = 2131689969;
+			
+			// aapt resource value: 0x7F0F01F2
+			public const int ThemeOverlay_MaterialComponents_Dialog = 2131689970;
+			
+			// aapt resource value: 0x7F0F01F3
+			public const int ThemeOverlay_MaterialComponents_Dialog_Alert = 2131689971;
+			
+			// aapt resource value: 0x7F0F01F4
+			public const int ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = 2131689972;
+			
+			// aapt resource value: 0x7F0F01F5
+			public const int ThemeOverlay_MaterialComponents_Light = 2131689973;
+			
+			// aapt resource value: 0x7F0F01F6
+			public const int ThemeOverlay_MaterialComponents_Light_BottomSheetDialog = 2131689974;
+			
+			// aapt resource value: 0x7F0F01F7
+			public const int ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = 2131689975;
+			
+			// aapt resource value: 0x7F0F01F8
+			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog = 2131689976;
+			
+			// aapt resource value: 0x7F0F01F9
+			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = 2131689977;
+			
+			// aapt resource value: 0x7F0F01FA
+			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = 2131689978;
+			
+			// aapt resource value: 0x7F0F01FB
+			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar = 2131689979;
+			
+			// aapt resource value: 0x7F0F01FC
+			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text = 2131689980;
+			
+			// aapt resource value: 0x7F0F01FD
+			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day = 2131689981;
+			
+			// aapt resource value: 0x7F0F01FE
+			public const int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner = 2131689982;
+			
+			// aapt resource value: 0x7F0F01FF
+			public const int ThemeOverlay_MaterialComponents_MaterialCalendar = 2131689983;
+			
+			// aapt resource value: 0x7F0F0200
+			public const int ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen = 2131689984;
+			
+			// aapt resource value: 0x7F0F0201
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText = 2131689985;
+			
+			// aapt resource value: 0x7F0F0202
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131689986;
+			
+			// aapt resource value: 0x7F0F0203
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131689987;
+			
+			// aapt resource value: 0x7F0F0204
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131689988;
+			
+			// aapt resource value: 0x7F0F0205
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131689989;
+			
+			// aapt resource value: 0x7F0F0206
+			public const int ThemeOverlay_MaterialComponents_Toolbar_Primary = 2131689990;
+			
+			// aapt resource value: 0x7F0F0207
+			public const int ThemeOverlay_MaterialComponents_Toolbar_Surface = 2131689991;
+			
+			// aapt resource value: 0x7F0F018C
+			public const int Theme_AppCompat = 2131689868;
+			
+			// aapt resource value: 0x7F0F018D
+			public const int Theme_AppCompat_CompactMenu = 2131689869;
+			
+			// aapt resource value: 0x7F0F018E
+			public const int Theme_AppCompat_DayNight = 2131689870;
+			
+			// aapt resource value: 0x7F0F018F
+			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131689871;
+			
+			// aapt resource value: 0x7F0F0190
+			public const int Theme_AppCompat_DayNight_Dialog = 2131689872;
+			
+			// aapt resource value: 0x7F0F0193
+			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131689875;
+			
+			// aapt resource value: 0x7F0F0191
+			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131689873;
+			
+			// aapt resource value: 0x7F0F0192
+			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131689874;
+			
+			// aapt resource value: 0x7F0F0194
+			public const int Theme_AppCompat_DayNight_NoActionBar = 2131689876;
+			
+			// aapt resource value: 0x7F0F0195
+			public const int Theme_AppCompat_Dialog = 2131689877;
+			
+			// aapt resource value: 0x7F0F0198
+			public const int Theme_AppCompat_DialogWhenLarge = 2131689880;
+			
+			// aapt resource value: 0x7F0F0196
+			public const int Theme_AppCompat_Dialog_Alert = 2131689878;
+			
+			// aapt resource value: 0x7F0F0197
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131689879;
+			
+			// aapt resource value: 0x7F0F0199
+			public const int Theme_AppCompat_Empty = 2131689881;
+			
+			// aapt resource value: 0x7F0F019A
+			public const int Theme_AppCompat_Light = 2131689882;
+			
+			// aapt resource value: 0x7F0F019B
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131689883;
+			
+			// aapt resource value: 0x7F0F019C
+			public const int Theme_AppCompat_Light_Dialog = 2131689884;
+			
+			// aapt resource value: 0x7F0F019F
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131689887;
+			
+			// aapt resource value: 0x7F0F019D
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131689885;
+			
+			// aapt resource value: 0x7F0F019E
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131689886;
+			
+			// aapt resource value: 0x7F0F01A0
+			public const int Theme_AppCompat_Light_NoActionBar = 2131689888;
+			
+			// aapt resource value: 0x7F0F01A1
+			public const int Theme_AppCompat_NoActionBar = 2131689889;
+			
+			// aapt resource value: 0x7F0F01A2
+			public const int Theme_Design = 2131689890;
+			
+			// aapt resource value: 0x7F0F01A3
+			public const int Theme_Design_BottomSheetDialog = 2131689891;
+			
+			// aapt resource value: 0x7F0F01A4
+			public const int Theme_Design_Light = 2131689892;
+			
+			// aapt resource value: 0x7F0F01A5
+			public const int Theme_Design_Light_BottomSheetDialog = 2131689893;
+			
+			// aapt resource value: 0x7F0F01A6
+			public const int Theme_Design_Light_NoActionBar = 2131689894;
+			
+			// aapt resource value: 0x7F0F01A7
+			public const int Theme_Design_NoActionBar = 2131689895;
+			
+			// aapt resource value: 0x7F0F01A8
+			public const int Theme_MaterialComponents = 2131689896;
+			
+			// aapt resource value: 0x7F0F01A9
+			public const int Theme_MaterialComponents_BottomSheetDialog = 2131689897;
+			
+			// aapt resource value: 0x7F0F01AA
+			public const int Theme_MaterialComponents_Bridge = 2131689898;
+			
+			// aapt resource value: 0x7F0F01AB
+			public const int Theme_MaterialComponents_CompactMenu = 2131689899;
+			
+			// aapt resource value: 0x7F0F01AC
+			public const int Theme_MaterialComponents_DayNight = 2131689900;
+			
+			// aapt resource value: 0x7F0F01AD
+			public const int Theme_MaterialComponents_DayNight_BottomSheetDialog = 2131689901;
+			
+			// aapt resource value: 0x7F0F01AE
+			public const int Theme_MaterialComponents_DayNight_Bridge = 2131689902;
+			
+			// aapt resource value: 0x7F0F01AF
+			public const int Theme_MaterialComponents_DayNight_DarkActionBar = 2131689903;
+			
+			// aapt resource value: 0x7F0F01B0
+			public const int Theme_MaterialComponents_DayNight_DarkActionBar_Bridge = 2131689904;
+			
+			// aapt resource value: 0x7F0F01B1
+			public const int Theme_MaterialComponents_DayNight_Dialog = 2131689905;
+			
+			// aapt resource value: 0x7F0F01B9
+			public const int Theme_MaterialComponents_DayNight_DialogWhenLarge = 2131689913;
+			
+			// aapt resource value: 0x7F0F01B2
+			public const int Theme_MaterialComponents_DayNight_Dialog_Alert = 2131689906;
+			
+			// aapt resource value: 0x7F0F01B3
+			public const int Theme_MaterialComponents_DayNight_Dialog_Alert_Bridge = 2131689907;
+			
+			// aapt resource value: 0x7F0F01B4
+			public const int Theme_MaterialComponents_DayNight_Dialog_Bridge = 2131689908;
+			
+			// aapt resource value: 0x7F0F01B5
+			public const int Theme_MaterialComponents_DayNight_Dialog_FixedSize = 2131689909;
+			
+			// aapt resource value: 0x7F0F01B6
+			public const int Theme_MaterialComponents_DayNight_Dialog_FixedSize_Bridge = 2131689910;
+			
+			// aapt resource value: 0x7F0F01B7
+			public const int Theme_MaterialComponents_DayNight_Dialog_MinWidth = 2131689911;
+			
+			// aapt resource value: 0x7F0F01B8
+			public const int Theme_MaterialComponents_DayNight_Dialog_MinWidth_Bridge = 2131689912;
+			
+			// aapt resource value: 0x7F0F01BA
+			public const int Theme_MaterialComponents_DayNight_NoActionBar = 2131689914;
+			
+			// aapt resource value: 0x7F0F01BB
+			public const int Theme_MaterialComponents_DayNight_NoActionBar_Bridge = 2131689915;
+			
+			// aapt resource value: 0x7F0F01BC
+			public const int Theme_MaterialComponents_Dialog = 2131689916;
+			
+			// aapt resource value: 0x7F0F01C4
+			public const int Theme_MaterialComponents_DialogWhenLarge = 2131689924;
+			
+			// aapt resource value: 0x7F0F01BD
+			public const int Theme_MaterialComponents_Dialog_Alert = 2131689917;
+			
+			// aapt resource value: 0x7F0F01BE
+			public const int Theme_MaterialComponents_Dialog_Alert_Bridge = 2131689918;
+			
+			// aapt resource value: 0x7F0F01BF
+			public const int Theme_MaterialComponents_Dialog_Bridge = 2131689919;
+			
+			// aapt resource value: 0x7F0F01C0
+			public const int Theme_MaterialComponents_Dialog_FixedSize = 2131689920;
+			
+			// aapt resource value: 0x7F0F01C1
+			public const int Theme_MaterialComponents_Dialog_FixedSize_Bridge = 2131689921;
+			
+			// aapt resource value: 0x7F0F01C2
+			public const int Theme_MaterialComponents_Dialog_MinWidth = 2131689922;
+			
+			// aapt resource value: 0x7F0F01C3
+			public const int Theme_MaterialComponents_Dialog_MinWidth_Bridge = 2131689923;
+			
+			// aapt resource value: 0x7F0F01C5
+			public const int Theme_MaterialComponents_Light = 2131689925;
+			
+			// aapt resource value: 0x7F0F01C6
+			public const int Theme_MaterialComponents_Light_BarSize = 2131689926;
+			
+			// aapt resource value: 0x7F0F01C7
+			public const int Theme_MaterialComponents_Light_BottomSheetDialog = 2131689927;
+			
+			// aapt resource value: 0x7F0F01C8
+			public const int Theme_MaterialComponents_Light_Bridge = 2131689928;
+			
+			// aapt resource value: 0x7F0F01C9
+			public const int Theme_MaterialComponents_Light_DarkActionBar = 2131689929;
+			
+			// aapt resource value: 0x7F0F01CA
+			public const int Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131689930;
+			
+			// aapt resource value: 0x7F0F01CB
+			public const int Theme_MaterialComponents_Light_Dialog = 2131689931;
+			
+			// aapt resource value: 0x7F0F01D3
+			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131689939;
+			
+			// aapt resource value: 0x7F0F01CC
+			public const int Theme_MaterialComponents_Light_Dialog_Alert = 2131689932;
+			
+			// aapt resource value: 0x7F0F01CD
+			public const int Theme_MaterialComponents_Light_Dialog_Alert_Bridge = 2131689933;
+			
+			// aapt resource value: 0x7F0F01CE
+			public const int Theme_MaterialComponents_Light_Dialog_Bridge = 2131689934;
+			
+			// aapt resource value: 0x7F0F01CF
+			public const int Theme_MaterialComponents_Light_Dialog_FixedSize = 2131689935;
+			
+			// aapt resource value: 0x7F0F01D0
+			public const int Theme_MaterialComponents_Light_Dialog_FixedSize_Bridge = 2131689936;
+			
+			// aapt resource value: 0x7F0F01D1
+			public const int Theme_MaterialComponents_Light_Dialog_MinWidth = 2131689937;
+			
+			// aapt resource value: 0x7F0F01D2
+			public const int Theme_MaterialComponents_Light_Dialog_MinWidth_Bridge = 2131689938;
+			
+			// aapt resource value: 0x7F0F01D4
+			public const int Theme_MaterialComponents_Light_LargeTouch = 2131689940;
+			
+			// aapt resource value: 0x7F0F01D5
+			public const int Theme_MaterialComponents_Light_NoActionBar = 2131689941;
+			
+			// aapt resource value: 0x7F0F01D6
+			public const int Theme_MaterialComponents_Light_NoActionBar_Bridge = 2131689942;
+			
+			// aapt resource value: 0x7F0F01D7
+			public const int Theme_MaterialComponents_NoActionBar = 2131689943;
+			
+			// aapt resource value: 0x7F0F01D8
+			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131689944;
 			
 			// aapt resource value: 0x7F0F0209
-			public const int Widget_AppCompat_ActionBar_Solid = 2131689993;
+			public const int Widget_AppCompat_ActionBar = 2131689993;
 			
 			// aapt resource value: 0x7F0F020A
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131689994;
+			public const int Widget_AppCompat_ActionBar_Solid = 2131689994;
 			
 			// aapt resource value: 0x7F0F020B
-			public const int Widget_AppCompat_ActionBar_TabText = 2131689995;
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131689995;
 			
 			// aapt resource value: 0x7F0F020C
-			public const int Widget_AppCompat_ActionBar_TabView = 2131689996;
+			public const int Widget_AppCompat_ActionBar_TabText = 2131689996;
 			
 			// aapt resource value: 0x7F0F020D
-			public const int Widget_AppCompat_ActionButton = 2131689997;
+			public const int Widget_AppCompat_ActionBar_TabView = 2131689997;
 			
 			// aapt resource value: 0x7F0F020E
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131689998;
+			public const int Widget_AppCompat_ActionButton = 2131689998;
 			
 			// aapt resource value: 0x7F0F020F
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131689999;
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131689999;
 			
 			// aapt resource value: 0x7F0F0210
-			public const int Widget_AppCompat_ActionMode = 2131690000;
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131690000;
 			
 			// aapt resource value: 0x7F0F0211
-			public const int Widget_AppCompat_ActivityChooserView = 2131690001;
+			public const int Widget_AppCompat_ActionMode = 2131690001;
 			
 			// aapt resource value: 0x7F0F0212
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131690002;
+			public const int Widget_AppCompat_ActivityChooserView = 2131690002;
 			
 			// aapt resource value: 0x7F0F0213
-			public const int Widget_AppCompat_Button = 2131690003;
-			
-			// aapt resource value: 0x7F0F0219
-			public const int Widget_AppCompat_ButtonBar = 2131690009;
-			
-			// aapt resource value: 0x7F0F021A
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131690010;
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131690003;
 			
 			// aapt resource value: 0x7F0F0214
-			public const int Widget_AppCompat_Button_Borderless = 2131690004;
+			public const int Widget_AppCompat_Button = 2131690004;
 			
-			// aapt resource value: 0x7F0F0215
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131690005;
-			
-			// aapt resource value: 0x7F0F0216
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131690006;
-			
-			// aapt resource value: 0x7F0F0217
-			public const int Widget_AppCompat_Button_Colored = 2131690007;
-			
-			// aapt resource value: 0x7F0F0218
-			public const int Widget_AppCompat_Button_Small = 2131690008;
+			// aapt resource value: 0x7F0F021A
+			public const int Widget_AppCompat_ButtonBar = 2131690010;
 			
 			// aapt resource value: 0x7F0F021B
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131690011;
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131690011;
+			
+			// aapt resource value: 0x7F0F0215
+			public const int Widget_AppCompat_Button_Borderless = 2131690005;
+			
+			// aapt resource value: 0x7F0F0216
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131690006;
+			
+			// aapt resource value: 0x7F0F0217
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131690007;
+			
+			// aapt resource value: 0x7F0F0218
+			public const int Widget_AppCompat_Button_Colored = 2131690008;
+			
+			// aapt resource value: 0x7F0F0219
+			public const int Widget_AppCompat_Button_Small = 2131690009;
 			
 			// aapt resource value: 0x7F0F021C
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131690012;
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131690012;
 			
 			// aapt resource value: 0x7F0F021D
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131690013;
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131690013;
 			
 			// aapt resource value: 0x7F0F021E
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131690014;
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131690014;
 			
 			// aapt resource value: 0x7F0F021F
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131690015;
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131690015;
 			
 			// aapt resource value: 0x7F0F0220
-			public const int Widget_AppCompat_EditText = 2131690016;
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131690016;
 			
 			// aapt resource value: 0x7F0F0221
-			public const int Widget_AppCompat_ImageButton = 2131690017;
+			public const int Widget_AppCompat_EditText = 2131690017;
 			
 			// aapt resource value: 0x7F0F0222
-			public const int Widget_AppCompat_Light_ActionBar = 2131690018;
+			public const int Widget_AppCompat_ImageButton = 2131690018;
 			
 			// aapt resource value: 0x7F0F0223
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131690019;
+			public const int Widget_AppCompat_Light_ActionBar = 2131690019;
 			
 			// aapt resource value: 0x7F0F0224
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131690020;
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131690020;
 			
 			// aapt resource value: 0x7F0F0225
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131690021;
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131690021;
 			
 			// aapt resource value: 0x7F0F0226
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131690022;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131690022;
 			
 			// aapt resource value: 0x7F0F0227
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131690023;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131690023;
 			
 			// aapt resource value: 0x7F0F0228
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131690024;
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131690024;
 			
 			// aapt resource value: 0x7F0F0229
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131690025;
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131690025;
 			
 			// aapt resource value: 0x7F0F022A
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131690026;
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131690026;
 			
 			// aapt resource value: 0x7F0F022B
-			public const int Widget_AppCompat_Light_ActionButton = 2131690027;
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131690027;
 			
 			// aapt resource value: 0x7F0F022C
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131690028;
+			public const int Widget_AppCompat_Light_ActionButton = 2131690028;
 			
 			// aapt resource value: 0x7F0F022D
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131690029;
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131690029;
 			
 			// aapt resource value: 0x7F0F022E
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131690030;
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131690030;
 			
 			// aapt resource value: 0x7F0F022F
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131690031;
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131690031;
 			
 			// aapt resource value: 0x7F0F0230
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131690032;
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131690032;
 			
 			// aapt resource value: 0x7F0F0231
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131690033;
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131690033;
 			
 			// aapt resource value: 0x7F0F0232
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131690034;
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131690034;
 			
 			// aapt resource value: 0x7F0F0233
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131690035;
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131690035;
 			
 			// aapt resource value: 0x7F0F0234
-			public const int Widget_AppCompat_Light_PopupMenu = 2131690036;
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131690036;
 			
 			// aapt resource value: 0x7F0F0235
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131690037;
+			public const int Widget_AppCompat_Light_PopupMenu = 2131690037;
 			
 			// aapt resource value: 0x7F0F0236
-			public const int Widget_AppCompat_Light_SearchView = 2131690038;
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131690038;
 			
 			// aapt resource value: 0x7F0F0237
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131690039;
+			public const int Widget_AppCompat_Light_SearchView = 2131690039;
 			
 			// aapt resource value: 0x7F0F0238
-			public const int Widget_AppCompat_ListMenuView = 2131690040;
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131690040;
 			
 			// aapt resource value: 0x7F0F0239
-			public const int Widget_AppCompat_ListPopupWindow = 2131690041;
+			public const int Widget_AppCompat_ListMenuView = 2131690041;
 			
 			// aapt resource value: 0x7F0F023A
-			public const int Widget_AppCompat_ListView = 2131690042;
+			public const int Widget_AppCompat_ListPopupWindow = 2131690042;
 			
 			// aapt resource value: 0x7F0F023B
-			public const int Widget_AppCompat_ListView_DropDown = 2131690043;
+			public const int Widget_AppCompat_ListView = 2131690043;
 			
 			// aapt resource value: 0x7F0F023C
-			public const int Widget_AppCompat_ListView_Menu = 2131690044;
+			public const int Widget_AppCompat_ListView_DropDown = 2131690044;
 			
 			// aapt resource value: 0x7F0F023D
-			public const int Widget_AppCompat_PopupMenu = 2131690045;
+			public const int Widget_AppCompat_ListView_Menu = 2131690045;
 			
 			// aapt resource value: 0x7F0F023E
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131690046;
+			public const int Widget_AppCompat_PopupMenu = 2131690046;
 			
 			// aapt resource value: 0x7F0F023F
-			public const int Widget_AppCompat_PopupWindow = 2131690047;
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131690047;
 			
 			// aapt resource value: 0x7F0F0240
-			public const int Widget_AppCompat_ProgressBar = 2131690048;
+			public const int Widget_AppCompat_PopupWindow = 2131690048;
 			
 			// aapt resource value: 0x7F0F0241
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131690049;
+			public const int Widget_AppCompat_ProgressBar = 2131690049;
 			
 			// aapt resource value: 0x7F0F0242
-			public const int Widget_AppCompat_RatingBar = 2131690050;
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131690050;
 			
 			// aapt resource value: 0x7F0F0243
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131690051;
+			public const int Widget_AppCompat_RatingBar = 2131690051;
 			
 			// aapt resource value: 0x7F0F0244
-			public const int Widget_AppCompat_RatingBar_Small = 2131690052;
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131690052;
 			
 			// aapt resource value: 0x7F0F0245
-			public const int Widget_AppCompat_SearchView = 2131690053;
+			public const int Widget_AppCompat_RatingBar_Small = 2131690053;
 			
 			// aapt resource value: 0x7F0F0246
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131690054;
+			public const int Widget_AppCompat_SearchView = 2131690054;
 			
 			// aapt resource value: 0x7F0F0247
-			public const int Widget_AppCompat_SeekBar = 2131690055;
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131690055;
 			
 			// aapt resource value: 0x7F0F0248
-			public const int Widget_AppCompat_SeekBar_Discrete = 2131690056;
+			public const int Widget_AppCompat_SeekBar = 2131690056;
 			
 			// aapt resource value: 0x7F0F0249
-			public const int Widget_AppCompat_Spinner = 2131690057;
+			public const int Widget_AppCompat_SeekBar_Discrete = 2131690057;
 			
 			// aapt resource value: 0x7F0F024A
-			public const int Widget_AppCompat_Spinner_DropDown = 2131690058;
+			public const int Widget_AppCompat_Spinner = 2131690058;
 			
 			// aapt resource value: 0x7F0F024B
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131690059;
+			public const int Widget_AppCompat_Spinner_DropDown = 2131690059;
 			
 			// aapt resource value: 0x7F0F024C
-			public const int Widget_AppCompat_Spinner_Underlined = 2131690060;
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131690060;
 			
 			// aapt resource value: 0x7F0F024D
-			public const int Widget_AppCompat_TextView = 2131690061;
+			public const int Widget_AppCompat_Spinner_Underlined = 2131690061;
 			
 			// aapt resource value: 0x7F0F024E
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131690062;
+			public const int Widget_AppCompat_TextView = 2131690062;
 			
 			// aapt resource value: 0x7F0F024F
-			public const int Widget_AppCompat_Toolbar = 2131690063;
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131690063;
 			
 			// aapt resource value: 0x7F0F0250
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131690064;
+			public const int Widget_AppCompat_Toolbar = 2131690064;
 			
 			// aapt resource value: 0x7F0F0251
-			public const int Widget_Compat_NotificationActionContainer = 2131690065;
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131690065;
 			
 			// aapt resource value: 0x7F0F0252
-			public const int Widget_Compat_NotificationActionText = 2131690066;
+			public const int Widget_Compat_NotificationActionContainer = 2131690066;
 			
 			// aapt resource value: 0x7F0F0253
-			public const int Widget_Design_AppBarLayout = 2131690067;
+			public const int Widget_Compat_NotificationActionText = 2131690067;
 			
 			// aapt resource value: 0x7F0F0254
-			public const int Widget_Design_BottomNavigationView = 2131690068;
+			public const int Widget_Design_AppBarLayout = 2131690068;
 			
 			// aapt resource value: 0x7F0F0255
-			public const int Widget_Design_BottomSheet_Modal = 2131690069;
+			public const int Widget_Design_BottomNavigationView = 2131690069;
 			
 			// aapt resource value: 0x7F0F0256
-			public const int Widget_Design_CollapsingToolbar = 2131690070;
+			public const int Widget_Design_BottomSheet_Modal = 2131690070;
 			
 			// aapt resource value: 0x7F0F0257
-			public const int Widget_Design_FloatingActionButton = 2131690071;
+			public const int Widget_Design_CollapsingToolbar = 2131690071;
 			
 			// aapt resource value: 0x7F0F0258
-			public const int Widget_Design_NavigationView = 2131690072;
+			public const int Widget_Design_FloatingActionButton = 2131690072;
 			
 			// aapt resource value: 0x7F0F0259
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131690073;
+			public const int Widget_Design_NavigationView = 2131690073;
 			
 			// aapt resource value: 0x7F0F025A
-			public const int Widget_Design_Snackbar = 2131690074;
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131690074;
 			
 			// aapt resource value: 0x7F0F025B
-			public const int Widget_Design_TabLayout = 2131690075;
+			public const int Widget_Design_Snackbar = 2131690075;
 			
 			// aapt resource value: 0x7F0F025C
-			public const int Widget_Design_TextInputEditText = 2131690076;
+			public const int Widget_Design_TabLayout = 2131690076;
 			
 			// aapt resource value: 0x7F0F025D
-			public const int Widget_Design_TextInputLayout = 2131690077;
+			public const int Widget_Design_TextInputEditText = 2131690077;
 			
 			// aapt resource value: 0x7F0F025E
-			public const int Widget_MaterialComponents_ActionBar_Primary = 2131690078;
+			public const int Widget_Design_TextInputLayout = 2131690078;
 			
 			// aapt resource value: 0x7F0F025F
-			public const int Widget_MaterialComponents_ActionBar_PrimarySurface = 2131690079;
+			public const int Widget_MaterialComponents_ActionBar_Primary = 2131690079;
 			
 			// aapt resource value: 0x7F0F0260
-			public const int Widget_MaterialComponents_ActionBar_Solid = 2131690080;
+			public const int Widget_MaterialComponents_ActionBar_PrimarySurface = 2131690080;
 			
 			// aapt resource value: 0x7F0F0261
-			public const int Widget_MaterialComponents_ActionBar_Surface = 2131690081;
+			public const int Widget_MaterialComponents_ActionBar_Solid = 2131690081;
 			
 			// aapt resource value: 0x7F0F0262
-			public const int Widget_MaterialComponents_AppBarLayout_Primary = 2131690082;
+			public const int Widget_MaterialComponents_ActionBar_Surface = 2131690082;
 			
 			// aapt resource value: 0x7F0F0263
-			public const int Widget_MaterialComponents_AppBarLayout_PrimarySurface = 2131690083;
+			public const int Widget_MaterialComponents_AppBarLayout_Primary = 2131690083;
 			
 			// aapt resource value: 0x7F0F0264
-			public const int Widget_MaterialComponents_AppBarLayout_Surface = 2131690084;
+			public const int Widget_MaterialComponents_AppBarLayout_PrimarySurface = 2131690084;
 			
 			// aapt resource value: 0x7F0F0265
-			public const int Widget_MaterialComponents_AutoCompleteTextView_FilledBox = 2131690085;
+			public const int Widget_MaterialComponents_AppBarLayout_Surface = 2131690085;
 			
 			// aapt resource value: 0x7F0F0266
-			public const int Widget_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = 2131690086;
+			public const int Widget_MaterialComponents_AutoCompleteTextView_FilledBox = 2131690086;
 			
 			// aapt resource value: 0x7F0F0267
-			public const int Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox = 2131690087;
+			public const int Widget_MaterialComponents_AutoCompleteTextView_FilledBox_Dense = 2131690087;
 			
 			// aapt resource value: 0x7F0F0268
-			public const int Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = 2131690088;
+			public const int Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox = 2131690088;
 			
 			// aapt resource value: 0x7F0F0269
-			public const int Widget_MaterialComponents_Badge = 2131690089;
+			public const int Widget_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense = 2131690089;
 			
 			// aapt resource value: 0x7F0F026A
-			public const int Widget_MaterialComponents_BottomAppBar = 2131690090;
+			public const int Widget_MaterialComponents_Badge = 2131690090;
 			
 			// aapt resource value: 0x7F0F026B
-			public const int Widget_MaterialComponents_BottomAppBar_Colored = 2131690091;
+			public const int Widget_MaterialComponents_BottomAppBar = 2131690091;
 			
 			// aapt resource value: 0x7F0F026C
-			public const int Widget_MaterialComponents_BottomAppBar_PrimarySurface = 2131690092;
+			public const int Widget_MaterialComponents_BottomAppBar_Colored = 2131690092;
 			
 			// aapt resource value: 0x7F0F026D
-			public const int Widget_MaterialComponents_BottomNavigationView = 2131690093;
+			public const int Widget_MaterialComponents_BottomAppBar_PrimarySurface = 2131690093;
 			
 			// aapt resource value: 0x7F0F026E
-			public const int Widget_MaterialComponents_BottomNavigationView_Colored = 2131690094;
+			public const int Widget_MaterialComponents_BottomNavigationView = 2131690094;
 			
 			// aapt resource value: 0x7F0F026F
-			public const int Widget_MaterialComponents_BottomNavigationView_PrimarySurface = 2131690095;
+			public const int Widget_MaterialComponents_BottomNavigationView_Colored = 2131690095;
 			
 			// aapt resource value: 0x7F0F0270
-			public const int Widget_MaterialComponents_BottomSheet = 2131690096;
+			public const int Widget_MaterialComponents_BottomNavigationView_PrimarySurface = 2131690096;
 			
 			// aapt resource value: 0x7F0F0271
-			public const int Widget_MaterialComponents_BottomSheet_Modal = 2131690097;
+			public const int Widget_MaterialComponents_BottomSheet = 2131690097;
 			
 			// aapt resource value: 0x7F0F0272
-			public const int Widget_MaterialComponents_Button = 2131690098;
+			public const int Widget_MaterialComponents_BottomSheet_Modal = 2131690098;
 			
 			// aapt resource value: 0x7F0F0273
-			public const int Widget_MaterialComponents_Button_Icon = 2131690099;
+			public const int Widget_MaterialComponents_Button = 2131690099;
 			
 			// aapt resource value: 0x7F0F0274
-			public const int Widget_MaterialComponents_Button_OutlinedButton = 2131690100;
+			public const int Widget_MaterialComponents_Button_Icon = 2131690100;
 			
 			// aapt resource value: 0x7F0F0275
-			public const int Widget_MaterialComponents_Button_OutlinedButton_Icon = 2131690101;
+			public const int Widget_MaterialComponents_Button_OutlinedButton = 2131690101;
 			
 			// aapt resource value: 0x7F0F0276
-			public const int Widget_MaterialComponents_Button_TextButton = 2131690102;
+			public const int Widget_MaterialComponents_Button_OutlinedButton_Icon = 2131690102;
 			
 			// aapt resource value: 0x7F0F0277
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog = 2131690103;
+			public const int Widget_MaterialComponents_Button_TextButton = 2131690103;
 			
 			// aapt resource value: 0x7F0F0278
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Flush = 2131690104;
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog = 2131690104;
 			
 			// aapt resource value: 0x7F0F0279
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Icon = 2131690105;
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Flush = 2131690105;
 			
 			// aapt resource value: 0x7F0F027A
-			public const int Widget_MaterialComponents_Button_TextButton_Icon = 2131690106;
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Icon = 2131690106;
 			
 			// aapt resource value: 0x7F0F027B
-			public const int Widget_MaterialComponents_Button_TextButton_Snackbar = 2131690107;
+			public const int Widget_MaterialComponents_Button_TextButton_Icon = 2131690107;
 			
 			// aapt resource value: 0x7F0F027C
-			public const int Widget_MaterialComponents_Button_UnelevatedButton = 2131690108;
+			public const int Widget_MaterialComponents_Button_TextButton_Snackbar = 2131690108;
 			
 			// aapt resource value: 0x7F0F027D
-			public const int Widget_MaterialComponents_Button_UnelevatedButton_Icon = 2131690109;
+			public const int Widget_MaterialComponents_Button_UnelevatedButton = 2131690109;
 			
 			// aapt resource value: 0x7F0F027E
-			public const int Widget_MaterialComponents_CardView = 2131690110;
+			public const int Widget_MaterialComponents_Button_UnelevatedButton_Icon = 2131690110;
 			
 			// aapt resource value: 0x7F0F027F
-			public const int Widget_MaterialComponents_CheckedTextView = 2131690111;
-			
-			// aapt resource value: 0x7F0F0284
-			public const int Widget_MaterialComponents_ChipGroup = 2131690116;
+			public const int Widget_MaterialComponents_CardView = 2131690111;
 			
 			// aapt resource value: 0x7F0F0280
-			public const int Widget_MaterialComponents_Chip_Action = 2131690112;
-			
-			// aapt resource value: 0x7F0F0281
-			public const int Widget_MaterialComponents_Chip_Choice = 2131690113;
-			
-			// aapt resource value: 0x7F0F0282
-			public const int Widget_MaterialComponents_Chip_Entry = 2131690114;
-			
-			// aapt resource value: 0x7F0F0283
-			public const int Widget_MaterialComponents_Chip_Filter = 2131690115;
+			public const int Widget_MaterialComponents_CheckedTextView = 2131690112;
 			
 			// aapt resource value: 0x7F0F0285
-			public const int Widget_MaterialComponents_CompoundButton_CheckBox = 2131690117;
+			public const int Widget_MaterialComponents_ChipGroup = 2131690117;
+			
+			// aapt resource value: 0x7F0F0281
+			public const int Widget_MaterialComponents_Chip_Action = 2131690113;
+			
+			// aapt resource value: 0x7F0F0282
+			public const int Widget_MaterialComponents_Chip_Choice = 2131690114;
+			
+			// aapt resource value: 0x7F0F0283
+			public const int Widget_MaterialComponents_Chip_Entry = 2131690115;
+			
+			// aapt resource value: 0x7F0F0284
+			public const int Widget_MaterialComponents_Chip_Filter = 2131690116;
 			
 			// aapt resource value: 0x7F0F0286
-			public const int Widget_MaterialComponents_CompoundButton_RadioButton = 2131690118;
+			public const int Widget_MaterialComponents_CompoundButton_CheckBox = 2131690118;
 			
 			// aapt resource value: 0x7F0F0287
-			public const int Widget_MaterialComponents_CompoundButton_Switch = 2131690119;
+			public const int Widget_MaterialComponents_CompoundButton_RadioButton = 2131690119;
 			
 			// aapt resource value: 0x7F0F0288
-			public const int Widget_MaterialComponents_ExtendedFloatingActionButton = 2131690120;
+			public const int Widget_MaterialComponents_CompoundButton_Switch = 2131690120;
 			
 			// aapt resource value: 0x7F0F0289
-			public const int Widget_MaterialComponents_ExtendedFloatingActionButton_Icon = 2131690121;
+			public const int Widget_MaterialComponents_ExtendedFloatingActionButton = 2131690121;
 			
 			// aapt resource value: 0x7F0F028A
-			public const int Widget_MaterialComponents_FloatingActionButton = 2131690122;
+			public const int Widget_MaterialComponents_ExtendedFloatingActionButton_Icon = 2131690122;
 			
 			// aapt resource value: 0x7F0F028B
-			public const int Widget_MaterialComponents_Light_ActionBar_Solid = 2131690123;
+			public const int Widget_MaterialComponents_FloatingActionButton = 2131690123;
 			
 			// aapt resource value: 0x7F0F028C
-			public const int Widget_MaterialComponents_MaterialButtonToggleGroup = 2131690124;
+			public const int Widget_MaterialComponents_Light_ActionBar_Solid = 2131690124;
 			
 			// aapt resource value: 0x7F0F028D
-			public const int Widget_MaterialComponents_MaterialCalendar = 2131690125;
+			public const int Widget_MaterialComponents_MaterialButtonToggleGroup = 2131690125;
 			
 			// aapt resource value: 0x7F0F028E
-			public const int Widget_MaterialComponents_MaterialCalendar_Day = 2131690126;
-			
-			// aapt resource value: 0x7F0F0292
-			public const int Widget_MaterialComponents_MaterialCalendar_DayTextView = 2131690130;
+			public const int Widget_MaterialComponents_MaterialCalendar = 2131690126;
 			
 			// aapt resource value: 0x7F0F028F
-			public const int Widget_MaterialComponents_MaterialCalendar_Day_Invalid = 2131690127;
-			
-			// aapt resource value: 0x7F0F0290
-			public const int Widget_MaterialComponents_MaterialCalendar_Day_Selected = 2131690128;
-			
-			// aapt resource value: 0x7F0F0291
-			public const int Widget_MaterialComponents_MaterialCalendar_Day_Today = 2131690129;
+			public const int Widget_MaterialComponents_MaterialCalendar_Day = 2131690127;
 			
 			// aapt resource value: 0x7F0F0293
-			public const int Widget_MaterialComponents_MaterialCalendar_Fullscreen = 2131690131;
+			public const int Widget_MaterialComponents_MaterialCalendar_DayTextView = 2131690131;
+			
+			// aapt resource value: 0x7F0F0290
+			public const int Widget_MaterialComponents_MaterialCalendar_Day_Invalid = 2131690128;
+			
+			// aapt resource value: 0x7F0F0291
+			public const int Widget_MaterialComponents_MaterialCalendar_Day_Selected = 2131690129;
+			
+			// aapt resource value: 0x7F0F0292
+			public const int Widget_MaterialComponents_MaterialCalendar_Day_Today = 2131690130;
 			
 			// aapt resource value: 0x7F0F0294
-			public const int Widget_MaterialComponents_MaterialCalendar_HeaderConfirmButton = 2131690132;
+			public const int Widget_MaterialComponents_MaterialCalendar_Fullscreen = 2131690132;
 			
 			// aapt resource value: 0x7F0F0295
-			public const int Widget_MaterialComponents_MaterialCalendar_HeaderDivider = 2131690133;
+			public const int Widget_MaterialComponents_MaterialCalendar_HeaderConfirmButton = 2131690133;
 			
 			// aapt resource value: 0x7F0F0296
-			public const int Widget_MaterialComponents_MaterialCalendar_HeaderLayout = 2131690134;
+			public const int Widget_MaterialComponents_MaterialCalendar_HeaderDivider = 2131690134;
 			
 			// aapt resource value: 0x7F0F0297
-			public const int Widget_MaterialComponents_MaterialCalendar_HeaderSelection = 2131690135;
+			public const int Widget_MaterialComponents_MaterialCalendar_HeaderLayout = 2131690135;
 			
 			// aapt resource value: 0x7F0F0298
-			public const int Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen = 2131690136;
+			public const int Widget_MaterialComponents_MaterialCalendar_HeaderSelection = 2131690136;
 			
 			// aapt resource value: 0x7F0F0299
-			public const int Widget_MaterialComponents_MaterialCalendar_HeaderTitle = 2131690137;
+			public const int Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen = 2131690137;
 			
 			// aapt resource value: 0x7F0F029A
-			public const int Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton = 2131690138;
+			public const int Widget_MaterialComponents_MaterialCalendar_HeaderTitle = 2131690138;
 			
 			// aapt resource value: 0x7F0F029B
-			public const int Widget_MaterialComponents_MaterialCalendar_Item = 2131690139;
+			public const int Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton = 2131690139;
 			
 			// aapt resource value: 0x7F0F029C
-			public const int Widget_MaterialComponents_MaterialCalendar_Year = 2131690140;
+			public const int Widget_MaterialComponents_MaterialCalendar_Item = 2131690140;
 			
 			// aapt resource value: 0x7F0F029D
-			public const int Widget_MaterialComponents_MaterialCalendar_Year_Selected = 2131690141;
+			public const int Widget_MaterialComponents_MaterialCalendar_Year = 2131690141;
 			
 			// aapt resource value: 0x7F0F029E
-			public const int Widget_MaterialComponents_MaterialCalendar_Year_Today = 2131690142;
+			public const int Widget_MaterialComponents_MaterialCalendar_Year_Selected = 2131690142;
 			
 			// aapt resource value: 0x7F0F029F
-			public const int Widget_MaterialComponents_NavigationView = 2131690143;
+			public const int Widget_MaterialComponents_MaterialCalendar_Year_Today = 2131690143;
 			
 			// aapt resource value: 0x7F0F02A0
-			public const int Widget_MaterialComponents_PopupMenu = 2131690144;
+			public const int Widget_MaterialComponents_NavigationView = 2131690144;
 			
 			// aapt resource value: 0x7F0F02A1
-			public const int Widget_MaterialComponents_PopupMenu_ContextMenu = 2131690145;
+			public const int Widget_MaterialComponents_PopupMenu = 2131690145;
 			
 			// aapt resource value: 0x7F0F02A2
-			public const int Widget_MaterialComponents_PopupMenu_ListPopupWindow = 2131690146;
+			public const int Widget_MaterialComponents_PopupMenu_ContextMenu = 2131690146;
 			
 			// aapt resource value: 0x7F0F02A3
-			public const int Widget_MaterialComponents_PopupMenu_Overflow = 2131690147;
+			public const int Widget_MaterialComponents_PopupMenu_ListPopupWindow = 2131690147;
 			
 			// aapt resource value: 0x7F0F02A4
-			public const int Widget_MaterialComponents_ShapeableImageView = 2131690148;
+			public const int Widget_MaterialComponents_PopupMenu_Overflow = 2131690148;
 			
 			// aapt resource value: 0x7F0F02A5
-			public const int Widget_MaterialComponents_Slider = 2131690149;
+			public const int Widget_MaterialComponents_ShapeableImageView = 2131690149;
 			
 			// aapt resource value: 0x7F0F02A6
-			public const int Widget_MaterialComponents_Snackbar = 2131690150;
+			public const int Widget_MaterialComponents_Slider = 2131690150;
 			
 			// aapt resource value: 0x7F0F02A7
-			public const int Widget_MaterialComponents_Snackbar_FullWidth = 2131690151;
+			public const int Widget_MaterialComponents_Snackbar = 2131690151;
 			
 			// aapt resource value: 0x7F0F02A8
-			public const int Widget_MaterialComponents_Snackbar_TextView = 2131690152;
+			public const int Widget_MaterialComponents_Snackbar_FullWidth = 2131690152;
 			
 			// aapt resource value: 0x7F0F02A9
-			public const int Widget_MaterialComponents_TabLayout = 2131690153;
+			public const int Widget_MaterialComponents_Snackbar_TextView = 2131690153;
 			
 			// aapt resource value: 0x7F0F02AA
-			public const int Widget_MaterialComponents_TabLayout_Colored = 2131690154;
+			public const int Widget_MaterialComponents_TabLayout = 2131690154;
 			
 			// aapt resource value: 0x7F0F02AB
-			public const int Widget_MaterialComponents_TabLayout_PrimarySurface = 2131690155;
+			public const int Widget_MaterialComponents_TabLayout_Colored = 2131690155;
 			
 			// aapt resource value: 0x7F0F02AC
-			public const int Widget_MaterialComponents_TextInputEditText_FilledBox = 2131690156;
+			public const int Widget_MaterialComponents_TabLayout_PrimarySurface = 2131690156;
 			
 			// aapt resource value: 0x7F0F02AD
-			public const int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131690157;
+			public const int Widget_MaterialComponents_TextInputEditText_FilledBox = 2131690157;
 			
 			// aapt resource value: 0x7F0F02AE
-			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox = 2131690158;
+			public const int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131690158;
 			
 			// aapt resource value: 0x7F0F02AF
-			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131690159;
+			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox = 2131690159;
 			
 			// aapt resource value: 0x7F0F02B0
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131690160;
+			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131690160;
 			
 			// aapt resource value: 0x7F0F02B1
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131690161;
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131690161;
 			
 			// aapt resource value: 0x7F0F02B2
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu = 2131690162;
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131690162;
 			
 			// aapt resource value: 0x7F0F02B3
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu = 2131690163;
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu = 2131690163;
 			
 			// aapt resource value: 0x7F0F02B4
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131690164;
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu = 2131690164;
 			
 			// aapt resource value: 0x7F0F02B5
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131690165;
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131690165;
 			
 			// aapt resource value: 0x7F0F02B6
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu = 2131690166;
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131690166;
 			
 			// aapt resource value: 0x7F0F02B7
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu = 2131690167;
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu = 2131690167;
 			
 			// aapt resource value: 0x7F0F02B8
-			public const int Widget_MaterialComponents_TextView = 2131690168;
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu = 2131690168;
 			
 			// aapt resource value: 0x7F0F02B9
-			public const int Widget_MaterialComponents_Toolbar = 2131690169;
+			public const int Widget_MaterialComponents_TextView = 2131690169;
 			
 			// aapt resource value: 0x7F0F02BA
-			public const int Widget_MaterialComponents_Toolbar_Primary = 2131690170;
+			public const int Widget_MaterialComponents_Toolbar = 2131690170;
 			
 			// aapt resource value: 0x7F0F02BB
-			public const int Widget_MaterialComponents_Toolbar_PrimarySurface = 2131690171;
+			public const int Widget_MaterialComponents_Toolbar_Primary = 2131690171;
 			
 			// aapt resource value: 0x7F0F02BC
-			public const int Widget_MaterialComponents_Toolbar_Surface = 2131690172;
+			public const int Widget_MaterialComponents_Toolbar_PrimarySurface = 2131690172;
 			
 			// aapt resource value: 0x7F0F02BD
-			public const int Widget_MaterialComponents_Tooltip = 2131690173;
+			public const int Widget_MaterialComponents_Toolbar_Surface = 2131690173;
 			
 			// aapt resource value: 0x7F0F02BE
-			public const int Widget_Support_CoordinatorLayout = 2131690174;
+			public const int Widget_MaterialComponents_Tooltip = 2131690174;
+			
+			// aapt resource value: 0x7F0F02BF
+			public const int Widget_Support_CoordinatorLayout = 2131690175;
 			
 			static Style()
 			{

@@ -59,6 +59,7 @@ namespace VaxineApp
                 Routing.RegisterRoute(nameof(MasjeedPage), typeof(MasjeedPage));
                 Routing.RegisterRoute(nameof(AddMasjeedPage), typeof(AddMasjeedPage));
                 Routing.RegisterRoute(nameof(EditMasjeedPage), typeof(EditMasjeedPage));
+                Routing.RegisterRoute(nameof(MasjeedDetailsPage), typeof(MasjeedDetailsPage));
 
                 Routing.RegisterRoute(nameof(SchoolPage), typeof(SchoolPage));
                 Routing.RegisterRoute(nameof(AddSchoolPage), typeof(AddSchoolPage));
