@@ -43,6 +43,7 @@
                  Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
                       ItemsSource="{Binding Masjeeds}"
+                      SelectionChangedCommand="{Binding GoToDetailsPageCommand}"
                       SelectedItem="{Binding SelectedMasjeed}">
         <CollectionView.Header>
           <Frame Grid.Column="0"

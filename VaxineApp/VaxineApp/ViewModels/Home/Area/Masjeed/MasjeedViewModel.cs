@@ -68,7 +68,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         public ICommand GoToPutPageCommand { private set; get; }
         public ICommand GoToMapCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
-
+        public ICommand GoToDetailsPageCommand { private set; get; }
 
         // ctor
         public MasjeedViewModel()
@@ -76,7 +76,6 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             // Property
             Masjeeds = new ObservableCollection<MasjeedModel>();
             SelectedMasjeed = new MasjeedModel();
-
 
             // Get
             Get();
@@ -89,8 +88,23 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             PullRefreshCommand = new Command(Refresh);
             GoToPostPageCommand = new Command(GoToPostPage);
             GoToMapCommand = new Command(GoToMap);
+            GoToDetailsPageCommand = new Command(GoToDetailsPage);
         }
 
+        public async void GoToDetailsPage()
+        {
+            if (SelectedMasjeed == null)
+            {
+                return;
+            }
+            else
+            {
+                var SelectedItemJson = JsonConvert.SerializeObject(SelectedMasjeed);
+                var route = $"{nameof(MasjeedDetailsPage)}?Masjeed={SelectedItemJson}";
+                await Shell.Current.GoToAsync(route);
+                SelectedMasjeed = null;
+            }
+        }
         private async void GoToPutPage()
         {
             if (SelectedMasjeed.MasjeedName != null)

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
+             x:DataType="ViewModel:MasjeedDetailsViewModel"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:InputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="VaxineApp.Views.Home.Area.Masjeed.MasjeedDetailsPage"
+             Title="{Binding Masjeed.MasjeedName}">
+  <ContentPage.Content>
+    <StackLayout Padding="10">
+      <Frame Padding="15,15,15,15"
+             HeightRequest="60"
+             BackgroundColor="{StaticResource Card}"
+             HasShadow="True"
+             CornerRadius="15">
+        <Frame.Content>
+          <StackLayout>
+            <Label Text="Masjeed Name"></Label>
+            <Label FontSize="Large"
+                   Text="{Binding Masjeed.MasjeedName}"></Label>
+          </StackLayout>
+        </Frame.Content>
+      </Frame>
+      <Frame Padding="15,15,15,15"
+             HeightRequest="60"
+             BackgroundColor="{StaticResource Card}"
+             HasShadow="True"
+             CornerRadius="15">
+        <Frame.Content>
+          <StackLayout>
+            <Label Text="Masjeed Key Influencer"></Label>
+            <Label FontSize="Large"
+                   Text="{Binding Masjeed.KeyInfluencer}"></Label>
+          </StackLayout>
+        </Frame.Content>
+      </Frame>
+      <Frame Padding="15,15,15,15"
+             HeightRequest="100"
+             BackgroundColor="{StaticResource Card}"
+             HasShadow="True"
+             CornerRadius="15">
+        <Frame.Content>
+          <StackLayout>
+            <InputKit:CheckBox Text="Do you have permission for Ads in Masjeed?"
+                               Color="{StaticResource Primary}"
+                               IsChecked="{Binding Masjeed.DoYouHavePermissionForAdsInMasjeed}"
+                               IsEnabled="False"
+                               IconColor="{StaticResource Primary}"
+                               Type="Check"></InputKit:CheckBox>
+            <InputKit:CheckBox Text="Does Imam supports Vaccine?"
+                               Color="{StaticResource Primary}"
+                               IconColor="{StaticResource Primary}"
+                               IsChecked="{Binding Masjeed.DoesImamSupportsVaccine}"
+                               IsEnabled="False"
+                               Type="Check"></InputKit:CheckBox>
+          </StackLayout>
+        </Frame.Content>
+      </Frame>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
