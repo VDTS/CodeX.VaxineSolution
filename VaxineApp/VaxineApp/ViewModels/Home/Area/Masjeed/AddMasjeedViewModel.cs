@@ -42,6 +42,17 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
             // Command
             PostCommand = new Command(Post);
+            AddLocationCommand = new Command(AddLocation);
+        }
+
+        private async void AddLocation()
+        {
+            var location = await Geolocation.GetLastKnownLocationAsync();
+            if (location != null)
+            {
+                Masjeed.Longitude = location.Longitude;
+                Masjeed.Latitude = location.Latitude;
+            }
         }
 
         private async void Post()
