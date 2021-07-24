@@ -4,6 +4,7 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
              x:Class="VaxineApp.Views.Home.Area.Masjeed.AddMasjeedPage"
+             xmlns:localFont="clr-namespace:VaxineApp.Font"
              x:DataType="ViewModel:AddMasjeedViewModel"
              Shell.TabBarIsVisible="False"
              Title="Add Masjeed">
@@ -30,23 +31,20 @@
         <CheckBox IsChecked="{Binding Masjeed.DoYouHavePermissionForAdsInMasjeed}"></CheckBox>
         <Label Text="{xct:Translate DoYouHavePermissionForAdsInMasjeed}"></Label>
       </StackLayout>
-      <StackLayout Orientation="Horizontal">
-        <Entry Placeholder="Latitude"
-               IsEnabled="False"
-               WidthRequest="140"
-               Text="{Binding Masjeed.Latitude}"></Entry>
-        <Entry Placeholder="{xct:Translate Longitude}"
-               IsEnabled="False"
-               WidthRequest="140"
-               Text="{Binding Masjeed.Longitude}"></Entry>
-        <Button Text=""
-                FontFamily="SegoeMDL2"
-                WidthRequest="50"
-                HeightRequest="50"
-                FontSize="25"
-                HorizontalOptions="Center"
-                TextColor="Black"
+      <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+        <Button Text="{x:Static localFont:MaterialDesignIcons.SelectMarker}"
+                FontFamily="MaterialIcons"
+                FontSize="30"
+                TextColor="#2196f3"
                 BackgroundColor="Transparent"
+                HorizontalOptions="Center"
+                IsEnabled="False"></Button>
+        <Button Text="{x:Static localFont:MaterialDesignIcons.CrosshairsGps}"
+                FontFamily="MaterialIcons"
+                FontSize="30"
+                TextColor="#2196f3"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center"
                 Command="{Binding AddLocationCommand}"></Button>
       </StackLayout>
 
