@@ -66,7 +66,6 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
         public ICommand GoToPutPageCommand { private set; get; }
-        public ICommand GoToMapCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
         public ICommand GoToDetailsPageCommand { private set; get; }
 
@@ -87,7 +86,6 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             GoToPutPageCommand = new Command(GoToPutPage);
             PullRefreshCommand = new Command(Refresh);
             GoToPostPageCommand = new Command(GoToPostPage);
-            GoToMapCommand = new Command(GoToMap);
             GoToDetailsPageCommand = new Command(GoToDetailsPage);
         }
 
@@ -153,12 +151,6 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         private void SaveAsPDF(object obj)
         {
             StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
-        }
-
-        private async void GoToMap(object obj)
-        {
-            var route = $"{nameof(GoogleMapPage)}";
-            await Shell.Current.GoToAsync(route);
         }
 
         public async void Get()

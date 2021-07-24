@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Masjeed"
              x:DataType="ViewModel:MasjeedDetailsViewModel"
+             xmlns:localFont="clr-namespace:VaxineApp.Font"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Shell.PresentationMode="Animated"
+             Shell.TabBarIsVisible="False"
              xmlns:InputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              x:Class="VaxineApp.Views.Home.Area.Masjeed.MasjeedDetailsPage"
              Title="{Binding Masjeed.MasjeedName}">
@@ -57,6 +60,22 @@
           </StackLayout>
         </Frame.Content>
       </Frame>
+      <StackLayout Orientation="Horizontal"
+                   HorizontalOptions="Center"
+                   Margin="40">
+        <Button Text="{x:Static localFont:MaterialDesignIcons.MapMarkerPath}"
+              FontFamily="MaterialIcons"
+              FontSize="30"
+              TextColor="#2196f3"
+              BackgroundColor="Transparent"
+                Command="{Binding GoToLocationCommand}"></Button>
+      <Button Text="{x:Static localFont:MaterialDesignIcons.MapMarker}"
+              FontFamily="MaterialIcons"
+              FontSize="30"
+              TextColor="#2196f3"
+              BackgroundColor="Transparent"
+                Command="{Binding ShowLocationCommand}"></Button>
+        </StackLayout>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
