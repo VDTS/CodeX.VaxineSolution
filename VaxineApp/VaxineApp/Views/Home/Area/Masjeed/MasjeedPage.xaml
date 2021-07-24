@@ -28,11 +28,6 @@
                  Priority="2" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
-                 Command="{Binding GoToMapCommand}"
-                 Text="{xct:Translate GoOnMap}"
-                 Priority="0" />
-    <ToolbarItem Order="Secondary"
-                 Icon="SavePDF"
                  Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
