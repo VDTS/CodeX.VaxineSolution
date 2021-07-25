@@ -5,17 +5,14 @@
              x:Class="VaxineApp.Views.Settings.PrivacyPolicy.PrivacyPolicyPage"
              x:DataType="ViewModel:PrivacyPolicyViewModel"
              Shell.TabBarIsVisible="False"
+             xmlns:MarkDownView="clr-namespace:Xam.Forms.Markdown;assembly=Xam.Forms.MarkdownView"
              Title="Privacy Policy">
   <ContentPage.BindingContext>
     <ViewModel:PrivacyPolicyViewModel></ViewModel:PrivacyPolicyViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
     <ScrollView Padding="20">
-      <StackLayout>
-        <Label Text="V1.0 - beta"
-               FontSize="Large"></Label>
-        <Label Text="{Binding Content}" />
-      </StackLayout>
+      <MarkDownView:MarkdownView Content="{Binding Content}" />
     </ScrollView>
   </ContentPage.Content>
 </ContentPage>
