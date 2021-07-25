@@ -55,3 +55,13 @@ then
     echo "File content:"
     cat $VAXINE_APP_CONSTANT_FILE
 fi
+
+
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating SyncFusionCommunityLicenseKey to $SyncFusionCommunityLicenseKey in Constants.cs"
+    sed -i.bak 's#SyncFusionCommunityLicenseKey = "[-A-Za-z0-9:_./]*"#SyncFusionCommunityLicenseKey = "'$SyncFusionCommunityLicenseKey'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
