@@ -1,6 +1,7 @@
 ﻿using Octokit;
 using System;
 using System.Windows.Input;
+using VaxineApp.AndroidNativeApi;
 using VaxineApp.Models.Metadata;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
@@ -122,8 +123,10 @@ namespace VaxineApp.ViewModels.Settings.Feedback
 
 
                 i.Body = $"Issue: {IssueDetails}";
+                string b = DependencyService.Get<IAppVersion>().GetVersion();
+                i.Labels.Add(b);
 
-                if(SuggestionRadioButton == false && ProblemRadioButton == true)
+                if (SuggestionRadioButton == false && ProblemRadioButton == true)
                 {
                     i.Labels.Add("Problem");
                 }
