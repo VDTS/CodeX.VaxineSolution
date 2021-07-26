@@ -64,8 +64,6 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         // Commands
         public ICommand GoToPostPageCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
-        public ICommand DeleteCommand { private set; get; }
-        public ICommand GoToPutPageCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
         public ICommand GoToDetailsPageCommand { private set; get; }
 
@@ -82,8 +80,6 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
             // Command
             SaveAsPDFCommand = new Command(SaveAsPDF);
-            DeleteCommand = new Command(Delete);
-            GoToPutPageCommand = new Command(GoToPutPage);
             PullRefreshCommand = new Command(Refresh);
             GoToPostPageCommand = new Command(GoToPostPage);
             GoToDetailsPageCommand = new Command(GoToDetailsPage);
@@ -103,50 +99,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 SelectedMasjeed = null;
             }
         }
-        private async void GoToPutPage()
-        {
-            if (SelectedMasjeed.MasjeedName != null)
-            {
-                var jsonClinic = JsonConvert.SerializeObject(SelectedMasjeed);
-                var route = $"{nameof(EditMasjeedPage)}?Masjeed={jsonClinic}";
-                await Shell.Current.GoToAsync(route);
-                SelectedMasjeed = null;
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
-            }
-        }
-
-        private async void Delete(object obj)
-        {
-
-            if (SelectedMasjeed.FId != null)
-            {
-                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedMasjeed.MasjeedName);
-                if (isDeleteAccepted)
-                {
-                    var data = await DataService.Delete($"Masjeed/{Preferences.Get("TeamId", "")}/{SelectedMasjeed.FId}");
-                    if (data == "Deleted")
-                    {
-                        Masjeeds.Remove(SelectedMasjeed);
-                    }
-                    else
-                    {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
-                    }
-                }
-                else
-                {
-                    return;
-                }
-
-            }
-            else
-            {
-                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
-            }
-        }
+        
 
         private void SaveAsPDF(object obj)
         {

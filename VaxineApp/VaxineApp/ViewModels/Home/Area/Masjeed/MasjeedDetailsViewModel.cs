@@ -1,14 +1,18 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
+using VaxineApp.MVVMHelper;
+using VaxineApp.StaticData;
+using VaxineApp.Views.Home.Area.Masjeed;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Area.Masjeed
 {
-    public class MasjeedDetailsViewModel
+    public class MasjeedDetailsViewModel : ViewModelBase
     {
         // Property
         public MasjeedModel Masjeed { get; }
@@ -16,6 +20,10 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         // Command
         public ICommand GoToLocationCommand { private set; get; }
         public ICommand ShowLocationCommand { private set; get; }
+        public ICommand DeleteCommand { private set; get; }
+        public ICommand GoToPutPageCommand { private set; get; }
+
+        // ctor
         public MasjeedDetailsViewModel(MasjeedModel masjeed)
         {
             // Property
@@ -24,6 +32,53 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             // Command
             GoToLocationCommand = new Command(GoToLocation);
             ShowLocationCommand = new Command(ShowLocation);
+            DeleteCommand = new Command(Delete);
+            GoToPutPageCommand = new Command(GoToPutPage);
+        }
+
+        private async void GoToPutPage()
+        {
+            if (Masjeed.MasjeedName != null)
+            {
+                var jsonClinic = JsonConvert.SerializeObject(Masjeed);
+                var route = $"{nameof(EditMasjeedPage)}?Masjeed={jsonClinic}";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+        }
+
+        private async void Delete(object obj)
+        {
+
+            if (Masjeed.FId != null)
+            {
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(Masjeed.MasjeedName);
+                if (isDeleteAccepted)
+                {
+                    var data = await DataService.Delete($"Masjeed/{Preferences.Get("TeamId", "")}/{Masjeed.FId}");
+                    if (data == "Deleted")
+                    {
+                        var route = $"//{nameof(MasjeedPage)}";
+                        await Shell.Current.GoToAsync(route);
+                    }
+                    else
+                    {
+                        StandardMessagesDisplay.CanceledDisplayMessage();
+                    }
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+            else
+            {
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
+            }
         }
         private async void GoToLocation(object obj)
         {

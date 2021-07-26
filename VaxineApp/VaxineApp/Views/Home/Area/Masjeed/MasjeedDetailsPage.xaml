@@ -10,6 +10,16 @@
              xmlns:InputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              x:Class="VaxineApp.Views.Home.Area.Masjeed.MasjeedDetailsPage"
              Title="{Binding Masjeed.MasjeedName}">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Edit}"
+                 Command="{Binding GoToPutPageCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Delete}"
+                 Command="{Binding DeleteCommand}"
+                 Priority="2" />
+  </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout Padding="10">
       <Frame Padding="15,15,15,15"
@@ -64,18 +74,18 @@
                    HorizontalOptions="Center"
                    Margin="40">
         <Button Text="{x:Static localFont:MaterialDesignIcons.MapMarkerPath}"
-              FontFamily="MaterialIcons"
-              FontSize="30"
-              TextColor="#2196f3"
-              BackgroundColor="Transparent"
+                FontFamily="MaterialIcons"
+                FontSize="30"
+                TextColor="#2196f3"
+                BackgroundColor="Transparent"
                 Command="{Binding GoToLocationCommand}"></Button>
-      <Button Text="{x:Static localFont:MaterialDesignIcons.MapMarker}"
-              FontFamily="MaterialIcons"
-              FontSize="30"
-              TextColor="#2196f3"
-              BackgroundColor="Transparent"
+        <Button Text="{x:Static localFont:MaterialDesignIcons.MapMarker}"
+                FontFamily="MaterialIcons"
+                FontSize="30"
+                TextColor="#2196f3"
+                BackgroundColor="Transparent"
                 Command="{Binding ShowLocationCommand}"></Button>
-        </StackLayout>
+      </StackLayout>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
