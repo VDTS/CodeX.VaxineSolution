@@ -5,6 +5,7 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AppUpdates"
              x:Class="VaxineApp.Views.Settings.AppUpdates.AppUpdatesPage"
              x:DataType="ViewModel:AppUpdatesViewModel"
+             xmlns:MarkDownView="clr-namespace:Xam.Forms.Markdown;assembly=Xam.Forms.MarkdownView"
              x:Name="AppUpdates"
              Title="What's New?">
   <ContentPage.BindingContext>
@@ -17,17 +18,8 @@
                  Command="{Binding CheckForUpdateCommand}" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <StackLayout Padding="20">
-      <Label Text="{xct:Translate VersionName}"
-             FontSize="Large"></Label>
-      <Label Text="{Binding AppVersion}"></Label>
-      <Label Text="{xct:Translate WhatNew}"
-             FontSize="Large"></Label>
-      <ScrollView Padding="10">
-        <Label Text="{Binding AppNewUpdates}"></Label>
-      </ScrollView>
-      <Label Text="{xct:Translate NoNewUpdate}"
-             IsVisible="{Binding IsUpdatesAvailable}"></Label>
-    </StackLayout>
+    <ScrollView Padding="20">
+      <MarkDownView:MarkdownView Content="{Binding AppNewUpdates}" />
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>

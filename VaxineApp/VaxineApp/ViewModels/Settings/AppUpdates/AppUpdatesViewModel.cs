@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Input;
 using VaxineApp.AndroidNativeApi;
 using VaxineApp.MVVMHelper;
+using Xam.Forms.Markdown;
 using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Settings.AppUpdates
@@ -29,8 +30,8 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
             }
         }
 
-        private string appNewUpdates;
-        public string AppNewUpdates
+        private MarkdownView appNewUpdates;
+        public MarkdownView AppNewUpdates
         {
             get
             {
@@ -84,9 +85,14 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
             try
             {
                 WebClient client = new WebClient();
-                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{AppVersion}.txt"));
+                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{AppVersion}.md"));
                 StreamReader reader = new StreamReader(stream);
-                AppNewUpdates = reader.ReadToEnd();
+
+
+                var view = new MarkdownView();
+                view.Markdown = reader.ReadToEnd();
+                //view.Theme = new DarkMarkdownTheme(); // Default is white, you also modify various values
+                AppNewUpdates = view;
             }
             catch (Exception)
             {
