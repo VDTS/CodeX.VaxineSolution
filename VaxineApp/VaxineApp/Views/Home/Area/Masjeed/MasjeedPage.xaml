@@ -19,14 +19,6 @@
                  Priority="3"
                  Command="{Binding GoToPostPageCommand}" />
     <ToolbarItem Order="Secondary"
-                 Text="{xct:Translate Edit}"
-                 Command="{Binding GoToPutPageCommand}"
-                 Priority="2" />
-    <ToolbarItem Order="Secondary"
-                 Text="{xct:Translate Delete}"
-                 Command="{Binding DeleteCommand}"
-                 Priority="2" />
-    <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
