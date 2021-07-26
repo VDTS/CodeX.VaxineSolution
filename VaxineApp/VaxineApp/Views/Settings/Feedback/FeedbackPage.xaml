@@ -5,11 +5,22 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.Feedback"
              x:DataType="ViewModel:FeedbackViewModel"
              x:Class="VaxineApp.Views.Settings.Feedback.FeedbackPage"
+             xmlns:richtexteditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
              Shell.TabBarIsVisible="False"
              Title="Feedback">
   <ContentPage.BindingContext>
     <ViewModel:FeedbackViewModel></ViewModel:FeedbackViewModel>
   </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Primary"
+                 Command="{Binding SubmitIssueOnGithubCommand}">
+      <ToolbarItem.IconImageSource>
+        <FontImageSource Glyph=""
+                         Size="20"
+                         FontFamily="SegoeMDL2" />
+      </ToolbarItem.IconImageSource>
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <ScrollView>
       <StackLayout Padding="10"
@@ -24,26 +35,16 @@
                        Content="{xct:Translate Problem}"
                        IsChecked="{Binding ProblemRadioButton}" />
         </StackLayout>
-        <Label Text="{xct:Translate IssueTitle}"></Label>
         <Editor Text="{Binding IssueTitle}"
+                Placeholder="{xct:Translate IssueTitle}"
                 HeightRequest="50" />
-        <Label Text="{xct:Translate IssueDetails}"></Label>
-        <Editor Text="{Binding IssueDetails}"
-                Placeholder="{xct:Translate FeedbackDescription}"
-                HeightRequest="280" />
-        <StackLayout Orientation="Horizontal"
-                     HorizontalOptions="Center"
-                     Spacing="20">
-          <Button Text=""
-                  FontFamily="SegoeMDL2"
-                  WidthRequest="60"
-                  Command="{Binding AttachScreenshotOnGithubIssueCommand}"></Button>
-          <Button Text=""
-                  FontFamily="SegoeMDL2"
-                  WidthRequest="60"
-                  HorizontalOptions="End"
-                  Command="{Binding SubmitIssueOnGithubCommand}"></Button>
-        </StackLayout>
+        <richtexteditor:SfRichTextEditor PlaceHolder="Type your issue details here. Don't include personal information. See how we are using your information in privacy policy"
+                                         PlaceHolderFontColor="Gray"
+                                         VerticalOptions="FillAndExpand"
+                                         Text="{Binding IssueDetails}"
+                                         AutoSize="TextChanges"
+                                         ToolbarOptions="Bold, Italic, Undo, Redo, IncreaseIndent, DecreaseIndent, Hyperlink,  ParagraphFormat"
+                                         HeightRequest="520" />
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>
