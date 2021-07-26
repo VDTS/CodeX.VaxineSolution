@@ -5288,6 +5288,2743 @@ namespace VaxineApp.Droid
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::VaxineApp.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::VaxineApp.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.clear_button_icon = global::VaxineApp.Droid.Resource.Drawable.clear_button_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_fade_in = global::VaxineApp.Droid.Resource.Animation.abc_fade_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_fade_out = global::VaxineApp.Droid.Resource.Animation.abc_fade_out;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_grow_fade_in_from_bottom = global::VaxineApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_popup_enter = global::VaxineApp.Droid.Resource.Animation.abc_popup_enter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_popup_exit = global::VaxineApp.Droid.Resource.Animation.abc_popup_exit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_shrink_fade_out_from_bottom = global::VaxineApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_slide_in_bottom = global::VaxineApp.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_slide_in_top = global::VaxineApp.Droid.Resource.Animation.abc_slide_in_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_slide_out_bottom = global::VaxineApp.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_slide_out_top = global::VaxineApp.Droid.Resource.Animation.abc_slide_out_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_tooltip_enter = global::VaxineApp.Droid.Resource.Animation.abc_tooltip_enter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.abc_tooltip_exit = global::VaxineApp.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::VaxineApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::VaxineApp.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.design_bottom_sheet_slide_in = global::VaxineApp.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.design_bottom_sheet_slide_out = global::VaxineApp.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.design_snackbar_in = global::VaxineApp.Droid.Resource.Animation.design_snackbar_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.design_snackbar_out = global::VaxineApp.Droid.Resource.Animation.design_snackbar_out;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.EnterFromLeft = global::VaxineApp.Droid.Resource.Animation.EnterFromLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.EnterFromRight = global::VaxineApp.Droid.Resource.Animation.EnterFromRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.ExitToLeft = global::VaxineApp.Droid.Resource.Animation.ExitToLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animation.ExitToRight = global::VaxineApp.Droid.Resource.Animation.ExitToRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.design_appbar_state_list_animator = global::VaxineApp.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.design_fab_hide_motion_spec = global::VaxineApp.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.design_fab_show_motion_spec = global::VaxineApp.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_btn_state_list_anim = global::VaxineApp.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::VaxineApp.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_chip_state_list_anim = global::VaxineApp.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_fab_hide_motion_spec = global::VaxineApp.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_fab_show_motion_spec = global::VaxineApp.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::VaxineApp.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::VaxineApp.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarDivider = global::VaxineApp.Droid.Resource.Attribute.actionBarDivider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarItemBackground = global::VaxineApp.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarPopupTheme = global::VaxineApp.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarSize = global::VaxineApp.Droid.Resource.Attribute.actionBarSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarSplitStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarTabBarStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarTabStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarTabTextStyle = global::VaxineApp.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarTheme = global::VaxineApp.Droid.Resource.Attribute.actionBarTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionBarWidgetTheme = global::VaxineApp.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionButtonStyle = global::VaxineApp.Droid.Resource.Attribute.actionButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionDropDownStyle = global::VaxineApp.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionLayout = global::VaxineApp.Droid.Resource.Attribute.actionLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionMenuTextAppearance = global::VaxineApp.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionMenuTextColor = global::VaxineApp.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeBackground = global::VaxineApp.Droid.Resource.Attribute.actionModeBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeCloseButtonStyle = global::VaxineApp.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeCloseDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeCopyDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeCutDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeFindDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModePasteDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModePopupWindowStyle = global::VaxineApp.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeSelectAllDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeShareDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeSplitBackground = global::VaxineApp.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeStyle = global::VaxineApp.Droid.Resource.Attribute.actionModeStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionModeWebSearchDrawable = global::VaxineApp.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionOverflowButtonStyle = global::VaxineApp.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionOverflowMenuStyle = global::VaxineApp.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionProviderClass = global::VaxineApp.Droid.Resource.Attribute.actionProviderClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.actionViewClass = global::VaxineApp.Droid.Resource.Attribute.actionViewClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.activityChooserViewStyle = global::VaxineApp.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alertDialogButtonGroupStyle = global::VaxineApp.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alertDialogCenterButtons = global::VaxineApp.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alertDialogStyle = global::VaxineApp.Droid.Resource.Attribute.alertDialogStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alertDialogTheme = global::VaxineApp.Droid.Resource.Attribute.alertDialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.allowStacking = global::VaxineApp.Droid.Resource.Attribute.allowStacking;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alpha = global::VaxineApp.Droid.Resource.Attribute.alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.alphabeticModifiers = global::VaxineApp.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.arrowHeadLength = global::VaxineApp.Droid.Resource.Attribute.arrowHeadLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.arrowShaftLength = global::VaxineApp.Droid.Resource.Attribute.arrowShaftLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoCompleteTextViewStyle = global::VaxineApp.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizeMaxTextSize = global::VaxineApp.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizeMinTextSize = global::VaxineApp.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizePresetSizes = global::VaxineApp.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizeStepGranularity = global::VaxineApp.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.autoSizeTextType = global::VaxineApp.Droid.Resource.Attribute.autoSizeTextType;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.background = global::VaxineApp.Droid.Resource.Attribute.background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.backgroundSplit = global::VaxineApp.Droid.Resource.Attribute.backgroundSplit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.backgroundStacked = global::VaxineApp.Droid.Resource.Attribute.backgroundStacked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.backgroundTint = global::VaxineApp.Droid.Resource.Attribute.backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.backgroundTintMode = global::VaxineApp.Droid.Resource.Attribute.backgroundTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.barLength = global::VaxineApp.Droid.Resource.Attribute.barLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_autoHide = global::VaxineApp.Droid.Resource.Attribute.behavior_autoHide;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_fitToContents = global::VaxineApp.Droid.Resource.Attribute.behavior_fitToContents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_hideable = global::VaxineApp.Droid.Resource.Attribute.behavior_hideable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_overlapTop = global::VaxineApp.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_peekHeight = global::VaxineApp.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.behavior_skipCollapsed = global::VaxineApp.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.borderlessButtonStyle = global::VaxineApp.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.borderWidth = global::VaxineApp.Droid.Resource.Attribute.borderWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.bottomAppBarStyle = global::VaxineApp.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.bottomNavigationStyle = global::VaxineApp.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.bottomSheetDialogTheme = global::VaxineApp.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.bottomSheetStyle = global::VaxineApp.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.boxBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxBackgroundMode = global::VaxineApp.Droid.Resource.Attribute.boxBackgroundMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCollapsedPaddingTop = global::VaxineApp.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCornerRadiusBottomEnd = global::VaxineApp.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCornerRadiusBottomStart = global::VaxineApp.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCornerRadiusTopEnd = global::VaxineApp.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxCornerRadiusTopStart = global::VaxineApp.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxStrokeColor = global::VaxineApp.Droid.Resource.Attribute.boxStrokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.boxStrokeWidth = global::VaxineApp.Droid.Resource.Attribute.boxStrokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarButtonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarNegativeButtonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarNeutralButtonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarPositiveButtonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonBarStyle = global::VaxineApp.Droid.Resource.Attribute.buttonBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonCompat = global::VaxineApp.Droid.Resource.Attribute.buttonCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonGravity = global::VaxineApp.Droid.Resource.Attribute.buttonGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonIconDimen = global::VaxineApp.Droid.Resource.Attribute.buttonIconDimen;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonPanelSideLayout = global::VaxineApp.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonStyle = global::VaxineApp.Droid.Resource.Attribute.buttonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonStyleSmall = global::VaxineApp.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonTint = global::VaxineApp.Droid.Resource.Attribute.buttonTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.buttonTintMode = global::VaxineApp.Droid.Resource.Attribute.buttonTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardCornerRadius = global::VaxineApp.Droid.Resource.Attribute.cardCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardElevation = global::VaxineApp.Droid.Resource.Attribute.cardElevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardMaxElevation = global::VaxineApp.Droid.Resource.Attribute.cardMaxElevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardPreventCornerOverlap = global::VaxineApp.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardUseCompatPadding = global::VaxineApp.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cardViewStyle = global::VaxineApp.Droid.Resource.Attribute.cardViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkboxStyle = global::VaxineApp.Droid.Resource.Attribute.checkboxStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedChip = global::VaxineApp.Droid.Resource.Attribute.checkedChip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedIcon = global::VaxineApp.Droid.Resource.Attribute.checkedIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedIconEnabled = global::VaxineApp.Droid.Resource.Attribute.checkedIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedIconVisible = global::VaxineApp.Droid.Resource.Attribute.checkedIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.checkedTextViewStyle = global::VaxineApp.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.chipBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipCornerRadius = global::VaxineApp.Droid.Resource.Attribute.chipCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipEndPadding = global::VaxineApp.Droid.Resource.Attribute.chipEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipGroupStyle = global::VaxineApp.Droid.Resource.Attribute.chipGroupStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIcon = global::VaxineApp.Droid.Resource.Attribute.chipIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIconEnabled = global::VaxineApp.Droid.Resource.Attribute.chipIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIconSize = global::VaxineApp.Droid.Resource.Attribute.chipIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIconTint = global::VaxineApp.Droid.Resource.Attribute.chipIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipIconVisible = global::VaxineApp.Droid.Resource.Attribute.chipIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipMinHeight = global::VaxineApp.Droid.Resource.Attribute.chipMinHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipSpacing = global::VaxineApp.Droid.Resource.Attribute.chipSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipSpacingHorizontal = global::VaxineApp.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipSpacingVertical = global::VaxineApp.Droid.Resource.Attribute.chipSpacingVertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStandaloneStyle = global::VaxineApp.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStartPadding = global::VaxineApp.Droid.Resource.Attribute.chipStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStrokeColor = global::VaxineApp.Droid.Resource.Attribute.chipStrokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStrokeWidth = global::VaxineApp.Droid.Resource.Attribute.chipStrokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.chipStyle = global::VaxineApp.Droid.Resource.Attribute.chipStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIcon = global::VaxineApp.Droid.Resource.Attribute.closeIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconEnabled = global::VaxineApp.Droid.Resource.Attribute.closeIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconEndPadding = global::VaxineApp.Droid.Resource.Attribute.closeIconEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconSize = global::VaxineApp.Droid.Resource.Attribute.closeIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconStartPadding = global::VaxineApp.Droid.Resource.Attribute.closeIconStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconTint = global::VaxineApp.Droid.Resource.Attribute.closeIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeIconVisible = global::VaxineApp.Droid.Resource.Attribute.closeIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.closeItemLayout = global::VaxineApp.Droid.Resource.Attribute.closeItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.collapseContentDescription = global::VaxineApp.Droid.Resource.Attribute.collapseContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.collapsedTitleGravity = global::VaxineApp.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.collapsedTitleTextAppearance = global::VaxineApp.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.collapseIcon = global::VaxineApp.Droid.Resource.Attribute.collapseIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.color = global::VaxineApp.Droid.Resource.Attribute.color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorAccent = global::VaxineApp.Droid.Resource.Attribute.colorAccent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorBackgroundFloating = global::VaxineApp.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorButtonNormal = global::VaxineApp.Droid.Resource.Attribute.colorButtonNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorControlActivated = global::VaxineApp.Droid.Resource.Attribute.colorControlActivated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorControlHighlight = global::VaxineApp.Droid.Resource.Attribute.colorControlHighlight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorControlNormal = global::VaxineApp.Droid.Resource.Attribute.colorControlNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorError = global::VaxineApp.Droid.Resource.Attribute.colorError;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorPrimary = global::VaxineApp.Droid.Resource.Attribute.colorPrimary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorPrimaryDark = global::VaxineApp.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorSecondary = global::VaxineApp.Droid.Resource.Attribute.colorSecondary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.colorSwitchThumbNormal = global::VaxineApp.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.commitIcon = global::VaxineApp.Droid.Resource.Attribute.commitIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentDescription = global::VaxineApp.Droid.Resource.Attribute.contentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetEnd = global::VaxineApp.Droid.Resource.Attribute.contentInsetEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetEndWithActions = global::VaxineApp.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetLeft = global::VaxineApp.Droid.Resource.Attribute.contentInsetLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetRight = global::VaxineApp.Droid.Resource.Attribute.contentInsetRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetStart = global::VaxineApp.Droid.Resource.Attribute.contentInsetStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentInsetStartWithNavigation = global::VaxineApp.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPadding = global::VaxineApp.Droid.Resource.Attribute.contentPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPaddingBottom = global::VaxineApp.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPaddingLeft = global::VaxineApp.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPaddingRight = global::VaxineApp.Droid.Resource.Attribute.contentPaddingRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentPaddingTop = global::VaxineApp.Droid.Resource.Attribute.contentPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.contentScrim = global::VaxineApp.Droid.Resource.Attribute.contentScrim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.controlBackground = global::VaxineApp.Droid.Resource.Attribute.controlBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.coordinatorLayoutStyle = global::VaxineApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.cornerRadius = global::VaxineApp.Droid.Resource.Attribute.cornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.counterEnabled = global::VaxineApp.Droid.Resource.Attribute.counterEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.counterMaxLength = global::VaxineApp.Droid.Resource.Attribute.counterMaxLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.counterOverflowTextAppearance = global::VaxineApp.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.counterTextAppearance = global::VaxineApp.Droid.Resource.Attribute.counterTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.customNavigationLayout = global::VaxineApp.Droid.Resource.Attribute.customNavigationLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.defaultQueryHint = global::VaxineApp.Droid.Resource.Attribute.defaultQueryHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dialogCornerRadius = global::VaxineApp.Droid.Resource.Attribute.dialogCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dialogPreferredPadding = global::VaxineApp.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dialogTheme = global::VaxineApp.Droid.Resource.Attribute.dialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.displayOptions = global::VaxineApp.Droid.Resource.Attribute.displayOptions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.divider = global::VaxineApp.Droid.Resource.Attribute.divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dividerHorizontal = global::VaxineApp.Droid.Resource.Attribute.dividerHorizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dividerPadding = global::VaxineApp.Droid.Resource.Attribute.dividerPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dividerVertical = global::VaxineApp.Droid.Resource.Attribute.dividerVertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableBottomCompat = global::VaxineApp.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableEndCompat = global::VaxineApp.Droid.Resource.Attribute.drawableEndCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableLeftCompat = global::VaxineApp.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableRightCompat = global::VaxineApp.Droid.Resource.Attribute.drawableRightCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableSize = global::VaxineApp.Droid.Resource.Attribute.drawableSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableStartCompat = global::VaxineApp.Droid.Resource.Attribute.drawableStartCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableTint = global::VaxineApp.Droid.Resource.Attribute.drawableTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableTintMode = global::VaxineApp.Droid.Resource.Attribute.drawableTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawableTopCompat = global::VaxineApp.Droid.Resource.Attribute.drawableTopCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.drawerArrowStyle = global::VaxineApp.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dropdownListPreferredItemHeight = global::VaxineApp.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.dropDownListViewStyle = global::VaxineApp.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.editTextBackground = global::VaxineApp.Droid.Resource.Attribute.editTextBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.editTextColor = global::VaxineApp.Droid.Resource.Attribute.editTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.editTextStyle = global::VaxineApp.Droid.Resource.Attribute.editTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.elevation = global::VaxineApp.Droid.Resource.Attribute.elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.enforceMaterialTheme = global::VaxineApp.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.enforceTextAppearance = global::VaxineApp.Droid.Resource.Attribute.enforceTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.errorEnabled = global::VaxineApp.Droid.Resource.Attribute.errorEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.errorTextAppearance = global::VaxineApp.Droid.Resource.Attribute.errorTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandActivityOverflowButtonDrawable = global::VaxineApp.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expanded = global::VaxineApp.Droid.Resource.Attribute.expanded;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleGravity = global::VaxineApp.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMargin = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMarginBottom = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMarginEnd = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMarginStart = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleMarginTop = global::VaxineApp.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.expandedTitleTextAppearance = global::VaxineApp.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabAlignmentMode = global::VaxineApp.Droid.Resource.Attribute.fabAlignmentMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabCradleMargin = global::VaxineApp.Droid.Resource.Attribute.fabCradleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabCradleRoundedCornerRadius = global::VaxineApp.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabCradleVerticalOffset = global::VaxineApp.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabCustomSize = global::VaxineApp.Droid.Resource.Attribute.fabCustomSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fabSize = global::VaxineApp.Droid.Resource.Attribute.fabSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollEnabled = global::VaxineApp.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::VaxineApp.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::VaxineApp.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollVerticalThumbDrawable = global::VaxineApp.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fastScrollVerticalTrackDrawable = global::VaxineApp.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.firstBaselineToTopHeight = global::VaxineApp.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.floatingActionButtonStyle = global::VaxineApp.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.font = global::VaxineApp.Droid.Resource.Attribute.font;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontFamily = global::VaxineApp.Droid.Resource.Attribute.fontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderAuthority = global::VaxineApp.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderCerts = global::VaxineApp.Droid.Resource.Attribute.fontProviderCerts;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderFetchStrategy = global::VaxineApp.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderFetchTimeout = global::VaxineApp.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderPackage = global::VaxineApp.Droid.Resource.Attribute.fontProviderPackage;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontProviderQuery = global::VaxineApp.Droid.Resource.Attribute.fontProviderQuery;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontStyle = global::VaxineApp.Droid.Resource.Attribute.fontStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontVariationSettings = global::VaxineApp.Droid.Resource.Attribute.fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.fontWeight = global::VaxineApp.Droid.Resource.Attribute.fontWeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.foregroundInsidePadding = global::VaxineApp.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.gapBetweenBars = global::VaxineApp.Droid.Resource.Attribute.gapBetweenBars;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.goIcon = global::VaxineApp.Droid.Resource.Attribute.goIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.headerLayout = global::VaxineApp.Droid.Resource.Attribute.headerLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.height = global::VaxineApp.Droid.Resource.Attribute.height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.helperText = global::VaxineApp.Droid.Resource.Attribute.helperText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.helperTextEnabled = global::VaxineApp.Droid.Resource.Attribute.helperTextEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.helperTextTextAppearance = global::VaxineApp.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hideMotionSpec = global::VaxineApp.Droid.Resource.Attribute.hideMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hideOnContentScroll = global::VaxineApp.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hideOnScroll = global::VaxineApp.Droid.Resource.Attribute.hideOnScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hintAnimationEnabled = global::VaxineApp.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hintEnabled = global::VaxineApp.Droid.Resource.Attribute.hintEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hintTextAppearance = global::VaxineApp.Droid.Resource.Attribute.hintTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.homeAsUpIndicator = global::VaxineApp.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.homeLayout = global::VaxineApp.Droid.Resource.Attribute.homeLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.hoveredFocusedTranslationZ = global::VaxineApp.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.icon = global::VaxineApp.Droid.Resource.Attribute.icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconEndPadding = global::VaxineApp.Droid.Resource.Attribute.iconEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconGravity = global::VaxineApp.Droid.Resource.Attribute.iconGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconifiedByDefault = global::VaxineApp.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconPadding = global::VaxineApp.Droid.Resource.Attribute.iconPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconSize = global::VaxineApp.Droid.Resource.Attribute.iconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconStartPadding = global::VaxineApp.Droid.Resource.Attribute.iconStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconTint = global::VaxineApp.Droid.Resource.Attribute.iconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.iconTintMode = global::VaxineApp.Droid.Resource.Attribute.iconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.imageButtonStyle = global::VaxineApp.Droid.Resource.Attribute.imageButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.indeterminateProgressStyle = global::VaxineApp.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.initialActivityCount = global::VaxineApp.Droid.Resource.Attribute.initialActivityCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.insetForeground = global::VaxineApp.Droid.Resource.Attribute.insetForeground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.isLightTheme = global::VaxineApp.Droid.Resource.Attribute.isLightTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemBackground = global::VaxineApp.Droid.Resource.Attribute.itemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemHorizontalPadding = global::VaxineApp.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemHorizontalTranslationEnabled = global::VaxineApp.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemIconPadding = global::VaxineApp.Droid.Resource.Attribute.itemIconPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemIconSize = global::VaxineApp.Droid.Resource.Attribute.itemIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemIconTint = global::VaxineApp.Droid.Resource.Attribute.itemIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemPadding = global::VaxineApp.Droid.Resource.Attribute.itemPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemSpacing = global::VaxineApp.Droid.Resource.Attribute.itemSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemTextAppearance = global::VaxineApp.Droid.Resource.Attribute.itemTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemTextAppearanceActive = global::VaxineApp.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemTextAppearanceInactive = global::VaxineApp.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.itemTextColor = global::VaxineApp.Droid.Resource.Attribute.itemTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.keylines = global::VaxineApp.Droid.Resource.Attribute.keylines;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.labelVisibilityMode = global::VaxineApp.Droid.Resource.Attribute.labelVisibilityMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.lastBaselineToBottomHeight = global::VaxineApp.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout = global::VaxineApp.Droid.Resource.Attribute.layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layoutManager = global::VaxineApp.Droid.Resource.Attribute.layoutManager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_anchor = global::VaxineApp.Droid.Resource.Attribute.layout_anchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_anchorGravity = global::VaxineApp.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_behavior = global::VaxineApp.Droid.Resource.Attribute.layout_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_collapseMode = global::VaxineApp.Droid.Resource.Attribute.layout_collapseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_collapseParallaxMultiplier = global::VaxineApp.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_dodgeInsetEdges = global::VaxineApp.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_insetEdge = global::VaxineApp.Droid.Resource.Attribute.layout_insetEdge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_keyline = global::VaxineApp.Droid.Resource.Attribute.layout_keyline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_scrollFlags = global::VaxineApp.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layout_scrollInterpolator = global::VaxineApp.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.liftOnScroll = global::VaxineApp.Droid.Resource.Attribute.liftOnScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.lineHeight = global::VaxineApp.Droid.Resource.Attribute.lineHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.lineSpacing = global::VaxineApp.Droid.Resource.Attribute.lineSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listChoiceBackgroundIndicator = global::VaxineApp.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::VaxineApp.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::VaxineApp.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listDividerAlertDialog = global::VaxineApp.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listItemLayout = global::VaxineApp.Droid.Resource.Attribute.listItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listLayout = global::VaxineApp.Droid.Resource.Attribute.listLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listMenuViewStyle = global::VaxineApp.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPopupWindowStyle = global::VaxineApp.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemHeight = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemHeightLarge = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemHeightSmall = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemPaddingEnd = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemPaddingLeft = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemPaddingRight = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.listPreferredItemPaddingStart = global::VaxineApp.Droid.Resource.Attribute.listPreferredItemPaddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.logo = global::VaxineApp.Droid.Resource.Attribute.logo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.logoDescription = global::VaxineApp.Droid.Resource.Attribute.logoDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.materialButtonStyle = global::VaxineApp.Droid.Resource.Attribute.materialButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.materialCardViewStyle = global::VaxineApp.Droid.Resource.Attribute.materialCardViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.maxActionInlineWidth = global::VaxineApp.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.maxButtonHeight = global::VaxineApp.Droid.Resource.Attribute.maxButtonHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.maxImageSize = global::VaxineApp.Droid.Resource.Attribute.maxImageSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.measureWithLargestChild = global::VaxineApp.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.menu = global::VaxineApp.Droid.Resource.Attribute.menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.multiChoiceItemLayout = global::VaxineApp.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.navigationContentDescription = global::VaxineApp.Droid.Resource.Attribute.navigationContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.navigationIcon = global::VaxineApp.Droid.Resource.Attribute.navigationIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.navigationMode = global::VaxineApp.Droid.Resource.Attribute.navigationMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.navigationViewStyle = global::VaxineApp.Droid.Resource.Attribute.navigationViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.numericModifiers = global::VaxineApp.Droid.Resource.Attribute.numericModifiers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.overlapAnchor = global::VaxineApp.Droid.Resource.Attribute.overlapAnchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.paddingBottomNoButtons = global::VaxineApp.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.paddingEnd = global::VaxineApp.Droid.Resource.Attribute.paddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.paddingStart = global::VaxineApp.Droid.Resource.Attribute.paddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.paddingTopNoTitle = global::VaxineApp.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.panelBackground = global::VaxineApp.Droid.Resource.Attribute.panelBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.panelMenuListTheme = global::VaxineApp.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.panelMenuListWidth = global::VaxineApp.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleContentDescription = global::VaxineApp.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleDrawable = global::VaxineApp.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleEnabled = global::VaxineApp.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleTint = global::VaxineApp.Droid.Resource.Attribute.passwordToggleTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.passwordToggleTintMode = global::VaxineApp.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.popupMenuStyle = global::VaxineApp.Droid.Resource.Attribute.popupMenuStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.popupTheme = global::VaxineApp.Droid.Resource.Attribute.popupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.popupWindowStyle = global::VaxineApp.Droid.Resource.Attribute.popupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.preserveIconSpacing = global::VaxineApp.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.pressedTranslationZ = global::VaxineApp.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.progressBarPadding = global::VaxineApp.Droid.Resource.Attribute.progressBarPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.progressBarStyle = global::VaxineApp.Droid.Resource.Attribute.progressBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.queryBackground = global::VaxineApp.Droid.Resource.Attribute.queryBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.queryHint = global::VaxineApp.Droid.Resource.Attribute.queryHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.radioButtonStyle = global::VaxineApp.Droid.Resource.Attribute.radioButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.ratingBarStyle = global::VaxineApp.Droid.Resource.Attribute.ratingBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.ratingBarStyleIndicator = global::VaxineApp.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.ratingBarStyleSmall = global::VaxineApp.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.recyclerViewStyle = global::VaxineApp.Droid.Resource.Attribute.recyclerViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.reverseLayout = global::VaxineApp.Droid.Resource.Attribute.reverseLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.rippleColor = global::VaxineApp.Droid.Resource.Attribute.rippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.scrimAnimationDuration = global::VaxineApp.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.scrimBackground = global::VaxineApp.Droid.Resource.Attribute.scrimBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.scrimVisibleHeightTrigger = global::VaxineApp.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.searchHintIcon = global::VaxineApp.Droid.Resource.Attribute.searchHintIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.searchIcon = global::VaxineApp.Droid.Resource.Attribute.searchIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.searchViewStyle = global::VaxineApp.Droid.Resource.Attribute.searchViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.seekBarStyle = global::VaxineApp.Droid.Resource.Attribute.seekBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.selectableItemBackground = global::VaxineApp.Droid.Resource.Attribute.selectableItemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.selectableItemBackgroundBorderless = global::VaxineApp.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showAsAction = global::VaxineApp.Droid.Resource.Attribute.showAsAction;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showDividers = global::VaxineApp.Droid.Resource.Attribute.showDividers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showMotionSpec = global::VaxineApp.Droid.Resource.Attribute.showMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showText = global::VaxineApp.Droid.Resource.Attribute.showText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.showTitle = global::VaxineApp.Droid.Resource.Attribute.showTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.singleChoiceItemLayout = global::VaxineApp.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.singleLine = global::VaxineApp.Droid.Resource.Attribute.singleLine;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.singleSelection = global::VaxineApp.Droid.Resource.Attribute.singleSelection;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.snackbarButtonStyle = global::VaxineApp.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.snackbarStyle = global::VaxineApp.Droid.Resource.Attribute.snackbarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spanCount = global::VaxineApp.Droid.Resource.Attribute.spanCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spinBars = global::VaxineApp.Droid.Resource.Attribute.spinBars;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spinnerDropDownItemStyle = global::VaxineApp.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spinnerStyle = global::VaxineApp.Droid.Resource.Attribute.spinnerStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.splitTrack = global::VaxineApp.Droid.Resource.Attribute.splitTrack;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.srcCompat = global::VaxineApp.Droid.Resource.Attribute.srcCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.stackFromEnd = global::VaxineApp.Droid.Resource.Attribute.stackFromEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_above_anchor = global::VaxineApp.Droid.Resource.Attribute.state_above_anchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_collapsed = global::VaxineApp.Droid.Resource.Attribute.state_collapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_collapsible = global::VaxineApp.Droid.Resource.Attribute.state_collapsible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_liftable = global::VaxineApp.Droid.Resource.Attribute.state_liftable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.state_lifted = global::VaxineApp.Droid.Resource.Attribute.state_lifted;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.statusBarBackground = global::VaxineApp.Droid.Resource.Attribute.statusBarBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.statusBarScrim = global::VaxineApp.Droid.Resource.Attribute.statusBarScrim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.strokeColor = global::VaxineApp.Droid.Resource.Attribute.strokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.strokeWidth = global::VaxineApp.Droid.Resource.Attribute.strokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subMenuArrow = global::VaxineApp.Droid.Resource.Attribute.subMenuArrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.submitBackground = global::VaxineApp.Droid.Resource.Attribute.submitBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subtitle = global::VaxineApp.Droid.Resource.Attribute.subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subtitleTextAppearance = global::VaxineApp.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subtitleTextColor = global::VaxineApp.Droid.Resource.Attribute.subtitleTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.subtitleTextStyle = global::VaxineApp.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.suggestionRowLayout = global::VaxineApp.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.switchMinWidth = global::VaxineApp.Droid.Resource.Attribute.switchMinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.switchPadding = global::VaxineApp.Droid.Resource.Attribute.switchPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.switchStyle = global::VaxineApp.Droid.Resource.Attribute.switchStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.switchTextAppearance = global::VaxineApp.Droid.Resource.Attribute.switchTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabBackground = global::VaxineApp.Droid.Resource.Attribute.tabBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabContentStart = global::VaxineApp.Droid.Resource.Attribute.tabContentStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabGravity = global::VaxineApp.Droid.Resource.Attribute.tabGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIconTint = global::VaxineApp.Droid.Resource.Attribute.tabIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIconTintMode = global::VaxineApp.Droid.Resource.Attribute.tabIconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicator = global::VaxineApp.Droid.Resource.Attribute.tabIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorAnimationDuration = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorColor = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorFullWidth = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorGravity = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabIndicatorHeight = global::VaxineApp.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabInlineLabel = global::VaxineApp.Droid.Resource.Attribute.tabInlineLabel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabMaxWidth = global::VaxineApp.Droid.Resource.Attribute.tabMaxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabMinWidth = global::VaxineApp.Droid.Resource.Attribute.tabMinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabMode = global::VaxineApp.Droid.Resource.Attribute.tabMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPadding = global::VaxineApp.Droid.Resource.Attribute.tabPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPaddingBottom = global::VaxineApp.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPaddingEnd = global::VaxineApp.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPaddingStart = global::VaxineApp.Droid.Resource.Attribute.tabPaddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabPaddingTop = global::VaxineApp.Droid.Resource.Attribute.tabPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabRippleColor = global::VaxineApp.Droid.Resource.Attribute.tabRippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabSelectedTextColor = global::VaxineApp.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabStyle = global::VaxineApp.Droid.Resource.Attribute.tabStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabTextAppearance = global::VaxineApp.Droid.Resource.Attribute.tabTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabTextColor = global::VaxineApp.Droid.Resource.Attribute.tabTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tabUnboundedRipple = global::VaxineApp.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAllCaps = global::VaxineApp.Droid.Resource.Attribute.textAllCaps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceBody1 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceBody1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceBody2 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceBody2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceButton = global::VaxineApp.Droid.Resource.Attribute.textAppearanceButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceCaption = global::VaxineApp.Droid.Resource.Attribute.textAppearanceCaption;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline1 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline2 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline3 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline4 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline5 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceHeadline6 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceLargePopupMenu = global::VaxineApp.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceListItem = global::VaxineApp.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceListItemSecondary = global::VaxineApp.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceListItemSmall = global::VaxineApp.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceOverline = global::VaxineApp.Droid.Resource.Attribute.textAppearanceOverline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearancePopupMenuHeader = global::VaxineApp.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSearchResultSubtitle = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSearchResultTitle = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSmallPopupMenu = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSubtitle1 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textAppearanceSubtitle2 = global::VaxineApp.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textColorAlertDialogListItem = global::VaxineApp.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textColorSearchUrl = global::VaxineApp.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textEndPadding = global::VaxineApp.Droid.Resource.Attribute.textEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textInputStyle = global::VaxineApp.Droid.Resource.Attribute.textInputStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textLocale = global::VaxineApp.Droid.Resource.Attribute.textLocale;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.textStartPadding = global::VaxineApp.Droid.Resource.Attribute.textStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.theme = global::VaxineApp.Droid.Resource.Attribute.theme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.thickness = global::VaxineApp.Droid.Resource.Attribute.thickness;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.thumbTextPadding = global::VaxineApp.Droid.Resource.Attribute.thumbTextPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.thumbTint = global::VaxineApp.Droid.Resource.Attribute.thumbTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.thumbTintMode = global::VaxineApp.Droid.Resource.Attribute.thumbTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tickMark = global::VaxineApp.Droid.Resource.Attribute.tickMark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tickMarkTint = global::VaxineApp.Droid.Resource.Attribute.tickMarkTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tickMarkTintMode = global::VaxineApp.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tint = global::VaxineApp.Droid.Resource.Attribute.tint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tintMode = global::VaxineApp.Droid.Resource.Attribute.tintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.title = global::VaxineApp.Droid.Resource.Attribute.title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleEnabled = global::VaxineApp.Droid.Resource.Attribute.titleEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMargin = global::VaxineApp.Droid.Resource.Attribute.titleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMarginBottom = global::VaxineApp.Droid.Resource.Attribute.titleMarginBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMarginEnd = global::VaxineApp.Droid.Resource.Attribute.titleMarginEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMargins = global::VaxineApp.Droid.Resource.Attribute.titleMargins;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMarginStart = global::VaxineApp.Droid.Resource.Attribute.titleMarginStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleMarginTop = global::VaxineApp.Droid.Resource.Attribute.titleMarginTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleTextAppearance = global::VaxineApp.Droid.Resource.Attribute.titleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleTextColor = global::VaxineApp.Droid.Resource.Attribute.titleTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.titleTextStyle = global::VaxineApp.Droid.Resource.Attribute.titleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.toolbarId = global::VaxineApp.Droid.Resource.Attribute.toolbarId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.toolbarNavigationButtonStyle = global::VaxineApp.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.toolbarStyle = global::VaxineApp.Droid.Resource.Attribute.toolbarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tooltipForegroundColor = global::VaxineApp.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tooltipFrameBackground = global::VaxineApp.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.tooltipText = global::VaxineApp.Droid.Resource.Attribute.tooltipText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.track = global::VaxineApp.Droid.Resource.Attribute.track;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.trackTint = global::VaxineApp.Droid.Resource.Attribute.trackTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.trackTintMode = global::VaxineApp.Droid.Resource.Attribute.trackTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.ttcIndex = global::VaxineApp.Droid.Resource.Attribute.ttcIndex;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.useCompatPadding = global::VaxineApp.Droid.Resource.Attribute.useCompatPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.viewInflaterClass = global::VaxineApp.Droid.Resource.Attribute.viewInflaterClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.voiceIcon = global::VaxineApp.Droid.Resource.Attribute.voiceIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowActionBar = global::VaxineApp.Droid.Resource.Attribute.windowActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowActionBarOverlay = global::VaxineApp.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowActionModeOverlay = global::VaxineApp.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowFixedHeightMajor = global::VaxineApp.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowFixedHeightMinor = global::VaxineApp.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowFixedWidthMajor = global::VaxineApp.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowFixedWidthMinor = global::VaxineApp.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowMinWidthMajor = global::VaxineApp.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowMinWidthMinor = global::VaxineApp.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.windowNoTitle = global::VaxineApp.Droid.Resource.Attribute.windowNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Boolean.abc_action_bar_embed_tabs = global::VaxineApp.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Boolean.abc_allow_stacked_button_bar = global::VaxineApp.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::VaxineApp.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::VaxineApp.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_background_cache_hint_selector_material_dark = global::VaxineApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_background_cache_hint_selector_material_light = global::VaxineApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_btn_colored_borderless_text_material = global::VaxineApp.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_btn_colored_text_material = global::VaxineApp.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_color_highlight_material = global::VaxineApp.Droid.Resource.Color.abc_color_highlight_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_hint_foreground_material_dark = global::VaxineApp.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_hint_foreground_material_light = global::VaxineApp.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_primary_text_disable_only_material_dark = global::VaxineApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_primary_text_disable_only_material_light = global::VaxineApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_primary_text_material_dark = global::VaxineApp.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_primary_text_material_light = global::VaxineApp.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_search_url_text = global::VaxineApp.Droid.Resource.Color.abc_search_url_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_search_url_text_normal = global::VaxineApp.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_search_url_text_pressed = global::VaxineApp.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_search_url_text_selected = global::VaxineApp.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_secondary_text_material_dark = global::VaxineApp.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_secondary_text_material_light = global::VaxineApp.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_btn_checkable = global::VaxineApp.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_default = global::VaxineApp.Droid.Resource.Color.abc_tint_default;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_edittext = global::VaxineApp.Droid.Resource.Color.abc_tint_edittext;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_seek_thumb = global::VaxineApp.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_spinner = global::VaxineApp.Droid.Resource.Color.abc_tint_spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.abc_tint_switch_track = global::VaxineApp.Droid.Resource.Color.abc_tint_switch_track;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.accent_material_dark = global::VaxineApp.Droid.Resource.Color.accent_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.accent_material_light = global::VaxineApp.Droid.Resource.Color.accent_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.background_floating_material_dark = global::VaxineApp.Droid.Resource.Color.background_floating_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.background_floating_material_light = global::VaxineApp.Droid.Resource.Color.background_floating_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.background_material_dark = global::VaxineApp.Droid.Resource.Color.background_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.background_material_light = global::VaxineApp.Droid.Resource.Color.background_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_disabled_material_light = global::VaxineApp.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_inverse_material_dark = global::VaxineApp.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_inverse_material_light = global::VaxineApp.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_material_dark = global::VaxineApp.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.bright_foreground_material_light = global::VaxineApp.Droid.Resource.Color.bright_foreground_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.browser_actions_bg_grey = global::VaxineApp.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.browser_actions_divider_color = global::VaxineApp.Droid.Resource.Color.browser_actions_divider_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.browser_actions_text_color = global::VaxineApp.Droid.Resource.Color.browser_actions_text_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.browser_actions_title_color = global::VaxineApp.Droid.Resource.Color.browser_actions_title_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.button_material_dark = global::VaxineApp.Droid.Resource.Color.button_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.button_material_light = global::VaxineApp.Droid.Resource.Color.button_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.cardview_dark_background = global::VaxineApp.Droid.Resource.Color.cardview_dark_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.cardview_light_background = global::VaxineApp.Droid.Resource.Color.cardview_light_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.cardview_shadow_end_color = global::VaxineApp.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.cardview_shadow_start_color = global::VaxineApp.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_bottom_navigation_shadow_color = global::VaxineApp.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_default_color_primary = global::VaxineApp.Droid.Resource.Color.design_default_color_primary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_default_color_primary_dark = global::VaxineApp.Droid.Resource.Color.design_default_color_primary_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_error = global::VaxineApp.Droid.Resource.Color.design_error;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_shadow_end_color = global::VaxineApp.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_shadow_mid_color = global::VaxineApp.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_shadow_start_color = global::VaxineApp.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_stroke_end_inner_color = global::VaxineApp.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_stroke_end_outer_color = global::VaxineApp.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_stroke_top_inner_color = global::VaxineApp.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_fab_stroke_top_outer_color = global::VaxineApp.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.design_snackbar_background_color = global::VaxineApp.Droid.Resource.Color.design_snackbar_background_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.dim_foreground_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.dim_foreground_disabled_material_light = global::VaxineApp.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.dim_foreground_material_dark = global::VaxineApp.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.dim_foreground_material_light = global::VaxineApp.Droid.Resource.Color.dim_foreground_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.error_color_material_dark = global::VaxineApp.Droid.Resource.Color.error_color_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.error_color_material_light = global::VaxineApp.Droid.Resource.Color.error_color_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.foreground_material_dark = global::VaxineApp.Droid.Resource.Color.foreground_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.foreground_material_light = global::VaxineApp.Droid.Resource.Color.foreground_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.highlighted_text_material_dark = global::VaxineApp.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.highlighted_text_material_light = global::VaxineApp.Droid.Resource.Color.highlighted_text_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_blue_grey_800 = global::VaxineApp.Droid.Resource.Color.material_blue_grey_800;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_blue_grey_900 = global::VaxineApp.Droid.Resource.Color.material_blue_grey_900;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_blue_grey_950 = global::VaxineApp.Droid.Resource.Color.material_blue_grey_950;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_deep_teal_200 = global::VaxineApp.Droid.Resource.Color.material_deep_teal_200;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_deep_teal_500 = global::VaxineApp.Droid.Resource.Color.material_deep_teal_500;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_100 = global::VaxineApp.Droid.Resource.Color.material_grey_100;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_300 = global::VaxineApp.Droid.Resource.Color.material_grey_300;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_50 = global::VaxineApp.Droid.Resource.Color.material_grey_50;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_600 = global::VaxineApp.Droid.Resource.Color.material_grey_600;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_800 = global::VaxineApp.Droid.Resource.Color.material_grey_800;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_850 = global::VaxineApp.Droid.Resource.Color.material_grey_850;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.material_grey_900 = global::VaxineApp.Droid.Resource.Color.material_grey_900;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::VaxineApp.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_bottom_nav_item_tint = global::VaxineApp.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_bg_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_stroke_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_text_btn_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_text_color_disabled = global::VaxineApp.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_text_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_btn_transparent_bg_color = global::VaxineApp.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_chip_background_color = global::VaxineApp.Droid.Resource.Color.mtrl_chip_background_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_chip_close_icon_tint = global::VaxineApp.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_chip_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_chip_text_color = global::VaxineApp.Droid.Resource.Color.mtrl_chip_text_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_fab_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_scrim_color = global::VaxineApp.Droid.Resource.Color.mtrl_scrim_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_colored_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_icon_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_tabs_ripple_color = global::VaxineApp.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_textinput_default_box_stroke_color = global::VaxineApp.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_textinput_disabled_color = global::VaxineApp.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::VaxineApp.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::VaxineApp.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.mtrl_text_btn_text_color_selector = global::VaxineApp.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.notification_action_color_filter = global::VaxineApp.Droid.Resource.Color.notification_action_color_filter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.notification_icon_bg_color = global::VaxineApp.Droid.Resource.Color.notification_icon_bg_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.notification_material_background_media_default_color = global::VaxineApp.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_dark_material_dark = global::VaxineApp.Droid.Resource.Color.primary_dark_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_dark_material_light = global::VaxineApp.Droid.Resource.Color.primary_dark_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_material_dark = global::VaxineApp.Droid.Resource.Color.primary_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_material_light = global::VaxineApp.Droid.Resource.Color.primary_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_text_default_material_dark = global::VaxineApp.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_text_default_material_light = global::VaxineApp.Droid.Resource.Color.primary_text_default_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_text_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.primary_text_disabled_material_light = global::VaxineApp.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.ripple_material_dark = global::VaxineApp.Droid.Resource.Color.ripple_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.ripple_material_light = global::VaxineApp.Droid.Resource.Color.ripple_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.secondary_text_default_material_dark = global::VaxineApp.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.secondary_text_default_material_light = global::VaxineApp.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.secondary_text_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.secondary_text_disabled_material_light = global::VaxineApp.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_disabled_material_dark = global::VaxineApp.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_disabled_material_light = global::VaxineApp.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_material_dark = global::VaxineApp.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_material_light = global::VaxineApp.Droid.Resource.Color.switch_thumb_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_normal_material_dark = global::VaxineApp.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.switch_thumb_normal_material_light = global::VaxineApp.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.tooltip_background_dark = global::VaxineApp.Droid.Resource.Color.tooltip_background_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Color.tooltip_background_light = global::VaxineApp.Droid.Resource.Color.tooltip_background_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_content_inset_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_default_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_default_padding_end_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_default_padding_start_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_elevation_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_stacked_max_height = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_button_min_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_button_min_width_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_action_button_min_width_overflow_material = global::VaxineApp.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_alert_dialog_button_bar_height = global::VaxineApp.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_alert_dialog_button_dimen = global::VaxineApp.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_button_inset_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_button_inset_vertical_material = global::VaxineApp.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_button_padding_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_button_padding_vertical_material = global::VaxineApp.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::VaxineApp.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_config_prefDialogWidth = global::VaxineApp.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_control_corner_material = global::VaxineApp.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_control_inset_material = global::VaxineApp.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_control_padding_material = global::VaxineApp.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_corner_radius_material = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_fixed_height_major = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_fixed_height_minor = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_fixed_width_major = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_fixed_width_minor = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_min_width_major = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_min_width_minor = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_padding_material = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_padding_top_material = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dialog_title_divider_material = global::VaxineApp.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_disabled_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_disabled_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dropdownitem_icon_width = global::VaxineApp.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dropdownitem_text_padding_left = global::VaxineApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_dropdownitem_text_padding_right = global::VaxineApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_edit_text_inset_bottom_material = global::VaxineApp.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_edit_text_inset_top_material = global::VaxineApp.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_floating_window_z = global::VaxineApp.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_list_item_height_large_material = global::VaxineApp.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_list_item_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_list_item_height_small_material = global::VaxineApp.Droid.Resource.Dimension.abc_list_item_height_small_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_list_item_padding_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_panel_menu_list_width = global::VaxineApp.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_progress_bar_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_search_view_preferred_height = global::VaxineApp.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_search_view_preferred_width = global::VaxineApp.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_seekbar_track_background_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_seekbar_track_progress_height_material = global::VaxineApp.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_select_dialog_padding_start_material = global::VaxineApp.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_switch_padding = global::VaxineApp.Droid.Resource.Dimension.abc_switch_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_body_1_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_body_2_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_button_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_caption_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_display_1_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_display_2_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_display_3_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_display_4_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_headline_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_large_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_medium_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_menu_header_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_menu_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_small_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_subhead_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_title_material = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.abc_text_size_title_material_toolbar = global::VaxineApp.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.browser_actions_context_menu_max_width = global::VaxineApp.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.browser_actions_context_menu_min_padding = global::VaxineApp.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.cardview_compat_inset_shadow = global::VaxineApp.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.cardview_default_elevation = global::VaxineApp.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.cardview_default_radius = global::VaxineApp.Droid.Resource.Dimension.cardview_default_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_button_inset_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_button_inset_vertical_material = global::VaxineApp.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_button_padding_horizontal_material = global::VaxineApp.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_button_padding_vertical_material = global::VaxineApp.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_control_corner_material = global::VaxineApp.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_notification_large_icon_max_height = global::VaxineApp.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.compat_notification_large_icon_max_width = global::VaxineApp.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_appbar_elevation = global::VaxineApp.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_active_text_size = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_elevation = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_height = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_icon_size = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_item_max_width = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_item_min_width = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_margin = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_shadow_height = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_navigation_text_size = global::VaxineApp.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_sheet_modal_elevation = global::VaxineApp.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_bottom_sheet_peek_height_min = global::VaxineApp.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_border_width = global::VaxineApp.Droid.Resource.Dimension.design_fab_border_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_elevation = global::VaxineApp.Droid.Resource.Dimension.design_fab_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_image_size = global::VaxineApp.Droid.Resource.Dimension.design_fab_image_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_size_mini = global::VaxineApp.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_size_normal = global::VaxineApp.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_translation_z_hovered_focused = global::VaxineApp.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_fab_translation_z_pressed = global::VaxineApp.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_elevation = global::VaxineApp.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_icon_padding = global::VaxineApp.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_icon_size = global::VaxineApp.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_item_horizontal_padding = global::VaxineApp.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_item_icon_padding = global::VaxineApp.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_max_width = global::VaxineApp.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_padding_bottom = global::VaxineApp.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_navigation_separator_vertical_padding = global::VaxineApp.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_action_inline_max_width = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_background_corner_radius = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_elevation = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_max_width = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_min_width = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_padding_horizontal = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_padding_vertical = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_snackbar_text_size = global::VaxineApp.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_tab_max_width = global::VaxineApp.Droid.Resource.Dimension.design_tab_max_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_tab_scrollable_min_width = global::VaxineApp.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_tab_text_size = global::VaxineApp.Droid.Resource.Dimension.design_tab_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_tab_text_size_2line = global::VaxineApp.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.design_textinput_caption_translate_y = global::VaxineApp.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.disabled_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.disabled_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.fastscroll_default_thickness = global::VaxineApp.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.fastscroll_margin = global::VaxineApp.Droid.Resource.Dimension.fastscroll_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.fastscroll_minimum_range = global::VaxineApp.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.highlight_alpha_material_colored = global::VaxineApp.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.highlight_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.highlight_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.hint_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.hint_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.hint_pressed_alpha_material_dark = global::VaxineApp.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.hint_pressed_alpha_material_light = global::VaxineApp.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::VaxineApp.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::VaxineApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::VaxineApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_bottomappbar_height = global::VaxineApp.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_corner_radius = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_disabled_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_disabled_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_focused_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_hovered_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_icon_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_inset = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_letter_spacing = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_padding_bottom = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_padding_left = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_padding_right = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_padding_top = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_pressed_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_stroke_size = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_text_size = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_btn_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_btn_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_card_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_card_spacing = global::VaxineApp.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_chip_pressed_translation_z = global::VaxineApp.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_chip_text_size = global::VaxineApp.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_fab_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::VaxineApp.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_fab_translation_z_pressed = global::VaxineApp.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_navigation_elevation = global::VaxineApp.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_navigation_item_icon_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::VaxineApp.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_snackbar_margin = global::VaxineApp.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::VaxineApp.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.mtrl_toolbar_default_height = global::VaxineApp.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_action_icon_size = global::VaxineApp.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_action_text_size = global::VaxineApp.Droid.Resource.Dimension.notification_action_text_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_big_circle_margin = global::VaxineApp.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_content_margin_start = global::VaxineApp.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_large_icon_height = global::VaxineApp.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_large_icon_width = global::VaxineApp.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_main_column_padding_top = global::VaxineApp.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_media_narrow_margin = global::VaxineApp.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_right_icon_size = global::VaxineApp.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_right_side_padding_top = global::VaxineApp.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_small_icon_background_padding = global::VaxineApp.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_small_icon_size_as_large = global::VaxineApp.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_subtext_size = global::VaxineApp.Droid.Resource.Dimension.notification_subtext_size;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_top_pad = global::VaxineApp.Droid.Resource.Dimension.notification_top_pad;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.notification_top_pad_large_text = global::VaxineApp.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_corner_radius = global::VaxineApp.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_horizontal_padding = global::VaxineApp.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_margin = global::VaxineApp.Droid.Resource.Dimension.tooltip_margin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::VaxineApp.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_precise_anchor_threshold = global::VaxineApp.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_vertical_padding = global::VaxineApp.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_y_offset_non_touch = global::VaxineApp.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.tooltip_y_offset_touch = global::VaxineApp.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_action_bar_item_background_material = global::VaxineApp.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_borderless_material = global::VaxineApp.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_check_material = global::VaxineApp.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_check_material_anim = global::VaxineApp.Droid.Resource.Drawable.abc_btn_check_material_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_colored_material = global::VaxineApp.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_default_mtrl_shape = global::VaxineApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_radio_material = global::VaxineApp.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_radio_material_anim = global::VaxineApp.Droid.Resource.Drawable.abc_btn_radio_material_anim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::VaxineApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_cab_background_internal_bg = global::VaxineApp.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_cab_background_top_material = global::VaxineApp.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_control_background_material = global::VaxineApp.Droid.Resource.Drawable.abc_control_background_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_dialog_material_background = global::VaxineApp.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_edit_text_material = global::VaxineApp.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_ab_back_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_clear_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_go_search_api_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_overflow_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_search_api_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_star_black_16dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_star_black_36dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_star_black_48dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_star_half_black_16dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_star_half_black_36dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_star_half_black_48dp = global::VaxineApp.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ic_voice_search_api_material = global::VaxineApp.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_item_background_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_item_background_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_divider_material = global::VaxineApp.Droid.Resource.Drawable.abc_list_divider_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_divider_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_focused_holo = global::VaxineApp.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_longpressed_holo = global::VaxineApp.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_pressed_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_pressed_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_disabled_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_holo_dark = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_list_selector_holo_light = global::VaxineApp.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::VaxineApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_popup_background_mtrl_mult = global::VaxineApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ratingbar_indicator_material = global::VaxineApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ratingbar_material = global::VaxineApp.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_ratingbar_small_material = global::VaxineApp.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_seekbar_thumb_material = global::VaxineApp.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_seekbar_tick_mark_material = global::VaxineApp.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_seekbar_track_material = global::VaxineApp.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_spinner_textfield_background_material = global::VaxineApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_switch_thumb_material = global::VaxineApp.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_switch_track_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_tab_indicator_material = global::VaxineApp.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_textfield_search_material = global::VaxineApp.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_text_cursor_material = global::VaxineApp.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::VaxineApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.abc_vector_test = global::VaxineApp.Droid.Resource.Drawable.abc_vector_test;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar1 = global::VaxineApp.Droid.Resource.Drawable.Avatar1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar10 = global::VaxineApp.Droid.Resource.Drawable.Avatar10;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar11 = global::VaxineApp.Droid.Resource.Drawable.Avatar11;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar12 = global::VaxineApp.Droid.Resource.Drawable.Avatar12;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar13 = global::VaxineApp.Droid.Resource.Drawable.Avatar13;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar14 = global::VaxineApp.Droid.Resource.Drawable.Avatar14;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar15 = global::VaxineApp.Droid.Resource.Drawable.Avatar15;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar16 = global::VaxineApp.Droid.Resource.Drawable.Avatar16;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar17 = global::VaxineApp.Droid.Resource.Drawable.Avatar17;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar18 = global::VaxineApp.Droid.Resource.Drawable.Avatar18;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar19 = global::VaxineApp.Droid.Resource.Drawable.Avatar19;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar2 = global::VaxineApp.Droid.Resource.Drawable.Avatar2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar20 = global::VaxineApp.Droid.Resource.Drawable.Avatar20;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar21 = global::VaxineApp.Droid.Resource.Drawable.Avatar21;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar22 = global::VaxineApp.Droid.Resource.Drawable.Avatar22;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar23 = global::VaxineApp.Droid.Resource.Drawable.Avatar23;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar24 = global::VaxineApp.Droid.Resource.Drawable.Avatar24;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar25 = global::VaxineApp.Droid.Resource.Drawable.Avatar25;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar26 = global::VaxineApp.Droid.Resource.Drawable.Avatar26;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar27 = global::VaxineApp.Droid.Resource.Drawable.Avatar27;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar28 = global::VaxineApp.Droid.Resource.Drawable.Avatar28;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar29 = global::VaxineApp.Droid.Resource.Drawable.Avatar29;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar3 = global::VaxineApp.Droid.Resource.Drawable.Avatar3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar30 = global::VaxineApp.Droid.Resource.Drawable.Avatar30;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar4 = global::VaxineApp.Droid.Resource.Drawable.Avatar4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar5 = global::VaxineApp.Droid.Resource.Drawable.Avatar5;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar6 = global::VaxineApp.Droid.Resource.Drawable.Avatar6;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar7 = global::VaxineApp.Droid.Resource.Drawable.Avatar7;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar8 = global::VaxineApp.Droid.Resource.Drawable.Avatar8;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Avatar9 = global::VaxineApp.Droid.Resource.Drawable.Avatar9;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.avd_hide_password = global::VaxineApp.Droid.Resource.Drawable.avd_hide_password;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.avd_show_password = global::VaxineApp.Droid.Resource.Drawable.avd_show_password;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_checkbox_checked_mtrl = global::VaxineApp.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::VaxineApp.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::VaxineApp.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::VaxineApp.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_radio_off_mtrl = global::VaxineApp.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::VaxineApp.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_radio_on_mtrl = global::VaxineApp.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::VaxineApp.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.clear_button_icon = global::VaxineApp.Droid.Resource.Drawable.clear_button_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_bottom_navigation_item_background = global::VaxineApp.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_fab_background = global::VaxineApp.Droid.Resource.Drawable.design_fab_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_ic_visibility = global::VaxineApp.Droid.Resource.Drawable.design_ic_visibility;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_ic_visibility_off = global::VaxineApp.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_password_eye = global::VaxineApp.Droid.Resource.Drawable.design_password_eye;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.design_snackbar_background = global::VaxineApp.Droid.Resource.Drawable.design_snackbar_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.dropdownbuttonimage = global::VaxineApp.Droid.Resource.Drawable.dropdownbuttonimage;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.ic_mtrl_chip_checked_black = global::VaxineApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.ic_mtrl_chip_checked_circle = global::VaxineApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.ic_mtrl_chip_close_circle = global::VaxineApp.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.inputlayout_togglecollapseicon = global::VaxineApp.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.inputlayout_togglevisibleicon = global::VaxineApp.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.input_layout_drop_down_icon = global::VaxineApp.Droid.Resource.Drawable.input_layout_drop_down_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.mtrl_tabs_default_indicator = global::VaxineApp.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.navigation_empty_icon = global::VaxineApp.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_action_background = global::VaxineApp.Droid.Resource.Drawable.notification_action_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg = global::VaxineApp.Droid.Resource.Drawable.notification_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_low = global::VaxineApp.Droid.Resource.Drawable.notification_bg_low;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_low_normal = global::VaxineApp.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_low_pressed = global::VaxineApp.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_normal = global::VaxineApp.Droid.Resource.Drawable.notification_bg_normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_bg_normal_pressed = global::VaxineApp.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_icon_background = global::VaxineApp.Droid.Resource.Drawable.notification_icon_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_template_icon_bg = global::VaxineApp.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_template_icon_low_bg = global::VaxineApp.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notification_tile_bg = global::VaxineApp.Droid.Resource.Drawable.notification_tile_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.notify_panel_notification_icon_bg = global::VaxineApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.tooltip_frame_dark = global::VaxineApp.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.tooltip_frame_light = global::VaxineApp.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_action_clickable_span = global::VaxineApp.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_0 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_1 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_10 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_11 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_12 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_13 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_14 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_15 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_16 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_17 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_18 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_19 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_2 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_20 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_21 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_22 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_23 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_24 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_25 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_26 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_27 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_28 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_29 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_3 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_30 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_31 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_4 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_5 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_6 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_7 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_8 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.accessibility_custom_action_9 = global::VaxineApp.Droid.Resource.Id.accessibility_custom_action_9;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action0 = global::VaxineApp.Droid.Resource.Id.action0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.actions = global::VaxineApp.Droid.Resource.Id.actions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar = global::VaxineApp.Droid.Resource.Id.action_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_activity_content = global::VaxineApp.Droid.Resource.Id.action_bar_activity_content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_container = global::VaxineApp.Droid.Resource.Id.action_bar_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_root = global::VaxineApp.Droid.Resource.Id.action_bar_root;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_spinner = global::VaxineApp.Droid.Resource.Id.action_bar_spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_subtitle = global::VaxineApp.Droid.Resource.Id.action_bar_subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_bar_title = global::VaxineApp.Droid.Resource.Id.action_bar_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_container = global::VaxineApp.Droid.Resource.Id.action_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_context_bar = global::VaxineApp.Droid.Resource.Id.action_context_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_divider = global::VaxineApp.Droid.Resource.Id.action_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_image = global::VaxineApp.Droid.Resource.Id.action_image;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_menu_divider = global::VaxineApp.Droid.Resource.Id.action_menu_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_menu_presenter = global::VaxineApp.Droid.Resource.Id.action_menu_presenter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_mode_bar = global::VaxineApp.Droid.Resource.Id.action_mode_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_mode_bar_stub = global::VaxineApp.Droid.Resource.Id.action_mode_bar_stub;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_mode_close_button = global::VaxineApp.Droid.Resource.Id.action_mode_close_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.action_text = global::VaxineApp.Droid.Resource.Id.action_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.activity_chooser_view_content = global::VaxineApp.Droid.Resource.Id.activity_chooser_view_content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.add = global::VaxineApp.Droid.Resource.Id.add;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.alertTitle = global::VaxineApp.Droid.Resource.Id.alertTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.all = global::VaxineApp.Droid.Resource.Id.all;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.ALT = global::VaxineApp.Droid.Resource.Id.ALT;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.always = global::VaxineApp.Droid.Resource.Id.always;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.async = global::VaxineApp.Droid.Resource.Id.async;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.auto = global::VaxineApp.Droid.Resource.Id.auto;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.beginning = global::VaxineApp.Droid.Resource.Id.beginning;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.blocking = global::VaxineApp.Droid.Resource.Id.blocking;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.bottom = global::VaxineApp.Droid.Resource.Id.bottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.bottomtab_navarea = global::VaxineApp.Droid.Resource.Id.bottomtab_navarea;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.bottomtab_tabbar = global::VaxineApp.Droid.Resource.Id.bottomtab_tabbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_header_text = global::VaxineApp.Droid.Resource.Id.browser_actions_header_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_menu_items = global::VaxineApp.Droid.Resource.Id.browser_actions_menu_items;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_menu_item_icon = global::VaxineApp.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_menu_item_text = global::VaxineApp.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.browser_actions_menu_view = global::VaxineApp.Droid.Resource.Id.browser_actions_menu_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.buttonPanel = global::VaxineApp.Droid.Resource.Id.buttonPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.cancel_action = global::VaxineApp.Droid.Resource.Id.cancel_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.center = global::VaxineApp.Droid.Resource.Id.center;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.center_horizontal = global::VaxineApp.Droid.Resource.Id.center_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.center_vertical = global::VaxineApp.Droid.Resource.Id.center_vertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.checkbox = global::VaxineApp.Droid.Resource.Id.checkbox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.@checked = global::VaxineApp.Droid.Resource.Id.@checked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.chronometer = global::VaxineApp.Droid.Resource.Id.chronometer;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.clip_horizontal = global::VaxineApp.Droid.Resource.Id.clip_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.clip_vertical = global::VaxineApp.Droid.Resource.Id.clip_vertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.collapseActionView = global::VaxineApp.Droid.Resource.Id.collapseActionView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.container = global::VaxineApp.Droid.Resource.Id.container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.content = global::VaxineApp.Droid.Resource.Id.content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.contentPanel = global::VaxineApp.Droid.Resource.Id.contentPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.coordinator = global::VaxineApp.Droid.Resource.Id.coordinator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.CTRL = global::VaxineApp.Droid.Resource.Id.CTRL;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.custom = global::VaxineApp.Droid.Resource.Id.custom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.customPanel = global::VaxineApp.Droid.Resource.Id.customPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.decor_content_parent = global::VaxineApp.Droid.Resource.Id.decor_content_parent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.default_activity_button = global::VaxineApp.Droid.Resource.Id.default_activity_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_bottom_sheet = global::VaxineApp.Droid.Resource.Id.design_bottom_sheet;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_menu_item_action_area = global::VaxineApp.Droid.Resource.Id.design_menu_item_action_area;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_menu_item_action_area_stub = global::VaxineApp.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_menu_item_text = global::VaxineApp.Droid.Resource.Id.design_menu_item_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.design_navigation_view = global::VaxineApp.Droid.Resource.Id.design_navigation_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.dialog_button = global::VaxineApp.Droid.Resource.Id.dialog_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.disableHome = global::VaxineApp.Droid.Resource.Id.disableHome;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.edit_query = global::VaxineApp.Droid.Resource.Id.edit_query;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.end = global::VaxineApp.Droid.Resource.Id.end;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.end_padder = global::VaxineApp.Droid.Resource.Id.end_padder;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.enterAlways = global::VaxineApp.Droid.Resource.Id.enterAlways;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.enterAlwaysCollapsed = global::VaxineApp.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.exitUntilCollapsed = global::VaxineApp.Droid.Resource.Id.exitUntilCollapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.expanded_menu = global::VaxineApp.Droid.Resource.Id.expanded_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.expand_activities_button = global::VaxineApp.Droid.Resource.Id.expand_activities_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.fill = global::VaxineApp.Droid.Resource.Id.fill;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.filled = global::VaxineApp.Droid.Resource.Id.filled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.fill_horizontal = global::VaxineApp.Droid.Resource.Id.fill_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.fill_vertical = global::VaxineApp.Droid.Resource.Id.fill_vertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.@fixed = global::VaxineApp.Droid.Resource.Id.@fixed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.flyoutcontent_appbar = global::VaxineApp.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.forever = global::VaxineApp.Droid.Resource.Id.forever;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.FUNCTION = global::VaxineApp.Droid.Resource.Id.FUNCTION;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.ghost_view = global::VaxineApp.Droid.Resource.Id.ghost_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.ghost_view_holder = global::VaxineApp.Droid.Resource.Id.ghost_view_holder;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.group_divider = global::VaxineApp.Droid.Resource.Id.group_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.home = global::VaxineApp.Droid.Resource.Id.home;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.homeAsUp = global::VaxineApp.Droid.Resource.Id.homeAsUp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.icon = global::VaxineApp.Droid.Resource.Id.icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.icon_group = global::VaxineApp.Droid.Resource.Id.icon_group;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.ifRoom = global::VaxineApp.Droid.Resource.Id.ifRoom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.image = global::VaxineApp.Droid.Resource.Id.image;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.info = global::VaxineApp.Droid.Resource.Id.info;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.italic = global::VaxineApp.Droid.Resource.Id.italic;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.Itemname = global::VaxineApp.Droid.Resource.Id.Itemname;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.item_touch_helper_previous_elevation = global::VaxineApp.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.labeled = global::VaxineApp.Droid.Resource.Id.labeled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.largeLabel = global::VaxineApp.Droid.Resource.Id.largeLabel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.left = global::VaxineApp.Droid.Resource.Id.left;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.line1 = global::VaxineApp.Droid.Resource.Id.line1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.line3 = global::VaxineApp.Droid.Resource.Id.line3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.listMode = global::VaxineApp.Droid.Resource.Id.listMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.list_item = global::VaxineApp.Droid.Resource.Id.list_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.main_appbar = global::VaxineApp.Droid.Resource.Id.main_appbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.main_tablayout = global::VaxineApp.Droid.Resource.Id.main_tablayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.main_toolbar = global::VaxineApp.Droid.Resource.Id.main_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.main_viewpager = global::VaxineApp.Droid.Resource.Id.main_viewpager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.masked = global::VaxineApp.Droid.Resource.Id.masked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.media_actions = global::VaxineApp.Droid.Resource.Id.media_actions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.message = global::VaxineApp.Droid.Resource.Id.message;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.META = global::VaxineApp.Droid.Resource.Id.META;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.middle = global::VaxineApp.Droid.Resource.Id.middle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.mini = global::VaxineApp.Droid.Resource.Id.mini;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.mtrl_child_content_container = global::VaxineApp.Droid.Resource.Id.mtrl_child_content_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.mtrl_internal_children_alpha_tag = global::VaxineApp.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.multiply = global::VaxineApp.Droid.Resource.Id.multiply;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.navigation_header_container = global::VaxineApp.Droid.Resource.Id.navigation_header_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.never = global::VaxineApp.Droid.Resource.Id.never;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.none = global::VaxineApp.Droid.Resource.Id.none;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.normal = global::VaxineApp.Droid.Resource.Id.normal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.notification_background = global::VaxineApp.Droid.Resource.Id.notification_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.notification_main_column = global::VaxineApp.Droid.Resource.Id.notification_main_column;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.notification_main_column_container = global::VaxineApp.Droid.Resource.Id.notification_main_column_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.off = global::VaxineApp.Droid.Resource.Id.off;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.on = global::VaxineApp.Droid.Resource.Id.on;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.outline = global::VaxineApp.Droid.Resource.Id.outline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.parallax = global::VaxineApp.Droid.Resource.Id.parallax;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.parentPanel = global::VaxineApp.Droid.Resource.Id.parentPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.parent_matrix = global::VaxineApp.Droid.Resource.Id.parent_matrix;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.pin = global::VaxineApp.Droid.Resource.Id.pin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.progress_circular = global::VaxineApp.Droid.Resource.Id.progress_circular;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.progress_horizontal = global::VaxineApp.Droid.Resource.Id.progress_horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.radio = global::VaxineApp.Droid.Resource.Id.radio;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.right = global::VaxineApp.Droid.Resource.Id.right;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.right_icon = global::VaxineApp.Droid.Resource.Id.right_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.right_side = global::VaxineApp.Droid.Resource.Id.right_side;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.save_non_transition_alpha = global::VaxineApp.Droid.Resource.Id.save_non_transition_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.save_overlay_view = global::VaxineApp.Droid.Resource.Id.save_overlay_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.screen = global::VaxineApp.Droid.Resource.Id.screen;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scroll = global::VaxineApp.Droid.Resource.Id.scroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scrollable = global::VaxineApp.Droid.Resource.Id.scrollable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scrollIndicatorDown = global::VaxineApp.Droid.Resource.Id.scrollIndicatorDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scrollIndicatorUp = global::VaxineApp.Droid.Resource.Id.scrollIndicatorUp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.scrollView = global::VaxineApp.Droid.Resource.Id.scrollView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_badge = global::VaxineApp.Droid.Resource.Id.search_badge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_bar = global::VaxineApp.Droid.Resource.Id.search_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_button = global::VaxineApp.Droid.Resource.Id.search_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_close_btn = global::VaxineApp.Droid.Resource.Id.search_close_btn;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_edit_frame = global::VaxineApp.Droid.Resource.Id.search_edit_frame;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_go_btn = global::VaxineApp.Droid.Resource.Id.search_go_btn;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_mag_icon = global::VaxineApp.Droid.Resource.Id.search_mag_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_plate = global::VaxineApp.Droid.Resource.Id.search_plate;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_src_text = global::VaxineApp.Droid.Resource.Id.search_src_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.search_voice_btn = global::VaxineApp.Droid.Resource.Id.search_voice_btn;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.selected = global::VaxineApp.Droid.Resource.Id.selected;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.select_dialog_listview = global::VaxineApp.Droid.Resource.Id.select_dialog_listview;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.shellcontent_appbar = global::VaxineApp.Droid.Resource.Id.shellcontent_appbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.shellcontent_toolbar = global::VaxineApp.Droid.Resource.Id.shellcontent_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.SHIFT = global::VaxineApp.Droid.Resource.Id.SHIFT;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.shortcut = global::VaxineApp.Droid.Resource.Id.shortcut;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.showCustom = global::VaxineApp.Droid.Resource.Id.showCustom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.showHome = global::VaxineApp.Droid.Resource.Id.showHome;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.showTitle = global::VaxineApp.Droid.Resource.Id.showTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.sliding_tabs = global::VaxineApp.Droid.Resource.Id.sliding_tabs;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.smallLabel = global::VaxineApp.Droid.Resource.Id.smallLabel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.snackbar_action = global::VaxineApp.Droid.Resource.Id.snackbar_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.snackbar_text = global::VaxineApp.Droid.Resource.Id.snackbar_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.snap = global::VaxineApp.Droid.Resource.Id.snap;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.snapMargins = global::VaxineApp.Droid.Resource.Id.snapMargins;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.spacer = global::VaxineApp.Droid.Resource.Id.spacer;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.split_action_bar = global::VaxineApp.Droid.Resource.Id.split_action_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.src_atop = global::VaxineApp.Droid.Resource.Id.src_atop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.src_in = global::VaxineApp.Droid.Resource.Id.src_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.src_over = global::VaxineApp.Droid.Resource.Id.src_over;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.start = global::VaxineApp.Droid.Resource.Id.start;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.status_bar_latest_event_content = global::VaxineApp.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.stretch = global::VaxineApp.Droid.Resource.Id.stretch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.submenuarrow = global::VaxineApp.Droid.Resource.Id.submenuarrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.submit_area = global::VaxineApp.Droid.Resource.Id.submit_area;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.SYM = global::VaxineApp.Droid.Resource.Id.SYM;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tabMode = global::VaxineApp.Droid.Resource.Id.tabMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_accessibility_actions = global::VaxineApp.Droid.Resource.Id.tag_accessibility_actions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_accessibility_clickable_spans = global::VaxineApp.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_accessibility_heading = global::VaxineApp.Droid.Resource.Id.tag_accessibility_heading;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_accessibility_pane_title = global::VaxineApp.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_screen_reader_focusable = global::VaxineApp.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_transition_group = global::VaxineApp.Droid.Resource.Id.tag_transition_group;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_unhandled_key_event_manager = global::VaxineApp.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.tag_unhandled_key_listeners = global::VaxineApp.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.text = global::VaxineApp.Droid.Resource.Id.text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.text2 = global::VaxineApp.Droid.Resource.Id.text2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textinput_counter = global::VaxineApp.Droid.Resource.Id.textinput_counter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textinput_error = global::VaxineApp.Droid.Resource.Id.textinput_error;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textinput_helper_text = global::VaxineApp.Droid.Resource.Id.textinput_helper_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textSpacerNoButtons = global::VaxineApp.Droid.Resource.Id.textSpacerNoButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textSpacerNoTitle = global::VaxineApp.Droid.Resource.Id.textSpacerNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.textStart = global::VaxineApp.Droid.Resource.Id.textStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.time = global::VaxineApp.Droid.Resource.Id.time;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.title = global::VaxineApp.Droid.Resource.Id.title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.titleDividerNoCustom = global::VaxineApp.Droid.Resource.Id.titleDividerNoCustom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.title_template = global::VaxineApp.Droid.Resource.Id.title_template;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.toolbar = global::VaxineApp.Droid.Resource.Id.toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.top = global::VaxineApp.Droid.Resource.Id.top;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.topPanel = global::VaxineApp.Droid.Resource.Id.topPanel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.touch_outside = global::VaxineApp.Droid.Resource.Id.touch_outside;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_current_scene = global::VaxineApp.Droid.Resource.Id.transition_current_scene;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_layout_save = global::VaxineApp.Droid.Resource.Id.transition_layout_save;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_position = global::VaxineApp.Droid.Resource.Id.transition_position;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_scene_layoutid_cache = global::VaxineApp.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.transition_transform = global::VaxineApp.Droid.Resource.Id.transition_transform;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.@unchecked = global::VaxineApp.Droid.Resource.Id.@unchecked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.uniform = global::VaxineApp.Droid.Resource.Id.uniform;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.unlabeled = global::VaxineApp.Droid.Resource.Id.unlabeled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.up = global::VaxineApp.Droid.Resource.Id.up;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.useLogo = global::VaxineApp.Droid.Resource.Id.useLogo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.view_offset_helper = global::VaxineApp.Droid.Resource.Id.view_offset_helper;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.visible = global::VaxineApp.Droid.Resource.Id.visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.withText = global::VaxineApp.Droid.Resource.Id.withText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.wrap_content = global::VaxineApp.Droid.Resource.Id.wrap_content;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.abc_config_activityDefaultDur = global::VaxineApp.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.abc_config_activityShortDur = global::VaxineApp.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.app_bar_elevation_anim_duration = global::VaxineApp.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.bottom_sheet_slide_duration = global::VaxineApp.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.cancel_button_image_alpha = global::VaxineApp.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.config_tooltipAnimTime = global::VaxineApp.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.design_snackbar_text_max_lines = global::VaxineApp.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.design_tab_indicator_anim_duration_ms = global::VaxineApp.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.hide_password_duration = global::VaxineApp.Droid.Resource.Integer.hide_password_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.mtrl_btn_anim_delay_ms = global::VaxineApp.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.mtrl_btn_anim_duration_ms = global::VaxineApp.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.mtrl_chip_anim_duration = global::VaxineApp.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::VaxineApp.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.show_password_duration = global::VaxineApp.Droid.Resource.Integer.show_password_duration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Integer.status_bar_notification_info_maxnum = global::VaxineApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::VaxineApp.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::VaxineApp.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::VaxineApp.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::VaxineApp.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::VaxineApp.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::VaxineApp.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.fast_out_slow_in = global::VaxineApp.Droid.Resource.Interpolator.fast_out_slow_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.mtrl_fast_out_linear_in = global::VaxineApp.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.mtrl_fast_out_slow_in = global::VaxineApp.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.mtrl_linear = global::VaxineApp.Droid.Resource.Interpolator.mtrl_linear;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Interpolator.mtrl_linear_out_slow_in = global::VaxineApp.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_bar_title_item = global::VaxineApp.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_bar_up_container = global::VaxineApp.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_menu_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_menu_layout = global::VaxineApp.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_mode_bar = global::VaxineApp.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_action_mode_close_item_material = global::VaxineApp.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_activity_chooser_view = global::VaxineApp.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_activity_chooser_view_list_item = global::VaxineApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_alert_dialog_button_bar_material = global::VaxineApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_alert_dialog_material = global::VaxineApp.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_alert_dialog_title_material = global::VaxineApp.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_cascading_menu_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_dialog_title_material = global::VaxineApp.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_expanded_menu_layout = global::VaxineApp.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_list_menu_item_checkbox = global::VaxineApp.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_list_menu_item_icon = global::VaxineApp.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_list_menu_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_list_menu_item_radio = global::VaxineApp.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_popup_menu_header_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_popup_menu_item_layout = global::VaxineApp.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_screen_content_include = global::VaxineApp.Droid.Resource.Layout.abc_screen_content_include;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_screen_simple = global::VaxineApp.Droid.Resource.Layout.abc_screen_simple;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_screen_simple_overlay_action_mode = global::VaxineApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_screen_toolbar = global::VaxineApp.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_search_dropdown_item_icons_2line = global::VaxineApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_search_view = global::VaxineApp.Droid.Resource.Layout.abc_search_view;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_select_dialog_material = global::VaxineApp.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.abc_tooltip = global::VaxineApp.Droid.Resource.Layout.abc_tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.BottomTabLayout = global::VaxineApp.Droid.Resource.Layout.BottomTabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.browser_actions_context_menu_page = global::VaxineApp.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.browser_actions_context_menu_row = global::VaxineApp.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.CustomizedImageView = global::VaxineApp.Droid.Resource.Layout.CustomizedImageView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.CustomizedView = global::VaxineApp.Droid.Resource.Layout.CustomizedView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.custom_dialog = global::VaxineApp.Droid.Resource.Layout.custom_dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_bottom_navigation_item = global::VaxineApp.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_bottom_sheet_dialog = global::VaxineApp.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_layout_snackbar = global::VaxineApp.Droid.Resource.Layout.design_layout_snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_layout_snackbar_include = global::VaxineApp.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_layout_tab_icon = global::VaxineApp.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_layout_tab_text = global::VaxineApp.Droid.Resource.Layout.design_layout_tab_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_menu_item_action_area = global::VaxineApp.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_item = global::VaxineApp.Droid.Resource.Layout.design_navigation_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_item_header = global::VaxineApp.Droid.Resource.Layout.design_navigation_item_header;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_item_separator = global::VaxineApp.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_item_subheader = global::VaxineApp.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_menu = global::VaxineApp.Droid.Resource.Layout.design_navigation_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.design_navigation_menu_item = global::VaxineApp.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.FallbackTabbarDoNotUse = global::VaxineApp.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.FallbackToolbarDoNotUse = global::VaxineApp.Droid.Resource.Layout.FallbackToolbarDoNotUse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.FlyoutContent = global::VaxineApp.Droid.Resource.Layout.FlyoutContent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.mtrl_layout_snackbar = global::VaxineApp.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.mtrl_layout_snackbar_include = global::VaxineApp.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_action = global::VaxineApp.Droid.Resource.Layout.notification_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_action_tombstone = global::VaxineApp.Droid.Resource.Layout.notification_action_tombstone;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_media_action = global::VaxineApp.Droid.Resource.Layout.notification_media_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_media_cancel_action = global::VaxineApp.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_big_media = global::VaxineApp.Droid.Resource.Layout.notification_template_big_media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_big_media_custom = global::VaxineApp.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_big_media_narrow = global::VaxineApp.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_big_media_narrow_custom = global::VaxineApp.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_custom_big = global::VaxineApp.Droid.Resource.Layout.notification_template_custom_big;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_icon_group = global::VaxineApp.Droid.Resource.Layout.notification_template_icon_group;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_lines_media = global::VaxineApp.Droid.Resource.Layout.notification_template_lines_media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_media = global::VaxineApp.Droid.Resource.Layout.notification_template_media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_media_custom = global::VaxineApp.Droid.Resource.Layout.notification_template_media_custom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_part_chronometer = global::VaxineApp.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.notification_template_part_time = global::VaxineApp.Droid.Resource.Layout.notification_template_part_time;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.RootLayout = global::VaxineApp.Droid.Resource.Layout.RootLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.select_dialog_item_material = global::VaxineApp.Droid.Resource.Layout.select_dialog_item_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.select_dialog_multichoice_material = global::VaxineApp.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.select_dialog_singlechoice_material = global::VaxineApp.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.sfcomboBox_layout = global::VaxineApp.Droid.Resource.Layout.sfcomboBox_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.ShellContent = global::VaxineApp.Droid.Resource.Layout.ShellContent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.support_simple_spinner_dropdown_item = global::VaxineApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.Tabbar = global::VaxineApp.Droid.Resource.Layout.Tabbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.Toolbar = global::VaxineApp.Droid.Resource.Layout.Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_action_bar_home_description = global::VaxineApp.Droid.Resource.String.abc_action_bar_home_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_action_bar_up_description = global::VaxineApp.Droid.Resource.String.abc_action_bar_up_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_action_menu_overflow_description = global::VaxineApp.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_action_mode_done = global::VaxineApp.Droid.Resource.String.abc_action_mode_done;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_activitychooserview_choose_application = global::VaxineApp.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_activity_chooser_view_see_all = global::VaxineApp.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_capital_off = global::VaxineApp.Droid.Resource.String.abc_capital_off;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_capital_on = global::VaxineApp.Droid.Resource.String.abc_capital_on;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_alt_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_ctrl_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_delete_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_enter_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_function_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_meta_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_shift_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_space_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_menu_sym_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_prepend_shortcut_label = global::VaxineApp.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_clear = global::VaxineApp.Droid.Resource.String.abc_searchview_description_clear;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_query = global::VaxineApp.Droid.Resource.String.abc_searchview_description_query;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_search = global::VaxineApp.Droid.Resource.String.abc_searchview_description_search;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_submit = global::VaxineApp.Droid.Resource.String.abc_searchview_description_submit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_searchview_description_voice = global::VaxineApp.Droid.Resource.String.abc_searchview_description_voice;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_search_hint = global::VaxineApp.Droid.Resource.String.abc_search_hint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_shareactionprovider_share_with = global::VaxineApp.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_shareactionprovider_share_with_application = global::VaxineApp.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.abc_toolbar_collapse_description = global::VaxineApp.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.appbar_scrolling_view_behavior = global::VaxineApp.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.bottom_sheet_behavior = global::VaxineApp.Droid.Resource.String.bottom_sheet_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.character_counter_content_description = global::VaxineApp.Droid.Resource.String.character_counter_content_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.character_counter_pattern = global::VaxineApp.Droid.Resource.String.character_counter_pattern;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.fab_transformation_scrim_behavior = global::VaxineApp.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.fab_transformation_sheet_behavior = global::VaxineApp.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.hide_bottom_view_on_scroll_behavior = global::VaxineApp.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.mtrl_chip_close_icon_content_description = global::VaxineApp.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.password_toggle_content_description = global::VaxineApp.Droid.Resource.String.password_toggle_content_description;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.path_password_eye = global::VaxineApp.Droid.Resource.String.path_password_eye;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.path_password_eye_mask_strike_through = global::VaxineApp.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.path_password_eye_mask_visible = global::VaxineApp.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.path_password_strike_through = global::VaxineApp.Droid.Resource.String.path_password_strike_through;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.search_menu_title = global::VaxineApp.Droid.Resource.String.search_menu_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.String.status_bar_notification_info_overflow = global::VaxineApp.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.AlertDialog_AppCompat = global::VaxineApp.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.AlertDialog_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Animation_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Animation_AppCompat_DropDownUp = global::VaxineApp.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Animation_AppCompat_Tooltip = global::VaxineApp.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Animation_Design_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_AlertDialog_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_AlertDialog_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Animation_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::VaxineApp.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Animation_AppCompat_Tooltip = global::VaxineApp.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_CardView = global::VaxineApp.Droid.Resource.Style.Base_CardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_DialogWindowTitle_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Button = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Large = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Small = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::VaxineApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V22_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V22_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V23_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V23_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V26_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V26_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::VaxineApp.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V28_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V28_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::VaxineApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::VaxineApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::VaxineApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionButton = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActionMode = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Button_Small = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_EditText = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ImageButton = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_RatingBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_SearchView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_SeekBar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Spinner = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_TextView = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Toolbar = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::VaxineApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_Design_TabLayout = global::VaxineApp.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_MaterialComponents_Chip = global::VaxineApp.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::VaxineApp.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::VaxineApp.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.CardView = global::VaxineApp.Droid.Resource.Style.CardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.CardView_Dark = global::VaxineApp.Droid.Resource.Style.CardView_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.CardView_Light = global::VaxineApp.Droid.Resource.Style.CardView_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_AppCompat = global::VaxineApp.Droid.Resource.Style.Platform_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_MaterialComponents = global::VaxineApp.Droid.Resource.Style.Platform_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_ThemeOverlay_AppCompat = global::VaxineApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::VaxineApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_V21_AppCompat = global::VaxineApp.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_V21_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_V25_AppCompat = global::VaxineApp.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_V25_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Platform_Widget_AppCompat_Spinner = global::VaxineApp.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::VaxineApp.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::VaxineApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::VaxineApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::VaxineApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Body1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Body2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Button = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Caption = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Display1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Display2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Display3 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Display4 = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Headline = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Large = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Medium = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Menu = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Small = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Subhead = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Tooltip = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::VaxineApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Info = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Time = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::VaxineApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Counter = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Counter_Overflow = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Error = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_HelperText = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Hint = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Snackbar_Message = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Design_Tab = global::VaxineApp.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Button = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Caption = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Chip = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Overline = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::VaxineApp.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::VaxineApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::VaxineApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::VaxineApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Dark = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::VaxineApp.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_CompactMenu = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_AppCompat_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design = global::VaxineApp.Droid.Resource.Style.Theme_Design;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_Light = global::VaxineApp.Droid.Resource.Style.Theme_Design_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_Light_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_Design_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_CompactMenu = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_NoActionBar = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::VaxineApp.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionButton = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActionMode = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ActivityChooserView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ButtonBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_Borderless = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_Colored = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Button_Small = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_EditText = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ImageButton = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionButton = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_SearchView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListMenuView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListPopupWindow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListView_DropDown = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ListView_Menu = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_PopupMenu = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_PopupWindow = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ProgressBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_RatingBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_RatingBar_Small = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_SearchView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_SeekBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Spinner = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_TextView = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_TextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Toolbar = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::VaxineApp.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Compat_NotificationActionContainer = global::VaxineApp.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Compat_NotificationActionText = global::VaxineApp.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_AppBarLayout = global::VaxineApp.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_BottomNavigationView = global::VaxineApp.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_BottomSheet_Modal = global::VaxineApp.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_CollapsingToolbar = global::VaxineApp.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_FloatingActionButton = global::VaxineApp.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_NavigationView = global::VaxineApp.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::VaxineApp.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_Snackbar = global::VaxineApp.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_TabLayout = global::VaxineApp.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Design_TextInputLayout = global::VaxineApp.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_CardView = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_ChipGroup = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Chip_Action = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_NavigationView = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Snackbar = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TabLayout = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_MaterialComponents_Toolbar = global::VaxineApp.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Style.Widget_Support_CoordinatorLayout = global::VaxineApp.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar = global::VaxineApp.Droid.Resource.Styleable.ActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBarLayout = global::VaxineApp.Droid.Resource.Styleable.ActionBarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::VaxineApp.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_background = global::VaxineApp.Droid.Resource.Styleable.ActionBar_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_backgroundSplit = global::VaxineApp.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_backgroundStacked = global::VaxineApp.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetEnd = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetLeft = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetRight = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetStart = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::VaxineApp.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_customNavigationLayout = global::VaxineApp.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_displayOptions = global::VaxineApp.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_divider = global::VaxineApp.Droid.Resource.Styleable.ActionBar_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_elevation = global::VaxineApp.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_height = global::VaxineApp.Droid.Resource.Styleable.ActionBar_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_hideOnContentScroll = global::VaxineApp.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_homeAsUpIndicator = global::VaxineApp.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_homeLayout = global::VaxineApp.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_icon = global::VaxineApp.Droid.Resource.Styleable.ActionBar_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_itemPadding = global::VaxineApp.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_logo = global::VaxineApp.Droid.Resource.Styleable.ActionBar_logo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_navigationMode = global::VaxineApp.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_popupTheme = global::VaxineApp.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_progressBarPadding = global::VaxineApp.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_progressBarStyle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_subtitle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_subtitleTextStyle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_title = global::VaxineApp.Droid.Resource.Styleable.ActionBar_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionBar_titleTextStyle = global::VaxineApp.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMenuItemView = global::VaxineApp.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMenuItemView_android_minWidth = global::VaxineApp.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMenuView = global::VaxineApp.Droid.Resource.Styleable.ActionMenuView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode = global::VaxineApp.Droid.Resource.Styleable.ActionMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_background = global::VaxineApp.Droid.Resource.Styleable.ActionMode_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_backgroundSplit = global::VaxineApp.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_closeItemLayout = global::VaxineApp.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_height = global::VaxineApp.Droid.Resource.Styleable.ActionMode_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_subtitleTextStyle = global::VaxineApp.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActionMode_titleTextStyle = global::VaxineApp.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActivityChooserView = global::VaxineApp.Droid.Resource.Styleable.ActivityChooserView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::VaxineApp.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ActivityChooserView_initialActivityCount = global::VaxineApp.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog = global::VaxineApp.Droid.Resource.Styleable.AlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_android_layout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_buttonIconDimen = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_listItemLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_listLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_showTitle = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::VaxineApp.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableItem = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::VaxineApp.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates_state_liftable = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayoutStates_state_lifted = global::VaxineApp.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_android_background = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_elevation = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_expanded = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_Layout = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppBarLayout_liftOnScroll = global::VaxineApp.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView_android_src = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView_srcCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView_tint = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatImageView_tintMode = global::VaxineApp.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar_android_thumb = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar_tickMark = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::VaxineApp.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_android_textAppearance = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableTint = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableTintMode = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_fontFamily = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_lineHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_textAllCaps = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTextView_textLocale = global::VaxineApp.Droid.Resource.Styleable.AppCompatTextView_textLocale;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarDivider = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarSize = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_checkboxStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorAccent = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorControlActivated = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorControlNormal = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorError = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorPrimary = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_controlBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dialogTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dividerVertical = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_editTextBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_editTextColor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_editTextStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_panelBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_searchViewStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_seekBarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_spinnerStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_switchStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_toolbarStyle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowActionBar = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.AppCompatTheme_windowNoTitle = global::VaxineApp.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_backgroundTint = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_fabCradleMargin = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomAppBar_hideOnScroll = global::VaxineApp.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_elevation = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_itemBackground = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_itemIconSize = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_itemIconTint = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_itemTextColor = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomNavigationView_menu = global::VaxineApp.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::VaxineApp.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ButtonBarLayout = global::VaxineApp.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ButtonBarLayout_allowStacking = global::VaxineApp.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView = global::VaxineApp.Droid.Resource.Styleable.CardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_android_minHeight = global::VaxineApp.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_android_minWidth = global::VaxineApp.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardCornerRadius = global::VaxineApp.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardElevation = global::VaxineApp.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardMaxElevation = global::VaxineApp.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardPreventCornerOverlap = global::VaxineApp.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_cardUseCompatPadding = global::VaxineApp.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPadding = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPaddingBottom = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPaddingLeft = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPaddingRight = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CardView_contentPaddingTop = global::VaxineApp.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip = global::VaxineApp.Droid.Resource.Styleable.Chip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup = global::VaxineApp.Droid.Resource.Styleable.ChipGroup;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_checkedChip = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_chipSpacing = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_chipSpacingVertical = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_singleLine = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ChipGroup_singleSelection = global::VaxineApp.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_checkable = global::VaxineApp.Droid.Resource.Styleable.Chip_android_checkable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_ellipsize = global::VaxineApp.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_maxWidth = global::VaxineApp.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_text = global::VaxineApp.Droid.Resource.Styleable.Chip_android_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_android_textAppearance = global::VaxineApp.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_checkedIcon = global::VaxineApp.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_checkedIconEnabled = global::VaxineApp.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_checkedIconVisible = global::VaxineApp.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipCornerRadius = global::VaxineApp.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipEndPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIcon = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIconEnabled = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIconSize = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIconTint = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipIconVisible = global::VaxineApp.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipMinHeight = global::VaxineApp.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipStartPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipStrokeColor = global::VaxineApp.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_chipStrokeWidth = global::VaxineApp.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIcon = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconEnabled = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconEndPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconSize = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconStartPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconTint = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_closeIconVisible = global::VaxineApp.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_hideMotionSpec = global::VaxineApp.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_iconEndPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_iconStartPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_rippleColor = global::VaxineApp.Droid.Resource.Styleable.Chip_rippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_showMotionSpec = global::VaxineApp.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_textEndPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Chip_textStartPadding = global::VaxineApp.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_Layout = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_title = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::VaxineApp.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ColorStateListItem = global::VaxineApp.Droid.Resource.Styleable.ColorStateListItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ColorStateListItem_alpha = global::VaxineApp.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ColorStateListItem_android_alpha = global::VaxineApp.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ColorStateListItem_android_color = global::VaxineApp.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton = global::VaxineApp.Droid.Resource.Styleable.CompoundButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton_android_button = global::VaxineApp.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton_buttonCompat = global::VaxineApp.Droid.Resource.Styleable.CompoundButton_buttonCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton_buttonTint = global::VaxineApp.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CompoundButton_buttonTintMode = global::VaxineApp.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_keylines = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::VaxineApp.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_barLength = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_color = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_drawableSize = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_spinBars = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.DrawerArrowToggle_thickness = global::VaxineApp.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_backgroundTint = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_borderWidth = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_elevation = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_fabCustomSize = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_fabSize = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_maxImageSize = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_rippleColor = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_showMotionSpec = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FloatingActionButton_useCompatPadding = global::VaxineApp.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FlowLayout = global::VaxineApp.Droid.Resource.Styleable.FlowLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FlowLayout_itemSpacing = global::VaxineApp.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FlowLayout_lineSpacing = global::VaxineApp.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily = global::VaxineApp.Droid.Resource.Styleable.FontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_font = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_fontStyle = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_fontWeight = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_font = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_fontStyle = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_fontWeight = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamilyFont_ttcIndex = global::VaxineApp.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderAuthority = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderCerts = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderPackage = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.FontFamily_fontProviderQuery = global::VaxineApp.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ForegroundLinearLayout = global::VaxineApp.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::VaxineApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::VaxineApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::VaxineApp.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor = global::VaxineApp.Droid.Resource.Styleable.GradientColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColorItem = global::VaxineApp.Droid.Resource.Styleable.GradientColorItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColorItem_android_color = global::VaxineApp.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColorItem_android_offset = global::VaxineApp.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_centerColor = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_centerX = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_centerY = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_endColor = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_endX = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_endY = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_gradientRadius = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_startColor = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_startX = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_startY = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_tileMode = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.GradientColor_android_type = global::VaxineApp.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_gravity = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_orientation = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_divider = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.LinearLayoutCompat_showDividers = global::VaxineApp.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ListPopupWindow = global::VaxineApp.Droid.Resource.Styleable.ListPopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::VaxineApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::VaxineApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton = global::VaxineApp.Droid.Resource.Styleable.MaterialButton;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_android_insetBottom = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_android_insetLeft = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_android_insetRight = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_android_insetTop = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_backgroundTint = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_backgroundTintMode = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_cornerRadius = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_icon = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconGravity = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconPadding = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconSize = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconTint = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_iconTintMode = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_rippleColor = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_strokeColor = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialButton_strokeWidth = global::VaxineApp.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialCardView = global::VaxineApp.Droid.Resource.Styleable.MaterialCardView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialCardView_strokeColor = global::VaxineApp.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MaterialCardView_strokeWidth = global::VaxineApp.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup = global::VaxineApp.Droid.Resource.Styleable.MenuGroup;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_checkableBehavior = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_enabled = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_id = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_menuCategory = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_orderInCategory = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuGroup_android_visible = global::VaxineApp.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem = global::VaxineApp.Droid.Resource.Styleable.MenuItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_actionLayout = global::VaxineApp.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_actionProviderClass = global::VaxineApp.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_actionViewClass = global::VaxineApp.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_alphabeticModifiers = global::VaxineApp.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_checkable = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_checked = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_enabled = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_icon = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_id = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_menuCategory = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_numericShortcut = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_onClick = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_orderInCategory = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_title = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_titleCondensed = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_android_visible = global::VaxineApp.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_contentDescription = global::VaxineApp.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_iconTint = global::VaxineApp.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_iconTintMode = global::VaxineApp.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_numericModifiers = global::VaxineApp.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_showAsAction = global::VaxineApp.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuItem_tooltipText = global::VaxineApp.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView = global::VaxineApp.Droid.Resource.Styleable.MenuView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_headerBackground = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_horizontalDivider = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_itemBackground = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_itemTextAppearance = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_verticalDivider = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_android_windowAnimationStyle = global::VaxineApp.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_preserveIconSpacing = global::VaxineApp.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.MenuView_subMenuArrow = global::VaxineApp.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView = global::VaxineApp.Droid.Resource.Styleable.NavigationView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_android_background = global::VaxineApp.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::VaxineApp.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_android_maxWidth = global::VaxineApp.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_elevation = global::VaxineApp.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_headerLayout = global::VaxineApp.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemBackground = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemHorizontalPadding = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemIconPadding = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemIconTint = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemTextAppearance = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_itemTextColor = global::VaxineApp.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.NavigationView_menu = global::VaxineApp.Droid.Resource.Styleable.NavigationView_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindow = global::VaxineApp.Droid.Resource.Styleable.PopupWindow;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindowBackgroundState = global::VaxineApp.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::VaxineApp.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::VaxineApp.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindow_android_popupBackground = global::VaxineApp.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.PopupWindow_overlapAnchor = global::VaxineApp.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecycleListView = global::VaxineApp.Droid.Resource.Styleable.RecycleListView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::VaxineApp.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::VaxineApp.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView = global::VaxineApp.Droid.Resource.Styleable.RecyclerView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_android_clipToPadding = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_android_descendantFocusability = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_android_orientation = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollEnabled = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_layoutManager = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_reverseLayout = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_spanCount = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_stackFromEnd = global::VaxineApp.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ScrimInsetsFrameLayout = global::VaxineApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::VaxineApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ScrollingViewBehavior_Layout = global::VaxineApp.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::VaxineApp.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView = global::VaxineApp.Droid.Resource.Styleable.SearchView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_android_focusable = global::VaxineApp.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_android_imeOptions = global::VaxineApp.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_android_inputType = global::VaxineApp.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_android_maxWidth = global::VaxineApp.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_closeIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_commitIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_defaultQueryHint = global::VaxineApp.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_goIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_iconifiedByDefault = global::VaxineApp.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_layout = global::VaxineApp.Droid.Resource.Styleable.SearchView_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_queryBackground = global::VaxineApp.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_queryHint = global::VaxineApp.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_searchHintIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_searchIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_submitBackground = global::VaxineApp.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_suggestionRowLayout = global::VaxineApp.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SearchView_voiceIcon = global::VaxineApp.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Snackbar = global::VaxineApp.Droid.Resource.Styleable.Snackbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SnackbarLayout = global::VaxineApp.Droid.Resource.Styleable.SnackbarLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SnackbarLayout_android_maxWidth = global::VaxineApp.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SnackbarLayout_elevation = global::VaxineApp.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::VaxineApp.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Snackbar_snackbarButtonStyle = global::VaxineApp.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Snackbar_snackbarStyle = global::VaxineApp.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner = global::VaxineApp.Droid.Resource.Styleable.Spinner;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_android_dropDownWidth = global::VaxineApp.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_android_entries = global::VaxineApp.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_android_popupBackground = global::VaxineApp.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_android_prompt = global::VaxineApp.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Spinner_popupTheme = global::VaxineApp.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawableItem = global::VaxineApp.Droid.Resource.Styleable.StateListDrawableItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawableItem_android_drawable = global::VaxineApp.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_constantSize = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_dither = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_variablePadding = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.StateListDrawable_android_visible = global::VaxineApp.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_android_textOff = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_android_textOn = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_android_thumb = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_showText = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_splitTrack = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_switchMinWidth = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_switchPadding = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_switchTextAppearance = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_thumbTextPadding = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_thumbTint = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_thumbTintMode = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_track = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_trackTint = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.SwitchCompat_trackTintMode = global::VaxineApp.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabItem = global::VaxineApp.Droid.Resource.Styleable.TabItem;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabItem_android_icon = global::VaxineApp.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabItem_android_layout = global::VaxineApp.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabItem_android_text = global::VaxineApp.Droid.Resource.Styleable.TabItem_android_text;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout = global::VaxineApp.Droid.Resource.Styleable.TabLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabBackground = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabContentStart = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabGravity = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIconTint = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIconTintMode = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicator = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorColor = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorGravity = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabIndicatorHeight = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabInlineLabel = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabMaxWidth = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabMinWidth = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabMode = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPadding = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPaddingBottom = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPaddingEnd = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPaddingStart = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabPaddingTop = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabRippleColor = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabSelectedTextColor = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabTextColor = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TabLayout_tabUnboundedRipple = global::VaxineApp.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_fontFamily = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_shadowColor = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_shadowDx = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_shadowDy = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_shadowRadius = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textColor = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textColorHint = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textColorLink = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textFontWeight = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textSize = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_textStyle = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_android_typeface = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_fontFamily = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_fontVariationSettings = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_textAllCaps = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextAppearance_textLocale = global::VaxineApp.Droid.Resource.Styleable.TextAppearance_textLocale;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_android_hint = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_android_textColorHint = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxStrokeColor = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_counterEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_counterMaxLength = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_counterTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_errorEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_errorTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_helperText = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_helperTextEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_hintEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_hintTextAppearance = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleTint = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::VaxineApp.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ThemeEnforcement = global::VaxineApp.Droid.Resource.Styleable.ThemeEnforcement;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::VaxineApp.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::VaxineApp.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::VaxineApp.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar = global::VaxineApp.Droid.Resource.Styleable.Toolbar;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_android_gravity = global::VaxineApp.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_android_minHeight = global::VaxineApp.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_buttonGravity = global::VaxineApp.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_collapseContentDescription = global::VaxineApp.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_collapseIcon = global::VaxineApp.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetEnd = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetLeft = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetRight = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetStart = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::VaxineApp.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_logo = global::VaxineApp.Droid.Resource.Styleable.Toolbar_logo;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_logoDescription = global::VaxineApp.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_maxButtonHeight = global::VaxineApp.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_menu = global::VaxineApp.Droid.Resource.Styleable.Toolbar_menu;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_navigationContentDescription = global::VaxineApp.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_navigationIcon = global::VaxineApp.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_popupTheme = global::VaxineApp.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_subtitle = global::VaxineApp.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_subtitleTextAppearance = global::VaxineApp.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_subtitleTextColor = global::VaxineApp.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_title = global::VaxineApp.Droid.Resource.Styleable.Toolbar_title;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMargin = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMarginBottom = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMarginEnd = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMargins = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMarginStart = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleMarginTop = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleTextAppearance = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.Toolbar_titleTextColor = global::VaxineApp.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View = global::VaxineApp.Droid.Resource.Styleable.View;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewBackgroundHelper = global::VaxineApp.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewBackgroundHelper_android_background = global::VaxineApp.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::VaxineApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::VaxineApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewStubCompat = global::VaxineApp.Droid.Resource.Styleable.ViewStubCompat;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewStubCompat_android_id = global::VaxineApp.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewStubCompat_android_inflatedId = global::VaxineApp.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.ViewStubCompat_android_layout = global::VaxineApp.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_android_focusable = global::VaxineApp.Droid.Resource.Styleable.View_android_focusable;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_android_theme = global::VaxineApp.Droid.Resource.Styleable.View_android_theme;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_paddingEnd = global::VaxineApp.Droid.Resource.Styleable.View_paddingEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_paddingStart = global::VaxineApp.Droid.Resource.Styleable.View_paddingStart;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.View_theme = global::VaxineApp.Droid.Resource.Styleable.View_theme;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.pickerBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerBorderColor = global::VaxineApp.Droid.Resource.Attribute.pickerBorderColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerColumnHeaderBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.pickerColumnHeaderBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerColumnHeaderHeight = global::VaxineApp.Droid.Resource.Attribute.pickerColumnHeaderHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerColumnHeaderTextColor = global::VaxineApp.Droid.Resource.Attribute.pickerColumnHeaderTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerColumnHeaderTextSize = global::VaxineApp.Droid.Resource.Attribute.pickerColumnHeaderTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerEnableLooping = global::VaxineApp.Droid.Resource.Attribute.pickerEnableLooping;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerFooterHeight = global::VaxineApp.Droid.Resource.Attribute.pickerFooterHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderBackgroundColor = global::VaxineApp.Droid.Resource.Attribute.pickerHeaderBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderHeight = global::VaxineApp.Droid.Resource.Attribute.pickerHeaderHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderText = global::VaxineApp.Droid.Resource.Attribute.pickerHeaderText;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderTextColor = global::VaxineApp.Droid.Resource.Attribute.pickerHeaderTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderTextSize = global::VaxineApp.Droid.Resource.Attribute.pickerHeaderTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeight = global::VaxineApp.Droid.Resource.Attribute.pickerHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerIsOpen = global::VaxineApp.Droid.Resource.Attribute.pickerIsOpen;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerItemHeight = global::VaxineApp.Droid.Resource.Attribute.pickerItemHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerMode = global::VaxineApp.Droid.Resource.Attribute.pickerMode;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerSelectedItemTextSize = global::VaxineApp.Droid.Resource.Attribute.pickerSelectedItemTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerSelectedItemTextcolor = global::VaxineApp.Droid.Resource.Attribute.pickerSelectedItemTextcolor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerSelectionBorderColor = global::VaxineApp.Droid.Resource.Attribute.pickerSelectionBorderColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerShowColumnHeader = global::VaxineApp.Droid.Resource.Attribute.pickerShowColumnHeader;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerShowFooter = global::VaxineApp.Droid.Resource.Attribute.pickerShowFooter;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerShowHeader = global::VaxineApp.Droid.Resource.Attribute.pickerShowHeader;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerUnselectedItemTextColor = global::VaxineApp.Droid.Resource.Attribute.pickerUnselectedItemTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerUnselectedItemTextSize = global::VaxineApp.Droid.Resource.Attribute.pickerUnselectedItemTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerWidth = global::VaxineApp.Droid.Resource.Attribute.pickerWidth;
+			global::Com.Syncfusion.SfPicker.Resource.Id.Default = global::VaxineApp.Droid.Resource.Id.Default;
+			global::Com.Syncfusion.SfPicker.Resource.Id.Dialog = global::VaxineApp.Droid.Resource.Id.Dialog;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker = global::VaxineApp.Droid.Resource.Styleable.SfPicker;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerBorderColor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerBorderColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerColumnHeaderBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerColumnHeaderBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerColumnHeaderHeight = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerColumnHeaderHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerColumnHeaderTextColor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerColumnHeaderTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerColumnHeaderTextSize = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerColumnHeaderTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerEnableLooping = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerEnableLooping;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerFooterHeight = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerFooterHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderBackgroundColor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerHeaderBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderHeight = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerHeaderHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderText = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerHeaderText;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderTextColor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerHeaderTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderTextSize = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerHeaderTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeight = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerIsOpen = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerIsOpen;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerItemHeight = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerItemHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerMode = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerMode;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerSelectedItemTextSize = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerSelectedItemTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerSelectedItemTextcolor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerSelectedItemTextcolor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerSelectionBorderColor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerSelectionBorderColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerShowColumnHeader = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerShowColumnHeader;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerShowFooter = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerShowFooter;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerShowHeader = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerShowHeader;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerUnselectedItemTextColor = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerUnselectedItemTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerUnselectedItemTextSize = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerUnselectedItemTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerWidth = global::VaxineApp.Droid.Resource.Styleable.SfPicker_pickerWidth;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.Drawable.popup_forms_android_close_icon = global::VaxineApp.Droid.Resource.Drawable.popup_forms_android_close_icon;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.Drawable.popup_forms_android_shadow = global::VaxineApp.Droid.Resource.Drawable.popup_forms_android_shadow;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.Drawable.popup_forms_dark_theme_close_icon = global::VaxineApp.Droid.Resource.Drawable.popup_forms_dark_theme_close_icon;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.Drawable.popup_forms_light_theme_close_icon = global::VaxineApp.Droid.Resource.Drawable.popup_forms_light_theme_close_icon;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.Id.BorderView = global::VaxineApp.Droid.Resource.Id.BorderView;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.String.accept = global::VaxineApp.Droid.Resource.String.accept;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.String.decline = global::VaxineApp.Droid.Resource.String.decline;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.String.library_name = global::VaxineApp.Droid.Resource.String.library_name;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.String.popup_message = global::VaxineApp.Droid.Resource.String.popup_message;
+			global::Syncfusion.XForms.Android.PopupLayout.Resource.String.title = global::VaxineApp.Droid.Resource.String.title;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_fade_in = global::VaxineApp.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_fade_out = global::VaxineApp.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_grow_fade_in_from_bottom = global::VaxineApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -20822,11 +23559,11 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0x7F0300D3
 			public const int cornerFamilyTopRight = 2130903251;
 			
-			// aapt resource value: 0x7F0300DA
-			public const int cornerradius = 2130903258;
-			
 			// aapt resource value: 0x7F0300D4
 			public const int cornerRadius = 2130903252;
+			
+			// aapt resource value: 0x7F0300DA
+			public const int cornerradius = 2130903258;
 			
 			// aapt resource value: 0x7F0300D5
 			public const int cornerSize = 2130903253;
@@ -21597,706 +24334,784 @@ namespace VaxineApp.Droid
 			public const int passwordToggleTintMode = 2130903509;
 			
 			// aapt resource value: 0x7F0301D6
-			public const int placeholderText = 2130903510;
+			public const int pickerBackgroundColor = 2130903510;
 			
 			// aapt resource value: 0x7F0301D7
-			public const int placeholderTextAppearance = 2130903511;
+			public const int pickerBorderColor = 2130903511;
 			
 			// aapt resource value: 0x7F0301D8
-			public const int placeholderTextColor = 2130903512;
+			public const int pickerColumnHeaderBackgroundColor = 2130903512;
 			
 			// aapt resource value: 0x7F0301D9
-			public const int popupMenuBackground = 2130903513;
+			public const int pickerColumnHeaderHeight = 2130903513;
 			
 			// aapt resource value: 0x7F0301DA
-			public const int popupMenuStyle = 2130903514;
+			public const int pickerColumnHeaderTextColor = 2130903514;
 			
 			// aapt resource value: 0x7F0301DB
-			public const int popupTheme = 2130903515;
+			public const int pickerColumnHeaderTextSize = 2130903515;
 			
 			// aapt resource value: 0x7F0301DC
-			public const int popupWindowStyle = 2130903516;
+			public const int pickerEnableLooping = 2130903516;
 			
 			// aapt resource value: 0x7F0301DD
-			public const int prefixText = 2130903517;
+			public const int pickerFooterHeight = 2130903517;
 			
 			// aapt resource value: 0x7F0301DE
-			public const int prefixTextAppearance = 2130903518;
+			public const int pickerHeaderBackgroundColor = 2130903518;
 			
 			// aapt resource value: 0x7F0301DF
-			public const int prefixTextColor = 2130903519;
+			public const int pickerHeaderHeight = 2130903519;
 			
 			// aapt resource value: 0x7F0301E0
-			public const int preserveIconSpacing = 2130903520;
+			public const int pickerHeaderText = 2130903520;
 			
 			// aapt resource value: 0x7F0301E1
-			public const int pressedTranslationZ = 2130903521;
+			public const int pickerHeaderTextColor = 2130903521;
 			
 			// aapt resource value: 0x7F0301E2
-			public const int progressBarPadding = 2130903522;
+			public const int pickerHeaderTextSize = 2130903522;
 			
 			// aapt resource value: 0x7F0301E3
-			public const int progressBarStyle = 2130903523;
+			public const int pickerHeight = 2130903523;
 			
 			// aapt resource value: 0x7F0301E4
-			public const int queryBackground = 2130903524;
+			public const int pickerIsOpen = 2130903524;
 			
 			// aapt resource value: 0x7F0301E5
-			public const int queryHint = 2130903525;
+			public const int pickerItemHeight = 2130903525;
 			
 			// aapt resource value: 0x7F0301E6
-			public const int radioButtonStyle = 2130903526;
-			
-			// aapt resource value: 0x7F0301E7
-			public const int rangeFillColor = 2130903527;
+			public const int pickerMode = 2130903526;
 			
 			// aapt resource value: 0x7F0301E8
-			public const int ratingBarStyle = 2130903528;
+			public const int pickerSelectedItemTextcolor = 2130903528;
+			
+			// aapt resource value: 0x7F0301E7
+			public const int pickerSelectedItemTextSize = 2130903527;
 			
 			// aapt resource value: 0x7F0301E9
-			public const int ratingBarStyleIndicator = 2130903529;
+			public const int pickerSelectionBorderColor = 2130903529;
 			
 			// aapt resource value: 0x7F0301EA
-			public const int ratingBarStyleSmall = 2130903530;
+			public const int pickerShowColumnHeader = 2130903530;
 			
 			// aapt resource value: 0x7F0301EB
-			public const int recyclerViewStyle = 2130903531;
+			public const int pickerShowFooter = 2130903531;
 			
 			// aapt resource value: 0x7F0301EC
-			public const int reverseLayout = 2130903532;
+			public const int pickerShowHeader = 2130903532;
 			
 			// aapt resource value: 0x7F0301ED
-			public const int rippleColor = 2130903533;
+			public const int pickerUnselectedItemTextColor = 2130903533;
 			
 			// aapt resource value: 0x7F0301EE
-			public const int scopeUris = 2130903534;
+			public const int pickerUnselectedItemTextSize = 2130903534;
 			
 			// aapt resource value: 0x7F0301EF
-			public const int scrimAnimationDuration = 2130903535;
+			public const int pickerWidth = 2130903535;
 			
 			// aapt resource value: 0x7F0301F0
-			public const int scrimBackground = 2130903536;
+			public const int placeholderText = 2130903536;
 			
 			// aapt resource value: 0x7F0301F1
-			public const int scrimVisibleHeightTrigger = 2130903537;
+			public const int placeholderTextAppearance = 2130903537;
 			
 			// aapt resource value: 0x7F0301F2
-			public const int scrollViewStyle = 2130903538;
+			public const int placeholderTextColor = 2130903538;
 			
 			// aapt resource value: 0x7F0301F3
-			public const int searchHintIcon = 2130903539;
+			public const int popupMenuBackground = 2130903539;
 			
 			// aapt resource value: 0x7F0301F4
-			public const int searchIcon = 2130903540;
+			public const int popupMenuStyle = 2130903540;
 			
 			// aapt resource value: 0x7F0301F5
-			public const int searchViewStyle = 2130903541;
+			public const int popupTheme = 2130903541;
 			
 			// aapt resource value: 0x7F0301F6
-			public const int seekBarStyle = 2130903542;
+			public const int popupWindowStyle = 2130903542;
 			
 			// aapt resource value: 0x7F0301F7
-			public const int segmentBackColor = 2130903543;
+			public const int prefixText = 2130903543;
 			
 			// aapt resource value: 0x7F0301F8
-			public const int segmentBorderColor = 2130903544;
+			public const int prefixTextAppearance = 2130903544;
 			
 			// aapt resource value: 0x7F0301F9
-			public const int segmentBorderThickness = 2130903545;
+			public const int prefixTextColor = 2130903545;
 			
 			// aapt resource value: 0x7F0301FA
-			public const int segmentColor = 2130903546;
+			public const int preserveIconSpacing = 2130903546;
 			
 			// aapt resource value: 0x7F0301FB
-			public const int segmentCornerRadius = 2130903547;
+			public const int pressedTranslationZ = 2130903547;
 			
 			// aapt resource value: 0x7F0301FC
-			public const int segmentDisplayMode = 2130903548;
-			
-			// aapt resource value: 0x7F030200
-			public const int segmentedHeight = 2130903552;
-			
-			// aapt resource value: 0x7F030201
-			public const int segmentedPadding = 2130903553;
-			
-			// aapt resource value: 0x7F030202
-			public const int segmentedWidth = 2130903554;
+			public const int progressBarPadding = 2130903548;
 			
 			// aapt resource value: 0x7F0301FD
-			public const int segmentPosition = 2130903549;
+			public const int progressBarStyle = 2130903549;
 			
 			// aapt resource value: 0x7F0301FE
-			public const int segmentSelectedIndex = 2130903550;
+			public const int queryBackground = 2130903550;
 			
 			// aapt resource value: 0x7F0301FF
-			public const int segmentStrokeThickness = 2130903551;
+			public const int queryHint = 2130903551;
+			
+			// aapt resource value: 0x7F030200
+			public const int radioButtonStyle = 2130903552;
+			
+			// aapt resource value: 0x7F030201
+			public const int rangeFillColor = 2130903553;
+			
+			// aapt resource value: 0x7F030202
+			public const int ratingBarStyle = 2130903554;
 			
 			// aapt resource value: 0x7F030203
-			public const int selectableItemBackground = 2130903555;
+			public const int ratingBarStyleIndicator = 2130903555;
 			
 			// aapt resource value: 0x7F030204
-			public const int selectableItemBackgroundBorderless = 2130903556;
+			public const int ratingBarStyleSmall = 2130903556;
 			
 			// aapt resource value: 0x7F030205
-			public const int selectionRequired = 2130903557;
+			public const int recyclerViewStyle = 2130903557;
 			
 			// aapt resource value: 0x7F030206
-			public const int shapeAppearance = 2130903558;
+			public const int reverseLayout = 2130903558;
 			
 			// aapt resource value: 0x7F030207
-			public const int shapeAppearanceLargeComponent = 2130903559;
+			public const int rippleColor = 2130903559;
 			
 			// aapt resource value: 0x7F030208
-			public const int shapeAppearanceMediumComponent = 2130903560;
+			public const int scopeUris = 2130903560;
 			
 			// aapt resource value: 0x7F030209
-			public const int shapeAppearanceOverlay = 2130903561;
+			public const int scrimAnimationDuration = 2130903561;
 			
 			// aapt resource value: 0x7F03020A
-			public const int shapeAppearanceSmallComponent = 2130903562;
+			public const int scrimBackground = 2130903562;
 			
 			// aapt resource value: 0x7F03020B
-			public const int showAsAction = 2130903563;
+			public const int scrimVisibleHeightTrigger = 2130903563;
 			
 			// aapt resource value: 0x7F03020C
-			public const int showDividers = 2130903564;
+			public const int scrollViewStyle = 2130903564;
 			
 			// aapt resource value: 0x7F03020D
-			public const int showMotionSpec = 2130903565;
+			public const int searchHintIcon = 2130903565;
 			
 			// aapt resource value: 0x7F03020E
-			public const int showText = 2130903566;
+			public const int searchIcon = 2130903566;
 			
 			// aapt resource value: 0x7F03020F
-			public const int showTitle = 2130903567;
+			public const int searchViewStyle = 2130903567;
 			
 			// aapt resource value: 0x7F030210
-			public const int shrinkMotionSpec = 2130903568;
+			public const int seekBarStyle = 2130903568;
 			
 			// aapt resource value: 0x7F030211
-			public const int singleChoiceItemLayout = 2130903569;
+			public const int segmentBackColor = 2130903569;
 			
 			// aapt resource value: 0x7F030212
-			public const int singleLine = 2130903570;
+			public const int segmentBorderColor = 2130903570;
 			
 			// aapt resource value: 0x7F030213
-			public const int singleSelection = 2130903571;
+			public const int segmentBorderThickness = 2130903571;
 			
 			// aapt resource value: 0x7F030214
-			public const int sliderStyle = 2130903572;
+			public const int segmentColor = 2130903572;
 			
 			// aapt resource value: 0x7F030215
-			public const int snackbarButtonStyle = 2130903573;
+			public const int segmentCornerRadius = 2130903573;
 			
 			// aapt resource value: 0x7F030216
-			public const int snackbarStyle = 2130903574;
-			
-			// aapt resource value: 0x7F030217
-			public const int snackbarTextViewStyle = 2130903575;
-			
-			// aapt resource value: 0x7F030218
-			public const int spanCount = 2130903576;
-			
-			// aapt resource value: 0x7F030219
-			public const int spinBars = 2130903577;
+			public const int segmentDisplayMode = 2130903574;
 			
 			// aapt resource value: 0x7F03021A
-			public const int spinnerDropDownItemStyle = 2130903578;
+			public const int segmentedHeight = 2130903578;
 			
 			// aapt resource value: 0x7F03021B
-			public const int spinnerStyle = 2130903579;
+			public const int segmentedPadding = 2130903579;
 			
 			// aapt resource value: 0x7F03021C
-			public const int splitTrack = 2130903580;
+			public const int segmentedWidth = 2130903580;
+			
+			// aapt resource value: 0x7F030217
+			public const int segmentPosition = 2130903575;
+			
+			// aapt resource value: 0x7F030218
+			public const int segmentSelectedIndex = 2130903576;
+			
+			// aapt resource value: 0x7F030219
+			public const int segmentStrokeThickness = 2130903577;
 			
 			// aapt resource value: 0x7F03021D
-			public const int srcCompat = 2130903581;
+			public const int selectableItemBackground = 2130903581;
 			
 			// aapt resource value: 0x7F03021E
-			public const int stackFromEnd = 2130903582;
+			public const int selectableItemBackgroundBorderless = 2130903582;
 			
 			// aapt resource value: 0x7F03021F
-			public const int startIconCheckable = 2130903583;
+			public const int selectionRequired = 2130903583;
 			
 			// aapt resource value: 0x7F030220
-			public const int startIconContentDescription = 2130903584;
+			public const int shapeAppearance = 2130903584;
 			
 			// aapt resource value: 0x7F030221
-			public const int startIconDrawable = 2130903585;
+			public const int shapeAppearanceLargeComponent = 2130903585;
 			
 			// aapt resource value: 0x7F030222
-			public const int startIconTint = 2130903586;
+			public const int shapeAppearanceMediumComponent = 2130903586;
 			
 			// aapt resource value: 0x7F030223
-			public const int startIconTintMode = 2130903587;
+			public const int shapeAppearanceOverlay = 2130903587;
 			
 			// aapt resource value: 0x7F030224
-			public const int state_above_anchor = 2130903588;
+			public const int shapeAppearanceSmallComponent = 2130903588;
 			
 			// aapt resource value: 0x7F030225
-			public const int state_collapsed = 2130903589;
+			public const int showAsAction = 2130903589;
 			
 			// aapt resource value: 0x7F030226
-			public const int state_collapsible = 2130903590;
+			public const int showDividers = 2130903590;
 			
 			// aapt resource value: 0x7F030227
-			public const int state_dragged = 2130903591;
+			public const int showMotionSpec = 2130903591;
 			
 			// aapt resource value: 0x7F030228
-			public const int state_indeterminate = 2130903592;
+			public const int showText = 2130903592;
 			
 			// aapt resource value: 0x7F030229
-			public const int state_liftable = 2130903593;
+			public const int showTitle = 2130903593;
 			
 			// aapt resource value: 0x7F03022A
-			public const int state_lifted = 2130903594;
+			public const int shrinkMotionSpec = 2130903594;
 			
 			// aapt resource value: 0x7F03022B
-			public const int statusBarBackground = 2130903595;
+			public const int singleChoiceItemLayout = 2130903595;
 			
 			// aapt resource value: 0x7F03022C
-			public const int statusBarForeground = 2130903596;
+			public const int singleLine = 2130903596;
 			
 			// aapt resource value: 0x7F03022D
-			public const int statusBarScrim = 2130903597;
+			public const int singleSelection = 2130903597;
 			
 			// aapt resource value: 0x7F03022E
-			public const int strokeColor = 2130903598;
+			public const int sliderStyle = 2130903598;
 			
 			// aapt resource value: 0x7F03022F
-			public const int strokeWidth = 2130903599;
+			public const int snackbarButtonStyle = 2130903599;
 			
 			// aapt resource value: 0x7F030230
-			public const int subMenuArrow = 2130903600;
+			public const int snackbarStyle = 2130903600;
 			
 			// aapt resource value: 0x7F030231
-			public const int submitBackground = 2130903601;
+			public const int snackbarTextViewStyle = 2130903601;
 			
 			// aapt resource value: 0x7F030232
-			public const int subtitle = 2130903602;
+			public const int spanCount = 2130903602;
 			
 			// aapt resource value: 0x7F030233
-			public const int subtitleTextAppearance = 2130903603;
+			public const int spinBars = 2130903603;
 			
 			// aapt resource value: 0x7F030234
-			public const int subtitleTextColor = 2130903604;
+			public const int spinnerDropDownItemStyle = 2130903604;
 			
 			// aapt resource value: 0x7F030235
-			public const int subtitleTextStyle = 2130903605;
+			public const int spinnerStyle = 2130903605;
 			
 			// aapt resource value: 0x7F030236
-			public const int suffixText = 2130903606;
+			public const int splitTrack = 2130903606;
 			
 			// aapt resource value: 0x7F030237
-			public const int suffixTextAppearance = 2130903607;
+			public const int srcCompat = 2130903607;
 			
 			// aapt resource value: 0x7F030238
-			public const int suffixTextColor = 2130903608;
+			public const int stackFromEnd = 2130903608;
 			
 			// aapt resource value: 0x7F030239
-			public const int suggestionRowLayout = 2130903609;
+			public const int startIconCheckable = 2130903609;
 			
 			// aapt resource value: 0x7F03023A
-			public const int swipeRefreshLayoutProgressSpinnerBackgroundColor = 2130903610;
+			public const int startIconContentDescription = 2130903610;
 			
 			// aapt resource value: 0x7F03023B
-			public const int switchMinWidth = 2130903611;
+			public const int startIconDrawable = 2130903611;
 			
 			// aapt resource value: 0x7F03023C
-			public const int switchPadding = 2130903612;
+			public const int startIconTint = 2130903612;
 			
 			// aapt resource value: 0x7F03023D
-			public const int switchStyle = 2130903613;
+			public const int startIconTintMode = 2130903613;
 			
 			// aapt resource value: 0x7F03023E
-			public const int switchTextAppearance = 2130903614;
+			public const int state_above_anchor = 2130903614;
 			
 			// aapt resource value: 0x7F03023F
-			public const int tabBackground = 2130903615;
+			public const int state_collapsed = 2130903615;
 			
 			// aapt resource value: 0x7F030240
-			public const int tabContentStart = 2130903616;
+			public const int state_collapsible = 2130903616;
 			
 			// aapt resource value: 0x7F030241
-			public const int tabGravity = 2130903617;
+			public const int state_dragged = 2130903617;
 			
 			// aapt resource value: 0x7F030242
-			public const int tabIconTint = 2130903618;
+			public const int state_indeterminate = 2130903618;
 			
 			// aapt resource value: 0x7F030243
-			public const int tabIconTintMode = 2130903619;
+			public const int state_liftable = 2130903619;
 			
 			// aapt resource value: 0x7F030244
-			public const int tabIndicator = 2130903620;
+			public const int state_lifted = 2130903620;
 			
 			// aapt resource value: 0x7F030245
-			public const int tabIndicatorAnimationDuration = 2130903621;
+			public const int statusBarBackground = 2130903621;
 			
 			// aapt resource value: 0x7F030246
-			public const int tabIndicatorColor = 2130903622;
+			public const int statusBarForeground = 2130903622;
 			
 			// aapt resource value: 0x7F030247
-			public const int tabIndicatorFullWidth = 2130903623;
+			public const int statusBarScrim = 2130903623;
 			
 			// aapt resource value: 0x7F030248
-			public const int tabIndicatorGravity = 2130903624;
+			public const int strokeColor = 2130903624;
 			
 			// aapt resource value: 0x7F030249
-			public const int tabIndicatorHeight = 2130903625;
+			public const int strokeWidth = 2130903625;
 			
 			// aapt resource value: 0x7F03024A
-			public const int tabInlineLabel = 2130903626;
+			public const int subMenuArrow = 2130903626;
 			
 			// aapt resource value: 0x7F03024B
-			public const int tabMaxWidth = 2130903627;
+			public const int submitBackground = 2130903627;
 			
 			// aapt resource value: 0x7F03024C
-			public const int tabMinWidth = 2130903628;
+			public const int subtitle = 2130903628;
 			
 			// aapt resource value: 0x7F03024D
-			public const int tabMode = 2130903629;
+			public const int subtitleTextAppearance = 2130903629;
 			
 			// aapt resource value: 0x7F03024E
-			public const int tabPadding = 2130903630;
+			public const int subtitleTextColor = 2130903630;
 			
 			// aapt resource value: 0x7F03024F
-			public const int tabPaddingBottom = 2130903631;
+			public const int subtitleTextStyle = 2130903631;
 			
 			// aapt resource value: 0x7F030250
-			public const int tabPaddingEnd = 2130903632;
+			public const int suffixText = 2130903632;
 			
 			// aapt resource value: 0x7F030251
-			public const int tabPaddingStart = 2130903633;
+			public const int suffixTextAppearance = 2130903633;
 			
 			// aapt resource value: 0x7F030252
-			public const int tabPaddingTop = 2130903634;
+			public const int suffixTextColor = 2130903634;
 			
 			// aapt resource value: 0x7F030253
-			public const int tabRippleColor = 2130903635;
+			public const int suggestionRowLayout = 2130903635;
 			
 			// aapt resource value: 0x7F030254
-			public const int tabSelectedTextColor = 2130903636;
+			public const int swipeRefreshLayoutProgressSpinnerBackgroundColor = 2130903636;
 			
 			// aapt resource value: 0x7F030255
-			public const int tabStyle = 2130903637;
+			public const int switchMinWidth = 2130903637;
 			
 			// aapt resource value: 0x7F030256
-			public const int tabTextAppearance = 2130903638;
+			public const int switchPadding = 2130903638;
 			
 			// aapt resource value: 0x7F030257
-			public const int tabTextColor = 2130903639;
+			public const int switchStyle = 2130903639;
 			
 			// aapt resource value: 0x7F030258
-			public const int tabUnboundedRipple = 2130903640;
+			public const int switchTextAppearance = 2130903640;
 			
 			// aapt resource value: 0x7F030259
-			public const int textAllCaps = 2130903641;
+			public const int tabBackground = 2130903641;
 			
 			// aapt resource value: 0x7F03025A
-			public const int textAppearanceBody1 = 2130903642;
+			public const int tabContentStart = 2130903642;
 			
 			// aapt resource value: 0x7F03025B
-			public const int textAppearanceBody2 = 2130903643;
+			public const int tabGravity = 2130903643;
 			
 			// aapt resource value: 0x7F03025C
-			public const int textAppearanceButton = 2130903644;
+			public const int tabIconTint = 2130903644;
 			
 			// aapt resource value: 0x7F03025D
-			public const int textAppearanceCaption = 2130903645;
+			public const int tabIconTintMode = 2130903645;
 			
 			// aapt resource value: 0x7F03025E
-			public const int textAppearanceHeadline1 = 2130903646;
+			public const int tabIndicator = 2130903646;
 			
 			// aapt resource value: 0x7F03025F
-			public const int textAppearanceHeadline2 = 2130903647;
+			public const int tabIndicatorAnimationDuration = 2130903647;
 			
 			// aapt resource value: 0x7F030260
-			public const int textAppearanceHeadline3 = 2130903648;
+			public const int tabIndicatorColor = 2130903648;
 			
 			// aapt resource value: 0x7F030261
-			public const int textAppearanceHeadline4 = 2130903649;
+			public const int tabIndicatorFullWidth = 2130903649;
 			
 			// aapt resource value: 0x7F030262
-			public const int textAppearanceHeadline5 = 2130903650;
+			public const int tabIndicatorGravity = 2130903650;
 			
 			// aapt resource value: 0x7F030263
-			public const int textAppearanceHeadline6 = 2130903651;
+			public const int tabIndicatorHeight = 2130903651;
 			
 			// aapt resource value: 0x7F030264
-			public const int textAppearanceLargePopupMenu = 2130903652;
+			public const int tabInlineLabel = 2130903652;
 			
 			// aapt resource value: 0x7F030265
-			public const int textAppearanceLineHeightEnabled = 2130903653;
+			public const int tabMaxWidth = 2130903653;
 			
 			// aapt resource value: 0x7F030266
-			public const int textAppearanceListItem = 2130903654;
+			public const int tabMinWidth = 2130903654;
 			
 			// aapt resource value: 0x7F030267
-			public const int textAppearanceListItemSecondary = 2130903655;
+			public const int tabMode = 2130903655;
 			
 			// aapt resource value: 0x7F030268
-			public const int textAppearanceListItemSmall = 2130903656;
+			public const int tabPadding = 2130903656;
 			
 			// aapt resource value: 0x7F030269
-			public const int textAppearanceOverline = 2130903657;
+			public const int tabPaddingBottom = 2130903657;
 			
 			// aapt resource value: 0x7F03026A
-			public const int textAppearancePopupMenuHeader = 2130903658;
+			public const int tabPaddingEnd = 2130903658;
 			
 			// aapt resource value: 0x7F03026B
-			public const int textAppearanceSearchResultSubtitle = 2130903659;
+			public const int tabPaddingStart = 2130903659;
 			
 			// aapt resource value: 0x7F03026C
-			public const int textAppearanceSearchResultTitle = 2130903660;
+			public const int tabPaddingTop = 2130903660;
 			
 			// aapt resource value: 0x7F03026D
-			public const int textAppearanceSmallPopupMenu = 2130903661;
+			public const int tabRippleColor = 2130903661;
 			
 			// aapt resource value: 0x7F03026E
-			public const int textAppearanceSubtitle1 = 2130903662;
+			public const int tabSelectedTextColor = 2130903662;
 			
 			// aapt resource value: 0x7F03026F
-			public const int textAppearanceSubtitle2 = 2130903663;
+			public const int tabStyle = 2130903663;
 			
 			// aapt resource value: 0x7F030270
-			public const int textColorAlertDialogListItem = 2130903664;
+			public const int tabTextAppearance = 2130903664;
 			
 			// aapt resource value: 0x7F030271
-			public const int textColorSearchUrl = 2130903665;
+			public const int tabTextColor = 2130903665;
 			
 			// aapt resource value: 0x7F030272
-			public const int textEndPadding = 2130903666;
+			public const int tabUnboundedRipple = 2130903666;
 			
 			// aapt resource value: 0x7F030273
-			public const int textInputLayoutFocusedRectEnabled = 2130903667;
+			public const int textAllCaps = 2130903667;
 			
 			// aapt resource value: 0x7F030274
-			public const int textInputStyle = 2130903668;
+			public const int textAppearanceBody1 = 2130903668;
 			
 			// aapt resource value: 0x7F030275
-			public const int textLocale = 2130903669;
+			public const int textAppearanceBody2 = 2130903669;
 			
 			// aapt resource value: 0x7F030276
-			public const int textStartPadding = 2130903670;
+			public const int textAppearanceButton = 2130903670;
 			
 			// aapt resource value: 0x7F030277
-			public const int theme = 2130903671;
+			public const int textAppearanceCaption = 2130903671;
 			
 			// aapt resource value: 0x7F030278
-			public const int themeLineHeight = 2130903672;
+			public const int textAppearanceHeadline1 = 2130903672;
 			
 			// aapt resource value: 0x7F030279
-			public const int thickness = 2130903673;
+			public const int textAppearanceHeadline2 = 2130903673;
 			
 			// aapt resource value: 0x7F03027A
-			public const int thumbColor = 2130903674;
+			public const int textAppearanceHeadline3 = 2130903674;
 			
 			// aapt resource value: 0x7F03027B
-			public const int thumbElevation = 2130903675;
+			public const int textAppearanceHeadline4 = 2130903675;
 			
 			// aapt resource value: 0x7F03027C
-			public const int thumbRadius = 2130903676;
+			public const int textAppearanceHeadline5 = 2130903676;
 			
 			// aapt resource value: 0x7F03027D
-			public const int thumbTextPadding = 2130903677;
+			public const int textAppearanceHeadline6 = 2130903677;
 			
 			// aapt resource value: 0x7F03027E
-			public const int thumbTint = 2130903678;
+			public const int textAppearanceLargePopupMenu = 2130903678;
 			
 			// aapt resource value: 0x7F03027F
-			public const int thumbTintMode = 2130903679;
+			public const int textAppearanceLineHeightEnabled = 2130903679;
 			
 			// aapt resource value: 0x7F030280
-			public const int tickColor = 2130903680;
+			public const int textAppearanceListItem = 2130903680;
 			
 			// aapt resource value: 0x7F030281
-			public const int tickColorActive = 2130903681;
+			public const int textAppearanceListItemSecondary = 2130903681;
 			
 			// aapt resource value: 0x7F030282
-			public const int tickColorInactive = 2130903682;
+			public const int textAppearanceListItemSmall = 2130903682;
 			
 			// aapt resource value: 0x7F030283
-			public const int tickMark = 2130903683;
+			public const int textAppearanceOverline = 2130903683;
 			
 			// aapt resource value: 0x7F030284
-			public const int tickMarkTint = 2130903684;
+			public const int textAppearancePopupMenuHeader = 2130903684;
 			
 			// aapt resource value: 0x7F030285
-			public const int tickMarkTintMode = 2130903685;
+			public const int textAppearanceSearchResultSubtitle = 2130903685;
 			
 			// aapt resource value: 0x7F030286
-			public const int tint = 2130903686;
+			public const int textAppearanceSearchResultTitle = 2130903686;
 			
 			// aapt resource value: 0x7F030287
-			public const int tintMode = 2130903687;
+			public const int textAppearanceSmallPopupMenu = 2130903687;
 			
 			// aapt resource value: 0x7F030288
-			public const int title = 2130903688;
+			public const int textAppearanceSubtitle1 = 2130903688;
 			
 			// aapt resource value: 0x7F030289
-			public const int titleEnabled = 2130903689;
+			public const int textAppearanceSubtitle2 = 2130903689;
 			
 			// aapt resource value: 0x7F03028A
-			public const int titleMargin = 2130903690;
+			public const int textColorAlertDialogListItem = 2130903690;
 			
 			// aapt resource value: 0x7F03028B
-			public const int titleMarginBottom = 2130903691;
+			public const int textColorSearchUrl = 2130903691;
 			
 			// aapt resource value: 0x7F03028C
-			public const int titleMarginEnd = 2130903692;
-			
-			// aapt resource value: 0x7F03028F
-			public const int titleMargins = 2130903695;
+			public const int textEndPadding = 2130903692;
 			
 			// aapt resource value: 0x7F03028D
-			public const int titleMarginStart = 2130903693;
+			public const int textInputLayoutFocusedRectEnabled = 2130903693;
 			
 			// aapt resource value: 0x7F03028E
-			public const int titleMarginTop = 2130903694;
+			public const int textInputStyle = 2130903694;
+			
+			// aapt resource value: 0x7F03028F
+			public const int textLocale = 2130903695;
 			
 			// aapt resource value: 0x7F030290
-			public const int titleTextAppearance = 2130903696;
+			public const int textStartPadding = 2130903696;
 			
 			// aapt resource value: 0x7F030291
-			public const int titleTextColor = 2130903697;
+			public const int theme = 2130903697;
 			
 			// aapt resource value: 0x7F030292
-			public const int titleTextStyle = 2130903698;
+			public const int themeLineHeight = 2130903698;
 			
 			// aapt resource value: 0x7F030293
-			public const int toolbarId = 2130903699;
+			public const int thickness = 2130903699;
 			
 			// aapt resource value: 0x7F030294
-			public const int toolbarNavigationButtonStyle = 2130903700;
+			public const int thumbColor = 2130903700;
 			
 			// aapt resource value: 0x7F030295
-			public const int toolbarStyle = 2130903701;
+			public const int thumbElevation = 2130903701;
 			
 			// aapt resource value: 0x7F030296
-			public const int tooltipForegroundColor = 2130903702;
+			public const int thumbRadius = 2130903702;
 			
 			// aapt resource value: 0x7F030297
-			public const int tooltipFrameBackground = 2130903703;
+			public const int thumbTextPadding = 2130903703;
 			
 			// aapt resource value: 0x7F030298
-			public const int tooltipStyle = 2130903704;
+			public const int thumbTint = 2130903704;
 			
 			// aapt resource value: 0x7F030299
-			public const int tooltipText = 2130903705;
+			public const int thumbTintMode = 2130903705;
 			
 			// aapt resource value: 0x7F03029A
-			public const int track = 2130903706;
+			public const int tickColor = 2130903706;
 			
 			// aapt resource value: 0x7F03029B
-			public const int trackColor = 2130903707;
+			public const int tickColorActive = 2130903707;
 			
 			// aapt resource value: 0x7F03029C
-			public const int trackColorActive = 2130903708;
+			public const int tickColorInactive = 2130903708;
 			
 			// aapt resource value: 0x7F03029D
-			public const int trackColorInactive = 2130903709;
+			public const int tickMark = 2130903709;
 			
 			// aapt resource value: 0x7F03029E
-			public const int trackHeight = 2130903710;
+			public const int tickMarkTint = 2130903710;
 			
 			// aapt resource value: 0x7F03029F
-			public const int trackTint = 2130903711;
+			public const int tickMarkTintMode = 2130903711;
 			
 			// aapt resource value: 0x7F0302A0
-			public const int trackTintMode = 2130903712;
+			public const int tint = 2130903712;
 			
 			// aapt resource value: 0x7F0302A1
-			public const int transitionShapeAppearance = 2130903713;
+			public const int tintMode = 2130903713;
 			
 			// aapt resource value: 0x7F0302A2
-			public const int ttcIndex = 2130903714;
+			public const int title = 2130903714;
 			
 			// aapt resource value: 0x7F0302A3
-			public const int uiCompass = 2130903715;
+			public const int titleEnabled = 2130903715;
 			
 			// aapt resource value: 0x7F0302A4
-			public const int uiMapToolbar = 2130903716;
+			public const int titleMargin = 2130903716;
 			
 			// aapt resource value: 0x7F0302A5
-			public const int uiRotateGestures = 2130903717;
+			public const int titleMarginBottom = 2130903717;
 			
 			// aapt resource value: 0x7F0302A6
-			public const int uiScrollGestures = 2130903718;
-			
-			// aapt resource value: 0x7F0302A7
-			public const int uiScrollGesturesDuringRotateOrZoom = 2130903719;
-			
-			// aapt resource value: 0x7F0302A8
-			public const int uiTiltGestures = 2130903720;
+			public const int titleMarginEnd = 2130903718;
 			
 			// aapt resource value: 0x7F0302A9
-			public const int uiZoomControls = 2130903721;
+			public const int titleMargins = 2130903721;
+			
+			// aapt resource value: 0x7F0302A7
+			public const int titleMarginStart = 2130903719;
+			
+			// aapt resource value: 0x7F0302A8
+			public const int titleMarginTop = 2130903720;
 			
 			// aapt resource value: 0x7F0302AA
-			public const int uiZoomGestures = 2130903722;
+			public const int titleTextAppearance = 2130903722;
 			
 			// aapt resource value: 0x7F0302AB
-			public const int useCompatPadding = 2130903723;
+			public const int titleTextColor = 2130903723;
 			
 			// aapt resource value: 0x7F0302AC
-			public const int useMaterialThemeColors = 2130903724;
+			public const int titleTextStyle = 2130903724;
 			
 			// aapt resource value: 0x7F0302AD
-			public const int useViewLifecycle = 2130903725;
+			public const int toolbarId = 2130903725;
 			
 			// aapt resource value: 0x7F0302AE
-			public const int values = 2130903726;
+			public const int toolbarNavigationButtonStyle = 2130903726;
 			
 			// aapt resource value: 0x7F0302AF
-			public const int verticalOffset = 2130903727;
+			public const int toolbarStyle = 2130903727;
 			
 			// aapt resource value: 0x7F0302B0
-			public const int viewInflaterClass = 2130903728;
+			public const int tooltipForegroundColor = 2130903728;
 			
 			// aapt resource value: 0x7F0302B1
-			public const int voiceIcon = 2130903729;
+			public const int tooltipFrameBackground = 2130903729;
 			
 			// aapt resource value: 0x7F0302B2
-			public const int windowActionBar = 2130903730;
+			public const int tooltipStyle = 2130903730;
 			
 			// aapt resource value: 0x7F0302B3
-			public const int windowActionBarOverlay = 2130903731;
+			public const int tooltipText = 2130903731;
 			
 			// aapt resource value: 0x7F0302B4
-			public const int windowActionModeOverlay = 2130903732;
+			public const int track = 2130903732;
 			
 			// aapt resource value: 0x7F0302B5
-			public const int windowFixedHeightMajor = 2130903733;
+			public const int trackColor = 2130903733;
 			
 			// aapt resource value: 0x7F0302B6
-			public const int windowFixedHeightMinor = 2130903734;
+			public const int trackColorActive = 2130903734;
 			
 			// aapt resource value: 0x7F0302B7
-			public const int windowFixedWidthMajor = 2130903735;
+			public const int trackColorInactive = 2130903735;
 			
 			// aapt resource value: 0x7F0302B8
-			public const int windowFixedWidthMinor = 2130903736;
+			public const int trackHeight = 2130903736;
 			
 			// aapt resource value: 0x7F0302B9
-			public const int windowMinWidthMajor = 2130903737;
+			public const int trackTint = 2130903737;
 			
 			// aapt resource value: 0x7F0302BA
-			public const int windowMinWidthMinor = 2130903738;
+			public const int trackTintMode = 2130903738;
 			
 			// aapt resource value: 0x7F0302BB
-			public const int windowNoTitle = 2130903739;
+			public const int transitionShapeAppearance = 2130903739;
 			
 			// aapt resource value: 0x7F0302BC
-			public const int yearSelectedStyle = 2130903740;
+			public const int ttcIndex = 2130903740;
 			
 			// aapt resource value: 0x7F0302BD
-			public const int yearStyle = 2130903741;
+			public const int uiCompass = 2130903741;
 			
 			// aapt resource value: 0x7F0302BE
-			public const int yearTodayStyle = 2130903742;
+			public const int uiMapToolbar = 2130903742;
 			
 			// aapt resource value: 0x7F0302BF
-			public const int zOrderOnTop = 2130903743;
+			public const int uiRotateGestures = 2130903743;
+			
+			// aapt resource value: 0x7F0302C0
+			public const int uiScrollGestures = 2130903744;
+			
+			// aapt resource value: 0x7F0302C1
+			public const int uiScrollGesturesDuringRotateOrZoom = 2130903745;
+			
+			// aapt resource value: 0x7F0302C2
+			public const int uiTiltGestures = 2130903746;
+			
+			// aapt resource value: 0x7F0302C3
+			public const int uiZoomControls = 2130903747;
+			
+			// aapt resource value: 0x7F0302C4
+			public const int uiZoomGestures = 2130903748;
+			
+			// aapt resource value: 0x7F0302C5
+			public const int useCompatPadding = 2130903749;
+			
+			// aapt resource value: 0x7F0302C6
+			public const int useMaterialThemeColors = 2130903750;
+			
+			// aapt resource value: 0x7F0302C7
+			public const int useViewLifecycle = 2130903751;
+			
+			// aapt resource value: 0x7F0302C8
+			public const int values = 2130903752;
+			
+			// aapt resource value: 0x7F0302C9
+			public const int verticalOffset = 2130903753;
+			
+			// aapt resource value: 0x7F0302CA
+			public const int viewInflaterClass = 2130903754;
+			
+			// aapt resource value: 0x7F0302CB
+			public const int voiceIcon = 2130903755;
+			
+			// aapt resource value: 0x7F0302CC
+			public const int windowActionBar = 2130903756;
+			
+			// aapt resource value: 0x7F0302CD
+			public const int windowActionBarOverlay = 2130903757;
+			
+			// aapt resource value: 0x7F0302CE
+			public const int windowActionModeOverlay = 2130903758;
+			
+			// aapt resource value: 0x7F0302CF
+			public const int windowFixedHeightMajor = 2130903759;
+			
+			// aapt resource value: 0x7F0302D0
+			public const int windowFixedHeightMinor = 2130903760;
+			
+			// aapt resource value: 0x7F0302D1
+			public const int windowFixedWidthMajor = 2130903761;
+			
+			// aapt resource value: 0x7F0302D2
+			public const int windowFixedWidthMinor = 2130903762;
+			
+			// aapt resource value: 0x7F0302D3
+			public const int windowMinWidthMajor = 2130903763;
+			
+			// aapt resource value: 0x7F0302D4
+			public const int windowMinWidthMinor = 2130903764;
+			
+			// aapt resource value: 0x7F0302D5
+			public const int windowNoTitle = 2130903765;
+			
+			// aapt resource value: 0x7F0302D6
+			public const int yearSelectedStyle = 2130903766;
+			
+			// aapt resource value: 0x7F0302D7
+			public const int yearStyle = 2130903767;
+			
+			// aapt resource value: 0x7F0302D8
+			public const int yearTodayStyle = 2130903768;
+			
+			// aapt resource value: 0x7F0302D9
+			public const int zOrderOnTop = 2130903769;
 			
 			static Attribute()
 			{
@@ -24547,232 +27362,247 @@ namespace VaxineApp.Droid
 			public const int design_snackbar_background = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int FlyoutHeader_Account = 2131165344;
+			public const int dropdownbuttonimage = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int FlyoutItem_AboutUs = 2131165345;
+			public const int FlyoutHeader_Account = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int FlyoutItem_Help = 2131165346;
+			public const int FlyoutItem_AboutUs = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int FlyoutItem_Home = 2131165347;
+			public const int FlyoutItem_Help = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int FlyoutItem_settings = 2131165348;
+			public const int FlyoutItem_Home = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int FlyoutMenuItem_Logout = 2131165349;
+			public const int FlyoutItem_settings = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int googleg_disabled_color_18 = 2131165350;
+			public const int FlyoutMenuItem_Logout = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int googleg_standard_color_18 = 2131165351;
+			public const int googleg_disabled_color_18 = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int Home_Area = 2131165352;
+			public const int googleg_standard_color_18 = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int Home_Family = 2131165353;
+			public const int Home_Area = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int Home_Insights = 2131165354;
+			public const int Home_Family = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int Home_Profile = 2131165355;
+			public const int Home_Insights = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int Home_Registration = 2131165356;
+			public const int Home_Profile = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int Home_Status = 2131165357;
+			public const int Home_Registration = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int ic_mtrl_checked_circle = 2131165358;
+			public const int Home_Status = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int ic_mtrl_chip_checked_black = 2131165359;
+			public const int ic_mtrl_checked_circle = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int ic_mtrl_chip_checked_circle = 2131165360;
+			public const int ic_mtrl_chip_checked_black = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int ic_mtrl_chip_close_circle = 2131165361;
-			
-			// aapt resource value: 0x7F0700B3
-			public const int inputlayout_togglecollapseicon = 2131165363;
-			
-			// aapt resource value: 0x7F0700B4
-			public const int inputlayout_togglevisibleicon = 2131165364;
+			public const int ic_mtrl_chip_checked_circle = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int input_layout_drop_down_icon = 2131165362;
+			public const int ic_mtrl_chip_close_circle = 2131165362;
+			
+			// aapt resource value: 0x7F0700B4
+			public const int inputlayout_togglecollapseicon = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int material_ic_calendar_black_24dp = 2131165365;
+			public const int inputlayout_togglevisibleicon = 2131165365;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int input_layout_drop_down_icon = 2131165363;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int material_ic_clear_black_24dp = 2131165366;
+			public const int material_ic_calendar_black_24dp = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int material_ic_edit_black_24dp = 2131165367;
+			public const int material_ic_clear_black_24dp = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165368;
+			public const int material_ic_edit_black_24dp = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165369;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165370;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165371;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int MohammadYaseen = 2131165372;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int mtrl_dialog_background = 2131165373;
+			public const int MohammadYaseen = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int mtrl_dropdown_arrow = 2131165374;
+			public const int mtrl_dialog_background = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int mtrl_ic_arrow_drop_down = 2131165375;
+			public const int mtrl_dropdown_arrow = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int mtrl_ic_arrow_drop_up = 2131165376;
+			public const int mtrl_ic_arrow_drop_down = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int mtrl_ic_cancel = 2131165377;
+			public const int mtrl_ic_arrow_drop_up = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int mtrl_ic_error = 2131165378;
+			public const int mtrl_ic_cancel = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int mtrl_popupmenu_background = 2131165379;
+			public const int mtrl_ic_error = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int mtrl_popupmenu_background_dark = 2131165380;
+			public const int mtrl_popupmenu_background = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int mtrl_tabs_default_indicator = 2131165381;
+			public const int mtrl_popupmenu_background_dark = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int NaveedAhmed = 2131165382;
+			public const int mtrl_tabs_default_indicator = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int navigation_empty_icon = 2131165383;
-			
-			// aapt resource value: 0x7F0700D3
-			public const int NotificationsIcon = 2131165395;
+			public const int NaveedAhmed = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int notification_action_background = 2131165384;
-			
-			// aapt resource value: 0x7F0700C9
-			public const int notification_bg = 2131165385;
-			
-			// aapt resource value: 0x7F0700CA
-			public const int notification_bg_low = 2131165386;
-			
-			// aapt resource value: 0x7F0700CB
-			public const int notification_bg_low_normal = 2131165387;
-			
-			// aapt resource value: 0x7F0700CC
-			public const int notification_bg_low_pressed = 2131165388;
-			
-			// aapt resource value: 0x7F0700CD
-			public const int notification_bg_normal = 2131165389;
-			
-			// aapt resource value: 0x7F0700CE
-			public const int notification_bg_normal_pressed = 2131165390;
-			
-			// aapt resource value: 0x7F0700CF
-			public const int notification_icon_background = 2131165391;
-			
-			// aapt resource value: 0x7F0700D0
-			public const int notification_template_icon_bg = 2131165392;
-			
-			// aapt resource value: 0x7F0700D1
-			public const int notification_template_icon_low_bg = 2131165393;
-			
-			// aapt resource value: 0x7F0700D2
-			public const int notification_tile_bg = 2131165394;
+			public const int navigation_empty_icon = 2131165384;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int notify_panel_notification_icon_bg = 2131165396;
+			public const int NotificationsIcon = 2131165396;
+			
+			// aapt resource value: 0x7F0700C9
+			public const int notification_action_background = 2131165385;
+			
+			// aapt resource value: 0x7F0700CA
+			public const int notification_bg = 2131165386;
+			
+			// aapt resource value: 0x7F0700CB
+			public const int notification_bg_low = 2131165387;
+			
+			// aapt resource value: 0x7F0700CC
+			public const int notification_bg_low_normal = 2131165388;
+			
+			// aapt resource value: 0x7F0700CD
+			public const int notification_bg_low_pressed = 2131165389;
+			
+			// aapt resource value: 0x7F0700CE
+			public const int notification_bg_normal = 2131165390;
+			
+			// aapt resource value: 0x7F0700CF
+			public const int notification_bg_normal_pressed = 2131165391;
+			
+			// aapt resource value: 0x7F0700D0
+			public const int notification_icon_background = 2131165392;
+			
+			// aapt resource value: 0x7F0700D1
+			public const int notification_template_icon_bg = 2131165393;
+			
+			// aapt resource value: 0x7F0700D2
+			public const int notification_template_icon_low_bg = 2131165394;
+			
+			// aapt resource value: 0x7F0700D3
+			public const int notification_tile_bg = 2131165395;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int ProfilePhoto = 2131165397;
+			public const int notify_panel_notification_icon_bg = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int SaeedaRasuly = 2131165398;
+			public const int popup_forms_android_close_icon = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int SavePDF = 2131165399;
+			public const int popup_forms_android_shadow = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int Search = 2131165400;
+			public const int popup_forms_dark_theme_close_icon = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int sfcheckbox_animation = 2131165401;
+			public const int popup_forms_light_theme_close_icon = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int sfcheckbox_checked = 2131165402;
+			public const int ProfilePhoto = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int sfcheckbox_checked_indeterminate = 2131165403;
+			public const int SaeedaRasuly = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int sfcheckbox_checked_unchecked = 2131165404;
+			public const int SavePDF = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int sfcheckbox_indeterminate = 2131165405;
+			public const int Search = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int sfcheckbox_indeterminate_checked = 2131165406;
+			public const int sfcheckbox_animation = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int sfcheckbox_indeterminate_unchecked = 2131165407;
+			public const int sfcheckbox_checked = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int sfcheckbox_unchecked = 2131165408;
+			public const int sfcheckbox_checked_indeterminate = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int sfcheckbox_unchecked_checked = 2131165409;
+			public const int sfcheckbox_checked_unchecked = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int sfcheckbox_unchecked_indeterminate = 2131165410;
+			public const int sfcheckbox_indeterminate = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int splash_logo = 2131165411;
+			public const int sfcheckbox_indeterminate_checked = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int splash_screen = 2131165412;
+			public const int sfcheckbox_indeterminate_unchecked = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int test_custom_background = 2131165413;
+			public const int sfcheckbox_unchecked = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int ToolbarItem_Notifications = 2131165414;
+			public const int sfcheckbox_unchecked_checked = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int ToolbarItem_Search = 2131165415;
+			public const int sfcheckbox_unchecked_indeterminate = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int ToolbarItem_Share = 2131165416;
+			public const int splash_logo = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int tooltip_frame_dark = 2131165417;
+			public const int splash_screen = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int tooltip_frame_light = 2131165418;
+			public const int test_custom_background = 2131165418;
 			
 			// aapt resource value: 0x7F0700EB
-			public const int Universal_Edit = 2131165419;
+			public const int ToolbarItem_Notifications = 2131165419;
+			
+			// aapt resource value: 0x7F0700EC
+			public const int ToolbarItem_Search = 2131165420;
+			
+			// aapt resource value: 0x7F0700ED
+			public const int ToolbarItem_Share = 2131165421;
+			
+			// aapt resource value: 0x7F0700EE
+			public const int tooltip_frame_dark = 2131165422;
+			
+			// aapt resource value: 0x7F0700EF
+			public const int tooltip_frame_light = 2131165423;
+			
+			// aapt resource value: 0x7F0700F0
+			public const int Universal_Edit = 2131165424;
 			
 			static Drawable()
 			{
@@ -24787,209 +27617,212 @@ namespace VaxineApp.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7F08000A
-			public const int accessibility_action_clickable_span = 2131230730;
-			
-			// aapt resource value: 0x7F08000B
-			public const int accessibility_custom_action_0 = 2131230731;
-			
-			// aapt resource value: 0x7F08000C
-			public const int accessibility_custom_action_1 = 2131230732;
-			
-			// aapt resource value: 0x7F08000D
-			public const int accessibility_custom_action_10 = 2131230733;
-			
 			// aapt resource value: 0x7F08000E
-			public const int accessibility_custom_action_11 = 2131230734;
+			public const int accessibility_action_clickable_span = 2131230734;
 			
 			// aapt resource value: 0x7F08000F
-			public const int accessibility_custom_action_12 = 2131230735;
+			public const int accessibility_custom_action_0 = 2131230735;
 			
 			// aapt resource value: 0x7F080010
-			public const int accessibility_custom_action_13 = 2131230736;
+			public const int accessibility_custom_action_1 = 2131230736;
 			
 			// aapt resource value: 0x7F080011
-			public const int accessibility_custom_action_14 = 2131230737;
+			public const int accessibility_custom_action_10 = 2131230737;
 			
 			// aapt resource value: 0x7F080012
-			public const int accessibility_custom_action_15 = 2131230738;
+			public const int accessibility_custom_action_11 = 2131230738;
 			
 			// aapt resource value: 0x7F080013
-			public const int accessibility_custom_action_16 = 2131230739;
+			public const int accessibility_custom_action_12 = 2131230739;
 			
 			// aapt resource value: 0x7F080014
-			public const int accessibility_custom_action_17 = 2131230740;
+			public const int accessibility_custom_action_13 = 2131230740;
 			
 			// aapt resource value: 0x7F080015
-			public const int accessibility_custom_action_18 = 2131230741;
+			public const int accessibility_custom_action_14 = 2131230741;
 			
 			// aapt resource value: 0x7F080016
-			public const int accessibility_custom_action_19 = 2131230742;
+			public const int accessibility_custom_action_15 = 2131230742;
 			
 			// aapt resource value: 0x7F080017
-			public const int accessibility_custom_action_2 = 2131230743;
+			public const int accessibility_custom_action_16 = 2131230743;
 			
 			// aapt resource value: 0x7F080018
-			public const int accessibility_custom_action_20 = 2131230744;
+			public const int accessibility_custom_action_17 = 2131230744;
 			
 			// aapt resource value: 0x7F080019
-			public const int accessibility_custom_action_21 = 2131230745;
+			public const int accessibility_custom_action_18 = 2131230745;
 			
 			// aapt resource value: 0x7F08001A
-			public const int accessibility_custom_action_22 = 2131230746;
+			public const int accessibility_custom_action_19 = 2131230746;
 			
 			// aapt resource value: 0x7F08001B
-			public const int accessibility_custom_action_23 = 2131230747;
+			public const int accessibility_custom_action_2 = 2131230747;
 			
 			// aapt resource value: 0x7F08001C
-			public const int accessibility_custom_action_24 = 2131230748;
+			public const int accessibility_custom_action_20 = 2131230748;
 			
 			// aapt resource value: 0x7F08001D
-			public const int accessibility_custom_action_25 = 2131230749;
+			public const int accessibility_custom_action_21 = 2131230749;
 			
 			// aapt resource value: 0x7F08001E
-			public const int accessibility_custom_action_26 = 2131230750;
+			public const int accessibility_custom_action_22 = 2131230750;
 			
 			// aapt resource value: 0x7F08001F
-			public const int accessibility_custom_action_27 = 2131230751;
+			public const int accessibility_custom_action_23 = 2131230751;
 			
 			// aapt resource value: 0x7F080020
-			public const int accessibility_custom_action_28 = 2131230752;
+			public const int accessibility_custom_action_24 = 2131230752;
 			
 			// aapt resource value: 0x7F080021
-			public const int accessibility_custom_action_29 = 2131230753;
+			public const int accessibility_custom_action_25 = 2131230753;
 			
 			// aapt resource value: 0x7F080022
-			public const int accessibility_custom_action_3 = 2131230754;
+			public const int accessibility_custom_action_26 = 2131230754;
 			
 			// aapt resource value: 0x7F080023
-			public const int accessibility_custom_action_30 = 2131230755;
+			public const int accessibility_custom_action_27 = 2131230755;
 			
 			// aapt resource value: 0x7F080024
-			public const int accessibility_custom_action_31 = 2131230756;
+			public const int accessibility_custom_action_28 = 2131230756;
 			
 			// aapt resource value: 0x7F080025
-			public const int accessibility_custom_action_4 = 2131230757;
+			public const int accessibility_custom_action_29 = 2131230757;
 			
 			// aapt resource value: 0x7F080026
-			public const int accessibility_custom_action_5 = 2131230758;
+			public const int accessibility_custom_action_3 = 2131230758;
 			
 			// aapt resource value: 0x7F080027
-			public const int accessibility_custom_action_6 = 2131230759;
+			public const int accessibility_custom_action_30 = 2131230759;
 			
 			// aapt resource value: 0x7F080028
-			public const int accessibility_custom_action_7 = 2131230760;
+			public const int accessibility_custom_action_31 = 2131230760;
 			
 			// aapt resource value: 0x7F080029
-			public const int accessibility_custom_action_8 = 2131230761;
+			public const int accessibility_custom_action_4 = 2131230761;
 			
 			// aapt resource value: 0x7F08002A
-			public const int accessibility_custom_action_9 = 2131230762;
+			public const int accessibility_custom_action_5 = 2131230762;
 			
 			// aapt resource value: 0x7F08002B
-			public const int action0 = 2131230763;
-			
-			// aapt resource value: 0x7F08003D
-			public const int actions = 2131230781;
+			public const int accessibility_custom_action_6 = 2131230763;
 			
 			// aapt resource value: 0x7F08002C
-			public const int action_bar = 2131230764;
+			public const int accessibility_custom_action_7 = 2131230764;
 			
 			// aapt resource value: 0x7F08002D
-			public const int action_bar_activity_content = 2131230765;
+			public const int accessibility_custom_action_8 = 2131230765;
 			
 			// aapt resource value: 0x7F08002E
-			public const int action_bar_container = 2131230766;
+			public const int accessibility_custom_action_9 = 2131230766;
 			
 			// aapt resource value: 0x7F08002F
-			public const int action_bar_root = 2131230767;
-			
-			// aapt resource value: 0x7F080030
-			public const int action_bar_spinner = 2131230768;
-			
-			// aapt resource value: 0x7F080031
-			public const int action_bar_subtitle = 2131230769;
-			
-			// aapt resource value: 0x7F080032
-			public const int action_bar_title = 2131230770;
-			
-			// aapt resource value: 0x7F080033
-			public const int action_container = 2131230771;
-			
-			// aapt resource value: 0x7F080034
-			public const int action_context_bar = 2131230772;
-			
-			// aapt resource value: 0x7F080035
-			public const int action_divider = 2131230773;
-			
-			// aapt resource value: 0x7F080036
-			public const int action_image = 2131230774;
-			
-			// aapt resource value: 0x7F080037
-			public const int action_menu_divider = 2131230775;
-			
-			// aapt resource value: 0x7F080038
-			public const int action_menu_presenter = 2131230776;
-			
-			// aapt resource value: 0x7F080039
-			public const int action_mode_bar = 2131230777;
-			
-			// aapt resource value: 0x7F08003A
-			public const int action_mode_bar_stub = 2131230778;
-			
-			// aapt resource value: 0x7F08003B
-			public const int action_mode_close_button = 2131230779;
-			
-			// aapt resource value: 0x7F08003C
-			public const int action_text = 2131230780;
-			
-			// aapt resource value: 0x7F08003E
-			public const int activity_chooser_view_content = 2131230782;
-			
-			// aapt resource value: 0x7F08003F
-			public const int add = 2131230783;
-			
-			// aapt resource value: 0x7F080040
-			public const int adjust_height = 2131230784;
+			public const int action0 = 2131230767;
 			
 			// aapt resource value: 0x7F080041
-			public const int adjust_width = 2131230785;
+			public const int actions = 2131230785;
+			
+			// aapt resource value: 0x7F080030
+			public const int action_bar = 2131230768;
+			
+			// aapt resource value: 0x7F080031
+			public const int action_bar_activity_content = 2131230769;
+			
+			// aapt resource value: 0x7F080032
+			public const int action_bar_container = 2131230770;
+			
+			// aapt resource value: 0x7F080033
+			public const int action_bar_root = 2131230771;
+			
+			// aapt resource value: 0x7F080034
+			public const int action_bar_spinner = 2131230772;
+			
+			// aapt resource value: 0x7F080035
+			public const int action_bar_subtitle = 2131230773;
+			
+			// aapt resource value: 0x7F080036
+			public const int action_bar_title = 2131230774;
+			
+			// aapt resource value: 0x7F080037
+			public const int action_container = 2131230775;
+			
+			// aapt resource value: 0x7F080038
+			public const int action_context_bar = 2131230776;
+			
+			// aapt resource value: 0x7F080039
+			public const int action_divider = 2131230777;
+			
+			// aapt resource value: 0x7F08003A
+			public const int action_image = 2131230778;
+			
+			// aapt resource value: 0x7F08003B
+			public const int action_menu_divider = 2131230779;
+			
+			// aapt resource value: 0x7F08003C
+			public const int action_menu_presenter = 2131230780;
+			
+			// aapt resource value: 0x7F08003D
+			public const int action_mode_bar = 2131230781;
+			
+			// aapt resource value: 0x7F08003E
+			public const int action_mode_bar_stub = 2131230782;
+			
+			// aapt resource value: 0x7F08003F
+			public const int action_mode_close_button = 2131230783;
+			
+			// aapt resource value: 0x7F080040
+			public const int action_text = 2131230784;
 			
 			// aapt resource value: 0x7F080042
-			public const int alertTitle = 2131230786;
+			public const int activity_chooser_view_content = 2131230786;
 			
 			// aapt resource value: 0x7F080043
-			public const int all = 2131230787;
+			public const int add = 2131230787;
+			
+			// aapt resource value: 0x7F080044
+			public const int adjust_height = 2131230788;
+			
+			// aapt resource value: 0x7F080045
+			public const int adjust_width = 2131230789;
+			
+			// aapt resource value: 0x7F080046
+			public const int alertTitle = 2131230790;
+			
+			// aapt resource value: 0x7F080047
+			public const int all = 2131230791;
 			
 			// aapt resource value: 0x7F080000
 			public const int ALT = 2131230720;
 			
-			// aapt resource value: 0x7F080044
-			public const int always = 2131230788;
-			
-			// aapt resource value: 0x7F080045
-			public const int async = 2131230789;
-			
-			// aapt resource value: 0x7F080046
-			public const int auto = 2131230790;
-			
-			// aapt resource value: 0x7F080047
-			public const int beginning = 2131230791;
-			
 			// aapt resource value: 0x7F080048
-			public const int blocking = 2131230792;
+			public const int always = 2131230792;
 			
 			// aapt resource value: 0x7F080049
-			public const int border = 2131230793;
+			public const int async = 2131230793;
 			
 			// aapt resource value: 0x7F08004A
-			public const int bottom = 2131230794;
+			public const int auto = 2131230794;
 			
 			// aapt resource value: 0x7F08004B
-			public const int bottomtab_navarea = 2131230795;
+			public const int beginning = 2131230795;
 			
 			// aapt resource value: 0x7F08004C
-			public const int bottomtab_tabbar = 2131230796;
+			public const int blocking = 2131230796;
+			
+			// aapt resource value: 0x7F08004D
+			public const int border = 2131230797;
+			
+			// aapt resource value: 0x7F080003
+			public const int BorderView = 2131230723;
+			
+			// aapt resource value: 0x7F08004E
+			public const int bottom = 2131230798;
+			
+			// aapt resource value: 0x7F08004F
+			public const int bottomtab_navarea = 2131230799;
+			
+			// aapt resource value: 0x7F080050
+			public const int bottomtab_tabbar = 2131230800;
 			
 			// aapt resource value: 0x7F080001
 			public const int BOTTOM_END = 2131230721;
@@ -24997,797 +27830,806 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0x7F080002
 			public const int BOTTOM_START = 2131230722;
 			
-			// aapt resource value: 0x7F08004D
-			public const int browser_actions_header_text = 2131230797;
-			
-			// aapt resource value: 0x7F080050
-			public const int browser_actions_menu_items = 2131230800;
-			
-			// aapt resource value: 0x7F08004E
-			public const int browser_actions_menu_item_icon = 2131230798;
-			
-			// aapt resource value: 0x7F08004F
-			public const int browser_actions_menu_item_text = 2131230799;
-			
 			// aapt resource value: 0x7F080051
-			public const int browser_actions_menu_view = 2131230801;
-			
-			// aapt resource value: 0x7F080052
-			public const int buttonHello = 2131230802;
-			
-			// aapt resource value: 0x7F080053
-			public const int buttonHi = 2131230803;
+			public const int browser_actions_header_text = 2131230801;
 			
 			// aapt resource value: 0x7F080054
-			public const int buttonPanel = 2131230804;
+			public const int browser_actions_menu_items = 2131230804;
+			
+			// aapt resource value: 0x7F080052
+			public const int browser_actions_menu_item_icon = 2131230802;
+			
+			// aapt resource value: 0x7F080053
+			public const int browser_actions_menu_item_text = 2131230803;
 			
 			// aapt resource value: 0x7F080055
-			public const int cameratexture = 2131230805;
+			public const int browser_actions_menu_view = 2131230805;
 			
 			// aapt resource value: 0x7F080056
-			public const int cancel_action = 2131230806;
+			public const int buttonHello = 2131230806;
 			
 			// aapt resource value: 0x7F080057
-			public const int cancel_button = 2131230807;
+			public const int buttonHi = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int center = 2131230808;
+			public const int buttonPanel = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int center_horizontal = 2131230809;
+			public const int cameratexture = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int center_vertical = 2131230810;
+			public const int cancel_action = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int checkbox = 2131230811;
+			public const int cancel_button = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int @checked = 2131230812;
+			public const int center = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int chip = 2131230813;
+			public const int center_horizontal = 2131230813;
 			
 			// aapt resource value: 0x7F08005E
-			public const int chip1 = 2131230814;
+			public const int center_vertical = 2131230814;
 			
 			// aapt resource value: 0x7F08005F
-			public const int chip2 = 2131230815;
+			public const int checkbox = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int chip3 = 2131230816;
+			public const int @checked = 2131230816;
 			
 			// aapt resource value: 0x7F080061
-			public const int chip_group = 2131230817;
+			public const int chip = 2131230817;
 			
 			// aapt resource value: 0x7F080062
-			public const int chronometer = 2131230818;
+			public const int chip1 = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int clear_text = 2131230819;
+			public const int chip2 = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int clip_horizontal = 2131230820;
+			public const int chip3 = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int clip_vertical = 2131230821;
+			public const int chip_group = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int collapseActionView = 2131230822;
+			public const int chronometer = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int confirm_button = 2131230823;
+			public const int clear_text = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int container = 2131230824;
+			public const int clip_horizontal = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int content = 2131230825;
+			public const int clip_vertical = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int contentPanel = 2131230826;
+			public const int collapseActionView = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int coordinator = 2131230827;
-			
-			// aapt resource value: 0x7F080003
-			public const int CTRL = 2131230723;
+			public const int confirm_button = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int custom = 2131230828;
+			public const int container = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int customPanel = 2131230829;
+			public const int content = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int cut = 2131230830;
+			public const int contentPanel = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int dark = 2131230831;
-			
-			// aapt resource value: 0x7F080070
-			public const int date_picker_actions = 2131230832;
-			
-			// aapt resource value: 0x7F080071
-			public const int decor_content_parent = 2131230833;
-			
-			// aapt resource value: 0x7F080072
-			public const int default_activity_button = 2131230834;
-			
-			// aapt resource value: 0x7F080073
-			public const int design_bottom_sheet = 2131230835;
-			
-			// aapt resource value: 0x7F080074
-			public const int design_menu_item_action_area = 2131230836;
-			
-			// aapt resource value: 0x7F080075
-			public const int design_menu_item_action_area_stub = 2131230837;
-			
-			// aapt resource value: 0x7F080076
-			public const int design_menu_item_text = 2131230838;
-			
-			// aapt resource value: 0x7F080077
-			public const int design_navigation_view = 2131230839;
-			
-			// aapt resource value: 0x7F080078
-			public const int dialog_button = 2131230840;
-			
-			// aapt resource value: 0x7F080079
-			public const int disableHome = 2131230841;
-			
-			// aapt resource value: 0x7F08007A
-			public const int dropdown_menu = 2131230842;
-			
-			// aapt resource value: 0x7F08007B
-			public const int edit_query = 2131230843;
-			
-			// aapt resource value: 0x7F08007C
-			public const int end = 2131230844;
-			
-			// aapt resource value: 0x7F08007D
-			public const int end_padder = 2131230845;
-			
-			// aapt resource value: 0x7F08007E
-			public const int enterAlways = 2131230846;
-			
-			// aapt resource value: 0x7F08007F
-			public const int enterAlwaysCollapsed = 2131230847;
-			
-			// aapt resource value: 0x7F080080
-			public const int exitUntilCollapsed = 2131230848;
-			
-			// aapt resource value: 0x7F080082
-			public const int expanded_menu = 2131230850;
-			
-			// aapt resource value: 0x7F080081
-			public const int expand_activities_button = 2131230849;
-			
-			// aapt resource value: 0x7F080083
-			public const int fade = 2131230851;
-			
-			// aapt resource value: 0x7F080084
-			public const int fill = 2131230852;
-			
-			// aapt resource value: 0x7F080087
-			public const int filled = 2131230855;
-			
-			// aapt resource value: 0x7F080085
-			public const int fill_horizontal = 2131230853;
-			
-			// aapt resource value: 0x7F080086
-			public const int fill_vertical = 2131230854;
-			
-			// aapt resource value: 0x7F080088
-			public const int fitToContents = 2131230856;
-			
-			// aapt resource value: 0x7F080089
-			public const int @fixed = 2131230857;
-			
-			// aapt resource value: 0x7F08008A
-			public const int floating = 2131230858;
-			
-			// aapt resource value: 0x7F08008B
-			public const int flyoutcontent_appbar = 2131230859;
-			
-			// aapt resource value: 0x7F08008C
-			public const int forever = 2131230860;
-			
-			// aapt resource value: 0x7F08008D
-			public const int fragment_container_view_tag = 2131230861;
+			public const int coordinator = 2131230831;
 			
 			// aapt resource value: 0x7F080004
-			public const int FUNCTION = 2131230724;
+			public const int CTRL = 2131230724;
 			
-			// aapt resource value: 0x7F08008E
-			public const int ghost_view = 2131230862;
+			// aapt resource value: 0x7F080070
+			public const int custom = 2131230832;
 			
-			// aapt resource value: 0x7F08008F
-			public const int ghost_view_holder = 2131230863;
+			// aapt resource value: 0x7F080071
+			public const int customPanel = 2131230833;
 			
-			// aapt resource value: 0x7F080090
-			public const int gone = 2131230864;
+			// aapt resource value: 0x7F080072
+			public const int cut = 2131230834;
 			
-			// aapt resource value: 0x7F080091
-			public const int group_divider = 2131230865;
+			// aapt resource value: 0x7F080073
+			public const int dark = 2131230835;
 			
-			// aapt resource value: 0x7F080092
-			public const int hideable = 2131230866;
+			// aapt resource value: 0x7F080074
+			public const int date_picker_actions = 2131230836;
 			
-			// aapt resource value: 0x7F080093
-			public const int home = 2131230867;
-			
-			// aapt resource value: 0x7F080094
-			public const int homeAsUp = 2131230868;
-			
-			// aapt resource value: 0x7F080095
-			public const int hybrid = 2131230869;
-			
-			// aapt resource value: 0x7F080096
-			public const int icon = 2131230870;
-			
-			// aapt resource value: 0x7F080097
-			public const int icon_group = 2131230871;
-			
-			// aapt resource value: 0x7F080098
-			public const int icon_only = 2131230872;
-			
-			// aapt resource value: 0x7F080099
-			public const int ifRoom = 2131230873;
-			
-			// aapt resource value: 0x7F08009A
-			public const int image = 2131230874;
-			
-			// aapt resource value: 0x7F08009B
-			public const int imagewithtext = 2131230875;
-			
-			// aapt resource value: 0x7F08009C
-			public const int indeterminate = 2131230876;
-			
-			// aapt resource value: 0x7F08009D
-			public const int info = 2131230877;
-			
-			// aapt resource value: 0x7F08009E
-			public const int italic = 2131230878;
-			
-			// aapt resource value: 0x7F08009F
-			public const int item_touch_helper_previous_elevation = 2131230879;
-			
-			// aapt resource value: 0x7F0800A0
-			public const int labeled = 2131230880;
-			
-			// aapt resource value: 0x7F0800A1
-			public const int largeLabel = 2131230881;
-			
-			// aapt resource value: 0x7F0800A2
-			public const int left = 2131230882;
-			
-			// aapt resource value: 0x7F0800A3
-			public const int light = 2131230883;
-			
-			// aapt resource value: 0x7F0800A4
-			public const int line1 = 2131230884;
-			
-			// aapt resource value: 0x7F0800A5
-			public const int line3 = 2131230885;
-			
-			// aapt resource value: 0x7F0800A6
-			public const int listMode = 2131230886;
-			
-			// aapt resource value: 0x7F0800A7
-			public const int list_item = 2131230887;
-			
-			// aapt resource value: 0x7F0800A8
-			public const int main_appbar = 2131230888;
-			
-			// aapt resource value: 0x7F0800A9
-			public const int main_tablayout = 2131230889;
-			
-			// aapt resource value: 0x7F0800AA
-			public const int main_toolbar = 2131230890;
-			
-			// aapt resource value: 0x7F0800AB
-			public const int main_viewpager = 2131230891;
-			
-			// aapt resource value: 0x7F0800AC
-			public const int masked = 2131230892;
-			
-			// aapt resource value: 0x7F0800AD
-			public const int media_actions = 2131230893;
-			
-			// aapt resource value: 0x7F0800AE
-			public const int media_controller_compat_view_tag = 2131230894;
-			
-			// aapt resource value: 0x7F0800AF
-			public const int message = 2131230895;
+			// aapt resource value: 0x7F080075
+			public const int decor_content_parent = 2131230837;
 			
 			// aapt resource value: 0x7F080005
-			public const int META = 2131230725;
+			public const int Default = 2131230725;
 			
-			// aapt resource value: 0x7F0800B0
-			public const int middle = 2131230896;
+			// aapt resource value: 0x7F080076
+			public const int default_activity_button = 2131230838;
 			
-			// aapt resource value: 0x7F0800B1
-			public const int mini = 2131230897;
+			// aapt resource value: 0x7F080077
+			public const int design_bottom_sheet = 2131230839;
 			
-			// aapt resource value: 0x7F0800B2
-			public const int month_grid = 2131230898;
+			// aapt resource value: 0x7F080078
+			public const int design_menu_item_action_area = 2131230840;
 			
-			// aapt resource value: 0x7F0800B3
-			public const int month_navigation_bar = 2131230899;
+			// aapt resource value: 0x7F080079
+			public const int design_menu_item_action_area_stub = 2131230841;
 			
-			// aapt resource value: 0x7F0800B4
-			public const int month_navigation_fragment_toggle = 2131230900;
+			// aapt resource value: 0x7F08007A
+			public const int design_menu_item_text = 2131230842;
 			
-			// aapt resource value: 0x7F0800B5
-			public const int month_navigation_next = 2131230901;
-			
-			// aapt resource value: 0x7F0800B6
-			public const int month_navigation_previous = 2131230902;
-			
-			// aapt resource value: 0x7F0800B7
-			public const int month_title = 2131230903;
-			
-			// aapt resource value: 0x7F0800B9
-			public const int mtrl_calendar_days_of_week = 2131230905;
-			
-			// aapt resource value: 0x7F0800B8
-			public const int mtrl_calendar_day_selector_frame = 2131230904;
-			
-			// aapt resource value: 0x7F0800BA
-			public const int mtrl_calendar_frame = 2131230906;
-			
-			// aapt resource value: 0x7F0800BB
-			public const int mtrl_calendar_main_pane = 2131230907;
-			
-			// aapt resource value: 0x7F0800BC
-			public const int mtrl_calendar_months = 2131230908;
-			
-			// aapt resource value: 0x7F0800BD
-			public const int mtrl_calendar_selection_frame = 2131230909;
-			
-			// aapt resource value: 0x7F0800BE
-			public const int mtrl_calendar_text_input_frame = 2131230910;
-			
-			// aapt resource value: 0x7F0800BF
-			public const int mtrl_calendar_year_selector_frame = 2131230911;
-			
-			// aapt resource value: 0x7F0800C0
-			public const int mtrl_card_checked_layer_id = 2131230912;
-			
-			// aapt resource value: 0x7F0800C1
-			public const int mtrl_child_content_container = 2131230913;
-			
-			// aapt resource value: 0x7F0800C2
-			public const int mtrl_internal_children_alpha_tag = 2131230914;
-			
-			// aapt resource value: 0x7F0800C3
-			public const int mtrl_motion_snapshot_view = 2131230915;
-			
-			// aapt resource value: 0x7F0800C4
-			public const int mtrl_picker_fullscreen = 2131230916;
-			
-			// aapt resource value: 0x7F0800C5
-			public const int mtrl_picker_header = 2131230917;
-			
-			// aapt resource value: 0x7F0800C6
-			public const int mtrl_picker_header_selection_text = 2131230918;
-			
-			// aapt resource value: 0x7F0800C7
-			public const int mtrl_picker_header_title_and_selection = 2131230919;
-			
-			// aapt resource value: 0x7F0800C8
-			public const int mtrl_picker_header_toggle = 2131230920;
-			
-			// aapt resource value: 0x7F0800C9
-			public const int mtrl_picker_text_input_date = 2131230921;
-			
-			// aapt resource value: 0x7F0800CA
-			public const int mtrl_picker_text_input_range_end = 2131230922;
-			
-			// aapt resource value: 0x7F0800CB
-			public const int mtrl_picker_text_input_range_start = 2131230923;
-			
-			// aapt resource value: 0x7F0800CC
-			public const int mtrl_picker_title_text = 2131230924;
-			
-			// aapt resource value: 0x7F0800CD
-			public const int multiply = 2131230925;
-			
-			// aapt resource value: 0x7F0800CE
-			public const int navigation_header_container = 2131230926;
-			
-			// aapt resource value: 0x7F0800CF
-			public const int never = 2131230927;
-			
-			// aapt resource value: 0x7F0800D1
-			public const int none = 2131230929;
-			
-			// aapt resource value: 0x7F0800D2
-			public const int normal = 2131230930;
-			
-			// aapt resource value: 0x7F0800D0
-			public const int noScroll = 2131230928;
-			
-			// aapt resource value: 0x7F0800D3
-			public const int notification_background = 2131230931;
-			
-			// aapt resource value: 0x7F0800D4
-			public const int notification_main_column = 2131230932;
-			
-			// aapt resource value: 0x7F0800D5
-			public const int notification_main_column_container = 2131230933;
-			
-			// aapt resource value: 0x7F0800D6
-			public const int off = 2131230934;
-			
-			// aapt resource value: 0x7F0800D7
-			public const int on = 2131230935;
-			
-			// aapt resource value: 0x7F0800D8
-			public const int outline = 2131230936;
-			
-			// aapt resource value: 0x7F0800D9
-			public const int parallax = 2131230937;
-			
-			// aapt resource value: 0x7F0800DA
-			public const int parentPanel = 2131230938;
-			
-			// aapt resource value: 0x7F0800DB
-			public const int parent_matrix = 2131230939;
-			
-			// aapt resource value: 0x7F0800DC
-			public const int password_toggle = 2131230940;
-			
-			// aapt resource value: 0x7F0800DD
-			public const int peekHeight = 2131230941;
-			
-			// aapt resource value: 0x7F0800DE
-			public const int pin = 2131230942;
-			
-			// aapt resource value: 0x7F0800DF
-			public const int progress_circular = 2131230943;
-			
-			// aapt resource value: 0x7F0800E0
-			public const int progress_horizontal = 2131230944;
-			
-			// aapt resource value: 0x7F0800E1
-			public const int radio = 2131230945;
-			
-			// aapt resource value: 0x7F0800E2
-			public const int right = 2131230946;
-			
-			// aapt resource value: 0x7F0800E3
-			public const int right_icon = 2131230947;
-			
-			// aapt resource value: 0x7F0800E4
-			public const int right_side = 2131230948;
-			
-			// aapt resource value: 0x7F0800E5
-			public const int rounded = 2131230949;
-			
-			// aapt resource value: 0x7F0800E6
-			public const int row_index_key = 2131230950;
-			
-			// aapt resource value: 0x7F0800E7
-			public const int satellite = 2131230951;
-			
-			// aapt resource value: 0x7F0800E8
-			public const int save_non_transition_alpha = 2131230952;
-			
-			// aapt resource value: 0x7F0800E9
-			public const int save_overlay_view = 2131230953;
-			
-			// aapt resource value: 0x7F0800EA
-			public const int scale = 2131230954;
-			
-			// aapt resource value: 0x7F0800EB
-			public const int screen = 2131230955;
-			
-			// aapt resource value: 0x7F0800EC
-			public const int scroll = 2131230956;
-			
-			// aapt resource value: 0x7F0800F0
-			public const int scrollable = 2131230960;
-			
-			// aapt resource value: 0x7F0800ED
-			public const int scrollIndicatorDown = 2131230957;
-			
-			// aapt resource value: 0x7F0800EE
-			public const int scrollIndicatorUp = 2131230958;
-			
-			// aapt resource value: 0x7F0800EF
-			public const int scrollView = 2131230959;
-			
-			// aapt resource value: 0x7F0800F1
-			public const int search_badge = 2131230961;
-			
-			// aapt resource value: 0x7F0800F2
-			public const int search_bar = 2131230962;
-			
-			// aapt resource value: 0x7F0800F3
-			public const int search_button = 2131230963;
-			
-			// aapt resource value: 0x7F0800F4
-			public const int search_close_btn = 2131230964;
-			
-			// aapt resource value: 0x7F0800F5
-			public const int search_edit_frame = 2131230965;
-			
-			// aapt resource value: 0x7F0800F6
-			public const int search_go_btn = 2131230966;
-			
-			// aapt resource value: 0x7F0800F7
-			public const int search_mag_icon = 2131230967;
-			
-			// aapt resource value: 0x7F0800F8
-			public const int search_plate = 2131230968;
-			
-			// aapt resource value: 0x7F0800F9
-			public const int search_src_text = 2131230969;
-			
-			// aapt resource value: 0x7F0800FA
-			public const int search_voice_btn = 2131230970;
-			
-			// aapt resource value: 0x7F0800FC
-			public const int selected = 2131230972;
-			
-			// aapt resource value: 0x7F0800FB
-			public const int select_dialog_listview = 2131230971;
-			
-			// aapt resource value: 0x7F0800FD
-			public const int shellcontent_appbar = 2131230973;
-			
-			// aapt resource value: 0x7F0800FE
-			public const int shellcontent_toolbar = 2131230974;
+			// aapt resource value: 0x7F08007B
+			public const int design_navigation_view = 2131230843;
 			
 			// aapt resource value: 0x7F080006
-			public const int SHIFT = 2131230726;
+			public const int Dialog = 2131230726;
 			
-			// aapt resource value: 0x7F0800FF
-			public const int shortcut = 2131230975;
+			// aapt resource value: 0x7F08007C
+			public const int dialog_button = 2131230844;
 			
-			// aapt resource value: 0x7F080100
-			public const int showCustom = 2131230976;
+			// aapt resource value: 0x7F08007D
+			public const int disableHome = 2131230845;
 			
-			// aapt resource value: 0x7F080101
-			public const int showHome = 2131230977;
+			// aapt resource value: 0x7F08007E
+			public const int dropdown_menu = 2131230846;
 			
-			// aapt resource value: 0x7F080102
-			public const int showTitle = 2131230978;
+			// aapt resource value: 0x7F08007F
+			public const int edit_query = 2131230847;
 			
-			// aapt resource value: 0x7F080103
-			public const int skipCollapsed = 2131230979;
+			// aapt resource value: 0x7F080080
+			public const int end = 2131230848;
 			
-			// aapt resource value: 0x7F080104
-			public const int slide = 2131230980;
+			// aapt resource value: 0x7F080081
+			public const int end_padder = 2131230849;
 			
-			// aapt resource value: 0x7F080105
-			public const int sliding_tabs = 2131230981;
+			// aapt resource value: 0x7F080082
+			public const int enterAlways = 2131230850;
 			
-			// aapt resource value: 0x7F080106
-			public const int smallLabel = 2131230982;
+			// aapt resource value: 0x7F080083
+			public const int enterAlwaysCollapsed = 2131230851;
 			
-			// aapt resource value: 0x7F080107
-			public const int snackbar_action = 2131230983;
+			// aapt resource value: 0x7F080084
+			public const int exitUntilCollapsed = 2131230852;
 			
-			// aapt resource value: 0x7F080108
-			public const int snackbar_text = 2131230984;
+			// aapt resource value: 0x7F080086
+			public const int expanded_menu = 2131230854;
 			
-			// aapt resource value: 0x7F080109
-			public const int snap = 2131230985;
+			// aapt resource value: 0x7F080085
+			public const int expand_activities_button = 2131230853;
 			
-			// aapt resource value: 0x7F08010A
-			public const int snapMargins = 2131230986;
+			// aapt resource value: 0x7F080087
+			public const int fade = 2131230855;
 			
-			// aapt resource value: 0x7F08010B
-			public const int spacer = 2131230987;
+			// aapt resource value: 0x7F080088
+			public const int fill = 2131230856;
 			
-			// aapt resource value: 0x7F08010C
-			public const int split_action_bar = 2131230988;
+			// aapt resource value: 0x7F08008B
+			public const int filled = 2131230859;
 			
-			// aapt resource value: 0x7F08010D
-			public const int src_atop = 2131230989;
+			// aapt resource value: 0x7F080089
+			public const int fill_horizontal = 2131230857;
 			
-			// aapt resource value: 0x7F08010E
-			public const int src_in = 2131230990;
+			// aapt resource value: 0x7F08008A
+			public const int fill_vertical = 2131230858;
 			
-			// aapt resource value: 0x7F08010F
-			public const int src_over = 2131230991;
+			// aapt resource value: 0x7F08008C
+			public const int fitToContents = 2131230860;
 			
-			// aapt resource value: 0x7F080110
-			public const int standard = 2131230992;
+			// aapt resource value: 0x7F08008D
+			public const int @fixed = 2131230861;
 			
-			// aapt resource value: 0x7F080111
-			public const int start = 2131230993;
+			// aapt resource value: 0x7F08008E
+			public const int floating = 2131230862;
 			
-			// aapt resource value: 0x7F080112
-			public const int status_bar_latest_event_content = 2131230994;
+			// aapt resource value: 0x7F08008F
+			public const int flyoutcontent_appbar = 2131230863;
 			
-			// aapt resource value: 0x7F080113
-			public const int stretch = 2131230995;
+			// aapt resource value: 0x7F080090
+			public const int forever = 2131230864;
 			
-			// aapt resource value: 0x7F080114
-			public const int submenuarrow = 2131230996;
-			
-			// aapt resource value: 0x7F080115
-			public const int submit_area = 2131230997;
+			// aapt resource value: 0x7F080091
+			public const int fragment_container_view_tag = 2131230865;
 			
 			// aapt resource value: 0x7F080007
-			public const int SYM = 2131230727;
+			public const int FUNCTION = 2131230727;
 			
-			// aapt resource value: 0x7F080116
-			public const int tabMode = 2131230998;
+			// aapt resource value: 0x7F080092
+			public const int ghost_view = 2131230866;
 			
-			// aapt resource value: 0x7F080117
-			public const int tag_accessibility_actions = 2131230999;
+			// aapt resource value: 0x7F080093
+			public const int ghost_view_holder = 2131230867;
 			
-			// aapt resource value: 0x7F080118
-			public const int tag_accessibility_clickable_spans = 2131231000;
+			// aapt resource value: 0x7F080094
+			public const int gone = 2131230868;
 			
-			// aapt resource value: 0x7F080119
-			public const int tag_accessibility_heading = 2131231001;
+			// aapt resource value: 0x7F080095
+			public const int group_divider = 2131230869;
 			
-			// aapt resource value: 0x7F08011A
-			public const int tag_accessibility_pane_title = 2131231002;
+			// aapt resource value: 0x7F080096
+			public const int hideable = 2131230870;
 			
-			// aapt resource value: 0x7F08011B
-			public const int tag_screen_reader_focusable = 2131231003;
+			// aapt resource value: 0x7F080097
+			public const int home = 2131230871;
 			
-			// aapt resource value: 0x7F08011C
-			public const int tag_transition_group = 2131231004;
+			// aapt resource value: 0x7F080098
+			public const int homeAsUp = 2131230872;
 			
-			// aapt resource value: 0x7F08011D
-			public const int tag_unhandled_key_event_manager = 2131231005;
+			// aapt resource value: 0x7F080099
+			public const int hybrid = 2131230873;
 			
-			// aapt resource value: 0x7F08011E
-			public const int tag_unhandled_key_listeners = 2131231006;
+			// aapt resource value: 0x7F08009A
+			public const int icon = 2131230874;
 			
-			// aapt resource value: 0x7F08011F
-			public const int terrain = 2131231007;
+			// aapt resource value: 0x7F08009B
+			public const int icon_group = 2131230875;
 			
-			// aapt resource value: 0x7F080120
-			public const int test_checkbox_android_button_tint = 2131231008;
+			// aapt resource value: 0x7F08009C
+			public const int icon_only = 2131230876;
 			
-			// aapt resource value: 0x7F080121
-			public const int test_checkbox_app_button_tint = 2131231009;
+			// aapt resource value: 0x7F08009D
+			public const int ifRoom = 2131230877;
 			
-			// aapt resource value: 0x7F080122
-			public const int test_radiobutton_android_button_tint = 2131231010;
+			// aapt resource value: 0x7F08009E
+			public const int image = 2131230878;
 			
-			// aapt resource value: 0x7F080123
-			public const int test_radiobutton_app_button_tint = 2131231011;
+			// aapt resource value: 0x7F08009F
+			public const int imagewithtext = 2131230879;
 			
-			// aapt resource value: 0x7F080124
-			public const int text = 2131231012;
+			// aapt resource value: 0x7F0800A0
+			public const int indeterminate = 2131230880;
 			
-			// aapt resource value: 0x7F080125
-			public const int text2 = 2131231013;
+			// aapt resource value: 0x7F0800A1
+			public const int info = 2131230881;
 			
-			// aapt resource value: 0x7F080126
-			public const int textEnd = 2131231014;
-			
-			// aapt resource value: 0x7F08012D
-			public const int textinput_counter = 2131231021;
-			
-			// aapt resource value: 0x7F08012E
-			public const int textinput_error = 2131231022;
-			
-			// aapt resource value: 0x7F08012F
-			public const int textinput_helper_text = 2131231023;
-			
-			// aapt resource value: 0x7F080130
-			public const int textinput_placeholder = 2131231024;
-			
-			// aapt resource value: 0x7F080131
-			public const int textinput_prefix_text = 2131231025;
-			
-			// aapt resource value: 0x7F080132
-			public const int textinput_suffix_text = 2131231026;
-			
-			// aapt resource value: 0x7F080127
-			public const int textSpacerNoButtons = 2131231015;
-			
-			// aapt resource value: 0x7F080128
-			public const int textSpacerNoTitle = 2131231016;
-			
-			// aapt resource value: 0x7F080129
-			public const int textStart = 2131231017;
-			
-			// aapt resource value: 0x7F08012A
-			public const int textView1 = 2131231018;
-			
-			// aapt resource value: 0x7F08012B
-			public const int text_input_end_icon = 2131231019;
-			
-			// aapt resource value: 0x7F08012C
-			public const int text_input_start_icon = 2131231020;
-			
-			// aapt resource value: 0x7F080133
-			public const int time = 2131231027;
-			
-			// aapt resource value: 0x7F080134
-			public const int title = 2131231028;
-			
-			// aapt resource value: 0x7F080135
-			public const int titleDividerNoCustom = 2131231029;
-			
-			// aapt resource value: 0x7F080136
-			public const int title_template = 2131231030;
-			
-			// aapt resource value: 0x7F080137
-			public const int toolbar = 2131231031;
-			
-			// aapt resource value: 0x7F080138
-			public const int top = 2131231032;
-			
-			// aapt resource value: 0x7F080139
-			public const int topPanel = 2131231033;
+			// aapt resource value: 0x7F0800A2
+			public const int italic = 2131230882;
 			
 			// aapt resource value: 0x7F080008
-			public const int TOP_END = 2131230728;
+			public const int Itemname = 2131230728;
+			
+			// aapt resource value: 0x7F0800A3
+			public const int item_touch_helper_previous_elevation = 2131230883;
+			
+			// aapt resource value: 0x7F0800A4
+			public const int labeled = 2131230884;
+			
+			// aapt resource value: 0x7F0800A5
+			public const int largeLabel = 2131230885;
+			
+			// aapt resource value: 0x7F0800A6
+			public const int left = 2131230886;
+			
+			// aapt resource value: 0x7F0800A7
+			public const int light = 2131230887;
+			
+			// aapt resource value: 0x7F0800A8
+			public const int line1 = 2131230888;
+			
+			// aapt resource value: 0x7F0800A9
+			public const int line3 = 2131230889;
+			
+			// aapt resource value: 0x7F0800AA
+			public const int listMode = 2131230890;
+			
+			// aapt resource value: 0x7F0800AB
+			public const int list_item = 2131230891;
+			
+			// aapt resource value: 0x7F0800AC
+			public const int main_appbar = 2131230892;
+			
+			// aapt resource value: 0x7F0800AD
+			public const int main_tablayout = 2131230893;
+			
+			// aapt resource value: 0x7F0800AE
+			public const int main_toolbar = 2131230894;
+			
+			// aapt resource value: 0x7F0800AF
+			public const int main_viewpager = 2131230895;
+			
+			// aapt resource value: 0x7F0800B0
+			public const int masked = 2131230896;
+			
+			// aapt resource value: 0x7F0800B1
+			public const int media_actions = 2131230897;
+			
+			// aapt resource value: 0x7F0800B2
+			public const int media_controller_compat_view_tag = 2131230898;
+			
+			// aapt resource value: 0x7F0800B3
+			public const int message = 2131230899;
 			
 			// aapt resource value: 0x7F080009
-			public const int TOP_START = 2131230729;
+			public const int META = 2131230729;
+			
+			// aapt resource value: 0x7F0800B4
+			public const int middle = 2131230900;
+			
+			// aapt resource value: 0x7F0800B5
+			public const int mini = 2131230901;
+			
+			// aapt resource value: 0x7F0800B6
+			public const int month_grid = 2131230902;
+			
+			// aapt resource value: 0x7F0800B7
+			public const int month_navigation_bar = 2131230903;
+			
+			// aapt resource value: 0x7F0800B8
+			public const int month_navigation_fragment_toggle = 2131230904;
+			
+			// aapt resource value: 0x7F0800B9
+			public const int month_navigation_next = 2131230905;
+			
+			// aapt resource value: 0x7F0800BA
+			public const int month_navigation_previous = 2131230906;
+			
+			// aapt resource value: 0x7F0800BB
+			public const int month_title = 2131230907;
+			
+			// aapt resource value: 0x7F0800BD
+			public const int mtrl_calendar_days_of_week = 2131230909;
+			
+			// aapt resource value: 0x7F0800BC
+			public const int mtrl_calendar_day_selector_frame = 2131230908;
+			
+			// aapt resource value: 0x7F0800BE
+			public const int mtrl_calendar_frame = 2131230910;
+			
+			// aapt resource value: 0x7F0800BF
+			public const int mtrl_calendar_main_pane = 2131230911;
+			
+			// aapt resource value: 0x7F0800C0
+			public const int mtrl_calendar_months = 2131230912;
+			
+			// aapt resource value: 0x7F0800C1
+			public const int mtrl_calendar_selection_frame = 2131230913;
+			
+			// aapt resource value: 0x7F0800C2
+			public const int mtrl_calendar_text_input_frame = 2131230914;
+			
+			// aapt resource value: 0x7F0800C3
+			public const int mtrl_calendar_year_selector_frame = 2131230915;
+			
+			// aapt resource value: 0x7F0800C4
+			public const int mtrl_card_checked_layer_id = 2131230916;
+			
+			// aapt resource value: 0x7F0800C5
+			public const int mtrl_child_content_container = 2131230917;
+			
+			// aapt resource value: 0x7F0800C6
+			public const int mtrl_internal_children_alpha_tag = 2131230918;
+			
+			// aapt resource value: 0x7F0800C7
+			public const int mtrl_motion_snapshot_view = 2131230919;
+			
+			// aapt resource value: 0x7F0800C8
+			public const int mtrl_picker_fullscreen = 2131230920;
+			
+			// aapt resource value: 0x7F0800C9
+			public const int mtrl_picker_header = 2131230921;
+			
+			// aapt resource value: 0x7F0800CA
+			public const int mtrl_picker_header_selection_text = 2131230922;
+			
+			// aapt resource value: 0x7F0800CB
+			public const int mtrl_picker_header_title_and_selection = 2131230923;
+			
+			// aapt resource value: 0x7F0800CC
+			public const int mtrl_picker_header_toggle = 2131230924;
+			
+			// aapt resource value: 0x7F0800CD
+			public const int mtrl_picker_text_input_date = 2131230925;
+			
+			// aapt resource value: 0x7F0800CE
+			public const int mtrl_picker_text_input_range_end = 2131230926;
+			
+			// aapt resource value: 0x7F0800CF
+			public const int mtrl_picker_text_input_range_start = 2131230927;
+			
+			// aapt resource value: 0x7F0800D0
+			public const int mtrl_picker_title_text = 2131230928;
+			
+			// aapt resource value: 0x7F0800D1
+			public const int multiply = 2131230929;
+			
+			// aapt resource value: 0x7F0800D2
+			public const int navigation_header_container = 2131230930;
+			
+			// aapt resource value: 0x7F0800D3
+			public const int never = 2131230931;
+			
+			// aapt resource value: 0x7F0800D5
+			public const int none = 2131230933;
+			
+			// aapt resource value: 0x7F0800D6
+			public const int normal = 2131230934;
+			
+			// aapt resource value: 0x7F0800D4
+			public const int noScroll = 2131230932;
+			
+			// aapt resource value: 0x7F0800D7
+			public const int notification_background = 2131230935;
+			
+			// aapt resource value: 0x7F0800D8
+			public const int notification_main_column = 2131230936;
+			
+			// aapt resource value: 0x7F0800D9
+			public const int notification_main_column_container = 2131230937;
+			
+			// aapt resource value: 0x7F0800DA
+			public const int off = 2131230938;
+			
+			// aapt resource value: 0x7F0800DB
+			public const int on = 2131230939;
+			
+			// aapt resource value: 0x7F0800DC
+			public const int outline = 2131230940;
+			
+			// aapt resource value: 0x7F0800DD
+			public const int parallax = 2131230941;
+			
+			// aapt resource value: 0x7F0800DE
+			public const int parentPanel = 2131230942;
+			
+			// aapt resource value: 0x7F0800DF
+			public const int parent_matrix = 2131230943;
+			
+			// aapt resource value: 0x7F0800E0
+			public const int password_toggle = 2131230944;
+			
+			// aapt resource value: 0x7F0800E1
+			public const int peekHeight = 2131230945;
+			
+			// aapt resource value: 0x7F0800E2
+			public const int pin = 2131230946;
+			
+			// aapt resource value: 0x7F0800E3
+			public const int progress_circular = 2131230947;
+			
+			// aapt resource value: 0x7F0800E4
+			public const int progress_horizontal = 2131230948;
+			
+			// aapt resource value: 0x7F0800E5
+			public const int radio = 2131230949;
+			
+			// aapt resource value: 0x7F0800E6
+			public const int right = 2131230950;
+			
+			// aapt resource value: 0x7F0800E7
+			public const int right_icon = 2131230951;
+			
+			// aapt resource value: 0x7F0800E8
+			public const int right_side = 2131230952;
+			
+			// aapt resource value: 0x7F0800E9
+			public const int rounded = 2131230953;
+			
+			// aapt resource value: 0x7F0800EA
+			public const int row_index_key = 2131230954;
+			
+			// aapt resource value: 0x7F0800EB
+			public const int satellite = 2131230955;
+			
+			// aapt resource value: 0x7F0800EC
+			public const int save_non_transition_alpha = 2131230956;
+			
+			// aapt resource value: 0x7F0800ED
+			public const int save_overlay_view = 2131230957;
+			
+			// aapt resource value: 0x7F0800EE
+			public const int scale = 2131230958;
+			
+			// aapt resource value: 0x7F0800EF
+			public const int screen = 2131230959;
+			
+			// aapt resource value: 0x7F0800F0
+			public const int scroll = 2131230960;
+			
+			// aapt resource value: 0x7F0800F4
+			public const int scrollable = 2131230964;
+			
+			// aapt resource value: 0x7F0800F1
+			public const int scrollIndicatorDown = 2131230961;
+			
+			// aapt resource value: 0x7F0800F2
+			public const int scrollIndicatorUp = 2131230962;
+			
+			// aapt resource value: 0x7F0800F3
+			public const int scrollView = 2131230963;
+			
+			// aapt resource value: 0x7F0800F5
+			public const int search_badge = 2131230965;
+			
+			// aapt resource value: 0x7F0800F6
+			public const int search_bar = 2131230966;
+			
+			// aapt resource value: 0x7F0800F7
+			public const int search_button = 2131230967;
+			
+			// aapt resource value: 0x7F0800F8
+			public const int search_close_btn = 2131230968;
+			
+			// aapt resource value: 0x7F0800F9
+			public const int search_edit_frame = 2131230969;
+			
+			// aapt resource value: 0x7F0800FA
+			public const int search_go_btn = 2131230970;
+			
+			// aapt resource value: 0x7F0800FB
+			public const int search_mag_icon = 2131230971;
+			
+			// aapt resource value: 0x7F0800FC
+			public const int search_plate = 2131230972;
+			
+			// aapt resource value: 0x7F0800FD
+			public const int search_src_text = 2131230973;
+			
+			// aapt resource value: 0x7F0800FE
+			public const int search_voice_btn = 2131230974;
+			
+			// aapt resource value: 0x7F080100
+			public const int selected = 2131230976;
+			
+			// aapt resource value: 0x7F0800FF
+			public const int select_dialog_listview = 2131230975;
+			
+			// aapt resource value: 0x7F080101
+			public const int shellcontent_appbar = 2131230977;
+			
+			// aapt resource value: 0x7F080102
+			public const int shellcontent_toolbar = 2131230978;
+			
+			// aapt resource value: 0x7F08000A
+			public const int SHIFT = 2131230730;
+			
+			// aapt resource value: 0x7F080103
+			public const int shortcut = 2131230979;
+			
+			// aapt resource value: 0x7F080104
+			public const int showCustom = 2131230980;
+			
+			// aapt resource value: 0x7F080105
+			public const int showHome = 2131230981;
+			
+			// aapt resource value: 0x7F080106
+			public const int showTitle = 2131230982;
+			
+			// aapt resource value: 0x7F080107
+			public const int skipCollapsed = 2131230983;
+			
+			// aapt resource value: 0x7F080108
+			public const int slide = 2131230984;
+			
+			// aapt resource value: 0x7F080109
+			public const int sliding_tabs = 2131230985;
+			
+			// aapt resource value: 0x7F08010A
+			public const int smallLabel = 2131230986;
+			
+			// aapt resource value: 0x7F08010B
+			public const int snackbar_action = 2131230987;
+			
+			// aapt resource value: 0x7F08010C
+			public const int snackbar_text = 2131230988;
+			
+			// aapt resource value: 0x7F08010D
+			public const int snap = 2131230989;
+			
+			// aapt resource value: 0x7F08010E
+			public const int snapMargins = 2131230990;
+			
+			// aapt resource value: 0x7F08010F
+			public const int spacer = 2131230991;
+			
+			// aapt resource value: 0x7F080110
+			public const int split_action_bar = 2131230992;
+			
+			// aapt resource value: 0x7F080111
+			public const int src_atop = 2131230993;
+			
+			// aapt resource value: 0x7F080112
+			public const int src_in = 2131230994;
+			
+			// aapt resource value: 0x7F080113
+			public const int src_over = 2131230995;
+			
+			// aapt resource value: 0x7F080114
+			public const int standard = 2131230996;
+			
+			// aapt resource value: 0x7F080115
+			public const int start = 2131230997;
+			
+			// aapt resource value: 0x7F080116
+			public const int status_bar_latest_event_content = 2131230998;
+			
+			// aapt resource value: 0x7F080117
+			public const int stretch = 2131230999;
+			
+			// aapt resource value: 0x7F080118
+			public const int submenuarrow = 2131231000;
+			
+			// aapt resource value: 0x7F080119
+			public const int submit_area = 2131231001;
+			
+			// aapt resource value: 0x7F08000B
+			public const int SYM = 2131230731;
+			
+			// aapt resource value: 0x7F08011A
+			public const int tabMode = 2131231002;
+			
+			// aapt resource value: 0x7F08011B
+			public const int tag_accessibility_actions = 2131231003;
+			
+			// aapt resource value: 0x7F08011C
+			public const int tag_accessibility_clickable_spans = 2131231004;
+			
+			// aapt resource value: 0x7F08011D
+			public const int tag_accessibility_heading = 2131231005;
+			
+			// aapt resource value: 0x7F08011E
+			public const int tag_accessibility_pane_title = 2131231006;
+			
+			// aapt resource value: 0x7F08011F
+			public const int tag_screen_reader_focusable = 2131231007;
+			
+			// aapt resource value: 0x7F080120
+			public const int tag_transition_group = 2131231008;
+			
+			// aapt resource value: 0x7F080121
+			public const int tag_unhandled_key_event_manager = 2131231009;
+			
+			// aapt resource value: 0x7F080122
+			public const int tag_unhandled_key_listeners = 2131231010;
+			
+			// aapt resource value: 0x7F080123
+			public const int terrain = 2131231011;
+			
+			// aapt resource value: 0x7F080124
+			public const int test_checkbox_android_button_tint = 2131231012;
+			
+			// aapt resource value: 0x7F080125
+			public const int test_checkbox_app_button_tint = 2131231013;
+			
+			// aapt resource value: 0x7F080126
+			public const int test_radiobutton_android_button_tint = 2131231014;
+			
+			// aapt resource value: 0x7F080127
+			public const int test_radiobutton_app_button_tint = 2131231015;
+			
+			// aapt resource value: 0x7F080128
+			public const int text = 2131231016;
+			
+			// aapt resource value: 0x7F080129
+			public const int text2 = 2131231017;
+			
+			// aapt resource value: 0x7F08012A
+			public const int textEnd = 2131231018;
+			
+			// aapt resource value: 0x7F080131
+			public const int textinput_counter = 2131231025;
+			
+			// aapt resource value: 0x7F080132
+			public const int textinput_error = 2131231026;
+			
+			// aapt resource value: 0x7F080133
+			public const int textinput_helper_text = 2131231027;
+			
+			// aapt resource value: 0x7F080134
+			public const int textinput_placeholder = 2131231028;
+			
+			// aapt resource value: 0x7F080135
+			public const int textinput_prefix_text = 2131231029;
+			
+			// aapt resource value: 0x7F080136
+			public const int textinput_suffix_text = 2131231030;
+			
+			// aapt resource value: 0x7F08012B
+			public const int textSpacerNoButtons = 2131231019;
+			
+			// aapt resource value: 0x7F08012C
+			public const int textSpacerNoTitle = 2131231020;
+			
+			// aapt resource value: 0x7F08012D
+			public const int textStart = 2131231021;
+			
+			// aapt resource value: 0x7F08012E
+			public const int textView1 = 2131231022;
+			
+			// aapt resource value: 0x7F08012F
+			public const int text_input_end_icon = 2131231023;
+			
+			// aapt resource value: 0x7F080130
+			public const int text_input_start_icon = 2131231024;
+			
+			// aapt resource value: 0x7F080137
+			public const int time = 2131231031;
+			
+			// aapt resource value: 0x7F080138
+			public const int title = 2131231032;
+			
+			// aapt resource value: 0x7F080139
+			public const int titleDividerNoCustom = 2131231033;
 			
 			// aapt resource value: 0x7F08013A
-			public const int touch_outside = 2131231034;
+			public const int title_template = 2131231034;
 			
 			// aapt resource value: 0x7F08013B
-			public const int transition_current_scene = 2131231035;
+			public const int toolbar = 2131231035;
 			
 			// aapt resource value: 0x7F08013C
-			public const int transition_layout_save = 2131231036;
+			public const int top = 2131231036;
 			
 			// aapt resource value: 0x7F08013D
-			public const int transition_position = 2131231037;
+			public const int topPanel = 2131231037;
+			
+			// aapt resource value: 0x7F08000C
+			public const int TOP_END = 2131230732;
+			
+			// aapt resource value: 0x7F08000D
+			public const int TOP_START = 2131230733;
 			
 			// aapt resource value: 0x7F08013E
-			public const int transition_scene_layoutid_cache = 2131231038;
+			public const int touch_outside = 2131231038;
 			
 			// aapt resource value: 0x7F08013F
-			public const int transition_transform = 2131231039;
+			public const int transition_current_scene = 2131231039;
 			
 			// aapt resource value: 0x7F080140
-			public const int @unchecked = 2131231040;
+			public const int transition_layout_save = 2131231040;
 			
 			// aapt resource value: 0x7F080141
-			public const int uniform = 2131231041;
+			public const int transition_position = 2131231041;
 			
 			// aapt resource value: 0x7F080142
-			public const int unlabeled = 2131231042;
+			public const int transition_scene_layoutid_cache = 2131231042;
 			
 			// aapt resource value: 0x7F080143
-			public const int up = 2131231043;
+			public const int transition_transform = 2131231043;
 			
 			// aapt resource value: 0x7F080144
-			public const int useLogo = 2131231044;
+			public const int @unchecked = 2131231044;
 			
 			// aapt resource value: 0x7F080145
-			public const int view_offset_helper = 2131231045;
+			public const int uniform = 2131231045;
 			
 			// aapt resource value: 0x7F080146
-			public const int view_tree_saved_state_registry_owner = 2131231046;
+			public const int unlabeled = 2131231046;
 			
 			// aapt resource value: 0x7F080147
-			public const int visible = 2131231047;
+			public const int up = 2131231047;
 			
 			// aapt resource value: 0x7F080148
-			public const int visible_removing_fragment_view_tag = 2131231048;
+			public const int useLogo = 2131231048;
 			
 			// aapt resource value: 0x7F080149
-			public const int wide = 2131231049;
-			
-			// aapt resource value: 0x7F08014B
-			public const int withinBounds = 2131231051;
+			public const int view_offset_helper = 2131231049;
 			
 			// aapt resource value: 0x7F08014A
-			public const int withText = 2131231050;
+			public const int view_tree_saved_state_registry_owner = 2131231050;
+			
+			// aapt resource value: 0x7F08014B
+			public const int visible = 2131231051;
 			
 			// aapt resource value: 0x7F08014C
-			public const int wrap_content = 2131231052;
+			public const int visible_removing_fragment_view_tag = 2131231052;
 			
 			// aapt resource value: 0x7F08014D
-			public const int zero_corner_chip = 2131231053;
+			public const int wide = 2131231053;
+			
+			// aapt resource value: 0x7F08014F
+			public const int withinBounds = 2131231055;
+			
+			// aapt resource value: 0x7F08014E
+			public const int withText = 2131231054;
+			
+			// aapt resource value: 0x7F080150
+			public const int wrap_content = 2131231056;
+			
+			// aapt resource value: 0x7F080151
+			public const int zero_corner_chip = 2131231057;
 			
 			static Id()
 			{
@@ -26038,260 +28880,269 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0x7F0B001F
 			public const int CameraFragment = 2131427359;
 			
+			// aapt resource value: 0x7F0B0021
+			public const int CustomizedImageView = 2131427361;
+			
+			// aapt resource value: 0x7F0B0022
+			public const int CustomizedView = 2131427362;
+			
 			// aapt resource value: 0x7F0B0020
 			public const int custom_dialog = 2131427360;
 			
-			// aapt resource value: 0x7F0B0021
-			public const int design_bottom_navigation_item = 2131427361;
-			
-			// aapt resource value: 0x7F0B0022
-			public const int design_bottom_sheet_dialog = 2131427362;
-			
 			// aapt resource value: 0x7F0B0023
-			public const int design_layout_snackbar = 2131427363;
+			public const int design_bottom_navigation_item = 2131427363;
 			
 			// aapt resource value: 0x7F0B0024
-			public const int design_layout_snackbar_include = 2131427364;
+			public const int design_bottom_sheet_dialog = 2131427364;
 			
 			// aapt resource value: 0x7F0B0025
-			public const int design_layout_tab_icon = 2131427365;
+			public const int design_layout_snackbar = 2131427365;
 			
 			// aapt resource value: 0x7F0B0026
-			public const int design_layout_tab_text = 2131427366;
+			public const int design_layout_snackbar_include = 2131427366;
 			
 			// aapt resource value: 0x7F0B0027
-			public const int design_menu_item_action_area = 2131427367;
+			public const int design_layout_tab_icon = 2131427367;
 			
 			// aapt resource value: 0x7F0B0028
-			public const int design_navigation_item = 2131427368;
+			public const int design_layout_tab_text = 2131427368;
 			
 			// aapt resource value: 0x7F0B0029
-			public const int design_navigation_item_header = 2131427369;
+			public const int design_menu_item_action_area = 2131427369;
 			
 			// aapt resource value: 0x7F0B002A
-			public const int design_navigation_item_separator = 2131427370;
+			public const int design_navigation_item = 2131427370;
 			
 			// aapt resource value: 0x7F0B002B
-			public const int design_navigation_item_subheader = 2131427371;
+			public const int design_navigation_item_header = 2131427371;
 			
 			// aapt resource value: 0x7F0B002C
-			public const int design_navigation_menu = 2131427372;
+			public const int design_navigation_item_separator = 2131427372;
 			
 			// aapt resource value: 0x7F0B002D
-			public const int design_navigation_menu_item = 2131427373;
+			public const int design_navigation_item_subheader = 2131427373;
 			
 			// aapt resource value: 0x7F0B002E
-			public const int design_text_input_end_icon = 2131427374;
+			public const int design_navigation_menu = 2131427374;
 			
 			// aapt resource value: 0x7F0B002F
-			public const int design_text_input_start_icon = 2131427375;
+			public const int design_navigation_menu_item = 2131427375;
 			
 			// aapt resource value: 0x7F0B0030
-			public const int FallbackTabbarDoNotUse = 2131427376;
+			public const int design_text_input_end_icon = 2131427376;
 			
 			// aapt resource value: 0x7F0B0031
-			public const int FallbackToolbarDoNotUse = 2131427377;
+			public const int design_text_input_start_icon = 2131427377;
 			
 			// aapt resource value: 0x7F0B0032
-			public const int FlyoutContent = 2131427378;
+			public const int FallbackTabbarDoNotUse = 2131427378;
 			
 			// aapt resource value: 0x7F0B0033
-			public const int mtrl_alert_dialog = 2131427379;
+			public const int FallbackToolbarDoNotUse = 2131427379;
 			
 			// aapt resource value: 0x7F0B0034
-			public const int mtrl_alert_dialog_actions = 2131427380;
+			public const int FlyoutContent = 2131427380;
 			
 			// aapt resource value: 0x7F0B0035
-			public const int mtrl_alert_dialog_title = 2131427381;
+			public const int mtrl_alert_dialog = 2131427381;
 			
 			// aapt resource value: 0x7F0B0036
-			public const int mtrl_alert_select_dialog_item = 2131427382;
+			public const int mtrl_alert_dialog_actions = 2131427382;
 			
 			// aapt resource value: 0x7F0B0037
-			public const int mtrl_alert_select_dialog_multichoice = 2131427383;
+			public const int mtrl_alert_dialog_title = 2131427383;
 			
 			// aapt resource value: 0x7F0B0038
-			public const int mtrl_alert_select_dialog_singlechoice = 2131427384;
+			public const int mtrl_alert_select_dialog_item = 2131427384;
 			
 			// aapt resource value: 0x7F0B0039
-			public const int mtrl_calendar_day = 2131427385;
-			
-			// aapt resource value: 0x7F0B003B
-			public const int mtrl_calendar_days_of_week = 2131427387;
+			public const int mtrl_alert_select_dialog_multichoice = 2131427385;
 			
 			// aapt resource value: 0x7F0B003A
-			public const int mtrl_calendar_day_of_week = 2131427386;
+			public const int mtrl_alert_select_dialog_singlechoice = 2131427386;
 			
-			// aapt resource value: 0x7F0B003C
-			public const int mtrl_calendar_horizontal = 2131427388;
+			// aapt resource value: 0x7F0B003B
+			public const int mtrl_calendar_day = 2131427387;
 			
 			// aapt resource value: 0x7F0B003D
-			public const int mtrl_calendar_month = 2131427389;
+			public const int mtrl_calendar_days_of_week = 2131427389;
 			
-			// aapt resource value: 0x7F0B0040
-			public const int mtrl_calendar_months = 2131427392;
+			// aapt resource value: 0x7F0B003C
+			public const int mtrl_calendar_day_of_week = 2131427388;
 			
 			// aapt resource value: 0x7F0B003E
-			public const int mtrl_calendar_month_labeled = 2131427390;
+			public const int mtrl_calendar_horizontal = 2131427390;
 			
 			// aapt resource value: 0x7F0B003F
-			public const int mtrl_calendar_month_navigation = 2131427391;
-			
-			// aapt resource value: 0x7F0B0041
-			public const int mtrl_calendar_vertical = 2131427393;
+			public const int mtrl_calendar_month = 2131427391;
 			
 			// aapt resource value: 0x7F0B0042
-			public const int mtrl_calendar_year = 2131427394;
+			public const int mtrl_calendar_months = 2131427394;
+			
+			// aapt resource value: 0x7F0B0040
+			public const int mtrl_calendar_month_labeled = 2131427392;
+			
+			// aapt resource value: 0x7F0B0041
+			public const int mtrl_calendar_month_navigation = 2131427393;
 			
 			// aapt resource value: 0x7F0B0043
-			public const int mtrl_layout_snackbar = 2131427395;
+			public const int mtrl_calendar_vertical = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int mtrl_layout_snackbar_include = 2131427396;
+			public const int mtrl_calendar_year = 2131427396;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int mtrl_picker_actions = 2131427397;
+			public const int mtrl_layout_snackbar = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int mtrl_picker_dialog = 2131427398;
+			public const int mtrl_layout_snackbar_include = 2131427398;
 			
 			// aapt resource value: 0x7F0B0047
-			public const int mtrl_picker_fullscreen = 2131427399;
+			public const int mtrl_picker_actions = 2131427399;
 			
 			// aapt resource value: 0x7F0B0048
-			public const int mtrl_picker_header_dialog = 2131427400;
+			public const int mtrl_picker_dialog = 2131427400;
 			
 			// aapt resource value: 0x7F0B0049
-			public const int mtrl_picker_header_fullscreen = 2131427401;
+			public const int mtrl_picker_fullscreen = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int mtrl_picker_header_selection_text = 2131427402;
+			public const int mtrl_picker_header_dialog = 2131427402;
 			
 			// aapt resource value: 0x7F0B004B
-			public const int mtrl_picker_header_title_text = 2131427403;
+			public const int mtrl_picker_header_fullscreen = 2131427403;
 			
 			// aapt resource value: 0x7F0B004C
-			public const int mtrl_picker_header_toggle = 2131427404;
+			public const int mtrl_picker_header_selection_text = 2131427404;
 			
 			// aapt resource value: 0x7F0B004D
-			public const int mtrl_picker_text_input_date = 2131427405;
+			public const int mtrl_picker_header_title_text = 2131427405;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int mtrl_picker_text_input_date_range = 2131427406;
+			public const int mtrl_picker_header_toggle = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int my_widget = 2131427407;
+			public const int mtrl_picker_text_input_date = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int notification_action = 2131427408;
+			public const int mtrl_picker_text_input_date_range = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int notification_action_tombstone = 2131427409;
+			public const int my_widget = 2131427409;
 			
 			// aapt resource value: 0x7F0B0052
-			public const int notification_media_action = 2131427410;
+			public const int notification_action = 2131427410;
 			
 			// aapt resource value: 0x7F0B0053
-			public const int notification_media_cancel_action = 2131427411;
+			public const int notification_action_tombstone = 2131427411;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int notification_template_big_media = 2131427412;
+			public const int notification_media_action = 2131427412;
 			
 			// aapt resource value: 0x7F0B0055
-			public const int notification_template_big_media_custom = 2131427413;
+			public const int notification_media_cancel_action = 2131427413;
 			
 			// aapt resource value: 0x7F0B0056
-			public const int notification_template_big_media_narrow = 2131427414;
+			public const int notification_template_big_media = 2131427414;
 			
 			// aapt resource value: 0x7F0B0057
-			public const int notification_template_big_media_narrow_custom = 2131427415;
+			public const int notification_template_big_media_custom = 2131427415;
 			
 			// aapt resource value: 0x7F0B0058
-			public const int notification_template_custom_big = 2131427416;
+			public const int notification_template_big_media_narrow = 2131427416;
 			
 			// aapt resource value: 0x7F0B0059
-			public const int notification_template_icon_group = 2131427417;
+			public const int notification_template_big_media_narrow_custom = 2131427417;
 			
 			// aapt resource value: 0x7F0B005A
-			public const int notification_template_lines_media = 2131427418;
+			public const int notification_template_custom_big = 2131427418;
 			
 			// aapt resource value: 0x7F0B005B
-			public const int notification_template_media = 2131427419;
+			public const int notification_template_icon_group = 2131427419;
 			
 			// aapt resource value: 0x7F0B005C
-			public const int notification_template_media_custom = 2131427420;
+			public const int notification_template_lines_media = 2131427420;
 			
 			// aapt resource value: 0x7F0B005D
-			public const int notification_template_part_chronometer = 2131427421;
+			public const int notification_template_media = 2131427421;
 			
 			// aapt resource value: 0x7F0B005E
-			public const int notification_template_part_time = 2131427422;
+			public const int notification_template_media_custom = 2131427422;
 			
 			// aapt resource value: 0x7F0B005F
-			public const int RootLayout = 2131427423;
+			public const int notification_template_part_chronometer = 2131427423;
 			
 			// aapt resource value: 0x7F0B0060
-			public const int select_dialog_item_material = 2131427424;
+			public const int notification_template_part_time = 2131427424;
 			
 			// aapt resource value: 0x7F0B0061
-			public const int select_dialog_multichoice_material = 2131427425;
+			public const int RootLayout = 2131427425;
 			
 			// aapt resource value: 0x7F0B0062
-			public const int select_dialog_singlechoice_material = 2131427426;
+			public const int select_dialog_item_material = 2131427426;
 			
 			// aapt resource value: 0x7F0B0063
-			public const int ShellContent = 2131427427;
+			public const int select_dialog_multichoice_material = 2131427427;
 			
 			// aapt resource value: 0x7F0B0064
-			public const int support_simple_spinner_dropdown_item = 2131427428;
+			public const int select_dialog_singlechoice_material = 2131427428;
 			
 			// aapt resource value: 0x7F0B0065
-			public const int Tabbar = 2131427429;
+			public const int sfcomboBox_layout = 2131427429;
 			
 			// aapt resource value: 0x7F0B0066
-			public const int test_action_chip = 2131427430;
+			public const int ShellContent = 2131427430;
 			
 			// aapt resource value: 0x7F0B0067
-			public const int test_chip_zero_corner_radius = 2131427431;
+			public const int support_simple_spinner_dropdown_item = 2131427431;
 			
 			// aapt resource value: 0x7F0B0068
-			public const int test_design_checkbox = 2131427432;
+			public const int Tabbar = 2131427432;
 			
 			// aapt resource value: 0x7F0B0069
-			public const int test_design_radiobutton = 2131427433;
+			public const int test_action_chip = 2131427433;
 			
 			// aapt resource value: 0x7F0B006A
-			public const int test_reflow_chipgroup = 2131427434;
+			public const int test_chip_zero_corner_radius = 2131427434;
 			
 			// aapt resource value: 0x7F0B006B
-			public const int test_toolbar = 2131427435;
+			public const int test_design_checkbox = 2131427435;
 			
 			// aapt resource value: 0x7F0B006C
-			public const int test_toolbar_custom_background = 2131427436;
+			public const int test_design_radiobutton = 2131427436;
 			
 			// aapt resource value: 0x7F0B006D
-			public const int test_toolbar_elevation = 2131427437;
+			public const int test_reflow_chipgroup = 2131427437;
 			
 			// aapt resource value: 0x7F0B006E
-			public const int test_toolbar_surface = 2131427438;
-			
-			// aapt resource value: 0x7F0B0073
-			public const int text_view_without_line_height = 2131427443;
+			public const int test_toolbar = 2131427438;
 			
 			// aapt resource value: 0x7F0B006F
-			public const int text_view_with_line_height_from_appearance = 2131427439;
+			public const int test_toolbar_custom_background = 2131427439;
 			
 			// aapt resource value: 0x7F0B0070
-			public const int text_view_with_line_height_from_layout = 2131427440;
+			public const int test_toolbar_elevation = 2131427440;
 			
 			// aapt resource value: 0x7F0B0071
-			public const int text_view_with_line_height_from_style = 2131427441;
+			public const int test_toolbar_surface = 2131427441;
+			
+			// aapt resource value: 0x7F0B0076
+			public const int text_view_without_line_height = 2131427446;
 			
 			// aapt resource value: 0x7F0B0072
-			public const int text_view_with_theme_line_height = 2131427442;
+			public const int text_view_with_line_height_from_appearance = 2131427442;
+			
+			// aapt resource value: 0x7F0B0073
+			public const int text_view_with_line_height_from_layout = 2131427443;
 			
 			// aapt resource value: 0x7F0B0074
-			public const int Toolbar = 2131427444;
+			public const int text_view_with_line_height_from_style = 2131427444;
+			
+			// aapt resource value: 0x7F0B0075
+			public const int text_view_with_theme_line_height = 2131427445;
+			
+			// aapt resource value: 0x7F0B0077
+			public const int Toolbar = 2131427447;
 			
 			static Layout()
 			{
@@ -26426,343 +29277,355 @@ namespace VaxineApp.Droid
 			public const int abc_toolbar_collapse_description = 2131623964;
 			
 			// aapt resource value: 0x7F0E001D
-			public const int admob_id = 2131623965;
+			public const int accept = 2131623965;
 			
 			// aapt resource value: 0x7F0E001E
-			public const int appbar_scrolling_view_behavior = 2131623966;
+			public const int admob_id = 2131623966;
 			
 			// aapt resource value: 0x7F0E001F
-			public const int appcenter_distribute_dialog_actioned_on_disabled_toast = 2131623967;
-			
-			// aapt resource value: 0x7F0E0021
-			public const int appcenter_distribute_downloading_error = 2131623969;
-			
-			// aapt resource value: 0x7F0E0022
-			public const int appcenter_distribute_downloading_mandatory_update = 2131623970;
-			
-			// aapt resource value: 0x7F0E0023
-			public const int appcenter_distribute_downloading_update = 2131623971;
-			
-			// aapt resource value: 0x7F0E0024
-			public const int appcenter_distribute_downloading_version = 2131623972;
+			public const int appbar_scrolling_view_behavior = 2131623967;
 			
 			// aapt resource value: 0x7F0E0020
-			public const int appcenter_distribute_download_progress_number_format = 2131623968;
+			public const int appcenter_distribute_dialog_actioned_on_disabled_toast = 2131623968;
+			
+			// aapt resource value: 0x7F0E0022
+			public const int appcenter_distribute_downloading_error = 2131623970;
+			
+			// aapt resource value: 0x7F0E0023
+			public const int appcenter_distribute_downloading_mandatory_update = 2131623971;
+			
+			// aapt resource value: 0x7F0E0024
+			public const int appcenter_distribute_downloading_update = 2131623972;
 			
 			// aapt resource value: 0x7F0E0025
-			public const int appcenter_distribute_install = 2131623973;
+			public const int appcenter_distribute_downloading_version = 2131623973;
+			
+			// aapt resource value: 0x7F0E0021
+			public const int appcenter_distribute_download_progress_number_format = 2131623969;
 			
 			// aapt resource value: 0x7F0E0026
-			public const int appcenter_distribute_install_ready_message = 2131623974;
+			public const int appcenter_distribute_install = 2131623974;
 			
 			// aapt resource value: 0x7F0E0027
-			public const int appcenter_distribute_install_ready_title = 2131623975;
+			public const int appcenter_distribute_install_ready_message = 2131623975;
 			
 			// aapt resource value: 0x7F0E0028
-			public const int appcenter_distribute_notification_category = 2131623976;
+			public const int appcenter_distribute_install_ready_title = 2131623976;
 			
 			// aapt resource value: 0x7F0E0029
-			public const int appcenter_distribute_unknown_sources_dialog_message = 2131623977;
+			public const int appcenter_distribute_notification_category = 2131623977;
 			
 			// aapt resource value: 0x7F0E002A
-			public const int appcenter_distribute_unknown_sources_dialog_settings = 2131623978;
+			public const int appcenter_distribute_unknown_sources_dialog_message = 2131623978;
 			
 			// aapt resource value: 0x7F0E002B
-			public const int appcenter_distribute_update_dialog_download = 2131623979;
+			public const int appcenter_distribute_unknown_sources_dialog_settings = 2131623979;
 			
 			// aapt resource value: 0x7F0E002C
-			public const int appcenter_distribute_update_dialog_message_mandatory = 2131623980;
+			public const int appcenter_distribute_update_dialog_download = 2131623980;
 			
 			// aapt resource value: 0x7F0E002D
-			public const int appcenter_distribute_update_dialog_message_optional = 2131623981;
+			public const int appcenter_distribute_update_dialog_message_mandatory = 2131623981;
 			
 			// aapt resource value: 0x7F0E002E
-			public const int appcenter_distribute_update_dialog_postpone = 2131623982;
+			public const int appcenter_distribute_update_dialog_message_optional = 2131623982;
 			
 			// aapt resource value: 0x7F0E002F
-			public const int appcenter_distribute_update_dialog_title = 2131623983;
+			public const int appcenter_distribute_update_dialog_postpone = 2131623983;
 			
 			// aapt resource value: 0x7F0E0030
-			public const int appcenter_distribute_update_dialog_view_release_notes = 2131623984;
+			public const int appcenter_distribute_update_dialog_title = 2131623984;
 			
 			// aapt resource value: 0x7F0E0031
-			public const int appcenter_distribute_update_failed_dialog_ignore = 2131623985;
+			public const int appcenter_distribute_update_dialog_view_release_notes = 2131623985;
 			
 			// aapt resource value: 0x7F0E0032
-			public const int appcenter_distribute_update_failed_dialog_message = 2131623986;
+			public const int appcenter_distribute_update_failed_dialog_ignore = 2131623986;
 			
 			// aapt resource value: 0x7F0E0033
-			public const int appcenter_distribute_update_failed_dialog_reinstall = 2131623987;
+			public const int appcenter_distribute_update_failed_dialog_message = 2131623987;
 			
 			// aapt resource value: 0x7F0E0034
-			public const int appcenter_distribute_update_failed_dialog_title = 2131623988;
+			public const int appcenter_distribute_update_failed_dialog_reinstall = 2131623988;
+			
+			// aapt resource value: 0x7F0E0035
+			public const int appcenter_distribute_update_failed_dialog_title = 2131623989;
 			
 			// aapt resource value: 0x7F0E0000
 			public const int ApplicationName = 2131623936;
 			
-			// aapt resource value: 0x7F0E0035
-			public const int banner_ad_unit_id = 2131623989;
-			
 			// aapt resource value: 0x7F0E0036
-			public const int bottom_sheet_behavior = 2131623990;
+			public const int banner_ad_unit_id = 2131623990;
 			
 			// aapt resource value: 0x7F0E0037
-			public const int character_counter_content_description = 2131623991;
+			public const int bottom_sheet_behavior = 2131623991;
 			
 			// aapt resource value: 0x7F0E0038
-			public const int character_counter_overflowed_content_description = 2131623992;
+			public const int character_counter_content_description = 2131623992;
 			
 			// aapt resource value: 0x7F0E0039
-			public const int character_counter_pattern = 2131623993;
+			public const int character_counter_overflowed_content_description = 2131623993;
 			
 			// aapt resource value: 0x7F0E003A
-			public const int chip_text = 2131623994;
+			public const int character_counter_pattern = 2131623994;
 			
 			// aapt resource value: 0x7F0E003B
-			public const int clear_text_end_icon_content_description = 2131623995;
+			public const int chip_text = 2131623995;
 			
 			// aapt resource value: 0x7F0E003C
-			public const int common_google_play_services_enable_button = 2131623996;
+			public const int clear_text_end_icon_content_description = 2131623996;
 			
 			// aapt resource value: 0x7F0E003D
-			public const int common_google_play_services_enable_text = 2131623997;
+			public const int common_google_play_services_enable_button = 2131623997;
 			
 			// aapt resource value: 0x7F0E003E
-			public const int common_google_play_services_enable_title = 2131623998;
+			public const int common_google_play_services_enable_text = 2131623998;
 			
 			// aapt resource value: 0x7F0E003F
-			public const int common_google_play_services_install_button = 2131623999;
+			public const int common_google_play_services_enable_title = 2131623999;
 			
 			// aapt resource value: 0x7F0E0040
-			public const int common_google_play_services_install_text = 2131624000;
+			public const int common_google_play_services_install_button = 2131624000;
 			
 			// aapt resource value: 0x7F0E0041
-			public const int common_google_play_services_install_title = 2131624001;
+			public const int common_google_play_services_install_text = 2131624001;
 			
 			// aapt resource value: 0x7F0E0042
-			public const int common_google_play_services_notification_channel_name = 2131624002;
+			public const int common_google_play_services_install_title = 2131624002;
 			
 			// aapt resource value: 0x7F0E0043
-			public const int common_google_play_services_notification_ticker = 2131624003;
+			public const int common_google_play_services_notification_channel_name = 2131624003;
 			
 			// aapt resource value: 0x7F0E0044
-			public const int common_google_play_services_unknown_issue = 2131624004;
+			public const int common_google_play_services_notification_ticker = 2131624004;
 			
 			// aapt resource value: 0x7F0E0045
-			public const int common_google_play_services_unsupported_text = 2131624005;
+			public const int common_google_play_services_unknown_issue = 2131624005;
 			
 			// aapt resource value: 0x7F0E0046
-			public const int common_google_play_services_update_button = 2131624006;
+			public const int common_google_play_services_unsupported_text = 2131624006;
 			
 			// aapt resource value: 0x7F0E0047
-			public const int common_google_play_services_update_text = 2131624007;
+			public const int common_google_play_services_update_button = 2131624007;
 			
 			// aapt resource value: 0x7F0E0048
-			public const int common_google_play_services_update_title = 2131624008;
+			public const int common_google_play_services_update_text = 2131624008;
 			
 			// aapt resource value: 0x7F0E0049
-			public const int common_google_play_services_updating_text = 2131624009;
+			public const int common_google_play_services_update_title = 2131624009;
 			
 			// aapt resource value: 0x7F0E004A
-			public const int common_google_play_services_wear_update_text = 2131624010;
+			public const int common_google_play_services_updating_text = 2131624010;
 			
 			// aapt resource value: 0x7F0E004B
-			public const int common_open_on_phone = 2131624011;
+			public const int common_google_play_services_wear_update_text = 2131624011;
 			
 			// aapt resource value: 0x7F0E004C
-			public const int common_signin_button_text = 2131624012;
+			public const int common_open_on_phone = 2131624012;
 			
 			// aapt resource value: 0x7F0E004D
-			public const int common_signin_button_text_long = 2131624013;
+			public const int common_signin_button_text = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int copy_toast_msg = 2131624014;
+			public const int common_signin_button_text_long = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int drawer_close = 2131624015;
+			public const int copy_toast_msg = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int drawer_open = 2131624016;
+			public const int decline = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int error_icon_content_description = 2131624017;
+			public const int drawer_close = 2131624017;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int exposed_dropdown_menu_content_description = 2131624018;
+			public const int drawer_open = 2131624018;
 			
 			// aapt resource value: 0x7F0E0053
-			public const int fab_transformation_scrim_behavior = 2131624019;
+			public const int error_icon_content_description = 2131624019;
 			
 			// aapt resource value: 0x7F0E0054
-			public const int fab_transformation_sheet_behavior = 2131624020;
+			public const int exposed_dropdown_menu_content_description = 2131624020;
 			
 			// aapt resource value: 0x7F0E0055
-			public const int fallback_menu_item_copy_link = 2131624021;
+			public const int fab_transformation_scrim_behavior = 2131624021;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int fallback_menu_item_open_in_browser = 2131624022;
+			public const int fab_transformation_sheet_behavior = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int fallback_menu_item_share_link = 2131624023;
+			public const int fallback_menu_item_copy_link = 2131624023;
+			
+			// aapt resource value: 0x7F0E0058
+			public const int fallback_menu_item_open_in_browser = 2131624024;
+			
+			// aapt resource value: 0x7F0E0059
+			public const int fallback_menu_item_share_link = 2131624025;
 			
 			// aapt resource value: 0x7F0E0001
 			public const int Hello = 2131623937;
 			
-			// aapt resource value: 0x7F0E0058
-			public const int hide_bottom_view_on_scroll_behavior = 2131624024;
-			
-			// aapt resource value: 0x7F0E0059
-			public const int icon_content_description = 2131624025;
-			
 			// aapt resource value: 0x7F0E005A
-			public const int item_view_role_description = 2131624026;
+			public const int hide_bottom_view_on_scroll_behavior = 2131624026;
 			
 			// aapt resource value: 0x7F0E005B
-			public const int library_name = 2131624027;
+			public const int icon_content_description = 2131624027;
 			
 			// aapt resource value: 0x7F0E005C
-			public const int material_slider_range_end = 2131624028;
+			public const int item_view_role_description = 2131624028;
 			
 			// aapt resource value: 0x7F0E005D
-			public const int material_slider_range_start = 2131624029;
+			public const int library_name = 2131624029;
 			
 			// aapt resource value: 0x7F0E005E
-			public const int menu_refresh = 2131624030;
+			public const int material_slider_range_end = 2131624030;
 			
 			// aapt resource value: 0x7F0E005F
-			public const int monkey_ipsum = 2131624031;
+			public const int material_slider_range_start = 2131624031;
 			
 			// aapt resource value: 0x7F0E0060
-			public const int mtrl_badge_numberless_content_description = 2131624032;
+			public const int menu_refresh = 2131624032;
 			
 			// aapt resource value: 0x7F0E0061
-			public const int mtrl_chip_close_icon_content_description = 2131624033;
+			public const int monkey_ipsum = 2131624033;
 			
 			// aapt resource value: 0x7F0E0062
-			public const int mtrl_exceed_max_badge_number_content_description = 2131624034;
+			public const int mtrl_badge_numberless_content_description = 2131624034;
 			
 			// aapt resource value: 0x7F0E0063
-			public const int mtrl_exceed_max_badge_number_suffix = 2131624035;
+			public const int mtrl_chip_close_icon_content_description = 2131624035;
 			
 			// aapt resource value: 0x7F0E0064
-			public const int mtrl_picker_a11y_next_month = 2131624036;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131624036;
 			
 			// aapt resource value: 0x7F0E0065
-			public const int mtrl_picker_a11y_prev_month = 2131624037;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131624037;
 			
 			// aapt resource value: 0x7F0E0066
-			public const int mtrl_picker_announce_current_selection = 2131624038;
+			public const int mtrl_picker_a11y_next_month = 2131624038;
 			
 			// aapt resource value: 0x7F0E0067
-			public const int mtrl_picker_cancel = 2131624039;
+			public const int mtrl_picker_a11y_prev_month = 2131624039;
 			
 			// aapt resource value: 0x7F0E0068
-			public const int mtrl_picker_confirm = 2131624040;
+			public const int mtrl_picker_announce_current_selection = 2131624040;
 			
 			// aapt resource value: 0x7F0E0069
-			public const int mtrl_picker_date_header_selected = 2131624041;
+			public const int mtrl_picker_cancel = 2131624041;
 			
 			// aapt resource value: 0x7F0E006A
-			public const int mtrl_picker_date_header_title = 2131624042;
+			public const int mtrl_picker_confirm = 2131624042;
 			
 			// aapt resource value: 0x7F0E006B
-			public const int mtrl_picker_date_header_unselected = 2131624043;
+			public const int mtrl_picker_date_header_selected = 2131624043;
 			
 			// aapt resource value: 0x7F0E006C
-			public const int mtrl_picker_day_of_week_column_header = 2131624044;
+			public const int mtrl_picker_date_header_title = 2131624044;
 			
 			// aapt resource value: 0x7F0E006D
-			public const int mtrl_picker_invalid_format = 2131624045;
+			public const int mtrl_picker_date_header_unselected = 2131624045;
 			
 			// aapt resource value: 0x7F0E006E
-			public const int mtrl_picker_invalid_format_example = 2131624046;
+			public const int mtrl_picker_day_of_week_column_header = 2131624046;
 			
 			// aapt resource value: 0x7F0E006F
-			public const int mtrl_picker_invalid_format_use = 2131624047;
+			public const int mtrl_picker_invalid_format = 2131624047;
 			
 			// aapt resource value: 0x7F0E0070
-			public const int mtrl_picker_invalid_range = 2131624048;
+			public const int mtrl_picker_invalid_format_example = 2131624048;
 			
 			// aapt resource value: 0x7F0E0071
-			public const int mtrl_picker_navigate_to_year_description = 2131624049;
+			public const int mtrl_picker_invalid_format_use = 2131624049;
 			
 			// aapt resource value: 0x7F0E0072
-			public const int mtrl_picker_out_of_range = 2131624050;
+			public const int mtrl_picker_invalid_range = 2131624050;
 			
 			// aapt resource value: 0x7F0E0073
-			public const int mtrl_picker_range_header_only_end_selected = 2131624051;
+			public const int mtrl_picker_navigate_to_year_description = 2131624051;
 			
 			// aapt resource value: 0x7F0E0074
-			public const int mtrl_picker_range_header_only_start_selected = 2131624052;
+			public const int mtrl_picker_out_of_range = 2131624052;
 			
 			// aapt resource value: 0x7F0E0075
-			public const int mtrl_picker_range_header_selected = 2131624053;
+			public const int mtrl_picker_range_header_only_end_selected = 2131624053;
 			
 			// aapt resource value: 0x7F0E0076
-			public const int mtrl_picker_range_header_title = 2131624054;
+			public const int mtrl_picker_range_header_only_start_selected = 2131624054;
 			
 			// aapt resource value: 0x7F0E0077
-			public const int mtrl_picker_range_header_unselected = 2131624055;
+			public const int mtrl_picker_range_header_selected = 2131624055;
 			
 			// aapt resource value: 0x7F0E0078
-			public const int mtrl_picker_save = 2131624056;
+			public const int mtrl_picker_range_header_title = 2131624056;
 			
 			// aapt resource value: 0x7F0E0079
-			public const int mtrl_picker_text_input_date_hint = 2131624057;
+			public const int mtrl_picker_range_header_unselected = 2131624057;
 			
 			// aapt resource value: 0x7F0E007A
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131624058;
+			public const int mtrl_picker_save = 2131624058;
 			
 			// aapt resource value: 0x7F0E007B
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131624059;
+			public const int mtrl_picker_text_input_date_hint = 2131624059;
 			
 			// aapt resource value: 0x7F0E007C
-			public const int mtrl_picker_text_input_day_abbr = 2131624060;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131624060;
 			
 			// aapt resource value: 0x7F0E007D
-			public const int mtrl_picker_text_input_month_abbr = 2131624061;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131624061;
 			
 			// aapt resource value: 0x7F0E007E
-			public const int mtrl_picker_text_input_year_abbr = 2131624062;
+			public const int mtrl_picker_text_input_day_abbr = 2131624062;
 			
 			// aapt resource value: 0x7F0E007F
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624063;
+			public const int mtrl_picker_text_input_month_abbr = 2131624063;
 			
 			// aapt resource value: 0x7F0E0080
-			public const int mtrl_picker_toggle_to_day_selection = 2131624064;
+			public const int mtrl_picker_text_input_year_abbr = 2131624064;
 			
 			// aapt resource value: 0x7F0E0081
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131624065;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624065;
 			
 			// aapt resource value: 0x7F0E0082
-			public const int mtrl_picker_toggle_to_year_selection = 2131624066;
+			public const int mtrl_picker_toggle_to_day_selection = 2131624066;
 			
 			// aapt resource value: 0x7F0E0083
-			public const int overflow_tab_title = 2131624067;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131624067;
 			
 			// aapt resource value: 0x7F0E0084
-			public const int password_toggle_content_description = 2131624068;
+			public const int mtrl_picker_toggle_to_year_selection = 2131624068;
 			
 			// aapt resource value: 0x7F0E0085
-			public const int path_password_eye = 2131624069;
+			public const int overflow_tab_title = 2131624069;
 			
 			// aapt resource value: 0x7F0E0086
-			public const int path_password_eye_mask_strike_through = 2131624070;
+			public const int password_toggle_content_description = 2131624070;
 			
 			// aapt resource value: 0x7F0E0087
-			public const int path_password_eye_mask_visible = 2131624071;
+			public const int path_password_eye = 2131624071;
 			
 			// aapt resource value: 0x7F0E0088
-			public const int path_password_strike_through = 2131624072;
+			public const int path_password_eye_mask_strike_through = 2131624072;
 			
 			// aapt resource value: 0x7F0E0089
-			public const int search_menu_title = 2131624073;
+			public const int path_password_eye_mask_visible = 2131624073;
 			
 			// aapt resource value: 0x7F0E008A
-			public const int status_bar_notification_info_overflow = 2131624074;
+			public const int path_password_strike_through = 2131624074;
 			
 			// aapt resource value: 0x7F0E008B
-			public const int tile_name = 2131624075;
+			public const int popup_message = 2131624075;
+			
+			// aapt resource value: 0x7F0E008C
+			public const int search_menu_title = 2131624076;
+			
+			// aapt resource value: 0x7F0E008D
+			public const int status_bar_notification_info_overflow = 2131624077;
+			
+			// aapt resource value: 0x7F0E008E
+			public const int tile_name = 2131624078;
+			
+			// aapt resource value: 0x7F0E008F
+			public const int title = 2131624079;
 			
 			static String()
 			{
@@ -28911,7 +31774,7 @@ namespace VaxineApp.Droid
 		public partial class Styleable
 		{
 			
-			// aapt resource value: { 0x7F030035,0x7F03003C,0x7F03003D,0x7F0300C1,0x7F0300C2,0x7F0300C3,0x7F0300C4,0x7F0300C5,0x7F0300C6,0x7F0300E1,0x7F0300EA,0x7F0300EB,0x7F0300FF,0x7F03013D,0x7F030143,0x7F030149,0x7F03014A,0x7F03014D,0x7F030159,0x7F030167,0x7F0301A0,0x7F0301C2,0x7F0301DB,0x7F0301E2,0x7F0301E3,0x7F030232,0x7F030235,0x7F030288,0x7F030292 }
+			// aapt resource value: { 0x7F030035,0x7F03003C,0x7F03003D,0x7F0300C1,0x7F0300C2,0x7F0300C3,0x7F0300C4,0x7F0300C5,0x7F0300C6,0x7F0300E1,0x7F0300EA,0x7F0300EB,0x7F0300FF,0x7F03013D,0x7F030143,0x7F030149,0x7F03014A,0x7F03014D,0x7F030159,0x7F030167,0x7F0301A0,0x7F0301C2,0x7F0301F5,0x7F0301FC,0x7F0301FD,0x7F03024C,0x7F03024F,0x7F0302A2,0x7F0302AC }
 			public static int[] ActionBar = new int[] {
 					2130903093,
 					2130903100,
@@ -28935,13 +31798,13 @@ namespace VaxineApp.Droid
 					2130903399,
 					2130903456,
 					2130903490,
-					2130903515,
-					2130903522,
-					2130903523,
-					2130903602,
-					2130903605,
-					2130903688,
-					2130903698};
+					2130903541,
+					2130903548,
+					2130903549,
+					2130903628,
+					2130903631,
+					2130903714,
+					2130903724};
 			
 			// aapt resource value: { 0x10100B3 }
 			public static int[] ActionBarLayout = new int[] {
@@ -29048,14 +31911,14 @@ namespace VaxineApp.Droid
 			public static int[] ActionMenuView = new int[] {
 					-1};
 			
-			// aapt resource value: { 0x7F030035,0x7F03003C,0x7F0300A2,0x7F03013D,0x7F030235,0x7F030292 }
+			// aapt resource value: { 0x7F030035,0x7F03003C,0x7F0300A2,0x7F03013D,0x7F03024F,0x7F0302AC }
 			public static int[] ActionMode = new int[] {
 					2130903093,
 					2130903100,
 					2130903202,
 					2130903357,
-					2130903605,
-					2130903698};
+					2130903631,
+					2130903724};
 			
 			// aapt resource value: 0
 			public const int ActionMode_background = 0;
@@ -29086,7 +31949,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 1
 			public const int ActivityChooserView_initialActivityCount = 1;
 			
-			// aapt resource value: { 0x10100F2,0x7F030067,0x7F030068,0x7F030194,0x7F030195,0x7F0301BF,0x7F03020F,0x7F030211 }
+			// aapt resource value: { 0x10100F2,0x7F030067,0x7F030068,0x7F030194,0x7F030195,0x7F0301BF,0x7F030229,0x7F03022B }
 			public static int[] AlertDialog = new int[] {
 					16842994,
 					2130903143,
@@ -29094,8 +31957,8 @@ namespace VaxineApp.Droid
 					2130903444,
 					2130903445,
 					2130903487,
-					2130903567,
-					2130903569};
+					2130903593,
+					2130903595};
 			
 			// aapt resource value: 0
 			public const int AlertDialog_android_layout = 0;
@@ -29178,7 +32041,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 1
 			public const int AnimatedStateListDrawableTransition_android_toId = 1;
 			
-			// aapt resource value: { 0x10100D4,0x101048F,0x1010540,0x7F0300FF,0x7F030113,0x7F03018C,0x7F03018D,0x7F03022C }
+			// aapt resource value: { 0x10100D4,0x101048F,0x1010540,0x7F0300FF,0x7F030113,0x7F03018C,0x7F03018D,0x7F030246 }
 			public static int[] AppBarLayout = new int[] {
 					16842964,
 					16843919,
@@ -29187,14 +32050,14 @@ namespace VaxineApp.Droid
 					2130903315,
 					2130903436,
 					2130903437,
-					2130903596};
+					2130903622};
 			
-			// aapt resource value: { 0x7F030225,0x7F030226,0x7F030229,0x7F03022A }
+			// aapt resource value: { 0x7F03023F,0x7F030240,0x7F030243,0x7F030244 }
 			public static int[] AppBarLayoutStates = new int[] {
-					2130903589,
-					2130903590,
-					2130903593,
-					2130903594};
+					2130903615,
+					2130903616,
+					2130903619,
+					2130903620};
 			
 			// aapt resource value: 0
 			public const int AppBarLayoutStates_state_collapsed = 0;
@@ -29243,12 +32106,12 @@ namespace VaxineApp.Droid
 			// aapt resource value: 7
 			public const int AppBarLayout_statusBarForeground = 7;
 			
-			// aapt resource value: { 0x1010119,0x7F03021D,0x7F030286,0x7F030287 }
+			// aapt resource value: { 0x1010119,0x7F030237,0x7F0302A0,0x7F0302A1 }
 			public static int[] AppCompatImageView = new int[] {
 					16843033,
-					2130903581,
-					2130903686,
-					2130903687};
+					2130903607,
+					2130903712,
+					2130903713};
 			
 			// aapt resource value: 0
 			public const int AppCompatImageView_android_src = 0;
@@ -29262,12 +32125,12 @@ namespace VaxineApp.Droid
 			// aapt resource value: 3
 			public const int AppCompatImageView_tintMode = 3;
 			
-			// aapt resource value: { 0x1010142,0x7F030283,0x7F030284,0x7F030285 }
+			// aapt resource value: { 0x1010142,0x7F03029D,0x7F03029E,0x7F03029F }
 			public static int[] AppCompatSeekBar = new int[] {
 					16843074,
-					2130903683,
-					2130903684,
-					2130903685};
+					2130903709,
+					2130903710,
+					2130903711};
 			
 			// aapt resource value: 0
 			public const int AppCompatSeekBar_android_thumb = 0;
@@ -29312,7 +32175,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0
 			public const int AppCompatTextHelper_android_textAppearance = 0;
 			
-			// aapt resource value: { 0x1010034,0x7F030030,0x7F030031,0x7F030032,0x7F030033,0x7F030034,0x7F0300EF,0x7F0300F0,0x7F0300F1,0x7F0300F2,0x7F0300F4,0x7F0300F5,0x7F0300F6,0x7F0300F7,0x7F030129,0x7F03012C,0x7F030134,0x7F03017B,0x7F03018E,0x7F030259,0x7F030275 }
+			// aapt resource value: { 0x1010034,0x7F030030,0x7F030031,0x7F030032,0x7F030033,0x7F030034,0x7F0300EF,0x7F0300F0,0x7F0300F1,0x7F0300F2,0x7F0300F4,0x7F0300F5,0x7F0300F6,0x7F0300F7,0x7F030129,0x7F03012C,0x7F030134,0x7F03017B,0x7F03018E,0x7F030273,0x7F03028F }
 			public static int[] AppCompatTextView = new int[] {
 					16842804,
 					2130903088,
@@ -29333,8 +32196,8 @@ namespace VaxineApp.Droid
 					2130903348,
 					2130903419,
 					2130903438,
-					2130903641,
-					2130903669};
+					2130903667,
+					2130903695};
 			
 			// aapt resource value: 0
 			public const int AppCompatTextView_android_textAppearance = 0;
@@ -29399,7 +32262,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 20
 			public const int AppCompatTextView_textLocale = 20;
 			
-			// aapt resource value: { 0x1010057,0x10100AE,0x7F030000,0x7F030001,0x7F030002,0x7F030003,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000E,0x7F03000F,0x7F030010,0x7F030011,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F030022,0x7F030023,0x7F030024,0x7F030025,0x7F030026,0x7F03002F,0x7F030050,0x7F030060,0x7F030061,0x7F030062,0x7F030063,0x7F030064,0x7F03006A,0x7F03006B,0x7F03007D,0x7F030085,0x7F0300A9,0x7F0300AA,0x7F0300AB,0x7F0300AC,0x7F0300AD,0x7F0300AE,0x7F0300AF,0x7F0300B6,0x7F0300B7,0x7F0300BE,0x7F0300CD,0x7F0300E7,0x7F0300E8,0x7F0300E9,0x7F0300EC,0x7F0300EE,0x7F0300FA,0x7F0300FB,0x7F0300FC,0x7F0300FD,0x7F0300FE,0x7F030149,0x7F030158,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030196,0x7F030197,0x7F030198,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03019E,0x7F0301CE,0x7F0301CF,0x7F0301D0,0x7F0301DA,0x7F0301DC,0x7F0301E6,0x7F0301E8,0x7F0301E9,0x7F0301EA,0x7F0301F5,0x7F0301F6,0x7F030203,0x7F030204,0x7F03021A,0x7F03021B,0x7F03023D,0x7F030264,0x7F030266,0x7F030267,0x7F030268,0x7F03026A,0x7F03026B,0x7F03026C,0x7F03026D,0x7F030270,0x7F030271,0x7F030294,0x7F030295,0x7F030296,0x7F030297,0x7F0302B0,0x7F0302B2,0x7F0302B3,0x7F0302B4,0x7F0302B5,0x7F0302B6,0x7F0302B7,0x7F0302B8,0x7F0302B9,0x7F0302BA,0x7F0302BB }
+			// aapt resource value: { 0x1010057,0x10100AE,0x7F030000,0x7F030001,0x7F030002,0x7F030003,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000E,0x7F03000F,0x7F030010,0x7F030011,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F030022,0x7F030023,0x7F030024,0x7F030025,0x7F030026,0x7F03002F,0x7F030050,0x7F030060,0x7F030061,0x7F030062,0x7F030063,0x7F030064,0x7F03006A,0x7F03006B,0x7F03007D,0x7F030085,0x7F0300A9,0x7F0300AA,0x7F0300AB,0x7F0300AC,0x7F0300AD,0x7F0300AE,0x7F0300AF,0x7F0300B6,0x7F0300B7,0x7F0300BE,0x7F0300CD,0x7F0300E7,0x7F0300E8,0x7F0300E9,0x7F0300EC,0x7F0300EE,0x7F0300FA,0x7F0300FB,0x7F0300FC,0x7F0300FD,0x7F0300FE,0x7F030149,0x7F030158,0x7F030190,0x7F030191,0x7F030192,0x7F030193,0x7F030196,0x7F030197,0x7F030198,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03019E,0x7F0301CE,0x7F0301CF,0x7F0301D0,0x7F0301F4,0x7F0301F6,0x7F030200,0x7F030202,0x7F030203,0x7F030204,0x7F03020F,0x7F030210,0x7F03021D,0x7F03021E,0x7F030234,0x7F030235,0x7F030257,0x7F03027E,0x7F030280,0x7F030281,0x7F030282,0x7F030284,0x7F030285,0x7F030286,0x7F030287,0x7F03028A,0x7F03028B,0x7F0302AE,0x7F0302AF,0x7F0302B0,0x7F0302B1,0x7F0302CA,0x7F0302CC,0x7F0302CD,0x7F0302CE,0x7F0302CF,0x7F0302D0,0x7F0302D1,0x7F0302D2,0x7F0302D3,0x7F0302D4,0x7F0302D5 }
 			public static int[] AppCompatTheme = new int[] {
 					16842839,
 					16842926,
@@ -29488,44 +32351,44 @@ namespace VaxineApp.Droid
 					2130903502,
 					2130903503,
 					2130903504,
-					2130903514,
-					2130903516,
-					2130903526,
-					2130903528,
-					2130903529,
-					2130903530,
-					2130903541,
+					2130903540,
 					2130903542,
+					2130903552,
+					2130903554,
 					2130903555,
 					2130903556,
-					2130903578,
-					2130903579,
-					2130903613,
-					2130903652,
-					2130903654,
-					2130903655,
-					2130903656,
-					2130903658,
-					2130903659,
-					2130903660,
-					2130903661,
-					2130903664,
-					2130903665,
-					2130903700,
-					2130903701,
-					2130903702,
-					2130903703,
+					2130903567,
+					2130903568,
+					2130903581,
+					2130903582,
+					2130903604,
+					2130903605,
+					2130903639,
+					2130903678,
+					2130903680,
+					2130903681,
+					2130903682,
+					2130903684,
+					2130903685,
+					2130903686,
+					2130903687,
+					2130903690,
+					2130903691,
+					2130903726,
+					2130903727,
 					2130903728,
-					2130903730,
-					2130903731,
-					2130903732,
-					2130903733,
-					2130903734,
-					2130903735,
-					2130903736,
-					2130903737,
-					2130903738,
-					2130903739};
+					2130903729,
+					2130903754,
+					2130903756,
+					2130903757,
+					2130903758,
+					2130903759,
+					2130903760,
+					2130903761,
+					2130903762,
+					2130903763,
+					2130903764,
+					2130903765};
 			
 			// aapt resource value: 2
 			public const int AppCompatTheme_actionBarDivider = 2;
@@ -29902,7 +32765,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 124
 			public const int AppCompatTheme_windowNoTitle = 124;
 			
-			// aapt resource value: { 0x7F030036,0x7F030040,0x7F030042,0x7F03014B,0x7F0301B9,0x7F0301C4,0x7F0302AF }
+			// aapt resource value: { 0x7F030036,0x7F030040,0x7F030042,0x7F03014B,0x7F0301B9,0x7F0301C4,0x7F0302C9 }
 			public static int[] Badge = new int[] {
 					2130903094,
 					2130903104,
@@ -29910,7 +32773,7 @@ namespace VaxineApp.Droid
 					2130903371,
 					2130903481,
 					2130903492,
-					2130903727};
+					2130903753};
 			
 			// aapt resource value: 0
 			public const int Badge_backgroundColor = 0;
@@ -30031,7 +32894,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 11
 			public const int BottomNavigationView_menu = 11;
 			
-			// aapt resource value: { 0x1010440,0x7F03003E,0x7F030046,0x7F030047,0x7F030048,0x7F030049,0x7F03004A,0x7F03004C,0x7F03004D,0x7F03004E,0x7F030138,0x7F030206,0x7F030209 }
+			// aapt resource value: { 0x1010440,0x7F03003E,0x7F030046,0x7F030047,0x7F030048,0x7F030049,0x7F03004A,0x7F03004C,0x7F03004D,0x7F03004E,0x7F030138,0x7F030220,0x7F030223 }
 			public static int[] BottomSheetBehavior_Layout = new int[] {
 					16843840,
 					2130903102,
@@ -30044,8 +32907,8 @@ namespace VaxineApp.Droid
 					2130903117,
 					2130903118,
 					2130903352,
-					2130903558,
-					2130903561};
+					2130903584,
+					2130903587};
 			
 			// aapt resource value: 0
 			public const int BottomSheetBehavior_Layout_android_elevation = 0;
@@ -30148,7 +33011,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 12
 			public const int CardView_contentPaddingTop = 12;
 			
-			// aapt resource value: { 0x1010034,0x1010098,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F030081,0x7F030082,0x7F030083,0x7F030084,0x7F030086,0x7F030087,0x7F030088,0x7F03008A,0x7F03008B,0x7F03008C,0x7F03008D,0x7F03008E,0x7F03008F,0x7F030090,0x7F030095,0x7F030096,0x7F030097,0x7F030099,0x7F03009B,0x7F03009C,0x7F03009D,0x7F03009E,0x7F03009F,0x7F0300A0,0x7F0300A1,0x7F03010A,0x7F030142,0x7F03014E,0x7F030152,0x7F0301ED,0x7F030206,0x7F030209,0x7F03020D,0x7F030272,0x7F030276 }
+			// aapt resource value: { 0x1010034,0x1010098,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F030081,0x7F030082,0x7F030083,0x7F030084,0x7F030086,0x7F030087,0x7F030088,0x7F03008A,0x7F03008B,0x7F03008C,0x7F03008D,0x7F03008E,0x7F03008F,0x7F030090,0x7F030095,0x7F030096,0x7F030097,0x7F030099,0x7F03009B,0x7F03009C,0x7F03009D,0x7F03009E,0x7F03009F,0x7F0300A0,0x7F0300A1,0x7F03010A,0x7F030142,0x7F03014E,0x7F030152,0x7F030207,0x7F030220,0x7F030223,0x7F030227,0x7F03028C,0x7F030290 }
 			public static int[] Chip = new int[] {
 					16842804,
 					16842904,
@@ -30185,22 +33048,22 @@ namespace VaxineApp.Droid
 					2130903362,
 					2130903374,
 					2130903378,
-					2130903533,
-					2130903558,
-					2130903561,
-					2130903565,
-					2130903666,
-					2130903670};
+					2130903559,
+					2130903584,
+					2130903587,
+					2130903591,
+					2130903692,
+					2130903696};
 			
-			// aapt resource value: { 0x7F030080,0x7F030091,0x7F030092,0x7F030093,0x7F030205,0x7F030212,0x7F030213 }
+			// aapt resource value: { 0x7F030080,0x7F030091,0x7F030092,0x7F030093,0x7F03021F,0x7F03022C,0x7F03022D }
 			public static int[] ChipGroup = new int[] {
 					2130903168,
 					2130903185,
 					2130903186,
 					2130903187,
-					2130903557,
-					2130903570,
-					2130903571};
+					2130903583,
+					2130903596,
+					2130903597};
 			
 			// aapt resource value: 0
 			public const int ChipGroup_checkedChip = 0;
@@ -30346,7 +33209,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 40
 			public const int Chip_textStartPadding = 40;
 			
-			// aapt resource value: { 0x7F0300A5,0x7F0300A6,0x7F0300CC,0x7F030114,0x7F030115,0x7F030116,0x7F030117,0x7F030118,0x7F030119,0x7F03011A,0x7F0301BB,0x7F0301EF,0x7F0301F1,0x7F03022D,0x7F030288,0x7F030289,0x7F030293 }
+			// aapt resource value: { 0x7F0300A5,0x7F0300A6,0x7F0300CC,0x7F030114,0x7F030115,0x7F030116,0x7F030117,0x7F030118,0x7F030119,0x7F03011A,0x7F0301BB,0x7F030209,0x7F03020B,0x7F030247,0x7F0302A2,0x7F0302A3,0x7F0302AD }
 			public static int[] CollapsingToolbarLayout = new int[] {
 					2130903205,
 					2130903206,
@@ -30359,12 +33222,12 @@ namespace VaxineApp.Droid
 					2130903321,
 					2130903322,
 					2130903483,
-					2130903535,
-					2130903537,
-					2130903597,
-					2130903688,
-					2130903689,
-					2130903699};
+					2130903561,
+					2130903563,
+					2130903623,
+					2130903714,
+					2130903715,
+					2130903725};
 			
 			// aapt resource value: 0
 			public const int CollapsingToolbarLayout_collapsedTitleGravity = 0;
@@ -30462,10 +33325,10 @@ namespace VaxineApp.Droid
 			// aapt resource value: 3
 			public const int CompoundButton_buttonTintMode = 3;
 			
-			// aapt resource value: { 0x7F030177,0x7F03022B }
+			// aapt resource value: { 0x7F030177,0x7F030245 }
 			public static int[] CoordinatorLayout = new int[] {
 					2130903415,
-					2130903595};
+					2130903621};
 			
 			// aapt resource value: 0
 			public const int CoordinatorLayout_keylines = 0;
@@ -30504,14 +33367,14 @@ namespace VaxineApp.Droid
 			// aapt resource value: 1
 			public const int CoordinatorLayout_statusBarBackground = 1;
 			
-			// aapt resource value: { 0x7F030228 }
+			// aapt resource value: { 0x7F030242 }
 			public static int[] DrawableStates = new int[] {
-					2130903592};
+					2130903618};
 			
 			// aapt resource value: 0
 			public const int DrawableStates_state_indeterminate = 0;
 			
-			// aapt resource value: { 0x7F03002D,0x7F03002E,0x7F030043,0x7F0300A8,0x7F0300F3,0x7F030137,0x7F030219,0x7F030279 }
+			// aapt resource value: { 0x7F03002D,0x7F03002E,0x7F030043,0x7F0300A8,0x7F0300F3,0x7F030137,0x7F030233,0x7F030293 }
 			public static int[] DrawerArrowToggle = new int[] {
 					2130903085,
 					2130903086,
@@ -30519,8 +33382,8 @@ namespace VaxineApp.Droid
 					2130903208,
 					2130903283,
 					2130903351,
-					2130903577,
-					2130903673};
+					2130903603,
+					2130903699};
 			
 			// aapt resource value: 0
 			public const int DrawerArrowToggle_arrowHeadLength = 0;
@@ -30553,13 +33416,13 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0
 			public const int DrawerLayout_elevation = 0;
 			
-			// aapt resource value: { 0x7F0300FF,0x7F03011B,0x7F030142,0x7F03020D,0x7F030210 }
+			// aapt resource value: { 0x7F0300FF,0x7F03011B,0x7F030142,0x7F030227,0x7F03022A }
 			public static int[] ExtendedFloatingActionButton = new int[] {
 					2130903295,
 					2130903323,
 					2130903362,
-					2130903565,
-					2130903568};
+					2130903591,
+					2130903594};
 			
 			// aapt resource value: { 0x7F030044,0x7F030045 }
 			public static int[] ExtendedFloatingActionButton_Behavior_Layout = new int[] {
@@ -30587,7 +33450,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 4
 			public const int ExtendedFloatingActionButton_shrinkMotionSpec = 4;
 			
-			// aapt resource value: { 0x101000E,0x7F03003E,0x7F03003F,0x7F03004F,0x7F0300FF,0x7F03010A,0x7F030122,0x7F030123,0x7F030142,0x7F03014C,0x7F0301BA,0x7F0301E1,0x7F0301ED,0x7F030206,0x7F030209,0x7F03020D,0x7F0302AB }
+			// aapt resource value: { 0x101000E,0x7F03003E,0x7F03003F,0x7F03004F,0x7F0300FF,0x7F03010A,0x7F030122,0x7F030123,0x7F030142,0x7F03014C,0x7F0301BA,0x7F0301FB,0x7F030207,0x7F030220,0x7F030223,0x7F030227,0x7F0302C5 }
 			public static int[] FloatingActionButton = new int[] {
 					16842766,
 					2130903102,
@@ -30600,12 +33463,12 @@ namespace VaxineApp.Droid
 					2130903362,
 					2130903372,
 					2130903482,
-					2130903521,
-					2130903533,
-					2130903558,
-					2130903561,
-					2130903565,
-					2130903723};
+					2130903547,
+					2130903559,
+					2130903584,
+					2130903587,
+					2130903591,
+					2130903749};
 			
 			// aapt resource value: 0
 			public const int FloatingActionButton_android_enabled = 0;
@@ -30685,7 +33548,7 @@ namespace VaxineApp.Droid
 					2130903345,
 					2130903346};
 			
-			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F03012B,0x7F030133,0x7F030134,0x7F030135,0x7F0302A2 }
+			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F03012B,0x7F030133,0x7F030134,0x7F030135,0x7F0302BC }
 			public static int[] FontFamilyFont = new int[] {
 					16844082,
 					16844083,
@@ -30696,7 +33559,7 @@ namespace VaxineApp.Droid
 					2130903347,
 					2130903348,
 					2130903349,
-					2130903714};
+					2130903740};
 			
 			// aapt resource value: 0
 			public const int FontFamilyFont_android_font = 0;
@@ -30871,7 +33734,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0
 			public const int ItemsViewRendererTheme_collectionViewStyle = 0;
 			
-			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F0300EB,0x7F0300ED,0x7F0301BC,0x7F03020C }
+			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F0300EB,0x7F0300ED,0x7F0301BC,0x7F030226 }
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
 					16842948,
@@ -30881,7 +33744,7 @@ namespace VaxineApp.Droid
 					2130903275,
 					2130903277,
 					2130903484,
-					2130903564};
+					2130903590};
 			
 			// aapt resource value: 2
 			public const int LinearLayoutCompat_android_baselineAligned = 2;
@@ -30955,7 +33818,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 2
 			public const int LoadingImageView_imageAspectRatioAdjust = 2;
 			
-			// aapt resource value: { 0x7F03002A,0x7F03006E,0x7F03006F,0x7F030070,0x7F030071,0x7F030072,0x7F030073,0x7F030074,0x7F03017C,0x7F03017D,0x7F03017E,0x7F03017F,0x7F03019F,0x7F0301A2,0x7F0302A3,0x7F0302A4,0x7F0302A5,0x7F0302A6,0x7F0302A7,0x7F0302A8,0x7F0302A9,0x7F0302AA,0x7F0302AD,0x7F0302BF }
+			// aapt resource value: { 0x7F03002A,0x7F03006E,0x7F03006F,0x7F030070,0x7F030071,0x7F030072,0x7F030073,0x7F030074,0x7F03017C,0x7F03017D,0x7F03017E,0x7F03017F,0x7F03019F,0x7F0301A2,0x7F0302BD,0x7F0302BE,0x7F0302BF,0x7F0302C0,0x7F0302C1,0x7F0302C2,0x7F0302C3,0x7F0302C4,0x7F0302C7,0x7F0302D9 }
 			public static int[] MapAttrs = new int[] {
 					2130903082,
 					2130903150,
@@ -30971,16 +33834,16 @@ namespace VaxineApp.Droid
 					2130903423,
 					2130903455,
 					2130903458,
-					2130903715,
-					2130903716,
-					2130903717,
-					2130903718,
-					2130903719,
-					2130903720,
-					2130903721,
-					2130903722,
-					2130903725,
-					2130903743};
+					2130903741,
+					2130903742,
+					2130903743,
+					2130903744,
+					2130903745,
+					2130903746,
+					2130903747,
+					2130903748,
+					2130903751,
+					2130903769};
 			
 			// aapt resource value: 0
 			public const int MapAttrs_ambientEnabled = 0;
@@ -31103,7 +33966,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0
 			public const int MaterialAutoCompleteTextView_android_inputType = 0;
 			
-			// aapt resource value: { 0x10100D4,0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x10101E5,0x7F03003E,0x7F03003F,0x7F0300D4,0x7F0300FF,0x7F03014D,0x7F03014F,0x7F030150,0x7F030151,0x7F030153,0x7F030154,0x7F0301ED,0x7F030206,0x7F030209,0x7F03022E,0x7F03022F }
+			// aapt resource value: { 0x10100D4,0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x10101E5,0x7F03003E,0x7F03003F,0x7F0300D4,0x7F0300FF,0x7F03014D,0x7F03014F,0x7F030150,0x7F030151,0x7F030153,0x7F030154,0x7F030207,0x7F030220,0x7F030223,0x7F030248,0x7F030249 }
 			public static int[] MaterialButton = new int[] {
 					16842964,
 					16843191,
@@ -31121,17 +33984,17 @@ namespace VaxineApp.Droid
 					2130903377,
 					2130903379,
 					2130903380,
-					2130903533,
-					2130903558,
-					2130903561,
-					2130903598,
-					2130903599};
+					2130903559,
+					2130903584,
+					2130903587,
+					2130903624,
+					2130903625};
 			
-			// aapt resource value: { 0x7F03007F,0x7F030205,0x7F030213 }
+			// aapt resource value: { 0x7F03007F,0x7F03021F,0x7F03022D }
 			public static int[] MaterialButtonToggleGroup = new int[] {
 					2130903167,
-					2130903557,
-					2130903571};
+					2130903583,
+					2130903597};
 			
 			// aapt resource value: 0
 			public const int MaterialButtonToggleGroup_checkedButton = 0;
@@ -31205,17 +34068,17 @@ namespace VaxineApp.Droid
 			// aapt resource value: 20
 			public const int MaterialButton_strokeWidth = 20;
 			
-			// aapt resource value: { 0x101020D,0x7F0300E2,0x7F0300E3,0x7F0300E4,0x7F0300E5,0x7F0301E7,0x7F0302BC,0x7F0302BD,0x7F0302BE }
+			// aapt resource value: { 0x101020D,0x7F0300E2,0x7F0300E3,0x7F0300E4,0x7F0300E5,0x7F030201,0x7F0302D6,0x7F0302D7,0x7F0302D8 }
 			public static int[] MaterialCalendar = new int[] {
 					16843277,
 					2130903266,
 					2130903267,
 					2130903268,
 					2130903269,
-					2130903527,
-					2130903740,
-					2130903741,
-					2130903742};
+					2130903553,
+					2130903766,
+					2130903767,
+					2130903768};
 			
 			// aapt resource value: { 0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x7F030160,0x7F030169,0x7F03016A,0x7F030171,0x7F030172,0x7F030176 }
 			public static int[] MaterialCalendarItem = new int[] {
@@ -31287,18 +34150,18 @@ namespace VaxineApp.Droid
 			// aapt resource value: 8
 			public const int MaterialCalendar_yearTodayStyle = 8;
 			
-			// aapt resource value: { 0x10101E5,0x7F030078,0x7F030081,0x7F030083,0x7F0301ED,0x7F030206,0x7F030209,0x7F030227,0x7F03022E,0x7F03022F }
+			// aapt resource value: { 0x10101E5,0x7F030078,0x7F030081,0x7F030083,0x7F030207,0x7F030220,0x7F030223,0x7F030241,0x7F030248,0x7F030249 }
 			public static int[] MaterialCardView = new int[] {
 					16843237,
 					2130903160,
 					2130903169,
 					2130903171,
-					2130903533,
-					2130903558,
-					2130903561,
-					2130903591,
-					2130903598,
-					2130903599};
+					2130903559,
+					2130903584,
+					2130903587,
+					2130903617,
+					2130903624,
+					2130903625};
 			
 			// aapt resource value: 0
 			public const int MaterialCardView_android_checkable = 0;
@@ -31330,10 +34193,10 @@ namespace VaxineApp.Droid
 			// aapt resource value: 9
 			public const int MaterialCardView_strokeWidth = 9;
 			
-			// aapt resource value: { 0x7F03006C,0x7F0302AC }
+			// aapt resource value: { 0x7F03006C,0x7F0302C6 }
 			public static int[] MaterialCheckBox = new int[] {
 					2130903148,
-					2130903724};
+					2130903750};
 			
 			// aapt resource value: 0
 			public const int MaterialCheckBox_buttonTint = 0;
@@ -31341,10 +34204,10 @@ namespace VaxineApp.Droid
 			// aapt resource value: 1
 			public const int MaterialCheckBox_useMaterialThemeColors = 1;
 			
-			// aapt resource value: { 0x7F03006C,0x7F0302AC }
+			// aapt resource value: { 0x7F03006C,0x7F0302C6 }
 			public static int[] MaterialRadioButton = new int[] {
 					2130903148,
-					2130903724};
+					2130903750};
 			
 			// aapt resource value: 0
 			public const int MaterialRadioButton_buttonTint = 0;
@@ -31352,10 +34215,10 @@ namespace VaxineApp.Droid
 			// aapt resource value: 1
 			public const int MaterialRadioButton_useMaterialThemeColors = 1;
 			
-			// aapt resource value: { 0x7F030206,0x7F030209 }
+			// aapt resource value: { 0x7F030220,0x7F030223 }
 			public static int[] MaterialShape = new int[] {
-					2130903558,
-					2130903561};
+					2130903584,
+					2130903587};
 			
 			// aapt resource value: 0
 			public const int MaterialShape_shapeAppearance = 0;
@@ -31416,7 +34279,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 2
 			public const int MenuGroup_android_visible = 2;
 			
-			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F03000D,0x7F03001F,0x7F030021,0x7F030029,0x7F0300C0,0x7F030153,0x7F030154,0x7F0301C5,0x7F03020B,0x7F030299 }
+			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F03000D,0x7F03001F,0x7F030021,0x7F030029,0x7F0300C0,0x7F030153,0x7F030154,0x7F0301C5,0x7F030225,0x7F0302B3 }
 			public static int[] MenuItem = new int[] {
 					16842754,
 					16842766,
@@ -31439,8 +34302,8 @@ namespace VaxineApp.Droid
 					2130903379,
 					2130903380,
 					2130903493,
-					2130903563,
-					2130903705};
+					2130903589,
+					2130903731};
 			
 			// aapt resource value: 13
 			public const int MenuItem_actionLayout = 13;
@@ -31511,7 +34374,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 22
 			public const int MenuItem_tooltipText = 22;
 			
-			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F0301E0,0x7F030230 }
+			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F0301FA,0x7F03024A }
 			public static int[] MenuView = new int[] {
 					16842926,
 					16843052,
@@ -31520,8 +34383,8 @@ namespace VaxineApp.Droid
 					16843055,
 					16843056,
 					16843057,
-					2130903520,
-					2130903600};
+					2130903546,
+					2130903626};
 			
 			// aapt resource value: 4
 			public const int MenuView_android_headerBackground = 4;
@@ -31643,9 +34506,9 @@ namespace VaxineApp.Droid
 					16843465,
 					2130903494};
 			
-			// aapt resource value: { 0x7F030224 }
+			// aapt resource value: { 0x7F03023E }
 			public static int[] PopupWindowBackgroundState = new int[] {
-					2130903588};
+					2130903614};
 			
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
@@ -31659,9 +34522,9 @@ namespace VaxineApp.Droid
 			// aapt resource value: 2
 			public const int PopupWindow_overlapAnchor = 2;
 			
-			// aapt resource value: { 0x7F0302AE }
+			// aapt resource value: { 0x7F0302C8 }
 			public static int[] RangeSlider = new int[] {
-					2130903726};
+					2130903752};
 			
 			// aapt resource value: 0
 			public const int RangeSlider_values = 0;
@@ -31677,7 +34540,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 1
 			public const int RecycleListView_paddingTopNoTitle = 1;
 			
-			// aapt resource value: { 0x10100C4,0x10100EB,0x10100F1,0x7F030124,0x7F030125,0x7F030126,0x7F030127,0x7F030128,0x7F030181,0x7F0301EC,0x7F030218,0x7F03021E }
+			// aapt resource value: { 0x10100C4,0x10100EB,0x10100F1,0x7F030124,0x7F030125,0x7F030126,0x7F030127,0x7F030128,0x7F030181,0x7F030206,0x7F030232,0x7F030238 }
 			public static int[] RecyclerView = new int[] {
 					16842948,
 					16842987,
@@ -31688,9 +34551,9 @@ namespace VaxineApp.Droid
 					2130903335,
 					2130903336,
 					2130903425,
-					2130903532,
-					2130903576,
-					2130903582};
+					2130903558,
+					2130903602,
+					2130903608};
 			
 			// aapt resource value: 1
 			public const int RecyclerView_android_clipToPadding = 1;
@@ -31742,14 +34605,14 @@ namespace VaxineApp.Droid
 			// aapt resource value: 0
 			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 0;
 			
-			// aapt resource value: { 0x7F0301F2 }
+			// aapt resource value: { 0x7F03020C }
 			public static int[] ScrollViewRendererTheme = new int[] {
-					2130903538};
+					2130903564};
 			
 			// aapt resource value: 0
 			public const int ScrollViewRendererTheme_scrollViewStyle = 0;
 			
-			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F03009B,0x7F0300BF,0x7F0300E6,0x7F030139,0x7F030155,0x7F030180,0x7F0301E4,0x7F0301E5,0x7F0301F3,0x7F0301F4,0x7F030231,0x7F030239,0x7F0302B1 }
+			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F03009B,0x7F0300BF,0x7F0300E6,0x7F030139,0x7F030155,0x7F030180,0x7F0301FE,0x7F0301FF,0x7F03020D,0x7F03020E,0x7F03024B,0x7F030253,0x7F0302CB }
 			public static int[] SearchView = new int[] {
 					16842970,
 					16843039,
@@ -31761,13 +34624,13 @@ namespace VaxineApp.Droid
 					2130903353,
 					2130903381,
 					2130903424,
-					2130903524,
-					2130903525,
-					2130903539,
-					2130903540,
-					2130903601,
-					2130903609,
-					2130903729};
+					2130903550,
+					2130903551,
+					2130903565,
+					2130903566,
+					2130903627,
+					2130903635,
+					2130903755};
 			
 			// aapt resource value: 0
 			public const int SearchView_android_focusable = 0;
@@ -31835,20 +34698,127 @@ namespace VaxineApp.Droid
 			// aapt resource value: 2
 			public const int SfCheckBox_isthreestate = 2;
 			
-			// aapt resource value: { 0x7F0301F7,0x7F0301F8,0x7F0301F9,0x7F0301FA,0x7F0301FB,0x7F0301FC,0x7F0301FD,0x7F0301FE,0x7F0301FF,0x7F030200,0x7F030201,0x7F030202 }
+			// aapt resource value: { 0x7F0301D6,0x7F0301D7,0x7F0301D8,0x7F0301D9,0x7F0301DA,0x7F0301DB,0x7F0301DC,0x7F0301DD,0x7F0301DE,0x7F0301DF,0x7F0301E0,0x7F0301E1,0x7F0301E2,0x7F0301E3,0x7F0301E4,0x7F0301E5,0x7F0301E6,0x7F0301E7,0x7F0301E8,0x7F0301E9,0x7F0301EA,0x7F0301EB,0x7F0301EC,0x7F0301ED,0x7F0301EE,0x7F0301EF }
+			public static int[] SfPicker = new int[] {
+					2130903510,
+					2130903511,
+					2130903512,
+					2130903513,
+					2130903514,
+					2130903515,
+					2130903516,
+					2130903517,
+					2130903518,
+					2130903519,
+					2130903520,
+					2130903521,
+					2130903522,
+					2130903523,
+					2130903524,
+					2130903525,
+					2130903526,
+					2130903527,
+					2130903528,
+					2130903529,
+					2130903530,
+					2130903531,
+					2130903532,
+					2130903533,
+					2130903534,
+					2130903535};
+			
+			// aapt resource value: 0
+			public const int SfPicker_pickerBackgroundColor = 0;
+			
+			// aapt resource value: 1
+			public const int SfPicker_pickerBorderColor = 1;
+			
+			// aapt resource value: 2
+			public const int SfPicker_pickerColumnHeaderBackgroundColor = 2;
+			
+			// aapt resource value: 3
+			public const int SfPicker_pickerColumnHeaderHeight = 3;
+			
+			// aapt resource value: 4
+			public const int SfPicker_pickerColumnHeaderTextColor = 4;
+			
+			// aapt resource value: 5
+			public const int SfPicker_pickerColumnHeaderTextSize = 5;
+			
+			// aapt resource value: 6
+			public const int SfPicker_pickerEnableLooping = 6;
+			
+			// aapt resource value: 7
+			public const int SfPicker_pickerFooterHeight = 7;
+			
+			// aapt resource value: 8
+			public const int SfPicker_pickerHeaderBackgroundColor = 8;
+			
+			// aapt resource value: 9
+			public const int SfPicker_pickerHeaderHeight = 9;
+			
+			// aapt resource value: 10
+			public const int SfPicker_pickerHeaderText = 10;
+			
+			// aapt resource value: 11
+			public const int SfPicker_pickerHeaderTextColor = 11;
+			
+			// aapt resource value: 12
+			public const int SfPicker_pickerHeaderTextSize = 12;
+			
+			// aapt resource value: 13
+			public const int SfPicker_pickerHeight = 13;
+			
+			// aapt resource value: 14
+			public const int SfPicker_pickerIsOpen = 14;
+			
+			// aapt resource value: 15
+			public const int SfPicker_pickerItemHeight = 15;
+			
+			// aapt resource value: 16
+			public const int SfPicker_pickerMode = 16;
+			
+			// aapt resource value: 18
+			public const int SfPicker_pickerSelectedItemTextcolor = 18;
+			
+			// aapt resource value: 17
+			public const int SfPicker_pickerSelectedItemTextSize = 17;
+			
+			// aapt resource value: 19
+			public const int SfPicker_pickerSelectionBorderColor = 19;
+			
+			// aapt resource value: 20
+			public const int SfPicker_pickerShowColumnHeader = 20;
+			
+			// aapt resource value: 21
+			public const int SfPicker_pickerShowFooter = 21;
+			
+			// aapt resource value: 22
+			public const int SfPicker_pickerShowHeader = 22;
+			
+			// aapt resource value: 23
+			public const int SfPicker_pickerUnselectedItemTextColor = 23;
+			
+			// aapt resource value: 24
+			public const int SfPicker_pickerUnselectedItemTextSize = 24;
+			
+			// aapt resource value: 25
+			public const int SfPicker_pickerWidth = 25;
+			
+			// aapt resource value: { 0x7F030211,0x7F030212,0x7F030213,0x7F030214,0x7F030215,0x7F030216,0x7F030217,0x7F030218,0x7F030219,0x7F03021A,0x7F03021B,0x7F03021C }
 			public static int[] SfSegmentedControl = new int[] {
-					2130903543,
-					2130903544,
-					2130903545,
-					2130903546,
-					2130903547,
-					2130903548,
-					2130903549,
-					2130903550,
-					2130903551,
-					2130903552,
-					2130903553,
-					2130903554};
+					2130903569,
+					2130903570,
+					2130903571,
+					2130903572,
+					2130903573,
+					2130903574,
+					2130903575,
+					2130903576,
+					2130903577,
+					2130903578,
+					2130903579,
+					2130903580};
 			
 			// aapt resource value: 0
 			public const int SfSegmentedControl_segmentBackColor = 0;
@@ -31886,12 +34856,12 @@ namespace VaxineApp.Droid
 			// aapt resource value: 8
 			public const int SfSegmentedControl_segmentStrokeThickness = 8;
 			
-			// aapt resource value: { 0x7F030206,0x7F030209,0x7F03022E,0x7F03022F }
+			// aapt resource value: { 0x7F030220,0x7F030223,0x7F030248,0x7F030249 }
 			public static int[] ShapeableImageView = new int[] {
-					2130903558,
-					2130903561,
-					2130903598,
-					2130903599};
+					2130903584,
+					2130903587,
+					2130903624,
+					2130903625};
 			
 			// aapt resource value: 0
 			public const int ShapeableImageView_shapeAppearance = 0;
@@ -31948,11 +34918,11 @@ namespace VaxineApp.Droid
 			// aapt resource value: 9
 			public const int ShapeAppearance_cornerSizeTopRight = 9;
 			
-			// aapt resource value: { 0x7F030069,0x7F0300BA,0x7F0301EE }
+			// aapt resource value: { 0x7F030069,0x7F0300BA,0x7F030208 }
 			public static int[] SignInButton = new int[] {
 					2130903145,
 					2130903226,
-					2130903534};
+					2130903560};
 			
 			// aapt resource value: 0
 			public const int SignInButton_buttonSize = 0;
@@ -31963,7 +34933,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 2
 			public const int SignInButton_scopeUris = 2;
 			
-			// aapt resource value: { 0x101000E,0x1010024,0x1010146,0x10102DE,0x10102DF,0x7F03013A,0x7F03013B,0x7F030178,0x7F030179,0x7F03027A,0x7F03027B,0x7F03027C,0x7F030280,0x7F030281,0x7F030282,0x7F03029B,0x7F03029C,0x7F03029D,0x7F03029E }
+			// aapt resource value: { 0x101000E,0x1010024,0x1010146,0x10102DE,0x10102DF,0x7F03013A,0x7F03013B,0x7F030178,0x7F030179,0x7F030294,0x7F030295,0x7F030296,0x7F03029A,0x7F03029B,0x7F03029C,0x7F0302B5,0x7F0302B6,0x7F0302B7,0x7F0302B8 }
 			public static int[] Slider = new int[] {
 					16842766,
 					16842788,
@@ -31974,16 +34944,16 @@ namespace VaxineApp.Droid
 					2130903355,
 					2130903416,
 					2130903417,
-					2130903674,
-					2130903675,
-					2130903676,
-					2130903680,
-					2130903681,
-					2130903682,
+					2130903700,
+					2130903701,
+					2130903702,
+					2130903706,
 					2130903707,
 					2130903708,
-					2130903709,
-					2130903710};
+					2130903733,
+					2130903734,
+					2130903735,
+					2130903736};
 			
 			// aapt resource value: 0
 			public const int Slider_android_enabled = 0;
@@ -32042,11 +35012,11 @@ namespace VaxineApp.Droid
 			// aapt resource value: 18
 			public const int Slider_trackHeight = 18;
 			
-			// aapt resource value: { 0x7F030215,0x7F030216,0x7F030217 }
+			// aapt resource value: { 0x7F03022F,0x7F030230,0x7F030231 }
 			public static int[] Snackbar = new int[] {
-					2130903573,
-					2130903574,
-					2130903575};
+					2130903599,
+					2130903600,
+					2130903601};
 			
 			// aapt resource value: { 0x101011F,0x7F030020,0x7F03002B,0x7F03003B,0x7F03003E,0x7F03003F,0x7F0300FF,0x7F0301B7 }
 			public static int[] SnackbarLayout = new int[] {
@@ -32092,13 +35062,13 @@ namespace VaxineApp.Droid
 			// aapt resource value: 2
 			public const int Snackbar_snackbarTextViewStyle = 2;
 			
-			// aapt resource value: { 0x10100B2,0x1010176,0x101017B,0x1010262,0x7F0301DB }
+			// aapt resource value: { 0x10100B2,0x1010176,0x101017B,0x1010262,0x7F0301F5 }
 			public static int[] Spinner = new int[] {
 					16842930,
 					16843126,
 					16843131,
 					16843362,
-					2130903515};
+					2130903541};
 			
 			// aapt resource value: 3
 			public const int Spinner_android_dropDownWidth = 3;
@@ -32149,29 +35119,29 @@ namespace VaxineApp.Droid
 			// aapt resource value: 1
 			public const int StateListDrawable_android_visible = 1;
 			
-			// aapt resource value: { 0x7F03023A }
+			// aapt resource value: { 0x7F030254 }
 			public static int[] SwipeRefreshLayout = new int[] {
-					2130903610};
+					2130903636};
 			
 			// aapt resource value: 0
 			public const int SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor = 0;
 			
-			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F03020E,0x7F03021C,0x7F03023B,0x7F03023C,0x7F03023E,0x7F03027D,0x7F03027E,0x7F03027F,0x7F03029A,0x7F03029F,0x7F0302A0 }
+			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F030228,0x7F030236,0x7F030255,0x7F030256,0x7F030258,0x7F030297,0x7F030298,0x7F030299,0x7F0302B4,0x7F0302B9,0x7F0302BA }
 			public static int[] SwitchCompat = new int[] {
 					16843044,
 					16843045,
 					16843074,
-					2130903566,
-					2130903580,
-					2130903611,
-					2130903612,
-					2130903614,
-					2130903677,
-					2130903678,
-					2130903679,
-					2130903706,
-					2130903711,
-					2130903712};
+					2130903592,
+					2130903606,
+					2130903637,
+					2130903638,
+					2130903640,
+					2130903703,
+					2130903704,
+					2130903705,
+					2130903732,
+					2130903737,
+					2130903738};
 			
 			// aapt resource value: 1
 			public const int SwitchCompat_android_textOff = 1;
@@ -32215,9 +35185,9 @@ namespace VaxineApp.Droid
 			// aapt resource value: 13
 			public const int SwitchCompat_trackTintMode = 13;
 			
-			// aapt resource value: { 0x7F0302AC }
+			// aapt resource value: { 0x7F0302C6 }
 			public static int[] SwitchMaterial = new int[] {
-					2130903724};
+					2130903750};
 			
 			// aapt resource value: 0
 			public const int SwitchMaterial_useMaterialThemeColors = 0;
@@ -32237,33 +35207,33 @@ namespace VaxineApp.Droid
 			// aapt resource value: 2
 			public const int TabItem_android_text = 2;
 			
-			// aapt resource value: { 0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245,0x7F030246,0x7F030247,0x7F030248,0x7F030249,0x7F03024A,0x7F03024B,0x7F03024C,0x7F03024D,0x7F03024E,0x7F03024F,0x7F030250,0x7F030251,0x7F030252,0x7F030253,0x7F030254,0x7F030256,0x7F030257,0x7F030258 }
+			// aapt resource value: { 0x7F030259,0x7F03025A,0x7F03025B,0x7F03025C,0x7F03025D,0x7F03025E,0x7F03025F,0x7F030260,0x7F030261,0x7F030262,0x7F030263,0x7F030264,0x7F030265,0x7F030266,0x7F030267,0x7F030268,0x7F030269,0x7F03026A,0x7F03026B,0x7F03026C,0x7F03026D,0x7F03026E,0x7F030270,0x7F030271,0x7F030272 }
 			public static int[] TabLayout = new int[] {
-					2130903615,
-					2130903616,
-					2130903617,
-					2130903618,
-					2130903619,
-					2130903620,
-					2130903621,
-					2130903622,
-					2130903623,
-					2130903624,
-					2130903625,
-					2130903626,
-					2130903627,
-					2130903628,
-					2130903629,
-					2130903630,
-					2130903631,
-					2130903632,
-					2130903633,
-					2130903634,
-					2130903635,
-					2130903636,
-					2130903638,
-					2130903639,
-					2130903640};
+					2130903641,
+					2130903642,
+					2130903643,
+					2130903644,
+					2130903645,
+					2130903646,
+					2130903647,
+					2130903648,
+					2130903649,
+					2130903650,
+					2130903651,
+					2130903652,
+					2130903653,
+					2130903654,
+					2130903655,
+					2130903656,
+					2130903657,
+					2130903658,
+					2130903659,
+					2130903660,
+					2130903661,
+					2130903662,
+					2130903664,
+					2130903665,
+					2130903666};
 			
 			// aapt resource value: 0
 			public const int TabLayout_tabBackground = 0;
@@ -32340,7 +35310,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 24
 			public const int TabLayout_tabUnboundedRipple = 24;
 			
-			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x1010585,0x7F03012C,0x7F030134,0x7F030259,0x7F030275 }
+			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x1010585,0x7F03012C,0x7F030134,0x7F030273,0x7F03028F }
 			public static int[] TextAppearance = new int[] {
 					16842901,
 					16842902,
@@ -32356,8 +35326,8 @@ namespace VaxineApp.Droid
 					16844165,
 					2130903340,
 					2130903348,
-					2130903641,
-					2130903669};
+					2130903667,
+					2130903695};
 			
 			// aapt resource value: 10
 			public const int TextAppearance_android_fontFamily = 10;
@@ -32407,14 +35377,14 @@ namespace VaxineApp.Droid
 			// aapt resource value: 15
 			public const int TextAppearance_textLocale = 15;
 			
-			// aapt resource value: { 0x7F030273 }
+			// aapt resource value: { 0x7F03028D }
 			public static int[] TextInputEditText = new int[] {
-					2130903667};
+					2130903693};
 			
 			// aapt resource value: 0
 			public const int TextInputEditText_textInputLayoutFocusedRectEnabled = 0;
 			
-			// aapt resource value: { 0x101000E,0x101009A,0x1010150,0x7F030055,0x7F030056,0x7F030057,0x7F030058,0x7F030059,0x7F03005A,0x7F03005B,0x7F03005C,0x7F03005D,0x7F03005E,0x7F03005F,0x7F0300DB,0x7F0300DC,0x7F0300DD,0x7F0300DE,0x7F0300DF,0x7F0300E0,0x7F030102,0x7F030103,0x7F030104,0x7F030105,0x7F030106,0x7F030107,0x7F03010B,0x7F03010C,0x7F03010D,0x7F03010E,0x7F03010F,0x7F030110,0x7F030111,0x7F03013E,0x7F03013F,0x7F030140,0x7F030141,0x7F030145,0x7F030146,0x7F030147,0x7F030148,0x7F0301D1,0x7F0301D2,0x7F0301D3,0x7F0301D4,0x7F0301D5,0x7F0301D6,0x7F0301D7,0x7F0301D8,0x7F0301DD,0x7F0301DE,0x7F0301DF,0x7F030206,0x7F030209,0x7F03021F,0x7F030220,0x7F030221,0x7F030222,0x7F030223,0x7F030236,0x7F030237,0x7F030238 }
+			// aapt resource value: { 0x101000E,0x101009A,0x1010150,0x7F030055,0x7F030056,0x7F030057,0x7F030058,0x7F030059,0x7F03005A,0x7F03005B,0x7F03005C,0x7F03005D,0x7F03005E,0x7F03005F,0x7F0300DB,0x7F0300DC,0x7F0300DD,0x7F0300DE,0x7F0300DF,0x7F0300E0,0x7F030102,0x7F030103,0x7F030104,0x7F030105,0x7F030106,0x7F030107,0x7F03010B,0x7F03010C,0x7F03010D,0x7F03010E,0x7F03010F,0x7F030110,0x7F030111,0x7F03013E,0x7F03013F,0x7F030140,0x7F030141,0x7F030145,0x7F030146,0x7F030147,0x7F030148,0x7F0301D1,0x7F0301D2,0x7F0301D3,0x7F0301D4,0x7F0301D5,0x7F0301F0,0x7F0301F1,0x7F0301F2,0x7F0301F7,0x7F0301F8,0x7F0301F9,0x7F030220,0x7F030223,0x7F030239,0x7F03023A,0x7F03023B,0x7F03023C,0x7F03023D,0x7F030250,0x7F030251,0x7F030252 }
 			public static int[] TextInputLayout = new int[] {
 					16842766,
 					16842906,
@@ -32462,22 +35432,22 @@ namespace VaxineApp.Droid
 					2130903507,
 					2130903508,
 					2130903509,
-					2130903510,
-					2130903511,
-					2130903512,
-					2130903517,
-					2130903518,
-					2130903519,
-					2130903558,
-					2130903561,
-					2130903583,
+					2130903536,
+					2130903537,
+					2130903538,
+					2130903543,
+					2130903544,
+					2130903545,
 					2130903584,
-					2130903585,
-					2130903586,
 					2130903587,
-					2130903606,
-					2130903607,
-					2130903608};
+					2130903609,
+					2130903610,
+					2130903611,
+					2130903612,
+					2130903613,
+					2130903632,
+					2130903633,
+					2130903634};
 			
 			// aapt resource value: 0
 			public const int TextInputLayout_android_enabled = 0;
@@ -32680,7 +35650,7 @@ namespace VaxineApp.Droid
 			// aapt resource value: 2
 			public const int ThemeEnforcement_enforceTextAppearance = 2;
 			
-			// aapt resource value: { 0x10100AF,0x1010140,0x7F030066,0x7F0300A3,0x7F0300A4,0x7F0300C1,0x7F0300C2,0x7F0300C3,0x7F0300C4,0x7F0300C5,0x7F0300C6,0x7F0301A0,0x7F0301A1,0x7F0301B8,0x7F0301BD,0x7F0301C0,0x7F0301C1,0x7F0301DB,0x7F030232,0x7F030233,0x7F030234,0x7F030288,0x7F03028A,0x7F03028B,0x7F03028C,0x7F03028D,0x7F03028E,0x7F03028F,0x7F030290,0x7F030291 }
+			// aapt resource value: { 0x10100AF,0x1010140,0x7F030066,0x7F0300A3,0x7F0300A4,0x7F0300C1,0x7F0300C2,0x7F0300C3,0x7F0300C4,0x7F0300C5,0x7F0300C6,0x7F0301A0,0x7F0301A1,0x7F0301B8,0x7F0301BD,0x7F0301C0,0x7F0301C1,0x7F0301F5,0x7F03024C,0x7F03024D,0x7F03024E,0x7F0302A2,0x7F0302A4,0x7F0302A5,0x7F0302A6,0x7F0302A7,0x7F0302A8,0x7F0302A9,0x7F0302AA,0x7F0302AB }
 			public static int[] Toolbar = new int[] {
 					16842927,
 					16843072,
@@ -32699,19 +35669,19 @@ namespace VaxineApp.Droid
 					2130903485,
 					2130903488,
 					2130903489,
-					2130903515,
-					2130903602,
-					2130903603,
-					2130903604,
-					2130903688,
-					2130903690,
-					2130903691,
-					2130903692,
-					2130903693,
-					2130903694,
-					2130903695,
-					2130903696,
-					2130903697};
+					2130903541,
+					2130903628,
+					2130903629,
+					2130903630,
+					2130903714,
+					2130903716,
+					2130903717,
+					2130903718,
+					2130903719,
+					2130903720,
+					2130903721,
+					2130903722,
+					2130903723};
 			
 			// aapt resource value: 0
 			public const int Toolbar_android_gravity = 0;
@@ -32834,13 +35804,13 @@ namespace VaxineApp.Droid
 			// aapt resource value: 6
 			public const int Tooltip_backgroundTint = 6;
 			
-			// aapt resource value: { 0x1010000,0x10100DA,0x7F0301C9,0x7F0301CC,0x7F030277 }
+			// aapt resource value: { 0x1010000,0x10100DA,0x7F0301C9,0x7F0301CC,0x7F030291 }
 			public static int[] View = new int[] {
 					16842752,
 					16842970,
 					2130903497,
 					2130903500,
-					2130903671};
+					2130903697};
 			
 			// aapt resource value: { 0x10100D4,0x7F03003E,0x7F03003F }
 			public static int[] ViewBackgroundHelper = new int[] {

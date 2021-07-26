@@ -32,6 +32,10 @@ namespace VaxineApp.Droid
             Xamarin.FormsMaps.Init(this, savedInstanceState);
             LoadApplication(new App());
 
+            // Syncfusion RichText Editor
+            Window.SetSoftInputMode(Android.Views.SoftInput.AdjustResize);
+
+
             CreateNotificationFromIntent(Intent);
         }
 
