@@ -12,11 +12,18 @@ using VaxineApp.Views.Home.Family;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+using System.IO;
+using VaxineApp.AndroidNativeApi;
 
 namespace VaxineApp.ViewModels.Home.Family
 {
     public class FamilyListViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
+        
+
         private ObservableCollection<GetFamilyModel> families;
         public ObservableCollection<GetFamilyModel> Families
         {
@@ -137,7 +144,44 @@ namespace VaxineApp.ViewModels.Home.Family
 
         public void SaveAsPDF()
         {
-            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
+            // Synfusion.PDF for save as pdf
+            //Create a new PDF document
+            PdfDocument document = new PdfDocument();
+
+            //Add a page to the document
+            PdfPage page = document.Pages.Add();
+
+            //Create PDF graphics for the page
+            PdfGraphics graphics = page.Graphics;
+
+            //Set the standard font
+            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+
+            int x = 0;
+            int y = 0;
+
+            // Syncfusion.PDF ends
+            foreach (var value in Families)
+            {
+                string str = $"{value.ParentName.ToString()} : {value.PhoneNumber.ToString()}";
+
+                //Draw string in the PDF page
+                page.Graphics.DrawString(str, font, PdfBrushes.Black, new PointF(x, y));
+
+                y += 30;
+            }
+
+            //Save the document to the stream
+            MemoryStream stream = new MemoryStream();
+            document.Save(stream);
+
+            //Close the document
+            document.Close(true);
+
+            stream.Position = 0;
+
+            //Save the stream as a file in the device and invoke it for viewing
+            Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.pdf", "application/pdf", stream);
         }
 
         public async void Refresh()
