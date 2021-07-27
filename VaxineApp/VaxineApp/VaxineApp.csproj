@@ -42,6 +42,7 @@
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.2.0" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="4.2.0" />
     <PackageReference Include="Octokit" Version="0.50.0" />
+    <PackageReference Include="Syncfusion.Xamarin.Pdf" Version="19.2.0.49" />
     <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="19.2.0.48" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />

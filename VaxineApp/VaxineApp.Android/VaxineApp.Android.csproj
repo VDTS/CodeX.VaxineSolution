@@ -88,6 +88,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="NativeApi\BootReceiver.cs" />
     <Compile Include="NativeApi\PhotoPickerService.cs" />
+    <Compile Include="NativeApi\SaveAndroid.cs" />
     <Compile Include="Renderer\AndroidEntryRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -213,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\xml\my_widget_provider.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\provider_paths.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
