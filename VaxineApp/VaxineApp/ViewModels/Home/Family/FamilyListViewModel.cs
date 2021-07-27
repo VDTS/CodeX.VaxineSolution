@@ -102,6 +102,7 @@ namespace VaxineApp.ViewModels.Home.Family
                         }
                         );
                 }
+                StaticDataStore.Families = Families;
             }
             else
             {

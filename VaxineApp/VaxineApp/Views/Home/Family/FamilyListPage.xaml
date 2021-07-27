@@ -5,10 +5,25 @@
              xmlns:Model="clr-namespace:VaxineApp.Models"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
              x:Class="VaxineApp.Views.Home.Family.FamilyListPage"
+             xmlns:StaticData="clr-namespace:VaxineApp.StaticData"
              x:DataType="ViewModel:FamilyListViewModel"
              Title="Family List">
   <Shell.SearchHandler>
-    <SearchHandler Placeholder="{xct:Translate SearchFamily}" />
+    <ViewModel:FamilyListSearchHandler Placeholder="Enter search term"
+                                       ShowsResults="true">
+      <ViewModel:FamilyListSearchHandler.ItemTemplate>
+        <DataTemplate x:DataType="Model:GetFamilyModel">
+          <Grid Padding="10"
+                ColumnDefinitions="0.45*,0.55*">
+            <Label Grid.Column="0" Text="{Binding ParentName}" />
+            <Label Grid.Column="1"
+                   Text="{Binding PhoneNumber}"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center" />
+          </Grid>
+        </DataTemplate>
+      </ViewModel:FamilyListSearchHandler.ItemTemplate>
+    </ViewModel:FamilyListSearchHandler>
   </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:FamilyListViewModel></ViewModel:FamilyListViewModel>
@@ -25,8 +40,7 @@
                  Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <RefreshView
-                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
@@ -46,8 +60,10 @@
             <Frame.Content>
               <StackLayout Orientation="Vertical"
                            HorizontalOptions="StartAndExpand">
-                <Label TextColor="White" Text="HouseNo"></Label>
-                <Label TextColor="White" FontSize="Subtitle"
+                <Label TextColor="White"
+                       Text="HouseNo"></Label>
+                <Label TextColor="White"
+                       FontSize="Subtitle"
                        Text="Parent Name"></Label>
               </StackLayout>
             </Frame.Content>
@@ -56,25 +72,25 @@
         <CollectionView.ItemTemplate>
           <DataTemplate x:DataType="Model:GetFamilyModel">
             <StackLayout Padding="0,2,0,0">
-            <Frame Grid.Column="0"
-                   Padding="15,15,15,15"
-                   HeightRequest="30"
-                   BackgroundColor="{StaticResource Card}"
-                   HasShadow="True"
-                   CornerRadius="0"
-                   xct:TouchEffect.AnimationDuration="250"
-                   xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                   xct:TouchEffect.PressedScale="0.8"
-                   xct:TouchEffect.PressedOpacity="0.6">
-              <Frame.Content>
-                <StackLayout Orientation="Vertical"
-                             HorizontalOptions="StartAndExpand">
-                  <Label FontSize="Micro"
-                         Text="{Binding HouseNo}"></Label>
-                  <Label Text="{Binding ParentName}"></Label>
-                </StackLayout>
-              </Frame.Content>
-            </Frame>
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     HeightRequest="30"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="0"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label FontSize="Micro"
+                           Text="{Binding HouseNo}"></Label>
+                    <Label Text="{Binding ParentName}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
             </StackLayout>
           </DataTemplate>
         </CollectionView.ItemTemplate>
