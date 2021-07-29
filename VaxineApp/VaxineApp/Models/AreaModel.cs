@@ -60,7 +60,7 @@ namespace VaxineApp.Models
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("{PropertyName} is Empty")
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
-                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+                .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
         protected bool BeAValidName(string name)
         {
@@ -91,7 +91,7 @@ namespace VaxineApp.Models
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("{PropertyName} is Empty")
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
-                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+                .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
         protected bool BeAValidName(string name)
         {
@@ -118,7 +118,7 @@ namespace VaxineApp.Models
             RuleFor(d => d.Name)
                 .NotEmpty().WithMessage("{PropertyName} is Empty")
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
-                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+                .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
         protected bool BeAValidName(string name)
         {
@@ -147,7 +147,7 @@ namespace VaxineApp.Models
             RuleFor(i => i.Name)
                 .NotEmpty().WithMessage("{PropertyName} is Empty")
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
-                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+                .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
         protected bool BeAValidName(string name)
         {
@@ -178,7 +178,7 @@ namespace VaxineApp.Models
             RuleFor(m => m.MasjeedName)
                 .NotEmpty().WithMessage("{PropertyName} is Empty")
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
-                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+                .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
 
         }
         protected bool BeAValidName(string name)
@@ -208,7 +208,7 @@ namespace VaxineApp.Models
             RuleFor(s => s.SchoolName)
                 .NotEmpty().WithMessage("{PropertyName} is Empty")
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
-                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+                .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
         protected bool BeAValidName(string name)
         {

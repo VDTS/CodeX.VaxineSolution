@@ -30,7 +30,7 @@ namespace VaxineApp.Models
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("{PropertyName} is Empty")
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
-                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+                .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
             RuleFor(c => c.Gender).NotEmpty();
             RuleFor(c => c.RegisteredBy).NotEmpty();
             RuleFor(c => c.RINo).NotEmpty();

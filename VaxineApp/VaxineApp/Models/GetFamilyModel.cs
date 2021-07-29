@@ -28,7 +28,7 @@ namespace VaxineApp.Models
             RuleFor(f => f.ParentName).Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("{PropertyName} is Empty")
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
-                .Length(3, 20).WithMessage("Length of {PropertyName} should be between 3 - 20");
+                .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
             RuleFor(f => f.PhoneNumber)
                 .Must(PhoneNumberValidator.IsPhoneNumberValid)
                 .WithMessage("Invalid phone number, must start with +93, 0093 or 0 and has 9 digits after it.");
