@@ -110,6 +110,7 @@ namespace VaxineApp.ViewModels.Home.Family
                         );
                 }
                 StaticDataStore.Families = Families;
+                StaticDataStore.TeamStats.TotalHouseholds = Families.Count;
             }
             else
             {

@@ -207,6 +207,7 @@ namespace VaxineApp.ViewModels.Home.Family
                     var data = await DataService.Delete($"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
                     if (data == "Deleted")
                     {
+                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
                         var route = $"//{nameof(FamilyListPage)}";
                         await Shell.Current.GoToAsync(route);
                     }

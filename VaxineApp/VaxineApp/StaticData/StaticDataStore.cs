@@ -11,6 +11,6 @@ namespace VaxineApp.StaticData
         public static List<int> FamilyNumbers { get; set; } = new List<int>();
 
         public static ObservableCollection<GetFamilyModel> Families { get; set; }
-        public static TeamModel TeamStats { get; set; }
+        public static TeamModel TeamStats { get; set; } = new TeamModel();
     }
 }

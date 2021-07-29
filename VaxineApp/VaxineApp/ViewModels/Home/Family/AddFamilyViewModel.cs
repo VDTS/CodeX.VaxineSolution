@@ -71,6 +71,7 @@ namespace VaxineApp.ViewModels.Home.Family
                     string a = await DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
                     if (a == "OK")
                     {
+                        string b = await DataService.Put((++StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
                         StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
 
                         var route = $"//{nameof(FamilyListPage)}";
