@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -93,6 +94,13 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
             if (data != "null" & data != "Error")
             {
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, AnonymousChildModel>>(data);
+
+                StaticDataStore.TeamStats.TotalIDPChilds = clinic.Where(item => item.Value.Type == "IDP").ToList().Count;
+                StaticDataStore.TeamStats.TotalGuestChilds = clinic.Where(item => item.Value.Type == "Guest").ToList().Count;
+                StaticDataStore.TeamStats.TotalReturnChilds = clinic.Where(item => item.Value.Type == "Return").ToList().Count;
+                StaticDataStore.TeamStats.TotalRefugeeChilds = clinic.Where(item => item.Value.Type == "Refugee").ToList().Count;
+
+
                 foreach (KeyValuePair<string, AnonymousChildModel> item in clinic)
                 {
                     AnonymousChild.Add(
@@ -132,6 +140,28 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                     var data = await DataService.Delete($"AnonymousChild/{Preferences.Get("TeamId", "")}/{SelectedAnonymousChild.FId}");
                     if (data == "Deleted")
                     {
+                        if (SelectedAnonymousChild.Type == "Refugee")
+                        {
+                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalRefugeeChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalRefugeeChilds");
+                        }
+                        else if (SelectedAnonymousChild.Type == "IDP")
+                        {
+                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalIDPChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalIDPChilds");
+                        }
+                        else if (SelectedAnonymousChild.Type == "Return")
+                        {
+                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalReturnChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalReturnChilds");
+                        }
+                        else if (SelectedAnonymousChild.Type == "Guest")
+                        {
+                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalGuestChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalGuestChilds");
+                        }
+                        else
+                        {
+                            return;
+                        }
+
+
                         AnonymousChild.Remove(SelectedAnonymousChild);
                     }
                     else

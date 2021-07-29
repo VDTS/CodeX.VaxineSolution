@@ -44,6 +44,7 @@ namespace VaxineApp.Models
         public int TotalRefugeeChilds { get; set; }
         public int TotalReturnChilds { get; set; }
         public int TotalGuestChilds { get; set; }
+        public int TotalIDPChilds { get; set; }
 
         public TeamModel()
         {
