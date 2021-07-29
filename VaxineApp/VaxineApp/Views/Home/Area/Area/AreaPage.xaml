@@ -102,7 +102,7 @@
                                HorizontalOptions="StartAndExpand">
                     <Label FontSize="Micro" Text="{xct:Translate TotalHouseholds}"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalHouseholds}"></Label>
+                           Text="{Binding Team.TotalHouseholds}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
@@ -123,7 +123,7 @@
                     <Label  FontSize="Micro"
                             Text="{xct:Translate TotalChilds}"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalChildren}"></Label>
+                           Text="{Binding Team.TotalChilds}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
@@ -144,7 +144,7 @@
                     <Label  FontSize="Micro"
                             Text="TotalMasjeeds"></Label>
                     <Label FontSize="Large"
-                             Text="{Binding TotalMasjeeds}"></Label>
+                             Text="{Binding Team.TotalMasjeeds}"></Label>
                     </StackLayout>
                   </Frame.Content>
                 </Frame>
@@ -164,7 +164,7 @@
                                HorizontalOptions="StartAndExpand">
                     <Label FontSize="Micro" Text="{xct:Translate TotalSchools}"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalSchools}"></Label>
+                           Text="{Binding Team.TotalSchools}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
@@ -185,7 +185,7 @@
                                HorizontalOptions="StartAndExpand">
                     <Label  FontSize="Micro" Text="{xct:Translate TotalInfluencers}"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalInfluencers}"></Label>
+                           Text="{Binding Team.TotalInfluencers}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
@@ -208,7 +208,7 @@
                                HorizontalOptions="StartAndExpand">
                     <Label  FontSize="Micro" Text="{xct:Translate TotalClinics}"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalClinics}"></Label>
+                           Text="{Binding Team.TotalClinics}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
@@ -229,7 +229,7 @@
                                HorizontalOptions="StartAndExpand">
                     <Label  FontSize="Micro" Text="{xct:Translate TotalDoctors}"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalDoctors}"></Label>
+                           Text="{Binding Team.TotalDoctors}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
@@ -250,7 +250,7 @@
                                HorizontalOptions="StartAndExpand">
                     <Label  FontSize="Micro" Text="Refugee Childs"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalClinics}"></Label>
+                           Text="{Binding Team.TotalRefugeeChilds}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
@@ -270,7 +270,7 @@
                                HorizontalOptions="StartAndExpand">
                     <Label  FontSize="Micro" Text="Return Childs"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalDoctors}"></Label>
+                           Text="{Binding Team.TotalReturnChilds}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
@@ -288,9 +288,9 @@
                 <Frame.Content>
                   <StackLayout Orientation="Vertical"
                                HorizontalOptions="StartAndExpand">
-                    <Label  FontSize="Micro" Text="IDP Childs"></Label>
+                    <Label  FontSize="Micro" Text="Guest Childs"></Label>
                     <Label FontSize="Large"
-                           Text="{Binding TotalDoctors}"></Label>
+                           Text="{Binding Team.TotalGuestChilds}"></Label>
                   </StackLayout>
                 </Frame.Content>
               </Frame>
