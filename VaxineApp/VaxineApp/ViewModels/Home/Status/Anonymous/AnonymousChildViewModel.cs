@@ -92,27 +92,24 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
             var data = await DataService.Get($"AnonymousChild/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, JObject>>(data);
-                foreach (KeyValuePair<string, JObject> item in clinic)
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, AnonymousChildModel>>(data);
+                foreach (KeyValuePair<string, AnonymousChildModel> item in clinic)
                 {
-                    foreach (var item2 in item.Value)
-                    {
-                        var tempObject = item2.Value.ToObject<AnonymousChildModel>();
-                        AnonymousChild.Add(
+                    AnonymousChild.Add(
                         new AnonymousChildModel
                         {
-                            FullName = tempObject.FullName,
-                            Type = tempObject.Type,
-                            DOB = tempObject.DOB,
-                            Gender = tempObject.Gender,
-                            Id = tempObject.Id,
-                            RegisteredBy = tempObject.RegisteredBy,
-                            IsVaccined = tempObject.IsVaccined,
-                            FId = item2.Key.ToString()
+                            FId = item.Key.ToString(),
+                            Id = item.Value.Id,
+                            DOB = item.Value.DOB,
+                            FullName = item.Value.FullName,
+                            Gender = item.Value.Gender,
+                            IsVaccined = item.Value.IsVaccined, 
+                            RegisteredBy = item.Value.RegisteredBy,
+                            Type = item.Value.Type
                         }
-                        ) ;
-                    }
+                        );
                 }
+
             }
             else
             {
@@ -132,7 +129,7 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedAnonymousChild.FullName);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"AnonymousChild/{Preferences.Get("TeamId", "")}/{SelectedAnonymousChild.Type}/{SelectedAnonymousChild.FId}");
+                    var data = await DataService.Delete($"AnonymousChild/{Preferences.Get("TeamId", "")}/{SelectedAnonymousChild.FId}");
                     if (data == "Deleted")
                     {
                         AnonymousChild.Remove(SelectedAnonymousChild);

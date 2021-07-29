@@ -57,7 +57,7 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                 AnonymousChild.DOB = dateTime;
 
                 var jsonData = JsonConvert.SerializeObject(AnonymousChild);
-                var data = await DataService.Put(jsonData, $"AnonymousChild/{Preferences.Get("TeamId", "")}/{AnonymousChild.Type}/{AnonymousChild.FId}");
+                var data = await DataService.Put(jsonData, $"AnonymousChild/{Preferences.Get("TeamId", "")}/{AnonymousChild.FId}");
                 if (data == "Submit")
                 {
                     StandardMessagesDisplay.EditDisplaymessage($"{AnonymousChild.FullName}");
