@@ -1,4 +1,14 @@
 # CodeX.VaxineSolution
+
+## Project Build Status
+
+Project|Build Status
+---|---
+VaxineApp.iOS|[![Build status](https://build.appcenter.ms/v0.1/apps/823d1987-d46c-4c57-bb39-333a1debda03/branches/main/badge)](https://appcenter.ms)
+VaxineApp.Android|[![Build status](https://build.appcenter.ms/v0.1/apps/b406776a-b914-4c60-a816-99bcf5b0b0ea/branches/main/badge)](https://appcenter.ms)
+
+---
+
 ## VDTS Vaccine Distribution & Tracking System
 **VDTS** is a digital immunization software that helps in distributing and tracking vaccinations with a **MobileApp** and **WebPortal**. It will help the field vaccinators to register children for tracking their vaccinations. The team offers **digital** solutions.
 ***
