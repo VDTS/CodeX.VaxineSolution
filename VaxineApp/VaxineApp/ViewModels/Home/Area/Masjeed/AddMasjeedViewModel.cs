@@ -66,6 +66,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 string a = await DataService.Post(data, $"Masjeed/{Preferences.Get("TeamId", "")}");
                 if (a == "OK")
                 {
+                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
                     StandardMessagesDisplay.AddDisplayMessage(Masjeed.MasjeedName);
                 }
                 else

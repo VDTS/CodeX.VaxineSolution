@@ -111,6 +111,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
                     var data = await DataService.Delete($"School/{Preferences.Get("TeamId", "")}/{SelectedSchool.FId}");
                     if (data == "Deleted")
                     {
+                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
                         Schools.Remove(SelectedSchool);
                     }
                     else

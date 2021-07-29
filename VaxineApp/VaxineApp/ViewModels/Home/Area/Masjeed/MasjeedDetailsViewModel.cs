@@ -61,6 +61,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                     var data = await DataService.Delete($"Masjeed/{Preferences.Get("TeamId", "")}/{Masjeed.FId}");
                     if (data == "Deleted")
                     {
+                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
                         var route = $"//{nameof(MasjeedPage)}";
                         await Shell.Current.GoToAsync(route);
                     }

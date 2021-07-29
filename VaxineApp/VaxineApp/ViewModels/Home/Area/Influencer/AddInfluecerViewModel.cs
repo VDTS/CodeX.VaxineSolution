@@ -55,6 +55,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                 string a = await DataService.Post(data, $"Influencer/{Preferences.Get("TeamId", "")}");
                 if (a == "OK")
                 {
+                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalInfluencers).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalInfluencers");
                     StandardMessagesDisplay.AddDisplayMessage(Influencer.Name);
                 }
                 else

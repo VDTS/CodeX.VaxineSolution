@@ -133,6 +133,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                     var data = await DataService.Delete($"Doctor/{Preferences.Get("TeamId", "")}/{SelectedDoctor.FId}");
                     if (data == "Deleted")
                     {
+                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalDoctors).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalDoctors");
                         Doctors.Remove(SelectedDoctor);
                     }
                     else

@@ -112,6 +112,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                     var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedInfluencer.FId}");
                     if (data == "Deleted")
                     {
+                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalInfluencers).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalInfluencers");
                         influencers.Remove(SelectedInfluencer);
                     }
                     else
