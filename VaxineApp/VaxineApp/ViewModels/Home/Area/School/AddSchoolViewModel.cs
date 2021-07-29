@@ -56,6 +56,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 string a = await DataService.Post(data, $"School/{Preferences.Get("TeamId", "")}");
                 if (a == "OK")
                 {
+                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
                     StandardMessagesDisplay.AddDisplayMessage(School.SchoolName);
                 }
                 else

@@ -159,6 +159,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                     var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
                     if (data == "Deleted")
                     {
+                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
                         Clinics.Remove(SelectedClinic);
                     }
                     else
@@ -180,7 +181,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 
         public async void Get()
         {
-            var data = await requestsHandler.Get($"Clinic/{Preferences.Get("TeamId", "")}");
+            var data = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
             if (data != "null" & data != "Error")
             {
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(data);

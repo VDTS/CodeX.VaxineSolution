@@ -56,6 +56,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                 string a = await DataService.Post(data, $"Doctor/{Preferences.Get("TeamId", "")}");
                 if (a == "OK")
                 {
+                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalDoctors).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalDoctors");
                     StandardMessagesDisplay.AddDisplayMessage(Doctor.Name);
                 }
                 else

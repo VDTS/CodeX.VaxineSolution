@@ -128,6 +128,8 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                             TotalRefugeeChilds = item.Value.TotalRefugeeChilds,
                             TotalReturnChilds = item.Value.TotalReturnChilds
                         };
+                        StaticDataStore.TeamStats = Team;
+                        Preferences.Set("TeamFId", Team.FId);
                     }
                 }
             }
