@@ -54,7 +54,6 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(GoogleMapPage), typeof(GoogleMapPage));
 
                 Routing.RegisterRoute(nameof(AreaPage), typeof(AreaPage));
-                Routing.RegisterRoute(nameof(EditAreaPage), typeof(EditAreaPage));
 
                 Routing.RegisterRoute(nameof(MasjeedPage), typeof(MasjeedPage));
                 Routing.RegisterRoute(nameof(AddMasjeedPage), typeof(AddMasjeedPage));

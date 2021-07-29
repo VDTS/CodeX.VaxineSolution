@@ -11,10 +11,6 @@
   </ContentPage.BindingContext>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
-                 Text="{xct:Translate Edit}"
-                 Priority="1"
-                 Command="{Binding GoToPutPageCommand}" />
-    <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"

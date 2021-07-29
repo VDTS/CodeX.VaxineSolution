@@ -62,7 +62,6 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
 
         // Commands
-        public ICommand GoToPutPageCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
 
@@ -77,22 +76,7 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
             // Command
             SaveAsPDFCommand = new Command(SaveAsPDF);
-            GoToPutPageCommand = new Command(GoToPutpage);
             PullRefreshCommand = new AsyncCommand(Refresh);
-        }
-
-        private async void GoToPutpage()
-        {
-            if (Team.TeamNo != null)
-            {
-                var jsonClinic = JsonConvert.SerializeObject(Team);
-                var route = $"{nameof(EditAreaPage)}?Team={jsonClinic}";
-                await Shell.Current.GoToAsync(route);
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
-            }
         }
 
         private void SaveAsPDF(object obj)
@@ -139,11 +123,6 @@ namespace VaxineApp.ViewModels.Home.Area.Area
             }
         }
 
-        public async void GoToPutPage()
-        {
-            var route = $"{nameof(EditAreaPage)}";
-            await Shell.Current.GoToAsync(route);
-        }
         async Task Refresh()
         {
             IsBusy = true;

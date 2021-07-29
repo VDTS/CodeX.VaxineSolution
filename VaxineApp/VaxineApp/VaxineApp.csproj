@@ -95,9 +95,6 @@
     <Compile Update="Views\Settings\Notifications\NotificationsPage.xaml.cs">
       <DependentUpon>NotificationsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Home\Area\Area\EditAreaPage.xaml.cs">
-      <DependentUpon>EditAreaPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\Home\Area\Clinic\EditClinicPage.xaml.cs">
       <DependentUpon>EditClinicPage.xaml</DependentUpon>
     </Compile>
@@ -190,9 +187,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Area\AreaPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Home\Area\Area\EditAreaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Clinic\AddClinicPage.xaml">
