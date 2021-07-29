@@ -34,6 +34,17 @@ namespace VaxineApp.Models
         public string TeamNo { get; set; }
         public int SocialMobilizerId { get; set; }
         public string CHWName { get; set; }
+        public int TotalHouseholds { get; set; }
+        public int TotalChilds { get; set; }
+        public int TotalInfluencers { get; set; }
+        public int TotalDoctors { get; set; }
+        public int TotalClinics { get; set; }
+        public int TotalSchools { get; set; }
+        public int TotalMasjeeds { get; set; }
+        public int TotalRefugeeChilds { get; set; }
+        public int TotalReturnChilds { get; set; }
+        public int TotalGuestChilds { get; set; }
+
         public TeamModel()
         {
             Id = new Guid();
