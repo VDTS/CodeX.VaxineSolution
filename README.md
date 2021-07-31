@@ -2,11 +2,11 @@
 
 ## Project Build Status
 
-Project|Build Status
----|---
-VaxineApp.iOS|[![Build status](https://build.appcenter.ms/v0.1/apps/823d1987-d46c-4c57-bb39-333a1debda03/branches/main/badge)](https://appcenter.ms)
-VaxineApp.Android|[![Build status](https://build.appcenter.ms/v0.1/apps/b406776a-b914-4c60-a816-99bcf5b0b0ea/branches/main/badge)](https://appcenter.ms)
-
+Project|Channel|Platform|Build Status
+---|---|---|---
+Vaxine|stable|iOS|[![Build status](https://build.appcenter.ms/v0.1/apps/823d1987-d46c-4c57-bb39-333a1debda03/branches/main/badge)](https://appcenter.ms)
+Vaxine|stable|Android|[![Build status](https://build.appcenter.ms/v0.1/apps/b406776a-b914-4c60-a816-99bcf5b0b0ea/branches/main/badge)](https://appcenter.ms)
+Vaxine|beta|Android|[![Build status](https://build.appcenter.ms/v0.1/apps/b406776a-b914-4c60-a816-99bcf5b0b0ea/branches/pre-release/badge)](https://appcenter.ms)
 ---
 
 ## VDTS Vaccine Distribution & Tracking System
