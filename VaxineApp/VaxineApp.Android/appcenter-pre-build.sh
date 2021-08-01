@@ -86,7 +86,7 @@ if [ $APPCENTER_BRANCH == "pre-release" ]
 then
 
     echo "You are on pre-release branch, and will apply main pre-release configurations"
-    sed -i.bak 's#android\:icon="[-A-Za-z0-9:_./]*"#android\:icon="'$Icon'"#' $ANDROID_MANIFEST
+    sed -i.bak 's#android:icon="[-A-Za-z0-9:_./]*"#android:icon="'$Icon'"#' $ANDROID_MANIFEST
     cat $ANDROID_MANIFEST
 fi
 
