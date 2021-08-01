@@ -108,7 +108,7 @@ namespace VaxineApp.ViewModels.Home.Family
             GoToSubPostPageCommand = new Command(GoToSubPostPage);
             GoToSubPutPageCommand = new Command(GoToSubPutPage);
             GoToPutPageCommand = new Command(GoToPutPage);
-            DialerCommand = new Command<string>(Dialer);
+            DialerCommand = new Command(Dialer);
             PullRefreshCommand = new Command(Refresh);
             SubDeleteCommand = new Command(SubDelete);
             DeleteCommand = new Command(Delete);
@@ -168,8 +168,9 @@ namespace VaxineApp.ViewModels.Home.Family
             }
         }
 
-        private async void Dialer(string number)
+        private async void Dialer()
         {
+            string number = Family.PhoneNumber;
             try
             {
                 PhoneDialer.Open(number);
