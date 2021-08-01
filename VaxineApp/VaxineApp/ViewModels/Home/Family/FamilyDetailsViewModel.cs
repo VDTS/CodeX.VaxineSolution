@@ -90,6 +90,7 @@ namespace VaxineApp.ViewModels.Home.Family
         public ICommand PullRefreshCommand { private set; get; }
         public ICommand GoToPutPageCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand ShareOnAppsCommand { private set; get; }
 
         // ctor
         public FamilyDetailsViewModel(GetFamilyModel family)
@@ -111,8 +112,29 @@ namespace VaxineApp.ViewModels.Home.Family
             PullRefreshCommand = new Command(Refresh);
             SubDeleteCommand = new Command(SubDelete);
             DeleteCommand = new Command(Delete);
+            ShareOnAppsCommand = new Command(ShareOnApps);
         }
 
+        private async void ShareOnApps()
+        {
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Title = $"Share {Family.ParentName}'s Family",
+                Text = ShareFamilyText()
+            });
+
+        }
+
+        private string ShareFamilyText()
+        {
+            string shareText = $"{Family.ParentName}'s Family: {Environment.NewLine}";
+            foreach (var item in Childs)
+            {
+                shareText += $"{item.FullName} {Environment.NewLine}";
+            }
+
+            return shareText;
+        }
         private async void SubDelete(object obj)
         {
             if (SelectedChild.FId != null)
