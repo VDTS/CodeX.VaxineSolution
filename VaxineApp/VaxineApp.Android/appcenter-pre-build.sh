@@ -76,18 +76,18 @@ ANDROID_MANIFEST=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/Propert
 if [ $APPCENTER_BRANCH == "pre-release" ]
 then
 
-    echo "You are on main branch, and will apply main branch configurations"
+    echo "You are on pre-release branch, and will apply pre-release branch configurations"
     sed -i.bak 's#package = "[^"]*"#package = "'$Package'"#' $ANDROID_MANIFEST
-
+    cat $ANDROID_MANIFEST
 fi
 
 # Changing App Icon
 if [ $APPCENTER_BRANCH == "pre-release" ]
 then
 
-    echo "You are on main branch, and will apply main branch configurations"
+    echo "You are on pre-release branch, and will apply main pre-release configurations"
     sed -i.bak 's#android\:icon = "[-A-Za-z0-9:_./]*"#android\:icon = "'$Icon'"#' $ANDROID_MANIFEST
-
+    cat $ANDROID_MANIFEST
 fi
 
 # Changing App Name
@@ -97,7 +97,7 @@ ANDROID_MAIN_ACTIVITY=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/Sp
 if [ $APPCENTER_BRANCH == "pre-release" ]
 then
 
-    echo "You are on main branch, and will apply main branch configurations"
+    echo "You are on pre-release branch, and will apply pre-release branch configurations"
     sed -i.bak 's#Label = "[-A-Za-z0-9:_./]*"#Label = "'$Label'"#' $ANDROID_MAIN_ACTIVITY
-
+    cat $ANDROID_MAIN_ACTIVITY
 fi
