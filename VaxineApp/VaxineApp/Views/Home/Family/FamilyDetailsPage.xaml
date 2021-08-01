@@ -40,6 +40,10 @@
                  Priority="3"
                  Command="{Binding GoToPutPageCommand}" />
     <ToolbarItem Order="Secondary"
+                 Text="Call Family Parent 🤳"
+                 Priority="3"
+                 Command="{Binding DialerCommand}" />
+    <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
                  Text="Share"
                  Command="{Binding ShareOnAppsCommand}"
@@ -68,10 +72,6 @@
         </Label>
         <Label FontSize="Medium"
                Text="{Binding Family.PhoneNumber}">
-          <Label.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding DialerCommand}"
-                                  CommandParameter="{Binding Family.PhoneNumber}"></TapGestureRecognizer>
-          </Label.GestureRecognizers>
         </Label>
       </StackLayout>
       <RefreshView Grid.Row="1"
