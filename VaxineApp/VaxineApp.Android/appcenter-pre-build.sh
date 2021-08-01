@@ -65,3 +65,39 @@ then
     echo "File content:"
     cat $VAXINE_APP_CONSTANT_FILE
 fi
+
+
+# Support for multiple Apps (Stable and Dev)
+
+ANDROID_MANIFEST=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/Properties/AndroidManifest.xml
+
+# Changing App Package Name
+
+if [ $APPCENTER_BRANCH == "pre-release" ]
+then
+
+    echo "You are on main branch, and will apply main branch configurations"
+    sed -i.bak 's#package = "[-A-Za-z0-9:_./]*"#package = "'$Package'"#' $ANDROID_MANIFEST
+
+fi
+
+# Changing App Icon
+if [ $APPCENTER_BRANCH == "pre-release" ]
+then
+
+    echo "You are on main branch, and will apply main branch configurations"
+    sed -i.bak 's#android:icon = "[-A-Za-z0-9:_./]*"#android:icon = "'$Icon'"#' $ANDROID_MANIFEST
+
+fi
+
+# Changing App Name
+
+ANDROID_MAIN_ACTIVITY=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/SplashActivity.cs
+
+if [ $APPCENTER_BRANCH == "pre-release" ]
+then
+
+    echo "You are on main branch, and will apply main branch configurations"
+    sed -i.bak 's#Label = "[-A-Za-z0-9:_./]*"#Label = "'$Label'"#' $ANDROID_MAIN_ACTIVITY
+
+fi
