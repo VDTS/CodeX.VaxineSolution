@@ -41,6 +41,11 @@
                  Command="{Binding GoToPutPageCommand}" />
     <ToolbarItem Order="Secondary"
                  Icon="SavePDF"
+                 Text="Share"
+                 Command="{Binding ShareOnAppsCommand}"
+                 Priority="0" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
                  Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
