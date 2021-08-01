@@ -222,4 +222,14 @@
     <AndroidResource Include="Resources\drawable\AppIconPre.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>cd $(SolutionDir)BuildScripts
+powershell.exe -noexit -file "packagename-and-label-in-debug-pre-build.ps1"
+echo "package name and label changed to debug"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>cd $(SolutionDir)BuildScripts
+powershell.exe -noexit -file "packagename-and-label-in-debug-post-build.ps1"
+echo "package name and label changed from debug"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
