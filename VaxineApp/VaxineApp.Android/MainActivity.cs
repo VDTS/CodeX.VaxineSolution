@@ -24,7 +24,7 @@ namespace VaxineApp.Droid
         internal static MainActivity Instance { get; private set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            AppCenter.Start("android=518d8341-3aa8-467f-ae69-fdae9b224b1b;", typeof(Analytics), typeof(Crashes), typeof(Distribute));
+            AppCenter.Start($"android={AppConstants.AppCenterAndroidXamarinKey};", typeof(Analytics), typeof(Crashes), typeof(Distribute));
             Instance = this;
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
