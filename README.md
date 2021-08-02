@@ -9,6 +9,11 @@ Vaxine|stable|Android|[![Build status](https://build.appcenter.ms/v0.1/apps/b406
 Vaxine|beta|Android|[![Build status](https://build.appcenter.ms/v0.1/apps/b406776a-b914-4c60-a816-99bcf5b0b0ea/branches/pre-release/badge)](https://appcenter.ms)
 ---
 
+## Preparing Envirnoment and Running the project locally
+- clone the [CodeX.VaxineSolution envirnoment](https://github.com/VDTS/CodeX.VaxineSolution-Environment) repo. It includes scripts inside BuildScripts folder.
+- Add your firebase, github, syncfusion keys to these scripts
+- Now copy these files to this project BuildScripts folder
+> Note: If you don't want to use these scripts, you can directly copy your keys to Constants files inside the project.
 ## VDTS Vaccine Distribution & Tracking System
 **VDTS** is a digital immunization software that helps in distributing and tracking vaccinations with a **MobileApp** and **WebPortal**. It will help the field vaccinators to register children for tracking their vaccinations. The team offers **digital** solutions.
 ***
