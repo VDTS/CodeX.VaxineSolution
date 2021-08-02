@@ -8,5 +8,7 @@ namespace VaxineApp
     {
         public static string GithubApiKeyForCreatingIssues = "GithubApiKeyPlaceholder";
         public static string SyncFusionCommunityLicenseKey = "SyncfusionCommunityVersionAPIKey";
+        public static string AppCenterAndroidXamarinKey = "AppCenterAndroidXamarinKeyPlaceholder";
+        public static string AppCenteriOSXamarinKey = "";
     }
 }
