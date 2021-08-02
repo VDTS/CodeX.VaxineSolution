@@ -55,7 +55,7 @@ namespace VaxineApp
 
         protected override void OnStart()
         {
-            AppCenter.Start("android=518d8341-3aa8-467f-ae69-fdae9b224b1b;" + "ios=a35581bf-3a81-47d7-b871-0dd9a46a57c5;", typeof(Analytics), typeof(Crashes), typeof(Distribute));
+            AppCenter.Start("android=[AndroidAppCenterKey];" + "ios=a35581bf-3a81-47d7-b871-0dd9a46a57c5;", typeof(Analytics), typeof(Crashes), typeof(Distribute));
         }
         protected override void OnSleep()
         {
