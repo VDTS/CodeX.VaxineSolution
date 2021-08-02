@@ -1,14 +1,24 @@
 ﻿#!/usr/bin/env bash
 
-APP_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp/App.xaml.cs
 
-if [ -e "$APP_FILE" ]
+VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp/Constants.cs
+
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
-    echo "Updating App center keys in App.xaml.cs"
-    sed -i.bak 's#android=[AndroidAppCenterKey];"#android='$AndroidAppCenterKey';"#' $APP_FILE
+    echo "Updating AppCenterAndroidXamarinKeyPlaceholder to $AndroidAppCenterKey in Constants.cs"
+    sed -i.bak 's#AppCenterAndroidXamarinKey = "[-A-Za-z0-9:_./]*"#AppCenterAndroidXamarinKey = "'$AndroidAppCenterKey'"#' $VAXINE_APP_CONSTANT_FILE
 
     echo "File content:"
-    cat $APP_FILE
+    cat $VAXINE_APP_CONSTANT_FILE
 fi
 
+VAXINE_ANDROID_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/AppConstants.cs
 
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating AppCenterAndroidXamarinKeyPlaceholder to $AndroidAppCenterKey in Constants.cs"
+    sed -i.bak 's#AppCenterAndroidXamarinKey = "[-A-Za-z0-9:_./]*"#AppCenterAndroidXamarinKey = "'$AndroidAppCenterKey'"#' $VAXINE_ANDROID_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_ANDROID_CONSTANT_FILE
+fi

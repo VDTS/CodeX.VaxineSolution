@@ -81,6 +81,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConstants.cs" />
     <Compile Include="my_widget_class.cs" />
     <Compile Include="NativeApi\AlarmHandler.cs" />
     <Compile Include="NativeApi\AndroidAppVersion.cs" />
