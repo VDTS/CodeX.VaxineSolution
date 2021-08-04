@@ -16,6 +16,20 @@ namespace VaxineApp.ViewModels.Settings.Feedback
     public class FeedbackViewModel : ViewModelBase
     {
         // Property
+        private string appPackageName;
+        public string AppPackageName
+        {
+            get
+            {
+                return appPackageName;
+            }
+            set
+            {
+                appPackageName = value;
+                OnPropertyChanged();
+            }
+        }
+
         private string issueTitle;
         public string IssueTitle
         {
@@ -80,6 +94,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
         public FeedbackViewModel()
         {
             SubmitIssueOnGithubCommand = new Command(SubmitIssueOnGithub);
+            AppPackageName = DependencyService.Get<IPackageName>().PackageName;
             AttachScreenshotOnGithubIssueCommand = new Command(AttachScreenshotOnGithubIssue);
         }
 
@@ -125,7 +140,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
                 i.Body = $"Issue: {IssueDetails}";
                 string b = DependencyService.Get<IAppVersion>().GetVersion();
                 i.Labels.Add(b);
-
+                
                 if (SuggestionRadioButton == false && ProblemRadioButton == true)
                 {
                     i.Labels.Add("Problem");
@@ -148,6 +163,11 @@ namespace VaxineApp.ViewModels.Settings.Feedback
                 else if (role == "Parent")
                 {
                     i.Labels.Add("parent app");
+                }
+
+                if(AppPackageName == "com.codex.vaxineappbeta")
+                {
+                    i.Labels.Add("beta-version");
                 }
 
                 var issue = await client.Issue.Create("VDTS", "CodeX.VaxineSolution", i);
