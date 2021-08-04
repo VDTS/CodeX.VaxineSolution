@@ -88,6 +88,7 @@
     <Compile Include="NativeApi\AndroidNotificationManager.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="NativeApi\BootReceiver.cs" />
+    <Compile Include="NativeApi\PackageNameDroid.cs" />
     <Compile Include="NativeApi\PhotoPickerService.cs" />
     <Compile Include="NativeApi\SaveAndroid.cs" />
     <Compile Include="Renderer\AndroidEntryRenderer.cs" />
