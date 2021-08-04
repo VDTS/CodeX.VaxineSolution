@@ -16,6 +16,20 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
     public class AppUpdatesViewModel : ViewModelBase
     {
         // Property
+        private string appPackageName;
+        public string AppPackageName
+        {
+            get
+            {
+                return appPackageName;
+            }
+            set
+            {
+                appPackageName = value;
+                OnPropertyChanged();
+            }
+        }
+
         private bool isUpdatesAvailable;
         public bool IsUpdatesAvailable
         {
@@ -66,6 +80,7 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
         {
             // Property
             AppVersion = DependencyService.Get<IAppVersion>().GetVersion();
+            AppPackageName = DependencyService.Get<IPackageName>().PackageName == "com.codex.vaxineappbeta" ? "Beta" : "Production";
 
             // Get
             DownloadFile();
@@ -85,7 +100,7 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
             try
             {
                 WebClient client = new WebClient();
-                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{AppVersion}.md"));
+                Stream stream = client.OpenRead(string.Concat("https://raw.githubusercontent.com/VDTS/docs/main/AndroidReleaseNotes/",$"{AppPackageName}/{AppVersion}.md"));
                 StreamReader reader = new StreamReader(stream);
 
 
