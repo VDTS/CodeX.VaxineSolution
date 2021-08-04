@@ -18,6 +18,7 @@
 # The same thing can be perform with any class of the app.
 #
 # AN IMPORTANT THING: FOR THIS SAMPLE YOU NEED DECLARE API_URL ENVIRONMENT VARIABLE IN APP CENTER BUILD CONFIGURATION.
+# App Center Certificate : https://help.gamesalad.com/gamesalad-cookbook/publishing/4-android-publishing/4-02-creating-a-keystore/#:~:text=%20To%20create%20a%20Keystore%3A%20%201%20Open,Keystore%2C%20then%20answer%20a%20series%20of...%20More%20
 
 if [ -z "$FIREBASE_API_KEY" ]
 then
