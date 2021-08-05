@@ -67,6 +67,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
                 string a = await DataService.Post(data, $"Child/{Family.Id}");
                 if (a == "OK")
                 {
+                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalChilds");
                     StandardMessagesDisplay.EditDisplaymessage(Child.FullName);
                 }
                 else
