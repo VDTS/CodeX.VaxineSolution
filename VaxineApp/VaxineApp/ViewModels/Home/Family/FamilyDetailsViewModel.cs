@@ -148,6 +148,7 @@ namespace VaxineApp.ViewModels.Home.Family
                         var data = await DataService.Delete($"Child/{Family.Id}/{SelectedChild.FId}");
                         if (data == "Deleted")
                         {
+                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamId", "")}/TotalChilds");
                             Childs.Remove(SelectedChild);
                         }
                         else
