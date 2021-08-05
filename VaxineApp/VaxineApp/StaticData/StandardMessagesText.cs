@@ -16,6 +16,8 @@
             return $"Do you want to remove {input}";
         }
 
+        public static string DeletedMessageBody { get; set; } = "Item Deleted";
+
         // Edit
         public static string EditTitle { get; set; } = "Updated";
         public static string EditBody(string input)

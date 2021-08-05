@@ -91,6 +91,7 @@
     <Compile Include="NativeApi\PackageNameDroid.cs" />
     <Compile Include="NativeApi\PhotoPickerService.cs" />
     <Compile Include="NativeApi\SaveAndroid.cs" />
+    <Compile Include="NativeApi\Toaster.cs" />
     <Compile Include="Renderer\AndroidEntryRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
