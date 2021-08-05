@@ -10,6 +10,7 @@ using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
 using VaxineApp.RealCacheLib;
+using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Home.Status;
 using Xamarin.Essentials;
@@ -20,6 +21,19 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
     public partial class LoginViewModel : ViewModelBase
     {
         // Property
+        private TeamModel team;
+        public TeamModel Team
+        {
+            get
+            {
+                return team;
+            }
+            set
+            {
+                team = value;
+                OnPropertyChanged();
+            }
+        }
         private bool rememberMe;
         public bool RememberMe
         {
@@ -165,6 +179,41 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                             Preferences.Set("VaccinePeriodId", item.Value.CurrentVaccinePeriodId.ToString());
                         }
                     }
+                }
+
+
+
+                var teamVar = await DataService.Get($"Team/{Preferences.Get("ClusterId", "")}");
+                if (teamVar != "null" & teamVar != "Error")
+                {
+                    var teamData = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(teamVar);
+                    foreach (KeyValuePair<string, TeamModel> item in teamData)
+                    {
+                        if (item.Value.Id.ToString() == Preferences.Get("TeamId", "").ToString())
+                        {
+                            Team = new TeamModel
+                            {
+                                Id = item.Value.Id,
+                                FId = item.Key.ToString(),
+                                CHWName = item.Value.CHWName,
+                                SocialMobilizerId = item.Value.SocialMobilizerId,
+                                TeamNo = item.Value.TeamNo,
+                                TotalChilds = item.Value.TotalChilds,
+                                TotalClinics = item.Value.TotalClinics,
+                                TotalDoctors = item.Value.TotalDoctors,
+                                TotalHouseholds = item.Value.TotalHouseholds,
+                                TotalInfluencers = item.Value.TotalInfluencers,
+                                TotalMasjeeds = item.Value.TotalMasjeeds,
+                                TotalSchools = item.Value.TotalSchools,
+                                TotalGuestChilds = item.Value.TotalGuestChilds,
+                                TotalRefugeeChilds = item.Value.TotalRefugeeChilds,
+                                TotalReturnChilds = item.Value.TotalReturnChilds
+                            };
+                            StaticDataStore.TeamStats = Team;
+                            Preferences.Set("TeamFId", Team.FId);
+                        }
+                    }
+
                 }
 
                 var VaccinePeriod = await DataService.Get("VaccinePeriods");
