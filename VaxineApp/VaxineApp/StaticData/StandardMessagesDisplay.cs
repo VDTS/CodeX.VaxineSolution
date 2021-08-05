@@ -1,4 +1,6 @@
 ﻿using System.Threading.Tasks;
+using VaxineApp.AndroidNativeApi;
+using Xamarin.Forms;
 
 namespace VaxineApp.StaticData
 {
@@ -12,9 +14,9 @@ namespace VaxineApp.StaticData
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.EditTitle, StandardMessagesText.EditBody(input), "OK");
         }
-        public async static void NoDataDisplayMessage()
+        public static void NoDataDisplayMessage()
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.NoDataTitle, StandardMessagesText.NoDataBody, "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.NoDataBody);
         }
         public async static void CanceledDisplayMessage()
         {
@@ -24,17 +26,22 @@ namespace VaxineApp.StaticData
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.InvalidDataTitle, StandardMessagesText.InvalidDataBody, "OK");
         }
-        public async static void FeatureUnderConstructionTitleDisplayMessage()
+        public static void FeatureUnderConstructionTitleDisplayMessage()
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.FeatureUnderConstructionTitle, StandardMessagesText.FeatureUnderConstructionBody, "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.FeatureUnderConstructionBody);
         }
         public async static Task<bool> DeleteDisplayMessage(string input)
         {
             return await App.Current.MainPage.DisplayAlert(StandardMessagesText.DeleteTitle, StandardMessagesText.DeleteBody(input), "Yes", "No");
         }
-        public async static void NoItemSelectedDisplayMessage()
+
+        public static void DeletedDisplayMesage()
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.NoItemSelectedTitle, StandardMessagesText.NoItemSelectedBody, "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.DeletedMessageBody);
+        }
+        public static void NoItemSelectedDisplayMessage()
+        {
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.NoItemSelectedBody);
         }
 
 
