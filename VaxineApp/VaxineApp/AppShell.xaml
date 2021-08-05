@@ -298,6 +298,15 @@
                        Color="Black" />
     </MenuItem.IconImageSource>
   </MenuItem>
+  <MenuItem Text="Recycle Bin"
+            StyleClass="MenuItemLayoutStyle"
+            Command="{Binding GoToRecycleBinPageCommand}">
+    <MenuItem.IconImageSource>
+      <FontImageSource FontFamily="SegoeMDL2"
+                       Glyph=""
+                       Color="Black" />
+    </MenuItem.IconImageSource>
+  </MenuItem>
   <MenuItem Text="{xct:Translate Logout}"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutMenuItem_Logout.png"

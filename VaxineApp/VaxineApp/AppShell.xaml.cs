@@ -26,6 +26,7 @@ using VaxineApp.Views.Home.Family.Child;
 using VaxineApp.Views.Home.Status.Vaccine;
 using VaxineApp.Views.Home.Status.Anonymous;
 using VaxineApp.Views.Announcements;
+using VaxineApp.Views.RecycleBin;
 
 namespace VaxineApp
 {
@@ -90,6 +91,7 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(LanguagePage), typeof(LanguagePage));
             Routing.RegisterRoute(nameof(NotificationsPage), typeof(NotificationsPage));
             Routing.RegisterRoute(nameof(AnnouncementsCentrePage), typeof(AnnouncementsCentrePage));
+            Routing.RegisterRoute(nameof(RecycleBinPage), typeof(RecycleBinPage));
 
         }
     }
