@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.RecycleBin.RecycleBinPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.RecycleBin"
+             xmlns:localFont="clr-namespace:VaxineApp.Font"
+             x:DataType="ViewModel:RecycleBinViewModel"
+             Shell.TabBarIsVisible="False"
+             Title="Recycle Bin">
+  <ContentPage.BindingContext>
+    <ViewModel:RecycleBinViewModel></ViewModel:RecycleBinViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout>
+      <StackLayout Padding="10"
+                   Spacing="20">
+        <Label Text="BIN"
+               FontAttributes="Bold"></Label>
+        <Grid Padding="20">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label FontFamily="SegoeMDL2"
+                 Grid.Column="0"
+                 Text=""
+                 FontSize="30"
+                 TextColor="{StaticResource Primary}"></Label>
+          <StackLayout Grid.Column="1"
+                       Orientation="Vertical"
+                       HorizontalOptions="Center"
+                       VerticalOptions="StartAndExpand">
+            <Label Text="Do you want to remove all these data?"></Label>
+            <Button Text="Empty Bin now"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource Primary}"
+                    Command="{Binding EmptyRecycleBinCommand}"
+                    Padding="0,0,120,0"></Button>
+          </StackLayout>
+        </Grid>
+      </StackLayout>
+
+      <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                   RefreshColor="#2196f3"
+                   Padding="10"
+                   Command="{Binding PullRefreshCommand}">
+        <CollectionView ItemsSource="{Binding items}">
+          <CollectionView.ItemTemplate>
+            <DataTemplate>
+              <SwipeView>
+                <SwipeView.LeftItems Mode="Execute"
+                                     SwipeBehaviorOnInvoked="Close">
+                  <SwipeItem BackgroundColor="white"
+                             Command="{Binding RestoreCommand}">
+                    <SwipeItem.IconImageSource>
+                      <FontImageSource FontFamily="MaterialIcons"
+                                       Glyph="{x:Static localFont:MaterialDesignIcons.Restore}"
+                                       Color="{StaticResource Primary}" />
+                    </SwipeItem.IconImageSource>
+                  </SwipeItem>
+                </SwipeView.LeftItems>
+                <SwipeView.RightItems Mode="Execute"
+                                      SwipeBehaviorOnInvoked="Close">
+                  <SwipeItem BackgroundColor="white"
+                             Command="{Binding DeleteCommand}">
+                    <SwipeItem.IconImageSource>
+                      <FontImageSource FontFamily="MaterialIcons"
+                                       Glyph="{x:Static localFont:MaterialDesignIcons.DeleteForever}"
+                                       Color="{StaticResource Primary}" />
+                    </SwipeItem.IconImageSource>
+                  </SwipeItem>
+                </SwipeView.RightItems>
+                <Grid x:DataType="ViewModel:Items">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                  </Grid.RowDefinitions>
+                  <Label Grid.Row="0"
+                         Padding="5"
+                         FontAttributes="Bold"
+                         Text="{Binding Name}"></Label>
+                  <Label Grid.Row="1"
+                         Padding="5"
+                         Text="{Binding Details}"></Label>
+                </Grid>
+              </SwipeView>
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
+      </RefreshView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

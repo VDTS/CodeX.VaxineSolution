@@ -5,6 +5,7 @@ using VaxineApp.MVVMHelper;
 using VaxineApp.Views.Announcements;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home.Profile;
+using VaxineApp.Views.RecycleBin;
 using VaxineApp.Views.Settings.Main;
 using VaxineApp.Views.Settings.Themes;
 using Xamarin.Essentials;
@@ -51,7 +52,7 @@ namespace VaxineApp.ViewModels
         public ICommand RemoveAccountCommand { private set; get; }
         public ICommand GoToThemesPageCommand { private set; get; }
         public ICommand GoToAnnouncementsCentrePageCommand { private set; get; }
-
+        public ICommand GoToRecycleBinPageCommand { private set; get; }
         // ctor
         public AppShellViewModel()
         {
@@ -67,6 +68,14 @@ namespace VaxineApp.ViewModels
             RemoveAccountCommand = new Command(RemoveAccount);
             GoToThemesPageCommand = new Command(GoToThemesPage);
             GoToAnnouncementsCentrePageCommand = new Command(GoToAnnouncementsCentrePage);
+            GoToRecycleBinPageCommand = new Command(GoToRecycleBinPage);
+        }
+
+        private async void GoToRecycleBinPage()
+        {
+            var route = $"{nameof(RecycleBinPage)}";
+            await Shell.Current.GoToAsync(route);
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private async void GoToAnnouncementsCentrePage(object obj)
