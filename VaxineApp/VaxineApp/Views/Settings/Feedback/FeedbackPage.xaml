@@ -8,6 +8,10 @@
              xmlns:richtexteditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
              Shell.TabBarIsVisible="False"
              Title="Feedback">
+  <Shell.BackButtonBehavior>
+    <BackButtonBehavior Command="{Binding BackButtonBehaviorCommand}"></BackButtonBehavior>
+  </Shell.BackButtonBehavior>
+  
   <ContentPage.BindingContext>
     <ViewModel:FeedbackViewModel></ViewModel:FeedbackViewModel>
   </ContentPage.BindingContext>

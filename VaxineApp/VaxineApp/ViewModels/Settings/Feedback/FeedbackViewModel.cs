@@ -88,6 +88,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
 
         // Command
         public ICommand SubmitIssueOnGithubCommand { private set; get; }
+        public ICommand BackButtonBehaviorCommand { private set; get; }
         public ICommand AttachScreenshotOnGithubIssueCommand { private set; get; }
 
         // ctor
@@ -96,6 +97,29 @@ namespace VaxineApp.ViewModels.Settings.Feedback
             SubmitIssueOnGithubCommand = new Command(SubmitIssueOnGithub);
             AppPackageName = DependencyService.Get<IPackageName>().PackageName;
             AttachScreenshotOnGithubIssueCommand = new Command(AttachScreenshotOnGithubIssue);
+            BackButtonBehaviorCommand = new Command(Backbutton);
+        }
+
+        private async void Backbutton()
+        {
+            var alert = DependencyService.Get<IAlert>();
+            var result = await alert.Display("", "Do you want to save as draft?", "Save", "Delete", "Cancel");
+            if(result == "Save")
+            {
+                StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
+                var route = "..";
+                await Shell.Current.GoToAsync(route);
+            }
+            else if(result == "Delete")
+            {
+                StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
+                var route = "..";
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void AttachScreenshotOnGithubIssue(object obj)
