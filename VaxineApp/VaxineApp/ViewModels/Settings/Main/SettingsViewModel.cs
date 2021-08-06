@@ -81,8 +81,8 @@ namespace VaxineApp.ViewModels.Settings.Main
 
         private async void GoToFeedbackPage(object obj)
         {
-            var navigationPage = new NavigationPage(new FeedbackPage());
-            await App.Current.MainPage.Navigation.PushModalAsync(navigationPage, true);
+            var route = $"{nameof(FeedbackPage)}";
+            await Shell.Current.GoToAsync(route);
         }
         private async void PrivacyPolicy(object obj)
         {
