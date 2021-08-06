@@ -8,5 +8,6 @@ namespace VaxineApp.DataAccessLib
     {
         public static string FirebaseApiKey = "FirebaseApiKeyPlaceholder";
         public static string FirebaseBaseUrl = "FirebaseBaseUrlPlaceholder";
+        public static string AppCenterAndroidXamarinKey = "AppCenterAndroidXamarinKeyPlaceholder";
     }
 }

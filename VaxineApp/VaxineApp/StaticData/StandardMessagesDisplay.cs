@@ -6,6 +6,21 @@ namespace VaxineApp.StaticData
 {
     public static class StandardMessagesDisplay
     {
+        // ✔️ Error Tracked
+        public static void ErrorTracked()
+        {
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ErrorTracked);
+        }
+        // ✔️ Error
+        public static void Error()
+        {
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.Error);
+        }
+        // ✔️ No Connection 
+        public static void NoConnectionToast()
+        {
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.NoConnectionToastMessage);
+        }
         public async static void AddDisplayMessage(string input)
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.AddTitle, StandardMessagesText.AddBody(input), "OK");

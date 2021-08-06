@@ -18,7 +18,7 @@ using VaxineApp.StaticData;
 
 namespace VaxineApp.ViewModels.Home.Status
 {
-    public class StatusViewModel : ViewModelBase, IDataCrud, IVMUtils
+    public class StatusViewModel : ViewModelBase
     {
         // Property
         private ObservableCollection<ChildGroupbyFamilyModel> familyGroup;
@@ -87,16 +87,32 @@ namespace VaxineApp.ViewModels.Home.Status
             GoToDetailsPageCommand = new Command(GoToDetailsPage);
         }
 
-        public async void Get()
+        private async void Get()
         {
             var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            if (data == "ConnectionError")
+            {
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (data == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (data == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (data == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
             {
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
                 foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
                 {
                     var data2 = await DataService.Get($"Child/{item.Value.Id}");
-                    if (data2 != "null" & data2 != "Error")
+                    if (data2 != "null" && data2 != "Error" && data2 != "ErrorTracked" && data2 != "ConnectionError")
                     {
                         var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
                         List<ChildModel> lp = new List<ChildModel>();
@@ -116,10 +132,6 @@ namespace VaxineApp.ViewModels.Home.Status
                         FamilyGroup.Add(new ChildGroupbyFamilyModel(item.Value.HouseNo, lp));
                     }
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

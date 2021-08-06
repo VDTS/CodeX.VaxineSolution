@@ -2,6 +2,11 @@
 {
     public static class StandardMessagesText
     {
+        // Error
+        public static string ErrorTracked { get; set; } = "Error occured and Tracked by App Center";
+        public static string Error { get; set; } = "Error Occured";
+        // No internet Connection
+        public static string NoConnectionToastMessage { get; set; } = "No Connection, check data or wifi!";
         // Add
         public static string AddTitle { get; set; } = "Added";
         public static string AddBody(string input)
