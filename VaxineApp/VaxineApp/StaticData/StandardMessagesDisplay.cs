@@ -21,25 +21,25 @@ namespace VaxineApp.StaticData
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.NoConnectionToastMessage);
         }
-        public async static void AddDisplayMessage(string input)
+        public static void AddDisplayMessage(string input)
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.AddTitle, StandardMessagesText.AddBody(input), "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.AddBody(input));
         }
-        public async static void EditDisplaymessage(string input)
+        public static void EditDisplaymessage(string input)
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.EditTitle, StandardMessagesText.EditBody(input), "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.EditBody(input));
         }
         public static void NoDataDisplayMessage()
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.NoDataBody);
         }
-        public async static void CanceledDisplayMessage()
+        public static void CanceledDisplayMessage()
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.CanceledTitle, StandardMessagesText.CanceledBody, "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.CanceledBody);
         }
-        public async static void InvalidDataDisplayMessage()
+        public static void InvalidDataDisplayMessage()
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.InvalidDataTitle, StandardMessagesText.InvalidDataBody, "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.InvalidDataBody);
         }
         public static void FeatureUnderConstructionTitleDisplayMessage()
         {
@@ -61,31 +61,31 @@ namespace VaxineApp.StaticData
 
 
         // Validators
-        public async static void ChildAgeValidator(string input)
+        public static void ChildAgeValidator(string input)
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.ChildAgeValidatorTitle, StandardMessagesText.ChildAgeValidatorBody(input), "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ChildAgeValidatorBody(input));
         }
 
-        public async static void FamilyDuplicateValidator(int input)
+        public static void FamilyDuplicateValidator(int input)
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.FamilyDuplicateValidatorTitle, StandardMessagesText.FamilyDuplicateValidatorBody(input), "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.FamilyDuplicateValidatorBody(input));
         }
-        public async static void ChildRecursiveDeletionNotAllowed(string child, int vaccineCount)
+        public static void ChildRecursiveDeletionNotAllowed(string child, int vaccineCount)
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.ChildRecursiveDeletionNotAllowedTitle, StandardMessagesText.ChildRecursiveDeletionNotAllowedBody(child, vaccineCount), "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ChildRecursiveDeletionNotAllowedBody(child, vaccineCount));
         }
-        public async static void FamilyRecursiveDeletionNotAllowed(string family, int childCount)
+        public static void FamilyRecursiveDeletionNotAllowed(string family, int childCount)
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.ChildRecursiveDeletionNotAllowedTitle, StandardMessagesText.ChildRecursiveDeletionNotAllowedBody(family, childCount), "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ChildRecursiveDeletionNotAllowedBody(family, childCount));
         }
 
-        public async static void InvalidPhoneNumber()
+        public static void InvalidPhoneNumber()
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.InvalidPhoneNumberTitle, StandardMessagesText.InvalidPhoneNumberBody, "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.InvalidPhoneNumberBody);
         }
-        public async static void PeriodNotAvailable()
+        public static void PeriodNotAvailable()
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.PeriodNotAvailableTitle, StandardMessagesText.PeriodNotAvailableBody, "OK");
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.PeriodNotAvailableBody);
         }
         // Account Management
         public async static void EmailChanged(string email)
