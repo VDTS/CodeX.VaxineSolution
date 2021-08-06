@@ -52,7 +52,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 if (data == "Submit")
                 {
                     StandardMessagesDisplay.EditDisplaymessage(School.SchoolName);
-                    var route = $"//{nameof(SchoolPage)}";
+                    var route = "..";
                     await Shell.Current.GoToAsync(route);
                 }
                 else

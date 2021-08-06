@@ -53,7 +53,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 if (data == "Submit")
                 {
                     StandardMessagesDisplay.EditDisplaymessage(Masjeed.MasjeedName);
-                    var route = $"//{nameof(MasjeedPage)}";
+                    var route = "..";
                     await Shell.Current.GoToAsync(route);
                 }
                 else

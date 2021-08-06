@@ -61,7 +61,7 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                 if (data == "Submit")
                 {
                     StandardMessagesDisplay.EditDisplaymessage($"{AnonymousChild.FullName}");
-                    var route = $"//{nameof(AnonymousChildPage)}";
+                    var route = "..";
                     await Shell.Current.GoToAsync(route);
                 }
                 else

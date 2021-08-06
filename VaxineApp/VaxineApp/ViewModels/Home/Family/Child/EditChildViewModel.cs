@@ -60,7 +60,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
                 if (data == "Submit")
                 {
                     StandardMessagesDisplay.EditDisplaymessage(child.FullName);
-                    var route = $"//{nameof(StatusPage)}";
+                    var route = "..";
                     await Shell.Current.GoToAsync(route);
                 }
                 else

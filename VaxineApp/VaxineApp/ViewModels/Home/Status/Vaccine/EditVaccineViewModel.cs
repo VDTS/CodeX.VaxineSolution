@@ -61,7 +61,7 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
             if (data == "Submit")
             {
                 StandardMessagesDisplay.EditDisplaymessage(Vaccine.VaccineStatus);
-                var route = $"//{nameof(StatusPage)}";
+                var route = "..";
                 await Shell.Current.GoToAsync(route);
             }
             else
