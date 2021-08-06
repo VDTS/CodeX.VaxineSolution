@@ -159,6 +159,7 @@ namespace VaxineApp.Models
     }
     public class MasjeedModel
     {
+        public IsActive IsActive { get; set; }
         public string FId { get; set; }
         public Guid Id { get; set; }
         public string MasjeedName { get; set; }

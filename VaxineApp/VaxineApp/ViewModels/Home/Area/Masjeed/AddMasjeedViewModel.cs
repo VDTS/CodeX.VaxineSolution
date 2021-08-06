@@ -61,6 +61,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             var result = ValidationRules.Validate(Masjeed);
             if (result.IsValid)
             {
+                Masjeed.IsActive = IsActive.Active;
                 var data = JsonConvert.SerializeObject(Masjeed);
 
                 string a = await DataService.Post(data, $"Masjeed/{Preferences.Get("TeamId", "")}");
