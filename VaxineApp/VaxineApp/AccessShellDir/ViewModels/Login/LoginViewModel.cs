@@ -119,7 +119,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
         {
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                await App.Current.MainPage.DisplayAlert("No internet", "Check you internet connection", "Ok");
+                StandardMessagesDisplay.NoConnectionToast();
             }
             else
             {
