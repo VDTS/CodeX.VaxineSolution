@@ -124,7 +124,8 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                             DoYouHavePermissionForAdsInMasjeed = item.Value.DoYouHavePermissionForAdsInMasjeed,
                             DoesImamSupportsVaccine = item.Value.DoesImamSupportsVaccine,
                             Latitude = item.Value.Latitude,
-                            Longitude = item.Value.Longitude
+                            Longitude = item.Value.Longitude,
+                            IsActive = item.Value.IsActive
                         }
                         );
                 }
