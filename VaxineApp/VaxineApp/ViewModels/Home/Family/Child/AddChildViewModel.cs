@@ -74,7 +74,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
                 {
                     StandardMessagesDisplay.CanceledDisplayMessage();
                 }
-                var route = $"//{nameof(FamilyListPage)}";
+                var route = "..";
                 await Shell.Current.GoToAsync(route);
             }
             else

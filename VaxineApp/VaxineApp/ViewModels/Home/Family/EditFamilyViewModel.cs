@@ -53,7 +53,7 @@ namespace VaxineApp.ViewModels.Home.Family
                     if (data == "Submit")
                     {
                         StandardMessagesDisplay.EditDisplaymessage($"{Family.ParentName}'s Family ");
-                        var route = $"//{nameof(FamilyListPage)}";
+                        var route = "..";
                         await Shell.Current.GoToAsync(route);
                     }
                     else

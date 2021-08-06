@@ -63,7 +63,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                 {
                     StandardMessagesDisplay.CanceledDisplayMessage();
                 }
-                var route = $"//{nameof(DoctorPage)}";
+                var route = "..";
                 await Shell.Current.GoToAsync(route);
             }
             else

@@ -62,7 +62,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                 {
                     StandardMessagesDisplay.CanceledDisplayMessage();
                 }
-                var route = $"//{nameof(InfluencerPage)}";
+                var route = "..";
                 await Shell.Current.GoToAsync(route);
             }
             else

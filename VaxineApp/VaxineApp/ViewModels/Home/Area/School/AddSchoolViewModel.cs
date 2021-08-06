@@ -63,7 +63,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 {
                     StandardMessagesDisplay.CanceledDisplayMessage();
                 }
-                var route = $"//{nameof(SchoolPage)}";
+                var route = "..";
                 await Shell.Current.GoToAsync(route);
             }
             else

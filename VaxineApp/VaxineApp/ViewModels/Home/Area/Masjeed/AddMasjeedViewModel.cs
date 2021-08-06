@@ -74,7 +74,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 {
                     StandardMessagesDisplay.CanceledDisplayMessage();
                 }
-                var route = $"//{nameof(MasjeedPage)}";
+                var route = "..";
                 await Shell.Current.GoToAsync(route);
             }
             else

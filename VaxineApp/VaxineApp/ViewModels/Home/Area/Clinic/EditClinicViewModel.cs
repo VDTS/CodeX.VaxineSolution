@@ -53,7 +53,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 if (data == "Submit")
                 {
                     StandardMessagesDisplay.EditDisplaymessage(Clinic.ClinicName);
-                    var route = $"//{nameof(ClinicPage)}";
+                    var route = "..";
                     await Shell.Current.GoToAsync(route);
                 }
                 else
