@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using VaxineApp.DataAccessLib;
+using Xamarin.Essentials;
 
 namespace DataAccessLib.Services
 {
@@ -10,6 +14,8 @@ namespace DataAccessLib.Services
     {
         public DbService()
         {
+            AppCenter.Start($"android={Constants.AppCenterAndroidXamarinKey};",
+                     typeof(Analytics), typeof(Crashes));
         }
         public async Task<string> Post(string data, string Node)
         {
@@ -42,29 +48,41 @@ namespace DataAccessLib.Services
         }
         public async Task<string> Get(string Node)
         {
-            try
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                string url = $"{Constants.FirebaseBaseUrl}Kandahar-Area/{Node}.json";
-                using (var httpClient = new HttpClient())
+                return "ConnectionError";
+            }
+            else
+            {
+                try
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), url))
+                    string url = $"{Constants.FirebaseBaseUrl}Kandahar-Area/{Node}.json";
+                    using (var httpClient = new HttpClient())
                     {
-                        var response = await httpClient.SendAsync(request);
+                        using (var request = new HttpRequestMessage(new HttpMethod("GET"), url))
+                        {
+                            var response = await httpClient.SendAsync(request);
 
-                        if (response.IsSuccessStatusCode)
-                        {
-                            return await response.Content.ReadAsStringAsync();
-                        }
-                        else
-                        {
-                            return "Error";
+                            if (response.IsSuccessStatusCode)
+                            {
+                                if (response.Content.ToString() == "null")
+                                {
+                                    return "null";
+                                }
+                                return await response.Content.ReadAsStringAsync();
+                            }
+                            else
+                            {
+                                return "Error";
+                            }
                         }
                     }
                 }
-            }
-            catch (Exception)
-            {
-                return "Error";
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    return "ErrorTracked";
+                }
             }
         }
         public async Task<string> Delete(string Node)
