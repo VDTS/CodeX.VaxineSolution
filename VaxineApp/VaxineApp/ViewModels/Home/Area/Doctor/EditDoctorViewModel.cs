@@ -50,7 +50,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                 if (data == "Submit")
                 {
                     StandardMessagesDisplay.EditDisplaymessage(Doctor.Name);
-                    var route = $"//{nameof(DoctorPage)}";
+                    var route = "..";
                     await Shell.Current.GoToAsync(route);
                 }
                 else

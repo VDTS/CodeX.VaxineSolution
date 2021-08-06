@@ -242,7 +242,7 @@ namespace VaxineApp.ViewModels.Home.Profile
                 if (data == "Submit")
                 {
                     await App.Current.MainPage.DisplayAlert("Updated", $"item has been updated", "OK");
-                    var route = $"//{nameof(ProfilePage)}";
+                    var route = "..";
                     await Shell.Current.GoToAsync(route);
                 }
                 else

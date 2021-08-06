@@ -51,7 +51,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                 if (data == "Submit")
                 {
                     StandardMessagesDisplay.EditDisplaymessage(influencer.Name);
-                    var route = $"//{nameof(InfluencerPage)}";
+                    var route = "..";
                     await Shell.Current.GoToAsync(route);
                 }
                 else

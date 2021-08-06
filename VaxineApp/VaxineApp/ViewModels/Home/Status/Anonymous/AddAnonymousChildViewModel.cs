@@ -102,7 +102,7 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                 {
                     StandardMessagesDisplay.CanceledDisplayMessage();
                 }
-                var route = $"//{nameof(AnonymousChildPage)}";
+                var route = "..";
                 await Shell.Current.GoToAsync(route);
             }
             else
