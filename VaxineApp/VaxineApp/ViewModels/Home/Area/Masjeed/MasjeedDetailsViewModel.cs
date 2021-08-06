@@ -58,8 +58,11 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(Masjeed.MasjeedName);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"Masjeed/{Preferences.Get("TeamId", "")}/{Masjeed.FId}");
-                    if (data == "Deleted")
+                    Masjeed.IsActive = IsActive.MarkAsDelete;
+                    var data22 = JsonConvert.SerializeObject(Masjeed);
+
+                    var data = await DataService.Put(data22, $"Masjeed/{Preferences.Get("TeamId", "")}/{Masjeed.FId}");
+                    if (data == "Submit")
                     {
                         string b = await DataService.Put((--StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
                         var route = $"//{nameof(MasjeedPage)}";
