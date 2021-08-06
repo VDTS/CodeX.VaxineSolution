@@ -226,16 +226,13 @@
                          Size="24" />
       </Tab.Icon>
       <ShellContent Title="Child"
-                    Route="StatusPage"
                     ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
       <ShellContent Title="Anonymous Child"
-                    Route="AnonymousChildPage"
                     ContentTemplate="{DataTemplate Anonymous:AnonymousChildPage}" />
     </Tab>
     <Tab Icon="Home_Insights.png"
          Title="{xct:Translate Insights}">
-      <ShellContent Route="InsightsPage"
-                    ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
+      <ShellContent ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
     </Tab>
     <Tab Title="{xct:Translate Family}">
       <Tab.Icon>
@@ -243,34 +240,26 @@
                          FontFamily="SegoeMDL2"
                          Size="24" />
       </Tab.Icon>
-      <ShellContent Route="FamilyListPage"
-                    ContentTemplate="{DataTemplate HomeFamily:FamilyListPage}" />
+      <ShellContent ContentTemplate="{DataTemplate HomeFamily:FamilyListPage}" />
     </Tab>
     <Tab Icon="Home_Area.png"
          Title="{xct:Translate Area}">
       <ShellContent Title="{xct:Translate Area}"
-                    Route="AreaPage"
                     ContentTemplate="{DataTemplate HomeArea:AreaPage}" />
       <ShellContent Title="{xct:Translate Masjeed}"
-                    Route="MasjeedPage"
                     ContentTemplate="{DataTemplate HomeAreaMasjeed:MasjeedPage}" />
       <ShellContent Title="{xct:Translate School}"
-                    Route="SchoolPage"
                     ContentTemplate="{DataTemplate HomeAreaSchool:SchoolPage}" />
       <ShellContent Title="{xct:Translate Influencer}"
-                    Route="InfluencerPage"
                     ContentTemplate="{DataTemplate HomeAreaInfluencer:InfluencerPage}" />
       <ShellContent Title="{xct:Translate Clinic}"
-                    Route="ClinicPage"
                     ContentTemplate="{DataTemplate HomeAreaClinic:ClinicPage}" />
       <ShellContent Title="{xct:Translate Doctor}"
-                    Route="DoctorPage"
                     ContentTemplate="{DataTemplate HomeAreaDoctor:DoctorPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="{xct:Translate Profile}">
-      <ShellContent Route="ProfilePage"
-                    ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
+      <ShellContent ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
     </Tab>
 
   </FlyoutItem>
