@@ -18,7 +18,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
 {
     public class FeedbackViewModel : ViewModelBase
     {
-        GithubService githubRestService { get; set; }
+        GithubService GithubRestService { get; set; }
         private FeedbackModel feedback;
         public FeedbackModel Feedback
         {
@@ -73,7 +73,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
         public FeedbackViewModel()
         {
             // Property
-            githubRestService = new GithubService();
+            GithubRestService = new GithubService();
             Feedback = new FeedbackModel();
             AppPackageName = DependencyService.Get<IPackageName>().PackageName;
             AppVersionName = DependencyService.Get<IAppVersion>().GetVersion();
@@ -140,7 +140,7 @@ namespace VaxineApp.ViewModels.Settings.Feedback
 
             // Serialize feedback
             var data = JsonConvert.SerializeObject(Feedback);
-            var result = await githubRestService.SubmitIssue(data);
+            var result = await GithubRestService.SubmitIssue(data);
 
             if(result == "ConnectionError")
             {
