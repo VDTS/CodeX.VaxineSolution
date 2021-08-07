@@ -51,20 +51,29 @@ namespace VaxineApp.ViewModels.Home.Area.School
             var result = ValidationRules.Validate(School);
             if (result.IsValid)
             {
-                var data = JsonConvert.SerializeObject(School);
+                var jData = JsonConvert.SerializeObject(School);
 
-                string a = await DataService.Post(data, $"School/{Preferences.Get("TeamId", "")}");
-                if (a == "OK")
+                string postResponse = await DataService.Post(jData, $"School/{Preferences.Get("TeamId", "")}");
+                if (postResponse == "ConnectionError")
                 {
-                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
-                    StandardMessagesDisplay.AddDisplayMessage(School.SchoolName);
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (postResponse == "Error")
+                {
+                    StandardMessagesDisplay.Error();
+                }
+                else if (postResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
                 }
                 else
                 {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
+                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
+                    StandardMessagesDisplay.AddDisplayMessage(School.SchoolName);
+
+                    var route = "..";
+                    await Shell.Current.GoToAsync(route);
                 }
-                var route = "..";
-                await Shell.Current.GoToAsync(route);
             }
             else
             {

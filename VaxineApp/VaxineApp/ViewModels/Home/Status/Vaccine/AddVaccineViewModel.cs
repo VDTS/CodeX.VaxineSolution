@@ -60,19 +60,28 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
 
                 Vaccine.VaccinePeriod = dateTime;
 
-                var data = JsonConvert.SerializeObject(Vaccine);
+                var jData = JsonConvert.SerializeObject(Vaccine);
 
-                string a = await DataService.Post(data, $"Vaccine/{Child.Id}");
-                if (a == "OK")
+                string postResponse = await DataService.Post(jData, $"Vaccine/{Child.Id}");
+                if (postResponse == "ConnectionError")
                 {
-                    StandardMessagesDisplay.AddDisplayMessage(Vaccine.VaccineStatus);
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (postResponse == "Error")
+                {
+                    StandardMessagesDisplay.Error();
+                }
+                else if (postResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
                 }
                 else
                 {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
+                    StandardMessagesDisplay.AddDisplayMessage(Vaccine.VaccineStatus);
+                    var route = "..";
+                    await Shell.Current.GoToAsync(route);
                 }
-                var route = "..";
-                await Shell.Current.GoToAsync(route);
+                
             }
             else
             {
