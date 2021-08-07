@@ -147,8 +147,21 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedAnonymousChild.FullName);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"AnonymousChild/{Preferences.Get("TeamId", "")}/{SelectedAnonymousChild.FId}");
-                    if (data == "Deleted")
+                    var deleteResponse = await DataService.Delete($"AnonymousChild/{Preferences.Get("TeamId", "")}/{SelectedAnonymousChild.FId}");
+
+                    if (deleteResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (deleteResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (deleteResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else if (deleteResponse == "null")
                     {
                         if (SelectedAnonymousChild.Type == "Refugee")
                         {
@@ -171,12 +184,9 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                             return;
                         }
 
+                        StandardMessagesDisplay.ItemDeletedToast();
 
                         AnonymousChild.Remove(SelectedAnonymousChild);
-                    }
-                    else
-                    {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else

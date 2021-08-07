@@ -57,7 +57,6 @@ namespace DataAccessLib.Services
                 }
             }
         }
-
         public async Task<string> Get(string Node)
         {
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
@@ -99,27 +98,35 @@ namespace DataAccessLib.Services
         }
         public async Task<string> Delete(string Node)
         {
-            try
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                using (var httpClient = new HttpClient())
+                return "ConnectionError";
+            }
+            else
+            {
+                try
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), $"{Constants.FirebaseBaseUrl}Kandahar-Area/{Node}.json"))
+                    using (var httpClient = new HttpClient())
                     {
-                        var response = await httpClient.SendAsync(request);
-                        if (response.IsSuccessStatusCode)
+                        using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), $"{Constants.FirebaseBaseUrl}Kandahar-Area/{Node}.json"))
                         {
-                            return "Deleted";
-                        }
-                        else
-                        {
-                            return "Error";
+                            var response = await httpClient.SendAsync(request);
+                            if (response.IsSuccessStatusCode)
+                            {
+                                return "null";
+                            }
+                            else
+                            {
+                                return "Error";
+                            }
                         }
                     }
                 }
-            }
-            catch (Exception)
-            {
-                return "Error";
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    return "ErrorTracked";
+                }
             }
         }
         public async Task<string> Put(string data, string Node)
