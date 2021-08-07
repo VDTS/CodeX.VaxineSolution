@@ -140,20 +140,35 @@ namespace VaxineApp.ViewModels.Home.Family
             if (SelectedChild.FId != null)
             {
                 var VaccineData = await DataService.Get($"Vaccine/{SelectedChild.Id}");
-                if (VaccineData == "null")
+                if(VaccineData == "ConnectionError")
+                {
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (VaccineData == "null")
                 {
                     var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedChild.FullName);
                     if (isDeleteAccepted)
                     {
-                        var data = await DataService.Delete($"Child/{Family.Id}/{SelectedChild.FId}");
-                        if (data == "Deleted")
+                        var deleteResponse = await DataService.Delete($"Child/{Family.Id}/{SelectedChild.FId}");
+                        if (deleteResponse == "ConnectionError")
+                        {
+                            StandardMessagesDisplay.NoConnectionToast();
+                        }
+                        else if (deleteResponse == "Error")
+                        {
+                            StandardMessagesDisplay.Error();
+                        }
+                        else if (deleteResponse == "ErrorTracked")
+                        {
+                            StandardMessagesDisplay.ErrorTracked();
+                        }
+                        else if (deleteResponse == "null")
                         {
                             string b = await DataService.Put((--StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamId", "")}/TotalChilds");
+
+                            StandardMessagesDisplay.ItemDeletedToast();
+
                             Childs.Remove(SelectedChild);
-                        }
-                        else
-                        {
-                            StandardMessagesDisplay.CanceledDisplayMessage();
                         }
                     }
                     else
@@ -228,16 +243,27 @@ namespace VaxineApp.ViewModels.Home.Family
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage($"{Family.ParentName}'s Family ");
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
-                    if (data == "Deleted")
+                    var deleteResponse = await DataService.Delete($"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
+                    if (deleteResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (deleteResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (deleteResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else if (deleteResponse == "null")
                     {
                         string b = await DataService.Put((--StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
+
+                        StandardMessagesDisplay.ItemDeletedToast();
+
                         var route = $"//{nameof(FamilyListPage)}";
                         await Shell.Current.GoToAsync(route);
-                    }
-                    else
-                    {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else

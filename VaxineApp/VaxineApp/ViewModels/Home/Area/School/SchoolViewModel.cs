@@ -108,15 +108,26 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedSchool.SchoolName);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"School/{Preferences.Get("TeamId", "")}/{SelectedSchool.FId}");
-                    if (data == "Deleted")
+                    var deleteResponse = await DataService.Delete($"School/{Preferences.Get("TeamId", "")}/{SelectedSchool.FId}");
+                    if (deleteResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (deleteResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (deleteResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else if (deleteResponse == "null")
                     {
                         string b = await DataService.Put((--StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
+
+                        StandardMessagesDisplay.ItemDeletedToast();
+
                         Schools.Remove(SelectedSchool);
-                    }
-                    else
-                    {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else

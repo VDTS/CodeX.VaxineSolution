@@ -143,15 +143,26 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedDoctor.Name);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"Doctor/{Preferences.Get("TeamId", "")}/{SelectedDoctor.FId}");
-                    if (data == "Deleted")
+                    var deleteResponse = await DataService.Delete($"Doctor/{Preferences.Get("TeamId", "")}/{SelectedDoctor.FId}");
+                    if (deleteResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (deleteResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (deleteResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else if (deleteResponse == "null")
                     {
                         string b = await DataService.Put((--StaticDataStore.TeamStats.TotalDoctors).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalDoctors");
+
+                        StandardMessagesDisplay.ItemDeletedToast();
+
                         Doctors.Remove(SelectedDoctor);
-                    }
-                    else
-                    {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else

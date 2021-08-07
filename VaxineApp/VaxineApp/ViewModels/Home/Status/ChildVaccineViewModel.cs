@@ -123,15 +123,25 @@ namespace VaxineApp.ViewModels.Home.Status
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(CurrentVaccine.VaccineStatus);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"Vaccine/{Child.Id}/{CurrentVaccine.FId}");
-                    if (data == "Deleted")
+                    var deleteResponse = await DataService.Delete($"Vaccine/{Child.Id}/{CurrentVaccine.FId}");
+                    if (deleteResponse == "ConnectionError")
                     {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (deleteResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (deleteResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else if (deleteResponse == "null")
+                    {
+                        StandardMessagesDisplay.ItemDeletedToast();
+
                         VaccineList.Remove(CurrentVaccine);
                         CurrentVaccine = new VaccineModel();
-                    }
-                    else
-                    {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else
