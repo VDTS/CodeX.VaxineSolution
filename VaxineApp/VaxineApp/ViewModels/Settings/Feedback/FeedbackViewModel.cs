@@ -1,7 +1,10 @@
-﻿using Octokit;
+﻿using DataAccessLib.GithubService;
+using Newtonsoft.Json;
+using Octokit;
 using System;
 using System.Windows.Input;
 using VaxineApp.AndroidNativeApi;
+using VaxineApp.Models;
 using VaxineApp.Models.Metadata;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
@@ -15,34 +18,24 @@ namespace VaxineApp.ViewModels.Settings.Feedback
 {
     public class FeedbackViewModel : ViewModelBase
     {
-        // Property
-        private string appPackageName;
-        public string AppPackageName
+        GithubService githubRestService { get; set; }
+        private FeedbackModel feedback;
+        public FeedbackModel Feedback
         {
             get
             {
-                return appPackageName;
+                return feedback;
             }
             set
             {
-                appPackageName = value;
+                feedback = value;
                 OnPropertyChanged();
             }
         }
 
-        private string issueTitle;
-        public string IssueTitle
-        {
-            get
-            {
-                return issueTitle;
-            }
-            set
-            {
-                issueTitle = value;
-                OnPropertyChanged();
-            }
-        }
+        // Property
+        public string AppPackageName;
+        public string AppVersionName;
 
         private bool suggestionRadioButton;
         public bool SuggestionRadioButton
@@ -72,45 +65,35 @@ namespace VaxineApp.ViewModels.Settings.Feedback
             }
         }
 
-        private string issueDetails;
-        public string IssueDetails
-        {
-            get
-            {
-                return issueDetails;
-            }
-            set
-            {
-                issueDetails = value;
-                OnPropertyChanged();
-            }
-        }
-
         // Command
         public ICommand SubmitIssueOnGithubCommand { private set; get; }
         public ICommand BackButtonBehaviorCommand { private set; get; }
-        public ICommand AttachScreenshotOnGithubIssueCommand { private set; get; }
 
         // ctor
         public FeedbackViewModel()
         {
-            SubmitIssueOnGithubCommand = new Command(SubmitIssueOnGithub);
+            // Property
+            githubRestService = new GithubService();
+            Feedback = new FeedbackModel();
             AppPackageName = DependencyService.Get<IPackageName>().PackageName;
-            AttachScreenshotOnGithubIssueCommand = new Command(AttachScreenshotOnGithubIssue);
+            AppVersionName = DependencyService.Get<IAppVersion>().GetVersion();
+
+            // Command
             BackButtonBehaviorCommand = new Command(Backbutton);
+            SubmitIssueOnGithubCommand = new Command(SubmitIssue);
         }
 
         private async void Backbutton()
         {
             var alert = DependencyService.Get<IAlert>();
             var result = await alert.Display("", "Do you want to save as draft?", "Save", "Delete", "Cancel");
-            if(result == "Save")
+            if (result == "Save")
             {
                 StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
                 var route = "..";
                 await Shell.Current.GoToAsync(route);
             }
-            else if(result == "Delete")
+            else if (result == "Delete")
             {
                 StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
                 var route = "..";
@@ -122,85 +105,52 @@ namespace VaxineApp.ViewModels.Settings.Feedback
             }
         }
 
-        private void AttachScreenshotOnGithubIssue(object obj)
+        private async void SubmitIssue()
         {
-            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
-        }
+            Feedback.Labels.Add(AppVersionName);
 
-        private async void SubmitIssueOnGithub()
-        {
-            SubmitIssue();
+            if (SuggestionRadioButton == false && ProblemRadioButton == true)
+            {
+                Feedback.Labels.Add("Problem");
+            }
+            else
+            {
+                Feedback.Labels.Add("Suggestion");
+            }
+
             var role = await Xamarin.Essentials.SecureStorage.GetAsync("Role");
 
             if (role == "Mobilizer")
             {
-                var route = $"//{nameof(StatusPage)}";
-                await Shell.Current.GoToAsync(route);
+                Feedback.Labels.Add("mobilizer app");
             }
             else if (role == "Supervisor")
             {
-                var route = $"//{nameof(ProfilePage)}";
-                await Shell.Current.GoToAsync(route);
+                Feedback.Labels.Add("supervisor app");
             }
             else if (role == "Parent")
             {
-                var route = $"//{nameof(FamilyPage)}";
-                await Shell.Current.GoToAsync(route);
+                Feedback.Labels.Add("parent app");
             }
-        }
 
-        private async void SubmitIssue()
-        {
-            try
+            if (AppPackageName == "com.codex.vaxineappbeta")
             {
-                var client = new GitHubClient(new ProductHeaderValue("VaxineSolution"));
-
-                var tokenAuth = new Credentials(Constants.GithubApiKeyForCreatingIssues);
-                client.Credentials = tokenAuth;
-
-                var i = new NewIssue(IssueTitle);
-
-
-                i.Body = $"Issue: {IssueDetails}";
-                string b = DependencyService.Get<IAppVersion>().GetVersion();
-                i.Labels.Add(b);
-                
-                if (SuggestionRadioButton == false && ProblemRadioButton == true)
-                {
-                    i.Labels.Add("Problem");
-                }
-                else
-                {
-                    i.Labels.Add("Suggestion");
-                }
-
-                var role = await Xamarin.Essentials.SecureStorage.GetAsync("Role");
-
-                if (role == "Mobilizer")
-                {
-                    i.Labels.Add("mobilizer app");
-                }
-                else if (role == "Supervisor")
-                {
-                    i.Labels.Add("supervisor app");
-                }
-                else if (role == "Parent")
-                {
-                    i.Labels.Add("parent app");
-                }
-
-                if(AppPackageName == "com.codex.vaxineappbeta")
-                {
-                    i.Labels.Add("beta-version");
-                }
-
-                var issue = await client.Issue.Create("VDTS", "CodeX.VaxineSolution", i);
-                if(issue.State.Value.ToString() == "Open")
-                {
-                    StandardMessagesDisplay.AddDisplayMessage("Issue");
-                }
+                Feedback.Labels.Add("beta-version");
             }
-            catch (Exception)
+
+            // Serialize feedback
+            var data = JsonConvert.SerializeObject(Feedback);
+            var result = await githubRestService.SubmitIssue(data);
+
+            if(result == "ConnectionError")
+            {
+                StandardMessagesDisplay.NoConnectionToast();
+            }else if(result == "OK")
+            {
+                Feedback = new FeedbackModel();
+                StandardMessagesDisplay.IssueSubmitToast();
+            }
+            else
             {
                 StandardMessagesDisplay.CanceledDisplayMessage();
             }

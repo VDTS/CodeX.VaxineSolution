@@ -2,6 +2,8 @@
 {
     public static class StandardMessagesText
     {
+        // Github Issue Submited
+        public static string GithubIssueSubmit { get; set; } = "Thank you! Your feedback has been submitted, and we will soon take actions";
         // Error
         public static string ErrorTracked { get; set; } = "Error occured and Tracked by App Center";
         public static string Error { get; set; } = "Error Occured";
