@@ -6,6 +6,11 @@ namespace VaxineApp.StaticData
 {
     public static class StandardMessagesDisplay
     {
+        // Github Issue Submited
+        public static void IssueSubmitToast()
+        {
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.GithubIssueSubmit);
+        }
         // ✔️ Error Tracked
         public static void ErrorTracked()
         {
