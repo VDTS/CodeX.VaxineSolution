@@ -31,7 +31,7 @@ namespace VaxineApp.ViewModels.Home.Status.Vaccine
             }
         }
 
-        ChildModel Child;
+        readonly ChildModel Child;
 
         // Command
         public ICommand PostCommand { private set; get; }

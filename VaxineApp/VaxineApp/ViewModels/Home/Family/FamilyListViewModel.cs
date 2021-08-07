@@ -167,7 +167,7 @@ namespace VaxineApp.ViewModels.Home.Family
             PdfPage page = document.Pages.Add();
 
             //Create PDF graphics for the page
-            PdfGraphics graphics = page.Graphics;
+            //PdfGraphics graphics = page.Graphics;
 
             //Set the standard font
             PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
@@ -178,7 +178,7 @@ namespace VaxineApp.ViewModels.Home.Family
             // Syncfusion.PDF ends
             foreach (var value in Families)
             {
-                string str = $"{value.ParentName.ToString()} : {value.PhoneNumber.ToString()}";
+                string str = $"{value.ParentName} : {value.PhoneNumber}";
 
                 //Draw string in the PDF page
                 page.Graphics.DrawString(str, font, PdfBrushes.Black, new PointF(x, y));
