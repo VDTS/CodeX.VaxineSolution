@@ -1,13 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
-using VaxineApp.Validations;
-using VaxineApp.Views.Home.Status.Anonymous;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -63,11 +59,23 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 
             if (result.IsValid)
             {
-                var data = JsonConvert.SerializeObject(AnonymousChildModel);
-                string a = await DataService.Post(data, $"AnonymousChild/{Preferences.Get("TeamId", "")}");
-                if (a == "OK")
+                var jData = JsonConvert.SerializeObject(AnonymousChildModel);
+                string postResponse = await DataService.Post(jData, $"AnonymousChild/{Preferences.Get("TeamId", "")}");
+                if (postResponse == "ConnectionError")
                 {
-                    if(AnonymousChildModel.Type == "Refugee")
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (postResponse == "Error")
+                {
+                    StandardMessagesDisplay.Error();
+                }
+                else if (postResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
+                }
+                else
+                {
+                    if (AnonymousChildModel.Type == "Refugee")
                     {
                         string b = await DataService.Put((++StaticDataStore.TeamStats.TotalRefugeeChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalRefugeeChilds");
                     }
@@ -88,22 +96,11 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                         return;
                     }
 
-
-
-
-
-
-
-
-
                     StandardMessagesDisplay.AddDisplayMessage(AnonymousChildModel.FullName);
+
+                    var route = "..";
+                    await Shell.Current.GoToAsync(route);
                 }
-                else
-                {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
-                }
-                var route = "..";
-                await Shell.Current.GoToAsync(route);
             }
             else
             {
