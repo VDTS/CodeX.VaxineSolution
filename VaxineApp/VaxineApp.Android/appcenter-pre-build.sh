@@ -91,12 +91,12 @@ fi
 
 # Changing App Name
 
-ANDROID_MAIN_ACTIVITY=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/SplashActivity.cs
+VAXINE_ANDROID_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/AppConstants.cs
 
 if [ $APPCENTER_BRANCH == "pre-release" ]
 then
 
     echo "You are on pre-release branch, and will apply pre-release branch configurations"
-    sed -i.bak 's#Label = "[-A-Za-z0-9:_./]*"#Label = "'$Label'"#' $ANDROID_MAIN_ACTIVITY
-    cat $ANDROID_MAIN_ACTIVITY
+    sed -i.bak 's#AppName = "[-A-Za-z0-9:_./]*"#AppName = "'$Label'"#' $VAXINE_ANDROID_CONSTANT_FILE
+    cat $VAXINE_ANDROID_CONSTANT_FILE
 fi

@@ -9,7 +9,7 @@ using VaxineApp.Droid;
 
 namespace com.xamarin.sample.splashscreen
 {
-    [Activity(Label = "Vaxine", Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = AppConstants.AppName, Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : AppCompatActivity
     {
         static readonly string TAG = "X:" + typeof(SplashActivity).Name;
