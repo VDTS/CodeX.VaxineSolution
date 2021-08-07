@@ -262,7 +262,7 @@ namespace VaxineApp.ViewModels.Home.Family
 
                         StandardMessagesDisplay.ItemDeletedToast();
 
-                        var route = $"//{nameof(FamilyListPage)}";
+                        var route = "..";
                         await Shell.Current.GoToAsync(route);
                     }
                 }
@@ -273,7 +273,7 @@ namespace VaxineApp.ViewModels.Home.Family
             }
             else
             {
-                StandardMessagesDisplay.ChildRecursiveDeletionNotAllowed(Family.ParentName, Childs.Count);
+                StandardMessagesDisplay.FamilyRecursiveDeletionNotAllowed(Family.ParentName, Childs.Count);
             }
         }
 
