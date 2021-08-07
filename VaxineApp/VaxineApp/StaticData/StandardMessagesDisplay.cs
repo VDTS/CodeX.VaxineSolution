@@ -86,7 +86,7 @@ namespace VaxineApp.StaticData
         }
         public static void FamilyRecursiveDeletionNotAllowed(string family, int childCount)
         {
-            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ChildRecursiveDeletionNotAllowedBody(family, childCount));
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.FamilyRecursiveDeletionNotAllowedBody(family, childCount));
         }
 
         public static void InvalidPhoneNumber()
