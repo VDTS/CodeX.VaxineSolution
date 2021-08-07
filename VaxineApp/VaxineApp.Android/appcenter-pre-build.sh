@@ -100,3 +100,11 @@ then
     sed -i.bak 's#AppName = "[-A-Za-z0-9:_./]*"#AppName = "'$Label'"#' $VAXINE_ANDROID_CONSTANT_FILE
     cat $VAXINE_ANDROID_CONSTANT_FILE
 fi
+
+if [ $APPCENTER_BRANCH == "main" ]
+then
+
+    echo "You are on pre-release branch, and will apply pre-release branch configurations"
+    sed -i.bak 's#AppName = "[-A-Za-z0-9:_./]*"#AppName = "'$Label'"#' $VAXINE_ANDROID_CONSTANT_FILE
+    cat $VAXINE_ANDROID_CONSTANT_FILE
+fi
