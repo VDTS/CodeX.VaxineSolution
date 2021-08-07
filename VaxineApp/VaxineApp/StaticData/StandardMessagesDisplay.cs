@@ -6,6 +6,11 @@ namespace VaxineApp.StaticData
 {
     public static class StandardMessagesDisplay
     {
+        // Deleted
+        public static void ItemDeletedToast()
+        {
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ItemDeletedText);
+        }
         // Github Issue Submited
         public static void IssueSubmitToast()
         {

@@ -2,6 +2,8 @@
 {
     public static class StandardMessagesText
     {
+        // Deleted
+        public static string ItemDeletedText { get; set; } = "Item has been removed";
         // Github Issue Submited
         public static string GithubIssueSubmit { get; set; } = "Thank you! Your feedback has been submitted, and we will soon take actions";
         // Error

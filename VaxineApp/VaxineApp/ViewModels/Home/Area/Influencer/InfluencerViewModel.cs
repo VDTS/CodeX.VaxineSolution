@@ -109,15 +109,26 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedInfluencer.Name);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedInfluencer.FId}");
-                    if (data == "Deleted")
+                    var deleteResponse = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedInfluencer.FId}");
+                    if (deleteResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (deleteResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (deleteResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else if (deleteResponse == "null")
                     {
                         string b = await DataService.Put((--StaticDataStore.TeamStats.TotalInfluencers).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalInfluencers");
-                        influencers.Remove(SelectedInfluencer);
-                    }
-                    else
-                    {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
+                        StandardMessagesDisplay.ItemDeletedToast();
+
+                        Influencers.Remove(SelectedInfluencer);
+
                     }
                 }
                 else

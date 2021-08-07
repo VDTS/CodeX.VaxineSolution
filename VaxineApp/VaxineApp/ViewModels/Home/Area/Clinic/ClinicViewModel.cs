@@ -156,15 +156,27 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedClinic.ClinicName);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
-                    if (data == "Deleted")
+                    var deleteResponse = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
+
+                    if (deleteResponse == "ConnectionError")
                     {
-                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
-                        Clinics.Remove(SelectedClinic);
+                        StandardMessagesDisplay.NoConnectionToast();
                     }
-                    else
+                    else if (deleteResponse == "Error")
                     {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (deleteResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else if(deleteResponse == "null")
+                    {
+
+                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
+
+                        StandardMessagesDisplay.ItemDeletedToast();
+                        Clinics.Remove(SelectedClinic);
                     }
                 }
                 else
