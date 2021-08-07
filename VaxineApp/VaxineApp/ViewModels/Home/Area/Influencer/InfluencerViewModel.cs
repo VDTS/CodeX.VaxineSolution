@@ -106,7 +106,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
         {
             if (SelectedInfluencer.Name != null)
             {
-                var isDeleteAccepted =  await StandardMessagesDisplay.DeleteDisplayMessage(SelectedInfluencer.Name);
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedInfluencer.Name);
                 if (isDeleteAccepted)
                 {
                     var data = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedInfluencer.FId}");
@@ -139,13 +139,30 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 
         public async void Get()
         {
-            var data = await DataService.Get($"Influencer/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Influencer/{Preferences.Get("TeamId", "")}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(data);
-                foreach (KeyValuePair<string, InfluencerModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(jData);
+                foreach (KeyValuePair<string, InfluencerModel> item in data)
                 {
-                    influencers.Add(
+                    Influencers.Add(
                         new InfluencerModel
                         {
                             Id = item.Value.Id,
@@ -157,10 +174,6 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                         }
                         );
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
@@ -182,7 +195,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
 
         void Clear()
         {
-            influencers.Clear();
+            Influencers.Clear();
         }
     }
 }

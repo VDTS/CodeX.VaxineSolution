@@ -181,11 +181,28 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 
         public async void Get()
         {
-            var data = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(data);
-                foreach (KeyValuePair<string, ClinicModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(jData);
+                foreach (KeyValuePair<string, ClinicModel> item in data)
                 {
                     Clinics.Add(
                             new ClinicModel
@@ -197,10 +214,6 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                             }
                         );
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

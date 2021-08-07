@@ -90,11 +90,28 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 
         public async void Get()
         {
-            var data = await DataService.Get($"Doctor/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Doctor/{Preferences.Get("TeamId", "")}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(data);
-                foreach (KeyValuePair<string, DoctorModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(jData);
+                foreach (KeyValuePair<string, DoctorModel> item in data)
                 {
                     Doctors.Add(
                             new DoctorModel
@@ -106,10 +123,6 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                             }
                         );
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

@@ -86,11 +86,28 @@ namespace VaxineApp.ViewModels.Home.Area.Area
 
         public async void Get()
         {
-            var data = await DataService.Get($"Team/{Preferences.Get("ClusterId", "")}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Team/{Preferences.Get("ClusterId", "")}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(data);
-                foreach (KeyValuePair<string, TeamModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(jData);
+                foreach (KeyValuePair<string, TeamModel> item in data)
                 {
                     if (item.Value.Id.ToString() == Preferences.Get("TeamId", "").ToString())
                     {
@@ -116,10 +133,6 @@ namespace VaxineApp.ViewModels.Home.Area.Area
                         Preferences.Set("TeamFId", Team.FId);
                     }
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
