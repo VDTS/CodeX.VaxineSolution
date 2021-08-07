@@ -49,20 +49,29 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             
             if (result.IsValid)
             {
-                var data = JsonConvert.SerializeObject(Clinic);
+                var jData = JsonConvert.SerializeObject(Clinic);
 
-                string a = await DataService.Post(data, $"Clinic/{Preferences.Get("TeamId", "")}");
-                if (a == "OK")
+                string postResponse = await DataService.Post(jData, $"Clinic/{Preferences.Get("TeamId", "")}");
+
+                if (postResponse == "ConnectionError")
+                {
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (postResponse == "Error")
+                {
+                    StandardMessagesDisplay.Error();
+                }
+                else if (postResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
+                }
+                else
                 {
                     string b = await DataService.Put((++StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId","")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
                     StandardMessagesDisplay.AddDisplayMessage(Clinic.ClinicName);
 
                     var route = "..";
                     await Shell.Current.GoToAsync(route);
-                }
-                else
-                {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
                 }
             }
             else
