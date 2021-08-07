@@ -144,11 +144,28 @@ namespace VaxineApp.ViewModels.Home.Area.School
 
         public async void Get()
         {
-            var data = await DataService.Get($"School/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"School/{Preferences.Get("TeamId", "")}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(data);
-                foreach (KeyValuePair<string, SchoolModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(jData);
+                foreach (KeyValuePair<string, SchoolModel> item in data)
                 {
                     Schools.Add(
                         new SchoolModel
@@ -162,10 +179,6 @@ namespace VaxineApp.ViewModels.Home.Area.School
                         }
                         );
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

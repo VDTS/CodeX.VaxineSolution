@@ -90,18 +90,33 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
 
         private async void Get()
         {
-            var data = await DataService.Get($"AnonymousChild/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"AnonymousChild/{Preferences.Get("TeamId", "")}");
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, AnonymousChildModel>>(data);
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, AnonymousChildModel>>(jData);
 
-                StaticDataStore.TeamStats.TotalIDPChilds = clinic.Where(item => item.Value.Type == "IDP").ToList().Count;
-                StaticDataStore.TeamStats.TotalGuestChilds = clinic.Where(item => item.Value.Type == "Guest").ToList().Count;
-                StaticDataStore.TeamStats.TotalReturnChilds = clinic.Where(item => item.Value.Type == "Return").ToList().Count;
-                StaticDataStore.TeamStats.TotalRefugeeChilds = clinic.Where(item => item.Value.Type == "Refugee").ToList().Count;
+                StaticDataStore.TeamStats.TotalIDPChilds = data.Where(item => item.Value.Type == "IDP").ToList().Count;
+                StaticDataStore.TeamStats.TotalGuestChilds = data.Where(item => item.Value.Type == "Guest").ToList().Count;
+                StaticDataStore.TeamStats.TotalReturnChilds = data.Where(item => item.Value.Type == "Return").ToList().Count;
+                StaticDataStore.TeamStats.TotalRefugeeChilds = data.Where(item => item.Value.Type == "Refugee").ToList().Count;
 
-
-                foreach (KeyValuePair<string, AnonymousChildModel> item in clinic)
+                foreach (KeyValuePair<string, AnonymousChildModel> item in data)
                 {
                     AnonymousChild.Add(
                         new AnonymousChildModel
@@ -111,17 +126,12 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                             DOB = item.Value.DOB,
                             FullName = item.Value.FullName,
                             Gender = item.Value.Gender,
-                            IsVaccined = item.Value.IsVaccined, 
+                            IsVaccined = item.Value.IsVaccined,
                             RegisteredBy = item.Value.RegisteredBy,
                             Type = item.Value.Type
                         }
                         );
                 }
-
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

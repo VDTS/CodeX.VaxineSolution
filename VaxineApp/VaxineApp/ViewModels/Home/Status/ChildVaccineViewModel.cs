@@ -148,11 +148,28 @@ namespace VaxineApp.ViewModels.Home.Status
 
         public async void Get()
         {
-            var data = await DataService.Get($"Vaccine/{Child.Id}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Vaccine/{Child.Id}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(data);
-                foreach (KeyValuePair<string, VaccineModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(jData);
+                foreach (KeyValuePair<string, VaccineModel> item in data)
                 {
                     VaccineList.Add(
                         new VaccineModel
@@ -171,10 +188,6 @@ namespace VaxineApp.ViewModels.Home.Status
                 {
                     CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

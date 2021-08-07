@@ -108,11 +108,28 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
         public async void Get()
         {
-            var data = await DataService.Get($"Masjeed/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Masjeed/{Preferences.Get("TeamId", "")}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(data);
-                foreach (KeyValuePair<string, MasjeedModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(jData);
+                foreach (KeyValuePair<string, MasjeedModel> item in data)
                 {
                     Masjeeds.Add(
                         new MasjeedModel
@@ -129,10 +146,6 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                         }
                         );
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

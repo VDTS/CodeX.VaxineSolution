@@ -22,7 +22,7 @@ namespace VaxineApp.ViewModels.Home.Family
 {
     public class FamilyListViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
-        
+
 
         private ObservableCollection<GetFamilyModel> families;
         public ObservableCollection<GetFamilyModel> Families
@@ -91,11 +91,29 @@ namespace VaxineApp.ViewModels.Home.Family
 
         public async void Get()
         {
-            var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
+
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
-                foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(jData);
+                foreach (KeyValuePair<string, GetFamilyModel> item in data)
                 {
                     StaticDataStore.FamilyNumbers.Add(item.Value.HouseNo);
                     Families.Add(
@@ -111,10 +129,6 @@ namespace VaxineApp.ViewModels.Home.Family
                 }
                 StaticDataStore.Families = Families;
                 StaticDataStore.TeamStats.TotalHouseholds = Families.Count;
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 

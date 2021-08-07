@@ -253,11 +253,28 @@ namespace VaxineApp.ViewModels.Home.Family
 
         public async void Get()
         {
-            var data = await DataService.Get($"Child/{Family.Id}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Child/{Family.Id}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data);
-                foreach (KeyValuePair<string, ChildModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(jData);
+                foreach (KeyValuePair<string, ChildModel> item in data)
                 {
                     Childs.Add(
                          new ChildModel
@@ -272,10 +289,6 @@ namespace VaxineApp.ViewModels.Home.Family
                              RegisteredBy = item.Value.RegisteredBy
                          });
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
