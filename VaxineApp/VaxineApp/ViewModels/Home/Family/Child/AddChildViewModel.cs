@@ -62,20 +62,29 @@ namespace VaxineApp.ViewModels.Home.Family.Child
             var result = ChildValidator.Validate(Child);
             if (result.IsValid)
             {
-                var data = JsonConvert.SerializeObject(Child);
+                var jData = JsonConvert.SerializeObject(Child);
 
-                string a = await DataService.Post(data, $"Child/{Family.Id}");
-                if (a == "OK")
+                string postResponse = await DataService.Post(jData, $"Child/{Family.Id}");
+                if (postResponse == "ConnectionError")
                 {
-                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalChilds");
-                    StandardMessagesDisplay.EditDisplaymessage(Child.FullName);
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (postResponse == "Error")
+                {
+                    StandardMessagesDisplay.Error();
+                }
+                else if (postResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
                 }
                 else
                 {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
+                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalChilds");
+                    StandardMessagesDisplay.EditDisplaymessage(Child.FullName);
+
+                    var route = "..";
+                    await Shell.Current.GoToAsync(route);
                 }
-                var route = "..";
-                await Shell.Current.GoToAsync(route);
             }
             else
             {

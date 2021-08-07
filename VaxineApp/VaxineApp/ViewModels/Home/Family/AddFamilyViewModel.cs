@@ -67,19 +67,27 @@ namespace VaxineApp.ViewModels.Home.Family
             {
                 if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
                 {
-                    var data = JsonConvert.SerializeObject(Family);
-                    string a = await DataService.Post(data, $"Family/{Preferences.Get("TeamId", "")}");
-                    if (a == "OK")
+                    var jData = JsonConvert.SerializeObject(Family);
+                    string postResponse = await DataService.Post(jData, $"Family/{Preferences.Get("TeamId", "")}");
+                    if (postResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (postResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (postResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
                     {
                         string b = await DataService.Put((++StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
                         StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
 
                         var route = "..";
                         await Shell.Current.GoToAsync(route);
-                    }
-                    else
-                    {
-                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
                 }
                 else

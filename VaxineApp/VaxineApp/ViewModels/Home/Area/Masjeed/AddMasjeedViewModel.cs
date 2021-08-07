@@ -62,20 +62,29 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
             if (result.IsValid)
             {
                 Masjeed.IsActive = IsActive.Active;
-                var data = JsonConvert.SerializeObject(Masjeed);
+                var jData = JsonConvert.SerializeObject(Masjeed);
 
-                string a = await DataService.Post(data, $"Masjeed/{Preferences.Get("TeamId", "")}");
-                if (a == "OK")
+                string postResponse = await DataService.Post(jData, $"Masjeed/{Preferences.Get("TeamId", "")}");
+                if (postResponse == "ConnectionError")
                 {
-                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
-                    StandardMessagesDisplay.AddDisplayMessage(Masjeed.MasjeedName);
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (postResponse == "Error")
+                {
+                    StandardMessagesDisplay.Error();
+                }
+                else if (postResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
                 }
                 else
                 {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
+                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
+                    StandardMessagesDisplay.AddDisplayMessage(Masjeed.MasjeedName);
+
+                    var route = "..";
+                    await Shell.Current.GoToAsync(route);
                 }
-                var route = "..";
-                await Shell.Current.GoToAsync(route);
             }
             else
             {
