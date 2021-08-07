@@ -77,32 +77,45 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         public async void Get()
         {
-            var data = await DataService.Get($"Profile/{Preferences.Get("UserLocalId", "")}");
+            var jData = await DataService.Get($"Profile/{Preferences.Get("UserLocalId", "")}");
 
-            if (data != "null" && data != "Error")
+            var data = JsonConvert.DeserializeObject<ProfileModel>(jData);
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<ProfileModel>(data);
-
-                if (Preferences.Get("UserLocalId", "") == clinic.LocalId)
-                {
-                    Profile = new ProfileModel
-                    {
-                        ClusterId = clinic.ClusterId,
-                        LocalId = clinic.LocalId,
-                        Role = clinic.Role,
-                        TeamId = clinic.TeamId,
-                        Id = clinic.Id,
-                        FullName = clinic.FullName,
-                        Age = clinic.Age,
-                        FatherOrHusbandName = clinic.FatherOrHusbandName,
-                        Gender = clinic.Gender
-                    };
-                }
+                StandardMessagesDisplay.NoConnectionToast();
             }
-            else
+            else if (jData == "null")
             {
                 StandardMessagesDisplay.NoDataDisplayMessage();
             }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                if (Preferences.Get("UserLocalId", "") == data.LocalId)
+                {
+                    Profile = new ProfileModel
+                    {
+                        ClusterId = data.ClusterId,
+                        LocalId = data.LocalId,
+                        Role = data.Role,
+                        TeamId = data.TeamId,
+                        Id = data.Id,
+                        FullName = data.FullName,
+                        Age = data.Age,
+                        FatherOrHusbandName = data.FatherOrHusbandName,
+                        Gender = data.Gender
+                    };
+                }
+            }
+
         }
 
         public async void Refresh()

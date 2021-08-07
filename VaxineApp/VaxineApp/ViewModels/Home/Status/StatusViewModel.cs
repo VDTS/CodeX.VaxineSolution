@@ -89,34 +89,52 @@ namespace VaxineApp.ViewModels.Home.Status
 
         private async void Get()
         {
-            var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            if (data == "ConnectionError")
+            var jData = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
+
+            if (jData == "ConnectionError")
             {
                 StandardMessagesDisplay.NoConnectionToast();
             }
-            else if (data == "null")
+            else if (jData == "null")
             {
                 StandardMessagesDisplay.NoDataDisplayMessage();
             }
-            else if (data == "Error")
+            else if (jData == "Error")
             {
                 StandardMessagesDisplay.Error();
             }
-            else if (data == "ErrorTracked")
+            else if (jData == "ErrorTracked")
             {
                 StandardMessagesDisplay.ErrorTracked();
             }
             else
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
-                foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+                var data = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(jData);
+                foreach (KeyValuePair<string, GetFamilyModel> item in data)
                 {
-                    var data2 = await DataService.Get($"Child/{item.Value.Id}");
-                    if (data2 != "null" && data2 != "Error" && data2 != "ErrorTracked" && data2 != "ConnectionError")
+                    var nestedJData = await DataService.Get($"Child/{item.Value.Id}");
+
+                    if (nestedJData == "ConnectionError")
                     {
-                        var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (nestedJData == "null")
+                    {
+                        StandardMessagesDisplay.NoDataDisplayMessage();
+                    }
+                    else if (nestedJData == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (nestedJData == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
+                    {
+                        var nestedData = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(nestedJData);
                         List<ChildModel> lp = new List<ChildModel>();
-                        foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
+                        foreach (KeyValuePair<string, ChildModel> item2 in nestedData)
                         {
                             lp.Add(
                             new ChildModel
