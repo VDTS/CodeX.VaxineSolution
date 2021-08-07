@@ -45,7 +45,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
         public async void Post()
         {
             var result = ValidationRules.Validate(Clinic);
-            Clinic.Id = new Guid();
+            Clinic.Id = Guid.NewGuid();
             
             if (result.IsValid)
             {
