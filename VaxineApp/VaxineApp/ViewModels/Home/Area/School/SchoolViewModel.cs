@@ -123,7 +123,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
                     }
                     else if (deleteResponse == "null")
                     {
-                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
+                        _ = await DataService.Put((--StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
 
                         StandardMessagesDisplay.ItemDeletedToast();
 
