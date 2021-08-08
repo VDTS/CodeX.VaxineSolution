@@ -124,7 +124,7 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
                     }
                     else if (deleteResponse == "null")
                     {
-                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalInfluencers).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalInfluencers");
+                        _ = await DataService.Put((--StaticDataStore.TeamStats.TotalInfluencers).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalInfluencers");
                         StandardMessagesDisplay.ItemDeletedToast();
 
                         Influencers.Remove(SelectedInfluencer);

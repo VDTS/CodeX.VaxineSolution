@@ -79,7 +79,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                 }
                 else
                 {
-                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
+                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
                     StandardMessagesDisplay.AddDisplayMessage(Masjeed.MasjeedName);
 
                     var route = "..";

@@ -79,7 +79,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
                 }
                 else
                 {
-                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalChilds");
+                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalChilds");
                     StandardMessagesDisplay.EditDisplaymessage(Child.FullName);
 
                     var route = "..";

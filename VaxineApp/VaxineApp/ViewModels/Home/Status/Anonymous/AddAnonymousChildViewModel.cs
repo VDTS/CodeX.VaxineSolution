@@ -77,19 +77,19 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                 {
                     if (AnonymousChildModel.Type == "Refugee")
                     {
-                        string b = await DataService.Put((++StaticDataStore.TeamStats.TotalRefugeeChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalRefugeeChilds");
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalRefugeeChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalRefugeeChilds");
                     }
                     else if (AnonymousChildModel.Type == "IDP")
                     {
-                        string b = await DataService.Put((++StaticDataStore.TeamStats.TotalIDPChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalIDPChilds");
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalIDPChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalIDPChilds");
                     }
                     else if (AnonymousChildModel.Type == "Return")
                     {
-                        string b = await DataService.Put((++StaticDataStore.TeamStats.TotalReturnChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalReturnChilds");
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalReturnChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalReturnChilds");
                     }
                     else if (AnonymousChildModel.Type == "Guest")
                     {
-                        string b = await DataService.Put((++StaticDataStore.TeamStats.TotalGuestChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalGuestChilds");
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalGuestChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalGuestChilds");
                     }
                     else
                     {

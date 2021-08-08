@@ -67,7 +67,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 }
                 else
                 {
-                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId","")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
+                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
                     StandardMessagesDisplay.AddDisplayMessage(Clinic.ClinicName);
 
                     var route = "..";

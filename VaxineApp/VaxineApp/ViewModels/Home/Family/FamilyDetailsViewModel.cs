@@ -164,7 +164,7 @@ namespace VaxineApp.ViewModels.Home.Family
                         }
                         else if (deleteResponse == "null")
                         {
-                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamId", "")}/TotalChilds");
+                            _ = await DataService.Put((--StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamId", "")}/TotalChilds");
 
                             StandardMessagesDisplay.ItemDeletedToast();
 
@@ -258,7 +258,7 @@ namespace VaxineApp.ViewModels.Home.Family
                     }
                     else if (deleteResponse == "null")
                     {
-                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
+                        _ = await DataService.Put((--StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
 
                         StandardMessagesDisplay.ItemDeletedToast();
 
