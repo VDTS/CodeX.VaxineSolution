@@ -165,19 +165,19 @@ namespace VaxineApp.ViewModels.Home.Status.Anonymous
                     {
                         if (SelectedAnonymousChild.Type == "Refugee")
                         {
-                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalRefugeeChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalRefugeeChilds");
+                            _ = await DataService.Put((--StaticDataStore.TeamStats.TotalRefugeeChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalRefugeeChilds");
                         }
                         else if (SelectedAnonymousChild.Type == "IDP")
                         {
-                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalIDPChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalIDPChilds");
+                            _ = await DataService.Put((--StaticDataStore.TeamStats.TotalIDPChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalIDPChilds");
                         }
                         else if (SelectedAnonymousChild.Type == "Return")
                         {
-                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalReturnChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalReturnChilds");
+                            _ = await DataService.Put((--StaticDataStore.TeamStats.TotalReturnChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalReturnChilds");
                         }
                         else if (SelectedAnonymousChild.Type == "Guest")
                         {
-                            string b = await DataService.Put((--StaticDataStore.TeamStats.TotalGuestChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalGuestChilds");
+                            _ = await DataService.Put((--StaticDataStore.TeamStats.TotalGuestChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalGuestChilds");
                         }
                         else
                         {

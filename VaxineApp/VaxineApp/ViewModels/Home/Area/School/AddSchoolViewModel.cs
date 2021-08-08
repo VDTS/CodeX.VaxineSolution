@@ -68,7 +68,7 @@ namespace VaxineApp.ViewModels.Home.Area.School
                 }
                 else
                 {
-                    string b = await DataService.Put((++StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
+                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
                     StandardMessagesDisplay.AddDisplayMessage(School.SchoolName);
 
                     var route = "..";

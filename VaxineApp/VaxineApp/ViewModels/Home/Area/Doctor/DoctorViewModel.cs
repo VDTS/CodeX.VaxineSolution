@@ -158,7 +158,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
                     }
                     else if (deleteResponse == "null")
                     {
-                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalDoctors).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalDoctors");
+                        _ = await DataService.Put((--StaticDataStore.TeamStats.TotalDoctors).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalDoctors");
 
                         StandardMessagesDisplay.ItemDeletedToast();
 

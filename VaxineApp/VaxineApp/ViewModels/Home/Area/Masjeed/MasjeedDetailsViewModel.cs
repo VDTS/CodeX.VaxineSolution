@@ -64,7 +64,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
                     var data = await DataService.Put(data22, $"Masjeed/{Preferences.Get("TeamId", "")}/{Masjeed.FId}");
                     if (data == "Submit")
                     {
-                        string b = await DataService.Put((--StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
+                        _ = await DataService.Put((--StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
                         var route = $"//{nameof(MasjeedPage)}";
                         await Shell.Current.GoToAsync(route);
                     }
