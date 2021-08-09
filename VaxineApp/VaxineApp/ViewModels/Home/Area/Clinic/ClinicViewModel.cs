@@ -59,36 +59,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
         }
 
-        private bool isToolbarIconsVisible;
-        public bool IsToolbarIconsVisible
-        {
-            get
-            {
-                return isToolbarIconsVisible;
-            }
-            set
-            {
-                isToolbarIconsVisible = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool isSearchVisible;
-        public bool IsSearchVisible
-        {
-            get
-            {
-                return isSearchVisible;
-            }
-            set
-            {
-                isSearchVisible = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-
+       
         // Commands
         // Crud Commands
         public ICommand PutCommand { private set; get; }
@@ -128,8 +99,6 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             // Property
             Clinics = new ObservableCollection<ClinicModel>();
             SelectedClinic = new ClinicModel();
-            IsSearchVisible = true;
-            IsToolbarIconsVisible = false;
 
             // Get
             Get();
