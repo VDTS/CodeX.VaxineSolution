@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using VaxineApp.Validations;
 
 namespace VaxineAppNUnitTest
 {
@@ -21,6 +22,19 @@ namespace VaxineAppNUnitTest
             
             // Assert
             Assert.AreEqual(c, 3);
+        }
+
+        [Test]
+        public void IsEmailValidatorWorksCorrectly()
+        {
+            // Arrange
+            var email = "someone@example.com";
+
+            // Act
+            var result = EmailValidators.IsEmailValid(email);
+
+            // Assert
+            Assert.AreEqual(true, result);
         }
     }
 }
