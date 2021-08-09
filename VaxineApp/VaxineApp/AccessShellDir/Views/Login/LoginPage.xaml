@@ -64,7 +64,8 @@
           </Label>
         </StackLayout>
         <Button Text="Sign in"
-                Command="{Binding SignInCommand}"></Button>
+                Command="{Binding SignInCommand}"
+                CommandParameter="{Binding Path=InputUserPassword}"></Button>
         <Label TextDecorations="Underline"
                Text="forgot password">
           <Label.GestureRecognizers>
