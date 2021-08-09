@@ -8,9 +8,7 @@
              x:Class="VaxineApp.Views.Home.Area.Clinic.ClinicPage"
              Title="Clinic">
   <Shell.SearchHandler>
-    <SearchHandler SearchBoxVisibility="{Binding IsSearchVisible}"
-                   IsSearchEnabled="True"
-                   Placeholder="Search" />
+    <SearchHandler Placeholder="Search" />
   </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:ClinicViewModel></ViewModel:ClinicViewModel>
