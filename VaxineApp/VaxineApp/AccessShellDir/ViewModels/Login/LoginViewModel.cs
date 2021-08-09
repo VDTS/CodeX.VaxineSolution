@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using VaxineApp.AccessShellDir.ViewModels.Login.Commands;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.Models;
@@ -105,7 +106,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             Account = new AccountManagement();
 
             // Commands init
-            SignInCommand = new Command(SignIn);
+            SignInCommand = new SignInCommand(this);
             ForgotPasswordCommand = new Command(ForgotPassword);
             CloseAppCommand = new Command(CloseApp);
         }
@@ -115,7 +116,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
-        private async void SignIn()
+        public async void SignIn(string userName, string userPassword)
         {
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
@@ -125,7 +126,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             {
                 try
                 {
-                    string Token = await Account.SignIn(InputUserEmail, InputUserPassword);
+                    string Token = await Account.SignIn(userName, userPassword);
                     if (Token != "Error" && Token != "null")
                     {
                         Preferences.Set("ProfileEmail", InputUserEmail.ToLower());
