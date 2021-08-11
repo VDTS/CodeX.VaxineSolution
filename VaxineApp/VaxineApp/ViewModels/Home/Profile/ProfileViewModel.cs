@@ -79,7 +79,6 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             var jData = await DataService.Get($"Profile/{Preferences.Get("UserLocalId", "")}");
 
-            var data = JsonConvert.DeserializeObject<ProfileModel>(jData);
 
             if (jData == "ConnectionError")
             {
@@ -99,6 +98,7 @@ namespace VaxineApp.ViewModels.Home.Profile
             }
             else
             {
+                var data = JsonConvert.DeserializeObject<ProfileModel>(jData);
                 if (Preferences.Get("UserLocalId", "") == data.LocalId)
                 {
                     Profile = new ProfileModel
