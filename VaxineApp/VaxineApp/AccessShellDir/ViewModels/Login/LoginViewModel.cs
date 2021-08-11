@@ -1,5 +1,6 @@
 ﻿using DataAccessLib.Account;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -124,26 +125,29 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
             else
             {
-                try
+                var jSignInResponse = await Account.SignIn(userName, userPassword);
+                if (jSignInResponse.Contains("Error"))
                 {
-                    string Token = await Account.SignIn(userName, userPassword);
-                    if (Token != "Error" && Token != "null")
-                    {
-                        Preferences.Set("ProfileEmail", InputUserEmail.ToLower());
-
-                        LoadProfile(Preferences.Get("UserLocalId", ""));
-                    }
-                    else
-                    {
-                        await Application.Current.MainPage.DisplayAlert("Authentication failed!", "E-mail or password are incorrect. Try again!", "Cancel");
-                    }
+                    StandardMessagesDisplay.CommonToastMessage(jSignInResponse);
                 }
-                catch (Exception ex)
+                else if (jSignInResponse == "ConnectionError")
                 {
-                    await App.Current.MainPage.DisplayAlert("Error", ex.Message.ToString(), "OK");
-                    return;
+                    StandardMessagesDisplay.NoConnectionToast();
                 }
+                else if (jSignInResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
+                }
+                else
+                {
+                    var signInResponse = JsonConvert.DeserializeObject<JObject>(jSignInResponse);
+                    var localId = signInResponse.GetValue("localId").ToString();
 
+                    Preferences.Set("UserLocalId", localId);
+                    Preferences.Set("ProfileEmail", signInResponse.GetValue("email").ToString());
+
+                    LoadProfile(localId);
+                }
             }
         }
 
