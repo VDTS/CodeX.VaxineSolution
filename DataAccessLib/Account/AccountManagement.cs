@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -96,23 +97,45 @@ namespace DataAccessLib.Account
         }
         public async Task<string> SignIn(string email, string password)
         {
-            var identityModel = new AccountModels() { email = email, password = password, returnSecureToken = true };
-            using var httpClient = new HttpClient();
-            using var request = new HttpRequestMessage(new HttpMethod("POST"), SignInRequestUri);
-            request.Content = new StringContent(JsonConvert.SerializeObject(identityModel));
-            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
-
-            var response = await httpClient.SendAsync(request);
-            if (response.IsSuccessStatusCode)
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                var a = response.Content.ReadAsStringAsync().Result;
-                var s1 = JsonConvert.DeserializeObject<JObject>(a);
-                Preferences.Set("UserLocalId", s1.GetValue("localId").ToString());
-                return s1.GetValue("idToken").ToString();
+                return "ConnectionError";
             }
             else
             {
-                return "Error";
+                try
+                {
+                    var identityModel = new AccountModels() { email = email, password = password, returnSecureToken = true };
+                    using var httpClient = new HttpClient();
+                    using var request = new HttpRequestMessage(new HttpMethod("POST"), SignInRequestUri);
+                    request.Content = new StringContent(JsonConvert.SerializeObject(identityModel));
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+
+                    var respon = (int)response.StatusCode;
+
+                    if ((int)response.StatusCode == 400)
+                    {
+                        var responseBody = await response.Content.ReadAsStringAsync();
+
+                        JObject jo = JObject.Parse(responseBody);
+                        return $"Error: {(string)jo.SelectToken("error.message")}";
+                    }
+                    else if (response.IsSuccessStatusCode)
+                    {
+                        return response.Content.ReadAsStringAsync().Result;
+                    }
+                    else
+                    {
+                        return $"Error + {response.Content.ReadAsStringAsync().Result}";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    return "ErrorTracked";
+                }
             }
         }
         public async Task<string> VerifyEmail(string Token)

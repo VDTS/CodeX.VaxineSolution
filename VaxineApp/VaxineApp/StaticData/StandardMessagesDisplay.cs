@@ -6,6 +6,11 @@ namespace VaxineApp.StaticData
 {
     public static class StandardMessagesDisplay
     {
+        // Common Toast Message
+        public static void CommonToastMessage(string message)
+        {
+            DependencyService.Get<IToast>()?.MakeToast(message);
+        }
         // Deleted
         public static void ItemDeletedToast()
         {
@@ -98,14 +103,14 @@ namespace VaxineApp.StaticData
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.PeriodNotAvailableBody);
         }
         // Account Management
-        public async static void EmailChanged(string email)
+        public static void EmailChanged(string email)
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.EmailChangedTitle, StandardMessagesText.EmailChangedBody(email), "OK");
+            DependencyService.Get<IToast>()?.MakeToast("Email changed");
         }
 
-        public async static void EmailVerificationSend(string email)
+        public static void EmailVerificationSend(string email)
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.EmailVerificationSendTitle, StandardMessagesText.EmailVerificationSendBody(email), "OK");
+            DependencyService.Get<IToast>()?.MakeToast($"Email verification sent to : {email}");
         }
         public async static void PasswordValidator()
         {
@@ -120,9 +125,9 @@ namespace VaxineApp.StaticData
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.EmailMatchValidatorTitle, StandardMessagesText.EmailMatchValidatorBody, "OK");
         }
-        public async static void PasswordChagned()
+        public static void PasswordChanged()
         {
-            await App.Current.MainPage.DisplayAlert(StandardMessagesText.PasswordChangedTitle, StandardMessagesText.PasswordChangedBody, "OK");
+            DependencyService.Get<IToast>()?.MakeToast("Password Changed");
         }
         public async static void ValidationRulesViolation(string title, string body)
         {

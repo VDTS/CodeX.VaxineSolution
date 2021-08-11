@@ -1,5 +1,6 @@
 ﻿using DataAccessLib.Account;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -141,9 +142,24 @@ namespace VaxineApp.ViewModels.Home.Profile
                     if (EmailValidators.IsEmailValid(NewEmail))
                     {
                         string result = await App.Current.MainPage.DisplayPromptAsync("Enter your Password", "You are entering sudo mode.");
-                        string Token = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), result);
-                        if (Token != "Error" && Token != "null")
+                        string jSignInResponse = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), result);
+                        if (jSignInResponse.Contains("Error"))
                         {
+                            StandardMessagesDisplay.CommonToastMessage(jSignInResponse);
+                        }
+                        else if (jSignInResponse == "ConnectionError")
+                        {
+                            StandardMessagesDisplay.NoConnectionToast();
+                        }
+                        else if (jSignInResponse == "ErrorTracked")
+                        {
+                            StandardMessagesDisplay.ErrorTracked();
+                        }
+                        else
+                        {
+                            JObject jo = JObject.Parse(jSignInResponse);
+                            var Token = (string)jo.SelectToken("idToken");
+
                             var message = await Account.ChangeEmail(NewEmail, Token);
                             if (message == "OK")
                             {
@@ -155,20 +171,11 @@ namespace VaxineApp.ViewModels.Home.Profile
                                 {
                                     StandardMessagesDisplay.EmailVerificationSend(NewEmail);
                                 }
-
-                                // Change Email in profile
-
-                                Application.Current.MainPage = new AccessShell();
-                                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
                             }
                             else
                             {
                                 StandardMessagesDisplay.CanceledDisplayMessage();
                             }
-                        }
-                        else
-                        {
-                            StandardMessagesDisplay.PasswordValidator();
                         }
                     }
                     else
@@ -195,25 +202,32 @@ namespace VaxineApp.ViewModels.Home.Profile
                 {
                     if (NewPassword.Length >= 8)
                     {
-                        string Token = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), CurrentPassword);
-                        if (Token != "Error" && Token != "null")
+                        string jSignInResponse = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), CurrentPassword);
+                        if (jSignInResponse.Contains("Error"))
                         {
+                            StandardMessagesDisplay.CommonToastMessage(jSignInResponse);
+                        }
+                        else if (jSignInResponse == "ConnectionError")
+                        {
+                            StandardMessagesDisplay.NoConnectionToast();
+                        }
+                        else if (jSignInResponse == "ErrorTracked")
+                        {
+                            StandardMessagesDisplay.ErrorTracked();
+                        }
+                        else
+                        {
+                            JObject jo = JObject.Parse(jSignInResponse);
+                            var Token = (string)jo.SelectToken("idToken");
                             var message = await Account.ChangeAccountPassword(Token, NewPassword);
                             if (message == "OK")
                             {
-                                StandardMessagesDisplay.PasswordChagned();
-                                await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
-                                Application.Current.MainPage = new AccessShell();
-                                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                                StandardMessagesDisplay.PasswordChanged();
                             }
                             else
                             {
                                 StandardMessagesDisplay.CanceledDisplayMessage();
                             }
-                        }
-                        else
-                        {
-                            await App.Current.MainPage.DisplayAlert("Old Password Error", "Make sure you typed the old password correctly!", "OK");
                         }
                     }
                     else
