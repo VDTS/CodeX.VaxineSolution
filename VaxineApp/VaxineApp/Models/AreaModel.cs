@@ -111,6 +111,15 @@ namespace VaxineApp.Models
         {
             Id = new Guid();
         }
+
+        public bool IsEmpty()
+        {
+            if (Id == Guid.Empty && FId is null && Name is null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
     public class DoctorValidator : AbstractValidator<DoctorModel>
     {
