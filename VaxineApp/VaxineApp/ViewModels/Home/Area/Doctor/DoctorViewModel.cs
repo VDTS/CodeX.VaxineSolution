@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using VaxineApp.Helpers;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
@@ -138,7 +139,7 @@ namespace VaxineApp.ViewModels.Home.Area.Doctor
 
         public async void Delete()
         {
-            if (SelectedDoctor.FId != null)
+            if (!SelectedDoctor.AreEmpty())
             {
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedDoctor.Name);
                 if (isDeleteAccepted)
