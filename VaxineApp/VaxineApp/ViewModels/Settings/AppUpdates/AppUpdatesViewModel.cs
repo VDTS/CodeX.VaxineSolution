@@ -115,26 +115,30 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
             //}
 
             var view = new MarkdownView();
-            view.Markdown = $@"## Release Note template
----
-## VaxineApp
-Version: x.x.x  
+            view.Markdown = $@"## VaxineApp
+Version: 1.5.1 beta  
 for Android
 
 ### Whats new?
-- x
-- y
-- z
+- Recycle Bin only in UI
+- Different Toast Messages added to reduce exceptions and give more information to users about what happens
+- Feedback page is ready for cache support, and will be added in next releases
+- All messages changed to Toast messages to reduce complexity in app.
+- Routes runs independently from Add and Edit methods. If you add or edit something, you will be on the page until you decide to go out.
+- SignIn Command added, it turns off sign in button unitl you add proper email and password
+- Adds Expander view to Edit Profile Page
+- Toast messages text refactored.
+- AppUpdates and Privacy Policy cached locally
+
 
 ### Bug fixes and exceptions handled
-- x
-- y
-- z
+- Fixed issues in routes, now you can get out from pages easily without any problem.
+- SearchBox crashed fixed
+- AppUpdates and Privacy Policy Pages slow execution fixed.
 
 ### Known issues
-- x
-- y
-- z
+- Can't Edit Location in MasjeedEdit Page
+- Show Masjeed Page when you open Area Page
 
 ### Important Links
 To know whats next, see our plans.  
@@ -145,8 +149,6 @@ To know whats next, see our plans.
 ### Note
 > Fill a feedback if you have issue or any suggestion.  
 > Don't submit app crash report in feedback, because they are logged automatically using Micrsoft Visual Studio App Center Crashes Analytics
----
-
 ";
             AppNewUpdates = view;
         }
