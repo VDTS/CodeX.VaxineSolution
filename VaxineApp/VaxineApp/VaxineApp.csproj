@@ -42,13 +42,13 @@
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.3.0" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="4.3.0" />
     <PackageReference Include="Octokit" Version="0.50.0" />
-    <PackageReference Include="Syncfusion.Xamarin.Pdf" Version="19.2.0.51" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="19.2.0.51" />
+    <PackageReference Include="Syncfusion.Xamarin.Pdf" Version="19.2.0.55" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="19.2.0.55" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
     <PackageReference Include="Xam.Forms.MarkdownView" Version="0.6.1-pre" />
     <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.2.0" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.3.0-pre2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />  
     <PackageReference Include="Xamarin.Forms.InputKit" Version="3.7.2" />  
