@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Appshell.FlyoutHeaderPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels">
+  <ContentView.BindingContext>
+    <ViewModel:AppShellViewModel></ViewModel:AppShellViewModel>
+  </ContentView.BindingContext>
+  <ContentView.Content>
+    <Grid HeightRequest="230">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="130"></RowDefinition>
+        <RowDefinition Height="70"></RowDefinition>
+        <RowDefinition Height="10"></RowDefinition>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center">
+        <Frame Grid.Row="0"
+                 CornerRadius="100"
+                 HeightRequest="100"
+                 WidthRequest="100"
+                 HorizontalOptions="Start"
+                 Padding="0"
+                 Margin="0, 30, 0, 0"
+                 IsClippedToBounds="True">
+          <Image Source="ProfilePhoto.jpg"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+          </Image>
+        </Frame>
+      </StackLayout>
+      <Label Text="{Binding UserName}"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="20"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="end"
+               Padding="20, 0, 0, 50"
+               Grid.Row="1">
+      </Label>
+      <Label Text="{Binding Role}"
+               FontAttributes="Bold"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="end"
+               Padding="20, 0, 0, 20"
+               Grid.Row="1">
+      </Label>
+      <StackLayout Grid.Row="2"
+                     Orientation="Horizontal"
+                     Padding="20, -10, 0, 0">
+        <StackLayout Orientation="Horizontal"
+                       HorizontalOptions="Start">
+          <Label Text=""
+                   FontFamily="SegoeMDL2"
+                   TextColor="Green"></Label>
+          <Label Text="{xct:Translate Online}"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                       HorizontalOptions="End">
+          <Label Text="    "></Label>
+          <Label Text=""
+                   FontFamily="SegoeMDL2"></Label>
+          <Label Text="{xct:Translate On}"></Label>
+        </StackLayout>
+      </StackLayout>
+    </Grid>
+  </ContentView.Content>
+</ContentView>
