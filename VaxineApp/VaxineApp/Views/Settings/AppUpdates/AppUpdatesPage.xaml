@@ -5,7 +5,6 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Settings.AppUpdates"
              x:Class="VaxineApp.Views.Settings.AppUpdates.AppUpdatesPage"
              x:DataType="ViewModel:AppUpdatesViewModel"
-             xmlns:MarkDownView="clr-namespace:Xam.Forms.Markdown;assembly=Xam.Forms.MarkdownView"
              x:Name="AppUpdates"
              Title="What's New?">
   <ContentPage.BindingContext>
@@ -19,7 +18,7 @@
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <ScrollView Padding="20">
-      <MarkDownView:MarkdownView Content="{Binding AppNewUpdates}" />
+      <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1500" Source="{Binding AppNewUpdates}"/>
     </ScrollView>
   </ContentPage.Content>
 </ContentPage>
