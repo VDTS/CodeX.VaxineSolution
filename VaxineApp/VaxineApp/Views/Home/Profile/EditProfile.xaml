@@ -78,8 +78,10 @@
                 <ColumnDefinition Width="0.9*"></ColumnDefinition>
                 <ColumnDefinition Width="0.1*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
-              <Label Grid.Column="0" Text="{xct:Translate Security}"
-               FontSize="Large"/>
+              <xct:BadgeView BackgroundColor="#ee6b11" FontSize="Micro" TextColor="White" Text=" N " HasShadow="True" AutoHide="True" IsAnimated="True">
+                <Label Grid.Column="0" Text="{xct:Translate Security}"
+                 FontSize="Large"/>
+              </xct:BadgeView>
               <Label Grid.Column="1" FontSize="Large" Text="{x:Static localFont:MaterialDesignIcons.ArrowDownDropCircleOutline}"
                             FontFamily="MaterialIcons"/>
             </Grid>
@@ -113,8 +115,10 @@
                 <ColumnDefinition Width="0.9*"></ColumnDefinition>
                 <ColumnDefinition Width="0.1*"></ColumnDefinition>
               </Grid.ColumnDefinitions>
-              <Label Grid.Column="0" Text="{xct:Translate ChangeEmail}"
+              <xct:BadgeView BackgroundColor="#ee6b11" FontSize="Micro" TextColor="White" Text=" N " HasShadow="True" AutoHide="True" IsAnimated="True">
+                <Label Grid.Column="0" Text="{xct:Translate ChangeEmail}"
                FontSize="Large"></Label>
+              </xct:BadgeView>
               <Label Grid.Column="1" FontSize="Large" Text="{x:Static localFont:MaterialDesignIcons.ArrowDownDropCircleOutline}"
                             FontFamily="MaterialIcons"/>
             </Grid>
@@ -122,11 +126,11 @@
           <StackLayout>
             <Entry Placeholder="{xct:Translate CurrentEmail}"
                Text="{Binding CurrentEmail}"></Entry>
-        <Entry Placeholder="{xct:Translate NewEmail}"
+            <Entry Placeholder="{xct:Translate NewEmail}"
                Text="{Binding NewEmail}"></Entry>
-        <Entry Placeholder="{xct:Translate ConfirmEmail}"
+            <Entry Placeholder="{xct:Translate ConfirmEmail}"
                Text="{Binding ConfirmEmail}"></Entry>
-        <Button Text="{xct:Translate Save}"
+            <Button Text="{xct:Translate Save}"
                 TranslationY="20"
                 TranslationX="95"
                 WidthRequest="80"
@@ -134,7 +138,7 @@
                 HorizontalOptions="Center"
                 Command="{Binding ChangeEmailCommand}"
                 AutomationId="EditProfile_SaveButton"></Button>
-        </StackLayout>
+          </StackLayout>
         </xct:Expander>
       </StackLayout>
     </Grid>
