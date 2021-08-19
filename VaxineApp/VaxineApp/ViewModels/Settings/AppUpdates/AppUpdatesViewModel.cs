@@ -106,27 +106,21 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
 </head>
 <body>
     <h1>VaxineApp</h1>
-    <h3>1.5.1 beta</h3>
+    <h3>1.5.2 beta</h3>
     <h2>What's new?</h2>
 
     <ul>
-        <li>Recycle Bin only in UI</li>
-        <li>Different Toast Messages added to reduce exceptions and give more information to users about what happens</li>
-        <li>Feedback page is ready for cache support, and will be added in next releases</li>
-        <li>All messages changed to Toast messages to reduce complexity in app.</li>
-        <li>Routes runs independently from Add and Edit methods. If you add or edit something, you will be on the page until you decide to go out.</li>
-        <li>SignIn Command added, it turns off sign in button unitl you add proper email and password</li>
-        <li>Adds Expander view to Edit Profile Page</li>
-        <li>Toast messages text refactored.</li>
-        <li>AppUpdates and Privacy Policy cached locally</li>
+        <li>Edit profile page items are grouped into Collapse View</li>
+        <li>AppUpdates and Privacy Policy Pages are redesigned in HTML and CSS</li>
+        <li>AppShell Flyout redesigned</li>
+        <li>Add Influence Page changed to Popup Page</li>
+        <li>Adds 'N' Badge for new features</li>
     </ul>
 
     <h2>Bug fixes and exceptions handled</h2>
 
     <ul>
-        <li>Fixed issues in routes, now you can get out from pages easily without any problem.</li>
-        <li>SearchBox crashed fixed</li>
-        <li>AppUpdates and Privacy Policy Pages slow execution fixed.</li>
+        <li>Shell Flyout Profile Menu Item exception handled</li>
     </ul>
 
     <h2>Known issues</h2>
