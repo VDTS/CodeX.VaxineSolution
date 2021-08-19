@@ -1,16 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Area.Influencer"
              x:Class="VaxineApp.Views.Home.Area.Influencer.AddInfluencerPage"
              x:DataType="ViewModel:AddInfluecerViewModel"
-             Shell.TabBarIsVisible="False"
-             Title="Add Influencer">
-  <ContentPage.BindingContext>
+             Size="300,400">
+  <xct:Popup.BindingContext>
     <ViewModel:AddInfluecerViewModel></ViewModel:AddInfluecerViewModel>
-  </ContentPage.BindingContext>
-  <ContentPage.Content>
+  </xct:Popup.BindingContext>
     <StackLayout Padding="40"
                  Spacing="10">
 
@@ -36,5 +34,4 @@
               Command="{Binding PostCommand}"></Button>
 
     </StackLayout>
-  </ContentPage.Content>
-</ContentPage>
+</xct:Popup>

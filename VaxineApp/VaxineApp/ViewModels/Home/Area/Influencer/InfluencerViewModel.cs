@@ -9,6 +9,7 @@ using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Influencer;
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -188,10 +189,9 @@ namespace VaxineApp.ViewModels.Home.Area.Influencer
             }
         }
 
-        async void GoToPostPage()
+        void GoToPostPage()
         {
-            var route = $"{nameof(AddInfluencerPage)}";
-            await Shell.Current.GoToAsync(route);
+            Shell.Current.ShowPopup(new AddInfluencerPage());
         }
         public async void Refresh()
         {
