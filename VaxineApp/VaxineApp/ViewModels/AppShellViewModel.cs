@@ -94,7 +94,7 @@ namespace VaxineApp.ViewModels
 
         private async void GoToProfile(object obj)
         {
-            var route = $"//{nameof(ProfilePage)}";
+            var route = $"{nameof(ProfilePage)}";
             await Shell.Current.GoToAsync(route);
             Shell.Current.FlyoutIsPresented = false;
         }
