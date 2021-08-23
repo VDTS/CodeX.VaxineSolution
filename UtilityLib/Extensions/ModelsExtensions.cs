@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VaxineApp.Helpers
+namespace UtilityLib.Extensions
 {
-    public static class ExtensionHelperMethods
+    public static class ModelsExtensions
     {
         public static bool AreEmpty<T>(this T modelClass)
         {
