@@ -6,13 +6,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using VaxineApp.AccessShellDir.Views.Login;
+using UtilityLib.Validations;
 using VaxineApp.AndroidNativeApi;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
-using VaxineApp.Validations;
-using VaxineApp.Views.Home.Profile;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
