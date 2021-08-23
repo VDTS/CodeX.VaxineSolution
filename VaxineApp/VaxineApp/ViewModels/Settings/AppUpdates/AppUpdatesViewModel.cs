@@ -106,21 +106,17 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
 </head>
 <body>
     <h1>VaxineApp</h1>
-    <h3>1.5.2 beta</h3>
+    <h3>1.5.3 beta</h3>
     <h2>What's new?</h2>
 
     <ul>
-        <li>Edit profile page items are grouped into Collapse View</li>
-        <li>AppUpdates and Privacy Policy Pages are redesigned in HTML and CSS</li>
-        <li>AppShell Flyout redesigned</li>
-        <li>Add Influence Page changed to Popup Page</li>
-        <li>Adds 'N' Badge for new features</li>
+        <li>Id Token and Refresh Token added for database security</li>
     </ul>
 
     <h2>Bug fixes and exceptions handled</h2>
 
     <ul>
-        <li>Shell Flyout Profile Menu Item exception handled</li>
+        <li>none</li>
     </ul>
 
     <h2>Known issues</h2>
