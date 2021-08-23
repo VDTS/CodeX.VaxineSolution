@@ -204,7 +204,6 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             if (role == "Mobilizer")
             {
                 Application.Current.MainPage = new AppShell();
-                await Shell.Current.GoToAsync($"//{nameof(StatusPage)}");
             }
             else if (role == "Supervisor")
             {
