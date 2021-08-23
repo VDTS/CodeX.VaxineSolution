@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Essentials;
 
-namespace VaxineApp.Validations
+namespace UtilityLib.Validations
 {
     public static class VaccinePeriodValidator
     {

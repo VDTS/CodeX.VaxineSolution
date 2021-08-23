@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using VaxineApp.Validations;
+using UtilityLib.Validations;
 
 namespace VaxineAppNUnitTest
 {

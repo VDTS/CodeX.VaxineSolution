@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
+using System;
 using System.Windows.Input;
+using UtilityLib.Validations;
 using VaxineApp.Models;
-using Xamarin.Forms;
-using VaxineApp.Views.Home.Status;
-using VaxineApp.Views.Home.Family;
-using Newtonsoft.Json;
-using Xamarin.Essentials;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
-using VaxineApp.Validations;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace VaxineApp.ViewModels.Home.Status.Vaccine
 {
