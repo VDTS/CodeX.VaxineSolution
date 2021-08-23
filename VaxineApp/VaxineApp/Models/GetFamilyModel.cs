@@ -1,9 +1,7 @@
 ﻿using FluentValidation;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using VaxineApp.Validations;
+using UtilityLib.Validations;
 
 namespace VaxineApp.Models
 {

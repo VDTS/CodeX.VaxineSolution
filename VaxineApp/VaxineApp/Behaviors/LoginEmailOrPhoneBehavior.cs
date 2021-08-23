@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-using VaxineApp.Validations;
+﻿using UtilityLib.Validations;
 using Xamarin.Forms;
 
 namespace VaxineApp.Behaviors
