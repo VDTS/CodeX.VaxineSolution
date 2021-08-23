@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using UtilityLib.Extensions;
 using VaxineApp.DataAccessLib;
 using Xamarin.Essentials;
 
@@ -215,5 +216,37 @@ namespace DataAccessLib.Account
             }
         }
 
+        // Token and refresh Token
+        public async void RefreshToken()
+        {
+            var IdToken = await SecureStorage.GetAsync("IdToken");
+            using (var httpClient = new HttpClient())
+            {
+
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), string.Concat("https://securetoken.googleapis.com/v1/token", $"?key={IdToken}")))
+                {
+                    var jResponse = await httpClient.SendAsync(request);
+                    var r = jResponse.Content.ReadAsStringAsync();
+                    var response = JsonConvert.DeserializeObject<JObject>(r.Result);
+                    await SecureStorage.SetAsync("IdToken", response.GetValue("access_token").ToString());
+                }
+            }
+        }
+
+        public async Task<string> IdToken()
+        {
+            var lastRefreshAt = Preferences.Get("lastRefreshAt", DateTime.UtcNow);
+            var diff = lastRefreshAt.TimeDifferenceBySecs();
+            if (diff <= 3580)
+            {
+                return await SecureStorage.GetAsync("IdToken");
+            }
+            else
+            {
+                RefreshToken();
+                Preferences.Set("lastRefreshAt", DateTime.UtcNow);
+                return await SecureStorage.GetAsync("IdToken");
+            }
+        }
     }
 }
