@@ -144,6 +144,11 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                     var signInResponse = JsonConvert.DeserializeObject<JObject>(jSignInResponse);
                     var localId = signInResponse.GetValue("localId").ToString();
 
+                    await Xamarin.Essentials.SecureStorage.SetAsync("RefreshToken", signInResponse.GetValue("refreshToken").ToString());
+                    Preferences.Set("lastRefreshAt", DateTime.UtcNow);
+                    await Xamarin.Essentials.SecureStorage.SetAsync("IdToken", signInResponse.GetValue("idToken").ToString());
+
+
                     Preferences.Set("UserLocalId", localId);
                     Preferences.Set("ProfileEmail", signInResponse.GetValue("email").ToString());
 
