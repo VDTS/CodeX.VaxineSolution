@@ -86,4 +86,9 @@ namespace DataAccessLib.Account
                .WithMessage("Password must not be less than 8 characters and must include letters, digits and special characters.");
         }
     }
+    public class RefreshTokenModel
+    {
+        public string grant_type { get; set; }
+        public string refresh_token { get; set; }
+    }
 }

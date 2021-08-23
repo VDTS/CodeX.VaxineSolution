@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using UtilityLib.Extensions;
 using VaxineApp.DataAccessLib;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace DataAccessLib.Account
 {
@@ -23,6 +24,7 @@ namespace DataAccessLib.Account
         private readonly string SendPasswordResetCodeRequestEndpoint;
         private readonly string VerifyPasswordResetCodeRequestEndpoint;
         private readonly string ConfirmPasswordResetRequestEndpoint;
+        private readonly string RefreshIdTokenEndpoint;
 
         // RequestUri
         private readonly string ChangeAccountPasswordRequestUri;
@@ -32,6 +34,7 @@ namespace DataAccessLib.Account
         private readonly string SendPasswordResetCodeRequestUri;
         private readonly string VerifyPasswordResetCodeRequestUri;
         private readonly string ConfirmPasswordResetRequestUri;
+        private readonly string RefreshIdTokenUri;
 
         // ctor
         public AccountManagement()
@@ -44,7 +47,7 @@ namespace DataAccessLib.Account
             SendPasswordResetCodeRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=";
             VerifyPasswordResetCodeRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=";
             ConfirmPasswordResetRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=";
-
+            RefreshIdTokenEndpoint = @"https://securetoken.googleapis.com/v1/token?key=";
 
             // RequestUri
             ChangeAccountPasswordRequestUri = string.Concat(ChangeAccountPasswordRequestEndpoint, Constants.FirebaseApiKey);
@@ -54,6 +57,7 @@ namespace DataAccessLib.Account
             SendPasswordResetCodeRequestUri = string.Concat(SendPasswordResetCodeRequestEndpoint, Constants.FirebaseApiKey);
             VerifyPasswordResetCodeRequestUri = string.Concat(VerifyPasswordResetCodeRequestEndpoint, Constants.FirebaseApiKey);
             ConfirmPasswordResetRequestUri = string.Concat(ConfirmPasswordResetRequestEndpoint, Constants.FirebaseApiKey);
+            RefreshIdTokenUri = string.Concat(RefreshIdTokenEndpoint, Constants.FirebaseApiKey);
         }
 
 
@@ -217,18 +221,31 @@ namespace DataAccessLib.Account
         }
 
         // Token and refresh Token
-        public async void RefreshToken()
+        private async void RefreshToken()
         {
             var IdToken = await SecureStorage.GetAsync("IdToken");
             using (var httpClient = new HttpClient())
             {
-
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), string.Concat("https://securetoken.googleapis.com/v1/token", $"?key={IdToken}")))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), RefreshIdTokenUri))
                 {
-                    var jResponse = await httpClient.SendAsync(request);
-                    var r = jResponse.Content.ReadAsStringAsync();
-                    var response = JsonConvert.DeserializeObject<JObject>(r.Result);
-                    await SecureStorage.SetAsync("IdToken", response.GetValue("access_token").ToString());
+                    var refreshToken = await SecureStorage.GetAsync("RefreshToken");
+
+                    RefreshTokenModel rtm = new RefreshTokenModel() { grant_type = "refresh_token", refresh_token = refreshToken };
+
+                    request.Content = new StringContent(JsonConvert.SerializeObject(rtm));
+                    var response = await httpClient.SendAsync(request);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var jResponse = await response.Content.ReadAsStringAsync();
+                        var jData = JsonConvert.DeserializeObject<JObject>(jResponse);
+                        Preferences.Set("lastRefreshAt", DateTime.UtcNow);
+                        await SecureStorage.SetAsync("IdToken", jData.GetValue("access_token").ToString());
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("", "Can't refresh token, log out and login again", "OK");
+                    }
                 }
             }
         }
@@ -244,7 +261,6 @@ namespace DataAccessLib.Account
             else
             {
                 RefreshToken();
-                Preferences.Set("lastRefreshAt", DateTime.UtcNow);
                 return await SecureStorage.GetAsync("IdToken");
             }
         }
