@@ -1,4 +1,4 @@
-﻿using DataAccessLib.Account;
+﻿using DataAccessLib.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -39,7 +39,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login.ForgotPassword
         {
             try
             {
-                AccountManagement Account = new AccountManagement();
+                Auth Account = new Auth();
                 var a = await Account.SendPasswordResetcode(Email);
 
                 if (a == "OK")

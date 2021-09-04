@@ -1,5 +1,4 @@
-﻿using DataAccessLib.Account;
-using Microsoft.AppCenter;
+﻿using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
@@ -13,15 +12,15 @@ using Xamarin.Essentials;
 
 namespace DataAccessLib.Services
 {
-    public class DbService : IDbService
+    public class DbService
     {
-        AccountManagement Account;
+        Auth Account;
         public DbService()
         {
             AppCenter.Start($"android={Constants.AppCenterAndroidXamarinKey};",
                      typeof(Analytics), typeof(Crashes));
 
-            Account = new AccountManagement();
+            Account = new Auth();
         }
 
         public async Task<string> Post(string data, string Node)
