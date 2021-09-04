@@ -1,17 +1,11 @@
-﻿using Plugin.DeviceInfo;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace VaxineApp.Models
 {
-    public class UserMetaData
+    public class DeviceInfoModel
     {
         public string DeviceName { get; set; }
-        public string DeviceId { get; set; }
         public string DeviceManufacturer { get; set; }
         public string DeviceModel { get; set; }
         public string DeviceVersion { get; set; }
@@ -20,15 +14,15 @@ namespace VaxineApp.Models
         public DateTime TimeStamp { get; set; }
         public double Longitude { get; set; }
         public double Latitude { get; set; }
-        public UserMetaData()
+        public DeviceInfoModel()
         {
             TimeStamp = DateTime.Now;
-            DeviceName = CrossDeviceInfo.Current.DeviceName;
-            DeviceId =  CrossDeviceInfo.Current.Id;
-            DeviceManufacturer = CrossDeviceInfo.Current.Manufacturer;
-            DeviceModel = CrossDeviceInfo.Current.Model;
-            DeviceVersion = CrossDeviceInfo.Current.Version;
-            DevicePlatform = CrossDeviceInfo.Current.Platform.ToString();
+            DeviceName = DeviceInfo.Name;
+            DeviceManufacturer = DeviceInfo.Manufacturer;
+            DeviceModel = DeviceInfo.Model;
+            DeviceVersion = DeviceInfo.VersionString;
+            DevicePlatform = DeviceInfo.Platform.ToString();
+
             GetLocation();
         }
 

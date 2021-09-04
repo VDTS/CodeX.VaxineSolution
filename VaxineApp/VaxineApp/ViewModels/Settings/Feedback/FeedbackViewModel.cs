@@ -5,7 +5,6 @@ using System;
 using System.Windows.Input;
 using VaxineApp.AndroidNativeApi;
 using VaxineApp.Models;
-using VaxineApp.Models.Metadata;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
 using VaxineApp.StaticData;
