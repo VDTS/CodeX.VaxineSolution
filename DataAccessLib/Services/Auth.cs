@@ -1,20 +1,19 @@
-﻿using Microsoft.AppCenter.Crashes;
+﻿using DataAccessLib.Models;
+using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 using UtilityLib.Extensions;
 using VaxineApp.DataAccessLib;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace DataAccessLib.Account
+namespace DataAccessLib.Services
 {
-    public class AccountManagement : IAccountManagement
+    public class Auth
     {
         // Endpoints
         private readonly string ChangeAccountPasswordRequestEndpoint;
@@ -37,7 +36,7 @@ namespace DataAccessLib.Account
         private readonly string RefreshIdTokenUri;
 
         // ctor
-        public AccountManagement()
+        public Auth()
         {
             // Endpoints
             ChangeAccountPasswordRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:update?key=";

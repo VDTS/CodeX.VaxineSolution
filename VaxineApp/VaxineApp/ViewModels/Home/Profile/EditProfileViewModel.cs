@@ -1,4 +1,4 @@
-﻿using DataAccessLib.Account;
+﻿using DataAccessLib.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -65,7 +65,7 @@ namespace VaxineApp.ViewModels.Home.Profile
             }
         }
 
-        AccountManagement Account { get; set; }
+        Auth Account { get; set; }
 
         private string currentEmail;
         public string CurrentEmail
@@ -121,7 +121,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             // Property
             Profile = _profile;
-            Account = new AccountManagement();
+            Account = new Auth();
             ValidationRules = new ProfileValidator();
 
             // Command
