@@ -73,7 +73,7 @@ namespace VaxineApp.ViewModels.Home.Family
             }
         }
 
-        public GetFamilyModel Family { get; set; }
+        public FamilyModel Family { get; set; }
 
 
         // Command
@@ -93,7 +93,7 @@ namespace VaxineApp.ViewModels.Home.Family
         public ICommand ShareOnAppsCommand { private set; get; }
 
         // ctor
-        public FamilyDetailsViewModel(GetFamilyModel family)
+        public FamilyDetailsViewModel(FamilyModel family)
         {
             // Property
             Family = family;

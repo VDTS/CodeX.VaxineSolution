@@ -16,7 +16,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
         ChildValidator ChildValidator { get; set; }
 
         // Property
-        public GetFamilyModel Family { get; set; }
+        public FamilyModel Family { get; set; }
 
         private ChildModel child;
         public ChildModel Child
@@ -36,7 +36,7 @@ namespace VaxineApp.ViewModels.Home.Family.Child
         public ICommand PutCommand { private set; get; }
 
         // ctor
-        public AddChildViewModel(GetFamilyModel family)
+        public AddChildViewModel(FamilyModel family)
         {
             // Objects
             ChildValidator = new ChildValidator();

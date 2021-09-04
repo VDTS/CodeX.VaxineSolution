@@ -12,7 +12,7 @@
     <ViewModel:FamilyListSearchHandler Placeholder="Enter search term"
                                        ShowsResults="true">
       <ViewModel:FamilyListSearchHandler.ItemTemplate>
-        <DataTemplate x:DataType="Model:GetFamilyModel">
+        <DataTemplate x:DataType="Model:FamilyModel">
           <Grid Padding="10"
                 ColumnDefinitions="0.45*,0.55*">
             <Label Grid.Column="0" Text="{Binding ParentName}" />
@@ -70,7 +70,7 @@
           </Frame>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
-          <DataTemplate x:DataType="Model:GetFamilyModel">
+          <DataTemplate x:DataType="Model:FamilyModel">
             <StackLayout Padding="0,2,0,0">
               <Frame Grid.Column="0"
                      Padding="15,15,15,15"
