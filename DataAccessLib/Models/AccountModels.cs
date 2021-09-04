@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,18 +8,21 @@ namespace DataAccessLib.Models
 {
     public class AccountModels
     {
-        public string email { get; set; }
-        public string password { get; set; }
-        public bool returnSecureToken { get; set; }
+        [JsonProperty("email")]
+        public string Email { get; set; }
+        [JsonProperty("password")]
+        public string Password { get; set; }
+        [JsonProperty("returnSecureToken")]
+        public bool ReturnSecureToken { get; set; }
     }
     public class AccountValidator : AbstractValidator<AccountModels>
     {
         public AccountValidator()
         {
-            RuleFor(a => a.email)
+            RuleFor(a => a.Email)
                 .NotEmpty()
                 .EmailAddress();
-            RuleFor(a => a.password)
+            RuleFor(a => a.Password)
                 .NotEmpty()
                 .Matches(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$")
                 .WithMessage("Password must not be less than 8 characters and must include letters, digits and special characters.");
@@ -27,15 +31,18 @@ namespace DataAccessLib.Models
 
     public class ChangeAccountPasswordModel
     {
-        public string idToken { get; set; }
-        public string password { get; set; }
-        public bool returnSecureToken { get; set; }
+        [JsonProperty("idToken")]
+        public string IdToken { get; set; }
+        [JsonProperty("password")]
+        public string Password { get; set; }
+        [JsonProperty("returnSecureToken")]
+        public bool ReturnSecureToken { get; set; }
     }
     public class ChangeAccountPasswordValidator : AbstractValidator<ChangeAccountPasswordModel>
     {
         public ChangeAccountPasswordValidator()
         {
-            RuleFor(a => a.password)
+            RuleFor(a => a.Password)
                 .NotEmpty()
                 .Matches(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$")
                 .WithMessage("Password must not be less than 8 characters and must include letters, digits and special characters.");
@@ -43,15 +50,18 @@ namespace DataAccessLib.Models
     }
     public class ChangeEmailModel
     {
-        public string idToken { get; set; }
-        public string email { get; set; }
-        public bool returnSecureToken { get; set; }
+        [JsonProperty("idToken")]
+        public string IdToken { get; set; }
+        [JsonProperty("email")]
+        public string Email { get; set; }
+        [JsonProperty("returnSecureToken")]
+        public bool ReturnSecureToken { get; set; }
     }
     public class ChangeEmailValidator : AbstractValidator<ChangeEmailModel>
     {
         public ChangeEmailValidator()
         {
-            RuleFor(a => a.email)
+            RuleFor(a => a.Email)
                 .NotEmpty()
                 .EmailAddress();
         }
@@ -59,28 +69,35 @@ namespace DataAccessLib.Models
 
     public class VerifyEmailModel
     {
-        public string requestType { get; set; }
-        public string idToken { get; set; }
+        [JsonProperty("requestType")]
+        public string RequestType { get; set; }
+        [JsonProperty("idToken")]
+        public string IdToken { get; set; }
     }
     public class SendPasswordResetCodeModel
     {
-        public string requestType { get; set; }
-        public string email { get; set; }
+        [JsonProperty("requestType")]
+        public string RequestType { get; set; }
+        [JsonProperty("email")]
+        public string Email { get; set; }
     }
     public class VerifyPasswordResetCodeModel
     {
-        public string oobCode { get; set; }
+        [JsonProperty("oobCode")]
+        public string OobCode { get; set; }
     }
     public class ConfirmPasswordResetModel
     {
+        [JsonProperty("oobCode")]
         public string oobCode { get; set; }
-        public string newPassword { get; set; }
+        [JsonProperty("newPassword")]
+        public string NewPassword { get; set; }
     }
     public class ConfirmPasswordReset : AbstractValidator<ConfirmPasswordResetModel>
     {
         public ConfirmPasswordReset()
         {
-            RuleFor(a => a.newPassword)
+            RuleFor(a => a.NewPassword)
                .NotEmpty()
                .Matches(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$")
                .WithMessage("Password must not be less than 8 characters and must include letters, digits and special characters.");
@@ -88,7 +105,9 @@ namespace DataAccessLib.Models
     }
     public class RefreshTokenModel
     {
-        public string grant_type { get; set; }
-        public string refresh_token { get; set; }
+        [JsonProperty("grant_type")]
+        public string GrantType { get; set; }
+        [JsonProperty("refresh_token")]
+        public string RefreshToken { get; set; }
     }
 }
