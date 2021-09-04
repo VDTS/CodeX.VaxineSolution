@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using VaxineApp.DataAccessLib;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

@@ -19,12 +19,4 @@
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="cd $(SolutionDir)BuildScripts&#xD;&#xA;powershell.exe -noexit -file &quot;DataAccessLib-PreBuildScript.ps1&quot;&#xD;&#xA;echo &quot;Api keys copied to project&quot;" />
-  </Target>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="cd $(SolutionDir)BuildScripts&#xD;&#xA;powershell.exe -noexit -file &quot;DataAccessLib-PostBuildScript.ps1&quot;&#xD;&#xA;echo &quot;Api keys removed from project&quot;" />
-  </Target>
-
 </Project>

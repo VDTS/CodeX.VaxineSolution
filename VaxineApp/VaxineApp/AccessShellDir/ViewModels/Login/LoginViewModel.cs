@@ -105,7 +105,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
         {
             // Property
             Profile = new ProfileModel();
-            Account = new Auth();
+            Account = new Auth(Constants.FirebaseApiKey);
 
             // Commands init
             SignInCommand = new SignInCommand(this);

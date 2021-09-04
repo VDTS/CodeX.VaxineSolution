@@ -26,27 +26,26 @@ then
     exit
 fi
 
-APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/DataAccessLib/Constants.cs
+VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp/Constants.cs
 
-if [ -e "$APP_CONSTANT_FILE" ]
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
     echo "Updating FirebaseApiKey to $FIREBASE_API_KEY in Constants.cs"
-    sed -i.bak 's#FirebaseApiKey = "[-A-Za-z0-9:_./]*"#FirebaseApiKey = "'$FIREBASE_API_KEY'"#' $APP_CONSTANT_FILE
+    sed -i.bak 's#FirebaseApiKey = "[-A-Za-z0-9:_./]*"#FirebaseApiKey = "'$FIREBASE_API_KEY'"#' $VAXINE_APP_CONSTANT_FILE
 
     echo "File content:"
-    cat $APP_CONSTANT_FILE
+    cat $VAXINE_APP_CONSTANT_FILE
 fi
 
-if [ -e "$APP_CONSTANT_FILE" ]
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
     echo "Updating FirebaseBaseUrl to $FIREBASE_API_URL in Constants.cs"
-    sed -i.bak 's#FirebaseBaseUrl = "[-A-Za-z0-9:_./]*"#FirebaseBaseUrl = "'$FIREBASE_API_URL'"#' $APP_CONSTANT_FILE
+    sed -i.bak 's#FirebaseBaseUrl = "[-A-Za-z0-9:_./]*"#FirebaseBaseUrl = "'$FIREBASE_API_URL'"#' $VAXINE_APP_CONSTANT_FILE
 
     echo "File content:"
-    cat $APP_CONSTANT_FILE
+    cat $VAXINE_APP_CONSTANT_FILE
 fi
 
-VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp/Constants.cs
 
 if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then

@@ -39,7 +39,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login.ForgotPassword
         {
             try
             {
-                Auth Account = new Auth();
+                Auth Account = new Auth(Constants.FirebaseApiKey);
                 var a = await Account.SendPasswordResetcode(Email);
 
                 if (a == "OK")
