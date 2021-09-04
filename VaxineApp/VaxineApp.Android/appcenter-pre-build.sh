@@ -46,16 +46,17 @@ then
     cat $APP_CONSTANT_FILE
 fi
 
-if [ -e "$APP_CONSTANT_FILE" ]
+VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp/Constants.cs
+
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
     echo "Updating GithubApiKeyForCreatingIssues to $GITHUB_API_KEY in Constants.cs"
-    sed -i.bak 's#GithubApiKeyForCreatingIssues = "[-A-Za-z0-9:_./]*"#GithubApiKeyForCreatingIssues = "'$GITHUB_API_KEY'"#' $APP_CONSTANT_FILE
+    sed -i.bak 's#GithubApiKeyForCreatingIssues = "[-A-Za-z0-9:_./]*"#GithubApiKeyForCreatingIssues = "'$GITHUB_API_KEY'"#' $VAXINE_APP_CONSTANT_FILE
 
     echo "File content:"
-    cat $APP_CONSTANT_FILE
+    cat $VAXINE_APP_CONSTANT_FILE
 fi
 
-VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp/Constants.cs
 if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
     echo "Updating SyncFusionCommunityLicenseKey to $SyncFusionCommunityLicenseKey in Constants.cs"

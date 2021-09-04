@@ -73,7 +73,8 @@ namespace VaxineApp.ViewModels.Settings.Feedback
         public FeedbackViewModel()
         {
             // Property
-            GithubRestService = new GithubService();
+            GithubRestService = new GithubService(Constants.GithubProductHeaderValue, Constants.GithubApiKeyForCreatingIssues, Constants.GtihubRepoOwner, Constants.GithubRepoName);
+
             Feedback = new FeedbackModel();
             AppPackageName = DependencyService.Get<IPackageName>().PackageName;
             AppVersionName = DependencyService.Get<IAppVersion>().GetVersion();
