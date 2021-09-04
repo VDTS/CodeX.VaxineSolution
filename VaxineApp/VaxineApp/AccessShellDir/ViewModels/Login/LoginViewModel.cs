@@ -1,4 +1,4 @@
-﻿using DataAccessLib.Account;
+﻿using DataAccessLib.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -93,7 +93,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
         }
 
-        public AccountManagement Account { get; set; }
+        public Auth Account { get; set; }
 
         // Command
         public ICommand CloseAppCommand { private set; get; }
@@ -105,7 +105,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
         {
             // Property
             Profile = new ProfileModel();
-            Account = new AccountManagement();
+            Account = new Auth();
 
             // Commands init
             SignInCommand = new SignInCommand(this);

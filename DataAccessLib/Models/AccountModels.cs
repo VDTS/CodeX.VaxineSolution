@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccessLib.Account
+namespace DataAccessLib.Models
 {
     public class AccountModels
     {
