@@ -5,7 +5,7 @@ using UtilityLib.Validations;
 
 namespace VaxineApp.Models
 {
-    public class GetFamilyModel
+    public class FamilyModel
     {
         public string FId { get; set; }
         public Guid Id { get; set; }
@@ -13,12 +13,12 @@ namespace VaxineApp.Models
         public string ParentName { get; set; }
         public string PhoneNumber { get; set; }
         public Guid RegisteredBy { get; set; }
-        public GetFamilyModel()
+        public FamilyModel()
         {
             Id = new Guid();
         }
     }
-    public class FamilyValidator : AbstractValidator<GetFamilyModel>
+    public class FamilyValidator : AbstractValidator<FamilyModel>
     {
         public FamilyValidator()
         {

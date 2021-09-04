@@ -14,8 +14,8 @@ namespace VaxineApp.ViewModels.Home.Family
         // Validator
         FamilyValidator ValidationRules { get; set; }
         // Property
-        private GetFamilyModel family;
-        public GetFamilyModel Family
+        private FamilyModel family;
+        public FamilyModel Family
         {
             get
             {
@@ -32,7 +32,7 @@ namespace VaxineApp.ViewModels.Home.Family
         // Commands
         public ICommand PutCommand { private set; get; }
         // Constructor
-        public EditFamilyViewModel(GetFamilyModel family)
+        public EditFamilyViewModel(FamilyModel family)
         {
             // Property
             Family = family;

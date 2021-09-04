@@ -109,8 +109,8 @@ namespace VaxineApp.ViewModels.Home.Status
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(jData);
-                foreach (KeyValuePair<string, GetFamilyModel> item in data)
+                var data = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(jData);
+                foreach (KeyValuePair<string, FamilyModel> item in data)
                 {
                     var nestedJData = await DataService.Get($"Child/{item.Value.Id}");
 

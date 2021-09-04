@@ -24,8 +24,8 @@ namespace VaxineApp.ViewModels.Home.Family
     {
 
 
-        private ObservableCollection<GetFamilyModel> families;
-        public ObservableCollection<GetFamilyModel> Families
+        private ObservableCollection<FamilyModel> families;
+        public ObservableCollection<FamilyModel> Families
         {
             get
             {
@@ -38,8 +38,8 @@ namespace VaxineApp.ViewModels.Home.Family
             }
         }
 
-        private GetFamilyModel selectedFamily;
-        public GetFamilyModel SelectedFamily
+        private FamilyModel selectedFamily;
+        public FamilyModel SelectedFamily
         {
             get
             {
@@ -77,7 +77,7 @@ namespace VaxineApp.ViewModels.Home.Family
         public FamilyListViewModel()
         {
             // Property
-            Families = new ObservableCollection<GetFamilyModel>();
+            Families = new ObservableCollection<FamilyModel>();
 
             // Get
             Get();
@@ -112,12 +112,12 @@ namespace VaxineApp.ViewModels.Home.Family
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(jData);
-                foreach (KeyValuePair<string, GetFamilyModel> item in data)
+                var data = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(jData);
+                foreach (KeyValuePair<string, FamilyModel> item in data)
                 {
                     StaticDataStore.FamilyNumbers.Add(item.Value.HouseNo);
                     Families.Add(
-                        new GetFamilyModel
+                        new FamilyModel
                         {
                             FId = item.Key.ToString(),
                             Id = item.Value.Id,
