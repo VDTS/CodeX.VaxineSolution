@@ -1,4 +1,5 @@
-﻿using Microsoft.AppCenter;
+﻿using DataAccessLib.Services;
+using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
@@ -16,6 +17,7 @@ namespace VaxineApp
         {
             InitializeComponent();
 
+            DbService ds = new DbService(Constants.AppCenterAndroidXamarinKey);
             // Localization
 
             LocalizationResourceManager.Current.PropertyChanged += (rm, c) => AppResources.Culture = LocalizationResourceManager.Current.CurrentCulture;

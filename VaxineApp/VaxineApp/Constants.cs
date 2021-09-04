@@ -15,5 +15,9 @@ namespace VaxineApp
         public static string GithubRepoName = "CodeX.VaxineSolution";
         public static string GtihubRepoOwner = "VDTS";
         public static string GithubProductHeaderValue = "VaxineSolution";
+
+        // Firebase keys
+        public static string FirebaseApiKey = "FirebaseApiKeyPlaceholder";
+        public static string FirebaseBaseUrl = "FirebaseBaseUrlPlaceholder";
     }
 }

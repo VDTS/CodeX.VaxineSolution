@@ -12,7 +12,7 @@ namespace VaxineApp.RealCacheLib
     public class RequestsHandler
     {
         SQLiteCache sqliteCache = new SQLiteCache();
-        protected DbService DataService = new DbService();
+        protected DbService DataService = new DbService(Constants.FirebaseBaseUrl, Constants.FirebaseApiKey);
         public RequestsHandler()
         {
             sqliteCache.Initialize(Preferences.Get("ProfileEmail", ""));

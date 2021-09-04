@@ -121,7 +121,7 @@ namespace VaxineApp.ViewModels.Home.Profile
         {
             // Property
             Profile = _profile;
-            Account = new Auth();
+            Account = new Auth(Constants.FirebaseApiKey);
             ValidationRules = new ProfileValidator();
 
             // Command
