@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using VaxineApp.Models.Enums;
 
 namespace VaxineApp.Models
 {
