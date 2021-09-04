@@ -14,7 +14,7 @@ namespace VaxineApp.MVVMHelper
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
         // This will be removed after moving codebase to new logic
-        protected DbService DataService = new DbService();
+        protected DbService DataService = new DbService(Constants.FirebaseBaseUrl, Constants.FirebaseApiKey);
 
         protected SQLiteCache sqliteDataCache = new SQLiteCache();
         protected RequestsHandler requestsHandler = new RequestsHandler();

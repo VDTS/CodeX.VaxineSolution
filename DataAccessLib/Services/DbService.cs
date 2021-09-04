@@ -7,7 +7,6 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using VaxineApp.DataAccessLib;
 using Xamarin.Essentials;
 
 namespace DataAccessLib.Services
@@ -15,12 +14,22 @@ namespace DataAccessLib.Services
     public class DbService
     {
         Auth Account;
-        public DbService()
+
+        public string FirebaseBaseUrl { get; }
+        public static string AppCenterAndroidXamarinKey { get; set; }
+
+        public DbService(string appCenterAndroidXamarinKey)
         {
-            AppCenter.Start($"android={Constants.AppCenterAndroidXamarinKey};",
+            AppCenterAndroidXamarinKey = appCenterAndroidXamarinKey;
+        }
+
+        public DbService(string FirebaseBaseUrl, string FirebaseApiKey)
+        {
+            AppCenter.Start($"android={AppCenterAndroidXamarinKey};",
                      typeof(Analytics), typeof(Crashes));
 
-            Account = new Auth();
+            Account = new Auth(FirebaseApiKey);
+            this.FirebaseBaseUrl = FirebaseBaseUrl;
         }
 
         public async Task<string> Post(string data, string Node)
@@ -33,7 +42,7 @@ namespace DataAccessLib.Services
             {
                 try
                 {
-                    string url = $"{Constants.FirebaseBaseUrl}Kandahar-Area/{Node}.json?auth={Account.IdToken().Result}";
+                    string url = $"{FirebaseBaseUrl}Kandahar-Area/{Node}.json?auth={Account.IdToken().Result}";
                     using var httpClient = new HttpClient();
                     using var request = new HttpRequestMessage(new HttpMethod("POST"), url);
                     request.Content = new StringContent(data);
@@ -67,7 +76,7 @@ namespace DataAccessLib.Services
             {
                 try
                 {
-                    string url = $"{Constants.FirebaseBaseUrl}Kandahar-Area/{Node}.json?auth={Account.IdToken().Result}";
+                    string url = $"{FirebaseBaseUrl}Kandahar-Area/{Node}.json?auth={Account.IdToken().Result}";
                     using var httpClient = new HttpClient();
                     using var request = new HttpRequestMessage(new HttpMethod("GET"), url);
                     var response = await httpClient.SendAsync(request);
@@ -103,7 +112,7 @@ namespace DataAccessLib.Services
                 try
                 {
                     using var httpClient = new HttpClient();
-                    using var request = new HttpRequestMessage(new HttpMethod("DELETE"), $"{Constants.FirebaseBaseUrl}Kandahar-Area/{Node}.json?auth={Account.IdToken().Result}");
+                    using var request = new HttpRequestMessage(new HttpMethod("DELETE"), $"{FirebaseBaseUrl}Kandahar-Area/{Node}.json?auth={Account.IdToken().Result}");
                     var response = await httpClient.SendAsync(request);
                     if (response.IsSuccessStatusCode)
                     {
@@ -126,7 +135,7 @@ namespace DataAccessLib.Services
             try
             {
                 using var httpClient = new HttpClient();
-                using var request = new HttpRequestMessage(new HttpMethod("PUT"), $"{Constants.FirebaseBaseUrl}Kandahar-Area/{Node}.json?auth={Account.IdToken().Result}");
+                using var request = new HttpRequestMessage(new HttpMethod("PUT"), $"{FirebaseBaseUrl}Kandahar-Area/{Node}.json?auth={Account.IdToken().Result}");
                 request.Content = new StringContent(data);
                 request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
 

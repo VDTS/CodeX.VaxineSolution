@@ -7,7 +7,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using UtilityLib.Extensions;
-using VaxineApp.DataAccessLib;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -36,7 +35,7 @@ namespace DataAccessLib.Services
         private readonly string RefreshIdTokenUri;
 
         // ctor
-        public Auth()
+        public Auth(string FirebaseApiKey)
         {
             // Endpoints
             ChangeAccountPasswordRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:update?key=";
@@ -49,14 +48,14 @@ namespace DataAccessLib.Services
             RefreshIdTokenEndpoint = @"https://securetoken.googleapis.com/v1/token?key=";
 
             // RequestUri
-            ChangeAccountPasswordRequestUri = string.Concat(ChangeAccountPasswordRequestEndpoint, Constants.FirebaseApiKey);
-            ChangeEmailRequestUri = string.Concat(ChangeEmailRequestEndpoint, Constants.FirebaseApiKey);
-            SignInRequestUri = string.Concat(SignInRequestEndpoint, Constants.FirebaseApiKey);
-            VerifyEmailRequestUri = string.Concat(VerifyEmailRequestEndpoint, Constants.FirebaseApiKey);
-            SendPasswordResetCodeRequestUri = string.Concat(SendPasswordResetCodeRequestEndpoint, Constants.FirebaseApiKey);
-            VerifyPasswordResetCodeRequestUri = string.Concat(VerifyPasswordResetCodeRequestEndpoint, Constants.FirebaseApiKey);
-            ConfirmPasswordResetRequestUri = string.Concat(ConfirmPasswordResetRequestEndpoint, Constants.FirebaseApiKey);
-            RefreshIdTokenUri = string.Concat(RefreshIdTokenEndpoint, Constants.FirebaseApiKey);
+            ChangeAccountPasswordRequestUri = string.Concat(ChangeAccountPasswordRequestEndpoint, FirebaseApiKey);
+            ChangeEmailRequestUri = string.Concat(ChangeEmailRequestEndpoint, FirebaseApiKey);
+            SignInRequestUri = string.Concat(SignInRequestEndpoint, FirebaseApiKey);
+            VerifyEmailRequestUri = string.Concat(VerifyEmailRequestEndpoint, FirebaseApiKey);
+            SendPasswordResetCodeRequestUri = string.Concat(SendPasswordResetCodeRequestEndpoint, FirebaseApiKey);
+            VerifyPasswordResetCodeRequestUri = string.Concat(VerifyPasswordResetCodeRequestEndpoint, FirebaseApiKey);
+            ConfirmPasswordResetRequestUri = string.Concat(ConfirmPasswordResetRequestEndpoint, FirebaseApiKey);
+            RefreshIdTokenUri = string.Concat(RefreshIdTokenEndpoint, FirebaseApiKey);
         }
 
 
