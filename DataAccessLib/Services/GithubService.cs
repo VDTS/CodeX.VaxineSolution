@@ -16,18 +16,26 @@ namespace DataAccessLib.GithubService
         // Property
 
         // Ctor
-        public GithubService()
+        public GithubService(string githubProductHeaderValue, string githubApiKeyForCreatingIssues, string githubRepoOwner, string githubRepoName)
         {
-
+            GithubProductHeaderValue = githubProductHeaderValue;
+            GithubApiKeyForCreatingIssues = githubApiKeyForCreatingIssues;
+            GithubRepoOwner = githubRepoOwner;
+            GithubRepoName = githubRepoName;
         }
+
+        public string GithubProductHeaderValue { get; }
+        public string GithubApiKeyForCreatingIssues { get; }
+        public string GithubRepoOwner { get; }
+        public string GithubRepoName { get; }
 
         public async Task<string> SubmitIssue(string feedback)
         {
             var data = JsonConvert.DeserializeObject<FeedbackModel>(feedback);
 
-            var client = new GitHubClient(new ProductHeaderValue(Constants.GithubProductHeaderValue));
+            var client = new GitHubClient(new ProductHeaderValue(GithubProductHeaderValue));
 
-            var tokenAuth = new Credentials(Constants.GithubApiKeyForCreatingIssues);
+            var tokenAuth = new Credentials(GithubApiKeyForCreatingIssues);
             client.Credentials = tokenAuth;
 
             var i = new NewIssue(data.Title)
@@ -49,7 +57,7 @@ namespace DataAccessLib.GithubService
             {
                 try
                 {
-                    var issue = await client.Issue.Create(Constants.GtihubRepoOwner, Constants.GithubRepoName, i);
+                    var issue = await client.Issue.Create(GithubRepoOwner, GithubRepoName, i);
                     if (issue.State.Value.ToString() == "Open")
                     {
                         return "OK";
