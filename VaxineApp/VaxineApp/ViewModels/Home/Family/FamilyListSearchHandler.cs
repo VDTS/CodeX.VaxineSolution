@@ -14,7 +14,7 @@ namespace VaxineApp.ViewModels.Home.Family
 {
     public class FamilyListSearchHandler : SearchHandler
     {
-        public ObservableCollection<GetFamilyModel> Families { get; set; }
+        public ObservableCollection<FamilyModel> Families { get; set; }
         public Type SelectedItemNavigationTarget { get; set; }
 
         protected override void OnQueryChanged(string oldValue, string newValue)
@@ -30,7 +30,7 @@ namespace VaxineApp.ViewModels.Home.Family
             {
                 ItemsSource = Families
                     .Where(family => family.ParentName.ToLower().Contains(newValue.ToLower()))
-                    .ToList<GetFamilyModel>();
+                    .ToList<FamilyModel>();
             }
         }
         protected override async void OnItemSelected(object item)

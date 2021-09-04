@@ -25,7 +25,7 @@ namespace VaxineApp.Views.Home.Family.Child
 
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<GetFamilyModel>(Family);
+            var result = JsonConvert.DeserializeObject<FamilyModel>(Family);
             BindingContext = new AddChildViewModel(result) ;
         }
     }

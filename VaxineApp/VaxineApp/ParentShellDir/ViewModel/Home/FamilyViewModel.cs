@@ -57,8 +57,8 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
             }
         }
 
-        private GetFamilyModel family;
-        public GetFamilyModel Family
+        private FamilyModel family;
+        public FamilyModel Family
         {
             get
             {
@@ -81,7 +81,7 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
             // Property
             SelectedChild = new ChildModel();
             Childs = new ObservableCollection<ChildModel>();
-            Family = new GetFamilyModel();
+            Family = new FamilyModel();
 
             // Get
             GetFamily();
@@ -97,7 +97,7 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
             var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e/-MbXlzV80PxnP0zTdwLa");
             if (data != "null" & data != "Error")
             {
-                Family = JsonConvert.DeserializeObject<GetFamilyModel>(data);
+                Family = JsonConvert.DeserializeObject<FamilyModel>(data);
             }
             else
             {

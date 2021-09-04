@@ -117,8 +117,8 @@ namespace VaxineApp.ViewModels.Home.Insights
             var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
             if (data != "null" && data != "Error")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, GetFamilyModel>>(data);
-                foreach (KeyValuePair<string, GetFamilyModel> item in clinic)
+                var clinic = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(data);
+                foreach (KeyValuePair<string, FamilyModel> item in clinic)
                 {
                     var data2 = await DataService.Get($"Child/{item.Value.Id}");
                     if (data2 != "null" && data2 != "Error")
