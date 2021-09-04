@@ -119,15 +119,24 @@ namespace DataAccessLib.Services
 
                     var respon = (int)response.StatusCode;
 
+                    var responseBody = await response.Content.ReadAsStringAsync();
+
+                    JObject jo = JObject.Parse(responseBody);
+
                     if ((int)response.StatusCode == 400)
                     {
-                        var responseBody = await response.Content.ReadAsStringAsync();
-
-                        JObject jo = JObject.Parse(responseBody);
                         return $"Error: {(string)jo.SelectToken("error.message")}";
                     }
                     else if (response.IsSuccessStatusCode)
                     {
+                        Preferences.Set("lastRefreshAt", DateTime.UtcNow);
+
+                        var idToken = jo.SelectToken("idToken");
+                        var refreshToken = jo.SelectToken("refreshToken");
+
+                        await Xamarin.Essentials.SecureStorage.SetAsync("RefreshToken", refreshToken.ToString());
+
+                        await Xamarin.Essentials.SecureStorage.SetAsync("IdToken", idToken.ToString());
                         return response.Content.ReadAsStringAsync().Result;
                     }
                     else
