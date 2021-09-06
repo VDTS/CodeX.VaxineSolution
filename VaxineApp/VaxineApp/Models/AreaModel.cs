@@ -16,6 +16,15 @@ namespace VaxineApp.Models
         {
             Id = new Guid();
         }
+
+        public bool IsEmpty()
+        {
+            if (Id == Guid.Empty && ClusterName is null && CurrentVaccinePeriodId is null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 
     public class ClusterValidator : AbstractValidator<ClusterModel>
