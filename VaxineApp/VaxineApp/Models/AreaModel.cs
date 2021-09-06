@@ -200,6 +200,14 @@ namespace VaxineApp.Models
         {
             Id = new Guid();
         }
+        public bool IsEmpty()
+        {
+            if (Id == Guid.Empty && MasjeedName is null && KeyInfluencer is null && Latitude == 0.0 && Longitude == 0.0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
     public class MasjeedValidator : AbstractValidator<MasjeedModel>
     {

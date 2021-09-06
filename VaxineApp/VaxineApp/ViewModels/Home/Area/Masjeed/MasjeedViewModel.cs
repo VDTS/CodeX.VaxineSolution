@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using UtilityLib.Extensions;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
@@ -87,7 +88,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
 
         public async void GoToDetailsPage()
         {
-            if (SelectedMasjeed == null)
+            if (SelectedMasjeed.AreEmpty())
             {
                 return;
             }
