@@ -26,18 +26,23 @@ namespace VaxineApp.AdminShell
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(ClusterPage), typeof(ClusterPage));
+            Routing.RegisterRoute(nameof(ClusterDetailsPage), typeof(ClusterDetailsPage));
 
             Routing.RegisterRoute(nameof(EditClusterPage), typeof(EditClusterPage));
             Routing.RegisterRoute(nameof(AddClusterPage), typeof(AddClusterPage));
             Routing.RegisterRoute(nameof(PeriodPage), typeof(PeriodPage));
+            Routing.RegisterRoute(nameof(PeriodDetailsPage), typeof(PeriodDetailsPage));
+
             Routing.RegisterRoute(nameof(AddPeriodPage), typeof(AddPeriodPage));
             Routing.RegisterRoute(nameof(EditPeriodPage), typeof(EditPeriodPage));
             Routing.RegisterRoute(nameof(TeamPage), typeof(TeamPage));
+            Routing.RegisterRoute(nameof(TeamDetailsPage), typeof(TeamDetailsPage));
             Routing.RegisterRoute(nameof(AddTeamPage), typeof(AddTeamPage));
             Routing.RegisterRoute(nameof(EditTeamPage), typeof(EditTeamPage));
             Routing.RegisterRoute(nameof(UserPage), typeof(UserPage));
             Routing.RegisterRoute(nameof(AddUserPage), typeof(AddUserPage));
-            Routing.RegisterRoute(nameof(EditUserPage), typeof(ClusterPage));
+            Routing.RegisterRoute(nameof(EditUserPage), typeof(EditUserPage));
+            Routing.RegisterRoute(nameof(UserDetailsPage), typeof(UserDetailsPage));
 
 
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
@@ -56,6 +61,8 @@ namespace VaxineApp.AdminShell
             Routing.RegisterRoute(nameof(AnnouncementsPage), typeof(AnnouncementsPage));
             Routing.RegisterRoute(nameof(AddAnnouncementPage), typeof(AddAnnouncementPage));
             Routing.RegisterRoute(nameof(EditAnnouncementPage), typeof(EditAnnouncementPage));
+            Routing.RegisterRoute(nameof(AnnouncementsDetailsPage), typeof(AnnouncementsDetailsPage));
+
         }
     }
 }

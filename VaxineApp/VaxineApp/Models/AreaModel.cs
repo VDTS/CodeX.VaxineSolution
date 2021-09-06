@@ -60,6 +60,15 @@ namespace VaxineApp.Models
         {
             Id = new Guid();
         }
+
+        public bool IsEmpty()
+        {
+            if (Id == Guid.Empty && TeamNo is null && SocialMobilizerId == 0 && CHWName is null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
     public class TeamValidator : AbstractValidator<TeamModel>
     {
