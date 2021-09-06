@@ -62,6 +62,9 @@
     <Compile Update="AccessShell.xaml.cs">
       <DependentUpon>AccessShell.xaml</DependentUpon>
     </Compile>
+    <Compile Update="AdminShell\AdminAppShell.xaml.cs">
+      <DependentUpon>AdminAppShell.xaml</DependentUpon>
+    </Compile>
     <Compile Update="ParentAppShell.xaml.cs">
       <DependentUpon>ParentAppShell.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="AccessShellDir\Views\Login\ForgotPassword\ForgotPasswordPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\ClusterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resx\AppResources.resx">
@@ -275,6 +281,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="AdminShell\ViewModels\" />
     <Folder Include="SupervisorShellDir\Views\" />
   </ItemGroup>
 

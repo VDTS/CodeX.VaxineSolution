@@ -9,6 +9,8 @@ using System.Windows.Input;
 using VaxineApp.AccessShellDir.ViewModels.Login.Commands;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
+using VaxineApp.AdminShell;
+using VaxineApp.AdminShell.Views.Home;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
@@ -213,6 +215,11 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             {
                 Application.Current.MainPage = new ParentAppShell();
                 await Shell.Current.GoToAsync($"//{nameof(FamilyPage)}");
+            }
+            else if(role == "Admin")
+            {
+                Application.Current.MainPage = new AdminAppShell();
+                await Shell.Current.GoToAsync($"//{nameof(ClusterPage)}");
             }
             else
             {

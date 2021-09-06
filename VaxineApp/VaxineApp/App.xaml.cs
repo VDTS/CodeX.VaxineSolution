@@ -3,6 +3,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
+using VaxineApp.AdminShell;
 using VaxineApp.AndroidNativeApi;
 using VaxineApp.Resx;
 using Xamarin.CommunityToolkit.Helpers;
@@ -43,6 +44,10 @@ namespace VaxineApp
                 else if(role == "Parent")
                 {
                     MainPage = new ParentAppShell();
+                }
+                else if(role == "Admin")
+                {
+                    MainPage = new AdminAppShell();
                 }
                 else
                 {
