@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:ViewModel="clr-namespace:VaxineApp.ParentShellDir.ViewModel"
+       xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels"
        xmlns:Profile="clr-namespace:VaxineApp.Views.Home.Profile"
-       xmlns:Home="clr-namespace:VaxineApp.AdminShell.Views.Home"
+       xmlns:Cluster="clr-namespace:VaxineApp.AdminShell.Views.Home.Cluster"
+       xmlns:Team="clr-namespace:VaxineApp.AdminShell.Views.Home.Team"
+       xmlns:Period="clr-namespace:VaxineApp.AdminShell.Views.Home.Period"
+       xmlns:User="clr-namespace:VaxineApp.AdminShell.Views.Home.User"
+       xmlns:Announcements="clr-namespace:VaxineApp.AdminShell.Views.Announcements"
        xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
        Title="VaxineApp"
        x:Class="VaxineApp.AdminShell.AdminAppShell">
   <Shell.BindingContext>
-    <ViewModel:ParentShellViewModel></ViewModel:ParentShellViewModel>
+    <ViewModel:AdminShellViewModel></ViewModel:AdminShellViewModel>
   </Shell.BindingContext>
   <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -209,13 +213,45 @@
                        Glyph="&#xE80F;"
                        Color="Black" />
     </FlyoutItem.Icon>
+    <Tab  Title="Period">
+      <Tab.Icon>
+        <FontImageSource Glyph="&#xE10F;"
+                         FontFamily="SegoeMDL2"
+                         Size="24" />
+      </Tab.Icon>
+      <ShellContent ContentTemplate="{DataTemplate Period:PeriodPage}" />
+    </Tab>
+    <Tab Icon="Home_Profile.png"
+         Title="User">
+      <ShellContent ContentTemplate="{DataTemplate User:UserPage}" />
+    </Tab>
+    <Tab  Title="Team">
+      <Tab.Icon>
+        <FontImageSource Glyph="&#xE10F;"
+                         FontFamily="SegoeMDL2"
+                         Size="24" />
+      </Tab.Icon>
+      <ShellContent ContentTemplate="{DataTemplate Team:TeamPage}" />
+    </Tab>
+    <Tab  Title="Cluster">
+      <Tab.Icon>
+        <FontImageSource Glyph="&#xE10F;"
+                         FontFamily="SegoeMDL2"
+                         Size="24" />
+      </Tab.Icon>
+      <ShellContent ContentTemplate="{DataTemplate Cluster:ClusterPage}" />
+    </Tab>
+    <Tab Icon="Home_Profile.png"
+         Title="{xct:Translate Profile}">
+      <ShellContent ContentTemplate="{DataTemplate Profile:ProfilePage}" />
+    </Tab>
     <Tab  Title="{xct:Translate Home}">
       <Tab.Icon>
         <FontImageSource Glyph="&#xE10F;"
                          FontFamily="SegoeMDL2"
                          Size="24" />
       </Tab.Icon>
-      <ShellContent ContentTemplate="{DataTemplate Home:ClusterPage}" />
+      <ShellContent ContentTemplate="{DataTemplate Cluster:ClusterPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="{xct:Translate Profile}">
@@ -232,6 +268,11 @@
                        Glyph="&#xE13D;"
                        Color="Black" />
     </MenuItem.IconImageSource>
+  </MenuItem>
+  <MenuItem Text="Announcements"
+            StyleClass="MenuItemLayoutStyle"
+            IconImageSource="FlyoutItem_Help.png"
+            Command="{Binding GoToAnnouncementsPageCommand}">
   </MenuItem>
   <MenuItem Text="Help"
             StyleClass="MenuItemLayoutStyle"

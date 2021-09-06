@@ -1,22 +1,19 @@
 ﻿using DataAccessLib.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.AccessShellDir.ViewModels.Login.Commands;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.AdminShell;
-using VaxineApp.AdminShell.Views.Home;
+using VaxineApp.AdminShell.Views.Home.Period;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
 using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Profile;
-using VaxineApp.Views.Home.Status;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -219,7 +216,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             else if(role == "Admin")
             {
                 Application.Current.MainPage = new AdminAppShell();
-                await Shell.Current.GoToAsync($"//{nameof(ClusterPage)}");
+                await Shell.Current.GoToAsync($"//{nameof(PeriodPage)}");
             }
             else
             {
