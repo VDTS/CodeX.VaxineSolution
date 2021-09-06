@@ -2,16 +2,70 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Home.Period.PeriodPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:DataType="ViewModel:PeriodViewModel"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Period"
              Title="Period">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="Search" />
+  </Shell.SearchHandler>
   <ContentPage.BindingContext>
     <ViewModel:PeriodViewModel/>
   </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Add}"
+                 Priority="3"
+                 Command="{Binding GoToPostPageCommand}" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="{xct:Translate SaveAsPdf}"
+                 Command="{Binding SaveAsPDFCommand}"
+                 Priority="0" />
+  </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
+                 Command="{Binding PullRefreshCommand}">
+      <CollectionView SelectionMode="Single"
+                      ItemsSource="{Binding Periods}"
+                      SelectionChangedCommand="{Binding GoToDetailsPageCommand}"
+                      SelectedItem="{Binding SelectedPeriod}">
+        <CollectionView.Header>
+          <Frame Grid.Column="0"
+                 Padding="15,15,15,15"
+                 HeightRequest="40"
+                 BackgroundColor="{StaticResource CardHeader}"
+                 HasShadow="True">
+            <Frame.Content>
+              <StackLayout VerticalOptions="Center">
+                <Label FontSize="20"
+                       TextColor="White"
+                       Text="Period Name"></Label>
+              </StackLayout>
+            </Frame.Content>
+          </Frame>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+          <DataTemplate x:DataType="Model:VaccinePeriods">
+            <StackLayout Padding="0,2,0,0">
+              <Frame Grid.Column="0"
+                   Padding="15,0,15,0"
+                   HeightRequest="30"
+                   BackgroundColor="{StaticResource Card}"
+                   HasShadow="True"
+                   CornerRadius="0">
+                <Frame.Content>
+                  <StackLayout VerticalOptions="Center">
+                    <Label Text="{Binding PeriodName}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+            </StackLayout>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </RefreshView>
+  </ContentPage.Content>
 </ContentPage>
