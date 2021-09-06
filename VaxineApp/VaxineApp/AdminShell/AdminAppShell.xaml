@@ -245,18 +245,6 @@
          Title="{xct:Translate Profile}">
       <ShellContent ContentTemplate="{DataTemplate Profile:ProfilePage}" />
     </Tab>
-    <Tab  Title="{xct:Translate Home}">
-      <Tab.Icon>
-        <FontImageSource Glyph="&#xE10F;"
-                         FontFamily="SegoeMDL2"
-                         Size="24" />
-      </Tab.Icon>
-      <ShellContent ContentTemplate="{DataTemplate Cluster:ClusterPage}" />
-    </Tab>
-    <Tab Icon="Home_Profile.png"
-         Title="{xct:Translate Profile}">
-      <ShellContent ContentTemplate="{DataTemplate Profile:ProfilePage}" />
-    </Tab>
   </FlyoutItem>
   
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

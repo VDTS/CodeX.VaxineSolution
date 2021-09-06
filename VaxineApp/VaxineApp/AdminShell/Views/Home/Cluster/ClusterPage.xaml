@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VaxineApp.AdminShell.Views.Home.Cluster.ClusterPage">
+             x:Class="VaxineApp.AdminShell.Views.Home.Cluster.ClusterPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Cluster"
+             Title="Cluster">
+  <ContentPage.BindingContext>
+    <ViewModel:ClusterViewModel/>
+  </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
