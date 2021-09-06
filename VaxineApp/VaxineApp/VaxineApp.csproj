@@ -65,6 +65,9 @@
     <Compile Update="AdminShell\AdminAppShell.xaml.cs">
       <DependentUpon>AdminAppShell.xaml</DependentUpon>
     </Compile>
+    <Compile Update="AdminShell\Views\Announcements\EditAnnouncementPage.xaml.cs">
+      <DependentUpon>EditAnnouncementPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="ParentAppShell.xaml.cs">
       <DependentUpon>ParentAppShell.xaml</DependentUpon>
     </Compile>
@@ -148,7 +151,49 @@
     <EmbeddedResource Update="AccessShellDir\Views\Login\ForgotPassword\ForgotPasswordPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AdminShell\Views\Home\ClusterPage.xaml">
+    <EmbeddedResource Update="AdminShell\Views\Announcements\AddAnnouncementPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Announcements\AnnouncementsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Announcements\EditAnnouncementPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Cluster\AddClusterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Cluster\ClusterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Cluster\EditClusterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Period\AddPeriodPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Period\EditPeriodPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Period\PeriodPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Team\AddTeamPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Team\EditTeamPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\Team\TeamPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\User\AddUserPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\User\EditUserPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\User\UserPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resx\AppResources.resx">
@@ -281,7 +326,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AdminShell\ViewModels\" />
     <Folder Include="SupervisorShellDir\Views\" />
   </ItemGroup>
 

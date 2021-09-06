@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VaxineApp.AdminShell.Views.Home
+namespace VaxineApp.AdminShell.Views.Home.Team
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ClusterPage : ContentPage
+    public partial class AddTeamPage : ContentPage
     {
-        public ClusterPage()
+        public AddTeamPage()
         {
             InitializeComponent();
         }

@@ -1,4 +1,9 @@
-﻿using VaxineApp.AdminShell.Views.Home;
+﻿using VaxineApp.AdminShell.Views.Announcements;
+using VaxineApp.AdminShell.Views.Home;
+using VaxineApp.AdminShell.Views.Home.Cluster;
+using VaxineApp.AdminShell.Views.Home.Period;
+using VaxineApp.AdminShell.Views.Home.Team;
+using VaxineApp.AdminShell.Views.Home.User;
 using VaxineApp.Views.Announcements;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home.Profile;
@@ -21,6 +26,20 @@ namespace VaxineApp.AdminShell
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(ClusterPage), typeof(ClusterPage));
+
+            Routing.RegisterRoute(nameof(EditClusterPage), typeof(EditClusterPage));
+            Routing.RegisterRoute(nameof(AddClusterPage), typeof(AddClusterPage));
+            Routing.RegisterRoute(nameof(PeriodPage), typeof(PeriodPage));
+            Routing.RegisterRoute(nameof(AddPeriodPage), typeof(AddPeriodPage));
+            Routing.RegisterRoute(nameof(EditPeriodPage), typeof(EditPeriodPage));
+            Routing.RegisterRoute(nameof(TeamPage), typeof(TeamPage));
+            Routing.RegisterRoute(nameof(AddTeamPage), typeof(AddTeamPage));
+            Routing.RegisterRoute(nameof(EditTeamPage), typeof(EditTeamPage));
+            Routing.RegisterRoute(nameof(UserPage), typeof(UserPage));
+            Routing.RegisterRoute(nameof(AddUserPage), typeof(AddUserPage));
+            Routing.RegisterRoute(nameof(EditUserPage), typeof(ClusterPage));
+
+
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(EditProfile), typeof(EditProfile));
             Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
@@ -33,6 +52,10 @@ namespace VaxineApp.AdminShell
             Routing.RegisterRoute(nameof(ThemesPage), typeof(ThemesPage));
             Routing.RegisterRoute(nameof(LanguagePage), typeof(LanguagePage));
             Routing.RegisterRoute(nameof(NotificationsPage), typeof(NotificationsPage));
+
+            Routing.RegisterRoute(nameof(AnnouncementsPage), typeof(AnnouncementsPage));
+            Routing.RegisterRoute(nameof(AddAnnouncementPage), typeof(AddAnnouncementPage));
+            Routing.RegisterRoute(nameof(EditAnnouncementPage), typeof(EditAnnouncementPage));
         }
     }
 }
