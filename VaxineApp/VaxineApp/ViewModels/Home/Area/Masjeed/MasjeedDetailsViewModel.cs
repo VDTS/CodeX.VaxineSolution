@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using UtilityLib.Extensions;
 using VaxineApp.Models;
 using VaxineApp.Models.Enums;
 using VaxineApp.MVVMHelper;
@@ -54,7 +55,7 @@ namespace VaxineApp.ViewModels.Home.Area.Masjeed
         private async void Delete(object obj)
         {
 
-            if (Masjeed.FId != null)
+            if (Masjeed.AreEmpty())
             {
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(Masjeed.MasjeedName);
                 if (isDeleteAccepted)
