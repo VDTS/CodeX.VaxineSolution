@@ -14,5 +14,14 @@ namespace VaxineApp.Models
         {
             Id = new Guid();
         }
+
+        public bool IsEmpty()
+        {
+            if (Id == Guid.Empty && StartDate == default && EndDate == default && PeriodName is null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
