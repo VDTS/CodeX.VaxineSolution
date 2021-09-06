@@ -12,7 +12,6 @@ using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
-using VaxineApp.RealCacheLib;
 using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Home.Status;

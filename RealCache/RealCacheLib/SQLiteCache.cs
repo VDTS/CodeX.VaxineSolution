@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
-using VaxineApp.RealCacheLib;
 
-namespace RealCacheLib
+namespace RealCache.RealCacheLib
 {
     public class SQLiteCache
     {
