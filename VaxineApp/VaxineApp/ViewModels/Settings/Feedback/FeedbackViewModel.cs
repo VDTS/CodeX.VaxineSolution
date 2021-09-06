@@ -132,6 +132,10 @@ namespace VaxineApp.ViewModels.Settings.Feedback
             {
                 Feedback.Labels.Add("parent app");
             }
+            else if (role == "Admin")
+            {
+                Feedback.Labels.Add("Admin app");
+            }
 
             if (AppPackageName == "com.codex.vaxineappbeta")
             {
