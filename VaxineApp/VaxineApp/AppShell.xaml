@@ -17,8 +17,7 @@
        xmlns:localFont="clr-namespace:VaxineApp.Font"
        xmlns:AppshellPage="clr-namespace:VaxineApp.Views.Appshell"
        Title="VaxineApp"
-       x:Class="VaxineApp.AppShell"
-       FlyoutHeaderBehavior="CollapseOnScroll">
+       x:Class="VaxineApp.AppShell">
   <Shell.BindingContext>
     <ViewModel:AppShellViewModel></ViewModel:AppShellViewModel>
   </Shell.BindingContext>
