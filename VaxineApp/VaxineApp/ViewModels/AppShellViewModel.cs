@@ -16,6 +16,21 @@ namespace VaxineApp.ViewModels
     public class AppShellViewModel : ViewModelBase
     {
         // Property
+        private Color onlineDotColor;
+        public Color OnlineDotColor
+        {
+            get
+            {
+                return onlineDotColor;
+            }
+            set
+            {
+                onlineDotColor = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         private string userName;
         public string UserName
         {
@@ -60,6 +75,8 @@ namespace VaxineApp.ViewModels
             UserName = Preferences.Get("UserName", "");
             Role = Preferences.Get("UserRole", "");
 
+            // Methods
+            IsConnected();
             // Command
             GoToSettingsPageCommand = new Command(GoToSettingsPage);
             GoToProfileCommand = new Command(GoToProfile);
@@ -69,6 +86,18 @@ namespace VaxineApp.ViewModels
             GoToThemesPageCommand = new Command(GoToThemesPage);
             GoToAnnouncementsCentrePageCommand = new Command(GoToAnnouncementsCentrePage);
             GoToRecycleBinPageCommand = new Command(GoToRecycleBinPage);
+        }
+
+        private void IsConnected()
+        {
+            if(Connectivity.NetworkAccess == NetworkAccess.Internet)
+            {
+                OnlineDotColor = Color.Green;
+            }
+            else
+            {
+                OnlineDotColor = Color.Gray;
+            }
         }
 
         private async void GoToRecycleBinPage()

@@ -11,13 +11,13 @@
     <Grid HeightRequest="230">
       <Grid.RowDefinitions>
         <RowDefinition Height="130"></RowDefinition>
-        <RowDefinition Height="70"></RowDefinition>
         <RowDefinition Height="10"></RowDefinition>
       </Grid.RowDefinitions>
-      <StackLayout Grid.Row="0"
-                     VerticalOptions="Center"
-                     HorizontalOptions="Center">
-        <Frame Grid.Row="0"
+
+      <StackLayout Grid.Row="0" Padding="30, 0, 0, 0">
+        <AbsoluteLayout>
+        <StackLayout Spacing="10">
+          <Frame Grid.Row="0"
                  CornerRadius="100"
                  HeightRequest="100"
                  WidthRequest="100"
@@ -25,46 +25,34 @@
                  Padding="0"
                  Margin="0, 30, 0, 0"
                  IsClippedToBounds="True">
-          <Image Source="ProfilePhoto.jpg"
+            <Image Source="ProfilePhoto.jpg"
                    HorizontalOptions="Center"
                    VerticalOptions="Center">
-          </Image>
-        </Frame>
+            </Image>
+          </Frame>
+        </StackLayout>
+        <Label Text=""
+               FontFamily="SegoeMDL2"
+               FontSize="30"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds=".25,1.07,30,30"
+               TextColor="{Binding OnlineDotColor}"
+               xct:ShadowEffect.Color="White"></Label>
+      </AbsoluteLayout>
       </StackLayout>
-      <Label Text="{Binding UserName}"
+      <StackLayout Grid.Row="1"
+                     Orientation="Vertical"
+                   Padding="20">
+        <Label Text="{Binding UserName}"
                TextColor="Black"
                FontAttributes="Bold"
-               FontSize="20"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="end"
-               Padding="20, 0, 0, 50"
-               Grid.Row="1">
-      </Label>
-      <Label Text="{Binding Role}"
+               FontSize="20">
+        </Label>
+        <Label Text="{Binding Role}"
                FontAttributes="Bold"
-               TextColor="Black"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="end"
-               Padding="20, 0, 0, 20"
-               Grid.Row="1">
-      </Label>
-      <StackLayout Grid.Row="2"
-                     Orientation="Horizontal"
-                     Padding="20, -10, 0, 0">
-        <StackLayout Orientation="Horizontal"
-                       HorizontalOptions="Start">
-          <Label Text=""
-                   FontFamily="SegoeMDL2"
-                   TextColor="Green"></Label>
-          <Label Text="{xct:Translate Online}"></Label>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal"
-                       HorizontalOptions="End">
-          <Label Text="    "></Label>
-          <Label Text=""
-                   FontFamily="SegoeMDL2"></Label>
-          <Label Text="{xct:Translate On}"></Label>
-        </StackLayout>
+               TextColor="Black">
+
+        </Label>
       </StackLayout>
     </Grid>
   </ContentView.Content>
