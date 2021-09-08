@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using VaxineApp.AccessShellDir.Views.AccessAppshell;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.MVVMHelper;
 using VaxineApp.Views.Announcements;
@@ -89,7 +90,7 @@ namespace VaxineApp.SupervisorShellDir.ViewModel
 
         private async void GoToProfile(object obj)
         {
-            var route = $"//{nameof(ProfilePage)}";
+            var route = $"{nameof(ProfilePage)}";
             await Shell.Current.GoToAsync(route);
             Shell.Current.FlyoutIsPresented = false;
         }
@@ -105,7 +106,7 @@ namespace VaxineApp.SupervisorShellDir.ViewModel
         {
             await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
             Application.Current.MainPage = new AccessShell();
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
         }
         private async void RemoveAccount(object obj)
         {
@@ -115,7 +116,7 @@ namespace VaxineApp.SupervisorShellDir.ViewModel
                 await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
                 await Xamarin.Essentials.SecureStorage.SetAsync("role", "0");
                 Application.Current.MainPage = new AccessShell();
-                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
                 try
                 {
                     var dataPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);

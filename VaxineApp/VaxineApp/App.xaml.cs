@@ -3,10 +3,14 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
-using VaxineApp.AdminShell;
+using VaxineApp.AccessShellDir.Views.AccessAppshell;
 using VaxineApp.AndroidNativeApi;
+using VaxineApp.ParentShellDir.Views.ParentAppshell;
 using VaxineApp.Resx;
+using VaxineApp.SupervisorShellDir.Views.SupervisorAppshell;
+using VaxineApp.Views.Appshell;
 using Xamarin.CommunityToolkit.Helpers;
+using VaxineApp.AdminShell.Views.AdminAppShell;
 using Xamarin.Forms;
 
 namespace VaxineApp
@@ -18,6 +22,13 @@ namespace VaxineApp
         {
             InitializeComponent();
 
+
+            AppConfigurations();
+            AppShellSelector();
+        }
+
+        protected void AppConfigurations()
+        {
             DbService ds = new DbService(Constants.AppCenterAndroidXamarinKey);
             // Localization
 
@@ -29,6 +40,9 @@ namespace VaxineApp
 
             DependencyService.Get<INotificationManager>().Initialize();
 
+        }
+        protected void AppShellSelector()
+        {
             var isLoogged = Xamarin.Essentials.SecureStorage.GetAsync("isLogged").Result;
             if (isLoogged == "1")
             {
@@ -37,15 +51,15 @@ namespace VaxineApp
                 {
                     MainPage = new AppShell();
                 }
-                else if(role == "Supervisor")
+                else if (role == "Supervisor")
                 {
-                    MainPage = new SupAppShell();
+                    MainPage = new SupervisorShell();
                 }
-                else if(role == "Parent")
+                else if (role == "Parent")
                 {
-                    MainPage = new ParentAppShell();
+                    MainPage = new ParentShell();
                 }
-                else if(role == "Admin")
+                else if (role == "Admin")
                 {
                     MainPage = new AdminAppShell();
                 }
@@ -59,7 +73,6 @@ namespace VaxineApp
                 MainPage = new AccessShell();
             }
         }
-
         protected override void OnStart()
         {
             AppCenter.Start($"android={Constants.AppCenterAndroidXamarinKey};" + $"ios={Constants.AppCenteriOSXamarinKey};", typeof(Analytics), typeof(Crashes), typeof(Distribute));

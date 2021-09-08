@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
+using VaxineApp.AccessShellDir.Views.AccessAppshell;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.MVVMHelper;
