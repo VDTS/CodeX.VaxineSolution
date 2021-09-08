@@ -1,7 +1,8 @@
-﻿using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
+﻿using VaxineApp.AccessShellDir.Views.Login;
+using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using Xamarin.Forms;
 
-namespace VaxineApp
+namespace VaxineApp.AccessShellDir.Views.AccessAppshell
 {
     public partial class AccessShell : Xamarin.Forms.Shell
     {
@@ -9,6 +10,7 @@ namespace VaxineApp
         {
             InitializeComponent();
 
+            Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(ForgotPasswordPage), typeof(ForgotPasswordPage));
         }
     }

@@ -28,7 +28,7 @@ using VaxineApp.Views.Home.Status.Anonymous;
 using VaxineApp.Views.Announcements;
 using VaxineApp.Views.RecycleBin;
 
-namespace VaxineApp
+namespace VaxineApp.Views.Appshell
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {

@@ -5,14 +5,18 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.AccessShellDir.ViewModels.Login.Commands;
+using VaxineApp.AccessShellDir.Views.AccessAppshell;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
-using VaxineApp.AdminShell;
+using VaxineApp.AdminShell.Views.AdminAppShell;
 using VaxineApp.AdminShell.Views.Home.Period;
 using VaxineApp.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.Home;
+using VaxineApp.ParentShellDir.Views.ParentAppshell;
 using VaxineApp.StaticData;
+using VaxineApp.SupervisorShellDir.Views.SupervisorAppshell;
+using VaxineApp.Views.Appshell;
 using VaxineApp.Views.Home.Profile;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -145,7 +149,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                     Preferences.Set("UserLocalId", localId);
                     Preferences.Set("ProfileEmail", signInResponse.GetValue("email").ToString());
 
-                    if (RememberMe == true)
+                    if (RememberMe)
                     {
                         await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "1");
                     }
@@ -205,23 +209,19 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
             else if (role == "Supervisor")
             {
-                Application.Current.MainPage = new SupAppShell();
-                await Shell.Current.GoToAsync($"//{nameof(ProfilePage)}");
+                Application.Current.MainPage = new SupervisorShell();
             }
             else if (role == "Parent")
             {
-                Application.Current.MainPage = new ParentAppShell();
-                await Shell.Current.GoToAsync($"//{nameof(FamilyPage)}");
+                Application.Current.MainPage = new ParentShell();
             }
             else if(role == "Admin")
             {
                 Application.Current.MainPage = new AdminAppShell();
-                await Shell.Current.GoToAsync($"//{nameof(PeriodPage)}");
             }
             else
             {
                 Application.Current.MainPage = new AccessShell();
-                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
             }
         }
 

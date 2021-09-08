@@ -1,4 +1,4 @@
-﻿using VaxineApp.ParentShellDir.Views.Home;
+﻿using VaxineApp.Views.Announcements;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Settings.AboutUs;
@@ -12,15 +12,14 @@ using VaxineApp.Views.Settings.PrivacyPolicy;
 using VaxineApp.Views.Settings.Themes;
 using Xamarin.Forms;
 
-namespace VaxineApp
+namespace VaxineApp.SupervisorShellDir.Views.SupervisorAppshell
 {
-    public partial class ParentAppShell : Xamarin.Forms.Shell
+    public partial class SupervisorShell : Xamarin.Forms.Shell
     {
-        public ParentAppShell()
+        public SupervisorShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(FamilyPage), typeof(FamilyPage));
-            Routing.RegisterRoute(nameof(ChildVaccinePage), typeof(ChildVaccinePage));
+            
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             Routing.RegisterRoute(nameof(EditProfile), typeof(EditProfile));
             Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
@@ -29,10 +28,12 @@ namespace VaxineApp
             Routing.RegisterRoute(nameof(FeedbackPage), typeof(FeedbackPage));
             Routing.RegisterRoute(nameof(PrivacyPolicyPage), typeof(PrivacyPolicyPage));
             Routing.RegisterRoute(nameof(AppUpdatesPage), typeof(AppUpdatesPage));
+
             Routing.RegisterRoute(nameof(FontPage), typeof(FontPage));
             Routing.RegisterRoute(nameof(ThemesPage), typeof(ThemesPage));
             Routing.RegisterRoute(nameof(LanguagePage), typeof(LanguagePage));
             Routing.RegisterRoute(nameof(NotificationsPage), typeof(NotificationsPage));
+            Routing.RegisterRoute(nameof(AnnouncementsCentrePage), typeof(AnnouncementsCentrePage));
 
         }
     }

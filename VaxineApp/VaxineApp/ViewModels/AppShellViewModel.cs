@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using VaxineApp.AccessShellDir.Views.AccessAppshell;
 using VaxineApp.AccessShellDir.Views.Login;
 using VaxineApp.MVVMHelper;
 using VaxineApp.Views.Announcements;
@@ -140,7 +141,7 @@ namespace VaxineApp.ViewModels
             await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
             Preferences.Clear();
             Application.Current.MainPage = new AccessShell();
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
         }
         private async void RemoveAccount(object obj)
         {
@@ -151,7 +152,7 @@ namespace VaxineApp.ViewModels
                 await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
                 await Xamarin.Essentials.SecureStorage.SetAsync("role", "0");
                 Application.Current.MainPage = new AccessShell();
-                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
                 try
                 {
                     var dataPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
