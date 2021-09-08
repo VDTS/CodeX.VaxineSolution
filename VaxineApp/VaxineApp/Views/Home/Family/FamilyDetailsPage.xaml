@@ -7,6 +7,7 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Family"
              x:DataType="ViewModel:FamilyDetailsViewModel"
              x:Class="VaxineApp.Views.Home.Family.FamilyDetailsPage"
+             Shell.TabBarIsVisible="False"
              Title="Family Details">
   <Shell.SearchHandler>
     <SearchHandler SearchBoxVisibility="{Binding IsSearchVisible}"

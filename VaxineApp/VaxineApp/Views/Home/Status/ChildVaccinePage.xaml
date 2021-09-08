@@ -6,6 +6,7 @@
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Home.Status"
              x:DataType="ViewModel:ChildVaccineViewModel"
              x:Class="VaxineApp.Views.Home.Status.ChildVaccinePage"
+             Shell.TabBarIsVisible="False"
              Title="Child Details">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="Search" />
