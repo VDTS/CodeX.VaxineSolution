@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels"
-       xmlns:Profile="clr-namespace:VaxineApp.Views.Home.Profile"
-       xmlns:Cluster="clr-namespace:VaxineApp.AdminShell.Views.Home.Cluster"
-       xmlns:Team="clr-namespace:VaxineApp.AdminShell.Views.Home.Team"
-       xmlns:Period="clr-namespace:VaxineApp.AdminShell.Views.Home.Period"
-       xmlns:User="clr-namespace:VaxineApp.AdminShell.Views.Home.User"
-       xmlns:Announcements="clr-namespace:VaxineApp.AdminShell.Views.Announcements"
+       xmlns:HomeStatus="clr-namespace:VaxineApp.Views.Home.Status"
+       xmlns:Anonymous="clr-namespace:VaxineApp.Views.Home.Status.Anonymous"
+       xmlns:HomeInsights="clr-namespace:VaxineApp.Views.Home.Insights"
+       xmlns:HomeFamily="clr-namespace:VaxineApp.Views.Home.Family"
+       xmlns:HomeArea="clr-namespace:VaxineApp.Views.Home.Area.Area"
+       xmlns:HomeAreaClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
+       xmlns:HomeAreaDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
+       xmlns:HomeAreaInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
+       xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
+       xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
+       xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
+       xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
        xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+       xmlns:localFont="clr-namespace:VaxineApp.Font"
+       xmlns:AppshellPage="clr-namespace:VaxineApp.Views.Appshell"
        Title="VaxineApp"
-       x:Class="VaxineApp.AdminShell.AdminAppShell">
+       x:Class="VaxineApp.Views.Appshell.AppShell">
   <Shell.BindingContext>
-    <ViewModel:AdminShellViewModel></ViewModel:AdminShellViewModel>
+    <ViewModel:AppShellViewModel></ViewModel:AppShellViewModel>
   </Shell.BindingContext>
   <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -72,12 +79,6 @@
                           Value="{StaticResource Primary}" />
                 </VisualState.Setters>
               </VisualState>
-              <VisualState x:Name="Selected">
-                <VisualState.Setters>
-                  <Setter Property="BackgroundColor"
-                          Value="{StaticResource Primary}" />
-                </VisualState.Setters>
-              </VisualState>
             </VisualStateGroup>
           </VisualStateGroupList>
         </Setter>
@@ -111,144 +112,78 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-  <Shell.FlyoutHeaderTemplate>
-    <DataTemplate>
-      <Grid HeightRequest="230">
-        <Grid.RowDefinitions>
-          <RowDefinition Height="130"></RowDefinition>
-          <RowDefinition Height="70"></RowDefinition>
-          <RowDefinition Height="10"></RowDefinition>
-        </Grid.RowDefinitions>
-        <StackLayout Grid.Row="0"
-                     VerticalOptions="Center"
-                     HorizontalOptions="Center">
-          <Frame Grid.Row="0"
-                 CornerRadius="100"
-                 HeightRequest="100"
-                 WidthRequest="100"
-                 HorizontalOptions="Start"
-                 Padding="0"
-                 Margin="0, 30, 0, 0"
-                 IsClippedToBounds="True">
-            <Image Source="ProfilePhoto.jpg"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center">
-            </Image>
-          </Frame>
-        </StackLayout>
-        <Label Text="{Binding UserName}"
-               TextColor="Black"
-               FontAttributes="Bold"
-               FontSize="20"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="end"
-               Padding="20, 0, 0, 50"
-               Grid.Row="1">
-        </Label>
-        <Label Text="{Binding Role}"
-               FontAttributes="Bold"
-               TextColor="Black"
-               HorizontalTextAlignment="Center"
-               VerticalTextAlignment="end"
-               Padding="20, 0, 0, 20"
-               Grid.Row="1">
-        </Label>
-        <StackLayout Grid.Row="2"
-                     Orientation="Horizontal"
-                     Padding="20, -10, 0, 0">
-          <StackLayout Orientation="Horizontal"
-                       HorizontalOptions="Start">
-            <Label Text=""
-                   FontFamily="SegoeMDL2"
-                   TextColor="Green"></Label>
-            <Label Text="ONLINE"></Label>
-          </StackLayout>
-          <StackLayout Orientation="Horizontal"
-                       HorizontalOptions="End">
-            <Label Text="    "></Label>
-            <Label Text=""
-                   FontFamily="SegoeMDL2"></Label>
-            <Label Text="ON"></Label>
-          </StackLayout>
-        </StackLayout>
-      </Grid>
-    </DataTemplate>
-  </Shell.FlyoutHeaderTemplate>
-  <Shell.FlyoutFooterTemplate>
-    <DataTemplate>
-      <Grid HeightRequest="50">
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="0.2*"></ColumnDefinition>
-          <ColumnDefinition Width="0.3*"></ColumnDefinition>
-          <ColumnDefinition Width="0.5*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Button Grid.Column="0"
-                Text=""
-                FontFamily="SegoeMDL2"
-                BackgroundColor="Transparent"
-                TextColor="Black"
-                FontSize="30"
-                HorizontalOptions="Start"
-                Command="{Binding GoToThemesPageCommand}"></Button>
-        <Label Grid.Column="1"
-               Text="Automatic"
-               VerticalOptions="Center"
-               FontSize="18"
-               TextColor="Black"></Label>
-        <Button Grid.Column="2"
-                Text=""
-                Command="{Binding GoToSettingsPageCommand}"
-                FontFamily="SegoeMDL2"
-                BackgroundColor="Transparent"
-                TextColor="Black"
-                FontSize="30"
-                HorizontalOptions="End"></Button>
-      </Grid>
-    </DataTemplate>
-  </Shell.FlyoutFooterTemplate>
-
-  <FlyoutItem Title="Home">
+  <Shell.FlyoutHeader>
+    <AppshellPage:FlyoutHeaderPage/>
+  </Shell.FlyoutHeader>
+  <Shell.FlyoutFooter>
+    <AppshellPage:FlyoutFooterPage/>
+  </Shell.FlyoutFooter>
+  <MenuItem>
+    <Shell.MenuItemTemplate>
+      <DataTemplate>
+        <Label HeightRequest="1" BackgroundColor="LightGray"></Label>
+      </DataTemplate>
+    </Shell.MenuItemTemplate>
+  </MenuItem>
+  <FlyoutItem Title="{xct:Translate Home}">
     <FlyoutItem.Icon>
       <FontImageSource FontFamily="SegoeMDL2"
                        Glyph="&#xE80F;"
                        Color="Black" />
     </FlyoutItem.Icon>
-    <Tab  Title="Period">
+    <Tab Title="{xct:Translate Home}">
       <Tab.Icon>
         <FontImageSource Glyph="&#xE10F;"
                          FontFamily="SegoeMDL2"
                          Size="24" />
       </Tab.Icon>
-      <ShellContent ContentTemplate="{DataTemplate Period:PeriodPage}" />
+      <ShellContent Title="Child"
+                    ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
+      <ShellContent Title="Anonymous Child"
+                    ContentTemplate="{DataTemplate Anonymous:AnonymousChildPage}" />
     </Tab>
-    <Tab Icon="Home_Profile.png"
-         Title="User">
-      <ShellContent ContentTemplate="{DataTemplate User:UserPage}" />
+    <Tab Icon="Home_Insights.png"
+         Title="{xct:Translate Insights}">
+      <ShellContent ContentTemplate="{DataTemplate HomeInsights:InsightsPage}" />
     </Tab>
-    <Tab  Title="Team">
+    <Tab Title="{xct:Translate Family}">
       <Tab.Icon>
-        <FontImageSource Glyph="&#xE10F;"
+        <FontImageSource Glyph="&#xECC8;"
                          FontFamily="SegoeMDL2"
                          Size="24" />
       </Tab.Icon>
-      <ShellContent ContentTemplate="{DataTemplate Team:TeamPage}" />
+      <ShellContent ContentTemplate="{DataTemplate HomeFamily:FamilyListPage}" />
     </Tab>
-    <Tab  Title="Cluster">
-      <Tab.Icon>
-        <FontImageSource Glyph="&#xE10F;"
-                         FontFamily="SegoeMDL2"
-                         Size="24" />
-      </Tab.Icon>
-      <ShellContent ContentTemplate="{DataTemplate Cluster:ClusterPage}" />
+    <Tab Icon="Home_Area.png"
+         Title="{xct:Translate Area}">
+      <ShellContent Title="{xct:Translate Area}"
+                    ContentTemplate="{DataTemplate HomeArea:AreaPage}" />
+      <ShellContent Title="{xct:Translate Masjeed}"
+                    ContentTemplate="{DataTemplate HomeAreaMasjeed:MasjeedPage}" />
+      <ShellContent Title="{xct:Translate School}"
+                    ContentTemplate="{DataTemplate HomeAreaSchool:SchoolPage}" />
+      <ShellContent Title="{xct:Translate Influencer}"
+                    ContentTemplate="{DataTemplate HomeAreaInfluencer:InfluencerPage}" />
+      <ShellContent Title="{xct:Translate Clinic}"
+                    ContentTemplate="{DataTemplate HomeAreaClinic:ClinicPage}" />
+      <ShellContent Title="{xct:Translate Doctor}"
+                    ContentTemplate="{DataTemplate HomeAreaDoctor:DoctorPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="{xct:Translate Profile}">
-      <ShellContent ContentTemplate="{DataTemplate Profile:ProfilePage}" />
+      <ShellContent ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
     </Tab>
+
   </FlyoutItem>
-  
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-  <MenuItem Text="Profile"
+  <MenuItem>
+    <Shell.MenuItemTemplate>
+      <DataTemplate>
+        <Label HeightRequest="1" BackgroundColor="LightGray"></Label>
+      </DataTemplate>
+    </Shell.MenuItemTemplate>
+  </MenuItem>
+  <MenuItem Text="{xct:Translate Profile}"
             StyleClass="MenuItemLayoutStyle"
             Command="{Binding GoToProfileCommand}">
     <MenuItem.IconImageSource>
@@ -257,22 +192,42 @@
                        Color="Black" />
     </MenuItem.IconImageSource>
   </MenuItem>
-  <MenuItem Text="Announcements"
-            StyleClass="MenuItemLayoutStyle"
-            IconImageSource="FlyoutItem_Help.png"
-            Command="{Binding GoToAnnouncementsPageCommand}">
-  </MenuItem>
-  <MenuItem Text="Help"
+  <MenuItem Text="{xct:Translate Help}"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutItem_Help.png"
             Command="{Binding GoToHelpPageCommand}">
   </MenuItem>
-  <MenuItem Text="Logout"
+  <MenuItem Text="Announcements Centre"
+            StyleClass="MenuItemLayoutStyle"
+            Command="{Binding GoToAnnouncementsCentrePageCommand}">
+    <MenuItem.IconImageSource>
+      <FontImageSource FontFamily="MaterialIcons"
+                       Glyph="{x:Static localFont:MaterialDesignIcons.InformationVariant}"
+                       Color="Black" />
+    </MenuItem.IconImageSource>
+  </MenuItem>
+  <MenuItem Text="Recycle Bin"
+            StyleClass="MenuItemLayoutStyle"
+            Command="{Binding GoToRecycleBinPageCommand}">
+    <MenuItem.IconImageSource>
+      <FontImageSource FontFamily="SegoeMDL2"
+                       Glyph=""
+                       Color="Black" />
+    </MenuItem.IconImageSource>
+  </MenuItem>
+  <MenuItem>
+    <Shell.MenuItemTemplate>
+      <DataTemplate>
+        <Label HeightRequest="1" BackgroundColor="LightGray"></Label>
+      </DataTemplate>
+    </Shell.MenuItemTemplate>
+  </MenuItem>
+  <MenuItem Text="{xct:Translate Logout}"
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutMenuItem_Logout.png"
             Command="{Binding LogginOutCommand}">
   </MenuItem>
-  <MenuItem Text="Remove account from device"
+  <MenuItem Text="{xct:Translate RemoveAccountFromDevice}"
             StyleClass="MenuItemLayoutStyle"
             Command="{Binding RemoveAccountCommand}">
     <MenuItem.IconImageSource>
@@ -281,7 +236,13 @@
                        Color="red" />
     </MenuItem.IconImageSource>
   </MenuItem>
-
+  <MenuItem>
+    <Shell.MenuItemTemplate>
+      <DataTemplate>
+        <Label HeightRequest="1" BackgroundColor="LightGray"></Label>
+      </DataTemplate>
+    </Shell.MenuItemTemplate>
+  </MenuItem>
   <!--
         TabBar lets you define content that won't show up in a flyout menu. When this content is active
         the flyout menu won't be available. This is useful for creating areas of the application where 

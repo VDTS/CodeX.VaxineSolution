@@ -18,7 +18,7 @@ using VaxineApp.Views.Settings.PrivacyPolicy;
 using VaxineApp.Views.Settings.Themes;
 using Xamarin.Forms;
 
-namespace VaxineApp.AdminShell
+namespace VaxineApp.AdminShell.Views.AdminAppShell
 {
     public partial class AdminAppShell : Xamarin.Forms.Shell
     {

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
-       xmlns:ViewModel="clr-namespace:VaxineApp.SupervisorShellDir.ViewModel"
-       xmlns:localFont="clr-namespace:VaxineApp.Font"
+       xmlns:ViewModel="clr-namespace:VaxineApp.ParentShellDir.ViewModel"
+       xmlns:Profile="clr-namespace:VaxineApp.Views.Home.Profile"
+       xmlns:Home="clr-namespace:VaxineApp.ParentShellDir.Views.Home"
+       xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
        Title="VaxineApp"
-       x:Class="VaxineApp.SupAppShell">
+       x:Class="VaxineApp.ParentShellDir.Views.ParentAppshell.ParentShell">
   <Shell.BindingContext>
-    <ViewModel:SupAppShellViewModel></ViewModel:SupAppShellViewModel>
+    <ViewModel:ParentShellViewModel></ViewModel:ParentShellViewModel>
   </Shell.BindingContext>
   <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -114,7 +115,9 @@
           <RowDefinition Height="70"></RowDefinition>
           <RowDefinition Height="10"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout Grid.Row="0"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center">
           <Frame Grid.Row="0"
                  CornerRadius="100"
                  HeightRequest="100"
@@ -146,7 +149,9 @@
                Padding="20, 0, 0, 20"
                Grid.Row="1">
         </Label>
-        <StackLayout Grid.Row="2" Orientation="Horizontal" Padding="20, -10, 0, 0">
+        <StackLayout Grid.Row="2"
+                     Orientation="Horizontal"
+                     Padding="20, -10, 0, 0">
           <StackLayout Orientation="Horizontal"
                        HorizontalOptions="Start">
             <Label Text=""
@@ -157,7 +162,8 @@
           <StackLayout Orientation="Horizontal"
                        HorizontalOptions="End">
             <Label Text="    "></Label>
-            <Label Text="" FontFamily="SegoeMDL2"></Label>
+            <Label Text=""
+                   FontFamily="SegoeMDL2"></Label>
             <Label Text="ON"></Label>
           </StackLayout>
         </StackLayout>
@@ -173,11 +179,21 @@
           <ColumnDefinition Width="0.5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0"
-                Text="" FontFamily="SegoeMDL2" BackgroundColor="Transparent" TextColor="Black" FontSize="30" HorizontalOptions="Start" Command="{Binding GoToThemesPageCommand}"></Button>
-        <Label Grid.Column="1" Text="Automatic" VerticalOptions="Center" FontSize="18" TextColor="Black"></Label>
+                Text=""
+                FontFamily="SegoeMDL2"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                FontSize="30"
+                HorizontalOptions="Start"
+                Command="{Binding GoToThemesPageCommand}"></Button>
+        <Label Grid.Column="1"
+               Text="Automatic"
+               VerticalOptions="Center"
+               FontSize="18"
+               TextColor="Black"></Label>
         <Button Grid.Column="2"
                 Text=""
-                Command="{Binding GoToSettingsPageCommand}" 
+                Command="{Binding GoToSettingsPageCommand}"
                 FontFamily="SegoeMDL2"
                 BackgroundColor="Transparent"
                 TextColor="Black"
@@ -188,13 +204,25 @@
   </Shell.FlyoutFooterTemplate>
 
   <FlyoutItem Title="Home">
-    <Tab Icon="Home_Profile.png"
-         Title="Profile">
-      <ShellContent Route="ProfilePage"
-                    ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
+    <FlyoutItem.Icon>
+      <FontImageSource FontFamily="SegoeMDL2"
+                       Glyph="&#xE80F;"
+                       Color="Black" />
+    </FlyoutItem.Icon>
+    <Tab  Title="{xct:Translate Home}">
+      <Tab.Icon>
+        <FontImageSource Glyph="&#xE10F;"
+                         FontFamily="SegoeMDL2"
+                         Size="24" />
+      </Tab.Icon>
+      <ShellContent ContentTemplate="{DataTemplate Home:FamilyPage}" />
     </Tab>
-
+    <Tab Icon="Home_Profile.png"
+         Title="{xct:Translate Profile}">
+      <ShellContent ContentTemplate="{DataTemplate Profile:ProfilePage}" />
+    </Tab>
   </FlyoutItem>
+  
   <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
   <MenuItem Text="Profile"
             StyleClass="MenuItemLayoutStyle"
@@ -209,15 +237,6 @@
             StyleClass="MenuItemLayoutStyle"
             IconImageSource="FlyoutItem_Help.png"
             Command="{Binding GoToHelpPageCommand}">
-  </MenuItem>
-  <MenuItem Text="Announcements Centre"
-            StyleClass="MenuItemLayoutStyle"
-            Command="{Binding GoToAnnouncementsCentrePageCommand}">
-    <MenuItem.IconImageSource>
-      <FontImageSource FontFamily="MaterialIcons"
-                       Glyph="{x:Static localFont:MaterialDesignIcons.InformationVariant}"
-                       Color="Black" />
-    </MenuItem.IconImageSource>
   </MenuItem>
   <MenuItem Text="Logout"
             StyleClass="MenuItemLayoutStyle"

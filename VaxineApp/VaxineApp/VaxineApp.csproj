@@ -59,17 +59,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="AccessShell.xaml.cs">
+    <Compile Update="AccessShellDir\Views\AccessAppshell\AccessShell.xaml.cs">
       <DependentUpon>AccessShell.xaml</DependentUpon>
     </Compile>
-    <Compile Update="AdminShell\AdminAppShell.xaml.cs">
+    <Compile Update="AdminShell\Views\AdminAppshell\AdminAppShell.xaml.cs">
       <DependentUpon>AdminAppShell.xaml</DependentUpon>
     </Compile>
     <Compile Update="AdminShell\Views\Announcements\EditAnnouncementPage.xaml.cs">
       <DependentUpon>EditAnnouncementPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="ParentAppShell.xaml.cs">
-      <DependentUpon>ParentAppShell.xaml</DependentUpon>
+    <Compile Update="ParentShellDir\Views\ParentAppshell\ParentShell.xaml.cs">
+      <DependentUpon>ParentShell.xaml</DependentUpon>
     </Compile>
     <Compile Update="ParentShellDir\Views\Home\ChildVaccinePage.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
@@ -82,8 +82,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Update="SupAppShell.xaml.cs">
-      <DependentUpon>SupAppShell.xaml</DependentUpon>
+    <Compile Update="SupervisorShellDir\Views\SupervisorAppshell\SupervisorShell.xaml.cs">
+      <DependentUpon>SupervisorShell.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Home\Family\EditFamilyPage.xaml.cs">
       <DependentUpon>EditFamilyPage.xaml</DependentUpon>
@@ -338,10 +338,6 @@
     <EmbeddedResource Update="Views\Shared\NoInternetConnectionExceptionView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="SupervisorShellDir\Views\" />
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
