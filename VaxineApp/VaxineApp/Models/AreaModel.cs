@@ -4,17 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using VaxineApp.Models.Enums;
+using Xamarin.Forms.Maps;
 
 namespace VaxineApp.Models
 {
     public class ClusterModel
     {
+        public Guid FId { get; set; }
         public Guid Id { get; set; }
         public string ClusterName { get; set; }
         public string CurrentVaccinePeriodId { get; set; }
+        public List<Position> ClusterArea { get; set; }
         public ClusterModel()
         {
             Id = new Guid();
+            ClusterArea = new List<Position>();
         }
 
         public bool IsEmpty()

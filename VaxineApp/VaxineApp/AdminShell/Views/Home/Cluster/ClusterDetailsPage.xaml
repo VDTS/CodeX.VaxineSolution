@@ -3,15 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Home.Cluster.ClusterDetailsPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Cluster"
+             x:DataType="ViewModel:ClusterDetailsViewModel"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Shell.PresentationMode="Animated"
+             Shell.TabBarIsVisible="False"
              Title="Details Page">
-  <ContentPage.BindingContext>
-    <ViewModel:ClusterDetailsViewModel/>
-  </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Edit}"
+                 Command="{Binding GoToPutPageCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Delete}"
+                 Command="{Binding DeleteCommand}"
+                 Priority="2" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <Grid Padding="20">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.6*"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <StackLayout Grid.Row="0">
+        <Label Text="Cluster info"
+               FontSize="Large"></Label>
+        <Label Text="{Binding Cluster.ClusterName, Mode=TwoWay}"></Label>
+      </StackLayout>
+      <RefreshView Grid.Row="1"
+                   IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                   RefreshColor="#2196f3"
+                   Command="{Binding PullRefreshCommand}">
+        <ScrollView>
+          <CollectionView ItemsSource="{Binding Teams}">
+            <CollectionView.Header>
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"
+                       Text="Team No"></Label>
+                <Label Grid.Column="1"
+                       Text="Social Mobilizer Id"></Label>
+              </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+              <DataTemplate x:DataType="Model:TeamModel">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                  </Grid.ColumnDefinitions>
+                  <Label Grid.Column="0"
+                         Text="{Binding TeamNo}"></Label>
+                  <Label Grid.Column="1"
+                         Text="{Binding SocialMobilizerId}"></Label>
+                </Grid>
+              </DataTemplate>
+            </CollectionView.ItemTemplate>
+          </CollectionView>
+        </ScrollView>
+      </RefreshView>
+    </Grid>
+  </ContentPage.Content>
 </ContentPage>
