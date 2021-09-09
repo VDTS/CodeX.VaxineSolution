@@ -11,10 +11,13 @@ using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Area.Clinic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using Xamarin.CommunityToolkit.Extensions;
+using Xamarin.CommunityToolkit.UI.Views.Options;
 
 namespace VaxineApp.ViewModels.Home.Area.Clinic
 {
-    public class ClinicViewModel : ViewModelBase, IDataCrud, IVMUtils
+    public class ClinicViewModel : ViewModelBase
     {
         // Property
         private ObservableCollection<ClinicModel> clinics;
@@ -59,7 +62,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             }
         }
 
-       
+
         // Commands
         // Crud Commands
         public ICommand PutCommand { private set; get; }
@@ -105,7 +108,7 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
 
             // Commands
             PullRefreshCommand = new Command(Refresh);
-            DeleteCommand = new Command(Delete);
+            DeleteCommand = new Command(CanExecuteDelete);
             GoToPostPageCommand = new Command(GoToPostPage);
             CancelSelectionCommand = new Command(CancelSelection);
             GoToPutPageCommand = new Command(GoToPutPage);
@@ -118,39 +121,36 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
             Clinics.Clear();
         }
 
-        public async void Delete()
+        public async void CanExecuteDelete()
         {
             if (SelectedClinic.ClinicName != null)
             {
-                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedClinic.ClinicName);
-                if (isDeleteAccepted)
-                {
-                    var deleteResponse = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
 
-                    if (deleteResponse == "ConnectionError")
-                    {
-                        StandardMessagesDisplay.NoConnectionToast();
-                    }
-                    else if (deleteResponse == "Error")
-                    {
-                        StandardMessagesDisplay.Error();
-                    }
-                    else if (deleteResponse == "ErrorTracked")
-                    {
-                        StandardMessagesDisplay.ErrorTracked();
-                    }
-                    else if(deleteResponse == "null")
-                    {
-                        _ = await DataService.Put((--StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
-
-                        StandardMessagesDisplay.ItemDeletedToast();
-                        Clinics.Remove(SelectedClinic);
-                    }
-                }
-                else
+                var acceptAction = new SnackBarActionOptions()
                 {
-                    return;
-                }
+                    Action = () => ExecuteDelete(),
+                    ForegroundColor = Color.FromHex("#0990bf"),
+                    BackgroundColor = Color.FromHex("#e2e2e2"),
+                    Text = "OK",
+                    Padding = 12
+                };
+
+                var options = new SnackBarOptions()
+                {
+                    MessageOptions = new MessageOptions()
+                    {
+                        Foreground = Color.FromHex("#505050"),
+                        Padding = 12,
+                        Message = "Do you want to move this to recycle bin?"
+                    },
+
+                    BackgroundColor = Color.FromHex("#e2e2e2"),
+                    Duration = TimeSpan.FromSeconds(5),
+                    CornerRadius = 12,
+                    Actions = new[] { acceptAction }
+
+                };
+                await App.Current.MainPage.DisplaySnackBarAsync(options);
 
             }
             else
@@ -158,7 +158,30 @@ namespace VaxineApp.ViewModels.Home.Area.Clinic
                 StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
+        public async Task ExecuteDelete()
+        {
+            var deleteResponse = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
 
+            if (deleteResponse == "ConnectionError")
+            {
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (deleteResponse == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (deleteResponse == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else if (deleteResponse == "null")
+            {
+                _ = await DataService.Put((--StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
+
+                StandardMessagesDisplay.ItemDeletedToast();
+                Clinics.Remove(SelectedClinic);
+            }
+        }
         public async void Get()
         {
             var jData = await DataService.Get($"Clinic/{Preferences.Get("TeamId", "")}");
