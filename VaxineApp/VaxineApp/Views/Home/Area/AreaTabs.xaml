@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.Views.Home.Area.AreaTabs"
+            xmlns:Area="clr-namespace:VaxineApp.Views.Home.Area.Area"
+            xmlns:Masjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
+            xmlns:School="clr-namespace:VaxineApp.Views.Home.Area.School"
+            xmlns:Influencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
+            xmlns:Clinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
+            xmlns:Doctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
+            Title="Area">
+  <!--Pages can be added as references or inline-->
+  <Area:AreaPage Title="Area"/>
+  <Masjeed:MasjeedPage Title="Masjeed" />
+  <School:SchoolPage Title="School" />
+  <Influencer:InfluencerPage Title="Influencer" />
+  <Clinic:ClinicPage Title="Clinic" />
+  <Doctor:DoctorPage Title="Doctor" />
+</TabbedPage>
