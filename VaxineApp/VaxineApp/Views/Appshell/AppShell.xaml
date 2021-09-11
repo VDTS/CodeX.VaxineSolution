@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:HomeStatus="clr-namespace:VaxineApp.Views.Home.Status"
-       xmlns:Anonymous="clr-namespace:VaxineApp.Views.Home.Status.Anonymous"
-       xmlns:HomeInsights="clr-namespace:VaxineApp.Views.Home.Insights"
-       xmlns:HomeFamily="clr-namespace:VaxineApp.Views.Home.Family"
-       xmlns:HomeArea="clr-namespace:VaxineApp.Views.Home.Area.Area"
-       xmlns:HomeAreaClinic="clr-namespace:VaxineApp.Views.Home.Area.Clinic"
-       xmlns:HomeAreaDoctor="clr-namespace:VaxineApp.Views.Home.Area.Doctor"
-       xmlns:HomeAreaInfluencer="clr-namespace:VaxineApp.Views.Home.Area.Influencer"
-       xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.Views.Home.Area.Masjeed"
-       xmlns:HomeAreaSchool="clr-namespace:VaxineApp.Views.Home.Area.School"
-       xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
-       xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
        xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
        xmlns:localFont="clr-namespace:VaxineApp.Font"
+       xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
        xmlns:AppshellPage="clr-namespace:VaxineApp.Views.Appshell"
+       xmlns:Area="clr-namespace:VaxineApp.Views.Home.Area"
+       xmlns:HomeFamily="clr-namespace:VaxineApp.Views.Home.Family"
+       xmlns:HomeInsights="clr-namespace:VaxineApp.Views.Home.Insights"
+       xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
+       xmlns:HomeStatus="clr-namespace:VaxineApp.Views.Home.Status"
        Title="VaxineApp"
        x:Class="VaxineApp.Views.Appshell.AppShell">
   <Shell.BindingContext>
@@ -138,9 +132,7 @@
                          Size="24" />
       </Tab.Icon>
       <ShellContent Title="Child"
-                    ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
-      <ShellContent Title="Anonymous Child"
-                    ContentTemplate="{DataTemplate Anonymous:AnonymousChildPage}" />
+                    ContentTemplate="{DataTemplate HomeStatus:StatusTabs}" />
     </Tab>
     <Tab Icon="Home_Insights.png"
          Title="{xct:Translate Insights}">
@@ -157,17 +149,7 @@
     <Tab Icon="Home_Area.png"
          Title="{xct:Translate Area}">
       <ShellContent Title="{xct:Translate Area}"
-                    ContentTemplate="{DataTemplate HomeArea:AreaPage}" />
-      <ShellContent Title="{xct:Translate Masjeed}"
-                    ContentTemplate="{DataTemplate HomeAreaMasjeed:MasjeedPage}" />
-      <ShellContent Title="{xct:Translate School}"
-                    ContentTemplate="{DataTemplate HomeAreaSchool:SchoolPage}" />
-      <ShellContent Title="{xct:Translate Influencer}"
-                    ContentTemplate="{DataTemplate HomeAreaInfluencer:InfluencerPage}" />
-      <ShellContent Title="{xct:Translate Clinic}"
-                    ContentTemplate="{DataTemplate HomeAreaClinic:ClinicPage}" />
-      <ShellContent Title="{xct:Translate Doctor}"
-                    ContentTemplate="{DataTemplate HomeAreaDoctor:DoctorPage}" />
+                    ContentTemplate="{DataTemplate Area:AreaTabs }" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="{xct:Translate Profile}">
