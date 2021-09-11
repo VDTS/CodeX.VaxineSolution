@@ -85,6 +85,9 @@
     <Compile Update="SupervisorShellDir\Views\SupervisorAppshell\SupervisorShell.xaml.cs">
       <DependentUpon>SupervisorShell.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Home\Area\AreaTabs.xaml.cs">
+      <DependentUpon>AreaTabs.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Home\Family\EditFamilyPage.xaml.cs">
       <DependentUpon>EditFamilyPage.xaml</DependentUpon>
     </Compile>
@@ -224,6 +227,9 @@
     <EmbeddedResource Update="Views\Appshell\FlyoutHeaderPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Area\AreaTabs.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Area\Masjeed\MasjeedDetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -234,6 +240,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\Status\Anonymous\EditAnonymousChildPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\Status\StatusTabs.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings\Font\FontPage.xaml">
