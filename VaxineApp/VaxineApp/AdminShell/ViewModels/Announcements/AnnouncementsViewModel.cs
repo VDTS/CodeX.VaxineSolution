@@ -142,12 +142,13 @@ namespace VaxineApp.AdminShell.ViewModels.Announcements
             }
         }
 
-        async void GoToPostPage()
+        public async void GoToPostPage()
         {
             var route = $"{nameof(AddAnnouncementPage)}";
             await Shell.Current.GoToAsync(route);
         }
-        async void Refresh()
+
+        public async void Refresh()
         {
             IsBusy = true;
 
