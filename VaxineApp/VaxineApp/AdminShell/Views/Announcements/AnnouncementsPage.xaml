@@ -4,10 +4,18 @@
              x:Class="VaxineApp.AdminShell.Views.Announcements.AnnouncementsPage"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Announcements"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+              xmlns:converters="clr-namespace:VaxineApp.Converters"
+             x:DataType="ViewModel:AnnouncementsViewModel"
              Title="Announcements">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="Search" />
   </Shell.SearchHandler>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:ConcatDateTimeConverter x:Key="ConcatDateTimeConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
   <ContentPage.ToolbarItems>
     <ToolbarItem Order="Secondary"
                  Text="{xct:Translate Add}"
@@ -22,11 +30,34 @@
   <ContentPage.BindingContext>
     <ViewModel:AnnouncementsViewModel/>
   </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.Content>
+    <RefreshView Padding="10"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
+                 Command="{Binding PullRefreshCommand}">
+      <CollectionView ItemsSource="{Binding Announcements}">
+        <CollectionView.ItemTemplate>
+          <DataTemplate x:DataType="Model:AnnouncementsModel">
+            <StackLayout Padding="0,5,0,0">
+              <Frame Padding="15"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="15">
+                <Frame.Content>
+                  <StackLayout>
+                    <Label FontAttributes="Bold"
+                           Text="{Binding Title}"></Label>
+                    <Label Text="{Binding Content}"></Label>
+                    <Label Text="{Binding MessageDateTime, Converter={StaticResource ConcatDateTimeConverter}}"
+                           TextColor="DarkBlue"
+                           Margin="200,0,0,0"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+            </StackLayout>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </RefreshView>
+  </ContentPage.Content>
 </ContentPage>
