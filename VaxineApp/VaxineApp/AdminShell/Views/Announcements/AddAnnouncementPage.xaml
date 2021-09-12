@@ -2,16 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Announcements.AddAnnouncementPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Announcements"
+             x:DataType="ViewModel:AddAnnouncementsViewModel"
              Title="Add Announcements">
   <ContentPage.BindingContext>
     <ViewModel:AddAnnouncementsViewModel/>
   </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout Padding="40"
+                 Spacing="10">
+      <Entry Placeholder="{xct:Translate MasjeedName}"
+             Text="{Binding Announcement.Title}"></Entry>
+      <Entry Placeholder="{xct:Translate KeyInfluencer}"
+             Text="{Binding Announcement.Content}"></Entry>
+      
+      <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding PostCommand}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

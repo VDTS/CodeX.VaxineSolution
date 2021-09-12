@@ -2,8 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Announcements.AnnouncementsPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Announcements"
              Title="Announcements">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="Search" />
+  </Shell.SearchHandler>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Add}"
+                 Priority="3"
+                 Command="{Binding GoToPostPageCommand}" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="{xct:Translate SaveAsPdf}"
+                 Command="{Binding SaveAsPDFCommand}"
+                 Priority="0" />
+  </ContentPage.ToolbarItems>
   <ContentPage.BindingContext>
     <ViewModel:AnnouncementsViewModel/>
   </ContentPage.BindingContext>
