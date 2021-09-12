@@ -3,16 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Model="clr-namespace:VaxineApp.Models"
              xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Announcements"
+             xmlns:converters="clr-namespace:VaxineApp.Converters"
              x:Class="VaxineApp.Views.Announcements.AnnouncementsCentrePage"
              x:DataType="ViewModel:AnnouncementsViewModel"
              Shell.TabBarIsVisible="False"
              Title="Announcements 📢">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:ConcatDateTimeConverter x:Key="ConcatDateTimeConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
   <ContentPage.BindingContext>
     <ViewModel:AnnouncementsViewModel></ViewModel:AnnouncementsViewModel>
   </ContentPage.BindingContext>
   <ContentPage.Content>
       <StackLayout>
-    <RefreshView Padding="10"
+      <RefreshView Padding="10"
                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding PullRefreshCommand}">
@@ -20,32 +26,26 @@
           <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="Model:AnnouncementsModel">
               <StackLayout Padding="0,5,0,0">
-              <Frame Padding="15"
+                <Frame Padding="15"
                      BackgroundColor="{StaticResource Card}"
                      HasShadow="True"
                      CornerRadius="15">
-                <Frame.Content>
-                  <StackLayout>
-                    <Label FontAttributes="Bold"
+                  <Frame.Content>
+                    <StackLayout>
+                      <Label FontAttributes="Bold"
                            Text="{Binding Title}"></Label>
-                    <Label Text="{Binding Content}"></Label>
-                    <Label Text="{Binding Time}"
+                      <Label Text="{Binding Content}"></Label>
+                      <Label Text="{Binding MessageDateTime, Converter={StaticResource ConcatDateTimeConverter}}"
                            TextColor="DarkBlue"
-                           Margin="250,0,0,0"></Label>
-                  </StackLayout>
-                </Frame.Content>
+                           Margin="200,0,0,0"></Label>
+                    </StackLayout>
+                  </Frame.Content>
                 </Frame>
               </StackLayout>
             </DataTemplate>
           </CollectionView.ItemTemplate>
         </CollectionView>
-    </RefreshView>
-        <Button Text="See old"
-                WidthRequest="50"
-                HeightRequest="50"
-                BackgroundColor="LightGray"
-                TextColor="blue"
-                Padding="10"></Button>
-      </StackLayout>
+      </RefreshView>
+    </StackLayout>
   </ContentPage.Content>
 </ContentPage>

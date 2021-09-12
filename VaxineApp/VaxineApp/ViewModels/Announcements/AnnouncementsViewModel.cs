@@ -59,10 +59,7 @@ namespace VaxineApp.ViewModels.Announcements
 
         private async void Get()
         {
-            var Date = DateTime.UtcNow;
-            var Month = Date.Month > 9 ? Date.Month.ToString() : $"0{Date.Month}";
-            var Day = Date.Day > 9 ? Date.Day.ToString() : $"0{Date.Day}";
-            var data = await DataService.Get($"Announcements/{Date.Year}-{Month}-{Day}");
+            var data = await DataService.Get($"Announcements");
             if (data != "null" & data != "Error")
             {
                 var clinic = JsonConvert.DeserializeObject<Dictionary<string, AnnouncementsModel>>(data);
@@ -70,10 +67,10 @@ namespace VaxineApp.ViewModels.Announcements
                 {
                     Announcements.Add(new AnnouncementsModel
                     {
-                        FIdDate = item.Key.ToString(),
-                        ActiveTill = item.Value.ActiveTill,
+                        Id = item.Value.Id,
                         Content = item.Value.Content,
-                        Time = item.Value.Time,
+                        IsActive = item.Value.IsActive,
+                        MessageDateTime = item.Value.MessageDateTime,
                         Title = item.Value.Title
                     });
                 }
