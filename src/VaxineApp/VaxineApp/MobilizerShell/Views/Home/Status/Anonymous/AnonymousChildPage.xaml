@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Status.Anonymous.AnonymousChildPage"
+             x:DataType="ViewModel:AnonymousChildViewModel"
+             Title="Anonymous Child">
+  <ContentPage.BindingContext>
+    <ViewModel:AnonymousChildViewModel></ViewModel:AnonymousChildViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Add}"
+                 Priority="3"
+                 Command="{Binding GoToPostPageCommand}" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Edit}"
+                 Command="{Binding GoToPutPageCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Delete}"
+                 Command="{Binding DeleteCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="{xct:Translate SaveAsPdf}"
+                 Command="{Binding SaveAsPDFCommand}"
+                 Priority="0" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <RefreshView Padding="20"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
+                 Command="{Binding PullRefreshCommand}">
+      <CollectionView SelectionMode="Single"
+                      ItemsSource="{Binding AnonymousChild}"
+                      SelectedItem="{Binding SelectedAnonymousChild}">
+        <CollectionView.Header>
+          <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.5*"></ColumnDefinition>
+              <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+                   Text="{xct:Translate ChildName}"></Label>
+            <Label Grid.Column="1"
+                   Text="Type"></Label>
+          </Grid>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+          <DataTemplate x:DataType="Model:AnonymousChildModel">
+            <Grid Padding="10">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Label Grid.Column="0"
+                     Text="{Binding FullName}"></Label>
+              <Label Grid.Column="1"
+                     Text="{Binding Type}"></Label>
+            </Grid>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </RefreshView>
+  </ContentPage.Content>
+</ContentPage>

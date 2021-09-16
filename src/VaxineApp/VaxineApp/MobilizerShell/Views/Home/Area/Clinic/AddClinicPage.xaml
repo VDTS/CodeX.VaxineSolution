@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Area.Clinic.AddClinicPage"
+             Shell.TabBarIsVisible="False"
+             Title="Add Clinic">
+  <ContentPage.BindingContext>
+    <ViewModel:AddClinicViewModel></ViewModel:AddClinicViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout Padding="40"
+                 Spacing="10">
+      <Entry Placeholder="{xct:Translate ClinicName}"
+             Text="{Binding Clinic.ClinicName}"></Entry>
+      <Entry Placeholder="{xct:Translate Fixed}"
+             Text="{Binding Clinic.Fixed}"></Entry>
+      <Entry Placeholder="{xct:Translate Outreach}"
+             Text="{Binding Clinic.Outreach}"></Entry>
+      <StackLayout Orientation="Horizontal">
+        <Entry Placeholder="{xct:Translate Latitude}"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding Clinic.Latitude}"></Entry>
+        <Entry Placeholder="{xct:Translate Longitude}"
+               IsEnabled="False"
+               WidthRequest="140"
+               Text="{Binding Clinic.Longitude}"></Entry>
+        <Button Text=""
+                FontFamily="SegoeMDL2"
+                WidthRequest="50"
+                HeightRequest="50"
+                FontSize="25"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                Command="{Binding AddLocationCommand}"></Button>
+      </StackLayout>
+
+      <Button Text="{xct:Translate Save}"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding PostCommand}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

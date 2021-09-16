@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Status.Anonymous.AddAnonymousChildPage"
+             x:DataType="ViewModel:AddAnonymousChildViewModel"
+             Shell.TabBarIsVisible="False"
+             Title="Add Anonymous Child">
+  <ContentPage.BindingContext>
+    <ViewModel:AddAnonymousChildViewModel></ViewModel:AddAnonymousChildViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <StackLayout Padding="40"
+                 Spacing="10"
+                 x:Name="PageContent">
+      <Entry Text="{Binding AnonymousChildModel.FullName, Mode=TwoWay}"
+             Placeholder="{xct:Translate FullName}"></Entry>
+      <Picker Title="{xct:Translate Gender}"
+              SelectedItem="{Binding AnonymousChildModel.Gender, Mode=OneWayToSource}">
+        <Picker.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>Male</x:String>
+            <x:String>Female</x:String>
+          </x:Array>
+        </Picker.ItemsSource>
+      </Picker>
+      <Label Text="Date of Birth"></Label>
+      <DatePicker Date="{Binding AnonymousChildModel.DOB, Mode=OneWayToSource}"></DatePicker>
+      <Picker Title="Type"
+              SelectedItem="{Binding AnonymousChildModel.Type, Mode=OneWayToSource}">
+        <Picker.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>Guest</x:String>
+            <x:String>IDP</x:String>
+            <x:String>Refugee</x:String>
+            <x:String>Return</x:String>
+          </x:Array>
+        </Picker.ItemsSource>
+      </Picker>
+      <StackLayout Orientation="Horizontal">
+        <CheckBox IsChecked="{Binding AnonymousChildModel.IsVaccined, Mode=TwoWay}"
+                  IsEnabled="False" />
+        <Label Text="Vaccine Status"></Label>
+      </StackLayout>
+      <Button Text="{xct:Translate Save}"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding PostCommand}"
+              Margin="20"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
