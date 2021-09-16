@@ -99,23 +99,25 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
 </head>
 <body>
     <h1>VaxineApp</h1>
-    <h3>1.5.3 beta</h3>
+    <h3>1.6.0 beta</h3>
     <h2>What's new?</h2>
 
     <ul>
-        <li>Id Token and Refresh Token added for database security</li>
+        <li>Adds Admin pages to app</li>
+        <li>Adds TabbedPages to Status and Area</li>
+        <li>Adds SnackBar toast to Clinic delete function</li>
+        <li>Mobilizer Appshell redesign</li>
     </ul>
 
     <h2>Bug fixes and exceptions handled</h2>
 
     <ul>
-        <li>none</li>
+        <li>fixes show Masjeed Page when you open Area Page</li>
     </ul>
 
     <h2>Known issues</h2>
     <ul>
         <li>Can't Edit Location in MasjeedEdit Page</li>
-        <li>Show Masjeed Page when you open Area Page</li>
     </ul>
 
     <h2>Important links</h2>
