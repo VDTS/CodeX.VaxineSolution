@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.MobilizerShell.Views.Appshell.FlyoutFooterPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels">
+  <ContentView.BindingContext>
+    <ViewModel:AppShellViewModel></ViewModel:AppShellViewModel>
+  </ContentView.BindingContext>
+  <ContentView.Content>
+    <Grid HeightRequest="50">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="0.2*"></ColumnDefinition>
+        <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        <ColumnDefinition Width="0.5*"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Button Grid.Column="0"
+                Text=""
+                FontFamily="SegoeMDL2"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                FontSize="30"
+                HorizontalOptions="Start"
+                Command="{Binding GoToThemesPageCommand}"></Button>
+      <Label Grid.Column="1"
+               Text="Automatic"
+               VerticalOptions="Center"
+               FontSize="18"
+               TextColor="Black"></Label>
+      <Button Grid.Column="2"
+                Text=""
+                Command="{Binding GoToSettingsPageCommand}"
+                FontFamily="SegoeMDL2"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                FontSize="30"
+                HorizontalOptions="End"></Button>
+    </Grid>
+  </ContentView.Content>
+</ContentView>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Status.StatusTabs"
+            xmlns:ChildPage="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Status"
+            xmlns:AnonymousPage="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Status.Anonymous"
+            Title="Home">
+  <!--Pages can be added as references or inline-->
+  <ChildPage:StatusPage Title="Child"/>
+  <AnonymousPage:AnonymousChildPage Title="Anonymous Child" />
+</TabbedPage>

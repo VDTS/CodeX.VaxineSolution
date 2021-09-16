@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Area.Doctor.DoctorPage"
+             x:DataType="ViewModel:DoctorViewModel"
+             Title="Doctor">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="{xct:Translate Search}" />
+  </Shell.SearchHandler>
+  <ContentPage.BindingContext>
+    <ViewModel:DoctorViewModel></ViewModel:DoctorViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Add}"
+                 Priority="3"
+                 Command="{Binding GoToPostPageCommand}" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Edit}"
+                 Command="{Binding GoToPutPageCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Delete}"
+                 Command="{Binding DeleteCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="{xct:Translate SaveAsPdf}"
+                 Command="{Binding SaveAsPDFCommand}"
+                 Priority="0" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <RefreshView Padding="10"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
+                 Command="{Binding PullRefreshCommand}">
+      <CollectionView SelectionMode="Single"
+                      ItemsSource="{Binding Doctors}"
+                      SelectedItem="{Binding SelectedDoctor}">
+        <CollectionView.Header>
+          <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.2*"></ColumnDefinition>
+              <ColumnDefinition Width="0.8*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+                   Text="Support"></Label>
+            <Label Grid.Column="1"
+                   Text="{xct:Translate DoctorName}"></Label>
+          </Grid>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+          <DataTemplate x:DataType="Model:DoctorModel">
+            <Grid Padding="10">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.8*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <CheckBox IsEnabled="False"
+                        Grid.Column="0"
+                        IsChecked="{Binding IsHeProvindingSupportForSIAAndVaccination}"></CheckBox>
+              <Label WidthRequest="40"
+                     HeightRequest="40"
+                     Grid.Column="1"
+                     Text="{Binding Name}"></Label>
+            </Grid>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </RefreshView>
+  </ContentPage.Content>
+</ContentPage>

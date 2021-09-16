@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Area.Influencer.AddInfluencerPage"
+             x:DataType="ViewModel:AddInfluecerViewModel"
+             Size="300,400">
+  <xct:Popup.BindingContext>
+    <ViewModel:AddInfluecerViewModel></ViewModel:AddInfluecerViewModel>
+  </xct:Popup.BindingContext>
+    <StackLayout Padding="40"
+                 Spacing="10">
+
+      <Entry Placeholder="{xct:Translate Name}"
+             Text="{Binding Influencer.Name}"></Entry>
+      <Entry Placeholder="{xct:Translate Contact}"
+             Text="{Binding Influencer.Contact}"
+             Keyboard="Telephone"></Entry>
+      <Entry Placeholder="{xct:Translate Position}"
+             Text="{Binding Influencer.Position}">
+      </Entry>
+      <StackLayout Orientation="Horizontal"
+                   Spacing="10">
+        <CheckBox IsChecked="{Binding Influencer.DoesHeProvidingSupport}"></CheckBox>
+        <Label Text="{xct:Translate DoesHeProvidingSupport}"></Label>
+      </StackLayout>
+
+      <Button Text="{xct:Translate Save}"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding PostCommand}"></Button>
+
+    </StackLayout>
+</xct:Popup>
