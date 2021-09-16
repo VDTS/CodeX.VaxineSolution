@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Family"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Family.FamilyListPage"
+             xmlns:StaticData="clr-namespace:VaxineApp.StaticData"
+             x:DataType="ViewModel:FamilyListViewModel"
+             Title="Family List">
+  <Shell.SearchHandler>
+    <ViewModel:FamilyListSearchHandler Placeholder="Enter search term"
+                                       ShowsResults="true">
+      <ViewModel:FamilyListSearchHandler.ItemTemplate>
+        <DataTemplate x:DataType="Model:FamilyModel">
+          <Grid Padding="10"
+                ColumnDefinitions="0.45*,0.55*">
+            <Label Grid.Column="0" Text="{Binding ParentName}" />
+            <Label Grid.Column="1"
+                   Text="{Binding PhoneNumber}"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center" />
+          </Grid>
+        </DataTemplate>
+      </ViewModel:FamilyListSearchHandler.ItemTemplate>
+    </ViewModel:FamilyListSearchHandler>
+  </Shell.SearchHandler>
+  <ContentPage.BindingContext>
+    <ViewModel:FamilyListViewModel></ViewModel:FamilyListViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate AddFamily}"
+                 Priority="3"
+                 Command="{Binding GoToPostPageCommand}" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="{xct:Translate SaveAsPdf}"
+                 Command="{Binding SaveAsPDFCommand}"
+                 Priority="0" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
+                 Command="{Binding PullRefreshCommand}">
+      <CollectionView SelectionMode="Single"
+                      ItemsSource="{Binding Families}"
+                      SelectedItem="{Binding SelectedFamily}"
+                      SelectionChangedCommand="{Binding SelectionCommand}">
+        <CollectionView.Header>
+          <Frame Grid.Column="0"
+                 Padding="15,15,15,15"
+                 HeightRequest="40"
+                 BackgroundColor="{StaticResource CardHeader}"
+                 HasShadow="True"
+                 xct:TouchEffect.AnimationDuration="250"
+                 xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                 xct:TouchEffect.PressedScale="0.8"
+                 xct:TouchEffect.PressedOpacity="0.6">
+            <Frame.Content>
+              <StackLayout Orientation="Vertical"
+                           HorizontalOptions="StartAndExpand">
+                <Label TextColor="White"
+                       Text="HouseNo"></Label>
+                <Label TextColor="White"
+                       FontSize="Subtitle"
+                       Text="Parent Name"></Label>
+              </StackLayout>
+            </Frame.Content>
+          </Frame>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+          <DataTemplate x:DataType="Model:FamilyModel">
+            <StackLayout Padding="0,2,0,0">
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     HeightRequest="30"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="0"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label FontSize="Micro"
+                           Text="{Binding HouseNo}"></Label>
+                    <Label Text="{Binding ParentName}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+            </StackLayout>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </RefreshView>
+  </ContentPage.Content>
+</ContentPage>

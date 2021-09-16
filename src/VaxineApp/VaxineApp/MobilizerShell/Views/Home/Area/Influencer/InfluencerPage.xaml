@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Area.Influencer.InfluencerPage"
+             x:DataType="ViewModel:InfluencerViewModel"
+             Title="Influencer">
+  <Shell.SearchHandler>
+    <SearchHandler Placeholder="Search" />
+  </Shell.SearchHandler>
+  <ContentPage.BindingContext>
+    <ViewModel:InfluencerViewModel></ViewModel:InfluencerViewModel>
+  </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Add}"
+                 Priority="3"
+                 Command="{Binding GoToPostPageCommand}" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Edit}"
+                 Command="{Binding GoToPutPageCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Delete}"
+                 Command="{Binding DeleteCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="{xct:Translate SaveAsPdf}"
+                 Command="{Binding SaveAsPDFCommand}"
+                 Priority="0" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <RefreshView Padding="10"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
+                 Command="{Binding PullRefreshCommand}">
+      <CollectionView SelectionMode="Single"
+                      ItemsSource="{Binding Influencers}"
+                      SelectedItem="{Binding SelectedInfluencer}">
+        <CollectionView.Header>
+          <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.2*"></ColumnDefinition>
+              <ColumnDefinition Width="0.01*"></ColumnDefinition>
+              <ColumnDefinition Width="0.5*"></ColumnDefinition>
+              <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"></RowDefinition>
+              <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label WidthRequest="40"
+                   HeightRequest="40"
+                   Grid.Column="0"
+                   Text="Position"></Label>
+            <Label Grid.Column="2"
+                   Grid.Row="0"
+                   FontSize="20"
+                   Text="Influencer Name"></Label>
+            <Label Grid.Column="2"
+                   Grid.Row="1"
+                   Padding="0, -5, 0, 0"
+                   Text="Contact"></Label>
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Padding="0, -5, 0, 0"
+                   Text="support"></Label>
+          </Grid>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+          <DataTemplate x:DataType="Model:InfluencerModel">
+            <Grid Padding="10">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.01*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+              </Grid.RowDefinitions>
+              <Label WidthRequest="40"
+                     HeightRequest="40"
+                     Grid.Column="0"
+                     Text="{Binding Position}"></Label>
+              <Label Grid.Column="2"
+                     Grid.Row="0"
+                     FontSize="20"
+                     Text="{Binding Name}"></Label>
+              <Label Grid.Column="2"
+                     Grid.Row="1"
+                     Padding="0, -5, 0, 0"
+                     Text="{Binding Contact}"></Label>
+              <CheckBox Grid.Row="1"
+                        Grid.Column="0"
+                        IsEnabled="False"
+                        IsChecked="{Binding DoesHeProvidingSupport}"></CheckBox>
+            </Grid>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </RefreshView>
+  </ContentPage.Content>
+</ContentPage>

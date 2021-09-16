@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Status.Vaccine"
+             x:Class="VaxineApp.MobilizerShell.Views.Home.Status.Vaccine.AddVaccinePage"
+             x:DataType="ViewModel:AddVaccineViewModel"
+             Shell.TabBarIsVisible="False"
+             Shell.PresentationMode="Modal"
+             Title="Add Vaccine">
+  <ContentPage.Content>
+    <StackLayout Padding="40"
+                 Spacing="10">
+      <DatePicker Date="{Binding Vaccine.VaccinePeriod, Mode=OneWayToSource}"></DatePicker>
+      <Picker Title="Vaccine Status"
+              SelectedItem="{Binding Vaccine.VaccineStatus, Mode=TwoWay}">
+        <Picker.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>Pluse</x:String>
+            <x:String>CirclePlus</x:String>
+            <x:String>V</x:String>
+            <x:String>CircleV</x:String>
+            <x:String>O</x:String>
+            <x:String>Blank</x:String>
+            <x:String>NSS</x:String>
+            <x:String>NSSPlus</x:String>
+            <x:String>NSSV</x:String>
+            <x:String>FMPlus</x:String>
+            <x:String>FMV</x:String>
+            <x:String>RRCPlus</x:String>
+            <x:String>RRCV</x:String>
+            <x:String>MRCPlus</x:String>
+            <x:String>MRCV</x:String>
+            <x:String>RightVector</x:String>
+          </x:Array>
+        </Picker.ItemsSource>
+      </Picker>
+      <Button Text="{xct:Translate Add}"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding PostCommand}"
+              Margin="20"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
