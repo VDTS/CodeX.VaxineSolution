@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env bash
 
 
-VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp/Constants.cs
+VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/src/VaxineApp/VaxineApp/Constants.cs
 
 if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
@@ -12,7 +12,7 @@ then
     cat $VAXINE_APP_CONSTANT_FILE
 fi
 
-VAXINE_ANDROID_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/AppConstants.cs
+VAXINE_ANDROID_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/src/VaxineApp/VaxineApp.Android/AppConstants.cs
 
 if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then

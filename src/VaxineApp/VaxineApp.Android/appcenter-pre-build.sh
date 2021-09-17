@@ -26,7 +26,7 @@ then
     exit
 fi
 
-VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp/Constants.cs
+VAXINE_APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/src/VaxineApp/VaxineApp/Constants.cs
 
 if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
@@ -68,7 +68,7 @@ fi
 
 # Support for multiple Apps (Stable and Dev)
 
-ANDROID_MANIFEST=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/Properties/AndroidManifest.xml
+ANDROID_MANIFEST=$APPCENTER_SOURCE_DIRECTORY/src/VaxineApp/VaxineApp.Android/Properties/AndroidManifest.xml
 
 # Changing App Package Name
 
@@ -91,7 +91,7 @@ fi
 
 # Changing App Name
 
-VAXINE_ANDROID_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/VaxineApp/VaxineApp.Android/AppConstants.cs
+VAXINE_ANDROID_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/src/VaxineApp/VaxineApp.Android/AppConstants.cs
 
 if [ $APPCENTER_BRANCH == "pre-release" ]
 then
