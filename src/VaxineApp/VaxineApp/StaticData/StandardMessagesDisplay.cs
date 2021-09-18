@@ -33,6 +33,10 @@ namespace VaxineApp.StaticData
         }
 
         // Errors
+        public static void InputToast(string message)
+        {
+            DependencyService.Get<IToast>()?.MakeToast(message);
+        }
         public static void ErrorTracked()
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ErrorTracked);

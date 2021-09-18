@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.Models;
@@ -94,6 +96,13 @@ namespace VaxineApp.ViewModels.Home.Profile
             }
             else
             {
+                ConvertToModel(jData);
+            }
+        }
+        private void ConvertToModel(string jData)
+        {
+            try
+            {
                 var data = JsonConvert.DeserializeObject<ProfileModel>(jData);
                 if (Preferences.Get("UserLocalId", "") == data.LocalId)
                 {
@@ -111,9 +120,12 @@ namespace VaxineApp.ViewModels.Home.Profile
                     };
                 }
             }
-
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex);
+                StandardMessagesDisplay.InputToast(ex.Message);
+            }
         }
-
         public async void Refresh()
         {
             IsBusy = true;
