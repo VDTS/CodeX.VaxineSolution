@@ -8,6 +8,7 @@ using VaxineApp.Views.Help;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Settings.Main;
 using VaxineApp.Views.Settings.Themes;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VaxineApp.SupervisorShellDir.ViewModel
@@ -104,7 +105,9 @@ namespace VaxineApp.SupervisorShellDir.ViewModel
 
         private async void LogginOut(object obj)
         {
-            await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
+            Xamarin.Essentials.SecureStorage.RemoveAll();
+            Preferences.Clear();
+
             Application.Current.MainPage = new AccessShell();
             await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
         }
