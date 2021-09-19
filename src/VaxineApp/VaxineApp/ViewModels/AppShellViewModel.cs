@@ -138,8 +138,9 @@ namespace VaxineApp.ViewModels
 
         private async void LogginOut(object obj)
         {
-            await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
+            Xamarin.Essentials.SecureStorage.RemoveAll();
             Preferences.Clear();
+
             Application.Current.MainPage = new AccessShell();
             await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
         }
