@@ -226,10 +226,10 @@
     <EmbeddedResource Update="Views\Announcements\AnnouncementsCentrePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="MobilizerShell\Views\Appshell\FlyoutFooterPage.xaml">
+    <EmbeddedResource Update="Views\Appshell\FlyoutFooterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="MobilizerShell\Views\Appshell\FlyoutHeaderPage.xaml">
+    <EmbeddedResource Update="Views\Appshell\FlyoutHeaderPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MobilizerShell\Views\Home\Area\AreaTabs.xaml">

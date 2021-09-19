@@ -4,7 +4,7 @@
        xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
        xmlns:localFont="clr-namespace:VaxineApp.Font"
        xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels"
-       xmlns:AppshellPage="clr-namespace:VaxineApp.MobilizerShell.Views.Appshell"
+       xmlns:AppshellPage="clr-namespace:VaxineApp.Views.Appshell"
        xmlns:Area="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Area"
        xmlns:HomeFamily="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Family"
        xmlns:HomeInsights="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Insights"
