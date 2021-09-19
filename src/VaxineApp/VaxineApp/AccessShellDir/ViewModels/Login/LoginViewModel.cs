@@ -1,6 +1,7 @@
 ﻿using DataAccess.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -10,6 +11,7 @@ using VaxineApp.AccessShellDir.Views.Login.ForgotPassword;
 using VaxineApp.AdminShell.Views.AdminAppShell;
 using VaxineApp.MobilizerShell.Views.Appshell;
 using VaxineApp.Models;
+using VaxineApp.Models.Enums;
 using VaxineApp.MVVMHelper;
 using VaxineApp.ParentShellDir.Views.ParentAppshell;
 using VaxineApp.StaticData;
@@ -198,20 +200,22 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
 
         private static async Task GoToApp()
         {
-            var role = await Xamarin.Essentials.SecureStorage.GetAsync("Role");
-            if (role == "Mobilizer")
+            Enum.TryParse(Xamarin.Essentials.SecureStorage.GetAsync("Role").Result, out Role role);
+
+
+            if (role == Role.Mobilizer)
             {
                 Application.Current.MainPage = new Mobilizerappshell();
             }
-            else if (role == "Supervisor")
+            else if (role == Role.Supervisor)
             {
                 Application.Current.MainPage = new SupervisorShell();
             }
-            else if (role == "Parent")
+            else if (role == Role.Parent)
             {
                 Application.Current.MainPage = new ParentShell();
             }
-            else if (role == "Admin")
+            else if (role == Role.Admin)
             {
                 Application.Current.MainPage = new AdminAppShell();
             }

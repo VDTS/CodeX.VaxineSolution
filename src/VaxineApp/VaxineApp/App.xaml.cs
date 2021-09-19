@@ -3,10 +3,12 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
+using System;
 using VaxineApp.AccessShellDir.Views.AccessAppshell;
 using VaxineApp.AdminShell.Views.AdminAppShell;
 using VaxineApp.AndroidNativeApi;
 using VaxineApp.MobilizerShell.Views.Appshell;
+using VaxineApp.Models.Enums;
 using VaxineApp.ParentShellDir.Views.ParentAppshell;
 using VaxineApp.Resx;
 using VaxineApp.SupervisorShellDir.Views.SupervisorAppshell;
@@ -46,20 +48,22 @@ namespace VaxineApp
             var isLoogged = Xamarin.Essentials.SecureStorage.GetAsync("isLogged").Result;
             if (isLoogged == "1")
             {
-                var role = Xamarin.Essentials.SecureStorage.GetAsync("Role").Result;
-                if (role == "Mobilizer")
+
+                Enum.TryParse(Xamarin.Essentials.SecureStorage.GetAsync("Role").Result, out Role role);
+
+                if (role == Role.Mobilizer)
                 {
                     MainPage = new Mobilizerappshell();
                 }
-                else if (role == "Supervisor")
+                else if (role == Role.Supervisor)
                 {
                     MainPage = new SupervisorShell();
                 }
-                else if (role == "Parent")
+                else if (role == Role.Parent)
                 {
                     MainPage = new ParentShell();
                 }
-                else if (role == "Admin")
+                else if (role == Role.Admin)
                 {
                     MainPage = new AdminAppShell();
                 }
