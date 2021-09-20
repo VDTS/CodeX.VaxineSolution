@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,8 +20,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
     public class ClinicViewModel : ViewModelBase
     {
         // Property
-        private ObservableCollection<ClinicModel> clinics;
-        public ObservableCollection<ClinicModel> Clinics
+        private ObservableCollection<ClinicModel>? clinics;
+        public ObservableCollection<ClinicModel>? Clinics
         {
             get
             {
@@ -33,8 +34,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
             }
         }
 
-        private ClinicModel selectedClinic;
-        public ClinicModel SelectedClinic
+        private ClinicModel? selectedClinic;
+        public ClinicModel? SelectedClinic
         {
             get
             {
@@ -63,37 +64,16 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
 
 
         // Commands
-        // Crud Commands
-        public ICommand PutCommand { private set; get; }
-        public ICommand PostCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
-
-        // Crud Commands fo child item
-
-        public ICommand SubPutCommand { private set; get; }
-        public ICommand SubPostCommand { private set; get; }
-        public ICommand SubDeleteCommand { private set; get; }
-
-        // Other Commands
         public ICommand SelectionCommand { private set; get; }
         public ICommand CancelSelectionCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
-
-
-        // Goto Commands
         public ICommand GoToPostPageCommand { private set; get; }
         public ICommand GoToPutPageCommand { private set; get; }
-        public ICommand GoToDetailsPageCommand { private set; get; }
         public ICommand GoToMapPageCommand { private set; get; }
-
-        // Goto Commands fo child item
-        public ICommand GoToSubPostPageCommand { private set; get; }
-        public ICommand GoToSubPutPageCommand { private set; get; }
-        public ICommand GoToSubDetailsPageCommand { private set; get; }
 
         // Functional Commands
         public ICommand SaveAsPDFCommand { private set; get; }
-        public ICommand DialerCommand { private set; get; }
 
         // ctor
         public ClinicViewModel()
@@ -117,12 +97,12 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
 
         public void Clear()
         {
-            Clinics.Clear();
+            Clinics?.Clear();
         }
 
         public async void CanExecuteDelete()
         {
-            if (SelectedClinic.ClinicName != null)
+            if (SelectedClinic?.ClinicName != null)
             {
 
                 var acceptAction = new SnackBarActionOptions()
@@ -159,7 +139,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
         }
         public async Task ExecuteDelete()
         {
-            var deleteResponse = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic.FId}");
+            var deleteResponse = await DataService.Delete($"Clinic/{Preferences.Get("TeamId", "")}/{SelectedClinic?.FId}");
 
             if (deleteResponse == "ConnectionError")
             {
@@ -178,7 +158,9 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
                 _ = await DataService.Put((--StaticDataStore.TeamStats.TotalClinics).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalClinics");
 
                 StandardMessagesDisplay.ItemDeletedToast();
-                Clinics.Remove(SelectedClinic);
+
+                if (SelectedClinic != null)
+                    Clinics?.Remove(SelectedClinic);
             }
         }
         public async void Get()
@@ -203,18 +185,28 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(jData);
-                foreach (KeyValuePair<string, ClinicModel> item in data)
+                try
                 {
-                    Clinics.Add(
-                            new ClinicModel
-                            {
-                                FId = item.Key,
-                                ClinicName = item.Value.ClinicName,
-                                Fixed = item.Value.Fixed,
-                                Outreach = item.Value.Outreach
-                            }
-                        );
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, ClinicModel>>(jData);
+                    
+                    if(data != null)
+                    foreach (KeyValuePair<string, ClinicModel> item in data)
+                    {
+                        Clinics?.Add(
+                                new ClinicModel
+                                {
+                                    FId = item.Key,
+                                    ClinicName = item.Value.ClinicName,
+                                    Fixed = item.Value.Fixed,
+                                    Outreach = item.Value.Outreach
+                                }
+                            );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -237,7 +229,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
 
         public async void GoToPutPage()
         {
-            if (SelectedClinic.ClinicName != null)
+            if (SelectedClinic?.ClinicName != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(SelectedClinic);
                 var route = $"{nameof(EditClinicPage)}?Clinic={jsonClinic}";
@@ -277,7 +269,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
 
         public void CancelSelection()
         {
-            if (SelectedClinic.Id != null)
+            if (SelectedClinic?.Id != null)
             {
                 SelectedClinic = null;
             }

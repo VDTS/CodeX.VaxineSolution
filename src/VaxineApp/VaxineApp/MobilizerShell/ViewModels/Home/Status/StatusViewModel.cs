@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -16,8 +17,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
     public class StatusViewModel : ViewModelBase
     {
         // Property
-        private ObservableCollection<ChildGroupbyFamilyModel> familyGroup;
-        public ObservableCollection<ChildGroupbyFamilyModel> FamilyGroup
+        private ObservableCollection<ChildGroupbyFamilyModel>? familyGroup;
+        public ObservableCollection<ChildGroupbyFamilyModel>? FamilyGroup
         {
             get
             {
@@ -30,8 +31,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
             }
         }
 
-        private ChildModel selectedChild;
-        public ChildModel SelectedChild
+        private ChildModel? selectedChild;
+        public ChildModel? SelectedChild
         {
             get
             {
@@ -61,7 +62,6 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
 
         // Command
 
-        public ICommand SelectionCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand GoToDetailsPageCommand { private set; get; }
@@ -104,46 +104,58 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(jData);
-                foreach (KeyValuePair<string, FamilyModel> item in data)
+                try
                 {
-                    var nestedJData = await DataService.Get($"Child/{item.Value.Id}");
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(jData);
 
-                    if (nestedJData == "ConnectionError")
-                    {
-                        StandardMessagesDisplay.NoConnectionToast();
-                    }
-                    else if (nestedJData == "null")
-                    {
-                        StandardMessagesDisplay.NoDataDisplayMessage();
-                    }
-                    else if (nestedJData == "Error")
-                    {
-                        StandardMessagesDisplay.Error();
-                    }
-                    else if (nestedJData == "ErrorTracked")
-                    {
-                        StandardMessagesDisplay.ErrorTracked();
-                    }
-                    else
-                    {
-                        var nestedData = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(nestedJData);
-                        List<ChildModel> lp = new List<ChildModel>();
-                        foreach (KeyValuePair<string, ChildModel> item2 in nestedData)
+                    if (data != null)
+                        foreach (KeyValuePair<string, FamilyModel> item in data)
                         {
-                            lp.Add(
-                            new ChildModel
+                            var nestedJData = await DataService.Get($"Child/{item.Value.Id}");
+
+                            if (nestedJData == "ConnectionError")
                             {
-                                Id = item2.Value.Id,
-                                FullName = item2.Value.FullName,
-                                Gender = item2.Value.Gender,
-                                DOB = item2.Value.DOB,
-                                OPV0 = item2.Value.OPV0,
-                                RINo = item2.Value.RINo
-                            });
+                                StandardMessagesDisplay.NoConnectionToast();
+                            }
+                            else if (nestedJData == "null")
+                            {
+                                StandardMessagesDisplay.NoDataDisplayMessage();
+                            }
+                            else if (nestedJData == "Error")
+                            {
+                                StandardMessagesDisplay.Error();
+                            }
+                            else if (nestedJData == "ErrorTracked")
+                            {
+                                StandardMessagesDisplay.ErrorTracked();
+                            }
+                            else
+                            {
+                                var nestedData = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(nestedJData);
+                                List<ChildModel> lp = new List<ChildModel>();
+
+                                if (nestedData != null)
+                                    foreach (KeyValuePair<string, ChildModel> item2 in nestedData)
+                                    {
+                                        lp.Add(
+                                        new ChildModel
+                                        {
+                                            Id = item2.Value.Id,
+                                            FullName = item2.Value.FullName,
+                                            Gender = item2.Value.Gender,
+                                            DOB = item2.Value.DOB,
+                                            OPV0 = item2.Value.OPV0,
+                                            RINo = item2.Value.RINo
+                                        });
+                                    }
+                                FamilyGroup?.Add(new ChildGroupbyFamilyModel(item.Value.HouseNo, lp));
+                            }
                         }
-                        FamilyGroup.Add(new ChildGroupbyFamilyModel(item.Value.HouseNo, lp));
-                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -165,7 +177,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
 
         public void Clear()
         {
-            FamilyGroup.Clear();
+            FamilyGroup?.Clear();
         }
 
         public void CancelSelection()

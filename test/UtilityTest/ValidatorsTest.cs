@@ -62,8 +62,6 @@ namespace Test
         {
             // Arrange
             DateTime currentPeriod = new(2021, 8, 26);
-            DateTime endDate = new(2021, 8, 28);
-            DateTime startDate = new(2021, 8, 24);
 
             // Act
             bool result = VaccinePeriodValidator.IsPeriodAvailable(currentPeriod);

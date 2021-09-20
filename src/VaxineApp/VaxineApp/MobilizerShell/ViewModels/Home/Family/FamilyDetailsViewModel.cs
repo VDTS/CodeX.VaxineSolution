@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,8 +18,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
     public class FamilyDetailsViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
         // Property
-        private SearchBoxVisibility isSearchVisible;
-        public SearchBoxVisibility IsSearchVisible
+        private SearchBoxVisibility? isSearchVisible;
+        public SearchBoxVisibility? IsSearchVisible
         {
             get
             {
@@ -30,8 +31,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
                 OnPropertyChanged();
             }
         }
-        private ObservableCollection<ChildModel> childs;
-        public ObservableCollection<ChildModel> Childs
+        private ObservableCollection<ChildModel>? childs;
+        public ObservableCollection<ChildModel>? Childs
         {
             get
             {
@@ -44,8 +45,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             }
         }
 
-        private ChildModel selectedChild;
-        public ChildModel SelectedChild
+        private ChildModel? selectedChild;
+        public ChildModel? SelectedChild
         {
             get
             {
@@ -72,23 +73,17 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             }
         }
 
-        public FamilyModel Family { get; set; }
+        public FamilyModel? Family { get; set; }
 
 
         // Command
         public ICommand GoToSubPutPageCommand { private set; get; }
-        public ICommand PostCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
         public ICommand DialerCommand { private set; get; }
-
-        public ICommand SubPutCommand { private set; get; }
         public ICommand GoToSubPostPageCommand { private set; get; }
         public ICommand SubDeleteCommand { private set; get; }
-        public ICommand SelectionCommand { private set; get; }
-        public ICommand CancelSelectionCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
         public ICommand GoToPutPageCommand { private set; get; }
-        public ICommand SaveAsPDFCommand { private set; get; }
         public ICommand ShareOnAppsCommand { private set; get; }
 
         // ctor
@@ -118,25 +113,29 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
         {
             await Share.RequestAsync(new ShareTextRequest
             {
-                Title = $"Share {Family.ParentName}'s Family",
+                Title = $"Share {Family?.ParentName}'s Family",
                 Text = ShareFamilyText()
             });
 
         }
 
-        private string ShareFamilyText()
+        private string? ShareFamilyText()
         {
-            string shareText = $"{Family.ParentName}'s Family: {Environment.NewLine}";
-            foreach (var item in Childs)
-            {
-                shareText += $"{item.FullName} {Environment.NewLine}";
-            }
+            string shareText = $"{Family?.ParentName}'s Family: {Environment.NewLine}";
 
-            return shareText;
+            if (Childs != null)
+                foreach (var item in Childs)
+                {
+                    shareText += $"{item.FullName} {Environment.NewLine}";
+                }
+
+            if (shareText != null)
+                return shareText;
+            return null;
         }
         private async void SubDelete(object obj)
         {
-            if (SelectedChild.FId != null)
+            if (SelectedChild?.FId != null)
             {
                 var VaccineData = await DataService.Get($"Vaccine/{SelectedChild.Id}");
                 if (VaccineData == "ConnectionError")
@@ -148,26 +147,30 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
                     var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedChild.FullName);
                     if (isDeleteAccepted)
                     {
-                        var deleteResponse = await DataService.Delete($"Child/{Family.Id}/{SelectedChild.FId}");
-                        if (deleteResponse == "ConnectionError")
-                        {
-                            StandardMessagesDisplay.NoConnectionToast();
-                        }
-                        else if (deleteResponse == "Error")
-                        {
-                            StandardMessagesDisplay.Error();
-                        }
-                        else if (deleteResponse == "ErrorTracked")
-                        {
-                            StandardMessagesDisplay.ErrorTracked();
-                        }
-                        else if (deleteResponse == "null")
-                        {
-                            _ = await DataService.Put((--StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamId", "")}/TotalChilds");
 
-                            StandardMessagesDisplay.ItemDeletedToast();
+                        if (Family?.Id != Guid.Empty)
+                        {
+                            var deleteResponse = await DataService.Delete($"Child/{Family?.Id}/{SelectedChild.FId}");
+                            if (deleteResponse == "ConnectionError")
+                            {
+                                StandardMessagesDisplay.NoConnectionToast();
+                            }
+                            else if (deleteResponse == "Error")
+                            {
+                                StandardMessagesDisplay.Error();
+                            }
+                            else if (deleteResponse == "ErrorTracked")
+                            {
+                                StandardMessagesDisplay.ErrorTracked();
+                            }
+                            else if (deleteResponse == "null")
+                            {
+                                _ = await DataService.Put((--StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamId", "")}/TotalChilds");
 
-                            Childs.Remove(SelectedChild);
+                                StandardMessagesDisplay.ItemDeletedToast();
+
+                                Childs?.Remove(SelectedChild);
+                            }
                         }
                     }
                     else
@@ -177,15 +180,25 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
                 }
                 else
                 {
-                    var num = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(VaccineData);
-                    StandardMessagesDisplay.ChildRecursiveDeletionNotAllowed(SelectedChild.FullName, num.Values.Count);
+                    try
+                    {
+                        var num = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(VaccineData);
+
+                        if(num != null)
+                        StandardMessagesDisplay.ChildRecursiveDeletionNotAllowed(SelectedChild.FullName, num.Values.Count);
+                    }
+                    catch (Exception ex)
+                    {
+                        Crashes.TrackError(ex);
+                        StandardMessagesDisplay.InputToast(ex.Message);
+                    }
                 }
             }
         }
 
         private async void Dialer()
         {
-            string number = Family.PhoneNumber;
+            string? number = Family?.PhoneNumber;
             try
             {
                 PhoneDialer.Open(number);
@@ -206,10 +219,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
 
         private async void GoToSubPutPage()
         {
-            if (SelectedChild.FullName != null)
+            if (SelectedChild?.FullName != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(SelectedChild);
-                var route = $"{nameof(EditChildPage)}?Child={jsonClinic}&FamilyId={Family.Id}";
+                var route = $"{nameof(EditChildPage)}?Child={jsonClinic}&FamilyId={Family?.Id}";
                 await Shell.Current.GoToAsync(route);
                 SelectedChild = null;
             }
@@ -233,52 +246,56 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
 
         public void Clear()
         {
-            Childs.Clear();
+            Childs?.Clear();
         }
         public async void Delete()
         {
-            if (Childs.Count == 0)
+            if (Childs?.Count == 0)
             {
-                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage($"{Family.ParentName}'s Family ");
-                if (isDeleteAccepted)
+                if (Family?.ParentName != null)
                 {
-                    var deleteResponse = await DataService.Delete($"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
-                    if (deleteResponse == "ConnectionError")
+                    var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage($"{Family.ParentName}'s Family ");
+                    if (isDeleteAccepted)
                     {
-                        StandardMessagesDisplay.NoConnectionToast();
-                    }
-                    else if (deleteResponse == "Error")
-                    {
-                        StandardMessagesDisplay.Error();
-                    }
-                    else if (deleteResponse == "ErrorTracked")
-                    {
-                        StandardMessagesDisplay.ErrorTracked();
-                    }
-                    else if (deleteResponse == "null")
-                    {
-                        _ = await DataService.Put((--StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
+                        var deleteResponse = await DataService.Delete($"Family/{Preferences.Get("TeamId", "")}/{Family.FId}");
+                        if (deleteResponse == "ConnectionError")
+                        {
+                            StandardMessagesDisplay.NoConnectionToast();
+                        }
+                        else if (deleteResponse == "Error")
+                        {
+                            StandardMessagesDisplay.Error();
+                        }
+                        else if (deleteResponse == "ErrorTracked")
+                        {
+                            StandardMessagesDisplay.ErrorTracked();
+                        }
+                        else if (deleteResponse == "null")
+                        {
+                            _ = await DataService.Put((--StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
 
-                        StandardMessagesDisplay.ItemDeletedToast();
+                            StandardMessagesDisplay.ItemDeletedToast();
 
-                        var route = "..";
-                        await Shell.Current.GoToAsync(route);
+                            var route = "..";
+                            await Shell.Current.GoToAsync(route);
+                        }
                     }
-                }
-                else
-                {
-                    return;
+                    else
+                    {
+                        return;
+                    }
                 }
             }
             else
             {
+                if(Family != null && Childs != null)
                 StandardMessagesDisplay.FamilyRecursiveDeletionNotAllowed(Family.ParentName, Childs.Count);
             }
         }
 
         public async void Get()
         {
-            var jData = await DataService.Get($"Child/{Family.Id}");
+            var jData = await DataService.Get($"Child/{Family?.Id}");
 
             if (jData == "ConnectionError")
             {
@@ -298,21 +315,31 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(jData);
-                foreach (KeyValuePair<string, ChildModel> item in data)
+                try
                 {
-                    Childs.Add(
-                         new ChildModel
-                         {
-                             FId = item.Key.ToString(),
-                             Id = item.Value.Id,
-                             FullName = item.Value.FullName,
-                             DOB = item.Value.DOB,
-                             Gender = item.Value.Gender,
-                             OPV0 = item.Value.OPV0,
-                             RINo = item.Value.RINo,
-                             RegisteredBy = item.Value.RegisteredBy
-                         });
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(jData);
+
+                    if (data != null)
+                        foreach (KeyValuePair<string, ChildModel> item in data)
+                        {
+                            Childs?.Add(
+                                 new ChildModel
+                                 {
+                                     FId = item.Key.ToString(),
+                                     Id = item.Value.Id,
+                                     FullName = item.Value.FullName,
+                                     DOB = item.Value.DOB,
+                                     Gender = item.Value.Gender,
+                                     OPV0 = item.Value.OPV0,
+                                     RINo = item.Value.RINo,
+                                     RegisteredBy = item.Value.RegisteredBy
+                                 });
+                        }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -362,7 +389,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
 
         public void SaveAsPDF()
         {
-            throw new NotImplementedException();
+            StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
     }
 }
