@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -15,8 +17,8 @@ namespace VaxineApp.AdminShell.ViewModels.Announcements
     public class AnnouncementsViewModel : ViewModelBase
     {
         // Property
-        private AnnouncementsModel selectAnnouncements;
-        public AnnouncementsModel SelectAnnouncements
+        private AnnouncementsModel? selectAnnouncements;
+        public AnnouncementsModel? SelectAnnouncements
         {
             get
             {
@@ -43,8 +45,8 @@ namespace VaxineApp.AdminShell.ViewModels.Announcements
             }
         }
 
-        private ObservableCollection<AnnouncementsModel> announcements;
-        public ObservableCollection<AnnouncementsModel> Announcements
+        private ObservableCollection<AnnouncementsModel>? announcements;
+        public ObservableCollection<AnnouncementsModel>? Announcements
         {
             get
             {
@@ -124,20 +126,30 @@ namespace VaxineApp.AdminShell.ViewModels.Announcements
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, AnnouncementsModel>>(jData);
-                foreach (KeyValuePair<string, AnnouncementsModel> item in data)
+                try
                 {
-                    Announcements.Add(
-                        new AnnouncementsModel
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, AnnouncementsModel>>(jData);
+
+                    if (data != null)
+                        foreach (KeyValuePair<string, AnnouncementsModel> item in data)
                         {
-                            Id = item.Value.Id,
-                            Content = item.Value.Content,
-                            IsActive = item.Value.IsActive,
-                            MessageDateTime = item.Value.MessageDateTime,
-                            Title = item.Value.Title,
-                            FId = item.Key
+                            Announcements?.Add(
+                                new AnnouncementsModel
+                                {
+                                    Id = item.Value.Id,
+                                    Content = item.Value.Content,
+                                    IsActive = item.Value.IsActive,
+                                    MessageDateTime = item.Value.MessageDateTime,
+                                    Title = item.Value.Title,
+                                    FId = item.Key
+                                }
+                                );
                         }
-                        );
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -161,7 +173,7 @@ namespace VaxineApp.AdminShell.ViewModels.Announcements
 
         void Clear()
         {
-            Announcements.Clear();
+            Announcements?.Clear();
         }
     }
 }

@@ -16,8 +16,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
     public class AnonymousChildViewModel : ViewModelBase
     {
         // Property
-        private ObservableCollection<AnonymousChildModel> anonymousChild;
-        public ObservableCollection<AnonymousChildModel> AnonymousChild
+        private ObservableCollection<AnonymousChildModel>? anonymousChild;
+        public ObservableCollection<AnonymousChildModel>? AnonymousChild
         {
             get
             {
@@ -30,8 +30,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
             }
         }
 
-        private AnonymousChildModel selectedAnonymousChild;
-        public AnonymousChildModel SelectedAnonymousChild
+        private AnonymousChildModel? selectedAnonymousChild;
+        public AnonymousChildModel? SelectedAnonymousChild
         {
             get
             {
@@ -88,6 +88,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
         private async void Get()
         {
             var jData = await DataService.Get($"AnonymousChild/{Preferences.Get("TeamId", "")}");
+
             if (jData == "ConnectionError")
             {
                 StandardMessagesDisplay.NoConnectionToast();
@@ -106,28 +107,39 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, AnonymousChildModel>>(jData);
-
-                StaticDataStore.TeamStats.TotalIDPChilds = data.Where(item => item.Value.Type == "IDP").ToList().Count;
-                StaticDataStore.TeamStats.TotalGuestChilds = data.Where(item => item.Value.Type == "Guest").ToList().Count;
-                StaticDataStore.TeamStats.TotalReturnChilds = data.Where(item => item.Value.Type == "Return").ToList().Count;
-                StaticDataStore.TeamStats.TotalRefugeeChilds = data.Where(item => item.Value.Type == "Refugee").ToList().Count;
-
-                foreach (KeyValuePair<string, AnonymousChildModel> item in data)
+                try
                 {
-                    AnonymousChild.Add(
-                        new AnonymousChildModel
+
+
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, AnonymousChildModel>>(jData);
+
+                    StaticDataStore.TeamStats.TotalIDPChilds = data.Where(item => item.Value.Type == "IDP").ToList().Count;
+                    StaticDataStore.TeamStats.TotalGuestChilds = data.Where(item => item.Value.Type == "Guest").ToList().Count;
+                    StaticDataStore.TeamStats.TotalReturnChilds = data.Where(item => item.Value.Type == "Return").ToList().Count;
+                    StaticDataStore.TeamStats.TotalRefugeeChilds = data.Where(item => item.Value.Type == "Refugee").ToList().Count;
+
+                    if (data != null)
+                        foreach (KeyValuePair<string, AnonymousChildModel> item in data)
                         {
-                            FId = item.Key.ToString(),
-                            Id = item.Value.Id,
-                            DOB = item.Value.DOB,
-                            FullName = item.Value.FullName,
-                            Gender = item.Value.Gender,
-                            IsVaccined = item.Value.IsVaccined,
-                            RegisteredBy = item.Value.RegisteredBy,
-                            Type = item.Value.Type
+                            AnonymousChild?.Add(
+                                new AnonymousChildModel
+                                {
+                                    FId = item.Key.ToString(),
+                                    Id = item.Value.Id,
+                                    DOB = item.Value.DOB,
+                                    FullName = item.Value.FullName,
+                                    Gender = item.Value.Gender,
+                                    IsVaccined = item.Value.IsVaccined,
+                                    RegisteredBy = item.Value.RegisteredBy,
+                                    Type = item.Value.Type
+                                }
+                                );
                         }
-                        );
+                }
+                catch (System.Exception)
+                {
+
+                    throw;
                 }
             }
         }
@@ -139,7 +151,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
 
         private async void Delete(object obj)
         {
-            if (SelectedAnonymousChild.FId != null)
+            if (SelectedAnonymousChild?.FId != null)
             {
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedAnonymousChild.FullName);
                 if (isDeleteAccepted)
@@ -183,7 +195,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
 
                         StandardMessagesDisplay.ItemDeletedToast();
 
-                        AnonymousChild.Remove(SelectedAnonymousChild);
+                        AnonymousChild?.Remove(SelectedAnonymousChild);
                     }
                 }
                 else
@@ -195,7 +207,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
 
         private async void GoToPutPage(object obj)
         {
-            if (SelectedAnonymousChild.FId != null)
+            if (SelectedAnonymousChild?.FId != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(SelectedAnonymousChild);
                 var route = $"{nameof(EditAnonymousChildPage)}?AnonymousChild={jsonClinic}";
@@ -226,7 +238,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
         }
         public void Clear()
         {
-            AnonymousChild.Clear();
+            AnonymousChild?.Clear();
         }
     }
 }
