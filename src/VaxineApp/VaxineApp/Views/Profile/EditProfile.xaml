@@ -89,13 +89,13 @@
           <StackLayout>
             <Entry IsPassword="True"
                Placeholder="{xct:Translate CurrentPassword}"
-               Text="{Binding CurrentPassword}"></Entry>
+               Text="{Binding NewPassword.CurrentPassword}"></Entry>
             <Entry IsPassword="True"
                Placeholder="{xct:Translate NewPassword}"
-               Text="{Binding NewPassword}"></Entry>
+               Text="{Binding NewPassword.NewPassword}"></Entry>
             <Entry IsPassword="True"
                Placeholder="{xct:Translate ConfirmPassword}"
-               Text="{Binding ConfirmPassword}"></Entry>
+               Text="{Binding NewPassword.ConfirmPassword}"></Entry>
             <Button Text="{xct:Translate Save}"
                 TranslationY="20"
                 TranslationX="95"

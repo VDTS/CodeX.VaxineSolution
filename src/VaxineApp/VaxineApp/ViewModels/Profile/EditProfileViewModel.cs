@@ -22,25 +22,12 @@ namespace VaxineApp.ViewModels.Home.Profile
         // Validator
         ProfileValidator ValidationRules { get; set; }
         NewEmailValidator EmailValidators { get; set; }
+        NewPasswordValidator PasswordValidator { get; set; }
         // Property
         public ProfileModel Profile { get; set; }
 
-        private string currentPassword;
-        public string CurrentPassword
-        {
-            get
-            {
-                return currentPassword;
-            }
-            set
-            {
-                currentPassword = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private string newPassword;
-        public string NewPassword
+        private NewPasswordModel newPassword;
+        public NewPasswordModel NewPassword
         {
             get
             {
@@ -53,19 +40,6 @@ namespace VaxineApp.ViewModels.Home.Profile
             }
         }
 
-        private string confirmPassword;
-        public string ConfirmPassword
-        {
-            get
-            {
-                return confirmPassword;
-            }
-            set
-            {
-                confirmPassword = value;
-                OnPropertyChanged();
-            }
-        }
 
         Auth Account { get; set; }
 
@@ -99,6 +73,8 @@ namespace VaxineApp.ViewModels.Home.Profile
             ValidationRules = new ProfileValidator();
             EmailValidators = new NewEmailValidator();
             NewEmail = new NewEmailModel();
+            PasswordValidator = new NewPasswordValidator();
+            NewPassword = new NewPasswordModel();
 
             // Command
             PutCommand = new Command(Put);
@@ -160,56 +136,43 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         private async void ChangePassword()
         {
-            if (NewPassword != null && ConfirmPassword != null && CurrentPassword != null)
+            var result = PasswordValidator.Validate(NewPassword);
+            if (result.IsValid)
             {
-                if (NewPassword == ConfirmPassword)
+                string jSignInResponse = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), NewPassword.CurrentPassword);
+
+                if (jSignInResponse.Contains("Error"))
                 {
-                    if (NewPassword.Length >= 8)
-                    {
-                        string jSignInResponse = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), CurrentPassword);
-                        if (jSignInResponse.Contains("Error"))
-                        {
-                            StandardMessagesDisplay.CommonToastMessage(jSignInResponse);
-                        }
-                        else if (jSignInResponse == "ConnectionError")
-                        {
-                            StandardMessagesDisplay.NoConnectionToast();
-                        }
-                        else if (jSignInResponse == "ErrorTracked")
-                        {
-                            StandardMessagesDisplay.ErrorTracked();
-                        }
-                        else
-                        {
-                            JObject jo = JObject.Parse(jSignInResponse);
-                            var Token = (string)jo.SelectToken("idToken");
-                            var message = await Account.ChangeAccountPassword(Token, NewPassword);
-                            if (message == "OK")
-                            {
-                                StandardMessagesDisplay.PasswordChanged();
-                            }
-                            else
-                            {
-                                StandardMessagesDisplay.CanceledDisplayMessage();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        await App.Current.MainPage.DisplayAlert("New Password Error", "Password must not be less then 8 letters, and should contain letters, numbers and symbols", "OK");
-                    }
+                    StandardMessagesDisplay.CommonToastMessage(jSignInResponse);
+                }
+                else if (jSignInResponse == "ConnectionError")
+                {
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (jSignInResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("", "Passwords are not the same", "OK");
+                    JObject jo = JObject.Parse(jSignInResponse);
+                    var Token = (string)jo.SelectToken("idToken");
+                    var message = await Account.ChangeAccountPassword(Token, NewPassword.NewPassword);
+                    if (message == "OK")
+                    {
+                        StandardMessagesDisplay.PasswordChanged();
+                    }
+                    else
+                    {
+                        StandardMessagesDisplay.CanceledDisplayMessage();
+                    }
                 }
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert("Fill in required fields", "Current, new and Confirm Passwords are required", "OK");
+                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
-
         async void Put(object obj)
         {
             var result = ValidationRules.Validate(Profile);
