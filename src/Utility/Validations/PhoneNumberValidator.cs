@@ -4,7 +4,7 @@ namespace Utility.Validations
 {
     public class PhoneNumberValidator
     {
-        public static bool IsPhoneNumberValid(string phoneNumber)
+        public static bool IsPhoneNumberValid(string? phoneNumber)
         {
             if (!string.IsNullOrEmpty(phoneNumber))
             {

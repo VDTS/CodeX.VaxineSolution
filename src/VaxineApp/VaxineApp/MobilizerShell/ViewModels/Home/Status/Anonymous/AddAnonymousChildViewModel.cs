@@ -12,10 +12,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
     public class AddAnonymousChildViewModel : ViewModelBase
     {
         // Validator Class
-        AnonymousChildValidator AnonymousChildValidator { get; set; }
+        AnonymousChildValidator? AnonymousChildValidator { get; set; }
         // Property
-        private AnonymousChildModel anonymousChildModel;
-        public AnonymousChildModel AnonymousChildModel
+        private AnonymousChildModel? anonymousChildModel;
+        public AnonymousChildModel? AnonymousChild
         {
             get
             {
@@ -38,7 +38,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
             AnonymousChildValidator = new AnonymousChildValidator();
 
             // Property
-            AnonymousChildModel = new AnonymousChildModel();
+            AnonymousChild = new AnonymousChildModel();
 
             // Command
             PostCommand = new Command(Post);
@@ -46,65 +46,68 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
 
         private async void Post(object obj)
         {
-
-            AnonymousChildModel.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
-            AnonymousChildModel.Id = Guid.NewGuid();
-
-            var time = DateTime.Now;
-            DateTime dateTime = new DateTime(AnonymousChildModel.DOB.Year, AnonymousChildModel.DOB.Month, AnonymousChildModel.DOB.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
-
-            AnonymousChildModel.DOB = dateTime;
-
-            var result = AnonymousChildValidator.Validate(AnonymousChildModel);
-
-            if (result.IsValid)
+            if (AnonymousChild != null)
             {
-                var jData = JsonConvert.SerializeObject(AnonymousChildModel);
-                string postResponse = await DataService.Post(jData, $"AnonymousChild/{Preferences.Get("TeamId", "")}");
-                if (postResponse == "ConnectionError")
+                AnonymousChild.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+                AnonymousChild.Id = Guid.NewGuid();
+
+                var time = DateTime.Now;
+                DateTime dateTime = new DateTime(AnonymousChild.DOB.Year, AnonymousChild.DOB.Month, AnonymousChild.DOB.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+                AnonymousChild.DOB = dateTime;
+
+
+                var result = AnonymousChildValidator?.Validate(AnonymousChild);
+
+                if (result != null && result.IsValid)
                 {
-                    StandardMessagesDisplay.NoConnectionToast();
-                }
-                else if (postResponse == "Error")
-                {
-                    StandardMessagesDisplay.Error();
-                }
-                else if (postResponse == "ErrorTracked")
-                {
-                    StandardMessagesDisplay.ErrorTracked();
-                }
-                else
-                {
-                    if (AnonymousChildModel.Type == "Refugee")
+                    var jData = JsonConvert.SerializeObject(AnonymousChild);
+                    string postResponse = await DataService.Post(jData, $"AnonymousChild/{Preferences.Get("TeamId", "")}");
+                    if (postResponse == "ConnectionError")
                     {
-                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalRefugeeChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalRefugeeChilds");
+                        StandardMessagesDisplay.NoConnectionToast();
                     }
-                    else if (AnonymousChildModel.Type == "IDP")
+                    else if (postResponse == "Error")
                     {
-                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalIDPChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalIDPChilds");
+                        StandardMessagesDisplay.Error();
                     }
-                    else if (AnonymousChildModel.Type == "Return")
+                    else if (postResponse == "ErrorTracked")
                     {
-                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalReturnChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalReturnChilds");
-                    }
-                    else if (AnonymousChildModel.Type == "Guest")
-                    {
-                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalGuestChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalGuestChilds");
+                        StandardMessagesDisplay.ErrorTracked();
                     }
                     else
                     {
-                        return;
+                        if (AnonymousChild.Type == "Refugee")
+                        {
+                            _ = await DataService.Put((++StaticDataStore.TeamStats.TotalRefugeeChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalRefugeeChilds");
+                        }
+                        else if (AnonymousChild.Type == "IDP")
+                        {
+                            _ = await DataService.Put((++StaticDataStore.TeamStats.TotalIDPChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalIDPChilds");
+                        }
+                        else if (AnonymousChild.Type == "Return")
+                        {
+                            _ = await DataService.Put((++StaticDataStore.TeamStats.TotalReturnChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalReturnChilds");
+                        }
+                        else if (AnonymousChild.Type == "Guest")
+                        {
+                            _ = await DataService.Put((++StaticDataStore.TeamStats.TotalGuestChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalGuestChilds");
+                        }
+                        else
+                        {
+                            return;
+                        }
+
+                        StandardMessagesDisplay.AddDisplayMessage(AnonymousChild.FullName);
+
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
                     }
-
-                    StandardMessagesDisplay.AddDisplayMessage(AnonymousChildModel.FullName);
-
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
+                else
+                {
+                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
+                }
             }
         }
     }

@@ -12,13 +12,13 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family.Child
     public class AddChildViewModel : ViewModelBase
     {
         // Validator Class
-        ChildValidator ChildValidator { get; set; }
+        ChildValidator? ChildValidator { get; set; }
 
         // Property
-        public FamilyModel Family { get; set; }
+        public FamilyModel? Family { get; set; }
 
-        private ChildModel child;
-        public ChildModel Child
+        private ChildModel? child;
+        public ChildModel? Child
         {
             get
             {
@@ -50,44 +50,47 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family.Child
 
         private async void Post()
         {
-            Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
-            Child.Id = Guid.NewGuid();
-
-            var time = DateTime.Now;
-            DateTime dateTime = new DateTime(Child.DOB.Year, Child.DOB.Month, Child.DOB.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
-
-            Child.DOB = dateTime;
-
-            var result = ChildValidator.Validate(Child);
-            if (result.IsValid)
+            if (Child != null)
             {
-                var jData = JsonConvert.SerializeObject(Child);
+                Child.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+                Child.Id = Guid.NewGuid();
 
-                string postResponse = await DataService.Post(jData, $"Child/{Family.Id}");
-                if (postResponse == "ConnectionError")
+                var time = DateTime.Now;
+                DateTime dateTime = new DateTime(Child.DOB.Year, Child.DOB.Month, Child.DOB.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+                Child.DOB = dateTime;
+
+                var result = ChildValidator?.Validate(Child);
+                if (result != null && result.IsValid)
                 {
-                    StandardMessagesDisplay.NoConnectionToast();
-                }
-                else if (postResponse == "Error")
-                {
-                    StandardMessagesDisplay.Error();
-                }
-                else if (postResponse == "ErrorTracked")
-                {
-                    StandardMessagesDisplay.ErrorTracked();
+                    var jData = JsonConvert.SerializeObject(Child);
+
+                    string postResponse = await DataService.Post(jData, $"Child/{Family.Id}");
+                    if (postResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (postResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (postResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
+                    {
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalChilds");
+                        StandardMessagesDisplay.EditDisplaymessage(Child.FullName);
+
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
                 }
                 else
                 {
-                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalChilds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalChilds");
-                    StandardMessagesDisplay.EditDisplaymessage(Child.FullName);
-
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

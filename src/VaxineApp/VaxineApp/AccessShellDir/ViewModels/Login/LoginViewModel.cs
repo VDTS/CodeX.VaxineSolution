@@ -1,4 +1,5 @@
 ﻿using DataAccess.Services;
+using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -24,8 +25,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
     public partial class LoginViewModel : ViewModelBase
     {
         // Property
-        private TeamModel team;
-        public TeamModel Team
+        private TeamModel? team;
+        public TeamModel? Team
         {
             get
             {
@@ -51,8 +52,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
         }
 
-        private string inputUserEmail;
-        public string InputUserEmail
+        private string? inputUserEmail;
+        public string? InputUserEmail
         {
             get
             {
@@ -65,8 +66,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
         }
 
-        private string inputUserPassword;
-        public string InputUserPassword
+        private string? inputUserPassword;
+        public string? InputUserPassword
         {
             get
             {
@@ -79,8 +80,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
         }
 
-        private ProfileModel profile;
-        public ProfileModel Profile
+        private ProfileModel? profile;
+        public ProfileModel? Profile
         {
             get
             {
@@ -141,18 +142,28 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                 }
                 else
                 {
-                    var signInResponse = JsonConvert.DeserializeObject<JObject>(jSignInResponse);
-                    var localId = signInResponse.GetValue("localId").ToString();
+                    try
+                    {
+                        var signInResponse = JsonConvert.DeserializeObject<JObject>(jSignInResponse);
 
-                    Preferences.Set("UserLocalId", localId);
-                    Preferences.Set("ProfileEmail", signInResponse.GetValue("email").ToString());
-
+                        if (signInResponse != null)
+                        {
+                            var localId = signInResponse?.GetValue("localId")?.ToString();
+                            Preferences.Set("UserLocalId", localId);
+                            Preferences.Set("ProfileEmail", signInResponse?.GetValue("email")?.ToString());
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Crashes.TrackError(ex);
+                        StandardMessagesDisplay.InputToast(ex.Message);
+                    }
                     if (RememberMe)
                     {
                         await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "1");
                     }
 
-                    LoadProfile(localId);
+                    LoadProfile(Preferences.Get("UserLocalId", "").ToString());
                     await LoadCluster();
                     await LoadTeam();
                     await LoadVaccinePeriod();
@@ -183,16 +194,25 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<ProfileModel>(jData);
-
-                if (data.LocalId == Preferences.Get("UserLocalId", ""))
+                try
                 {
-                    Preferences.Set("ClusterId", data.ClusterId);
-                    Preferences.Set("TeamId", data.TeamId);
-                    Preferences.Set("UserId", data.Id.ToString());
-                    Preferences.Set("UserName", data.FullName);
-                    Preferences.Set("UserRole", data.Role);
-                    await Xamarin.Essentials.SecureStorage.SetAsync("Role", data.Role);
+                    var data = JsonConvert.DeserializeObject<ProfileModel>(jData);
+
+                    if (data != null)
+                        if (data.LocalId == Preferences.Get("UserLocalId", ""))
+                        {
+                            Preferences.Set("ClusterId", data.ClusterId);
+                            Preferences.Set("TeamId", data.TeamId);
+                            Preferences.Set("UserId", data.Id.ToString());
+                            Preferences.Set("UserName", data.FullName);
+                            Preferences.Set("UserRole", data.Role);
+                            await Xamarin.Essentials.SecureStorage.SetAsync("Role", data.Role);
+                        }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
 
             }
@@ -246,14 +266,24 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, VaccinePeriods>>(jData);
-                foreach (KeyValuePair<string, VaccinePeriods> item in data)
+                try
                 {
-                    if (item.Value.Id.ToString() == Preferences.Get("VaccinePeriodId", "").ToString())
-                    {
-                        Preferences.Set("PeriodStartDate", item.Value.StartDate);
-                        Preferences.Set("PeriodEndDate", item.Value.EndDate);
-                    }
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, VaccinePeriods>>(jData);
+
+                    if (data != null)
+                        foreach (KeyValuePair<string, VaccinePeriods> item in data)
+                        {
+                            if (item.Value.Id.ToString() == Preferences.Get("VaccinePeriodId", "").ToString())
+                            {
+                                Preferences.Set("PeriodStartDate", item.Value.StartDate);
+                                Preferences.Set("PeriodEndDate", item.Value.EndDate);
+                            }
+                        }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -279,34 +309,43 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(jData);
-                foreach (KeyValuePair<string, TeamModel> item in data)
+                try
                 {
-                    if (item.Value.Id.ToString() == Preferences.Get("TeamId", "").ToString())
-                    {
-                        Team = new TeamModel
-                        {
-                            Id = item.Value.Id,
-                            FId = item.Key.ToString(),
-                            CHWName = item.Value.CHWName,
-                            SocialMobilizerId = item.Value.SocialMobilizerId,
-                            TeamNo = item.Value.TeamNo,
-                            TotalChilds = item.Value.TotalChilds,
-                            TotalClinics = item.Value.TotalClinics,
-                            TotalDoctors = item.Value.TotalDoctors,
-                            TotalHouseholds = item.Value.TotalHouseholds,
-                            TotalInfluencers = item.Value.TotalInfluencers,
-                            TotalMasjeeds = item.Value.TotalMasjeeds,
-                            TotalSchools = item.Value.TotalSchools,
-                            TotalGuestChilds = item.Value.TotalGuestChilds,
-                            TotalRefugeeChilds = item.Value.TotalRefugeeChilds,
-                            TotalReturnChilds = item.Value.TotalReturnChilds
-                        };
-                        StaticDataStore.TeamStats = Team;
-                        Preferences.Set("TeamFId", Team.FId);
-                    }
-                }
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(jData);
 
+                    if (data != null)
+                        foreach (KeyValuePair<string, TeamModel> item in data)
+                        {
+                            if (item.Value.Id.ToString() == Preferences.Get("TeamId", "").ToString())
+                            {
+                                Team = new TeamModel
+                                {
+                                    Id = item.Value.Id,
+                                    FId = item.Key.ToString(),
+                                    CHWName = item.Value.CHWName,
+                                    SocialMobilizerId = item.Value.SocialMobilizerId,
+                                    TeamNo = item.Value.TeamNo,
+                                    TotalChilds = item.Value.TotalChilds,
+                                    TotalClinics = item.Value.TotalClinics,
+                                    TotalDoctors = item.Value.TotalDoctors,
+                                    TotalHouseholds = item.Value.TotalHouseholds,
+                                    TotalInfluencers = item.Value.TotalInfluencers,
+                                    TotalMasjeeds = item.Value.TotalMasjeeds,
+                                    TotalSchools = item.Value.TotalSchools,
+                                    TotalGuestChilds = item.Value.TotalGuestChilds,
+                                    TotalRefugeeChilds = item.Value.TotalRefugeeChilds,
+                                    TotalReturnChilds = item.Value.TotalReturnChilds
+                                };
+                                StaticDataStore.TeamStats = Team;
+                                Preferences.Set("TeamFId", Team.FId);
+                            }
+                        }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
+                }
             }
         }
 
@@ -331,13 +370,23 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
             else
             {
-                var cluster = JsonConvert.DeserializeObject<Dictionary<string, ClusterModel>>(jData);
-                foreach (KeyValuePair<string, ClusterModel> item in cluster)
+                try
                 {
-                    if (item.Value.Id.ToString() == Preferences.Get("ClusterId", ""))
+                    var cluster = JsonConvert.DeserializeObject<Dictionary<string, ClusterModel>>(jData);
+
+                    if(cluster != null)
+                    foreach (KeyValuePair<string, ClusterModel> item in cluster)
                     {
-                        Preferences.Set("VaccinePeriodId", item.Value.CurrentVaccinePeriodId.ToString());
+                        if (item.Value?.Id.ToString() == Preferences.Get("ClusterId", ""))
+                        {
+                            Preferences.Set("VaccinePeriodId", item.Value?.CurrentVaccinePeriodId?.ToString());
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }

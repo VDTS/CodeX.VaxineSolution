@@ -1,6 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using VaxineApp.MobilizerShell.ViewModels.Home.Family.Child;
 using VaxineApp.Models;
+using VaxineApp.StaticData;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +13,7 @@ namespace VaxineApp.MobilizerShell.Views.Home.Family.Child
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddChildPage : ContentPage
     {
-        public string Family { get; set; }
+        public string? Family { get; set; }
         public AddChildPage()
         {
             InitializeComponent();
@@ -18,8 +21,20 @@ namespace VaxineApp.MobilizerShell.Views.Home.Family.Child
 
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<FamilyModel>(Family);
-            BindingContext = new AddChildViewModel(result);
+            try
+            {
+                if (Family != null)
+                {
+                    var result = JsonConvert.DeserializeObject<FamilyModel>(Family);
+                    if (result != null) BindingContext = new AddChildViewModel(result);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex);
+                StandardMessagesDisplay.InputToast(ex.Message);
+            }
         }
     }
 }
