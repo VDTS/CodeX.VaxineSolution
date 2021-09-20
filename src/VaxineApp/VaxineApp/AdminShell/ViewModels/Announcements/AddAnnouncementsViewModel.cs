@@ -13,8 +13,8 @@ namespace VaxineApp.AdminShell.ViewModels.Announcements
     {
         AnnouncementsValidator ValidationRules { get; set; }
         // Property
-        private AnnouncementsModel announcement;
-        public AnnouncementsModel Announcement
+        private AnnouncementsModel? announcement;
+        public AnnouncementsModel? Announcement
         {
             get
             {
@@ -43,38 +43,41 @@ namespace VaxineApp.AdminShell.ViewModels.Announcements
 
         public async void Post()
         {
-            var result = ValidationRules.Validate(Announcement);
-            Announcement.Id = Guid.NewGuid();
-            Announcement.IsActive = IsActive.Active;
-            Announcement.MessageDateTime = DateTime.UtcNow;
-
-            if (result.IsValid)
+            if (Announcement != null)
             {
-                var jData = JsonConvert.SerializeObject(Announcement);
+                var result = ValidationRules.Validate(Announcement);
+                Announcement.Id = Guid.NewGuid();
+                Announcement.IsActive = IsActive.Active;
+                Announcement.MessageDateTime = DateTime.UtcNow;
 
-                string postResponse = await DataService.Post(jData, "Announcements");
+                if (result.IsValid)
+                {
+                    var jData = JsonConvert.SerializeObject(Announcement);
 
-                if (postResponse == "ConnectionError")
-                {
-                    StandardMessagesDisplay.NoConnectionToast();
-                }
-                else if (postResponse == "Error")
-                {
-                    StandardMessagesDisplay.Error();
-                }
-                else if (postResponse == "ErrorTracked")
-                {
-                    StandardMessagesDisplay.ErrorTracked();
+                    string postResponse = await DataService.Post(jData, "Announcements");
+
+                    if (postResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (postResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (postResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
+                    {
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
                 }
                 else
                 {
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

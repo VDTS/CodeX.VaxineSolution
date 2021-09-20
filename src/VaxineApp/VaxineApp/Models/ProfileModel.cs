@@ -7,16 +7,16 @@ namespace VaxineApp.Models
     public class ProfileModel
     {
         // Image property
-        public string FId { get; set; }
+        public string? FId { get; set; }
         public Guid Id { get; set; }
-        public string FullName { get; set; }
-        public string Gender { get; set; }
-        public string FatherOrHusbandName { get; set; }
+        public string? FullName { get; set; }
+        public string? Gender { get; set; }
+        public string? FatherOrHusbandName { get; set; }
         public int Age { get; set; }
-        public string Role { get; set; }
-        public string TeamId { get; set; }
-        public string ClusterId { get; set; }
-        public string LocalId { get; set; }
+        public string? Role { get; set; }
+        public string? TeamId { get; set; }
+        public string? ClusterId { get; set; }
+        public string? LocalId { get; set; }
         public ProfileModel()
         {
             Id = new Guid();
@@ -41,10 +41,10 @@ namespace VaxineApp.Models
                 .LessThanOrEqualTo(70)
                 .GreaterThanOrEqualTo(18);
         }
-        protected bool BeAValidName(string name)
+        protected bool BeAValidName(string? name)
         {
-            name = name.Replace(" ", "");
-            name = name.Replace("-", "");
+            name = name?.Replace(" ", "");
+            name = name?.Replace("-", "");
             return name.All(Char.IsLetter);
         }
     }

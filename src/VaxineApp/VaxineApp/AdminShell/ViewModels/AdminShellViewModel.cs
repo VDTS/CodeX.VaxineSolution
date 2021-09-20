@@ -16,8 +16,8 @@ namespace VaxineApp.AdminShell.ViewModels
     public class AdminShellViewModel : ViewModelBase
     {
         // Property
-        private string userName;
-        public string UserName
+        private string? userName;
+        public string? UserName
         {
             get
             {
@@ -30,8 +30,8 @@ namespace VaxineApp.AdminShell.ViewModels
             }
         }
 
-        private string role;
-        public string Role
+        private string? role;
+        public string? Role
         {
             get
             {

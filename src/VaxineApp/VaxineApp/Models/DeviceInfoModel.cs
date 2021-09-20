@@ -5,12 +5,12 @@ namespace VaxineApp.Models
 {
     public class DeviceInfoModel
     {
-        public string DeviceName { get; set; }
-        public string DeviceManufacturer { get; set; }
-        public string DeviceModel { get; set; }
-        public string DeviceVersion { get; set; }
-        public string DevicePlatform { get; set; }
-        public string IMEI { get; set; }
+        public string? DeviceName { get; set; }
+        public string? DeviceManufacturer { get; set; }
+        public string? DeviceModel { get; set; }
+        public string? DeviceVersion { get; set; }
+        public string? DevicePlatform { get; set; }
+        public string? IMEI { get; set; }
         public DateTime TimeStamp { get; set; }
         public double Longitude { get; set; }
         public double Latitude { get; set; }
