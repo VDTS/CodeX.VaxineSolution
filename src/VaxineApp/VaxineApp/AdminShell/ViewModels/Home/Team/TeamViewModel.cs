@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -15,8 +17,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
     public class TeamViewModel : ViewModelBase
     {
         // Property
-        private TeamModel selectedTeam;
-        public TeamModel SelectedTeam
+        private TeamModel? selectedTeam;
+        public TeamModel? SelectedTeam
         {
             get
             {
@@ -43,8 +45,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
             }
         }
 
-        private ObservableCollection<TeamModel> teams;
-        public ObservableCollection<TeamModel> Teams
+        private ObservableCollection<TeamModel>? teams;
+        public ObservableCollection<TeamModel>? Teams
         {
             get
             {
@@ -124,19 +126,29 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(jData);
-                foreach (KeyValuePair<string, TeamModel> item in data)
+                try
                 {
-                    Teams.Add(
-                        new TeamModel
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(jData);
+
+                    if (data != null)
+                        foreach (KeyValuePair<string, TeamModel> item in data)
                         {
-                            Id = item.Value.Id,
-                            FId = item.Key,
-                            CHWName = item.Value.CHWName,
-                            TeamNo = item.Value.TeamNo,
-                            SocialMobilizerId = item.Value.SocialMobilizerId
+                            Teams?.Add(
+                                new TeamModel
+                                {
+                                    Id = item.Value.Id,
+                                    FId = item.Key,
+                                    CHWName = item.Value.CHWName,
+                                    TeamNo = item.Value.TeamNo,
+                                    SocialMobilizerId = item.Value.SocialMobilizerId
+                                }
+                                );
                         }
-                        );
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -159,7 +171,7 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
 
         void Clear()
         {
-            Teams.Clear();
+            Teams?.Clear();
         }
     }
 }

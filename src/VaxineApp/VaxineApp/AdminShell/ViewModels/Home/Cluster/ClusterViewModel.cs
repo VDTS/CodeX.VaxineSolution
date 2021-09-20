@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -15,8 +17,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
     public class ClusterViewModel : ViewModelBase
     {
         // Property
-        private ClusterModel selectedCluster;
-        public ClusterModel SelectedCluster
+        private ClusterModel? selectedCluster;
+        public ClusterModel? SelectedCluster
         {
             get
             {
@@ -43,8 +45,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
             }
         }
 
-        private ObservableCollection<ClusterModel> clusters;
-        public ObservableCollection<ClusterModel> Clusters
+        private ObservableCollection<ClusterModel>? clusters;
+        public ObservableCollection<ClusterModel>? Clusters
         {
             get
             {
@@ -124,17 +126,26 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, ClusterModel>>(jData);
-                foreach (KeyValuePair<string, ClusterModel> item in data)
+                try
                 {
-                    Clusters.Add(
-                        new ClusterModel
-                        {
-                            ClusterName = item.Value.ClusterName,
-                            CurrentVaccinePeriodId = item.Value.CurrentVaccinePeriodId,
-                            Id = item.Value.Id
-                        }
-                        );
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, ClusterModel>>(jData);
+                    if(data != null)
+                    foreach (KeyValuePair<string, ClusterModel> item in data)
+                    {
+                        Clusters?.Add(
+                            new ClusterModel
+                            {
+                                ClusterName = item.Value.ClusterName,
+                                CurrentVaccinePeriodId = item.Value.CurrentVaccinePeriodId,
+                                Id = item.Value.Id
+                            }
+                            );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -157,7 +168,7 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
 
         void Clear()
         {
-            Clusters.Clear();
+            Clusters?.Clear();
         }
     }
 }
