@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -14,8 +16,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
 {
     public class PeriodViewModel : ViewModelBase
     {
-        private VaccinePeriods selectedPeriod;
-        public VaccinePeriods SelectedPeriod
+        private VaccinePeriods? selectedPeriod;
+        public VaccinePeriods? SelectedPeriod
         {
             get
             {
@@ -42,8 +44,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
             }
         }
 
-        private ObservableCollection<VaccinePeriods> periods;
-        public ObservableCollection<VaccinePeriods> Periods
+        private ObservableCollection<VaccinePeriods>? periods;
+        public ObservableCollection<VaccinePeriods>? Periods
         {
             get
             {
@@ -123,18 +125,28 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, VaccinePeriods>>(jData);
-                foreach (KeyValuePair<string, VaccinePeriods> item in data)
+                try
                 {
-                    Periods.Add(
-                        new VaccinePeriods
-                        {
-                            Id = item.Value.Id,
-                            StartDate = item.Value.StartDate,
-                            EndDate = item.Value.EndDate,
-                            PeriodName = item.Value.PeriodName
-                        }
-                        );
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, VaccinePeriods>>(jData);
+                    
+                    if(data != null)
+                    foreach (KeyValuePair<string, VaccinePeriods> item in data)
+                    {
+                        Periods?.Add(
+                            new VaccinePeriods
+                            {
+                                Id = item.Value.Id,
+                                StartDate = item.Value.StartDate,
+                                EndDate = item.Value.EndDate,
+                                PeriodName = item.Value.PeriodName
+                            }
+                            );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -157,7 +169,7 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
 
         void Clear()
         {
-            Periods.Clear();
+            Periods?.Clear();
         }
     }
 }
