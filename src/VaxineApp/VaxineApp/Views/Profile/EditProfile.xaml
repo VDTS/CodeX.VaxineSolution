@@ -125,11 +125,11 @@
           </xct:Expander.Header>
           <StackLayout>
             <Entry Placeholder="{xct:Translate CurrentEmail}"
-               Text="{Binding CurrentEmail}"></Entry>
+               Text="{Binding NewEmail.CurrentEmail}"></Entry>
             <Entry Placeholder="{xct:Translate NewEmail}"
-               Text="{Binding NewEmail}"></Entry>
+               Text="{Binding NewEmail.NewEmail}"></Entry>
             <Entry Placeholder="{xct:Translate ConfirmEmail}"
-               Text="{Binding ConfirmEmail}"></Entry>
+               Text="{Binding NewEmail.ConfirmEmail}"></Entry>
             <Button Text="{xct:Translate Save}"
                 TranslationY="20"
                 TranslationX="95"
