@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -29,8 +31,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Area
             }
         }
 
-        private TeamModel team;
-        public TeamModel Team
+        private TeamModel? team;
+        public TeamModel? Team
         {
             get
             {
@@ -43,8 +45,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Area
             }
         }
 
-        private string clusterName;
-        public string ClusterName
+        private string? clusterName;
+        public string? ClusterName
         {
             get
             {
@@ -103,32 +105,42 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Area
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(jData);
-                foreach (KeyValuePair<string, TeamModel> item in data)
+                try
                 {
-                    if (item.Value.Id.ToString() == Preferences.Get("TeamId", "").ToString())
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(jData);
+
+                    if(data != null)
+                    foreach (KeyValuePair<string, TeamModel> item in data)
                     {
-                        Team = new TeamModel
+                        if (item.Value.Id.ToString() == Preferences.Get("TeamId", "").ToString())
                         {
-                            Id = item.Value.Id,
-                            FId = item.Key.ToString(),
-                            CHWName = item.Value.CHWName,
-                            SocialMobilizerId = item.Value.SocialMobilizerId,
-                            TeamNo = item.Value.TeamNo,
-                            TotalChilds = item.Value.TotalChilds,
-                            TotalClinics = item.Value.TotalClinics,
-                            TotalDoctors = item.Value.TotalDoctors,
-                            TotalHouseholds = item.Value.TotalHouseholds,
-                            TotalInfluencers = item.Value.TotalInfluencers,
-                            TotalMasjeeds = item.Value.TotalMasjeeds,
-                            TotalSchools = item.Value.TotalSchools,
-                            TotalGuestChilds = item.Value.TotalGuestChilds,
-                            TotalRefugeeChilds = item.Value.TotalRefugeeChilds,
-                            TotalReturnChilds = item.Value.TotalReturnChilds
-                        };
-                        StaticDataStore.TeamStats = Team;
-                        Preferences.Set("TeamFId", Team.FId);
+                            Team = new TeamModel
+                            {
+                                Id = item.Value.Id,
+                                FId = item.Key.ToString(),
+                                CHWName = item.Value.CHWName,
+                                SocialMobilizerId = item.Value.SocialMobilizerId,
+                                TeamNo = item.Value.TeamNo,
+                                TotalChilds = item.Value.TotalChilds,
+                                TotalClinics = item.Value.TotalClinics,
+                                TotalDoctors = item.Value.TotalDoctors,
+                                TotalHouseholds = item.Value.TotalHouseholds,
+                                TotalInfluencers = item.Value.TotalInfluencers,
+                                TotalMasjeeds = item.Value.TotalMasjeeds,
+                                TotalSchools = item.Value.TotalSchools,
+                                TotalGuestChilds = item.Value.TotalGuestChilds,
+                                TotalRefugeeChilds = item.Value.TotalRefugeeChilds,
+                                TotalReturnChilds = item.Value.TotalReturnChilds
+                            };
+                            StaticDataStore.TeamStats = Team;
+                            Preferences.Set("TeamFId", Team.FId);
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }

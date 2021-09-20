@@ -15,8 +15,8 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
     public class FamilyViewModel : ViewModelBase
     {
         // Property
-        private ObservableCollection<ChildModel> childs;
-        public ObservableCollection<ChildModel> Childs
+        private ObservableCollection<ChildModel>? childs;
+        public ObservableCollection<ChildModel>? Childs
         {
             get
             {
@@ -29,8 +29,8 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
             }
         }
 
-        private ChildModel selectedChild;
-        public ChildModel SelectedChild
+        private ChildModel? selectedChild;
+        public ChildModel? SelectedChild
         {
             get
             {
@@ -57,8 +57,8 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
             }
         }
 
-        private FamilyModel family;
-        public FamilyModel Family
+        private FamilyModel? family;
+        public FamilyModel? Family
         {
             get
             {
@@ -94,14 +94,27 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
 
         private async void GetFamily()
         {
-            var data = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e/-MbXlzV80PxnP0zTdwLa");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Family/c0cda6a9-759a-4e87-b8cb-49af170bd24e/-MbXlzV80PxnP0zTdwLa");
+
+            if (jData == "ConnectionError")
             {
-                Family = JsonConvert.DeserializeObject<FamilyModel>(data);
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
             }
             else
             {
-                StandardMessagesDisplay.NoDataDisplayMessage();
+                Family = JsonConvert.DeserializeObject<FamilyModel>(jData);
             }
         }
 
@@ -112,18 +125,37 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
 
         public void Clear()
         {
-            Childs.Clear();
+            Childs?.Clear();
         }
 
         public async void Get()
         {
-            var data = await DataService.Get($"Child/{Family.Id}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Child/{Family?.Id}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data);
-                foreach (KeyValuePair<string, ChildModel> item in clinic)
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                var data = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(jData);
+
+                if(data != null)
+                foreach (KeyValuePair<string, ChildModel> item in data)
                 {
-                    Childs.Add(
+                    Childs?.Add(
                          new ChildModel
                          {
                              FId = item.Key.ToString(),
@@ -136,10 +168,6 @@ namespace VaxineApp.ParentShellDir.ViewModel.Home
                              RegisteredBy = item.Value.RegisteredBy
                          });
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.NoDataDisplayMessage();
             }
         }
 
