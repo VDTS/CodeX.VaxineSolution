@@ -9,11 +9,11 @@ namespace VaxineApp.Models
 {
     public class ClusterModel
     {
-        public Guid FId { get; set; }
-        public Guid Id { get; set; }
-        public string ClusterName { get; set; }
-        public string CurrentVaccinePeriodId { get; set; }
-        public List<Position> ClusterArea { get; set; }
+        public Guid? FId { get; set; }
+        public Guid? Id { get; set; }
+        public string? ClusterName { get; set; }
+        public string? CurrentVaccinePeriodId { get; set; }
+        public List<Position>? ClusterArea { get; set; }
         public ClusterModel()
         {
             Id = new Guid();
@@ -42,11 +42,11 @@ namespace VaxineApp.Models
 
     public class TeamModel
     {
-        public string FId { get; set; }
-        public Guid Id { get; set; }
-        public string TeamNo { get; set; }
+        public string? FId { get; set; }
+        public Guid? Id { get; set; }
+        public string? TeamNo { get; set; }
         public int SocialMobilizerId { get; set; }
-        public string CHWName { get; set; }
+        public string? CHWName { get; set; }
         public int TotalHouseholds { get; set; }
         public int TotalChilds { get; set; }
         public int TotalInfluencers { get; set; }
@@ -85,20 +85,20 @@ namespace VaxineApp.Models
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
                 .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
-        protected bool BeAValidName(string name)
+        protected bool BeAValidName(string? name)
         {
-            name = name.Replace(" ", "");
-            name = name.Replace("-", "");
+            name = name?.Replace(" ", "");
+            name = name?.Replace("-", "");
             return name.All(Char.IsLetter);
         }
     }
     public class ClinicModel
     {
-        public Guid Id { get; set; }
-        public string FId { get; set; }
-        public string ClinicName { get; set; }
-        public string Fixed { get; set; }
-        public string Outreach { get; set; }
+        public Guid? Id { get; set; }
+        public string? FId { get; set; }
+        public string? ClinicName { get; set; }
+        public string? Fixed { get; set; }
+        public string? Outreach { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public ClinicModel()
@@ -116,18 +116,18 @@ namespace VaxineApp.Models
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
                 .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
-        protected bool BeAValidName(string name)
+        protected bool BeAValidName(string? name)
         {
-            name = name.Replace(" ", "");
-            name = name.Replace("-", "");
+            name = name?.Replace(" ", "");
+            name = name?.Replace("-", "");
             return name.All(Char.IsLetter);
         }
     }
     public class DoctorModel
     {
-        public string FId { get; set; }
-        public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string? FId { get; set; }
+        public Guid? Id { get; set; }
+        public string? Name { get; set; }
         public bool IsHeProvindingSupportForSIAAndVaccination { get; set; }
         public DoctorModel()
         {
@@ -152,20 +152,20 @@ namespace VaxineApp.Models
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
                 .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
-        protected bool BeAValidName(string name)
+        protected bool BeAValidName(string? name)
         {
-            name = name.Replace(" ", "");
-            name = name.Replace("-", "");
+            name = name?.Replace(" ", "");
+            name = name?.Replace("-", "");
             return name.All(Char.IsLetter);
         }
     }
     public class InfluencerModel
     {
-        public string FId { get; set; }
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Position { get; set; }
-        public string Contact { get; set; }
+        public string? FId { get; set; }
+        public Guid? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Position { get; set; }
+        public string? Contact { get; set; }
         public bool DoesHeProvidingSupport { get; set; }
         public InfluencerModel()
         {
@@ -181,20 +181,20 @@ namespace VaxineApp.Models
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
                 .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
-        protected bool BeAValidName(string name)
+        protected bool BeAValidName(string? name)
         {
-            name = name.Replace(" ", "");
-            name = name.Replace("-", "");
+            name = name?.Replace(" ", "");
+            name = name?.Replace("-", "");
             return name.All(Char.IsLetter);
         }
     }
     public class MasjeedModel
     {
         public IsActive IsActive { get; set; }
-        public string FId { get; set; }
-        public Guid Id { get; set; }
-        public string MasjeedName { get; set; }
-        public string KeyInfluencer { get; set; }
+        public string? FId { get; set; }
+        public Guid? Id { get; set; }
+        public string? MasjeedName { get; set; }
+        public string? KeyInfluencer { get; set; }
         public bool DoesImamSupportsVaccine { get; set; }
         public bool DoYouHavePermissionForAdsInMasjeed { get; set; }
         public double Latitude { get; set; }
@@ -222,19 +222,19 @@ namespace VaxineApp.Models
                 .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
 
         }
-        protected bool BeAValidName(string name)
+        protected bool BeAValidName(string? name)
         {
-            name = name.Replace(" ", "");
-            name = name.Replace("-", "");
+            name = name?.Replace(" ", "");
+            name = name?.Replace("-", "");
             return name.All(Char.IsLetter);
         }
     }
     public class SchoolModel
     {
-        public string FId { get; set; }
+        public string? FId { get; set; }
         public Guid Id { get; set; }
-        public string SchoolName { get; set; }
-        public string KeyInfluencer { get; set; }
+        public string? SchoolName { get; set; }
+        public string? KeyInfluencer { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public SchoolModel()
@@ -251,10 +251,10 @@ namespace VaxineApp.Models
                 .Must(BeAValidName).WithMessage("{PropertyName} must be valid characters")
                 .Length(3, 50).WithMessage("Length of {PropertyName} should be between 3 - 50");
         }
-        protected bool BeAValidName(string name)
+        protected bool BeAValidName(string? name)
         {
-            name = name.Replace(" ", "");
-            name = name.Replace("-", "");
+            name = name?.Replace(" ", "");
+            name = name?.Replace("-", "");
             return name.All(Char.IsLetter);
         }
     }

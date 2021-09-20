@@ -7,11 +7,11 @@ namespace VaxineApp.Models
 {
     public class FamilyModel
     {
-        public string FId { get; set; }
+        public string? FId { get; set; }
         public Guid Id { get; set; }
         public int HouseNo { get; set; }
-        public string ParentName { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? ParentName { get; set; }
+        public string? PhoneNumber { get; set; }
         public Guid RegisteredBy { get; set; }
         public FamilyModel()
         {
@@ -31,10 +31,10 @@ namespace VaxineApp.Models
                 .Must(PhoneNumberValidator.IsPhoneNumberValid)
                 .WithMessage("Invalid phone number, must start with +93, 0093 or 0 and has 9 digits after it.");
         }
-        protected bool BeAValidName(string name)
+        protected bool BeAValidName(string? name)
         {
-            name = name.Replace(" ", "");
-            name = name.Replace("-", "");
+            name = name?.Replace(" ", "");
+            name = name?.Replace("-", "");
             return name.All(Char.IsLetter);
         }
     }

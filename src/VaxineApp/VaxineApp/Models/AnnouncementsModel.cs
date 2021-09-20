@@ -6,12 +6,12 @@ namespace VaxineApp.Models
 {
     public class AnnouncementsModel
     {
-        public string FId { get; set; }
-        public Guid Id { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public DateTime MessageDateTime { get; set; }
-        public IsActive IsActive { get; set; }
+        public string? FId { get; set; }
+        public Guid? Id { get; set; }
+        public string? Title { get; set; }
+        public string? Content { get; set; }
+        public DateTime? MessageDateTime { get; set; }
+        public IsActive? IsActive { get; set; }
         public AnnouncementsModel()
         {
             Id = new Guid();

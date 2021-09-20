@@ -10,8 +10,8 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
     public class AboutUsViewModel : ViewModelBase
     {
         // Property
-        private ObservableCollection<AboutUsModel> persons;
-        public ObservableCollection<AboutUsModel> Persons
+        private ObservableCollection<AboutUsModel>? persons;
+        public ObservableCollection<AboutUsModel>? Persons
         {
             get
             {
@@ -55,7 +55,7 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
 
         void AddBio()
         {
-            Persons.Add(
+            Persons?.Add(
                 new AboutUsModel
                 {
                     FullName = "Naveed Ahmad Hematmal",
@@ -66,7 +66,7 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
                 }
                 );
 
-            Persons.Add(
+            Persons?.Add(
                 new AboutUsModel
                 {
                     FullName = "Saeeda Rasuly",
@@ -77,7 +77,7 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
                 }
                 );
 
-            Persons.Add(
+            Persons?.Add(
                 new AboutUsModel
                 {
                     FullName = "Mohammed Yasin Zahin",
@@ -88,7 +88,7 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
                 }
                 );
 
-            Persons.Add(
+            Persons?.Add(
                 new AboutUsModel
                 {
                     FullName = "Abdul Basir Zafar",
@@ -103,10 +103,10 @@ namespace VaxineApp.ViewModels.Settings.AboutUs
     }
     public class AboutUsModel
     {
-        public string FullName { get; set; }
-        public string Role { get; set; }
-        public string PhotoURL { get; set; }
-        public string LinkedInURL { get; set; }
-        public string TwitterURL { get; set; }
+        public string? FullName { get; set; }
+        public string? Role { get; set; }
+        public string? PhotoURL { get; set; }
+        public string? LinkedInURL { get; set; }
+        public string? TwitterURL { get; set; }
     }
 }

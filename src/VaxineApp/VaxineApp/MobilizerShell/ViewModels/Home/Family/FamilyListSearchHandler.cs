@@ -12,8 +12,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
 {
     public class FamilyListSearchHandler : SearchHandler
     {
-        public ObservableCollection<FamilyModel> Families { get; set; }
-        public Type SelectedItemNavigationTarget { get; set; }
+        public ObservableCollection<FamilyModel>? Families { get; set; }
+        public Type? SelectedItemNavigationTarget { get; set; }
 
         protected override void OnQueryChanged(string oldValue, string newValue)
         {
