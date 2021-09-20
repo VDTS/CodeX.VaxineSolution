@@ -1,4 +1,5 @@
 ﻿using Microcharts;
+using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 using SkiaSharp;
 using System;
@@ -18,8 +19,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Insights
     public class InsightsViewModel : ViewModelBase
     {
         // Property
-        private PieChart femaleVsMaleChart;
-        public PieChart FemaleVsMaleChart
+        private PieChart? femaleVsMaleChart;
+        public PieChart? FemaleVsMaleChart
         {
             get
             {
@@ -32,8 +33,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Insights
             }
         }
 
-        private ObservableCollection<Entry> entries;
-        public ObservableCollection<Entry> Entries
+        private ObservableCollection<Entry>? entries;
+        public ObservableCollection<Entry>? Entries
         {
             get
             {
@@ -46,8 +47,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Insights
             }
         }
 
-        private ObservableCollection<FemaleVsMaleChildModel> femaleVsMaleData;
-        public ObservableCollection<FemaleVsMaleChildModel> FemaleVsMaleData
+        private ObservableCollection<FemaleVsMaleChildModel>? femaleVsMaleData;
+        public ObservableCollection<FemaleVsMaleChildModel>? FemaleVsMaleData
         {
             get
             {
@@ -113,42 +114,86 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Insights
         {
             int _maleChildren = 0;
             int _femaleChildren = 0;
-            var data = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
-            if (data != "null" && data != "Error")
+
+            var jData = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(data);
-                foreach (KeyValuePair<string, FamilyModel> item in clinic)
-                {
-                    var data2 = await DataService.Get($"Child/{item.Value.Id}");
-                    if (data2 != "null" && data2 != "Error")
-                    {
-                        var clinic2 = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
-                        foreach (KeyValuePair<string, ChildModel> item2 in clinic2)
-                        {
-                            if (item2.Value.Gender == "Female")
-                            {
-                                _femaleChildren++;
-                            }
-                            else
-                            {
-                                _maleChildren++;
-                            }
-                        }
-                    }
-                }
+                StandardMessagesDisplay.NoConnectionToast();
             }
-            else
+            else if (jData == "null")
             {
                 StandardMessagesDisplay.NoDataDisplayMessage();
             }
-            FemaleVsMaleData.Add(
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                try
+                {
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(jData);
+
+                    if (data != null)
+                        foreach (KeyValuePair<string, FamilyModel> item in data)
+                        {
+                            var data2 = await DataService.Get($"Child/{item.Value.Id}");
+
+                            if (data2 == "ConnectionError")
+                            {
+                                StandardMessagesDisplay.NoConnectionToast();
+                            }
+                            else if (data2 == "null")
+                            {
+                                StandardMessagesDisplay.NoDataDisplayMessage();
+                            }
+                            else if (data2 == "Error")
+                            {
+                                StandardMessagesDisplay.Error();
+                            }
+                            else if (data2 == "ErrorTracked")
+                            {
+                                StandardMessagesDisplay.ErrorTracked();
+                            }
+                            else
+                            {
+                                var nestedData = JsonConvert.DeserializeObject<Dictionary<string, ChildModel>>(data2);
+
+                                if (nestedData != null)
+                                    foreach (KeyValuePair<string, ChildModel> item2 in nestedData)
+                                    {
+                                        if (item2.Value.Gender == "Female")
+                                        {
+                                            _femaleChildren++;
+                                        }
+                                        else
+                                        {
+                                            _maleChildren++;
+                                        }
+                                    }
+                            }
+                        }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
+                }
+            }
+
+            FemaleVsMaleData?.Add(
                     new FemaleVsMaleChildModel
                     {
                         Indicator = "Male",
                         Counts = _maleChildren
                     }
                 );
-            FemaleVsMaleData.Add(
+            FemaleVsMaleData?.Add(
                     new FemaleVsMaleChildModel
                     {
                         Indicator = "Female",
@@ -156,24 +201,24 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Insights
                     }
                 );
 
-            foreach (var item in FemaleVsMaleData)
-            {
-                Random rd = new Random();
-                int c = rd.Next(1, 42);
-                Entries.Add(new Entry(item.Counts)
+            if (FemaleVsMaleData != null)
+                foreach (var item in FemaleVsMaleData)
                 {
-                    Label = item.Indicator,
-                    ValueLabel = item.Counts.ToString(),
-                    Color = SKColor.Parse($"#{ColourValues[c]}")
-                });
-            }
+                    Random rd = new Random();
+                    int c = rd.Next(1, 42);
+                    Entries?.Add(new Entry(item.Counts)
+                    {
+                        Label = item.Indicator,
+                        ValueLabel = item.Counts.ToString(),
+                        Color = SKColor.Parse($"#{ColourValues[c]}")
+                    });
+                }
             FemaleVsMaleChart = new PieChart()
             {
                 Entries = Entries
             };
             FemaleVsMaleChart.LabelTextSize = 40;
         }
-
         public async void Refresh()
         {
             IsBusy = true;
@@ -187,8 +232,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Insights
 
         public void Clear()
         {
-            FemaleVsMaleData.Clear();
-            Entries.Clear();
+            FemaleVsMaleData?.Clear();
+            Entries?.Clear();
             FemaleVsMaleChart = null;
         }
     }

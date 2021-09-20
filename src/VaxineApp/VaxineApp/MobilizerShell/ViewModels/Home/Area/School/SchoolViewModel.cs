@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -15,8 +17,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
     public class SchoolViewModel : ViewModelBase
     {
         // Property
-        private SchoolModel selectedSchool;
-        public SchoolModel SelectedSchool
+        private SchoolModel? selectedSchool;
+        public SchoolModel? SelectedSchool
         {
             get
             {
@@ -29,8 +31,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
             }
         }
 
-        private ObservableCollection<SchoolModel> schools;
-        public ObservableCollection<SchoolModel> Schools
+        private ObservableCollection<SchoolModel>? schools;
+        public ObservableCollection<SchoolModel>? Schools
         {
             get
             {
@@ -86,7 +88,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
 
         private async void GoToPutPage()
         {
-            if (SelectedSchool.SchoolName != null)
+            if (SelectedSchool?.SchoolName != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(SelectedSchool);
                 var route = $"{nameof(EditSchoolPage)}?School={jsonClinic}";
@@ -100,7 +102,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
         }
         private async void Delete(object obj)
         {
-            if (SelectedSchool.FId != null)
+            if (SelectedSchool?.FId != null)
             {
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedSchool.SchoolName);
                 if (isDeleteAccepted)
@@ -124,7 +126,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
 
                         StandardMessagesDisplay.ItemDeletedToast();
 
-                        Schools.Remove(SelectedSchool);
+                        Schools?.Remove(SelectedSchool);
                     }
                 }
                 else
@@ -172,20 +174,30 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(jData);
-                foreach (KeyValuePair<string, SchoolModel> item in data)
+                try
                 {
-                    Schools.Add(
-                        new SchoolModel
-                        {
-                            FId = item.Key.ToString(),
-                            Id = item.Value.Id,
-                            KeyInfluencer = item.Value.KeyInfluencer,
-                            SchoolName = item.Value.SchoolName,
-                            Longitude = item.Value.Longitude,
-                            Latitude = item.Value.Latitude
-                        }
-                        );
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, SchoolModel>>(jData);
+
+                    if(data != null)
+                    foreach (KeyValuePair<string, SchoolModel> item in data)
+                    {
+                        Schools?.Add(
+                            new SchoolModel
+                            {
+                                FId = item.Key.ToString(),
+                                Id = item.Value.Id,
+                                KeyInfluencer = item.Value.KeyInfluencer,
+                                SchoolName = item.Value.SchoolName,
+                                Longitude = item.Value.Longitude,
+                                Latitude = item.Value.Latitude
+                            }
+                            );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -209,7 +221,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
 
         void Clear()
         {
-            Schools.Clear();
+            Schools?.Clear();
         }
     }
 }
