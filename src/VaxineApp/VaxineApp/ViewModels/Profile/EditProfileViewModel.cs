@@ -9,6 +9,7 @@ using System.Windows.Input;
 using Utility.Validations;
 using VaxineApp.AndroidNativeApi;
 using VaxineApp.Models;
+using VaxineApp.Models.AccountModels;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Essentials;
@@ -20,6 +21,7 @@ namespace VaxineApp.ViewModels.Home.Profile
     {
         // Validator
         ProfileValidator ValidationRules { get; set; }
+        NewEmailValidator EmailValidators { get; set; }
         // Property
         public ProfileModel Profile { get; set; }
 
@@ -67,22 +69,8 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         Auth Account { get; set; }
 
-        private string currentEmail;
-        public string CurrentEmail
-        {
-            get
-            {
-                return currentEmail;
-            }
-            set
-            {
-                currentEmail = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private string newEmail;
-        public string NewEmail
+        private NewEmailModel newEmail;
+        public NewEmailModel NewEmail
         {
             get
             {
@@ -91,20 +79,6 @@ namespace VaxineApp.ViewModels.Home.Profile
             set
             {
                 newEmail = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private string confirmEmail;
-        public string ConfirmEmail
-        {
-            get
-            {
-                return confirmEmail;
-            }
-            set
-            {
-                confirmEmail = value;
                 OnPropertyChanged();
             }
         }
@@ -123,6 +97,8 @@ namespace VaxineApp.ViewModels.Home.Profile
             Profile = _profile;
             Account = new Auth(Constants.FirebaseApiKey);
             ValidationRules = new ProfileValidator();
+            EmailValidators = new NewEmailValidator();
+            NewEmail = new NewEmailModel();
 
             // Command
             PutCommand = new Command(Put);
@@ -133,62 +109,52 @@ namespace VaxineApp.ViewModels.Home.Profile
 
         private async void ChangeEmail()
         {
-            if (!string.IsNullOrEmpty(CurrentEmail) && !string.IsNullOrEmpty(NewEmail) && !string.IsNullOrEmpty(ConfirmEmail))
+            var validationResult = EmailValidators.Validate(NewEmail);
+            if (validationResult.IsValid)
             {
-                if (NewEmail == ConfirmEmail)
+
+                string result = await App.Current.MainPage.DisplayPromptAsync("Enter your Password", "You are entering sudo mode.");
+
+                string jSignInResponse = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), result);
+
+                if (jSignInResponse.Contains("Error"))
                 {
-                    if (EmailValidators.IsEmailValid(NewEmail))
+                    StandardMessagesDisplay.CommonToastMessage(jSignInResponse);
+                }
+                else if (jSignInResponse == "ConnectionError")
+                {
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (jSignInResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
+                }
+                else
+                {
+                    JObject jo = JObject.Parse(jSignInResponse);
+                    var Token = (string)jo.SelectToken("idToken");
+
+                    var message = await Account.ChangeEmail(NewEmail.NewEmail, Token);
+                    if (message == "OK")
                     {
-                        string result = await App.Current.MainPage.DisplayPromptAsync("Enter your Password", "You are entering sudo mode.");
-                        string jSignInResponse = await Account.SignIn(Preferences.Get("ProfileEmail", "").ToString(), result);
-                        if (jSignInResponse.Contains("Error"))
-                        {
-                            StandardMessagesDisplay.CommonToastMessage(jSignInResponse);
-                        }
-                        else if (jSignInResponse == "ConnectionError")
-                        {
-                            StandardMessagesDisplay.NoConnectionToast();
-                        }
-                        else if (jSignInResponse == "ErrorTracked")
-                        {
-                            StandardMessagesDisplay.ErrorTracked();
-                        }
-                        else
-                        {
-                            JObject jo = JObject.Parse(jSignInResponse);
-                            var Token = (string)jo.SelectToken("idToken");
+                        StandardMessagesDisplay.EmailChanged(NewEmail.NewEmail);
+                        await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
 
-                            var message = await Account.ChangeEmail(NewEmail, Token);
-                            if (message == "OK")
-                            {
-                                StandardMessagesDisplay.EmailChanged(NewEmail);
-                                await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "0");
-
-                                string s1 = await Account.VerifyEmail(Token);
-                                if (s1 == "OK")
-                                {
-                                    StandardMessagesDisplay.EmailVerificationSend(NewEmail);
-                                }
-                            }
-                            else
-                            {
-                                StandardMessagesDisplay.CanceledDisplayMessage();
-                            }
+                        string s1 = await Account.VerifyEmail(Token);
+                        if (s1 == "OK")
+                        {
+                            StandardMessagesDisplay.EmailVerificationSend(NewEmail.NewEmail);
                         }
                     }
                     else
                     {
-                        StandardMessagesDisplay.EmailValidator();
+                        StandardMessagesDisplay.CanceledDisplayMessage();
                     }
-                }
-                else
-                {
-                    StandardMessagesDisplay.EmailMatchValidator();
                 }
             }
             else
             {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                StandardMessagesDisplay.ValidationRulesViolation(validationResult.Errors[0].PropertyName, validationResult.Errors[0].ErrorMessage);
             }
         }
 
