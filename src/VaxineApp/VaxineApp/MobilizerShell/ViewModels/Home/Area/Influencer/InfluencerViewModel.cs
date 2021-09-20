@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -17,8 +19,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
     {
         // Property
 
-        private InfluencerModel selectedInfluencer;
-        public InfluencerModel SelectedInfluencer
+        private InfluencerModel? selectedInfluencer;
+        public InfluencerModel? SelectedInfluencer
         {
             get
             {
@@ -45,8 +47,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
             }
         }
 
-        private ObservableCollection<InfluencerModel> influencers;
-        public ObservableCollection<InfluencerModel> Influencers
+        private ObservableCollection<InfluencerModel>? influencers;
+        public ObservableCollection<InfluencerModel>? Influencers
         {
             get
             {
@@ -87,7 +89,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
 
         private async void GoToPutPage()
         {
-            if (SelectedInfluencer.Name != null)
+            if (SelectedInfluencer?.Name != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(SelectedInfluencer);
                 var route = $"{nameof(EditInfluencerPage)}?Influencer={jsonClinic}";
@@ -102,7 +104,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
 
         public async void Delete()
         {
-            if (SelectedInfluencer.Name != null)
+            if (SelectedInfluencer?.Name != null)
             {
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedInfluencer.Name);
                 if (isDeleteAccepted)
@@ -125,7 +127,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
                         _ = await DataService.Put((--StaticDataStore.TeamStats.TotalInfluencers).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalInfluencers");
                         StandardMessagesDisplay.ItemDeletedToast();
 
-                        Influencers.Remove(SelectedInfluencer);
+                        Influencers?.Remove(SelectedInfluencer);
 
                     }
                 }
@@ -168,20 +170,30 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(jData);
-                foreach (KeyValuePair<string, InfluencerModel> item in data)
+                try
                 {
-                    Influencers.Add(
-                        new InfluencerModel
-                        {
-                            Id = item.Value.Id,
-                            FId = item.Key.ToString(),
-                            Name = item.Value.Name,
-                            Contact = item.Value.Contact,
-                            Position = item.Value.Position,
-                            DoesHeProvidingSupport = item.Value.DoesHeProvidingSupport
-                        }
-                        );
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, InfluencerModel>>(jData);
+
+                    if(data != null)
+                    foreach (KeyValuePair<string, InfluencerModel> item in data)
+                    {
+                        Influencers?.Add(
+                            new InfluencerModel
+                            {
+                                Id = item.Value.Id,
+                                FId = item.Key.ToString(),
+                                Name = item.Value.Name,
+                                Contact = item.Value.Contact,
+                                Position = item.Value.Position,
+                                DoesHeProvidingSupport = item.Value.DoesHeProvidingSupport
+                            }
+                            );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -203,7 +215,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
 
         void Clear()
         {
-            Influencers.Clear();
+            Influencers?.Clear();
         }
     }
 }
