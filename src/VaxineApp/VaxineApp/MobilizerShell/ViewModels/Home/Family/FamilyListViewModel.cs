@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -22,8 +23,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
     {
 
 
-        private ObservableCollection<FamilyModel> families;
-        public ObservableCollection<FamilyModel> Families
+        private ObservableCollection<FamilyModel>? families;
+        public ObservableCollection<FamilyModel>? Families
         {
             get
             {
@@ -36,8 +37,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             }
         }
 
-        private FamilyModel selectedFamily;
-        public FamilyModel SelectedFamily
+        private FamilyModel? selectedFamily;
+        public FamilyModel? SelectedFamily
         {
             get
             {
@@ -68,7 +69,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
 
         public ICommand GoToPostPageCommand { private set; get; }
         public ICommand SelectionCommand { private set; get; }
-        public ICommand CancelSelectionCommand { private set; get; }
+        //public ICommand CancelSelectionCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
 
@@ -110,23 +111,37 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(jData);
-                foreach (KeyValuePair<string, FamilyModel> item in data)
+                try
                 {
-                    StaticDataStore.FamilyNumbers.Add(item.Value.HouseNo);
-                    Families.Add(
-                        new FamilyModel
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, FamilyModel>>(jData);
+
+                    if (data != null)
+                        foreach (KeyValuePair<string, FamilyModel> item in data)
                         {
-                            FId = item.Key.ToString(),
-                            Id = item.Value.Id,
-                            ParentName = item.Value.ParentName,
-                            PhoneNumber = item.Value.PhoneNumber,
-                            HouseNo = item.Value.HouseNo
+                            StaticDataStore.FamilyNumbers.Add(item.Value.HouseNo);
+                            Families?.Add(
+                                new FamilyModel
+                                {
+                                    FId = item.Key.ToString(),
+                                    Id = item.Value.Id,
+                                    ParentName = item.Value.ParentName,
+                                    PhoneNumber = item.Value.PhoneNumber,
+                                    HouseNo = item.Value.HouseNo
+                                }
+                                );
                         }
-                        );
+
+                    if (Families != null)
+                    {
+                        StaticDataStore.Families = Families;
+                        StaticDataStore.TeamStats.TotalHouseholds = Families.Count;
+                    }
                 }
-                StaticDataStore.Families = Families;
-                StaticDataStore.TeamStats.TotalHouseholds = Families.Count;
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
+                }
             }
         }
 
@@ -147,7 +162,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
 
         public void Clear()
         {
-            Families.Clear();
+            Families?.Clear();
         }
 
         public void CancelSelection()
@@ -174,6 +189,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             int y = 0;
 
             // Syncfusion.PDF ends
+            if(Families != null)
             foreach (var value in Families)
             {
                 string str = $"{value.ParentName} : {value.PhoneNumber}";
