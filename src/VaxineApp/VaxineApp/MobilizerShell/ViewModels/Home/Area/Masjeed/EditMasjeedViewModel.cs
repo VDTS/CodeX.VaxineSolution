@@ -11,10 +11,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
     public class EidtMasjeedViewModel : ViewModelBase
     {
         // Validator
-        MasjeedValidator ValidationRules { get; set; }
+        MasjeedValidator? ValidationRules { get; set; }
         // Property
-        private MasjeedModel masjeed;
-        public MasjeedModel Masjeed
+        private MasjeedModel? masjeed;
+        public MasjeedModel? Masjeed
         {
             get
             {
@@ -29,7 +29,6 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
 
         // Command
         public ICommand PutCommand { private set; get; }
-        public ICommand AddLocationCommand { private set; get; }
 
         // ctor
         public EidtMasjeedViewModel(MasjeedModel masjeed)
@@ -44,25 +43,28 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
 
         public async void Put()
         {
-            var result = ValidationRules.Validate(Masjeed);
-            if (result.IsValid)
+            if (Masjeed != null)
             {
-                var jsonData = JsonConvert.SerializeObject(Masjeed);
-                var data = await DataService.Put(jsonData, $"Masjeed/{Preferences.Get("TeamId", "")}/{Masjeed.FId}");
-                if (data == "Submit")
+                var result = ValidationRules?.Validate(Masjeed);
+                if (result != null && result.IsValid)
                 {
-                    StandardMessagesDisplay.EditDisplaymessage(Masjeed.MasjeedName);
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    var jsonData = JsonConvert.SerializeObject(Masjeed);
+                    var data = await DataService.Put(jsonData, $"Masjeed/{Preferences.Get("TeamId", "")}/{Masjeed.FId}");
+                    if (data == "Submit")
+                    {
+                        StandardMessagesDisplay.EditDisplaymessage(Masjeed.MasjeedName);
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
+                    else
+                    {
+                        StandardMessagesDisplay.CanceledDisplayMessage();
+                    }
                 }
                 else
                 {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
+                    StandardMessagesDisplay.ValidationRulesViolation(result?.Errors[0].PropertyName, result?.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

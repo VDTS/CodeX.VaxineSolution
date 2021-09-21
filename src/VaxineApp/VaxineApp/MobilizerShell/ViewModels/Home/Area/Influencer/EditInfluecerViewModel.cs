@@ -11,10 +11,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
     public class EditInfluecerViewModel : ViewModelBase
     {
         // Validator
-        InfluencerValidator ValidationRules { get; set; }
+        InfluencerValidator? ValidationRules { get; set; }
         // Property
-        private InfluencerModel influencer;
-        public InfluencerModel Influencer
+        private InfluencerModel? influencer;
+        public InfluencerModel? Influencer
         {
             get
             {
@@ -42,25 +42,29 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
 
         public async void Put()
         {
-            var result = ValidationRules.Validate(Influencer);
-            if (result.IsValid)
+            if (Influencer != null)
             {
-                var jsonData = JsonConvert.SerializeObject(Influencer);
-                var data = await DataService.Put(jsonData, $"Influencer/{Preferences.Get("TeamId", "")}/{Influencer.FId}");
-                if (data == "Submit")
+                var result = ValidationRules?.Validate(Influencer);
+                if(result != null)
+                if (result.IsValid)
                 {
-                    StandardMessagesDisplay.EditDisplaymessage(influencer.Name);
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    var jsonData = JsonConvert.SerializeObject(Influencer);
+                    var data = await DataService.Put(jsonData, $"Influencer/{Preferences.Get("TeamId", "")}/{Influencer.FId}");
+                    if (data == "Submit")
+                    {
+                        StandardMessagesDisplay.EditDisplaymessage(influencer?.Name);
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
+                    else
+                    {
+                        StandardMessagesDisplay.CanceledDisplayMessage();
+                    }
                 }
                 else
                 {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
+                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

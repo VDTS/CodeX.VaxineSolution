@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,12 +14,12 @@ using Xamarin.Forms;
 
 namespace VaxineApp.ParentShellDir.ViewModel
 {
-    public class ChildVaccineViewModel : ViewModelBase, IDataCrud, IVMUtils
+    public class ChildVaccineViewModel : ViewModelBase
     {
 
         // Property
-        private ChildModel child;
-        public ChildModel Child
+        private ChildModel? child;
+        public ChildModel? Child
         {
             get
             {
@@ -31,8 +32,8 @@ namespace VaxineApp.ParentShellDir.ViewModel
             }
         }
 
-        private ObservableCollection<VaccineModel> vaccineList;
-        public ObservableCollection<VaccineModel> VaccineList
+        private ObservableCollection<VaccineModel>? vaccineList;
+        public ObservableCollection<VaccineModel>? VaccineList
         {
             get
             {
@@ -45,8 +46,8 @@ namespace VaxineApp.ParentShellDir.ViewModel
             }
         }
 
-        private VaccineModel currentVaccine;
-        public VaccineModel CurrentVaccine
+        private VaccineModel? currentVaccine;
+        public VaccineModel? CurrentVaccine
         {
             get
             {
@@ -103,27 +104,22 @@ namespace VaxineApp.ParentShellDir.ViewModel
             PullRefreshCommand = new Command(Refresh);
         }
 
-        public void CancelSelection()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Clear()
         {
-            VaccineList.Clear();
+            VaccineList?.Clear();
         }
 
         public async void Delete()
         {
-            if (CurrentVaccine.FId != null)
+            if (CurrentVaccine?.FId != null)
             {
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(CurrentVaccine.VaccineStatus);
                 if (isDeleteAccepted)
                 {
-                    var data = await DataService.Delete($"Vaccine/{Child.Id}/{CurrentVaccine.FId}");
+                    var data = await DataService.Delete($"Vaccine/{Child?.Id}/{CurrentVaccine.FId}");
                     if (data == "Deleted")
                     {
-                        VaccineList.Remove(CurrentVaccine);
+                        VaccineList?.Remove(CurrentVaccine);
                         CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
                     }
                     else
@@ -145,39 +141,51 @@ namespace VaxineApp.ParentShellDir.ViewModel
 
         public async void Get()
         {
-            var data = await DataService.Get($"Vaccine/{Child.Id}");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Vaccine/{Child?.Id}");
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(data);
-                foreach (KeyValuePair<string, VaccineModel> item in clinic)
-                {
-                    VaccineList.Add(
-                        new VaccineModel
-                        {
-                            Id = item.Value.Id,
-                            RegisteredBy = item.Value.RegisteredBy,
-                            VaccinePeriod = item.Value.VaccinePeriod,
-                            VaccineStatus = item.Value.VaccineStatus,
-                            FId = item.Key
-                        }
-                        );
-                }
-                CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+                StandardMessagesDisplay.NoConnectionToast();
             }
-            else
+            else if (jData == "null")
             {
                 StandardMessagesDisplay.NoDataDisplayMessage();
             }
-        }
-
-        public void GoToDetailsPage()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GoToMapPage()
-        {
-            throw new NotImplementedException();
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
+            }
+            else
+            {
+                try
+                {
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(jData);
+                    
+                    if(data != null)
+                    foreach (KeyValuePair<string, VaccineModel> item in data)
+                    {
+                        VaccineList?.Add(
+                            new VaccineModel
+                            {
+                                Id = item.Value.Id,
+                                RegisteredBy = item.Value.RegisteredBy,
+                                VaccinePeriod = item.Value.VaccinePeriod,
+                                VaccineStatus = item.Value.VaccineStatus,
+                                FId = item.Key
+                            }
+                            );
+                    }
+                    CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
+                }
+            }
         }
 
         public async void GoToPostPage()
@@ -189,26 +197,16 @@ namespace VaxineApp.ParentShellDir.ViewModel
 
         public async void GoToPutPage()
         {
-            if (CurrentVaccine.FId != null)
+            if (CurrentVaccine?.FId != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(CurrentVaccine);
-                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}&ChildId={Child.Id}";
+                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}&ChildId={Child?.Id}";
                 await Shell.Current.GoToAsync(route);
             }
             else
             {
                 StandardMessagesDisplay.NoDataDisplayMessage();
             }
-        }
-
-        public void Post()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Put()
-        {
-            throw new NotImplementedException();
         }
 
         public async void Refresh()

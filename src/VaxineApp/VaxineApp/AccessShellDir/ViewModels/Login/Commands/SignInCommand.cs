@@ -5,9 +5,9 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login.Commands
 {
     public class SignInCommand : ICommand
     {
-        public event EventHandler CanExecuteChanged;
+        public event EventHandler? CanExecuteChanged;
 
-        private readonly LoginViewModel LoginViewModel;
+        private readonly LoginViewModel? LoginViewModel;
 
         public SignInCommand(LoginViewModel loginViewModel)
         {
@@ -17,7 +17,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login.Commands
         public bool CanExecute(object parameter)
         {
             var param = parameter as String;
-            if (!string.IsNullOrWhiteSpace(LoginViewModel.InputUserEmail))
+
+            if (!string.IsNullOrWhiteSpace(LoginViewModel?.InputUserEmail))
             {
                 if (!string.IsNullOrEmpty(param))
                 {
@@ -37,6 +38,8 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login.Commands
         public void Execute(object parameter)
         {
             var param = parameter as String;
+
+            if(LoginViewModel?.InputUserEmail != null && param != null)
             LoginViewModel.SignIn(LoginViewModel.InputUserEmail, param);
         }
     }

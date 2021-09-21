@@ -9,8 +9,8 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
     public class AppUpdatesViewModel : ViewModelBase
     {
         // Property
-        private string appPackageName;
-        public string AppPackageName
+        private string? appPackageName;
+        public string? AppPackageName
         {
             get
             {
@@ -37,8 +37,8 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
             }
         }
 
-        private HtmlWebViewSource appNewUpdates;
-        public HtmlWebViewSource AppNewUpdates
+        private HtmlWebViewSource? appNewUpdates;
+        public HtmlWebViewSource? AppNewUpdates
         {
             get
             {
@@ -51,8 +51,8 @@ namespace VaxineApp.ViewModels.Settings.AppUpdates
             }
         }
 
-        private string appVersion;
-        public string AppVersion
+        private string? appVersion;
+        public string? AppVersion
         {
             get
             {

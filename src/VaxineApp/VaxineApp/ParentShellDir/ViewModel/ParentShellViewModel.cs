@@ -16,8 +16,8 @@ namespace VaxineApp.ParentShellDir.ViewModel
     public class ParentShellViewModel : ViewModelBase
     {
         // Property
-        private string userName;
-        public string UserName
+        private string? userName;
+        public string? UserName
         {
             get
             {
@@ -30,8 +30,8 @@ namespace VaxineApp.ParentShellDir.ViewModel
             }
         }
 
-        private string role;
-        public string Role
+        private string? role;
+        public string? Role
         {
             get
             {
@@ -56,15 +56,6 @@ namespace VaxineApp.ParentShellDir.ViewModel
         // ctor
         public ParentShellViewModel()
         {
-            // Get
-            //sqliteDataCache.Initialize(Preferences.Get("ProfileEmail", ""));
-            //var profileValue = sqliteDataCache.Get("Profile");
-            //var profile = JsonConvert.DeserializeObject<ProfileModel>(profileValue);
-
-            ////// Property
-            //UserName = profile.FullName;
-            //Role = profile.Role;
-
             // Command
             GoToSettingsPageCommand = new Command(GoToSettingsPage);
             GoToProfileCommand = new Command(GoToProfile);

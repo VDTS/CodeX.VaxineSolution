@@ -167,7 +167,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                     await LoadCluster();
                     await LoadTeam();
                     await LoadVaccinePeriod();
-                    await GoToApp();
+                    GoToApp();
                 }
             }
         }
@@ -218,7 +218,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             }
         }
 
-        private static async Task GoToApp()
+        private static void GoToApp()
         {
             Enum.TryParse(Xamarin.Essentials.SecureStorage.GetAsync("Role").Result, out Role role);
 

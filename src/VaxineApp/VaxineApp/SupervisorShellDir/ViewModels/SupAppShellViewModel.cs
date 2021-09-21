@@ -16,8 +16,8 @@ namespace VaxineApp.SupervisorShellDir.ViewModel
     public class SupAppShellViewModel : ViewModelBase
     {
         // Property
-        private string userName;
-        public string UserName
+        private string? userName;
+        public string? UserName
         {
             get
             {
@@ -30,8 +30,8 @@ namespace VaxineApp.SupervisorShellDir.ViewModel
             }
         }
 
-        private string role;
-        public string Role
+        private string? role;
+        public string? Role
         {
             get
             {

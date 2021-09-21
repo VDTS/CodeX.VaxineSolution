@@ -25,13 +25,12 @@ namespace VaxineApp.ViewModels.RecycleBin
 
 
         // Debug Code
-        public ObservableCollection<Items> items { get; set; }
+        public ObservableCollection<Items>? items { get; set; }
 
         // Command
         public ICommand EmptyRecycleBinCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
         public ICommand RestoreCommand { private set; get; }
-        public ICommand PullRefreshCommand { private set; get; }
         public RecycleBinViewModel()
         {
             // Command
@@ -88,8 +87,8 @@ namespace VaxineApp.ViewModels.RecycleBin
     #region MyRegion
     public class Items
     {
-        public string Name { get; set; }
-        public string Details { get; set; }
+        public string? Name { get; set; }
+        public string? Details { get; set; }
     }
     #endregion
 }
