@@ -27,7 +27,7 @@ namespace VaxineApp.StaticData
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.EditBody(input));
         }
-        public async static Task<bool> DeleteDisplayMessage(string input)
+        public async static Task<bool> DeleteDisplayMessage(string? input)
         {
             return await App.Current.MainPage.DisplayAlert(null, StandardMessagesText.DeleteBody(input), "Yes", "No");
         }

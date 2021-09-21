@@ -10,15 +10,18 @@ namespace VaxineApp.MobilizerShell.Views.Home.Status.Anonymous
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditAnonymousChildPage : ContentPage
     {
-        public string AnonymousChild { get; set; }
+        public string? AnonymousChild { get; set; }
         public EditAnonymousChildPage()
         {
             InitializeComponent();
         }
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<AnonymousChildModel>(AnonymousChild);
-            BindingContext = new EditAnonymousChildViewModel(result);
+            if (AnonymousChild != null)
+            {
+                var result = JsonConvert.DeserializeObject<AnonymousChildModel>(AnonymousChild);
+                if (result != null) BindingContext = new EditAnonymousChildViewModel(result);
+            }
         }
     }
 }

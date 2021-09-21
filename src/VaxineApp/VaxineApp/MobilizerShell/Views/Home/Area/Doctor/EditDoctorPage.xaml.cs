@@ -10,15 +10,18 @@ namespace VaxineApp.MobilizerShell.Views.Home.Area.Doctor
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditDoctorPage : ContentPage
     {
-        public string Doctor { get; set; }
+        public string? Doctor { get; set; }
         public EditDoctorPage()
         {
             InitializeComponent();
         }
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<DoctorModel>(Doctor);
-            BindingContext = new EditDoctorViewModel(result);
+            if (Doctor != null)
+            {
+                var result = JsonConvert.DeserializeObject<DoctorModel>(Doctor);
+                if (result != null) BindingContext = new EditDoctorViewModel(result);
+            }
         }
     }
 }
