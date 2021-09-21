@@ -65,7 +65,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family.Child
                 {
                     var jData = JsonConvert.SerializeObject(Child);
 
-                    string postResponse = await DataService.Post(jData, $"Child/{Family.Id}");
+                    string postResponse = await DataService.Post(jData, $"Child/{Family?.Id}");
                     if (postResponse == "ConnectionError")
                     {
                         StandardMessagesDisplay.NoConnectionToast();
@@ -89,7 +89,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family.Child
                 }
                 else
                 {
-                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
+                    StandardMessagesDisplay.ValidationRulesViolation(result?.Errors[0].PropertyName, result?.Errors[0].ErrorMessage);
                 }
             }
         }

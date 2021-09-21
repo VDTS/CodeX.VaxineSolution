@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,8 +18,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
     public class DoctorViewModel : ViewModelBase, IDataCrud, IVMUtils
     {
         // Property
-        private DoctorModel selectedDoctor;
-        public DoctorModel SelectedDoctor
+        private DoctorModel? selectedDoctor;
+        public DoctorModel? SelectedDoctor
         {
             get
             {
@@ -31,8 +32,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
             }
         }
 
-        private ObservableCollection<DoctorModel> doctors;
-        public ObservableCollection<DoctorModel> Doctors
+        private ObservableCollection<DoctorModel>? doctors;
+        public ObservableCollection<DoctorModel>? Doctors
         {
             get
             {
@@ -109,18 +110,28 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(jData);
-                foreach (KeyValuePair<string, DoctorModel> item in data)
+                try
                 {
-                    Doctors.Add(
-                            new DoctorModel
-                            {
-                                FId = item.Key.ToString(),
-                                Id = item.Value.Id,
-                                Name = item.Value.Name,
-                                IsHeProvindingSupportForSIAAndVaccination = item.Value.IsHeProvindingSupportForSIAAndVaccination
-                            }
-                        );
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, DoctorModel>>(jData);
+
+                    if (data != null)
+                        foreach (KeyValuePair<string, DoctorModel> item in data)
+                        {
+                            Doctors?.Add(
+                                    new DoctorModel
+                                    {
+                                        FId = item.Key.ToString(),
+                                        Id = item.Value.Id,
+                                        Name = item.Value.Name,
+                                        IsHeProvindingSupportForSIAAndVaccination = item.Value.IsHeProvindingSupportForSIAAndVaccination
+                                    }
+                                );
+                        }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -139,10 +150,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
         {
             if (!SelectedDoctor.AreEmpty())
             {
-                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedDoctor.Name);
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(SelectedDoctor?.Name);
                 if (isDeleteAccepted)
                 {
-                    var deleteResponse = await DataService.Delete($"Doctor/{Preferences.Get("TeamId", "")}/{SelectedDoctor.FId}");
+                    var deleteResponse = await DataService.Delete($"Doctor/{Preferences.Get("TeamId", "")}/{SelectedDoctor?.FId}");
                     if (deleteResponse == "ConnectionError")
                     {
                         StandardMessagesDisplay.NoConnectionToast();
@@ -161,7 +172,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
 
                         StandardMessagesDisplay.ItemDeletedToast();
 
-                        Doctors.Remove(SelectedDoctor);
+                        if(SelectedDoctor != null)
+                        Doctors?.Remove(SelectedDoctor);
                     }
                 }
                 else
@@ -173,12 +185,12 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
 
         public void Clear()
         {
-            Doctors.Clear();
+            Doctors?.Clear();
         }
 
         public void CancelSelection()
         {
-            if (SelectedDoctor.FId != null)
+            if (SelectedDoctor?.FId != null)
             {
                 SelectedDoctor = null;
             }
@@ -212,7 +224,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
 
         public async void GoToPutPage()
         {
-            if (SelectedDoctor.Name != null)
+            if (SelectedDoctor?.Name != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(SelectedDoctor);
                 var route = $"{nameof(EditDoctorPage)}?Doctor={jsonClinic}";

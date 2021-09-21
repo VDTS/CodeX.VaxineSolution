@@ -15,10 +15,10 @@ namespace VaxineApp.ViewModels.Home.Profile
     public class ProfileViewModel : ViewModelBase
     {
         // Property
-        public string PrefUserEmail { get; set; }
+        public string? PrefUserEmail { get; set; }
 
-        private ProfileModel profile;
-        public ProfileModel Profile
+        private ProfileModel? profile;
+        public ProfileModel? Profile
         {
             get
             {
@@ -104,6 +104,8 @@ namespace VaxineApp.ViewModels.Home.Profile
             try
             {
                 var data = JsonConvert.DeserializeObject<ProfileModel>(jData);
+
+                if(data != null)
                 if (Preferences.Get("UserLocalId", "") == data.LocalId)
                 {
                     Profile = new ProfileModel

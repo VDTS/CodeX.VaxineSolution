@@ -12,10 +12,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
     public class AddSchoolViewModel : ViewModelBase
     {
         // Validator
-        SchoolValidator ValidationRules { get; set; }
+        SchoolValidator? ValidationRules { get; set; }
         // Property
-        private SchoolModel school;
-        public SchoolModel School
+        private SchoolModel? school;
+        public SchoolModel? School
         {
             get
             {
@@ -30,7 +30,6 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
 
         // Command
         public ICommand PostCommand { private set; get; }
-        public ICommand AddLocationCommand { private set; get; }
 
         // ctor
         public AddSchoolViewModel()
@@ -45,38 +44,41 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
 
         private async void Post()
         {
-            School.Id = Guid.NewGuid();
-
-            var result = ValidationRules.Validate(School);
-            if (result.IsValid)
+            if (School != null)
             {
-                var jData = JsonConvert.SerializeObject(School);
+                School.Id = Guid.NewGuid();
 
-                string postResponse = await DataService.Post(jData, $"School/{Preferences.Get("TeamId", "")}");
-                if (postResponse == "ConnectionError")
+                var result = ValidationRules?.Validate(School);
+                if (result != null && result.IsValid)
                 {
-                    StandardMessagesDisplay.NoConnectionToast();
-                }
-                else if (postResponse == "Error")
-                {
-                    StandardMessagesDisplay.Error();
-                }
-                else if (postResponse == "ErrorTracked")
-                {
-                    StandardMessagesDisplay.ErrorTracked();
+                    var jData = JsonConvert.SerializeObject(School);
+
+                    string postResponse = await DataService.Post(jData, $"School/{Preferences.Get("TeamId", "")}");
+                    if (postResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (postResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (postResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
+                    {
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
+                        StandardMessagesDisplay.AddDisplayMessage(School.SchoolName);
+
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
                 }
                 else
                 {
-                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalSchools).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalSchools");
-                    StandardMessagesDisplay.AddDisplayMessage(School.SchoolName);
-
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    StandardMessagesDisplay.ValidationRulesViolation(result?.Errors[0].PropertyName, result?.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

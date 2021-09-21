@@ -11,8 +11,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Vaccine
     public class EditVaccineViewModel : ViewModelBase
     {
         // Property
-        private VaccineModel vaccine;
-        public VaccineModel Vaccine
+        private VaccineModel? vaccine;
+        public VaccineModel? Vaccine
         {
             get
             {
@@ -46,22 +46,25 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Vaccine
         private async void Put()
         {
             // Changing date to UTC time
-            var time = DateTime.Now;
-            DateTime dateTime = new DateTime(Vaccine.VaccinePeriod.Year, Vaccine.VaccinePeriod.Month, Vaccine.VaccinePeriod.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
-
-            Vaccine.VaccinePeriod = dateTime;
-
-            var jsonData = JsonConvert.SerializeObject(Vaccine);
-            var data = await DataService.Put(jsonData, $"Vaccine/{ChildId}/{Vaccine.FId}");
-            if (data == "Submit")
+            if (Vaccine != null)
             {
-                StandardMessagesDisplay.EditDisplaymessage(Vaccine.VaccineStatus);
-                var route = "..";
-                await Shell.Current.GoToAsync(route);
-            }
-            else
-            {
-                StandardMessagesDisplay.CanceledDisplayMessage();
+                var time = DateTime.Now;
+                DateTime dateTime = new DateTime(Vaccine.VaccinePeriod.Year, Vaccine.VaccinePeriod.Month, Vaccine.VaccinePeriod.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+                Vaccine.VaccinePeriod = dateTime;
+
+                var jsonData = JsonConvert.SerializeObject(Vaccine);
+                var data = await DataService.Put(jsonData, $"Vaccine/{ChildId}/{Vaccine.FId}");
+                if (data == "Submit")
+                {
+                    StandardMessagesDisplay.EditDisplaymessage(Vaccine.VaccineStatus);
+                    var route = "..";
+                    await Shell.Current.GoToAsync(route);
+                }
+                else
+                {
+                    StandardMessagesDisplay.CanceledDisplayMessage();
+                }
             }
         }
     }

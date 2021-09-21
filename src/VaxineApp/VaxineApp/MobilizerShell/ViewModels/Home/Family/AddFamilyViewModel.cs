@@ -9,14 +9,14 @@ using Xamarin.Forms;
 
 namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
 {
-    public class AddFamilyViewModel : ViewModelBase, IDataCrud, IVMUtils
+    public class AddFamilyViewModel : ViewModelBase
     {
         // Validator
-        FamilyValidator ValidationRules { get; set; }
+        FamilyValidator? ValidationRules { get; set; }
         // Property
 
-        private FamilyModel family;
-        public FamilyModel Family
+        private FamilyModel? family;
+        public FamilyModel? Family
         {
             get
             {
@@ -44,58 +44,52 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             PostCommand = new Command(Post);
         }
 
-
-        public void Get()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Put()
-        {
-            throw new NotImplementedException();
-        }
-
         public async void Post()
         {
-            Family.Id = Guid.NewGuid();
-            Family.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
-
-            var result = ValidationRules.Validate(Family);
-            if (result.IsValid)
+            if (Family != null)
             {
-                if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
+                Family.Id = Guid.NewGuid();
+                Family.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+
+                var result = ValidationRules?.Validate(Family);
+
+                
+                if (result != null && result.IsValid)
                 {
-                    var jData = JsonConvert.SerializeObject(Family);
-                    string postResponse = await DataService.Post(jData, $"Family/{Preferences.Get("TeamId", "")}");
-                    if (postResponse == "ConnectionError")
+                    if (!StaticDataStore.FamilyNumbers.Contains(Family.HouseNo))
                     {
-                        StandardMessagesDisplay.NoConnectionToast();
-                    }
-                    else if (postResponse == "Error")
-                    {
-                        StandardMessagesDisplay.Error();
-                    }
-                    else if (postResponse == "ErrorTracked")
-                    {
-                        StandardMessagesDisplay.ErrorTracked();
+                        var jData = JsonConvert.SerializeObject(Family);
+                        string postResponse = await DataService.Post(jData, $"Family/{Preferences.Get("TeamId", "")}");
+                        if (postResponse == "ConnectionError")
+                        {
+                            StandardMessagesDisplay.NoConnectionToast();
+                        }
+                        else if (postResponse == "Error")
+                        {
+                            StandardMessagesDisplay.Error();
+                        }
+                        else if (postResponse == "ErrorTracked")
+                        {
+                            StandardMessagesDisplay.ErrorTracked();
+                        }
+                        else
+                        {
+                            _ = await DataService.Put((++StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
+                            StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
+
+                            var route = "..";
+                            await Shell.Current.GoToAsync(route);
+                        }
                     }
                     else
                     {
-                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
-                        StandardMessagesDisplay.AddDisplayMessage($"{Family.ParentName}'s Family ");
-
-                        var route = "..";
-                        await Shell.Current.GoToAsync(route);
+                        StandardMessagesDisplay.FamilyDuplicateValidator(Family.HouseNo);
                     }
                 }
                 else
                 {
-                    StandardMessagesDisplay.FamilyDuplicateValidator(Family.HouseNo);
+                    StandardMessagesDisplay.ValidationRulesViolation(result?.Errors[0].PropertyName, result?.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
 
         }

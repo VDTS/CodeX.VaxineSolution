@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -16,8 +18,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
     public class MasjeedViewModel : ViewModelBase
     {
         // Property
-        private MasjeedModel selectedMasjeed;
-        public MasjeedModel SelectedMasjeed
+        private MasjeedModel? selectedMasjeed;
+        public MasjeedModel? SelectedMasjeed
         {
             get
             {
@@ -44,8 +46,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
             }
         }
 
-        private ObservableCollection<MasjeedModel> masjeeds;
-        public ObservableCollection<MasjeedModel> Masjeeds
+        private ObservableCollection<MasjeedModel>? masjeeds;
+        public ObservableCollection<MasjeedModel>? Masjeeds
         {
             get
             {
@@ -125,23 +127,33 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(jData);
-                foreach (KeyValuePair<string, MasjeedModel> item in data)
+                try
                 {
-                    Masjeeds.Add(
-                        new MasjeedModel
-                        {
-                            FId = item.Key.ToString(),
-                            Id = item.Value.Id,
-                            MasjeedName = item.Value.MasjeedName,
-                            KeyInfluencer = item.Value.KeyInfluencer,
-                            DoYouHavePermissionForAdsInMasjeed = item.Value.DoYouHavePermissionForAdsInMasjeed,
-                            DoesImamSupportsVaccine = item.Value.DoesImamSupportsVaccine,
-                            Latitude = item.Value.Latitude,
-                            Longitude = item.Value.Longitude,
-                            IsActive = item.Value.IsActive
-                        }
-                        );
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, MasjeedModel>>(jData);
+
+                    if(data != null)
+                    foreach (KeyValuePair<string, MasjeedModel> item in data)
+                    {
+                        Masjeeds?.Add(
+                            new MasjeedModel
+                            {
+                                FId = item.Key.ToString(),
+                                Id = item.Value.Id,
+                                MasjeedName = item.Value.MasjeedName,
+                                KeyInfluencer = item.Value.KeyInfluencer,
+                                DoYouHavePermissionForAdsInMasjeed = item.Value.DoYouHavePermissionForAdsInMasjeed,
+                                DoesImamSupportsVaccine = item.Value.DoesImamSupportsVaccine,
+                                Latitude = item.Value.Latitude,
+                                Longitude = item.Value.Longitude,
+                                IsActive = item.Value.IsActive
+                            }
+                            );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -164,7 +176,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
 
         void Clear()
         {
-            Masjeeds.Clear();
+            Masjeeds?.Clear();
         }
     }
 }

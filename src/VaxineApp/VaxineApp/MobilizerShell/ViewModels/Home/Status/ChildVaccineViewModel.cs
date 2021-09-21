@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,8 +19,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
     {
 
         // Property
-        private ChildModel child;
-        public ChildModel Child
+        private ChildModel? child;
+        public ChildModel? Child
         {
             get
             {
@@ -32,8 +33,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
             }
         }
 
-        private ObservableCollection<VaccineModel> vaccineList;
-        public ObservableCollection<VaccineModel> VaccineList
+        private ObservableCollection<VaccineModel>? vaccineList;
+        public ObservableCollection<VaccineModel>? VaccineList
         {
             get
             {
@@ -46,8 +47,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
             }
         }
 
-        private VaccineModel currentVaccine;
-        public VaccineModel CurrentVaccine
+        private VaccineModel? currentVaccine;
+        public VaccineModel? CurrentVaccine
         {
             get
             {
@@ -111,17 +112,17 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
 
         public void Clear()
         {
-            VaccineList.Clear();
+            VaccineList?.Clear();
         }
 
         public async void Delete()
         {
-            if (CurrentVaccine.FId != null && CurrentVaccine.VaccinePeriod != null)
+            if (CurrentVaccine?.FId != null && CurrentVaccine.VaccinePeriod != null)
             {
                 var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(CurrentVaccine.VaccineStatus);
                 if (isDeleteAccepted)
                 {
-                    var deleteResponse = await DataService.Delete($"Vaccine/{Child.Id}/{CurrentVaccine.FId}");
+                    var deleteResponse = await DataService.Delete($"Vaccine/{Child?.Id}/{CurrentVaccine.FId}");
                     if (deleteResponse == "ConnectionError")
                     {
                         StandardMessagesDisplay.NoConnectionToast();
@@ -138,7 +139,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
                     {
                         StandardMessagesDisplay.ItemDeletedToast();
 
-                        VaccineList.Remove(CurrentVaccine);
+                        VaccineList?.Remove(CurrentVaccine);
                         CurrentVaccine = new VaccineModel();
                     }
                 }
@@ -156,7 +157,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
 
         public async void Get()
         {
-            var jData = await DataService.Get($"Vaccine/{Child.Id}");
+            var jData = await DataService.Get($"Vaccine/{Child?.Id}");
 
             if (jData == "ConnectionError")
             {
@@ -176,25 +177,35 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
             }
             else
             {
-                var data = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(jData);
-                foreach (KeyValuePair<string, VaccineModel> item in data)
+                try
                 {
-                    VaccineList.Add(
-                        new VaccineModel
-                        {
-                            Id = item.Value.Id,
-                            RegisteredBy = item.Value.RegisteredBy,
-                            VaccinePeriod = item.Value.VaccinePeriod,
-                            VaccineStatus = item.Value.VaccineStatus,
-                            FId = item.Key
-                        }
-                        );
-                }
-                DateTime VaccinePeriod = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault().VaccinePeriod;
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(jData);
 
-                if (VaccinePeriodValidator.IsPeriodAvailable(VaccinePeriod))
+                    if(data != null)
+                    foreach (KeyValuePair<string, VaccineModel> item in data)
+                    {
+                        VaccineList?.Add(
+                            new VaccineModel
+                            {
+                                Id = item.Value.Id,
+                                RegisteredBy = item.Value.RegisteredBy,
+                                VaccinePeriod = item.Value.VaccinePeriod,
+                                VaccineStatus = item.Value.VaccineStatus,
+                                FId = item.Key
+                            }
+                            );
+                    }
+                    DateTime VaccinePeriod = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault().VaccinePeriod;
+
+                    if (VaccinePeriodValidator.IsPeriodAvailable(VaccinePeriod))
+                    {
+                        CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+                    }
+                }
+                catch (Exception ex)
                 {
-                    CurrentVaccine = VaccineList.OrderBy(x => x.VaccinePeriod).LastOrDefault();
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
                 }
             }
         }
@@ -218,10 +229,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
 
         public async void GoToPutPage()
         {
-            if (CurrentVaccine.FId != null && CurrentVaccine.VaccinePeriod != null)
+            if (CurrentVaccine?.FId != null && CurrentVaccine.VaccinePeriod != null)
             {
                 var jsonClinic = JsonConvert.SerializeObject(CurrentVaccine);
-                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}&ChildId={Child.Id}";
+                var route = $"{nameof(EditVaccinePage)}?Vaccine={jsonClinic}&ChildId={Child?.Id}";
                 await Shell.Current.GoToAsync(route);
             }
             else

@@ -106,7 +106,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
                 }
                 else
                 {
-                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
+                    StandardMessagesDisplay.ValidationRulesViolation(result?.Errors[0].PropertyName, result?.Errors[0].ErrorMessage);
                 }
             }
         }

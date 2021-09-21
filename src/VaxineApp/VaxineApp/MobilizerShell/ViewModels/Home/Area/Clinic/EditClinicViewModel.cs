@@ -11,10 +11,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
     public class EditClinicViewModel : ViewModelBase
     {
         // Validator
-        ClinicValidator ValidationRules { get; set; }
+        ClinicValidator? ValidationRules { get; set; }
         // Property
-        private ClinicModel clinic;
-        public ClinicModel Clinic
+        private ClinicModel? clinic;
+        public ClinicModel? Clinic
         {
             get
             {
@@ -29,7 +29,6 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
 
         // Command
         public ICommand PutCommand { private set; get; }
-        public ICommand AddLocationCommand { private set; get; }
 
         public EditClinicViewModel(ClinicModel clinic)
         {
@@ -44,25 +43,30 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
 
         public async void Put()
         {
-            var result = ValidationRules.Validate(Clinic);
-            if (result.IsValid)
+            if (Clinic != null)
             {
-                var jsonData = JsonConvert.SerializeObject(Clinic);
-                var data = await DataService.Put(jsonData, $"Clinic/{Preferences.Get("TeamId", "")}/{Clinic.FId}");
-                if (data == "Submit")
+                var result = ValidationRules?.Validate(Clinic);
+
+                if(result != null)
+                if (result.IsValid)
                 {
-                    StandardMessagesDisplay.EditDisplaymessage(Clinic.ClinicName);
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    var jsonData = JsonConvert.SerializeObject(Clinic);
+                    var data = await DataService.Put(jsonData, $"Clinic/{Preferences.Get("TeamId", "")}/{Clinic.FId}");
+                    if (data == "Submit")
+                    {
+                        StandardMessagesDisplay.EditDisplaymessage(Clinic?.ClinicName);
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+                    }
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("Not Updated", "Try again", "OK");
+                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

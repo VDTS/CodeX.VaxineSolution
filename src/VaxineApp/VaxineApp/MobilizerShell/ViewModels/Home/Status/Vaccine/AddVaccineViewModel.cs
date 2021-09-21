@@ -13,8 +13,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Vaccine
     public class AddVaccineViewModel : ViewModelBase
     {
         // Property
-        private VaccineModel vaccine;
-        public VaccineModel Vaccine
+        private VaccineModel? vaccine;
+        public VaccineModel? Vaccine
         {
             get
             {
@@ -45,43 +45,46 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Vaccine
 
         private async void Post(object obj)
         {
-            if (VaccinePeriodValidator.IsPeriodAvailable(Vaccine.VaccinePeriod))
+            if (Vaccine != null)
             {
-                // if condition to validate that child haven't eat vaccine
-                Vaccine.Id = Guid.NewGuid();
-                Vaccine.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
-
-                var time = DateTime.Now;
-                DateTime dateTime = new DateTime(Vaccine.VaccinePeriod.Year, Vaccine.VaccinePeriod.Month, Vaccine.VaccinePeriod.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
-
-                Vaccine.VaccinePeriod = dateTime;
-
-                var jData = JsonConvert.SerializeObject(Vaccine);
-
-                string postResponse = await DataService.Post(jData, $"Vaccine/{Child.Id}");
-                if (postResponse == "ConnectionError")
+                if (VaccinePeriodValidator.IsPeriodAvailable(Vaccine.VaccinePeriod))
                 {
-                    StandardMessagesDisplay.NoConnectionToast();
-                }
-                else if (postResponse == "Error")
-                {
-                    StandardMessagesDisplay.Error();
-                }
-                else if (postResponse == "ErrorTracked")
-                {
-                    StandardMessagesDisplay.ErrorTracked();
+                    // if condition to validate that child haven't eat vaccine
+                    Vaccine.Id = Guid.NewGuid();
+                    Vaccine.RegisteredBy = Guid.Parse(Preferences.Get("UserId", ""));
+
+                    var time = DateTime.Now;
+                    DateTime dateTime = new DateTime(Vaccine.VaccinePeriod.Year, Vaccine.VaccinePeriod.Month, Vaccine.VaccinePeriod.Day, time.Hour, time.Minute, time.Second, DateTimeKind.Utc);
+
+                    Vaccine.VaccinePeriod = dateTime;
+
+                    var jData = JsonConvert.SerializeObject(Vaccine);
+
+                    string postResponse = await DataService.Post(jData, $"Vaccine/{Child.Id}");
+                    if (postResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (postResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (postResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
+                    {
+                        StandardMessagesDisplay.AddDisplayMessage(Vaccine.VaccineStatus);
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
+
                 }
                 else
                 {
-                    StandardMessagesDisplay.AddDisplayMessage(Vaccine.VaccineStatus);
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    StandardMessagesDisplay.PeriodNotAvailable();
                 }
-
-            }
-            else
-            {
-                StandardMessagesDisplay.PeriodNotAvailable();
             }
         }
     }
