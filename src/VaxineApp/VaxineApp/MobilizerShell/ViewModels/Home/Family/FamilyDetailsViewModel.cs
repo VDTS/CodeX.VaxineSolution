@@ -185,7 +185,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
                         var num = JsonConvert.DeserializeObject<Dictionary<string, VaccineModel>>(VaccineData);
 
                         if(num != null)
-                        StandardMessagesDisplay.ChildRecursiveDeletionNotAllowed(SelectedChild.FullName, num.Values.Count);
+                        StandardMessagesDisplay.ChildRecursiveDeletionNotAllowed(SelectedChild?.FullName, num.Values.Count);
                     }
                     catch (Exception ex)
                     {
@@ -289,7 +289,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             else
             {
                 if(Family != null && Childs != null)
-                StandardMessagesDisplay.FamilyRecursiveDeletionNotAllowed(Family.ParentName, Childs.Count);
+                StandardMessagesDisplay.FamilyRecursiveDeletionNotAllowed(Family?.ParentName, Childs.Count);
             }
         }
 

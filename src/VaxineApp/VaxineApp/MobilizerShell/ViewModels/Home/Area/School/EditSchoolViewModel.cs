@@ -11,10 +11,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
     public class EditSchoolViewModel : ViewModelBase
     {
         // Validator
-        SchoolValidator ValidationRules { get; set; }
+        SchoolValidator? ValidationRules { get; set; }
         // Property
-        private SchoolModel school;
-        public SchoolModel School
+        private SchoolModel? school;
+        public SchoolModel? School
         {
             get
             {
@@ -29,7 +29,6 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
 
         // Command
         public ICommand PutCommand { private set; get; }
-        public ICommand AddLocationCommand { private set; get; }
 
         public EditSchoolViewModel(SchoolModel school)
         {
@@ -43,25 +42,28 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
 
         private async void Put(object obj)
         {
-            var result = ValidationRules.Validate(School);
-            if (result.IsValid)
+            if (School != null)
             {
-                var jsonData = JsonConvert.SerializeObject(School);
-                var data = await DataService.Put(jsonData, $"School/{Preferences.Get("TeamId", "")}/{School.FId}");
-                if (data == "Submit")
+                var result = ValidationRules?.Validate(School);
+                if (result != null && result.IsValid)
                 {
-                    StandardMessagesDisplay.EditDisplaymessage(School.SchoolName);
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    var jsonData = JsonConvert.SerializeObject(School);
+                    var data = await DataService.Put(jsonData, $"School/{Preferences.Get("TeamId", "")}/{School.FId}");
+                    if (data == "Submit")
+                    {
+                        StandardMessagesDisplay.EditDisplaymessage(School.SchoolName);
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
+                    else
+                    {
+                        StandardMessagesDisplay.CanceledDisplayMessage();
+                    }
                 }
                 else
                 {
-                    StandardMessagesDisplay.CanceledDisplayMessage();
+                    StandardMessagesDisplay.ValidationRulesViolation(result?.Errors[0].PropertyName, result?.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

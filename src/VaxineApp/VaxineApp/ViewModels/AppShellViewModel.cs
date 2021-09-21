@@ -17,8 +17,8 @@ namespace VaxineApp.ViewModels
     public class AppShellViewModel : ViewModelBase
     {
         // Property
-        private Color onlineDotColor;
-        public Color OnlineDotColor
+        private Color? onlineDotColor;
+        public Color? OnlineDotColor
         {
             get
             {
@@ -32,8 +32,8 @@ namespace VaxineApp.ViewModels
         }
 
 
-        private string userName;
-        public string UserName
+        private string? userName;
+        public string? UserName
         {
             get
             {
@@ -46,8 +46,8 @@ namespace VaxineApp.ViewModels
             }
         }
 
-        private string role;
-        public string Role
+        private string? role;
+        public string? Role
         {
             get
             {

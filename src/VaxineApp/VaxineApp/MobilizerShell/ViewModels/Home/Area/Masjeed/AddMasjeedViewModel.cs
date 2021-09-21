@@ -13,10 +13,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
     public class AddMasjeedViewModel : ViewModelBase
     {
         // Validator
-        MasjeedValidator ValidationRules { get; set; }
+        MasjeedValidator? ValidationRules { get; set; }
         // Property
-        private MasjeedModel masjeed;
-        public MasjeedModel Masjeed
+        private MasjeedModel? masjeed;
+        public MasjeedModel? Masjeed
         {
             get
             {
@@ -48,7 +48,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
         private async void AddLocation()
         {
             var location = await Geolocation.GetLastKnownLocationAsync();
-            if (location != null)
+            if (location != null && Masjeed != null)
             {
                 Masjeed.Longitude = location.Longitude;
                 Masjeed.Latitude = location.Latitude;
@@ -57,38 +57,41 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Masjeed
 
         private async void Post()
         {
-            Masjeed.Id = Guid.NewGuid();
-            var result = ValidationRules.Validate(Masjeed);
-            if (result.IsValid)
+            if (Masjeed != null)
             {
-                Masjeed.IsActive = IsActive.Active;
-                var jData = JsonConvert.SerializeObject(Masjeed);
+                Masjeed.Id = Guid.NewGuid();
+                var result = ValidationRules?.Validate(Masjeed);
+                if (result != null && result.IsValid)
+                {
+                    Masjeed.IsActive = IsActive.Active;
+                    var jData = JsonConvert.SerializeObject(Masjeed);
 
-                string postResponse = await DataService.Post(jData, $"Masjeed/{Preferences.Get("TeamId", "")}");
-                if (postResponse == "ConnectionError")
-                {
-                    StandardMessagesDisplay.NoConnectionToast();
-                }
-                else if (postResponse == "Error")
-                {
-                    StandardMessagesDisplay.Error();
-                }
-                else if (postResponse == "ErrorTracked")
-                {
-                    StandardMessagesDisplay.ErrorTracked();
+                    string postResponse = await DataService.Post(jData, $"Masjeed/{Preferences.Get("TeamId", "")}");
+                    if (postResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (postResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (postResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
+                    {
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
+                        StandardMessagesDisplay.AddDisplayMessage(Masjeed.MasjeedName);
+
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
                 }
                 else
                 {
-                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalMasjeeds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalMasjeeds");
-                    StandardMessagesDisplay.AddDisplayMessage(Masjeed.MasjeedName);
-
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    StandardMessagesDisplay.ValidationRulesViolation(result?.Errors[0].PropertyName, result?.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

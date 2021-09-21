@@ -12,8 +12,8 @@ namespace VaxineApp.ViewModels.Settings.Feedback
     public class FeedbackViewModel : ViewModelBase
     {
         GithubService GithubRestService { get; set; }
-        private FeedbackModel feedback;
-        public FeedbackModel Feedback
+        private FeedbackModel? feedback;
+        public FeedbackModel? Feedback
         {
             get
             {
@@ -101,39 +101,39 @@ namespace VaxineApp.ViewModels.Settings.Feedback
 
         private async void SubmitIssue()
         {
-            Feedback.Labels.Add(AppVersionName);
+            Feedback?.Labels.Add(AppVersionName);
 
             if (SuggestionRadioButton == false && ProblemRadioButton == true)
             {
-                Feedback.Labels.Add("Problem");
+                Feedback?.Labels.Add("Problem");
             }
             else
             {
-                Feedback.Labels.Add("Suggestion");
+                Feedback?.Labels.Add("Suggestion");
             }
 
             var role = await Xamarin.Essentials.SecureStorage.GetAsync("Role");
 
             if (role == "Mobilizer")
             {
-                Feedback.Labels.Add("mobilizer app");
+                Feedback?.Labels.Add("mobilizer app");
             }
             else if (role == "Supervisor")
             {
-                Feedback.Labels.Add("supervisor app");
+                Feedback?.Labels.Add("supervisor app");
             }
             else if (role == "Parent")
             {
-                Feedback.Labels.Add("parent app");
+                Feedback?.Labels.Add("parent app");
             }
             else if (role == "Admin")
             {
-                Feedback.Labels.Add("Admin app");
+                Feedback?.Labels.Add("Admin app");
             }
 
             if (AppPackageName == "com.codex.vaxineappbeta")
             {
-                Feedback.Labels.Add("beta-version");
+                Feedback?.Labels.Add("beta-version");
             }
 
             // Serialize feedback

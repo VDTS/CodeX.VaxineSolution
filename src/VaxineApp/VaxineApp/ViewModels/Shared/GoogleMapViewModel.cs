@@ -7,8 +7,8 @@ namespace VaxineApp.ViewModels.Shared
     public class GoogleMapViewModel : ViewModelBase
     {
         // Property
-        private string pageName;
-        public string PageName
+        private string? pageName;
+        public string? PageName
         {
             get
             {
@@ -63,8 +63,8 @@ namespace VaxineApp.ViewModels.Shared
             }
         }
 
-        private string label;
-        public string Label
+        private string? label;
+        public string? Label
         {
             get
             {
@@ -77,8 +77,8 @@ namespace VaxineApp.ViewModels.Shared
             }
         }
 
-        private string address;
-        public string Address
+        private string? address;
+        public string? Address
         {
             get
             {

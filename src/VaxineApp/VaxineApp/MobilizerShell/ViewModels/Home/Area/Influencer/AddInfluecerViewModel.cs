@@ -12,10 +12,10 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
     public class AddInfluecerViewModel : ViewModelBase
     {
         // Validator
-        InfluencerValidator ValidationRules { get; set; }
+        InfluencerValidator? ValidationRules { get; set; }
         // Property
-        private InfluencerModel influencer;
-        public InfluencerModel Influencer
+        private InfluencerModel? influencer;
+        public InfluencerModel? Influencer
         {
             get
             {
@@ -44,40 +44,44 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Influencer
 
         public async void Post()
         {
-            Influencer.Id = Guid.NewGuid();
-
-            var result = ValidationRules.Validate(Influencer);
-            if (result.IsValid)
+            if (Influencer != null)
             {
-                var jData = JsonConvert.SerializeObject(Influencer);
+                Influencer.Id = Guid.NewGuid();
 
-                string postResponse = await DataService.Post(jData, $"Influencer/{Preferences.Get("TeamId", "")}");
+                var result = ValidationRules?.Validate(Influencer);
+                if(result != null)
+                if (result.IsValid)
+                {
+                    var jData = JsonConvert.SerializeObject(Influencer);
 
-                if (postResponse == "ConnectionError")
-                {
-                    StandardMessagesDisplay.NoConnectionToast();
-                }
-                else if (postResponse == "Error")
-                {
-                    StandardMessagesDisplay.Error();
-                }
-                else if (postResponse == "ErrorTracked")
-                {
-                    StandardMessagesDisplay.ErrorTracked();
+                    string postResponse = await DataService.Post(jData, $"Influencer/{Preferences.Get("TeamId", "")}");
+
+                    if (postResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (postResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (postResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
+                    {
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalInfluencers).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalInfluencers");
+
+                        StandardMessagesDisplay.AddDisplayMessage(Influencer.Name);
+
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
                 }
                 else
                 {
-                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalInfluencers).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalInfluencers");
-
-                    StandardMessagesDisplay.AddDisplayMessage(Influencer.Name);
-
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
                 }
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

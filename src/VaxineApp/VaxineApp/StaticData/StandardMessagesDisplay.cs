@@ -15,7 +15,7 @@ namespace VaxineApp.StaticData
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ItemDeletedText);
         }
-        public static void AddDisplayMessage(string input)
+        public static void AddDisplayMessage(string? input)
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.AddBody(input));
         }
@@ -23,7 +23,7 @@ namespace VaxineApp.StaticData
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.GithubIssueSubmit);
         }
-        public static void EditDisplaymessage(string input)
+        public static void EditDisplaymessage(string? input)
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.EditBody(input));
         }
@@ -71,11 +71,11 @@ namespace VaxineApp.StaticData
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.FamilyDuplicateValidatorBody(input));
         }
-        public static void ChildRecursiveDeletionNotAllowed(string child, int vaccineCount)
+        public static void ChildRecursiveDeletionNotAllowed(string? child, int vaccineCount)
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.ChildRecursiveDeletionNotAllowedBody(child, vaccineCount));
         }
-        public static void FamilyRecursiveDeletionNotAllowed(string family, int childCount)
+        public static void FamilyRecursiveDeletionNotAllowed(string? family, int childCount)
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.FamilyRecursiveDeletionNotAllowedBody(family, childCount));
         }
@@ -83,7 +83,7 @@ namespace VaxineApp.StaticData
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.PeriodNotAvailableBody);
         }
-        public async static void ValidationRulesViolation(string title, string body)
+        public async static void ValidationRulesViolation(string? title, string? body)
         {
             await App.Current.MainPage.DisplayAlert(StandardMessagesText.ValidationRulesViolationTitle(title), StandardMessagesText.ValidationRulesViolationBody(body), "OK");
         }

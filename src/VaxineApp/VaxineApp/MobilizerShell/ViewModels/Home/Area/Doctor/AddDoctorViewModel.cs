@@ -14,8 +14,8 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
         // Validator
         DoctorValidator ValidationRules { get; set; }
         // Property
-        private DoctorModel doctor;
-        public DoctorModel Doctor
+        private DoctorModel? doctor;
+        public DoctorModel? Doctor
         {
             get
             {
@@ -45,41 +45,44 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Doctor
 
         private async void Post()
         {
-            Doctor.Id = Guid.NewGuid();
-
-            var result = ValidationRules.Validate(Doctor);
-            if (result.IsValid)
+            if (Doctor != null)
             {
-                var jData = JsonConvert.SerializeObject(Doctor);
+                Doctor.Id = Guid.NewGuid();
 
-                string postResponse = await DataService.Post(jData, $"Doctor/{Preferences.Get("TeamId", "")}");
+                var result = ValidationRules.Validate(Doctor);
+                if (result.IsValid)
+                {
+                    var jData = JsonConvert.SerializeObject(Doctor);
 
-                if (postResponse == "ConnectionError")
-                {
-                    StandardMessagesDisplay.NoConnectionToast();
-                }
-                else if (postResponse == "Error")
-                {
-                    StandardMessagesDisplay.Error();
-                }
-                else if (postResponse == "ErrorTracked")
-                {
-                    StandardMessagesDisplay.ErrorTracked();
+                    string postResponse = await DataService.Post(jData, $"Doctor/{Preferences.Get("TeamId", "")}");
+
+                    if (postResponse == "ConnectionError")
+                    {
+                        StandardMessagesDisplay.NoConnectionToast();
+                    }
+                    else if (postResponse == "Error")
+                    {
+                        StandardMessagesDisplay.Error();
+                    }
+                    else if (postResponse == "ErrorTracked")
+                    {
+                        StandardMessagesDisplay.ErrorTracked();
+                    }
+                    else
+                    {
+                        _ = await DataService.Put((++StaticDataStore.TeamStats.TotalDoctors).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalDoctors");
+
+                        StandardMessagesDisplay.AddDisplayMessage(Doctor?.Name);
+
+                        var route = "..";
+                        await Shell.Current.GoToAsync(route);
+                    }
+
                 }
                 else
                 {
-                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalDoctors).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalDoctors");
-
-                    StandardMessagesDisplay.AddDisplayMessage(Doctor.Name);
-
-                    var route = "..";
-                    await Shell.Current.GoToAsync(route);
+                    StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
                 }
-
-            }
-            else
-            {
-                StandardMessagesDisplay.ValidationRulesViolation(result.Errors[0].PropertyName, result.Errors[0].ErrorMessage);
             }
         }
     }

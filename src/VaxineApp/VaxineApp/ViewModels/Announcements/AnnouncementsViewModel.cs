@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -13,8 +15,8 @@ namespace VaxineApp.ViewModels.Announcements
     public class AnnouncementsViewModel : ViewModelBase
     {
         // Property
-        private ObservableCollection<AnnouncementsModel> announcements;
-        public ObservableCollection<AnnouncementsModel> Announcements
+        private ObservableCollection<AnnouncementsModel>? announcements;
+        public ObservableCollection<AnnouncementsModel>? Announcements
         {
             get
             {
@@ -57,30 +59,53 @@ namespace VaxineApp.ViewModels.Announcements
 
         private async void Get()
         {
-            var data = await DataService.Get($"Announcements");
-            if (data != "null" & data != "Error")
+            var jData = await DataService.Get($"Announcements");
+
+            if (jData == "ConnectionError")
             {
-                var clinic = JsonConvert.DeserializeObject<Dictionary<string, AnnouncementsModel>>(data);
-                foreach (KeyValuePair<string, AnnouncementsModel> item in clinic)
-                {
-                    Announcements.Add(new AnnouncementsModel
-                    {
-                        Id = item.Value.Id,
-                        Content = item.Value.Content,
-                        IsActive = item.Value.IsActive,
-                        MessageDateTime = item.Value.MessageDateTime,
-                        Title = item.Value.Title
-                    });
-                }
+                StandardMessagesDisplay.NoConnectionToast();
+            }
+            else if (jData == "null")
+            {
+                StandardMessagesDisplay.NoDataDisplayMessage();
+            }
+            else if (jData == "Error")
+            {
+                StandardMessagesDisplay.Error();
+            }
+            else if (jData == "ErrorTracked")
+            {
+                StandardMessagesDisplay.ErrorTracked();
             }
             else
             {
-                StandardMessagesDisplay.NoDataDisplayMessage();
+                try
+                {
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, AnnouncementsModel>>(jData);
+
+                    if(data != null)
+                    foreach (KeyValuePair<string, AnnouncementsModel> item in data)
+                    {
+                        Announcements?.Add(new AnnouncementsModel
+                        {
+                            Id = item.Value.Id,
+                            Content = item.Value.Content,
+                            IsActive = item.Value.IsActive,
+                            MessageDateTime = item.Value.MessageDateTime,
+                            Title = item.Value.Title
+                        });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                    StandardMessagesDisplay.InputToast(ex.Message);
+                }
             }
         }
         public void Clear()
         {
-            Announcements.Clear();
+            Announcements?.Clear();
         }
         public async void Refresh()
         {
