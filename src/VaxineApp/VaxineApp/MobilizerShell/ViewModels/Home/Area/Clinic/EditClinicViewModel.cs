@@ -29,7 +29,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.Clinic
 
         // Command
         public ICommand PutCommand { private set; get; }
-
+        public ICommand AddLocationCommand { private set; get; }
         public EditClinicViewModel(ClinicModel clinic)
         {
             // Property

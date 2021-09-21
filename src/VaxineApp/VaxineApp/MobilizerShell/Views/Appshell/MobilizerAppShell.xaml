@@ -11,6 +11,13 @@
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
        xmlns:HomeStatus="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Status"
        Title="VaxineApp"
+       xmlns:Anonymous="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Status.Anonymous"
+       xmlns:HomeArea="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Area.Area"
+       xmlns:HomeAreaClinic="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Area.Clinic"
+       xmlns:HomeAreaDoctor="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Area.Doctor"
+       xmlns:HomeAreaInfluencer="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Area.Influencer"
+       xmlns:HomeAreaMasjeed="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Area.Masjeed"
+       xmlns:HomeAreaSchool="clr-namespace:VaxineApp.MobilizerShell.Views.Home.Area.School"
        x:Class="VaxineApp.MobilizerShell.Views.Appshell.Mobilizerappshell">
   <Shell.BindingContext>
     <ViewModel:AppShellViewModel></ViewModel:AppShellViewModel>
@@ -132,7 +139,9 @@
                          Size="24" />
       </Tab.Icon>
       <ShellContent Title="Child"
-                    ContentTemplate="{DataTemplate HomeStatus:StatusTabs}" />
+                    ContentTemplate="{DataTemplate HomeStatus:StatusPage}" />
+      <ShellContent Title="Anonymous Child"
+                    ContentTemplate="{DataTemplate Anonymous:AnonymousChildPage}"/>
     </Tab>
     <Tab Icon="Home_Insights.png"
          Title="{xct:Translate Insights}">
@@ -149,7 +158,17 @@
     <Tab Icon="Home_Area.png"
          Title="{xct:Translate Area}">
       <ShellContent Title="{xct:Translate Area}"
-                    ContentTemplate="{DataTemplate Area:AreaTabs }" />
+                    ContentTemplate="{DataTemplate HomeArea:AreaPage}" />
+      <ShellContent Title="{xct:Translate Masjeed}"
+                    ContentTemplate="{DataTemplate HomeAreaMasjeed:MasjeedPage}" />
+      <ShellContent Title="{xct:Translate School}"
+                    ContentTemplate="{DataTemplate HomeAreaSchool:SchoolPage}" />
+      <ShellContent Title="{xct:Translate Influencer}"
+                    ContentTemplate="{DataTemplate HomeAreaInfluencer:InfluencerPage}" />
+      <ShellContent Title="{xct:Translate Clinic}"
+                    ContentTemplate="{DataTemplate HomeAreaClinic:ClinicPage}" />
+      <ShellContent Title="{xct:Translate Doctor}"
+                    ContentTemplate="{DataTemplate HomeAreaDoctor:DoctorPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
          Title="{xct:Translate Profile}">
