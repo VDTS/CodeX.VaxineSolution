@@ -31,6 +31,7 @@ namespace VaxineApp.ViewModels.RecycleBin
         public ICommand EmptyRecycleBinCommand { private set; get; }
         public ICommand DeleteCommand { private set; get; }
         public ICommand RestoreCommand { private set; get; }
+        public ICommand PullRefreshCommand { private set; get; }
         public RecycleBinViewModel()
         {
             // Command
