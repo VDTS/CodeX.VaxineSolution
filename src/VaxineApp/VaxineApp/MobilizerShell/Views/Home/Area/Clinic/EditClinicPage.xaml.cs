@@ -10,15 +10,18 @@ namespace VaxineApp.MobilizerShell.Views.Home.Area.Clinic
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditClinicPage : ContentPage
     {
-        public string Clinic { get; set; }
+        public string? Clinic { get; set; }
         public EditClinicPage()
         {
             InitializeComponent();
         }
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<ClinicModel>(Clinic);
-            BindingContext = new EditClinicViewModel(result);
+            if (Clinic != null)
+            {
+                var result = JsonConvert.DeserializeObject<ClinicModel>(Clinic);
+                if (result != null) BindingContext = new EditClinicViewModel(result);
+            }
         }
     }
 }

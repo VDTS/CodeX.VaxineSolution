@@ -10,15 +10,18 @@ namespace VaxineApp.MobilizerShell.Views.Home.Family
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FamilyDetailsPage : ContentPage
     {
-        public string Family { get; set; }
+        public string? Family { get; set; }
         public FamilyDetailsPage()
         {
             InitializeComponent();
         }
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<FamilyModel>(Family);
-            BindingContext = new FamilyDetailsViewModel(result);
+            if (Family != null)
+            {
+                var result = JsonConvert.DeserializeObject<FamilyModel>(Family);
+                if (result != null) BindingContext = new FamilyDetailsViewModel(result);
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ namespace VaxineApp.MobilizerShell.Views.Home.Area.School
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditSchoolPage : ContentPage
     {
-        public string School { get; set; }
+        public string? School { get; set; }
         public EditSchoolPage()
         {
             InitializeComponent();
@@ -18,8 +18,11 @@ namespace VaxineApp.MobilizerShell.Views.Home.Area.School
 
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<SchoolModel>(School);
-            BindingContext = new EditSchoolViewModel(result);
+            if (School != null)
+            {
+                var result = JsonConvert.DeserializeObject<SchoolModel>(School);
+                if (result != null) BindingContext = new EditSchoolViewModel(result);
+            }
         }
     }
 }

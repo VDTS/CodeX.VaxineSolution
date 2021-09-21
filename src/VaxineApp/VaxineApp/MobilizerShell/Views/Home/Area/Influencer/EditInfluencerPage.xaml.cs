@@ -10,15 +10,18 @@ namespace VaxineApp.MobilizerShell.Views.Home.Area.Influencer
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditInfluencerPage : ContentPage
     {
-        public string Influencer { get; set; }
+        public string? Influencer { get; set; }
         public EditInfluencerPage()
         {
             InitializeComponent();
         }
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<InfluencerModel>(Influencer);
-            BindingContext = new EditInfluecerViewModel(result);
+            if (Influencer != null)
+            {
+                var result = JsonConvert.DeserializeObject<InfluencerModel>(Influencer);
+                if (result != null) BindingContext = new EditInfluecerViewModel(result);
+            }
         }
     }
 }

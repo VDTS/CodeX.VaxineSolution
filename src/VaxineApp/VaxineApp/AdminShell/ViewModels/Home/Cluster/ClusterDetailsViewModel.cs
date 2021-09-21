@@ -14,7 +14,7 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
     public class ClusterDetailsViewModel : ViewModelBase
     {
         // Property
-        public ClusterModel Cluster { get; }
+        public ClusterModel? Cluster { get; }
 
         private bool isBusy;
         public bool IsBusy
@@ -31,9 +31,9 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
 
         }
 
-        private ObservableCollection<TeamModel> teams;
+        private ObservableCollection<TeamModel>? teams;
 
-        public ObservableCollection<TeamModel> Teams
+        public ObservableCollection<TeamModel>? Teams
         {
             get
             {
@@ -70,7 +70,7 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
 
         private async void GoToPutPage()
         {
-            if (Cluster.ClusterName != null)
+            if (Cluster?.ClusterName != null)
             {
                 var jData = JsonConvert.SerializeObject(Cluster);
                 var route = $"{nameof(EditClusterPage)}?Cluster={jData}";
@@ -87,10 +87,10 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
 
             if (!Cluster.AreEmpty())
             {
-                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(Cluster.ClusterName);
+                var isDeleteAccepted = await StandardMessagesDisplay.DeleteDisplayMessage(Cluster?.ClusterName);
                 if (isDeleteAccepted)
                 {
-                    var deleteResponse = await DataService.Delete($"Cluster/{Cluster.FId}");
+                    var deleteResponse = await DataService.Delete($"Cluster/{Cluster?.FId}");
                     if (deleteResponse == "ConnectionError")
                     {
                         StandardMessagesDisplay.NoConnectionToast();
@@ -116,11 +116,11 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
                 }
             }
         }
-        public async void GoToLocation()
+        public void GoToLocation()
         {
 
         }
-        private async void ShowLocation(object obj)
+        private void ShowLocation(object obj)
         {
             //var location = new Location(Convert.ToDouble(Masjeed.Latitude), Convert.ToDouble(Masjeed.Longitude));
             //await Map.OpenAsync(location);
@@ -139,7 +139,7 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Cluster
 
         public void Clear()
         {
-            Teams.Clear();
+            Teams?.Clear();
         }
     }
 }
