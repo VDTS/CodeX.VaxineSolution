@@ -29,7 +29,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Area.School
 
         // Command
         public ICommand PutCommand { private set; get; }
-
+        public ICommand AddLocationCommand { private set; get; }
         public EditSchoolViewModel(SchoolModel school)
         {
             // Property
