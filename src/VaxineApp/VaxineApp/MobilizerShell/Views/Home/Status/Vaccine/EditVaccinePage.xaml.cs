@@ -12,16 +12,19 @@ namespace VaxineApp.MobilizerShell.Views.Home.Status.Vaccine
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditVaccinePage : ContentPage
     {
-        public string Vaccine { get; set; }
-        public string ChildId { get; set; }
+        public string? Vaccine { get; set; }
+        public string? ChildId { get; set; }
         public EditVaccinePage()
         {
             InitializeComponent();
         }
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<VaccineModel>(Vaccine);
-            BindingContext = new EditVaccineViewModel(result, Guid.Parse(ChildId));
+            if (Vaccine != null)
+            {
+                var result = JsonConvert.DeserializeObject<VaccineModel>(Vaccine);
+                if (result != null) BindingContext = new EditVaccineViewModel(result, Guid.Parse(ChildId));
+            }
         }
     }
 }

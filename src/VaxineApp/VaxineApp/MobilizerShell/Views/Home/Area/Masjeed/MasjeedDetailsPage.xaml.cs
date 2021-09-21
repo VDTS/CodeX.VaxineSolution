@@ -10,7 +10,7 @@ namespace VaxineApp.MobilizerShell.Views.Home.Area.Masjeed
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasjeedDetailsPage : ContentPage
     {
-        public string Masjeed { get; set; }
+        public string? Masjeed { get; set; }
 
         public MasjeedDetailsPage()
         {
@@ -18,8 +18,11 @@ namespace VaxineApp.MobilizerShell.Views.Home.Area.Masjeed
         }
         protected override void OnAppearing()
         {
-            var result = JsonConvert.DeserializeObject<MasjeedModel>(Masjeed);
-            BindingContext = new MasjeedDetailsViewModel(result);
+            if (Masjeed != null)
+            {
+                var result = JsonConvert.DeserializeObject<MasjeedModel>(Masjeed);
+                if (result != null) BindingContext = new MasjeedDetailsViewModel(result);
+            }
         }
     }
 }
