@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -74,9 +75,6 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
             AnonymousChild = new ObservableCollection<AnonymousChildModel>();
             SelectedAnonymousChild = new AnonymousChildModel();
 
-            // Get
-            Get();
-
             // Command
             GoToPostPageCommand = new Command(GoToPostPage);
             GoToPutPageCommand = new Command(GoToPutPage);
@@ -84,7 +82,11 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
             SaveAsPDFCommand = new Command(SaveAsPDF);
             PullRefreshCommand = new Command(Refresh);
         }
-
+        public void FirstLoad(object sender, EventArgs e)
+        {
+            if(AnonymousChild?.Count == 0)
+            Get();
+        }
         private async void Get()
         {
             var jData = await DataService.Get($"AnonymousChild/{Preferences.Get("TeamId", "")}");
@@ -109,8 +111,6 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous
             {
                 try
                 {
-
-
                     var data = JsonConvert.DeserializeObject<Dictionary<string, AnonymousChildModel>>(jData);
 
                     StaticDataStore.TeamStats.TotalIDPChilds = data.Where(item => item.Value.Type == "IDP").ToList().Count;

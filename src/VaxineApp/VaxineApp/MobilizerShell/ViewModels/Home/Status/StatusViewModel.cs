@@ -73,15 +73,17 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Status
             // Property
             FamilyGroup = new ObservableCollection<ChildGroupbyFamilyModel>();
 
-
-            // Get
-            Get();
-
+            // Command
             SaveAsPDFCommand = new Command(SaveAsPDF);
             PullRefreshCommand = new Command(Refresh);
             GoToDetailsPageCommand = new Command(GoToDetailsPage);
         }
 
+        public void FirstLoad(object sender, EventArgs e)
+        {
+            if(FamilyGroup?.Count == 0)
+            Get();
+        }
         private async void Get()
         {
             var jData = await DataService.Get($"Family/{Preferences.Get("TeamId", "")}");
