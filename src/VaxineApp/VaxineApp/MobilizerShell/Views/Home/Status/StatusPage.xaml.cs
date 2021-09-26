@@ -32,5 +32,20 @@ namespace VaxineApp.MobilizerShell.Views.Home.Status
             }
         }
 
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            if (FilterOverlay.IsVisible)
+            {
+                // If overlay is visible, slide it to the right, and set as invisible.
+                await FilterOverlay.TranslateTo(this.Width - 100, FilterOverlay.Y);
+                FilterOverlay.IsVisible = false;
+            }
+            else
+            {
+                // If overlay is invisible, make it visible and slide to the left.
+                FilterOverlay.IsVisible = true;
+                await FilterOverlay.TranslateTo(0, FilterOverlay.Y);
+            }
+        }
     }
 }

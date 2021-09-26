@@ -17,6 +17,11 @@
                  Text="{xct:Translate SaveAsPdf}"
                  Command="{Binding SaveAsPDFCommand}"
                  Priority="0" />
+    <ToolbarItem Order="Secondary"
+                 Icon="SavePDF"
+                 Text="Filter"
+                 Clicked="ToolbarItem_Clicked"
+                 Priority="0" />
   </ContentPage.ToolbarItems>
   <ContentPage.BindingContext>
     <ViewModel:StatusViewModel></ViewModel:StatusViewModel>
@@ -28,17 +33,18 @@
   </ContentPage.Resources>
 
   <ContentPage.Content>
-    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+    <AbsoluteLayout>
+      <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                  RefreshColor="#2196f3"
                  Command="{Binding PullRefreshCommand}">
-      <CollectionView ItemsSource="{Binding FamilyGroup, Mode=TwoWay}"
+        <CollectionView ItemsSource="{Binding FamilyGroup, Mode=TwoWay}"
                       SelectionMode="Single"
                       SelectionChangedCommand="{Binding GoToDetailsPageCommand}"
                       SelectedItem="{Binding SelectedChild}"
                       IsGrouped="True">
-        <CollectionView.Header>
+          <CollectionView.Header>
 
-          <Frame Grid.Column="0"
+            <Frame Grid.Column="0"
                  Padding="15,15,15,15"
                  HeightRequest="30"
                  BackgroundColor="{StaticResource CardHeader}"
@@ -47,30 +53,30 @@
                  xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                  xct:TouchEffect.PressedScale="0.8"
                  xct:TouchEffect.PressedOpacity="0.6">
-            <Frame.Content>
-              <Grid>
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="0.6*"></ColumnDefinition>
-                  <ColumnDefinition Width="0.4*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                  <RowDefinition Height="Auto"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Label TextColor="White" Grid.Column="0"
+              <Frame.Content>
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                  </Grid.RowDefinitions>
+                  <Label TextColor="White" Grid.Column="0"
                        Grid.Row="1"
                        Text="{xct:Translate ChildName}"></Label>
-                <Label TextColor="White" Grid.Column="1"
+                  <Label TextColor="White" Grid.Column="1"
                        Grid.Row="1"
                        Text="{xct:Translate AgeInMonths}"></Label>
-              </Grid>
-            </Frame.Content>
-          </Frame>
+                </Grid>
+              </Frame.Content>
+            </Frame>
 
-        </CollectionView.Header>
-        <CollectionView.ItemTemplate>
-          <DataTemplate x:DataType="Models:ChildModel">
-            <StackLayout Padding="0,2,0,0">
-              <Frame Grid.Column="0"
+          </CollectionView.Header>
+          <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="Models:ChildModel">
+              <StackLayout Padding="0,2,0,0">
+                <Frame Grid.Column="0"
                      Padding="15,0,15,0"
                      HeightRequest="30"
                      BackgroundColor="{StaticResource Card}"
@@ -80,32 +86,32 @@
                      xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                      xct:TouchEffect.PressedScale="0.8"
                      xct:TouchEffect.PressedOpacity="0.6">
-                <Frame.Content>
-                  <Grid>
-                    <Grid.ColumnDefinitions>
-                      <ColumnDefinition Width="0.6*"></ColumnDefinition>
-                      <ColumnDefinition Width="0.4*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                      <RowDefinition Height="Auto"></RowDefinition>
-                      <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Label Grid.Column="0"
+                  <Frame.Content>
+                    <Grid>
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                      </Grid.ColumnDefinitions>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                      </Grid.RowDefinitions>
+                      <Label Grid.Column="0"
                            Grid.Row="1"
                            Text="{Binding FullName}"></Label>
-                    <Label Grid.Column="1"
+                      <Label Grid.Column="1"
                            Grid.Row="1"
                            Text="{Binding DOB, Converter={StaticResource BornDateToAgeInMonthsConverter}}"></Label>
-                  </Grid>
-                </Frame.Content>
-              </Frame>
-            </StackLayout>
-          </DataTemplate>
-        </CollectionView.ItemTemplate>
-        <CollectionView.GroupHeaderTemplate>
-          <DataTemplate x:DataType="Models:ChildGroupbyFamilyModel">
-            <StackLayout Padding="0,2,0,0">
-              <Frame Grid.Column="0"
+                    </Grid>
+                  </Frame.Content>
+                </Frame>
+              </StackLayout>
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+          <CollectionView.GroupHeaderTemplate>
+            <DataTemplate x:DataType="Models:ChildGroupbyFamilyModel">
+              <StackLayout Padding="0,2,0,0">
+                <Frame Grid.Column="0"
                      Padding="15,0,15,0"
                      HeightRequest="20"
                      HasShadow="True"
@@ -115,26 +121,81 @@
                      xct:TouchEffect.PressedScale="0.8"
                      xct:TouchEffect.PressedOpacity="0.6"
                      Opacity="0.5">
-                <Frame.Background>
-                  <!-- StartPoint defaults to (0,0) -->
-                  <LinearGradientBrush EndPoint="1,0">
-                    <GradientStop Color="{StaticResource CardHeader}"
+                  <Frame.Background>
+                    <!-- StartPoint defaults to (0,0) -->
+                    <LinearGradientBrush EndPoint="1,0">
+                      <GradientStop Color="{StaticResource CardHeader}"
                                   Offset="0.1" />
-                    <GradientStop Color="{StaticResource Card}"
+                      <GradientStop Color="{StaticResource Card}"
                                   Offset="1.0" />
-                  </LinearGradientBrush>
-                </Frame.Background>
-                <Frame.Content>
-                  <Label Grid.Row="0"
+                    </LinearGradientBrush>
+                  </Frame.Background>
+                  <Frame.Content>
+                    <Label Grid.Row="0"
                          Grid.Column="0" TextColor="White"
                          Text="{Binding HouseNo}" />
-                </Frame.Content>
-              </Frame>
+                  </Frame.Content>
+                </Frame>
+              </StackLayout>
+
+            </DataTemplate>
+          </CollectionView.GroupHeaderTemplate>
+        </CollectionView>
+      </RefreshView>
+
+      <ContentView x:Name="FilterOverlay"
+                     IsVisible="false"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All"
+                     BackgroundColor="Transparent">
+        <Frame CornerRadius="10"
+                       Margin="100,10,0,10"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       InputTransparent="False">
+          <StackLayout Padding="0">
+            <Label x:Name="FilterText"
+                               Text="Filter Options"
+                           FontSize="Medium"
+                           TextColor="Black"/>
+
+            <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand">
+              <Label Text="Filter key 1"/>
+              <Switch IsToggled="True" />
+
             </StackLayout>
-           
-          </DataTemplate>
-        </CollectionView.GroupHeaderTemplate>
-      </CollectionView>
-    </RefreshView>
+
+            <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand">
+              <Label Text="Filter key 2"/>
+              <Switch IsToggled="True" />
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand">
+              <Label Text="Filter key 3"/>
+              <Switch IsToggled="False" />
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand">
+              <Label Text="Filter key 4"/>
+              <Switch IsToggled="True" />
+
+            </StackLayout>
+
+            <Button Text="Apply"
+                                HeightRequest="30"
+                                Padding="0"
+                               BackgroundColor="Accent"
+                                VerticalOptions="EndAndExpand"/>
+          </StackLayout>
+        </Frame>
+      </ContentView>
+    </AbsoluteLayout>
   </ContentPage.Content>
 </ContentPage>
