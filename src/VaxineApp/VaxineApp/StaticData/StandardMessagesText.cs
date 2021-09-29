@@ -55,5 +55,6 @@
         public static string EmailValidatorTitle { get; set; } = "Email error";
         public static string EmailValidatorBody { get; set; } = "Email is baddly formatted";
         public static string EmailMatchValidatorBody { get; set; } = "Emails are not the same";
+        public static string UserAddedMessage { get; set; } = "User Added";
     }
 }

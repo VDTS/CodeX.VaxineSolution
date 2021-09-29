@@ -2,16 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Home.User.AddUserPage"
-             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.User"
+             Shell.PresentationMode="Animated"
+             Shell.TabBarIsVisible="False"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.User" xmlns:Behaviors="clr-namespace:VaxineApp.Behaviors"
              Title="Add User">
   <ContentPage.BindingContext>
     <ViewModel:AddUserViewModel/>
   </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout Padding="40"
+                 Spacing="10">
+      <Entry Placeholder="Full Name"
+             Text="{Binding FullName}"></Entry>
+      <Entry Placeholder="Email"
+             Text="{Binding Email}">
+        <Entry.Behaviors>
+          <Behaviors:EmailValidatorBehavior/>
+        </Entry.Behaviors>
+      </Entry>
+      <Entry Placeholder="Phone Number"
+             Keyboard="Telephone"
+             Text="{Binding PhoneNumber}">
+        <Entry.Behaviors>
+          <Behaviors:InternationPhoneNumberValidationBehavior/>
+        </Entry.Behaviors>
+      </Entry>
+      <Label Text="{Binding Password}"></Label>
+
+      <Button Text="Save"
+              TranslationY="50"
+              WidthRequest="130"
+              HeightRequest="50"
+              HorizontalOptions="Center"
+              Command="{Binding PostCommand}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
