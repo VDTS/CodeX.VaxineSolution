@@ -1,4 +1,5 @@
 ﻿
+using VaxineApp.AdminShell.ViewModels.Home.User;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +11,9 @@ namespace VaxineApp.AdminShell.Views.Home.User
         public UserPage()
         {
             InitializeComponent();
+
+            var userViewModel = ((UserViewModel)this.BindingContext);
+            userViewModel.Get();
         }
     }
 }
