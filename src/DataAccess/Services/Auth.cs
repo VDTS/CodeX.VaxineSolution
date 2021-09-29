@@ -23,6 +23,7 @@ namespace DataAccess.Services
         private readonly string VerifyPasswordResetCodeRequestEndpoint;
         private readonly string ConfirmPasswordResetRequestEndpoint;
         private readonly string RefreshIdTokenEndpoint;
+        private readonly string AccountInfoLookupEndpoint;
 
         // RequestUri
         private readonly string ChangeAccountPasswordRequestUri;
@@ -33,6 +34,7 @@ namespace DataAccess.Services
         private readonly string VerifyPasswordResetCodeRequestUri;
         private readonly string ConfirmPasswordResetRequestUri;
         private readonly string RefreshIdTokenUri;
+        private readonly string AccountInfoLookupUri;
 
         // ctor
         public Auth(string FirebaseApiKey)
@@ -46,6 +48,7 @@ namespace DataAccess.Services
             VerifyPasswordResetCodeRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=";
             ConfirmPasswordResetRequestEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:resetPassword?key=";
             RefreshIdTokenEndpoint = @"https://securetoken.googleapis.com/v1/token?key=";
+            AccountInfoLookupEndpoint = @"https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=";
 
             // RequestUri
             ChangeAccountPasswordRequestUri = string.Concat(ChangeAccountPasswordRequestEndpoint, FirebaseApiKey);
@@ -56,6 +59,7 @@ namespace DataAccess.Services
             VerifyPasswordResetCodeRequestUri = string.Concat(VerifyPasswordResetCodeRequestEndpoint, FirebaseApiKey);
             ConfirmPasswordResetRequestUri = string.Concat(ConfirmPasswordResetRequestEndpoint, FirebaseApiKey);
             RefreshIdTokenUri = string.Concat(RefreshIdTokenEndpoint, FirebaseApiKey);
+            AccountInfoLookupUri = string.Concat(AccountInfoLookupEndpoint, FirebaseApiKey);
         }
 
 
@@ -220,6 +224,27 @@ namespace DataAccess.Services
             if (response.IsSuccessStatusCode)
             {
                 return "OK";
+            }
+            else
+            {
+                return "Error";
+            }
+        }
+        public async Task<string> AccountInfoLookup(string idToken)
+        {
+            AccountIdToken accountIdToken = new AccountIdToken() { IdToken =  idToken};
+            var jsonData = JsonConvert.SerializeObject(accountIdToken);
+
+            using var httpClient = new HttpClient();
+            using var request = new HttpRequestMessage(new HttpMethod("POST"), AccountInfoLookupUri);
+            request.Content = new StringContent(jsonData);
+            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+            var response = await httpClient.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                return response.Content.ReadAsStringAsync().Result;
+                
             }
             else
             {
