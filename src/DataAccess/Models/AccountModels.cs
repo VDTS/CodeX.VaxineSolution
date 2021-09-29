@@ -3,6 +3,11 @@ using Newtonsoft.Json;
 
 namespace DataAccess.Models
 {
+    public class AccountIdToken
+    {
+        [JsonProperty("idToken")]
+        public string IdToken { get; set; }
+    }
     public class AccountModels
     {
         [JsonProperty("email")]
