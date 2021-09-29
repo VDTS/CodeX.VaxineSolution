@@ -107,16 +107,31 @@ namespace VaxineApp.AdminShell.ViewModels.Home.User
                 ExportedUserRecords response = responses.Current;
                 foreach (ExportedUserRecord user in response.Users)
                 {
-                    FirebaseUsers.Add(
-                        new FirebaseUserModel
-                        {
-                            UId = user.Uid,
-                            DisplayName = user.DisplayName,
-                            Email = user.Email,
-                            Role = user?.CustomClaims["Role"]?.ToString(),
-                            EmailVerified = user.EmailVerified
-                        }
-                        );
+                    if (user.CustomClaims.ContainsKey("Role"))
+                    {
+                        FirebaseUsers.Add(
+                            new FirebaseUserModel
+                            {
+                                UId = user.Uid,
+                                DisplayName = user.DisplayName,
+                                Email = user.Email,
+                                Role = user?.CustomClaims["Role"]?.ToString(),
+                                EmailVerified = user.EmailVerified
+                            }
+                            );
+                    }
+                    else
+                    {
+                        FirebaseUsers.Add(
+                                                    new FirebaseUserModel
+                                                    {
+                                                        UId = user.Uid,
+                                                        DisplayName = user.DisplayName,
+                                                        Email = user.Email,
+                                                        EmailVerified = user.EmailVerified
+                                                    }
+                                                    );
+                    }
                 }
             }
         }
