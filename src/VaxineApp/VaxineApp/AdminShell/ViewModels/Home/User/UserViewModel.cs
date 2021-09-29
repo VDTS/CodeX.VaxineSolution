@@ -112,7 +112,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.User
                         {
                             UId = user.Uid,
                             DisplayName = user.DisplayName,
-                            Email = user.Email
+                            Email = user.Email,
+                            Role = user?.CustomClaims["Role"]?.ToString()
                         }
                         );
                 }
