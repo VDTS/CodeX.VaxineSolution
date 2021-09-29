@@ -2,16 +2,75 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Home.User.UserPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:VaxineApp.Models.AccountModels"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.User"
              Title="User">
   <ContentPage.BindingContext>
     <ViewModel:UserViewModel/>
   </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Add}"
+                 Priority="3"
+                 Command="{Binding GoToPostPageCommand}" />
+  </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 RefreshColor="#2196f3"
+                 Command="{Binding PullRefreshCommand}">
+      <CollectionView SelectionMode="Single"
+                      ItemsSource="{Binding FirebaseUsers}"
+                      SelectedItem="{Binding SelectedUser}"
+                      SelectionChangedCommand="{Binding SelectionCommand}">
+        <CollectionView.Header>
+          <Frame Grid.Column="0"
+                 Padding="15,15,15,15"
+                 HeightRequest="40"
+                 BackgroundColor="{StaticResource CardHeader}"
+                 HasShadow="True"
+                 xct:TouchEffect.AnimationDuration="250"
+                 xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                 xct:TouchEffect.PressedScale="0.8"
+                 xct:TouchEffect.PressedOpacity="0.6">
+            <Frame.Content>
+              <StackLayout Orientation="Vertical"
+                           HorizontalOptions="StartAndExpand">
+                <Label TextColor="White"
+                       Text="Role"></Label>
+                <Label TextColor="White"
+                       FontSize="Subtitle"
+                       Text="User Name"></Label>
+              </StackLayout>
+            </Frame.Content>
+          </Frame>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+          <DataTemplate x:DataType="Model:FirebaseUserModel">
+            <StackLayout Padding="0,2,0,0">
+              <Frame Grid.Column="0"
+                     Padding="15,15,15,15"
+                     HeightRequest="30"
+                     BackgroundColor="{StaticResource Card}"
+                     HasShadow="True"
+                     CornerRadius="0"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6">
+                <Frame.Content>
+                  <StackLayout Orientation="Vertical"
+                               HorizontalOptions="StartAndExpand">
+                    <Label FontSize="Micro"
+                           Text="{Binding Role}"></Label>
+                    <Label Text="{Binding Email}"></Label>
+                  </StackLayout>
+                </Frame.Content>
+              </Frame>
+            </StackLayout>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </RefreshView>
+  </ContentPage.Content>
 </ContentPage>
