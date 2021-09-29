@@ -2,16 +2,54 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Home.User.UserDetailsPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.User"
+             x:DataType="ViewModel:UserDetailsViewModel"
+             Shell.PresentationMode="Animated"
+             Shell.TabBarIsVisible="False"
              Title="User Details">
-  <ContentPage.BindingContext>
-    <ViewModel:UserDetailsViewModel/>
-  </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Edit}"
+                 Command="{Binding GoToPutPageCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="Disable User"
+                 Command="{Binding DisableCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Delete}"
+                 Command="{Binding DeleteCommand}"
+                 Priority="2" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <StackLayout Padding="10">
+      <Frame Padding="15,15,15,15"
+             HeightRequest="60"
+             BackgroundColor="{StaticResource Card}"
+             HasShadow="True"
+             CornerRadius="15">
+        <Frame.Content>
+          <StackLayout>
+            <Label Text="User Name"></Label>
+            <Label FontSize="Large"
+                   Text="{Binding User.DisplayName}"></Label>
+          </StackLayout>
+        </Frame.Content>
+      </Frame>
+      <Frame Padding="15,15,15,15"
+             HeightRequest="60"
+             BackgroundColor="{StaticResource Card}"
+             HasShadow="True"
+             CornerRadius="15">
+        <Frame.Content>
+          <StackLayout>
+            <Label Text="User Email"></Label>
+            <Label FontSize="Large"
+                   Text="{Binding User.Email}"></Label>
+          </StackLayout>
+        </Frame.Content>
+      </Frame>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
