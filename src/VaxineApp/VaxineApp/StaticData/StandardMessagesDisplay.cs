@@ -115,5 +115,9 @@ namespace VaxineApp.StaticData
         {
             DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.UserAddedMessage);
         }
+        public static void UserRemoved()
+        {
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.UserRemovedMessage);
+        }
     }
 }
