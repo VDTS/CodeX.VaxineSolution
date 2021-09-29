@@ -12,9 +12,9 @@
     <ContentPage.Content>
     <StackLayout Padding="40"
                  Spacing="10">
-      <Entry Placeholder="{xct:Translate MasjeedName}"
+      <Entry Placeholder="Title"
              Text="{Binding Announcement.Title}"></Entry>
-      <Entry Placeholder="{xct:Translate KeyInfluencer}"
+      <Entry Placeholder="Content"
              Text="{Binding Announcement.Content}"></Entry>
       
       <Button Text="Save"
