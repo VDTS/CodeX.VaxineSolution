@@ -109,5 +109,11 @@ namespace VaxineApp.StaticData
         {
             DependencyService.Get<IToast>()?.MakeToast("Password Changed");
         }
+
+        // Admin User Management
+        public static void UserAdded()
+        {
+            DependencyService.Get<IToast>()?.MakeToast(StandardMessagesText.UserAddedMessage);
+        }
     }
 }
