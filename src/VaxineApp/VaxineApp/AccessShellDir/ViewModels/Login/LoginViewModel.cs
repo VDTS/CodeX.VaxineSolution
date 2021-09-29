@@ -151,6 +151,28 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                             var localId = signInResponse?.GetValue("localId")?.ToString();
                             Preferences.Set("UserLocalId", localId);
                             Preferences.Set("ProfileEmail", signInResponse?.GetValue("email")?.ToString());
+
+                            string accountInfoJson = await Account.AccountInfoLookup(signInResponse?.GetValue("idToken")?.ToString());
+
+                            var accountInfo = JsonConvert.DeserializeObject<JObject>(accountInfoJson);
+
+                            var claimsJson = accountInfo["users"][0]["customAttributes"]?.ToString();
+
+                            var claims = JsonConvert.DeserializeObject<JObject>(claimsJson);
+
+                            var role = claims.GetValue("Role")?.ToString();
+                            Preferences.Set("UserRole", role);
+
+                            if (RememberMe)
+                            {
+                                await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "1");
+                            }
+
+                            LoadProfile(Preferences.Get("UserLocalId", "").ToString());
+                            await LoadCluster();
+                            await LoadTeam();
+                            await LoadVaccinePeriod();
+                            GoToApp();
                         }
                     }
                     catch (Exception ex)
@@ -158,16 +180,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                         Crashes.TrackError(ex);
                         StandardMessagesDisplay.InputToast(ex.Message);
                     }
-                    if (RememberMe)
-                    {
-                        await Xamarin.Essentials.SecureStorage.SetAsync("isLogged", "1");
-                    }
-
-                    LoadProfile(Preferences.Get("UserLocalId", "").ToString());
-                    await LoadCluster();
-                    await LoadTeam();
-                    await LoadVaccinePeriod();
-                    GoToApp();
+                    
                 }
             }
         }
@@ -205,7 +218,6 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
                             Preferences.Set("TeamId", data.TeamId);
                             Preferences.Set("UserId", data.Id.ToString());
                             Preferences.Set("UserName", data.FullName);
-                            Preferences.Set("UserRole", data.Role);
                             await Xamarin.Essentials.SecureStorage.SetAsync("Role", data.Role);
                         }
                 }
