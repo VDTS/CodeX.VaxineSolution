@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using FirebaseAdmin.Auth;
+using Newtonsoft.Json;
 using System.Windows.Input;
 using VaxineApp.AdminShell.Views.Home.User;
 using VaxineApp.Models.AccountModels;
@@ -67,6 +68,10 @@ namespace VaxineApp.AdminShell.ViewModels.Home.User
 
         private async void Delete(object obj)
         {
+            await FirebaseAuth.DefaultInstance.DeleteUserAsync(User.UId);
+            StandardMessagesDisplay.UserRemoved();
+
+            await Shell.Current.GoToAsync("..");
         }
         private void Disable(object obj)
         {
