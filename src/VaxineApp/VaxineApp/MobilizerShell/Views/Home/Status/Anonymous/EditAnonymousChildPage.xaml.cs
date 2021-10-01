@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

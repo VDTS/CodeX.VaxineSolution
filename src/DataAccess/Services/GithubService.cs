@@ -1,8 +1,8 @@
-﻿using DataAccess.Models;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Octokit;
 using System;
 using System.Threading.Tasks;
+using VaxineApp.Core.Models.AccountModels;
 using Xamarin.Essentials;
 
 namespace DataAccess.GithubService

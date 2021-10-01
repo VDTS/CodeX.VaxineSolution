@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:Model="clr-namespace:VaxineApp.Models"
-             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Announcements"
-             xmlns:converters="clr-namespace:VaxineApp.Converters"
+             xmlns:ViewModel="clr-namespace:VaxineApp.ViewModels.Announcements" xmlns:converters="clr-namespace:VaxineApp.Core.Converters;assembly=VaxineApp.Core" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              x:Class="VaxineApp.Views.Announcements.AnnouncementsCentrePage"
              x:DataType="ViewModel:AnnouncementsViewModel"
              Shell.TabBarIsVisible="False"

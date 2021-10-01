@@ -4,8 +4,7 @@
              x:Class="VaxineApp.AdminShell.Views.Home.Period.PeriodPage"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:DataType="ViewModel:PeriodViewModel"
-             xmlns:Model="clr-namespace:VaxineApp.Models"
-             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Period"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Period" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              Title="Period">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="Search" />

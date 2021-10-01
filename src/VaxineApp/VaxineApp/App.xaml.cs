@@ -8,7 +8,7 @@ using VaxineApp.AccessShellDir.Views.AccessAppshell;
 using VaxineApp.AdminShell.Views.AdminAppShell;
 using VaxineApp.AndroidNativeApi;
 using VaxineApp.MobilizerShell.Views.Appshell;
-using VaxineApp.Models.Enums;
+using VaxineApp.Core.Models.Enums;
 using VaxineApp.ParentShellDir.Views.ParentAppshell;
 using VaxineApp.Resx;
 using VaxineApp.SupervisorShellDir.Views.SupervisorAppshell;

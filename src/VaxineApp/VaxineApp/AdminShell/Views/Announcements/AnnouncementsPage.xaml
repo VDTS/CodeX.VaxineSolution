@@ -4,8 +4,7 @@
              x:Class="VaxineApp.AdminShell.Views.Announcements.AnnouncementsPage"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Announcements"
-             xmlns:Model="clr-namespace:VaxineApp.Models"
-              xmlns:converters="clr-namespace:VaxineApp.Converters"
+              xmlns:converters="clr-namespace:VaxineApp.Core.Converters;assembly=VaxineApp.Core" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              x:DataType="ViewModel:AnnouncementsViewModel"
              Title="Announcements">
   <Shell.SearchHandler>

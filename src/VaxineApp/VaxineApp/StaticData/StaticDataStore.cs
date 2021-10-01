@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 
 namespace VaxineApp.StaticData
 {

@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using VaxineApp.MobilizerShell.ViewModels.Home.Family.Child;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.StaticData;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

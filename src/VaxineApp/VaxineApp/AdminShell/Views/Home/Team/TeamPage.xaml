@@ -2,10 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:Model="clr-namespace:VaxineApp.Models"
               x:DataType="ViewModel:TeamViewModel"
              x:Class="VaxineApp.AdminShell.Views.Home.Team.TeamPage"
-             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Team"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Team" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              Title="Team">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="Search" />

@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using VaxineApp.MobilizerShell.Views.Home.Family;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.StaticData;
 using Xamarin.Forms;
 
