@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Utility.Extensions;
 using VaxineApp.MobilizerShell.Views.Home.Area.Masjeed;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Essentials;

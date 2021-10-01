@@ -2,10 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:Model="clr-namespace:VaxineApp.Models"
              xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Family"
              x:Class="VaxineApp.MobilizerShell.Views.Home.Family.FamilyListPage"
-             xmlns:StaticData="clr-namespace:VaxineApp.StaticData"
+             xmlns:StaticData="clr-namespace:VaxineApp.StaticData" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              x:DataType="ViewModel:FamilyListViewModel"
              Title="Family List">
   <Shell.SearchHandler>

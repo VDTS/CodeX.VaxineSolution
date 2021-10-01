@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using VaxineApp.AdminShell.ViewModels.Home.Cluster;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.StaticData;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

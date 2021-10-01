@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System.Windows.Input;
 using VaxineApp.AndroidNativeApi;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Forms;

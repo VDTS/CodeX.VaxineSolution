@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.ViewModels.Home.Profile;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

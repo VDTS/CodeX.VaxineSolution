@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Home.Cluster.ClusterPage"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:Model="clr-namespace:VaxineApp.Models"
              x:DataType="ViewModel:ClusterViewModel"
-             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Cluster"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Cluster" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              Title="Cluster">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="Search" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Utility.Extensions;
 using VaxineApp.AdminShell.Views.Announcements;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Forms;

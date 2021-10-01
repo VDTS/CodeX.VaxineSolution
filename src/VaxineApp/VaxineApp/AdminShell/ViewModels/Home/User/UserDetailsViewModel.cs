@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System.Windows.Input;
 using VaxineApp.AdminShell.Views.Home.User;
-using VaxineApp.Models.AccountModels;
+using VaxineApp.Core.Models.AccountModels;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Forms;

@@ -1,5 +1,4 @@
-﻿using DataAccess.Models;
-using Microsoft.AppCenter.Crashes;
+﻿using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -7,6 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Utility.Extensions;
+using VaxineApp.Core.Models.AccountModels;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

@@ -1,7 +1,7 @@
 ﻿
 using Newtonsoft.Json;
 using VaxineApp.AdminShell.ViewModels.Home.User;
-using VaxineApp.Models.AccountModels;
+using VaxineApp.Core.Models.AccountModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
