@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.AdminShell.Views.Home.User;
-using VaxineApp.Models.AccountModels;
+using VaxineApp.Core.Models.AccountModels;
 using VaxineApp.MVVMHelper;
 using Xamarin.Forms;
 

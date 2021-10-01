@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.csproj" />
+    <ProjectReference Include="..\VaxineApp.Core\VaxineApp.Core.csproj" />
   </ItemGroup>
 
 </Project>

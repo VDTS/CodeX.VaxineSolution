@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Windows.Input;
-using VaxineApp.Models;
-using VaxineApp.Models.Enums;
+using VaxineApp.Core.Models;
+using VaxineApp.Core.Models.Enums;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Essentials;

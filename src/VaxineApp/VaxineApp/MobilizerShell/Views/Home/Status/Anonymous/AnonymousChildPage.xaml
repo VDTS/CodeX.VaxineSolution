@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:Model="clr-namespace:VaxineApp.Models"
-             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Status.Anonymous" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              x:Class="VaxineApp.MobilizerShell.Views.Home.Status.Anonymous.AnonymousChildPage"
              x:DataType="ViewModel:AnonymousChildViewModel"
              Title="Anonymous Child">

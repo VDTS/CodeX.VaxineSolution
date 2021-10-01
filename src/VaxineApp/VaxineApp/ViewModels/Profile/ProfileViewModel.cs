@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using VaxineApp.Views.Home.Profile;

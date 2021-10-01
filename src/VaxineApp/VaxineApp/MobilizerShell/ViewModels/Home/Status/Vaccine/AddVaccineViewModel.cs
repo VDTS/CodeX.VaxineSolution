@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Input;
 using Utility.Validations;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Essentials;

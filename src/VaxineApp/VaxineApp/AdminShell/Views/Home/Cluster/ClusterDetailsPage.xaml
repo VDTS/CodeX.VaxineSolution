@@ -4,8 +4,7 @@
              x:Class="VaxineApp.AdminShell.Views.Home.Cluster.ClusterDetailsPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Cluster"
              x:DataType="ViewModel:ClusterDetailsViewModel"
-             xmlns:Model="clr-namespace:VaxineApp.Models"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              Shell.PresentationMode="Animated"
              Shell.TabBarIsVisible="False"
              Title="Details Page">

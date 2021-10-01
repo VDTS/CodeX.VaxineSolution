@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VaxineApp.MobilizerShell.Views.Home.Area.Clinic;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using VaxineApp.MVVMHelper;
 using VaxineApp.Routes;
 using VaxineApp.StaticData;

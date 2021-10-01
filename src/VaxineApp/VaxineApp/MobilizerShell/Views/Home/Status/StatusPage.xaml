@@ -2,9 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:converters="clr-namespace:VaxineApp.Converters"
-             xmlns:Models="clr-namespace:VaxineApp.Models"
-             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Status"
+             xmlns:ViewModel="clr-namespace:VaxineApp.MobilizerShell.ViewModels.Home.Status" xmlns:converters="clr-namespace:VaxineApp.Core.Converters;assembly=VaxineApp.Core" xmlns:Models="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              x:DataType="ViewModel:StatusViewModel"
              x:Class="VaxineApp.MobilizerShell.Views.Home.Status.StatusPage"
              Title="Status">

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using VaxineApp.MobilizerShell.ViewModels.Home.Status.Vaccine;
-using VaxineApp.Models;
+using VaxineApp.Core.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
