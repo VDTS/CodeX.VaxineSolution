@@ -8,6 +8,7 @@ using System.Windows.Input;
 using Utility.Extensions;
 using VaxineApp.AdminShell.Views.Home.Team;
 using VaxineApp.Core.Models;
+using VaxineApp.Core.Models.MixedModels;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Forms;
@@ -45,16 +46,16 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
             }
         }
 
-        private ObservableCollection<TeamModel>? teams;
-        public ObservableCollection<TeamModel>? Teams
+        private ObservableCollection<TeamsGroupedByClusterModel>? teamGroup;
+        public ObservableCollection<TeamsGroupedByClusterModel>? TeamGroup
         {
             get
             {
-                return teams;
+                return teamGroup;
             }
             set
             {
-                teams = value;
+                teamGroup = value;
                 OnPropertyChanged();
             }
         }
@@ -69,7 +70,7 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
         public TeamViewModel()
         {
             // Property
-            Teams = new ObservableCollection<TeamModel>();
+            TeamGroup = new ObservableCollection<TeamsGroupedByClusterModel>();
             SelectedTeam = new TeamModel();
 
             // Get
@@ -83,7 +84,7 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
             GoToDetailsPageCommand = new Command(GoToDetailsPage);
         }
 
-        public async void GoToDetailsPage()
+        private async void GoToDetailsPage()
         {
             if (SelectedTeam.AreEmpty())
             {
@@ -104,9 +105,9 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
             StandardMessagesDisplay.FeatureUnderConstructionTitleDisplayMessage();
         }
 
-        public async void Get()
+        private async void Get()
         {
-            var jData = await DataService.Get("Team");
+            var jData = await DataService.Get("Cluster");
 
             if (jData == "ConnectionError")
             {
@@ -128,22 +129,53 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
             {
                 try
                 {
-                    var data = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(jData);
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, ClusterModel>>(jData);
 
                     if (data != null)
-                        foreach (KeyValuePair<string, TeamModel> item in data)
+                    {
+                        foreach (KeyValuePair<string, ClusterModel> item in data)
                         {
-                            Teams?.Add(
-                                new TeamModel
-                                {
-                                    Id = item.Value.Id,
-                                    FId = item.Key,
-                                    CHWName = item.Value.CHWName,
-                                    TeamNo = item.Value.TeamNo,
-                                    SocialMobilizerId = item.Value.SocialMobilizerId
-                                }
-                                );
+                            var nestedJData = await DataService.Get($"Team/{item.Value.Id}");
+
+                            if (nestedJData == "ConnectionError")
+                            {
+                                StandardMessagesDisplay.NoConnectionToast();
+                            }
+                            else if (nestedJData == "null")
+                            {
+                                StandardMessagesDisplay.NoDataDisplayMessage();
+                            }
+                            else if (nestedJData == "Error")
+                            {
+                                StandardMessagesDisplay.Error();
+                            }
+                            else if (nestedJData == "ErrorTracked")
+                            {
+                                StandardMessagesDisplay.ErrorTracked();
+                            }
+                            else
+                            {
+                                var nestedData = JsonConvert.DeserializeObject<Dictionary<string, TeamModel>>(nestedJData);
+                                List<TeamModel> lp = new List<TeamModel>();
+
+                                if (nestedData != null)
+                                    foreach (KeyValuePair<string, TeamModel> item2 in nestedData)
+                                    {
+                                        lp.Add(
+                                        new TeamModel
+                                        {
+                                            Id = item2.Value.Id,
+                                            CHWName = item2.Value.CHWName,
+                                            FId = item2.Value.FId,
+                                            SocialMobilizerId = item2.Value.SocialMobilizerId,
+                                            TeamNo = item2.Value.TeamNo
+
+                                        });
+                                    }
+                                TeamGroup?.Add(new TeamsGroupedByClusterModel(item.Value.ClusterName, lp));
+                            }
                         }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -153,12 +185,12 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
             }
         }
 
-        async void GoToPostPage()
+        private async void GoToPostPage()
         {
             var route = $"{nameof(AddTeamPage)}";
             await Shell.Current.GoToAsync(route);
         }
-        async void Refresh()
+        private async void Refresh()
         {
             IsBusy = true;
 
@@ -169,9 +201,9 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Team
             IsBusy = false;
         }
 
-        void Clear()
+        private void Clear()
         {
-            Teams?.Clear();
+            TeamGroup?.Clear();
         }
     }
 }
