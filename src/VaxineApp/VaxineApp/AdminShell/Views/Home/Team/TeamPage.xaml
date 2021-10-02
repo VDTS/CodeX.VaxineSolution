@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-              x:DataType="ViewModel:TeamViewModel"
              x:Class="VaxineApp.AdminShell.Views.Home.Team.TeamPage"
-             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Team" xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
+             xmlns:Models="clr-namespace:VaxineApp.Core.Models.MixedModels;assembly=VaxineApp.Core"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Team"
+              x:DataType="ViewModel:TeamViewModel"
+             xmlns:Model="clr-namespace:VaxineApp.Core.Models;assembly=VaxineApp.Core"
              Title="Team">
   <Shell.SearchHandler>
     <SearchHandler Placeholder="Search" />
@@ -28,9 +30,10 @@
                  RefreshColor="#2196f3"
                  Command="{Binding PullRefreshCommand}">
       <CollectionView SelectionMode="Single"
-                      ItemsSource="{Binding Teams}"
+                      ItemsSource="{Binding TeamGroup}"
                       SelectionChangedCommand="{Binding GoToDetailsPageCommand}"
-                      SelectedItem="{Binding SelectedTeam}">
+                      SelectedItem="{Binding SelectedTeam}"
+                      IsGrouped="True">
         <CollectionView.Header>
           <Frame Grid.Column="0"
                  Padding="15,15,15,15"
@@ -64,6 +67,38 @@
             </StackLayout>
           </DataTemplate>
         </CollectionView.ItemTemplate>
+        <CollectionView.GroupHeaderTemplate>
+          <DataTemplate x:DataType="Models:TeamsGroupedByClusterModel">
+            <StackLayout Padding="0,2,0,0">
+              <Frame Grid.Column="0"
+                     Padding="15,0,15,0"
+                     HeightRequest="20"
+                     HasShadow="True"
+                     CornerRadius="0"
+                     xct:TouchEffect.AnimationDuration="250"
+                     xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                     xct:TouchEffect.PressedScale="0.8"
+                     xct:TouchEffect.PressedOpacity="0.6"
+                     Opacity="0.5">
+                <Frame.Background>
+                   <!--StartPoint defaults to (0,0)--> 
+                  <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="{StaticResource CardHeader}"
+                                  Offset="0.1" />
+                    <GradientStop Color="{StaticResource Card}"
+                                  Offset="1.0" />
+                  </LinearGradientBrush>
+                </Frame.Background>
+                <Frame.Content>
+                  <Label Grid.Row="0"
+                         Grid.Column="0" TextColor="White"
+                         Text="{Binding ClusterName}" />
+                </Frame.Content>
+              </Frame>
+            </StackLayout>
+
+          </DataTemplate>
+        </CollectionView.GroupHeaderTemplate>
       </CollectionView>
     </RefreshView>
   </ContentPage.Content>
