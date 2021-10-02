@@ -1,17 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="VaxineApp.AdminShell.Views.Home.Period.PeriodDetailsPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Period"
+             Shell.PresentationMode="Animated"
+             Shell.TabBarIsVisible="False"
+             x:DataType="ViewModel:PeriodDetailsViewModel"
              Title="Period Details">
-  <ContentPage.BindingContext>
-    <ViewModel:PeriodDetailsViewModel/>
-  </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Edit}"
+                 Command="{Binding GoToPutPageCommand}"
+                 Priority="2" />
+    <ToolbarItem Order="Secondary"
+                 Text="{xct:Translate Delete}"
+                 Command="{Binding DeleteCommand}"
+                 Priority="2" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <StackLayout Padding="10">
+      <Frame Padding="15,15,15,15"
+             HeightRequest="60"
+             BackgroundColor="{StaticResource Card}"
+             HasShadow="True"
+             CornerRadius="15">
+        <Frame.Content>
+          <StackLayout>
+            <Label Text="Period Name"></Label>
+            <Label FontSize="Large"
+                   Text="{Binding VaccinePeriods.PeriodName}"></Label>
+          </StackLayout>
+        </Frame.Content>
+      </Frame>
+      <Frame Padding="15,15,15,15"
+             HeightRequest="60"
+             BackgroundColor="{StaticResource Card}"
+             HasShadow="True"
+             CornerRadius="15">
+        <Frame.Content>
+          <StackLayout>
+            <Label Text="Vaccine Period Start Date"></Label>
+            <Label FontSize="Large"
+                   Text="{Binding VaccinePeriods.StartDate}"></Label>
+          </StackLayout>
+        </Frame.Content>
+      </Frame>
+      <Frame Padding="15,15,15,15"
+             HeightRequest="60"
+             BackgroundColor="{StaticResource Card}"
+             HasShadow="True"
+             CornerRadius="15">
+        <Frame.Content>
+          <StackLayout>
+            <Label Text="Vaccine Period End Date"></Label>
+            <Label FontSize="Large"
+                   Text="{Binding VaccinePeriods.EndDate}"></Label>
+          </StackLayout>
+        </Frame.Content>
+      </Frame>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

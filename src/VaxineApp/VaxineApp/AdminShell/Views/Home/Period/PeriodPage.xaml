@@ -47,7 +47,7 @@
           </Frame>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
-          <DataTemplate x:DataType="Model:VaccinePeriods">
+          <DataTemplate x:DataType="Model:PeriodModel">
             <StackLayout Padding="0,2,0,0">
               <Frame Grid.Column="0"
                    Padding="15,0,15,0"
