@@ -3,15 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VaxineApp.AdminShell.Views.Home.Period.AddPeriodPage"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.Period"
+             Shell.PresentationMode="Animated"
+             Shell.TabBarIsVisible="False"
+             x:DataType="ViewModel:AddPeriodViewModel"
              Title="Add Period">
   <ContentPage.BindingContext>
     <ViewModel:AddPeriodViewModel/>
   </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout Padding="40" Spacing="10">
+      <StackLayout>
+        <Label Text="Period Name"></Label>
+        <Entry Text="{Binding VaccinePeriod.PeriodName}"></Entry>
+        <Label Text="Vaccine Period Start Date"></Label>
+        <DatePicker Date="{Binding VaccinePeriod.StartDate, Mode=OneWayToSource}"></DatePicker>
+        <Label Text="Vaccine Period End Date"></Label>
+        <DatePicker Date="{Binding VaccinePeriod.EndDate, Mode=OneWayToSource}"></DatePicker>
+      </StackLayout>
+
+      <Button Text="Save" Command="{Binding PostCommand}"></Button>
+
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

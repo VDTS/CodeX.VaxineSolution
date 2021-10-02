@@ -280,10 +280,10 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             {
                 try
                 {
-                    var data = JsonConvert.DeserializeObject<Dictionary<string, VaccinePeriods>>(jData);
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, PeriodModel>>(jData);
 
                     if (data != null)
-                        foreach (KeyValuePair<string, VaccinePeriods> item in data)
+                        foreach (KeyValuePair<string, PeriodModel> item in data)
                         {
                             if (item.Value.Id.ToString() == Preferences.Get("VaccinePeriodId", "").ToString())
                             {

@@ -16,8 +16,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
 {
     public class PeriodViewModel : ViewModelBase
     {
-        private VaccinePeriods? selectedPeriod;
-        public VaccinePeriods? SelectedPeriod
+        private PeriodModel? selectedPeriod;
+        public PeriodModel? SelectedPeriod
         {
             get
             {
@@ -44,8 +44,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
             }
         }
 
-        private ObservableCollection<VaccinePeriods>? periods;
-        public ObservableCollection<VaccinePeriods>? Periods
+        private ObservableCollection<PeriodModel>? periods;
+        public ObservableCollection<PeriodModel>? Periods
         {
             get
             {
@@ -68,8 +68,8 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
         public PeriodViewModel()
         {
             // Property
-            Periods = new ObservableCollection<VaccinePeriods>();
-            SelectedPeriod = new VaccinePeriods();
+            Periods = new ObservableCollection<PeriodModel>();
+            SelectedPeriod = new PeriodModel();
 
             // Get
             Get();
@@ -84,16 +84,16 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
 
         public async void GoToDetailsPage()
         {
-            if (SelectedPeriod.AreEmpty())
+            if (SelectedPeriod?.Id != Guid.Empty)
             {
-                return;
+                var SelectedItemJson = JsonConvert.SerializeObject(SelectedPeriod);
+                var route = $"{nameof(PeriodDetailsPage)}?Period={SelectedItemJson}";
+                await Shell.Current.GoToAsync(route);
+                SelectedPeriod = null;
             }
             else
             {
-                var SelectedItemJson = JsonConvert.SerializeObject(SelectedPeriod);
-                var route = $"{nameof(PeriodDetailsViewModel)}?Period={SelectedItemJson}";
-                await Shell.Current.GoToAsync(route);
-                SelectedPeriod = null;
+                StandardMessagesDisplay.NoItemSelectedDisplayMessage();
             }
         }
 
@@ -127,14 +127,15 @@ namespace VaxineApp.AdminShell.ViewModels.Home.Period
             {
                 try
                 {
-                    var data = JsonConvert.DeserializeObject<Dictionary<string, VaccinePeriods>>(jData);
+                    var data = JsonConvert.DeserializeObject<Dictionary<string, PeriodModel>>(jData);
                     
                     if(data != null)
-                    foreach (KeyValuePair<string, VaccinePeriods> item in data)
+                    foreach (KeyValuePair<string, PeriodModel> item in data)
                     {
                         Periods?.Add(
-                            new VaccinePeriods
+                            new PeriodModel
                             {
+                                FId = item.Key.ToString(),
                                 Id = item.Value.Id,
                                 StartDate = item.Value.StartDate,
                                 EndDate = item.Value.EndDate,
