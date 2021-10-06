@@ -7,11 +7,15 @@
   <ContentPage.BindingContext>
     <ViewModel:AddClusterViewModel/>
   </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.Content>
+    <StackLayout Padding="40" Spacing="10">
+      <StackLayout>
+        <Label Text="Clusetr Name"></Label>
+        <Entry Text="{Binding Cluster.ClusterName}"></Entry>
+      </StackLayout>
+
+      <Button Text="Save" Command="{Binding PostCommand}"></Button>
+
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
