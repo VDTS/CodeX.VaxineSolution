@@ -133,32 +133,18 @@
                        Glyph="&#xE80F;"
                        Color="Black" />
     </FlyoutItem.Icon>
-    <Tab  Title="Period">
-      <Tab.Icon>
-        <FontImageSource Glyph="&#xE10F;"
-                         FontFamily="SegoeMDL2"
-                         Size="24" />
-      </Tab.Icon>
+    <Tab  Title="Period" Icon="AdminPeriod.png">
       <ShellContent ContentTemplate="{DataTemplate Period:PeriodPage}" />
     </Tab>
-    <Tab Icon="Home_Profile.png"
+    <Tab Icon="AdminUser.png"
          Title="User">
       <ShellContent ContentTemplate="{DataTemplate User:UserPage}" />
     </Tab>
-    <Tab  Title="Team">
-      <Tab.Icon>
-        <FontImageSource Glyph="&#xE10F;"
-                         FontFamily="SegoeMDL2"
-                         Size="24" />
-      </Tab.Icon>
+    <Tab  Title="Team" Icon="AdminTeam.png">
+      
       <ShellContent ContentTemplate="{DataTemplate Team:TeamPage}" />
     </Tab>
-    <Tab  Title="Cluster">
-      <Tab.Icon>
-        <FontImageSource Glyph="&#xE10F;"
-                         FontFamily="SegoeMDL2"
-                         Size="24" />
-      </Tab.Icon>
+    <Tab  Title="Cluster" Icon="AdminCluster.png">
       <ShellContent ContentTemplate="{DataTemplate Cluster:ClusterPage}" />
     </Tab>
     <Tab Icon="Home_Profile.png"
