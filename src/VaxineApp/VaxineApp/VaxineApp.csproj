@@ -71,6 +71,9 @@
     <Compile Update="AdminShell\Views\Announcements\EditAnnouncementPage.xaml.cs">
       <DependentUpon>EditAnnouncementPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="GuestShell\Views\GuestAppshell\GuestsShell.xaml.cs">
+      <DependentUpon>GuestsShell.xaml</DependentUpon>
+    </Compile>
     <Compile Update="MobilizerShell\Views\Appshell\Mobilizerappshell.xaml.cs">
       <DependentUpon>Mobilizerappshell.xaml</DependentUpon>
     </Compile>
@@ -157,6 +160,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="GuestShell\Views\GuestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="AccessShellDir\Views\Login\ForgotPassword\ForgotPasswordPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

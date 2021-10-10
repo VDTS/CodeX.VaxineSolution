@@ -19,6 +19,9 @@ using VaxineApp.StaticData;
 using VaxineApp.SupervisorShellDir.Views.SupervisorAppshell;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using VaxineApp.AccessShellDir.Views.Login;
+using VaxineApp.GuestShell.Views;
+using VaxineApp.GuestShell.Views.GuestAppshell;
 
 namespace VaxineApp.AccessShellDir.ViewModels.Login
 {
@@ -97,7 +100,7 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
         public Auth Account { get; set; }
 
         // Command
-        public ICommand CloseAppCommand { private set; get; }
+        public ICommand GoToGuestPageCommand { private set; get; }
         public ICommand ForgotPasswordCommand { private set; get; }
         public ICommand SignInCommand { private set; get; }
 
@@ -111,12 +114,12 @@ namespace VaxineApp.AccessShellDir.ViewModels.Login
             // Commands init
             SignInCommand = new SignInCommand(this);
             ForgotPasswordCommand = new Command(ForgotPassword);
-            CloseAppCommand = new Command(CloseApp);
+            GoToGuestPageCommand = new Command(GoToGuestPage);
         }
 
-        private void CloseApp()
+        private async void GoToGuestPage()
         {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Current.MainPage = new GuestsShell();
         }
 
         public async void SignIn(string userName, string userPassword)
