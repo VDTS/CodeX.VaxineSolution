@@ -5,37 +5,33 @@
              xmlns:localFont="clr-namespace:VaxineApp.Font" xmlns:Behaviors="clr-namespace:VaxineApp.Core.Behaviors;assembly=VaxineApp.Core"
              x:DataType="ViewModel:LoginViewModel"
              x:Class="VaxineApp.AccessShellDir.Views.Login.LoginPage"
-             Shell.FlyoutBehavior="Disabled"
-             Shell.NavBarIsVisible="False">
+             Shell.FlyoutBehavior="Disabled">
   <ContentPage.BindingContext>
     <ViewModel:LoginViewModel></ViewModel:LoginViewModel>
   </ContentPage.BindingContext>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Primary"
+                 Priority="3"
+                 Text="Go as Guest"
+                 Command="{Binding GoToGuestPageCommand}">
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <Grid>
       <Grid.RowDefinitions>
-        <RowDefinition Height="0.2*"></RowDefinition>
-        <RowDefinition Height="0.4*"></RowDefinition>
-        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="0.3*"></RowDefinition>
+        <RowDefinition Height="0.5*"></RowDefinition>
+        <RowDefinition Height="0.1*"></RowDefinition>
       </Grid.RowDefinitions>
-      <Label Grid.Row="0"
-             Text="X"
-             Padding="20"
-             FontSize="Large"
-             HorizontalOptions="End">
-        <Label.GestureRecognizers>
-          <TapGestureRecognizer Command="{Binding CloseAppCommand}">
-          </TapGestureRecognizer>
-        </Label.GestureRecognizers>
-      </Label>
-      <StackLayout Grid.Row="1"
+      <StackLayout Grid.Row="0"
                    VerticalOptions="Center"
                    HorizontalOptions="FillAndExpand">
         <Image Source="AppIcon.png"
                WidthRequest="100"
                HeightRequest="100"></Image>
       </StackLayout>
-      <StackLayout Padding="40, 50, 40, 40"
-                   Grid.Row="2"
+      <StackLayout Padding="40, 20, 40, 10"
+                   Grid.Row="1"
                    Spacing="10">
         <Entry Text="{Binding InputUserEmail}"
                Placeholder="Email or Phone">
@@ -77,6 +73,9 @@
           <CheckBox IsChecked="{Binding RememberMe}"></CheckBox>
           <Label Text="Remember me"></Label>
         </StackLayout>
+      </StackLayout>
+      <StackLayout Grid.Row="2" Padding="40, 20, 40, 40">
+        <Label FontSize="Micro" Text="If you are not authenticated, don't worry, you can explore in Guest Mode. Touch GO AS GEUST on navbar"></Label>
       </StackLayout>
     </Grid>
   </ContentPage.Content>
