@@ -3,6 +3,7 @@ using VaxineApp.AdminShell.Views.Home.Cluster;
 using VaxineApp.AdminShell.Views.Home.Period;
 using VaxineApp.AdminShell.Views.Home.Team;
 using VaxineApp.AdminShell.Views.Home.User;
+using VaxineApp.AdminShell.Views.Home.User.UserClaims;
 using VaxineApp.Views.Help;
 using VaxineApp.Views.Home.Profile;
 using VaxineApp.Views.Settings.AboutUs;
@@ -60,6 +61,9 @@ namespace VaxineApp.AdminShell.Views.AdminAppShell
             Routing.RegisterRoute(nameof(AddAnnouncementPage), typeof(AddAnnouncementPage));
             Routing.RegisterRoute(nameof(EditAnnouncementPage), typeof(EditAnnouncementPage));
             Routing.RegisterRoute(nameof(AnnouncementsDetailsPage), typeof(AnnouncementsDetailsPage));
+            Routing.RegisterRoute(nameof(AddUserRolePage), typeof(AddUserRolePage));
+            Routing.RegisterRoute(nameof(AddUserClaimsPage), typeof(AddUserClaimsPage));
+            Routing.RegisterRoute(nameof(CreateUserPage), typeof(CreateUserPage));
 
         }
     }
