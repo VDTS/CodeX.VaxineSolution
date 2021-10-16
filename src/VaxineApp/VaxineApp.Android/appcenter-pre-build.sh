@@ -47,6 +47,94 @@ then
 fi
 
 
+# Firebase Private key Constants
+
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating AuthProviderX509CertUrlPlaceholder to $Auth_Provider_X509_Cert_Url in Constants.cs"
+    sed -i.bak 's#AuthProviderX509CertUrl = "[-A-Za-z0-9:_./]*"#AuthProviderX509CertUrl = "'$Auth_Provider_X509_Cert_Url'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating AuthUri to $Auth_Uri in Constants.cs"
+    sed -i.bak 's#AuthUri = "[-A-Za-z0-9:_./]*"#AuthUri = "'$Auth_Uri'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating ClientEmail to $Client_Email in Constants.cs"
+    sed -i.bak 's#ClientEmail = "[-A-Za-z0-9:_./]*"#ClientEmail = "'$Client_Email'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating ClientId to $Client_Id in Constants.cs"
+    sed -i.bak 's#ClientId = "[-A-Za-z0-9:_./]*"#ClientId = "'$Client_Id'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating ClientX509CertUrl to $Client_X509_Cert_Url in Constants.cs"
+    sed -i.bak 's#ClientX509CertUrl = "[-A-Za-z0-9:_./]*"#ClientX509CertUrl = "'$Client_X509_Cert_Url'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating PrivateKey to $Private_Key in Constants.cs"
+    sed -i.bak 's#PrivateKey = "[-A-Za-z0-9:_./]*"#PrivateKey = "'$Private_Key'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating PrivateKeyId to $Private_KeyId in Constants.cs"
+    sed -i.bak 's#PrivateKeyId = "[-A-Za-z0-9:_./]*"#PrivateKeyId = "'$Private_KeyId'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating ProjectId to $Project_Id in Constants.cs"
+    sed -i.bak 's#ProjectId = "[-A-Za-z0-9:_./]*"#ProjectId = "'$Project_Id'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating TokenUri to $Token_Uri in Constants.cs"
+    sed -i.bak 's#TokenUri = "[-A-Za-z0-9:_./]*"#TokenUri = "'$Token_Uri'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
+then
+    echo "Updating Type to $Type in Constants.cs"
+    sed -i.bak 's#Type = "[-A-Za-z0-9:_./]*"#Type = "'$Type'"#' $VAXINE_APP_CONSTANT_FILE
+
+    echo "File content:"
+    cat $VAXINE_APP_CONSTANT_FILE
+fi
+
+
+# End Firebase Private key Constants
+
+
 if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
     echo "Updating GithubApiKeyForCreatingIssues to $GITHUB_API_KEY in Constants.cs"

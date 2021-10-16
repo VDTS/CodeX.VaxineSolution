@@ -3,6 +3,8 @@ using Microsoft.AppCenter.Crashes;
 using System;
 using System.Windows.Input;
 using Utility.Generators;
+using VaxineApp.AdminShell.Views.Home.User;
+using VaxineApp.AdminShell.Views.Home.User.UserClaims;
 using VaxineApp.MVVMHelper;
 using VaxineApp.StaticData;
 using Xamarin.Forms;
@@ -41,20 +43,6 @@ namespace VaxineApp.AdminShell.ViewModels.Home.User
             }
         }
 
-        private string password;
-        public string Password
-        {
-            get
-            {
-                return password;
-            }
-            set
-            {
-                password = value;
-                OnPropertyChanged();
-            }
-        }
-
         private string phoneNumber;
         public string PhoneNumber
         {
@@ -71,34 +59,17 @@ namespace VaxineApp.AdminShell.ViewModels.Home.User
 
         // Command
 
-        public ICommand PostCommand { private set; get; }
+        public ICommand NextRolePageCommand { private set; get; }
         public AddUserViewModel()
         {
             // Command
-            PostCommand = new Command(Post);
-            Password = PasswordGenerator.GeneratePassword();
+            NextRolePageCommand = new Command(NextRolePage);
         }
-        public async void Post()
+
+        private async void NextRolePage(object obj)
         {
-            try
-            {
-                UserRecordArgs args = new UserRecordArgs()
-                {
-                    Email = Email,
-                    EmailVerified = false,
-                    PhoneNumber = PhoneNumber,
-                    Password = Password,
-                    DisplayName = FullName,
-                    Disabled = false,
-                };
-                UserRecord userRecord = await FirebaseAuth.DefaultInstance.CreateUserAsync(args);
-                StandardMessagesDisplay.UserAdded();
-            }
-            catch (Exception ex)
-            {
-                Crashes.TrackError(ex);
-                StandardMessagesDisplay.InputToast(ex.Message);
-            }
+            string route = $"{nameof(AddUserRolePage)}?FullName={FullName}&Email={Email}&PhoneNumber={PhoneNumber}";
+            await Shell.Current.GoToAsync(route);
         }
     }
 }

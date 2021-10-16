@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.AdminShell.Views.Home.User.UserClaims.AddUserClaimsPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.User.UserClaims"
+             x:DataType="ViewModel:AddUserClaimsViewModel"
+             Shell.TabBarIsVisible="False"
+             Title="Add Claims">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Primary"
+                 Text="Next"
+                 Command="{Binding AddClaimsAndNextCommand}"
+                 Priority="2" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <StackLayout Padding="40">
+      <Label FontSize="Large" Text="Once this is implemented, you will see clusters and teams here. and can add to users."></Label>
+      <!--<Picker Title="Cluster"
+                SelectedItem="{Binding SelectedCluster}" ItemsSource="{Binding ClustersList}"/>-->
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

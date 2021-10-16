@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.AdminShell.Views.Home.User.UserClaims.AddUserRolePage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.User.UserClaims"
+             x:DataType="ViewModel:AddUserRoleViewModel"
+             Shell.TabBarIsVisible="False"
+             Title="Add Role">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Primary"
+                 Text="Next"
+                 Command="{Binding AddRoleAndNextCommand}"
+                 Priority="2" />
+  </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <StackLayout Padding="40">
+      <Label Text="Role"></Label>
+      <Picker Title="Role"
+                SelectedItem="{Binding Role}">
+        <Picker.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>Mobilizer</x:String>
+            <x:String>Supervisor</x:String>
+          </x:Array>
+        </Picker.ItemsSource>
+      </Picker>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
