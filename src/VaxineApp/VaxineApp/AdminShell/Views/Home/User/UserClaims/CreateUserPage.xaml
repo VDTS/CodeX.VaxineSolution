@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VaxineApp.AdminShell.Views.Home.User.UserClaims.CreateUserPage"
+             xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.User.UserClaims"
+             xmlns:localFont="clr-namespace:VaxineApp.Font"
+             x:DataType="ViewModel:CreateUserViewModel"
+             Shell.TabBarIsVisible="False"
+             Title="User Info Summary">
+  <ContentPage.Content>
+    <StackLayout Padding="40" Spacing="20">
+      <StackLayout Orientation="Vertical" Spacing="10">
+        <Label Text="User Name"></Label>
+        <Label FontSize="Large" Text="{Binding FullName}"></Label>
+        <Label Text="User Email"></Label>
+        <Label FontSize="Large" Text="{Binding Email}"></Label>
+        <Label Text="User Phone number"></Label>
+        <Label FontSize="Large" Text="{Binding PhoneNumber}"></Label>
+        <Label Text="User Role"></Label>
+        <Label FontSize="Large" Text="{Binding Role}"></Label>
+
+        <Label Text="Password"></Label>
+        <StackLayout Orientation="Horizontal">
+          <Entry x:Name="PasswordField"
+                 IsPassword="True"
+                 IsEnabled="False"
+                 ClearButtonVisibility="WhileEditing"
+                 IsTextPredictionEnabled="false"
+                 Text="{Binding Password}"
+                 WidthRequest="240"
+                 Placeholder="Password"></Entry>
+          <Label x:Name="ShowHideButton"
+                 Text="{x:Static localFont:MaterialDesignIcons.EyeOff}"
+                 FontFamily="MaterialIcons"
+                 FontSize="30"
+                 TextColor="#2196f3"
+                 BackgroundColor="Transparent">
+            <Label.GestureRecognizers>
+              <TapGestureRecognizer Tapped="ShowHidePassword"></TapGestureRecognizer>
+            </Label.GestureRecognizers>
+          </Label>
+        </StackLayout>
+      </StackLayout>
+
+      <Label Text="Do you accept the above information? If yes, Press Create User"></Label>
+      <Button Text="Create User" Command="{Binding CreateUserCommand}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -6,6 +6,12 @@
              Shell.TabBarIsVisible="False"
              xmlns:ViewModel="clr-namespace:VaxineApp.AdminShell.ViewModels.Home.User" xmlns:Behaviors="clr-namespace:VaxineApp.Core.Behaviors;assembly=VaxineApp.Core"
              Title="Add User">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Order="Primary"
+                 Text="Next"
+                 Command="{Binding NextRolePageCommand}"
+                 Priority="2" />
+  </ContentPage.ToolbarItems>
   <ContentPage.BindingContext>
     <ViewModel:AddUserViewModel/>
   </ContentPage.BindingContext>
@@ -27,14 +33,6 @@
           <Behaviors:InternationPhoneNumberValidationBehavior/>
         </Entry.Behaviors>
       </Entry>
-      <Label Text="{Binding Password}"></Label>
-
-      <Button Text="Save"
-              TranslationY="50"
-              WidthRequest="130"
-              HeightRequest="50"
-              HorizontalOptions="Center"
-              Command="{Binding PostCommand}"></Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

@@ -71,6 +71,9 @@
     <Compile Update="AdminShell\Views\Announcements\EditAnnouncementPage.xaml.cs">
       <DependentUpon>EditAnnouncementPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="AdminShell\Views\Home\User\UserClaims\AddUserRolePage.xaml.cs">
+      <DependentUpon>AddUserRolePage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="GuestShell\Views\GuestAppshell\GuestsShell.xaml.cs">
       <DependentUpon>GuestsShell.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="AdminShell\Views\Home\User\UserClaims\AddUserClaimsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\User\UserClaims\AddUserRolePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AdminShell\Views\Home\User\UserClaims\CreateUserPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="GuestShell\Views\GuestPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
