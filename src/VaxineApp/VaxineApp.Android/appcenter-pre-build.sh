@@ -93,8 +93,7 @@ fi
 if [ -e "$VAXINE_APP_CONSTANT_FILE" ]
 then
     echo "Updating PrivateKey to $Private_Key in Constants.cs"
-    sed -i.bak 's#PrivateKey = "[-A-Za-z0-9:_./]*"#PrivateKey = "'$Private_Key'"#' $VAXINE_APP_CONSTANT_FILE
-
+    sed -i.bak 's@PrivateKeyPlaceholder@'"$Private_Key"'@' $VAXINE_APP_CONSTANT_FILE
     echo "File content:"
     cat $VAXINE_APP_CONSTANT_FILE
 fi
