@@ -2,6 +2,9 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:HomeProfile="clr-namespace:VaxineApp.Views.Home.Profile"
+       xmlns:Report="clr-namespace:VaxineApp.SupervisorShellDir.Views.Reports"
+       xmlns:Parent="clr-namespace:VaxineApp.SupervisorShellDir.Views.Parents"
+       xmlns:Insights="clr-namespace:VaxineApp.SupervisorShellDir.Views.Insights"
        xmlns:ViewModel="clr-namespace:VaxineApp.SupervisorShellDir.ViewModel"
        xmlns:AppshellPage="clr-namespace:VaxineApp.Views.Appshell"
        xmlns:localFont="clr-namespace:VaxineApp.Font"
@@ -123,6 +126,18 @@
   </MenuItem>
   
   <FlyoutItem Title="Home">
+    <Tab Icon="SupervisorReport.png"
+         Title="Report">
+      <ShellContent ContentTemplate="{DataTemplate Report:ReportPage}" />
+    </Tab>
+    <Tab Icon="SupervisorParent.png"
+         Title="Parent">
+      <ShellContent ContentTemplate="{DataTemplate Parent:ParentPage}" />
+    </Tab>
+    <Tab Icon="Home_Insights.png"
+         Title="Insights">
+      <ShellContent ContentTemplate="{DataTemplate Insights:InsightsPage}" />
+    </Tab>
     <Tab Icon="Home_Profile.png"
          Title="Profile">
       <ShellContent ContentTemplate="{DataTemplate HomeProfile:ProfilePage}" />
