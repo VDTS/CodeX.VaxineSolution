@@ -19,7 +19,7 @@ using Xamarin.Forms;
 
 namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
 {
-    public class FamilyListViewModel : ViewModelBase, IDataCrud, IVMUtils
+    public class FamilyListViewModel : ViewModelBase
     {
 
 
@@ -72,6 +72,7 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
         //public ICommand CancelSelectionCommand { private set; get; }
         public ICommand PullRefreshCommand { private set; get; }
         public ICommand SaveAsPDFCommand { private set; get; }
+        public ICommand AddFromQRCodeCommand { private set; get; }
 
         public FamilyListViewModel()
         {
@@ -86,7 +87,68 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
             SelectionCommand = new Command(GoToDetailsPage);
             PullRefreshCommand = new Command(Refresh);
             GoToPostPageCommand = new Command(GoToPostPage);
+            AddFromQRCodeCommand = new Command(AddFromQRCode);
         }
+
+        private async void AddFromQRCode(object obj)
+        {
+            await Scanner();
+            await Post();
+        }
+
+        string s;
+        public async Task Scanner()
+        {
+#if __ANDROID__
+// Initialize the scanner first so it can track the current context
+        MobileBarcodeScanner.Initialize (Application);
+#endif
+
+            var options = new ZXing.Mobile.MobileBarcodeScanningOptions();
+            options.PossibleFormats = new List<ZXing.BarcodeFormat>() {
+            ZXing.BarcodeFormat.QR_CODE, ZXing.BarcodeFormat.QR_CODE
+            };
+
+            var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+            var result = await scanner.Scan(options);
+
+            if (result != null)
+            {
+                s = result.Text;
+            }
+        }
+
+        public async Task Post()
+        {
+            var m = JsonConvert.DeserializeObject<FamilyWithChildrenModel>(s);
+            if (m != null)
+            {
+                var jData = JsonConvert.SerializeObject(m.Family);
+
+                string postResponse = await DataService.Post(jData, $"Family/{Preferences.Get("TeamId", "")}");
+                if (postResponse == "ConnectionError")
+                {
+                    StandardMessagesDisplay.NoConnectionToast();
+                }
+                else if (postResponse == "Error")
+                {
+                    StandardMessagesDisplay.Error();
+                }
+                else if (postResponse == "ErrorTracked")
+                {
+                    StandardMessagesDisplay.ErrorTracked();
+                }
+                else
+                {
+                    _ = await DataService.Put((++StaticDataStore.TeamStats.TotalHouseholds).ToString(), $"Team/{Preferences.Get("ClusterId", "")}/{Preferences.Get("TeamFId", "")}/TotalHouseholds");
+                    StandardMessagesDisplay.AddDisplayMessage($"{m.Family.ParentName}'s Family ");
+
+                    var route = "..";
+                    await Shell.Current.GoToAsync(route);
+                }
+            }
+        }
+
 
         public async void Get()
         {
@@ -146,11 +208,6 @@ namespace VaxineApp.MobilizerShell.ViewModels.Home.Family
         }
 
         public void Put()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Post()
         {
             throw new NotImplementedException();
         }
